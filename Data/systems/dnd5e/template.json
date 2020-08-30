@@ -111,9 +111,17 @@
             "value": 0,
             "ability": "str"
           },
+          "com": {
+            "value": 0,
+            "ability": "san"
+          },
           "dec": {
             "value": 0,
             "ability": "cha"
+          },
+          "dph": {
+            "value": 0,
+            "ability": "san"
           },
           "his": {
             "value": 0,
@@ -135,9 +143,17 @@
             "value": 0,
             "ability": "wis"
           },
+          "myt": {
+            "value": 0,
+            "ability": "san"
+          },
           "nat": {
             "value": 0,
             "ability": "int"
+          },
+          "occ": {
+            "value": 0,
+            "ability": "san"
           },
           "prc": {
             "value": 0,
@@ -150,6 +166,10 @@
           "per": {
             "value": 0,
             "ability": "cha"
+          },
+          "psy": {
+            "value": 0,
+            "ability": "san"
           },
           "rel": {
             "value": 0,
