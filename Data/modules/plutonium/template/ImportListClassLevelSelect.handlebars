@@ -1,0 +1,22 @@
+<div class="flex-col ve-window min-h-0 h-100">
+	<div class="flex-v-stretch input-group mb-1 no-shrink">
+		<label class="btn btn-5et col-1 px-1 flex-vh-center"><input type="checkbox" name="cb-select-all"></label>
+		<button class="btn-5et col-1">Level</button>
+		<button class="btn-5et col-10">Features</button>
+	</div>
+
+	<div class="veapp__list mb-1 h-100">
+		{{#each rows}}
+			<label class="row imp__row">
+				<span class="col-1 flex-vh-center"><input type="checkbox" class="no-events" data-index="{{ix}}"></span>
+				<span class="col-1 text-center">{{level}}</span>
+				<span class="col-10">{{text}}</span>
+				<span class="ve-hidden">{{ix}}</span>
+			</label>
+		{{/each}}
+	</div>
+
+	<div class="no-shrink">
+		<button class="btn-5et" name="btn-run">Import</button>
+	</div>
+</div>

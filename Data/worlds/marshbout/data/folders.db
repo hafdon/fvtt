@@ -1,0 +1,49 @@
+{"name":"items","type":"JournalEntry","sort":100000,"flags":{},"parent":null,"color":"","_id":"1rJeQMjAwEFFzp63"}
+{"name":"Feniendum's Spellbook","type":"Item","sort":300000,"flags":{},"parent":null,"color":"","_id":"2uMCDsrnOmQ99MGa"}
+{"name":"areas of interest","type":"JournalEntry","sort":400000,"flags":{},"parent":null,"color":"","_id":"3NceJdtnXtuJV2OZ"}
+{"_id":"3raMqXjxKE8cvKwn","name":"Arc: Seomra Crann & Xanthuc Temple","type":"JournalEntry","sort":1000000,"flags":{},"parent":"IP5jjt32nMAmwHHo","color":""}
+{"name":"Weapons","type":"Item","sort":100000,"flags":{},"parent":null,"color":"","_id":"5LaphOSK4aLCDMt6"}
+{"name":"Stato's Den","type":"Actor","sort":1200000,"flags":{},"parent":null,"color":"","_id":"6AmSbGb0jvvB3L5B"}
+{"_id":"7FU7CCEBg8xZrzdi","name":"Arc: Von Veen","type":"JournalEntry","sort":400000,"flags":{},"parent":"IP5jjt32nMAmwHHo","color":""}
+{"name":"Spells","type":"Item","sort":null,"flags":{},"parent":null,"_id":"8e9LjzR0LZBrGmHh"}
+{"name":"fant. loc.s","type":"JournalEntry","sort":2000000,"flags":{},"parent":"3NceJdtnXtuJV2OZ","_id":"CFEx8dwW4VzBNu4j"}
+{"_id":"CFTrzKoWN4mSlEhv","name":"M&M","type":"Actor","sort":800000,"flags":{},"parent":null,"color":"#b30000"}
+{"name":"Creatures","type":"Actor","sort":null,"flags":{},"parent":null,"_id":"DFoO7w9dWPoyU8PG"}
+{"name":"undebuted","type":"JournalEntry","sort":1500000,"flags":{},"parent":"wf40lADkdvhEIKuG","color":"#4d2700","_id":"EnUErhB87d3ZxlNY"}
+{"_id":"GF8k0MkmV1DIfHvo","name":"Arc: The Gnoll Village","type":"JournalEntry","sort":350000,"flags":{},"parent":"IP5jjt32nMAmwHHo","color":"#43171b"}
+{"name":"Seomra Crann","type":"Scene","sort":null,"flags":{},"parent":null,"color":"#406b00","_id":"GbgNPhZlx1AQCPjE"}
+{"name":"PCs","type":"JournalEntry","sort":300000,"flags":{},"parent":null,"color":"","_id":"HnsRctNEFA19GYLE"}
+{"_id":"Ho4c14ccdD0ZFAmy","name":"Arc: Road to Calliope","type":"JournalEntry","sort":1600000,"flags":{},"parent":"IP5jjt32nMAmwHHo","color":"#442115"}
+{"_id":"HtMyceJvJzRd8gOb","name":"NPCs","type":"Actor","sort":500000,"flags":{},"parent":null,"color":"#c24f00"}
+{"name":"recaps","type":"JournalEntry","sort":null,"flags":{},"parent":null,"color":"","_id":"IP5jjt32nMAmwHHo"}
+{"name":"Interlude: The Karbunqle","type":"JournalEntry","sort":900000,"flags":{},"parent":"IP5jjt32nMAmwHHo","color":"#615222","_id":"JgV2pzFqoIEmRdHZ"}
+{"name":"Arc: Freeing Domonkos","type":"JournalEntry","sort":2200000,"flags":{},"parent":"IP5jjt32nMAmwHHo","_id":"LkpePiKfTxfqgdm6"}
+{"name":"Classes","type":"Item","sort":null,"flags":{},"parent":null,"_id":"M3gtzdoR17aVoAQP"}
+{"name":"maps","type":"JournalEntry","sort":200000,"flags":{},"parent":null,"color":"","_id":"MIMO1i0zuh6iza61"}
+{"name":"general prep","type":"JournalEntry","sort":700000,"flags":{},"parent":null,"color":"#183b6a","_id":"NdtTfwZe9YTsCoFv"}
+{"name":"PCs","type":"Actor","sort":600000,"flags":{},"parent":null,"color":"#002a66","_id":"O8WUmDNBMZxehhEe"}
+{"name":"Interlude: Zombie Dinosaur","type":"JournalEntry","sort":1100000,"flags":{},"parent":"IP5jjt32nMAmwHHo","color":"","_id":"P1XiX3k7BG1TWAxw"}
+{"_id":"QA4siW2cLLMCUeDY","name":"Seomra","type":"Actor","sort":950000,"flags":{},"parent":"DFoO7w9dWPoyU8PG","color":""}
+{"name":"Arc: Wrestling Druids","type":"JournalEntry","sort":800000,"flags":{},"parent":"IP5jjt32nMAmwHHo","color":"#6e5314","_id":"Tbev7nPs0FJzqZih"}
+{"name":"met","type":"Actor","sort":1000000,"flags":{},"parent":"DFoO7w9dWPoyU8PG","color":"","_id":"U8FpnkiY6g5Q90aR"}
+{"_id":"U8euXQNlxLTUiNl3","name":"tripods","type":"Actor","sort":700000,"flags":{},"parent":null,"color":"#6d0456"}
+{"name":"encyclopedia","type":"JournalEntry","sort":1800000,"flags":{},"parent":null,"color":"#036d59","_id":"VZj7i102lyF2OYry"}
+{"name":"Arc: Near Briangle","type":"JournalEntry","sort":2300000,"flags":{},"parent":"IP5jjt32nMAmwHHo","_id":"WY7hVdz6oxayKCBr"}
+{"name":"evil doctor","type":"Actor","sort":1400000,"flags":{},"parent":null,"color":"","_id":"YFcvb1wnOKX7VI0R"}
+{"name":"met","type":"JournalEntry","sort":1700000,"flags":{},"parent":"wf40lADkdvhEIKuG","color":"#300436","_id":"ZXHPKEjSUO4D4dQX"}
+{"_id":"a1xd8Vk9onynTMVv","name":"Peryton","type":"Actor","sort":650000,"flags":{},"parent":null,"color":""}
+{"_id":"czpWrAnwoEB0zrc0","name":"Prelude: Marshbout","type":"JournalEntry","sort":300000,"flags":{},"parent":"IP5jjt32nMAmwHHo","color":"#633163"}
+{"_id":"gNDm5xMcEMxCyTVb","name":"Arc: The Grenlich","type":"JournalEntry","sort":600000,"flags":{},"parent":"IP5jjt32nMAmwHHo","color":""}
+{"name":"mentioned","type":"Actor","sort":900000,"flags":{},"parent":"DFoO7w9dWPoyU8PG","color":"","_id":"gi0A57dNGANW7CQH"}
+{"name":"mentioned","type":"JournalEntry","sort":1600000,"flags":{},"parent":"wf40lADkdvhEIKuG","color":"#154300","_id":"jEvFMoGN00GNRoZS"}
+{"name":"prepped","type":"Scene","sort":100000,"flags":{},"parent":null,"color":"#60295b","_id":"nAScKsl53zf5l6Rs"}
+{"_id":"nHoWiaCrGwQ8dx7D","name":"hobgoblins","type":"Actor","sort":700000,"flags":{},"parent":"DFoO7w9dWPoyU8PG","color":"#333333"}
+{"name":"Items","type":"Item","sort":200000,"flags":{},"parent":null,"_id":"q8eukcHk2G533rmz"}
+{"name":"undebuted","type":"Actor","sort":800000,"flags":{},"parent":"DFoO7w9dWPoyU8PG","color":"","_id":"rX2f80NEvV4bvuaF"}
+{"name":"scenes","type":"JournalEntry","sort":1900000,"flags":{},"parent":null,"_id":"sFfN93bzEwcqcSqV"}
+{"name":"factions","type":"JournalEntry","sort":1400000,"flags":{},"parent":null,"color":"#a74696","_id":"srmjxCv4QHqVw5AK"}
+{"_id":"vahD70E1pBT0Wmks","name":"transcripts (early)","type":"JournalEntry","sort":1300000,"flags":{},"parent":null,"color":"#0b0b0b"}
+{"name":"NPCs","type":"JournalEntry","sort":500000,"flags":{},"parent":null,"color":"","_id":"wf40lADkdvhEIKuG"}
+{"name":"Arc: Castle Karn","type":"JournalEntry","sort":2100000,"flags":{},"parent":"IP5jjt32nMAmwHHo","_id":"yHG38qxWAxLawL6O"}
+{"name":"Mountain Lake","type":"Actor","sort":1100000,"flags":{},"parent":null,"color":"#665bff","_id":"yqXSiOnEby914qtW"}
+{"name":"Desert","type":"Actor","sort":1300000,"flags":{},"parent":null,"color":"#c19656","_id":"zKb2mLW9abk3Uv6n"}

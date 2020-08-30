@@ -1,0 +1,67 @@
+{
+	"name": "tidy5e-sheet",
+	"title": "Tidy5e Sheet",
+	"description": "Replaces the default D&D 5e character and NPC sheet with an alternate layout focused on a cleaner UI",
+	"version": "0.2.18",
+	"author": "sdenec#3813",
+	"minimumCoreVersion": "0.6.0",
+	"compatibleCoreVersion": "0.6.5",
+	"systems": ["dnd5e"],
+	"esmodules": [
+		"./tidy5e-sheet.js",	
+		"./tidy5e-favorites.js",
+		"./tidy5e-npc.js"
+	],
+	"styles": [
+		"./fonts/signika-negative/signika-negative.css",
+		"../fonts/modesto-condensed/modesto-condensed.css",
+		"./styles/tidy5e-sheet.css",
+		"./styles/tidy5e-items.css",
+		"./styles/tidy5e-modules.css",
+		"./styles/tidy5e-npc.css",
+		"./styles/darkmode/tidy5e-darksheet.css",
+		"./styles/darkmode/tidy5e-darknpc.css",
+		"./styles/darkmode/tidy5e-darkitems.css",
+		"./styles/darkmode/tidy5e-darkmodules.css"
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		},
+		{
+			"lang": "de",
+			"name": "Deutsch",
+			"path": "lang/de.json"
+		},
+		{
+			"lang": "it",
+			"name": "Italian",
+			"path": "lang/it.json"
+		},
+		{
+      "lang": "ja",
+      "name": "日本語 (Japanese)",
+      "path": "lang/ja.json"
+    },
+		{
+			"lang": "ko",
+			"name": "한국어 (Korean)",
+			"path": "lang/ko.json"
+		},
+		{
+			"lang": "pt-BR",
+			"name": "Brazilian Portuguese",
+			"path": "lang/pt-BR.json"
+		},
+		{
+			"lang": "fr",
+			"name": "Francais",
+			"path": "lang/fr.json"
+		}
+	],
+  "url": "https://github.com/sdenec/tidy5e-sheet",
+  "manifest": "https://raw.githubusercontent.com/sdenec/tidy5e-sheet/master/module.json",
+  "download": "https://github.com/sdenec/tidy5e-sheet/raw/master/tidy5e-sheet.zip"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "marshbout",
+  "title": "Marshbout.bk.2020.04.19 Copy",
+  "description": "Imported from Roll20 using R20Converter",
+  "author": "R20Converter",
+  "version": "0.8.94",
+  "minimumCoreVersion": "0.4.4",
+  "packs": [
+    {
+      "name": "journal",
+      "label": "Handouts (Marshbout.bk.2020.04.19 Copy)",
+      "path": "packs/journal.db",
+      "module": "marshbout",
+      "entity": "JournalEntry"
+    },
+    {
+      "name": "actors",
+      "label": "Actors (Marshbout.bk.2020.04.19 Copy)",
+      "path": "packs/actors.db",
+      "module": "marshbout",
+      "entity": "Actor"
+    },
+    {
+      "name": "items",
+      "label": "Items (Marshbout.bk.2020.04.19 Copy)",
+      "path": "packs/items.db",
+      "module": "marshbout",
+      "entity": "Item"
+    },
+    {
+      "name": "scenes",
+      "label": "Scenes (Marshbout.bk.2020.04.19 Copy)",
+      "path": "packs/scenes.db",
+      "module": "marshbout",
+      "entity": "Scene"
+    },
+    {
+      "name": "decks",
+      "label": "Decks (Marshbout.bk.2020.04.19 Copy)",
+      "path": "packs/decks.db",
+      "module": "marshbout",
+      "entity": "RollTable"
+    },
+    {
+      "name": "cards",
+      "label": "Deck Cards (Marshbout.bk.2020.04.19 Copy)",
+      "path": "packs/cards.db",
+      "module": "marshbout",
+      "entity": "Item"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+{"_id":"Vxq2JTJkK14vvIcF","name":"Burning Damage","permission":{"default":0,"e1GJldqKX2xtXEGs":3},"type":"chat","sort":100001,"flags":{},"scope":"global","command":"/roll 1d10 # Burning Damage!","author":"e1GJldqKX2xtXEGs","img":"icons/svg/fire.svg","actorIds":[]}
+{"_id":"ZStYNwnehv19JC5f","name":"Dexterity Saving Throw","permission":{"default":0,"e1GJldqKX2xtXEGs":3},"type":"script","sort":100001,"flags":{},"scope":"global","command":"actor.rollAbilitySave(\"dex\");","author":"e1GJldqKX2xtXEGs","img":"icons/svg/trap.svg","actorIds":[]}

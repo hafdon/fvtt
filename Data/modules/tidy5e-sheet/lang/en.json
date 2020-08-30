@@ -1,0 +1,76 @@
+{
+	"TIDY5E.EditActorImage": "Edit Image",
+
+	"TIDY5E.Exhaustion0": "No negative effects",
+	"TIDY5E.Exhaustion1": "Disadvantage on Ability Checks",
+	"TIDY5E.Exhaustion2": "Speed halved",
+	"TIDY5E.Exhaustion3": "Disadvantage on Attack rolls and Saving Throws",
+	"TIDY5E.Exhaustion4": "Hit point maximum halved",
+	"TIDY5E.Exhaustion5": "Speed reduced to 0",
+	"TIDY5E.Exhaustion6": "Death",
+
+	"TIDY5E.RestHint": "Take A Rest",
+	"TIDY5E.RestS": "Short Rest",
+	"TIDY5E.RestL": "Long Rest",
+
+	"TIDY5E.AttrHitPoints": "Hit Points",
+
+	"TIDY5E.HitDiceHint": "Use on Rest",
+
+	"TIDY5E.Journal": "Journal",
+
+	"TIDY5E.SkillPassive": "Passive",
+
+	"TIDY5E.RestoreOnRest": "Restore on rest",
+
+	"TIDY5E.BioTraits": "Traits",
+	"TIDY5E.BioIdeals": "Ideals",
+	"TIDY5E.BioBonds": "Bonds",
+	"TIDY5E.BioFlaws": "Flaws",
+	"TIDY5E.BioAppearance": "Appearance",
+	"TIDY5E.BioBackground": "Background/Biography",
+
+	"TIDY5E.JournalPoi": "Persons of Interest",
+	"TIDY5E.JournalLoi": "Locations of Interest",
+	"TIDY5E.JournalQuests": "Quests",
+	"TIDY5E.JournalMisc": "Miscellaneous",
+	"TIDY5E.JournalEntries": "Journal Entries",
+
+	"TIDY5E.DeleteDisabled": "Delete Disabled",
+	"TIDY5E.DeleteEnabled": "Delete Enabled",
+	"TIDY5E.DeleteDisabledHint": "show item delete button",
+	"TIDY5E.DeleteEnabledHint": "hide item delete button",
+
+	"TIDY5E.ConvertCurrencyHint": "convert currency to highest coinage",
+	"TIDY5E.ConvertCurrencyButton": "convert",
+
+	"TIDY5E.Encumbrance": "Encumbrance",
+
+	"TIDY5E.EditSpell": "Edit Spell",
+	"TIDY5E.DeleteSpell": "Delete Spell",
+	"TIDY5E.AddFav": "Add to Favorites",
+	"TIDY5E.RemoveFav": "Remove from Favorites",
+
+	"TIDY5E.ToggleInfo": "Toggle Info",
+
+	"TIDY5E.Show" : "show/edit",
+	"TIDY5E.Hide" : "hide",
+	"TIDY5E.Edit" : "edit",
+	"TIDY5E.SkillsNotProficient" : "not proficient",
+	"TIDY5E.TraitsEmpty" : "empty traits",
+
+	"TIDY5E.AbbrArmorClass" : "AC",
+
+	"TIDY5E.strAbility" : "Str",
+	"TIDY5E.dexAbility" : "Dex",
+	"TIDY5E.conAbility" : "Con",
+	"TIDY5E.intAbility" : "Int",
+	"TIDY5E.wisAbility" : "Wis",
+	"TIDY5E.chaAbility" : "Cha",
+
+	"TIDY5E.Abilities" : "Abilities",
+
+	"TIDY5E.Environment" : "Environment",
+
+	"TIDY5E.AbbrMod" : "Mod"
+}
