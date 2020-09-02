@@ -3,6 +3,7 @@
 eversmoking bottle (jean-luc)
 hat of disguise (jean-luc)
 
+
 ## ToDo
 - establish major astrological and seasonal events 
 
@@ -21,8 +22,6 @@ hat of disguise (jean-luc)
 ### Shadow Fey
 - __character development__: teach Flick about Shadow Roads 
 
-### Ratfolk
-- __character development__: could comprise some of the members of city guilds or gangs for Jean-Luc
 
 ### Cikivak  
 - used by thieves (for secret pouches)
@@ -60,7 +59,7 @@ hat of disguise (jean-luc)
 	- __trade goods__: perhaps have them given as gifts to Flick, etc.
 - they don't really molt, but they undergo "quilling" which is like losing their baby quills
 
-### Kalke  
+### Kalke  - sort of a model for Cthulhu investigators
 - __combat__: this is not reflected in their statblock: all kalkes can produce magical effects through the dramatic mumming of largely spontaneous and unstudied rituals.
 - __ghost in the machine__: (They could be used as beacons essentially). Kalkes can sense spellcasting in a 5-mile radius, as long as the effect is not innate.
 - __hoard__: compulsion to accumulate spell components, magical foci, and other occult paraphernalia
@@ -68,60 +67,9 @@ hat of disguise (jean-luc)
 - __mystery__: the rituals, with unpredictable effects
 
 ### Map Mimic
-- __trade goods__: their "glue" (adhesive) is very strong but has to be pasteurized because it contains millions of larvae
+- __trade goods__: their "glue" (adhesive) is very strong but has to be pasteurized / blanched, etc because it contains millions of larvae
 
 ---
-
-## Stato's Den  
-
-### Clurichaun (by a different name)  
-  - perhaps in a ground-level wine or beer cellar
-  - "tormenting their hapless hosts with cruel pranks" unless well-supplied with alcohol, in which case they guard the cellars
-  - __attrition__: can make adventurers feel hung-over next day
-- serve __dipsaviar__ from the lake
-
-### Garroter Crabs
-- maybe some __Garroter Crabs__ ("aggressive, blue-black freshwater crabs"), which are alternately seen as divine and respected and sacred (and used for augury), or tasty and eaten
-	- __trade goods__: serve Garroter Crabs in dipsa milt ("dipsoft")
-
-### Bone Crab
-- __trade__: bone crab legs ("incredibly powerful"), good eating
-- __clues__: the bone-home in which they live is the skull of a missing person? a kind of monster no one thought was alive anymore? 
-	- Some crabs retain fragments of memory from those they devour, and these crabs recognize friends or attack the foes of those whose skulls they wear.
-- this is definitely not true as a cause, since all crabs are scavengers (White Ghost Shivers), but there's probably something else going on misattributed to the crab's flesh: "Because they eat carrion, bone crabs carry a dangerous disease—white ghost shivers, which wrack victims with fever and delirium. Sailors and others who eat a bone crab's unwholesome, diseased flesh rarely survive it." - it actually sounds like a drug trip. hallucinations. (probably just crabs around a certain type of food source)
-
-### Living Wicks
-- unlit __Living Wicks__ are under the drop cloths in the backroom of Stato's
-	- __combat__: Vengeance or anyone else could command them (and then a fight to extinguish them) "Living wicks are active only when their wicks are lit, and only respond to the telepathic commands of whoever lit them. This makes it easy to transfer living wicks between owners, even those not well-versed in the use of magic."
-	- __combat__: also a self-destruct mechanism: If their controller demands it, all living wicks can release the magic contained within their form all at once, engulfing themselves and anyone nearby in flames.
-
-### Bucca
-- love to steal from miners: Hidden in Crevices. Buccas are tiny, underground faeries who are also known as "snatchers," because they love to steal from miners and hoard precious minerals and gems in tiny, trap.filled crevices. Their small size makes them easy to overlook.
-- __character__: Drav might know about them: Buccas are often enslaved by derro as treasure seekers and can be summoned by some derro shamans. Buccas are the bane of the dwarves of many mountains and hilly cantons, serving as spies and scouts for evil humanoids.
-
-### Empty Cloak
-- perhaps upon a Living Wick or actual mannequin 
-
-### Lantern drake
-- that feeds on the Living Wicks, -- hence the Empty Cloak? Unless Palchin considers it good luck
-- __clues__ __character__ loves discussing magic and history (telepathically of course) 
-- __suspense__ if caught in magical darkness it can't fly or glow and takes radiant damage.
-
-### Boloti
-- __combat__ (for the lake)
-
- 
-## Postmaster Buddock  
-- Stryx owl-things as owls
-
-## Deserts / Plains
-- Dust Goblins
-- Ramag
-- Burrowling
-- Nkosi
-- Scorpion Cultist
-- War Ostrich
-- Bastet Cat
 
 ## Jungle or Forest
 - Crimson Drake
@@ -152,7 +100,6 @@ hat of disguise (jean-luc)
 - Glass Gator
 
 ## Farming
-- Burrowling
 - Tosculi Drone
 - Crimson Drake
 

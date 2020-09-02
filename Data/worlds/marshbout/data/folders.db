@@ -5,6 +5,7 @@
 {"name":"Weapons","type":"Item","sort":100000,"flags":{},"parent":null,"color":"","_id":"5LaphOSK4aLCDMt6"}
 {"name":"Stato's Den","type":"Actor","sort":1200000,"flags":{},"parent":null,"color":"","_id":"6AmSbGb0jvvB3L5B"}
 {"_id":"7FU7CCEBg8xZrzdi","name":"Arc: Von Veen","type":"JournalEntry","sort":400000,"flags":{},"parent":"IP5jjt32nMAmwHHo","color":""}
+{"_id":"826K7wIEkunqGCGA","name":"Highlands","type":"Actor","sort":1425000,"flags":{},"parent":null,"color":"#ca7900"}
 {"name":"Spells","type":"Item","sort":null,"flags":{},"parent":null,"_id":"8e9LjzR0LZBrGmHh"}
 {"name":"fant. loc.s","type":"JournalEntry","sort":2000000,"flags":{},"parent":"3NceJdtnXtuJV2OZ","_id":"CFEx8dwW4VzBNu4j"}
 {"_id":"CFTrzKoWN4mSlEhv","name":"M&M","type":"Actor","sort":800000,"flags":{},"parent":null,"color":"#b30000"}
@@ -40,10 +41,11 @@
 {"_id":"nHoWiaCrGwQ8dx7D","name":"hobgoblins","type":"Actor","sort":700000,"flags":{},"parent":"DFoO7w9dWPoyU8PG","color":"#333333"}
 {"name":"Items","type":"Item","sort":200000,"flags":{},"parent":null,"_id":"q8eukcHk2G533rmz"}
 {"name":"undebuted","type":"Actor","sort":800000,"flags":{},"parent":"DFoO7w9dWPoyU8PG","color":"","_id":"rX2f80NEvV4bvuaF"}
-{"name":"scenes","type":"JournalEntry","sort":1900000,"flags":{},"parent":null,"_id":"sFfN93bzEwcqcSqV"}
+{"_id":"sFfN93bzEwcqcSqV","name":"scenes / environments","type":"JournalEntry","sort":1900000,"flags":{},"parent":null,"color":""}
 {"name":"factions","type":"JournalEntry","sort":1400000,"flags":{},"parent":null,"color":"#a74696","_id":"srmjxCv4QHqVw5AK"}
 {"_id":"vahD70E1pBT0Wmks","name":"transcripts (early)","type":"JournalEntry","sort":1300000,"flags":{},"parent":null,"color":"#0b0b0b"}
 {"name":"NPCs","type":"JournalEntry","sort":500000,"flags":{},"parent":null,"color":"","_id":"wf40lADkdvhEIKuG"}
 {"name":"Arc: Castle Karn","type":"JournalEntry","sort":2100000,"flags":{},"parent":"IP5jjt32nMAmwHHo","_id":"yHG38qxWAxLawL6O"}
 {"name":"Mountain Lake","type":"Actor","sort":1100000,"flags":{},"parent":null,"color":"#665bff","_id":"yqXSiOnEby914qtW"}
 {"name":"Desert","type":"Actor","sort":1300000,"flags":{},"parent":null,"color":"#c19656","_id":"zKb2mLW9abk3Uv6n"}
+{"name":"Planghage Lake","type":"Actor","sort":1525000,"flags":{},"parent":null,"color":"","_id":"ZddmNkWf4gEHWTaF"}
