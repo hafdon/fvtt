@@ -2,15 +2,16 @@
 	"name": "tidy5e-sheet",
 	"title": "Tidy5e Sheet",
 	"description": "Replaces the default D&D 5e character and NPC sheet with an alternate layout focused on a cleaner UI",
-	"version": "0.2.18",
+	"version": "0.2.29",
 	"author": "sdenec#3813",
 	"minimumCoreVersion": "0.6.0",
-	"compatibleCoreVersion": "0.6.5",
+	"compatibleCoreVersion": "0.7.5",
 	"systems": ["dnd5e"],
 	"esmodules": [
 		"./tidy5e-sheet.js",	
 		"./tidy5e-favorites.js",
-		"./tidy5e-npc.js"
+		"./tidy5e-npc.js",
+		"./tidy5e-item.js"
 	],
 	"styles": [
 		"./fonts/signika-negative/signika-negative.css",
@@ -52,13 +53,18 @@
 		},
 		{
 			"lang": "pt-BR",
-			"name": "Brazilian Portuguese",
+			"name": "Português (Brasil)",
 			"path": "lang/pt-BR.json"
 		},
 		{
 			"lang": "fr",
 			"name": "Francais",
 			"path": "lang/fr.json"
+		},
+		{
+			"lang": "cn",
+			"name": "Chinese",
+			"path": "lang/cn.json"
 		}
 	],
   "url": "https://github.com/sdenec/tidy5e-sheet",

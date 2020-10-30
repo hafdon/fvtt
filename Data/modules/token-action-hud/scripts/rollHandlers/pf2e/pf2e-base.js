@@ -34,6 +34,7 @@ export class RollHandlerBasePf2e extends RollHandler {
                     this._handleUniqueActionsNpc(macroType, event, tokenId, actor, actionId);
                     break;
                 case 'character':
+                case 'familiar':
                     await this._handleUniqueActionsChar(macroType, event, tokenId, actor, actionId);
                     break;
             }
@@ -85,6 +86,9 @@ export class RollHandlerBasePf2e extends RollHandler {
             case 'wounded':
             case 'dying':
                 await this._adjustAttribute(event, actor, macroType, 'value', actionId);
+                break;
+            case 'familiarAttack':
+                this._rollFamiliarAttack(event, actor);
                 break;
         }
     }
@@ -201,8 +205,9 @@ export class RollHandlerBasePf2e extends RollHandler {
             actor.rollSkill(event, actionId);
         }
         else {
-            const opts = actor.getRollOptions(['all', 'skill-check', CONFIG.PF2E.skills[actionId] ?? actionId]);
-            skill.roll(event);
+            var abilityBased = `${skill.ability}-based`;
+            const opts = actor.getRollOptions(['all', 'skill-check', abilityBased, CONFIG.PF2E.skills[actionId] ?? actionId]);
+            skill.roll(event, opts);
         }
     }
 
@@ -287,6 +292,12 @@ export class RollHandlerBasePf2e extends RollHandler {
     }
 
     /** @private */
+    _rollFamiliarAttack(event, actor) {
+        const options = actor.getRollOptions(['all', 'attack']);
+        actor.data.data.attack.roll(event, options);
+    }
+
+    /** @private */
     _rollSpell(event, tokenId, actor, actionId) {
         let actionParts = decodeURIComponent(actionId).split('>');
 
@@ -362,6 +373,7 @@ export class RollHandlerBasePf2e extends RollHandler {
             if (!item.data.hasOwnProperty('contextualData'))
                 item.data.contextualData = {};
             item.data.contextualData.spellLvl = castLevel;
+            data.spellLvl = castLevel;
         }
 
         const template = `systems/pf2e/templates/chat/${item.data.type}-card.html`;

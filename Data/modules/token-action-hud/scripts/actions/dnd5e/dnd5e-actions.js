@@ -128,12 +128,13 @@ export class ActionHandler5e extends ActionHandler {
     
         let allConsumables = sortedItems.filter(i => i.type == 'consumable');
         
-        let consumable = this._filterExpendedItems(allConsumables);
+        let expendedFiltered = this._filterExpendedItems(allConsumables);
+        let consumable = expendedFiltered.filter(c => (c.data.uses?.value && c.data.uses?.value >= 0) || (c.data.uses?.max && c.data.uses?.max >= 0) );
         let consumableActions = consumable.map(c => this._buildItem(tokenId, actor, macroType, c));
         let consumablesCat = this.initializeEmptySubcategory();
         consumablesCat.actions = consumableActions;
         
-        let inconsumable = allConsumables.filter(c => !(c.data.uses.max || c.data.uses.value) && c.data.consumableType != 'ammo')
+        let inconsumable = allConsumables.filter(c => !(c.data.uses?.max || c.data.uses?.value) && c.data.consumableType != 'ammo')
         let incomsumableActions = inconsumable.map(i => this._buildItem(tokenId, actor, macroType, i));
         let inconsumablesCat = this.initializeEmptySubcategory();
         inconsumablesCat.actions = incomsumableActions;
@@ -443,6 +444,9 @@ export class ActionHandler5e extends ActionHandler {
         let abbr = settings.get('abbreviateSkills');
         
         let actions = Object.entries(game.dnd5e.config.abilities).map(e => {
+            if (abilities[e[0]].value === 0)
+                return;
+
             let name = abbr ? e[0] : e[1];
             name = name.charAt(0).toUpperCase() + name.slice(1);
             let encodedValue = [macroType, tokenId, e[0]].join(this.delimiter);
@@ -455,7 +459,7 @@ export class ActionHandler5e extends ActionHandler {
             return { name: name, id: e[0], encodedValue: encodedValue, icon: icon }; 
         });
         let abilityCategory = this.initializeEmptySubcategory();
-        abilityCategory.actions = actions;
+        abilityCategory.actions = actions.filter(a => !!a);
 
         this._combineSubcategoryWithCategory(result, categoryName, abilityCategory);
 
@@ -557,9 +561,9 @@ export class ActionHandler5e extends ActionHandler {
             let visbilityValue = [macroType, tokenId, 'toggleVisibility'].join(this.delimiter);
             let visibilityAction = {id:'toggleVisibility', encodedValue: visbilityValue, name: this.i18n('tokenactionhud.toggleVisibility')};
             visibilityAction.cssClass = actors.every(a => {
-                let token = canvas.tokens.placeables.find(t => t.data._id === a.token?.data._id);
+                let token = canvas.tokens.placeables.find(t => t.data?._id === a.token?.data._id);
                 if (!token)
-                    token = canvas.tokens.placeables.find(t => t.actor.id === a.id);
+                    token = canvas.tokens.placeables.find(t => t.actor?.id === a.id);
                 return !token.data.hidden;
             }) ? 'active' : '';
             gm.actions.push(visibilityAction);
@@ -618,10 +622,10 @@ export class ActionHandler5e extends ActionHandler {
         if (!uses)
             return result;
 
-        if (uses.max === 0 && uses.value === 0)
+        if (!(uses.max || uses.value))
             return result;
 
-        result = uses.value;
+        result = uses.value ?? 0;
 
         if (uses.max > 0) {
             result += `/${uses.max}`
@@ -707,7 +711,7 @@ export class ActionHandler5e extends ActionHandler {
             if (!uses) return true;
 
             // if it has a max but value is 0, don't return.
-            if (uses.max > 0 && uses.value == 0)
+            if (uses.max > 0 && !uses.value)
                 return false;
 
             return true;

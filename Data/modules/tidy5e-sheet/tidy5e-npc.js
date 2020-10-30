@@ -1,5 +1,5 @@
 import ActorSheet5e from "../../systems/dnd5e/module/actor/sheets/base.js";
-import { preloadTidy5eHandlebarsTemplates } from "./templates/tidy5e-npc-templates.js";
+import { preloadTidy5eHandlebarsTemplates } from "./templates/actors/npc/tidy5e-npc-templates.js";
 
 /**
  * An Actor sheet for NPC type characters in the D&D5E system.
@@ -37,8 +37,8 @@ export default class Tidy5eNPC extends ActorSheet5e {
    * @type {String}
    */
   get template() {
-    if ( !game.user.isGM && this.actor.limited ) return "modules/tidy5e-sheet/templates/tidy5e-npc-ltd.html";
-    return "modules/tidy5e-sheet/templates/tidy5e-npc.html";
+    if ( !game.user.isGM && this.actor.limited ) return "modules/tidy5e-sheet/templates/actors/npc/tidy5e-npc-ltd.html";
+    return "modules/tidy5e-sheet/templates/actors/npc/tidy5e-npc.html";
   }
 
   /* -------------------------------------------- */
@@ -276,6 +276,32 @@ export default class Tidy5eNPC extends ActorSheet5e {
       }
     });
 
+    
+    // changing item qty and charges values (removing if both value and max are 0)
+    html.find('.item:not(.inventory-header) input').change(event => {
+      let value = event.target.value;
+      let actor = this.actor;
+      let itemId = $(event.target).parents('.item')[0].dataset.itemId;
+      let path = event.target.dataset.path;
+      let data = {};
+      data[path] = Number(event.target.value);
+      actor.getOwnedItem(itemId).update(data);
+    });
+
+    // creating charges for the item
+    html.find('.inventory-list .item .addCharges').click(event => {
+      let actor = this.actor;
+      let itemId = $(event.target).parents('.item')[0].dataset.itemId;
+      let item = actor.getOwnedItem(itemId);
+
+      item.data.uses = { value: 1, max: 1 };
+      let data = {};
+      data['data.uses.value'] = 1;
+      data['data.uses.max'] = 1;
+
+      actor.getOwnedItem(itemId).update(data);
+    });
+
   }
 
 
@@ -408,61 +434,62 @@ Hooks.once("init", () => {
 
 Hooks.once("ready", () => {
   
+  // can be removed when 0.7.x is stable
   if (window.BetterRolls) {
     window.BetterRolls.hooks.addActorSheet("Tidy5eNPC");
   }
+
   game.settings.register("tidy5e-sheet", "useRoundNpcPortraits", {
-    name: "NPC Sheets: Sheets use round portraits.",
-    hint: "You should check this if you use round NPC portraits. It will adapt the hp overlay and portait buttons to make it look nicer. Also looks nice on square portraits without a custom frame.",
-    scope: "world",
-    config: true,
-    default: false,
-    type: Boolean
-  });
-  game.settings.register("tidy5e-sheet", "disableNpcHpOverlay", {
-    name: "NPC Sheets: Disable the hit point overlay.",
-    hint: "If you don't like the video game style Hit Point overlay on your NPC's portrait you can disable it.",
+    name: `${game.i18n.localize("TIDY5E.Settings.NpcLabel")} ${game.i18n.localize("TIDY5E.Settings.UseRoundPortraits.name")}`,
+    hint: game.i18n.localize("TIDY5E.Settings.UseRoundPortraits.hint"),
     scope: "world",
     config: true,
     default: false,
     type: Boolean
   });
   game.settings.register("tidy5e-sheet", "npcHpOverlayBorder", {
-    name: "NPC Sheets: Border width for the hit point overlay",
-    hint: "If your portrait has a frame you can adjust the NPC Hit Point overlay to compensate the frame width. It might look nicer if the overlay doesn't tint the border.",
+    name: `${game.i18n.localize("TIDY5E.Settings.NpcLabel")} ${game.i18n.localize("TIDY5E.Settings.HpOverlayBorder.name")}`,
+    hint: game.i18n.localize("TIDY5E.Settings.HpOverlayBorder.hint"),
     scope: "world",
     config: true,
     default: 0,
     type: Number
   });
+  game.settings.register("tidy5e-sheet", "disableNpcHpOverlay", {
+    name: `${game.i18n.localize("TIDY5E.Settings.NpcLabel")} ${game.i18n.localize("TIDY5E.Settings.DisableHpOverlay.name")}`,
+    hint: game.i18n.localize("TIDY5E.Settings.DisableHpOverlay.hint"),
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean
+  });
   game.settings.register("tidy5e-sheet", "npcAlwaysShowTraits", {
-    name: "NPC Sheets: Always show traits",
-    hint: "When you don't want to hide and toggle empty NPC traits tick this box.",
+    name: `${game.i18n.localize("TIDY5E.Settings.NpcLabel")} ${game.i18n.localize("TIDY5E.Settings.AlwaysShowTraits.name")}`,
+    hint: game.i18n.localize("TIDY5E.Settings.AlwaysShowTraits.hint"),
     scope: "world",
     config: true,
     default: false,
     type: Boolean
   });
   game.settings.register("tidy5e-sheet", "npcAlwaysShowSkills", {
-    name: "NPC Sheets: Always show skills",
-    hint: "When you don't want to hide and toggle not proficient NPC skills tick this box.",
+    name: `${game.i18n.localize("TIDY5E.Settings.NpcLabel")} ${game.i18n.localize("TIDY5E.Settings.AlwaysShowSkills.name")}`,
+    hint: game.i18n.localize("TIDY5E.Settings.AlwaysShowSkills.hint"),
     scope: "world",
     config: true,
     default: false,
     type: Boolean
   });
-  // experimental but not working properly due to handling of the actorLink flag
   game.settings.register("tidy5e-sheet", "npcMarkLinked", {
-    name: "NPC Sheets: Experimental - Highlight Sheet when linked to Actor",
-    hint: "When you find yourself editing the wrong NPC Sheet you can have linked sheets visually highlighted.",
+    name: `${game.i18n.localize("TIDY5E.Settings.NpcLabel")} ${game.i18n.localize("TIDY5E.Settings.MarkLinked.name")}`,
+    hint: game.i18n.localize("TIDY5E.Settings.MarkLinked.hint"),
     scope: "world",
     config: true,
     default: false,
     type: Boolean
   });
   game.settings.register("tidy5e-sheet", "npcMarkUnlinked", {
-    name: "NPC Sheets: Experimental - Highlight sheet when not linked to actor",
-    hint: "When you find yourself editing the wrong NPC Sheet you can have unlinked sheets visually highlighted.",
+    name: `${game.i18n.localize("TIDY5E.Settings.NpcLabel")} ${game.i18n.localize("TIDY5E.Settings.MarkUnlinked.name")}`,
+    hint: game.i18n.localize("TIDY5E.Settings.MarkUnlinked.hint"),
     scope: "world",
     config: true,
     default: false,

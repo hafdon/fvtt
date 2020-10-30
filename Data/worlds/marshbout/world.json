@@ -1,7 +1,7 @@
 {
   "name": "marshbout",
   "title": "Marshbout",
-  "description": "",
+  "description": "<p>Marshbout, y'all.</p>",
   "version": "1.0.0",
   "minimumCoreVersion": "0.0.0",
   "compatibleCoreVersion": "1.0.0",
@@ -22,9 +22,9 @@
   "changelog": "",
   "background": "",
   "system": "dnd5e",
-  "coreVersion": "0.6.6",
-  "systemVersion": 0.96,
-  "nextSession": "",
+  "coreVersion": "0.7.5",
+  "systemVersion": 0.98,
+  "nextSession": "2020-10-24T17:30:00.000Z",
   "availability": 0,
   "unavailable": false
 }

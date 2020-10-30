@@ -8,14 +8,14 @@ Handlebars.registerHelper("trainingCompletion", function(trainingItem) {
   return percentComplete;
 });
 
-Handlebars.registerHelper("progressionStyle", function(trainingItem) {
+Handlebars.registerHelper("progressionStyle", function(trainingItem, actor) {
   let progressionTypeString = "";
   if(trainingItem.progressionStyle === "simple"){
     progressionTypeString = game.i18n.localize("C5ETRAINING.Simple");
   } else if(trainingItem.progressionStyle === "ability"){
-    progressionTypeString = getAbilityName(trainingItem.ability);
+    progressionTypeString = getAbilityName(trainingItem, actor);
   } else if(trainingItem.progressionStyle === "dc"){
-    progressionTypeString = getAbilityName(trainingItem.ability)+" (" + game.i18n.localize("C5ETRAINING.DC") + trainingItem.dc + ")";
+    progressionTypeString = getAbilityName(trainingItem, actor)+" (" + game.i18n.localize("C5ETRAINING.DC") + trainingItem.dc + ")";
   }
     return progressionTypeString;
 });
@@ -122,26 +122,6 @@ Hooks.once("init", () => {
     type: Number
   });
 
-  // IF ABOUT TIME IS ENABLED
-  // game.settings.register("5e-training", "timeToComplete", {
-  //   name: game.i18n.localize("C5ETRAINING.DefaultTimeCompletion"),
-  //   hint: game.i18n.localize("C5ETRAINING.DefaultTimeCompletionHint"),
-  //   scope: "world",
-  //   config: true,
-  //   default: 30,
-  //   type: Number
-  // });
-
-  // IF ABOUT TIME IS ENABLED
-  // game.settings.register("5e-training", "enableDowntimeReminders", {
-  //   name: game.i18n.localize("C5ETRAINING.EnableDowntimeReminders"),
-  //   hint: game.i18n.localize("C5ETRAINING.EnableDowntimeRemindersHint"),
-  //   scope: "world",
-  //   config: true,
-  //   default: false,
-  //   type: Boolean
-  // });
-
   game.settings.register("5e-training", "announceCompletionFor", {
     name: game.i18n.localize("C5ETRAINING.AnnounceActivityCompletionFor"),
     hint: game.i18n.localize("C5ETRAINING.AnnounceActivityCompletionForHint"),
@@ -169,16 +149,9 @@ async function addTrainingTab(app, html, data) {
 
   if (showTrainingTab){
 
-    // Get our actor
+    // Get our actor and our flags
     let actor = game.actors.entities.find(a => a.data._id === data.actor._id);
-    // Make sure flags exist if they don't already
-    if (actor.data.flags['5e-training'] === undefined || actor.data.flags['5e-training'] === null) {
-      let trainingList = [];
-      const flags = {trainingItems: trainingList};
-      actor.data.flags['5e-training'] = flags;
-      actor.update({'flags.5e-training': flags});
-    }
-    let flags = actor.data.flags['5e-training'];
+    let trainingItems = await actor.getFlag("5e-training", "trainingItems");
 
     // Update the nav menu
     let tabName = game.settings.get("5e-training", "tabName");
@@ -191,8 +164,44 @@ async function addTrainingTab(app, html, data) {
     let trainingTabHtml = $(await renderTemplate('modules/5e-training/templates/training-section.html', data));
     sheet.append(trainingTabHtml);
 
-    // Add New Downtime Activity
-    html.find('.training-add').click(async (event) => {
+    // Get a list of tools from our actor
+    let actorTools = getActorTools(actor);
+
+    // Set up our big list of dropdown options because doing this 50 times seems dumb.
+    const ABILITIES = [
+      { value: "str", label: game.i18n.localize("C5ETRAINING.Ability")+": "+game.i18n.localize("C5ETRAINING.AbilityStr") },
+      { value: "dex", label: game.i18n.localize("C5ETRAINING.Ability")+": "+game.i18n.localize("C5ETRAINING.AbilityDex") },
+      { value: "con", label: game.i18n.localize("C5ETRAINING.Ability")+": "+game.i18n.localize("C5ETRAINING.AbilityCon") },
+      { value: "int", label: game.i18n.localize("C5ETRAINING.Ability")+": "+game.i18n.localize("C5ETRAINING.AbilityInt") },
+      { value: "wis", label: game.i18n.localize("C5ETRAINING.Ability")+": "+game.i18n.localize("C5ETRAINING.AbilityWis") },
+      { value: "cha", label: game.i18n.localize("C5ETRAINING.Ability")+": "+game.i18n.localize("C5ETRAINING.AbilityCha") }
+    ];
+
+    const SKILLS = [
+      { value: "acr", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillAcr") },
+      { value: "ani", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillAni") },
+      { value: "arc", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillArc") },
+      { value: "ath", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillAth") },
+      { value: "dec", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillDec") },
+      { value: "his", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillHis") },
+      { value: "ins", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillIns") },
+      { value: "inv", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillInv") },
+      { value: "itm", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillItm") },
+      { value: "med", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillMed") },
+      { value: "nat", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillNat") },
+      { value: "per", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillPer") },
+      { value: "prc", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillPrc") },
+      { value: "prf", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillPrf") },
+      { value: "rel", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillRel") },
+      { value: "slt", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillSlt") },
+      { value: "ste", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillSte") },
+      { value: "sur", label: game.i18n.localize("C5ETRAINING.Skill")+": "+game.i18n.localize("C5ETRAINING.SkillSur") }
+    ];
+
+    const DROPDOWN_OPTIONS = ABILITIES.concat(SKILLS.concat(actorTools));
+
+    // ADD NEW DOWNTIME ACTIVITY
+    html.find('.crash-training-add').click(async (event) => {
       event.preventDefault();
       console.log("Crash's 5e Downtime Tracking | Create Downtime Activity excuted!");
 
@@ -208,9 +217,9 @@ async function addTrainingTab(app, html, data) {
 
       let dialogContent = await renderTemplate('modules/5e-training/templates/add-training-dialog.html', {training: newActivity});
 
-      // Set up flags if they don't exist
-      if (flags.trainingItems == undefined){
-        flags.trainingItems = [];
+      // If there is no flag, create an empty array to use as a placeholder
+      if (!trainingItems) {
+        trainingItems = [];
       }
 
       // Create dialog
@@ -222,48 +231,47 @@ async function addTrainingTab(app, html, data) {
           no: {icon: "<i class='fas fa-times'></i>", label: game.i18n.localize("C5ETRAINING.Cancel"), callback: () => add = false},
         },
         default: "yes",
-        close: html => {
+        close: async (html) => {
           if (add) {
             // Set up basic info
             newActivity.name = html.find('#nameInput').val();
             newActivity.progressionStyle = html.find('#progressionStyleInput').val();
             newActivity.description = html.find('#descriptionInput').val();
             // Progression Type: Ability Check
-            if (newActivity.progressionStyle == 'ability'){
+            if (newActivity.progressionStyle === 'ability'){
               newActivity.ability = game.settings.get("5e-training", "defaultAbility");
               newActivity.completionAt = game.settings.get("5e-training", "totalToComplete");
             }
             // Progression Type: Simple
-            else if (newActivity.progressionStyle == 'simple'){
+            else if (newActivity.progressionStyle === 'simple'){
               newActivity.completionAt = game.settings.get("5e-training", "attemptsToComplete");
             }
             // Progression Type: DC
-            else if (newActivity.progressionStyle == 'dc'){
+            else if (newActivity.progressionStyle === 'dc'){
               newActivity.completionAt = game.settings.get("5e-training", "defaultDcSuccesses");
               newActivity.ability = game.settings.get("5e-training", "defaultAbility");
               newActivity.dc = game.settings.get("5e-training", "defaultDcDifficulty");
             }
             // Update flags and actor
-            flags.trainingItems.push(newActivity);
-            actor.update({'flags.5e-training': null}).then(function(){
-              actor.update({'flags.5e-training': flags});
-            });
+            trainingItems.push(newActivity);
+            await actor.unsetFlag("5e-training", "trainingItems");
+            await actor.setFlag("5e-training", "trainingItems", trainingItems);
           }
         }
       }).render(true);
     });
 
-    // Edit Downtime Activity
-    html.find('.training-edit').click(async (event) => {
+    // EDIT DOWNTIME ACTIVITY
+    html.find('.crash-training-edit').click(async (event) => {
       event.preventDefault();
       console.log("Crash's 5e Downtime Tracking | Edit Downtime Activity excuted!");
 
       // Set up some variables
       let fieldId = event.currentTarget.id;
-      let trainingIdx = parseInt(fieldId.replace('edit-',''));
-      let activity = flags.trainingItems[trainingIdx];
+      let trainingIdx = parseInt(fieldId.replace('crash-edit-',''));
+      let activity = trainingItems[trainingIdx];
       let edit = false;
-      let dialogContent = await renderTemplate('modules/5e-training/templates/training-details-dialog.html', {training: activity});
+      let dialogContent = await renderTemplate('modules/5e-training/templates/training-details-dialog.html', {training: activity, options: DROPDOWN_OPTIONS});
 
       // Create dialog
       new Dialog({
@@ -274,45 +282,44 @@ async function addTrainingTab(app, html, data) {
           no: {icon: "<i class='fas fa-times'></i>",  label: game.i18n.localize("C5ETRAINING.Cancel"), callback: () => edit = false},
         },
         default: "yes",
-        close: html => {
+        close: async (html) => {
           if (edit) {
             // Set up base values
             activity.name = html.find('#nameInput').val();
             activity.description = html.find('#descriptionInput').val();
             // Progression Style: Ability Check
-            if (activity.progressionStyle == 'ability'){
+            if (activity.progressionStyle === 'ability'){
               activity.completionAt = parseInt(html.find('#completionAtInput').val());
               activity.ability = html.find('#abilityInput').val();
             }
             // Progression Style: Simple
-            else if (activity.progressionStyle == 'simple'){
+            else if (activity.progressionStyle === 'simple'){
               activity.completionAt = parseInt(html.find('#completionAtInput').val());
             }
             // Progression Style: DC
-            else if (activity.progressionStyle == 'dc'){
+            else if (activity.progressionStyle === 'dc'){
               activity.completionAt = parseInt(html.find('#completionAtInput').val());
               activity.ability = html.find('#abilityInput').val();
               activity.dc = html.find('#dcInput').val();
             }
             // Update flags and actor
-            flags.trainingItems[trainingIdx] = activity;
-            actor.update({'flags.5e-training': null}).then(function(){
-              actor.update({'flags.5e-training': flags});
-            });
+            trainingItems[trainingIdx] = activity;
+            await actor.unsetFlag("5e-training", "trainingItems");
+            await actor.setFlag("5e-training", "trainingItems", trainingItems);
           }
         }
       }).render(true);
     });
 
-    // Remove Downtime Activity
-    html.find('.training-delete').click(async (event) => {
+    // DELETE DOWNTIME ACTIVITY
+    html.find('.crash-training-delete').click(async (event) => {
       event.preventDefault();
       console.log("Crash's 5e Downtime Tracking | Delete Downtime Activity excuted!");
 
       // Set up some variables
       let fieldId = event.currentTarget.id;
-      let trainingIdx = parseInt(fieldId.replace('delete-',''));
-      let activity = flags.trainingItems[trainingIdx];
+      let trainingIdx = parseInt(fieldId.replace('crash-delete-',''));
+      let activity = trainingItems[trainingIdx];
       let del = false;
       let dialogContent = await renderTemplate('modules/5e-training/templates/delete-training-dialog.html');
 
@@ -325,38 +332,37 @@ async function addTrainingTab(app, html, data) {
           no: {icon: "<i class='fas fa-times'></i>", label: game.i18n.localize("C5ETRAINING.Cancel"), callback: () => del = false},
         },
         default: "yes",
-        close: html => {
+        close: async (html) => {
           if (del) {
             // Delete item and update actor
-            flags.trainingItems.splice(trainingIdx, 1);
-            actor.update({'flags.5e-training': null}).then(function(){
-              actor.update({'flags.5e-training': flags});
-            });
+            trainingItems.splice(trainingIdx, 1);
+            await actor.unsetFlag("5e-training", "trainingItems");
+            await actor.setFlag("5e-training", "trainingItems", trainingItems);
           }
         }
       }).render(true);
     });
 
-    // Edit Progression Value
-    html.find('.training-override').change(async (event) => {
+    // EDIT PROGRESS VALUE
+    html.find('.crash-training-override').change(async (event) => {
       event.preventDefault();
       console.log("Crash's 5e Downtime Tracking | Progression Override excuted!");
 
       // Set up some variables
       let fieldId = event.currentTarget.id;
       let field = event.currentTarget;
-      let trainingIdx = parseInt(fieldId.replace('override-',''));
-      let activity = flags.trainingItems[trainingIdx];
+      let trainingIdx = parseInt(fieldId.replace('crash-override-',''));
+      let activity = trainingItems[trainingIdx];
       let adjustment = 0;
 
       // Format text field input and change
       if(isNaN(field.value)){
-        ui.notifications.warn("Downtime Tracking: " + game.i18n.localize("C5ETRAINING.InvalidNumberWarning"));
-      } else if(field.value.charAt(0)=="+"){
+        ui.notifications.warn("Crash's 5e Downtime Tracking: " + game.i18n.localize("C5ETRAINING.InvalidNumberWarning"));
+      } else if(field.value.charAt(0)==="+"){
         let changeName = game.i18n.localize("C5ETRAINING.AdjustProgressValue") + " (+)";
         adjustment = parseInt(field.value.substr(1).trim());
         activity = calculateNewProgress(activity, changeName, adjustment);
-      } else if (field.value.charAt(0)=="-"){
+      } else if (field.value.charAt(0)==="-"){
         let changeName = game.i18n.localize("C5ETRAINING.AdjustProgressValue") + " (-)";
         adjustment = 0 - parseInt(field.value.substr(1).trim());
         activity = calculateNewProgress(activity, changeName, adjustment);
@@ -370,29 +376,27 @@ async function addTrainingTab(app, html, data) {
       checkCompletion(actor, activity);
 
       // Update flags and actor
-      flags.trainingItems[trainingIdx] = activity;
-      actor.update({'flags.5e-training': null}).then(function(){
-        actor.update({'flags.5e-training': flags});
-      });
+      trainingItems[trainingIdx] = activity;
+      await actor.unsetFlag("5e-training", "trainingItems");
+      await actor.setFlag("5e-training", "trainingItems", trainingItems);
     });
 
-    // Roll To Train
-    html.find('.training-roll').click(async (event) => {
+    // ROLL TO TRAIN
+    html.find('.crash-training-roll').click(async (event) => {
       event.preventDefault();
       console.log("Crash's 5e Downtime Tracking | Progress Downtime Activity excuted!");
 
       // Set up some variables
       let fieldId = event.currentTarget.id;
-      let trainingIdx = parseInt(fieldId.replace('roll-',''));
-      let activity = flags.trainingItems[trainingIdx];
-      let abilities = ['str','dex','con','int','wis','con'];
-      let skillRoll = !abilities.includes(activity.ability);
+      let trainingIdx = parseInt(fieldId.replace('crash-roll-',''));
+      let activity = trainingItems[trainingIdx];
+      let rollType = determineRollType(activity);
 
       // Progression Type: Ability Check or DC - ABILITY
-      if (activity.ability && !skillRoll){
-        let abilityName = getAbilityName(activity.ability);
+      if (rollType === "ability"){
+        let abilityName = getAbilityName(activity, actor);
         // Roll to increase progress
-        actor.rollAbilityTest(activity.ability).then(function(r){
+        actor.rollAbilityTest(activity.ability).then(async function(r){
           let rollMode = getRollMode(r._formula);
           let attemptName = game.i18n.localize("C5ETRAINING.Roll") + " " + abilityName + " (" + rollMode + ")";
           // Increase progress
@@ -400,17 +404,16 @@ async function addTrainingTab(app, html, data) {
           // Log activity completion
           checkCompletion(actor, activity);
           // Update flags and actor
-          flags.trainingItems[trainingIdx] = activity;
-          actor.update({'flags.5e-training': null}).then(function(){
-            actor.update({'flags.5e-training': flags});
-          });
+          trainingItems[trainingIdx] = activity;
+          await actor.unsetFlag("5e-training", "trainingItems");
+          await actor.setFlag("5e-training", "trainingItems", trainingItems);
         });
       }
       // Progression Type: Ability Check or DC - SKILL
-      else if (activity.ability && skillRoll){
-        let abilityName = getAbilityName(activity.ability);
+      else if (rollType === "skill"){
+        let abilityName = getAbilityName(activity, actor);
         // Roll to increase progress
-        actor.rollSkill(activity.ability).then(function(r){
+        actor.rollSkill(activity.ability).then(async function(r){
           let rollMode = getRollMode(r._formula);
           let attemptName = game.i18n.localize("C5ETRAINING.Roll") + " " + abilityName + " (" + rollMode + ")";
           // Increase progress
@@ -418,38 +421,59 @@ async function addTrainingTab(app, html, data) {
           // Log activity completion
           checkCompletion(actor, activity);
           // Update flags and actor
-          flags.trainingItems[trainingIdx] = activity;
-          actor.update({'flags.5e-training': null}).then(function(){
-            actor.update({'flags.5e-training': flags});
-          });
+          trainingItems[trainingIdx] = activity;
+          await actor.unsetFlag("5e-training", "trainingItems");
+          await actor.setFlag("5e-training", "trainingItems", trainingItems);
         });
       }
+      // Progression Type: Ability Check or DC - TOOL
+      else if (rollType === "tool"){
+        let toolId = activity.ability.slice(5); //strip the "tool-" from the value
+        let tool = actor.getOwnedItem(toolId);
+        if(tool){
+          let toolName = tool.name;
+          // Roll to increase progress
+          tool.rollToolCheck().then(async function(r){
+            let rollMode = getRollMode(r._formula);
+            let attemptName = game.i18n.localize("C5ETRAINING.Roll") + " " + toolName + " (" + rollMode + ")";
+            // Increase progress
+            activity = calculateNewProgress(activity, attemptName, r._total);
+            // Log activity completion
+            checkCompletion(actor, activity);
+            // Update flags and actor
+            trainingItems[trainingIdx] = activity;
+            await actor.unsetFlag("5e-training", "trainingItems");
+            await actor.setFlag("5e-training", "trainingItems", trainingItems);
+          });
+        } else {
+          ui.notifications.warn("Crash's 5e Downtime Tracking: " + game.i18n.localize("C5ETRAINING.ToolNotFoundWarning"));
+        }
+      }
       // Progression Type: Simple
-      else if (activity.progressionStyle == 'simple'){
+      else if (rollType === 'simple'){
         let activityName = game.i18n.localize("C5ETRAINING.Attempt") + " (" + game.i18n.localize("C5ETRAINING.Simple") + ")";
         // Increase progress
         activity = calculateNewProgress(activity, activityName, 1);
         // Log activity completion
         checkCompletion(actor, activity);
         // Update flags and actor
-        flags.trainingItems[trainingIdx] = activity;
-        actor.update({'flags.5e-training': null}).then(function(){
-          actor.update({'flags.5e-training': flags});
-        });
+        trainingItems[trainingIdx] = activity;
+        await actor.unsetFlag("5e-training", "trainingItems");
+        await actor.setFlag("5e-training", "trainingItems", trainingItems);
       }
     });
 
-    // Toggle Information Display
+    // TOGGLE DESCRIPTION
     // Modified version of _onItemSummary from dnd5e system located in
     // dnd5e/module/actor/sheets/base.js
-    html.find('.training-toggle-desc').click(async (event) => {
+    html.find('.crash-training-toggle-desc').click(async (event) => {
       event.preventDefault();
       console.log("Crash's 5e Downtime Tracking | Toggle Acvtivity Info excuted!");
 
       // Set up some variables
       let fieldId = event.currentTarget.id;
-      let trainingIdx = parseInt(fieldId.replace('toggle-desc-',''));
-      let activity = flags.trainingItems[trainingIdx];
+      let trainingIdx = parseInt(fieldId.replace('crash-toggle-desc-',''));
+      let activity = trainingItems[trainingIdx];
       let desc = activity.description || "";
       let li = $(event.currentTarget).parents(".item");
 
@@ -465,8 +489,8 @@ async function addTrainingTab(app, html, data) {
 
     });
 
-    // Review Changes
-    html.find('.training-audit').click(async (event) => {
+    // OPEN AUDIT LOG
+    html.find('.crash-training-audit').click(async (event) => {
       event.preventDefault();
       console.log("Crash's 5e Downtime Tracking | GM Audit excuted!");
       new AuditLog(actor).render(true);
@@ -484,7 +508,10 @@ async function addTrainingTab(app, html, data) {
 
   }
 
+  //Tab is ready
+  Hooks.call(`CrashTrainingTabReady`, app, html, data);
 }
+
 // Calculates the progress value of an activity and logs the change to the progress
 // if absolute is true, set progress to the change value rather than adding to it
 // RETURNS THE ENTIRE ACTIVITY
@@ -568,22 +595,63 @@ async function checkCompletion(actor, activity){
 // Takes in the die roll string and returns whether it was made at adv/disadv/normal
 function getRollMode(formula){
   let d20Roll = formula.split(" ")[0];
-  if(d20Roll == "2d20kh"){ return  game.i18n.localize("C5ETRAINING.Advantage"); }
-  else if(d20Roll == "2d20kl"){ return game.i18n.localize("C5ETRAINING.Disadvantage"); }
+  if(d20Roll === "2d20kh"){ return  game.i18n.localize("C5ETRAINING.Advantage"); }
+  else if(d20Roll === "2d20kl"){ return game.i18n.localize("C5ETRAINING.Disadvantage"); }
   else { return game.i18n.localize("C5ETRAINING.Normal"); }
 }
 
-function getAbilityName(ability){
-  let capitalized = ability.charAt(0).toUpperCase() + ability.slice(1);
-  let abilities = ['str','dex','con','int','wis','con'];
-  let isSkill = !abilities.includes(ability);
-  let localizationKey = "C5ETRAINING.";
-  if(isSkill){
-    localizationKey = localizationKey + "Skill" + capitalized;
+// Determines what string should be displayed on the list of activities on the sheet
+function getAbilityName(activity, actor){
+  let rollType = determineRollType(activity);
+  if(rollType === "skill"){
+    return game.i18n.localize("C5ETRAINING.Skill" + activity.ability.charAt(0).toUpperCase() + activity.ability.slice(1));
+  } else if(rollType === "ability") {
+    return game.i18n.localize("C5ETRAINING.Ability" + activity.ability.charAt(0).toUpperCase() + activity.ability.slice(1));
+  } else if(rollType === "tool") {
+    let toolId = activity.ability.slice(5);
+    let tool = actor.items.filter(item => { return item._id === toolId })[0];
+    if(tool){
+      return tool.name;
+    } else {
+      return "["+game.i18n.localize("C5ETRAINING.InvalidTool")+"]";
+    }
   } else {
-    localizationKey = localizationKey + "Ability" + capitalized;
+    return "???"
   }
-  return game.i18n.localize(localizationKey);
+}
+
+// Gets and formats an array of tools the actor has in their inventory. Used for selection menus
+function getActorTools(actor){
+  let items = actor.data.items;
+  let tools = items.filter(item => item.type === "tool");
+  let formatted = tools.map(obj => {
+    let newObj = {};
+    newObj.value = "tool-" + obj._id;
+    newObj.label = game.i18n.localize("C5ETRAINING.Tool") + ": " + obj.name;
+    return newObj;
+  });
+  return formatted;
+}
+
+// Determines what kind of item is being rolled, be it a skill check, an ability check, or a tool check
+function determineRollType(activity){
+  let rollType;
+  let abilities = ["str", "dex", "con", "int", "wis", "cha"];
+  let skills = ["acr", "ani", "arc", "ath", "dec", "his", "ins", "inv", "itm", "med", "nat", "per", "prc", "prf", "rel", "slt", "ste", "sur"];
+
+  if(activity.ability){
+    if(abilities.includes(activity.ability)){
+      rollType = "ability";
+    } else if(skills.includes(activity.ability)){
+      rollType = "skill";
+    } else if(activity.ability.substr(0,5) === "tool-"){
+      rollType = "tool";
+    }
+  } else {
+    rollType = "simple";
+  }
+
+  return rollType;
 }
 
 Hooks.on(`renderActorSheet`, (app, html, data) => {
@@ -592,4 +660,8 @@ Hooks.on(`renderActorSheet`, (app, html, data) => {
       app._tabs[0].activate("training");
     }
   });
+});
+
+Hooks.on(`CrashTrainingTabReady`, (app, html, data) => {
+  console.log("Crash's 5e Downtime Tracking | Downtime tab ready!");
 });

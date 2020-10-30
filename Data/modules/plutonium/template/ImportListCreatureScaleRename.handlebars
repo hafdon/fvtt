@@ -1,6 +1,6 @@
 <div class="flex-col ve-window min-h-0 h-100">
 	<div class="flex-v-stretch input-group input-group--top no-shrink">
-		<input type="search" class="search w-100 form-control" placeholder="Find creatures...">
+		<input type="search" class="search w-100 form-control" placeholder="Find {{titleSearch}}...">
 		<button class="btn-5et veapp__btn-list-reset" name="btn-reset">Reset</button>
 	</div>
 	<div class="flex-v-stretch input-group input-group--bottom mb-1 no-shrink" data-name="wrp-btns-sort">
@@ -16,13 +16,13 @@
 		{{#each rows}}
 			<label class="row flex-v-center imp__row-creature-scale stripe-even">
 				<span class="col-3 pl-1">{{name}}</span>
-				<span class="col-1-5 text-center {{getSourceColorClass source}}" title="{{sourceLong}}">{{sourceShort}}</span>
+				<span class="col-1-5 text-center {{sourceClassName}}" title="{{sourceLong}}">{{sourceShort}}</span>
 				<span class="col-1-5 text-center">{{cr}}</span>
 				<div class="col-3 flex-v-center"><input class="w-100 mx-1 input-xs" name="ipt-rename" type="text"></div>
 				{{#if isAdjustable}}
 					<div class="col-3 flex-v-center">
 						<select class="w-100 mx-1 input-xs" name="sel-cr">
-							<option value="-1">&mdash;</option>
+							<option value="-1" title="Use Existing CR">&mdash;</option>
 							<option value="0">0</option>
 							<option value="0.125">1/8</option>
 							<option value="0.25">1/4</option>

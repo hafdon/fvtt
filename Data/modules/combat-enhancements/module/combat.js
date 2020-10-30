@@ -9,30 +9,21 @@ export class CombatSidebarCe {
   startup() {
     // CONFIG.debug.hooks = true;
 
-    // Add support for damage rolls via event delegation.
-    Hooks.on('ready', () => {
-      // Damage rolls from the combat tracker.
-      $('body').on('click', '.dw-rollable', (event) => {
-        let $self = $(event.currentTarget);
-        let $actorElem = $self.parents('.actor-elem');
-        let combatant_id = $actorElem.length > 0 ? $actorElem.attr('data-combatant-id') : null;
-        if (combatant_id) {
-          let combatant = game.combat.combatants.find(c => c._id == combatant_id);
-          let actor = combatant.actor ? combatant.actor : null;
-          if (actor) {
-            actor._onRoll(event, actor);
-          }
-        }
-      });
-    });
-
     // Re-render combat when actors are modified.
     Hooks.on('updateActor', (actor, data, options, id) => {
-      ui.combat.render();
+      let inCombat = game.combat.combatants.find(c => c?.actor?.data?._id == actor?.data?._id);
+      if (inCombat) {
+        ui.combat.render();
+      }
     });
 
     Hooks.on('updateToken', (scene, token, data, options, id) => {
-      ui.combat.render();
+      if (data.actorData) {
+        let inCombat = game.combat.combatants.find(c => c.tokenId == token._id);
+        if (inCombat) {
+          ui.combat.render();
+        }
+      }
     });
 
     // TODO: Replace this hack that triggers an extra render.
@@ -69,7 +60,7 @@ export class CombatSidebarCe {
             // Display the HP input/div.
             let $healthInput = null;
             if (c.editable) {
-              $healthInput = $(`<div class="ce-modify-hp-wrapper">HP <input class="ce-modify-hp" type="text" name="data.${c.combatAttr}.value" value="${getProperty(c.actor.data.data, c.combatAttr + '.value')}" data-dtype="Number"></div>`);
+              $healthInput = $(`<div class="ce-modify-hp-wrapper">HP <input onclick="this.select();" class="ce-modify-hp" type="text" name="data.${c.combatAttr}.value" value="${getProperty(c.actor.data.data, c.combatAttr + '.value')}" data-dtype="Number"></div>`);
             }
             // else {
             //   $healthInput = $(`<div class="ce-modify-hp-wrapper">HP ${getProperty(c.actor.data.data, c.combatAttr + '.value')}</div>`);

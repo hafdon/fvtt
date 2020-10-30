@@ -1,13 +1,15 @@
+import {ClassFeatures} from "./classFeatures.js"
+
 // Namespace Configuration Values
 export const DND5E = {};
 
 // ASCII Artwork
 DND5E.ASCII = `_______________________________
-______      ______ _____ _____ 
+______      ______ _____ _____
 |  _  \\___  |  _  \\  ___|  ___|
-| | | ( _ ) | | | |___ \\| |__  
-| | | / _ \\/\\ | | |   \\ \\  __| 
-| |/ / (_>  < |/ //\\__/ / |___ 
+| | | ( _ ) | | | |___ \\| |__
+| | | / _ \\/\\ | | |   \\ \\  __|
+| |/ / (_>  < |/ //\\__/ / |___
 |___/ \\___/\\/___/ \\____/\\____/
 _______________________________`;
 
@@ -22,8 +24,7 @@ DND5E.abilities = {
   "con": "DND5E.AbilityCon",
   "int": "DND5E.AbilityInt",
   "wis": "DND5E.AbilityWis",
-  "cha": "DND5E.AbilityCha",
-  "san": "DND5E.AbilitySan"
+  "cha": "DND5E.AbilityCha"
 };
 
 DND5E.abilityAbbreviations = {
@@ -32,8 +33,7 @@ DND5E.abilityAbbreviations = {
   "con": "DND5E.AbilityConAbbr",
   "int": "DND5E.AbilityIntAbbr",
   "wis": "DND5E.AbilityWisAbbr",
-  "cha": "DND5E.AbilityChaAbbr",
-  "san": "DND5E.AbilitySanAbbr"
+  "cha": "DND5E.AbilityChaAbbr"
 };
 
 /* -------------------------------------------- */
@@ -401,21 +401,16 @@ DND5E.skills = {
   "ani": "DND5E.SkillAni",
   "arc": "DND5E.SkillArc",
   "ath": "DND5E.SkillAth",
-  "com": "DND5E.SkillCom",
   "dec": "DND5E.SkillDec",
-  "dph": "DND5E.SkillDph",
   "his": "DND5E.SkillHis",
   "ins": "DND5E.SkillIns",
   "itm": "DND5E.SkillItm",
   "inv": "DND5E.SkillInv",
   "med": "DND5E.SkillMed",
-  "myt": "DND5E.SkillMyt",
   "nat": "DND5E.SkillNat",
-  "occ": "DND5E.SkillOcc",
   "prc": "DND5E.SkillPrc",
   "prf": "DND5E.SkillPrf",
   "per": "DND5E.SkillPer",
-  "psy": "DND5E.SkillPsy",
   "rel": "DND5E.SkillRel",
   "slt": "DND5E.SkillSlt",
   "ste": "DND5E.SkillSte",
@@ -683,6 +678,9 @@ DND5E.CR_EXP_LEVELS = [
   10, 200, 450, 700, 1100, 1800, 2300, 2900, 3900, 5000, 5900, 7200, 8400, 10000, 11500, 13000, 15000, 18000,
   20000, 22000, 25000, 33000, 41000, 50000, 62000, 75000, 90000, 105000, 120000, 135000, 155000
 ];
+
+// Character Features Per Class And Level
+DND5E.classFeatures = ClassFeatures;
 
 // Configure Optional Character Flags
 DND5E.characterFlags = {

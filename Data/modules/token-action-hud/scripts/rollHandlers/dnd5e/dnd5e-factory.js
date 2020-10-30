@@ -3,7 +3,6 @@ import {RollHandlerBetterRolls5e as BetterRolls5e} from './dnd5e-betterrolls5e.j
 import {RollHandlerMinorQol5e as MinorQol5e} from './dnd5e-minorqol.js'
 import { HandlersManager } from '../../handlersManager.js';
 import { MagicItemsPreRollHandler } from './pre-magicItems.js';
-import { ItemMacroPreRollHandler } from './pre-itemMacro.js';
 
 export function getRollHandler(rollHandler = '') {
     let handler;
@@ -22,8 +21,6 @@ export function getRollHandler(rollHandler = '') {
 
     if (HandlersManager.isModuleActive('magicitems'))
         handler.addPreRollHandler(new MagicItemsPreRollHandler());
-    if (HandlersManager.isModuleActive('itemacro'))
-        handler.addPreRollHandler(new ItemMacroPreRollHandler());
 
     return handler;
 }

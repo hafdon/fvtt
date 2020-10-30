@@ -1,12 +1,65 @@
 *Attribution*
 Additional Translations generously provided by:
-Japanese: @BrotherSharp, @Asami
-Italian: @Simone [UTC +2]
-Korean: @KLO
-Brazilian Portuguese: @rinnocenti
-French: @temvaryen
+- Japanese: @BrotherSharp, @Asami
+- Italian: @Simone [UTC +2]
+- Korean: @KLO
+- Brazilian Portuguese: @rinnocenti, brnmuller
+- French: @temvaryen
+- Chinese: @EternalRider
 
 Thank you very much!
+
+*Version 0.2.29*
+- added expanded limited character sheet
+
+*Version 0.2.28*
+- css fix to correct dark mode font color
+
+*Version 0.2.27*
+- css fixes to correct tiny mce editor height and item description text
+- Inventory+ doubled controls fix
+
+*Version 0.2.26*
+- reacivated better rolls hooks for 0.6.6 compatibility
+
+*Version 0.2.25*
+- updated sheet for the 0.97 update.
+- css fix for paragraph spacing in item descriptions.
+- removed better roll hooks. Sheets are now supported by default.
+- added translation strings for module settings.
+- added german translation for additional strings.
+
+*Version 0.2.24*
+- Chinese translation added. Thanks to EternalRider!
+- CSS fix for double digit spellslots
+
+*Version 0.2.23*
+- changed css selectors for contenteditable fields to be more generic to better support module compatibility. Thanks to illandril.
+
+*Version 0.2.22*
+
+- better rolls support for item sheets restored. Thanks to akrigline!
+
+*Version 0.2.21*
+
+- item sheets are now registered as a specific Tidy5e-Sheet to prevent compatibitlity issues and consequently prefixing all styles to only apply to this sheet preventing default overrides. Big thanks to akrigline for the contribution :)
+Please make sure to check you item sheet setting to make sure the Tidy5e Itemsheet is set as default!
+
+*Version 0.2.20*
+
+- updated Brazilian Portuguese translation by brnmuller
+- fixed css-prefix errors. Thanks to akrigline for finding them!
+- added "Add" Button to all spell categories in the spellbook * experimental, don't know if this somehow breaks something*
+
+*Version 0.2.19*
+
+- fixed an issue with updating item charges from within the NPC Sheet
+- option to change custom highlight colors for default and Darkmode
+- option to define a separate highlight color for always prepared spells
+
+*Version 0.2.18*
+
+- minor css fix for 0.6.5
 
 *Version 0.2.17*
 

@@ -6,7 +6,7 @@ const magicItemTabs = [];
 export class MagicItemTab {
 
     static bind(app, html, data) {
-        let acceptedTypes = ['weapon', 'equipment', 'consumable', 'tool'];
+        let acceptedTypes = ['weapon', 'equipment', 'consumable', 'tool', 'backpack'];
         if(acceptedTypes.includes(data.entity.type)) {
             let tab = magicItemTabs[app.id];
             if(!tab) {
@@ -28,8 +28,20 @@ export class MagicItemTab {
 
     init(html) {
 
-        this.app.form.ondragover = ev => this._onDragOver(ev);
-        this.app.form.ondrop = ev => this._onDrop(ev);
+        if(!this.app.form.ondrop) {
+            this.app.form.ondragover = (ev) => this._onDragOver(ev);
+            this.app.form.ondrop = (ev) => this._onDrop(ev);
+        } else {
+            let me  = this;
+            let originalDrop = this.app._onDrop;
+            this.app._onDrop = function (evt) {
+                if(me.isActive()) {
+                    return me._onDrop(evt);
+                } else {
+                    return originalDrop.apply(me.app, arguments);
+                }
+            };
+        }
 
         this.magicItem = new MagicItem(this.item.data.flags.magicitems);
 
@@ -211,9 +223,13 @@ export class MagicItemTab {
             entity = cls.collection.get(data.id);
         }
 
-        if(this.magicItem.compatible(entity)) {
+        if(entity && this.magicItem.compatible(entity)) {
             this.magicItem.addEntity(entity, pack);
             this.render();
         }
+    }
+
+    isActive() {
+        return $('a.item[data-tab="magicitems"]').hasClass("active");
     }
 }

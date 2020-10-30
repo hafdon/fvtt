@@ -18,43 +18,7 @@ Hooks.on(`renderItemSheet5e`, (app, html, data) => {
     MagicItemTab.bind(app, html, data);
 });
 
-Hooks.on(`renderItemSheet5eDark`, (app, html, data) => {
-    MagicItemTab.bind(app, html, data);
-});
-
-Hooks.on(`renderDarkItemSheet5e`, (app, html, data) => {
-    MagicItemTab.bind(app, html, data);
-});
-
 Hooks.on(`renderActorSheet5eCharacter`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderActorSheet5eCharacterDark`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderDarkSheet`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderActorSheet5eNPC`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderActorSheet5eNPCDark`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderAlt5eSheet`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderDNDBeyondCharacterSheet5e`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderTidy5eSheet`, (app, html, data) => {
     MagicItemSheet.bind(app, html, data);
 });
 
@@ -94,5 +58,13 @@ window.MagicItems = {
         if ( !magicItemActor ) return ui.notifications.warn(game.i18n.localize("MAGICITEMS.WarnNoActor"));
 
         magicItemActor.rollByName(magicItemName, itemName);
+    },
+
+    bindItemSheet: function(app, html, data) {
+        MagicItemTab.bind(app, html, data);
+    },
+
+    bindCharacterSheet: function(app, html, data) {
+        MagicItemSheet.bind(app, html, data);
     }
 };

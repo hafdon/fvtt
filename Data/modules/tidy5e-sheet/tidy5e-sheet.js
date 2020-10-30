@@ -2,7 +2,7 @@ import { DND5E } from "../../systems/dnd5e/module/config.js";
 import ActorSheet5e from "../../systems/dnd5e/module/actor/sheets/base.js";
 import ActorSheet5eCharacter from "../../systems/dnd5e/module/actor/sheets/character.js";
 
-import { preloadTidy5eHandlebarsTemplates } from "./templates/tidy5e-templates.js";
+import { preloadTidy5eHandlebarsTemplates } from "./templates/actors/tidy5e-templates.js";
 import { addFavorites } from "./tidy5e-favorites.js";
 
 let position = 0;
@@ -15,8 +15,9 @@ Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
 export class Tidy5eSheet extends ActorSheet5eCharacter {
 	
 	get template() {
-		if ( !game.user.isGM && this.actor.limited ) return "modules/tidy5e-sheet/templates/tidy5e-sheet-ltd.html";
-		return "modules/tidy5e-sheet/templates/tidy5e-sheet.html";
+		if ( !game.user.isGM && this.actor.limited && game.settings.get("tidy5e-sheet", "useExpandedSheet")) return "modules/tidy5e-sheet/templates/actors/tidy5e-sheet-expanded.html";
+		if ( !game.user.isGM && this.actor.limited ) return "modules/tidy5e-sheet/templates/actors/tidy5e-sheet-ltd.html";
+		return "modules/tidy5e-sheet/templates/actors/tidy5e-sheet.html";
 	}
 	
 	static get defaultOptions() {
@@ -212,45 +213,6 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 	}
 }
 
-// should no longer be needed
-// Migrate Traits to default dnd5e data
-// async function migrateTraits(app, html, data) {
-// 	let actor = game.actors.entities.find(a => a.data._id === data.actor._id);
-
-// 	if (!actor.getFlag('tidy5e-sheet', 'useCoreTraits')){
-	
-// 		console.log('Tidy5e Sheet | Data needs migration! Migrating.');
-
-// 		let coreTrait = (actor.data.data.details.trait !== '') ? actor.data.data.details.trait+"<br>Migrated Content:" : '';
-// 		let coreIdeal = (actor.data.data.details.ideal !== '') ? actor.data.data.details.trait+"<br>Migrated Content:" : '';
-// 		let coreBond = (actor.data.data.details.bond !== '') ? actor.data.data.details.bond+"<br>Migrated Content:" : '';
-// 		let coreFlaw = (actor.data.data.details.flaw !== '') ? actor.data.data.details.flaw+"<br>Migrated Content:" : '';
-
-// 		let trait = (actor.data.data.details.personality && actor.data.data.details.personality.value) ? coreTrait + actor.data.data.details.personality.value : actor.data.data.details.trait;
-// 		let ideal = (actor.data.data.details.ideals && actor.data.data.details.ideals.value) ? coreIdeal + actor.data.data.details.ideals.value : actor.data.data.details.ideal;
-// 		let bond = (actor.data.data.details.bonds && actor.data.data.details.bonds.value) ? coreBond + actor.data.data.details.bonds.value : actor.data.data.details.bond;
-// 		let flaw = (actor.data.data.details.flaws && actor.data.data.details.flaws.value) ? coreFlaw + actor.data.data.details.flaws.value : actor.data.data.details.flaw;
-
-// 		await actor.update({
-// 			"data.details.trait": trait,
-// 			"data.details.ideal": ideal,
-// 			"data.details.bond": bond,
-// 			"data.details.flaw": flaw,
-// 			"data.details.personality": null,
-// 			"data.details.-=personality": null,
-// 			"data.details.ideals": null,
-// 			"data.details.-=ideals": null,
-// 			"data.details.bonds": null,
-// 			"data.details.-=bonds": null,
-// 			"data.details.flaws": null,
-// 			"data.details.-=flaws": null,
-// 			"flags.tidy5e-sheet.useCoreTraits":true
-// 		});
-
-// 		console.log('Tidy5e Sheet | Data migrated to dnd5e core values.')
-// 	}
-// }
-
 // handle traits list display
 async function toggleTraitsList(app, html, data){
   html.find('.traits:not(.always-visible):not(.expanded) .form-group.inactive').addClass('trait-hidden').hide();
@@ -344,8 +306,8 @@ Hooks.once("init", () => {
   preloadTidy5eHandlebarsTemplates();
 
 	game.settings.register("tidy5e-sheet", "useDarkMode", {
-		name: "Use alternate dark mode",
-		hint: "Checking this option will enable an alternate Dark Mode version of the Tidy5e Sheet.",
+    name: game.i18n.localize("TIDY5E.Settings.UseDarkMode.name"),
+    hint: game.i18n.localize("TIDY5E.Settings.UseDarkMode.hint"),
 		scope: "user",
 		config: true,
 		default: false,
@@ -356,42 +318,86 @@ Hooks.once("init", () => {
 	});
 
 	game.settings.register("tidy5e-sheet", "primaryAccent", {
-		name: "Primary accent color.",
-		hint: "Overwrite the default primary accent color (#48BB78) for Dark Mode used to highlight e. g. buttons, input field borders or hover states. Use any valid css value like red/#ff0000/rgba(255,0,0)/rgba(255,0,0,1)",
+    name: game.i18n.localize("TIDY5E.Settings.PrimaryAccentColor.name"),
+    hint: game.i18n.localize("TIDY5E.Settings.PrimaryAccentColor.hint"),
 		scope: "user",
 		config: true,
 		default: "",
 		type: String,
 		onChange: data => {
-      data === true ? document.documentElement.style.setProperty('--darkmode-primary-accent',primaryAccentColor)
-  :document.documentElement.style.setProperty('--darkmode-primary-accent',"#48BB78");
+			if(data){
+				document.documentElement.style.setProperty('--default-primary-accent',data);
+				document.documentElement.style.setProperty('--darkmode-primary-accent',data);
+			} else {
+				document.documentElement.style.setProperty('--default-primary-accent',"#ff6400");
+				document.documentElement.style.setProperty('--darkmode-primary-accent',"#48BB78");
+			}
      }
 	});
 
 	game.settings.register("tidy5e-sheet", "secondaryAccent", {
-		name: "Secondary accent color.",
-		hint: "Overwrite the default secondary accent color (rgba(0,150,150,.325)) for Dark Mode used to highlight preparation states. Use any valid css value like red/#ff0000/rgba(255,0,0)/rgba(255,0,0,1)",
+    name: game.i18n.localize("TIDY5E.Settings.SecondaryAccentColor.name"),
+    hint: game.i18n.localize("TIDY5E.Settings.SecondaryAccentColor.hint"),
 		scope: "user",
 		config: true,
 		default: "",
 		type: String,
 		onChange: data => {
-      data === true ? document.documentElement.style.setProperty('--darkmode-secondary-accent',secondaryAccentColor)
-  :document.documentElement.style.setProperty('--darkmode-secondary-accent',"rgba(0,150,150,.325)");
+			if(data){
+				document.documentElement.style.setProperty('--default-secondary-accent',data);
+				document.documentElement.style.setProperty('--darkmode-secondary-accent',data);
+			} else {
+				document.documentElement.style.setProperty('--default-secondary-accent',"rgba(210,0,255,.1)");
+				document.documentElement.style.setProperty('--darkmode-secondary-accent',"rgba(0,150,150,.325)");
+			}
      }
+	});
+
+	game.settings.register("tidy5e-sheet", "alwaysPreparedAccent", {
+    name: game.i18n.localize("TIDY5E.Settings.AlwaysPreparedAccentColor.name"),
+    hint: game.i18n.localize("TIDY5E.Settings.AlwaysPreparedAccentColor.hint"),
+		scope: "user",
+		config: true,
+		default: "",
+		type: String,
+		onChange: data => {
+			if(data){
+				document.documentElement.style.setProperty('--always-prepared-accent',data);
+				document.documentElement.style.setProperty('--darkmode-always-prepared-accent',data);
+			} else {
+				document.documentElement.style.setProperty('--always-prepared-accent',"rgba(210,0,255,.1)");
+				document.documentElement.style.setProperty('--darkmode-always-prepared-accent',"rgba(0,150,150,.325)");
+			}
+    }
 	});
 
   const useDarkMode = game.settings.get('tidy5e-sheet', "useDarkMode");
   if (useDarkMode === true) {
     document.body.classList.add("tidy5eDark");
   }
+
   const primaryAccentColor = game.settings.get('tidy5e-sheet', "primaryAccent");
-  const secondaryAccentColor = game.settings.get('tidy5e-sheet', "secondaryAccent");
+  if(primaryAccentColor !==  '') {
+  	document.documentElement.style.setProperty('--default-primary-accent',primaryAccentColor);
+  }
   if(useDarkMode === true && primaryAccentColor !==  '') {
   	document.documentElement.style.setProperty('--darkmode-primary-accent',primaryAccentColor);
   }
+
+  const secondaryAccentColor = game.settings.get('tidy5e-sheet', "secondaryAccent");
+  if(secondaryAccentColor !==  '') {
+   	document.documentElement.style.setProperty('--default-secondary-accent',secondaryAccentColor);	
+  }
   if(useDarkMode === true && secondaryAccentColor !==  '') {
    	document.documentElement.style.setProperty('--darkmode-secondary-accent',secondaryAccentColor);	
+  }
+  
+  const alwaysPreparedAccent = game.settings.get('tidy5e-sheet', "alwaysPreparedAccent");
+  if(alwaysPreparedAccent !==  '') {
+  	document.documentElement.style.setProperty('--always-prepared-accent',alwaysPreparedAccent);
+  } 
+  if(useDarkMode === true && alwaysPreparedAccent !==  '') {
+  	document.documentElement.style.setProperty('--darkmode-always-prepared-accent',alwaysPreparedAccent);
   }
 });
 
@@ -408,9 +414,10 @@ Hooks.on("renderTidy5eSheet", (app, html, data) => {
 	setSheetClasses(app, html, data);
 	toggleTraitsList(app, html, data)
 	checkDeathSaveStatus(app, html, data);
-	if (game.modules.get("inventory-plus")?.active){
-		app.inventoryPlus.addInventoryFunctions(html);
-	}
+	// no longer needed
+	// if (game.modules.get("inventory-plus")?.active){
+	// 	app.inventoryPlus.addInventoryFunctions(html);
+	// }
 	// console.log(data);
 	console.log("Tidy5e Sheet rendered!");
 });
@@ -418,109 +425,119 @@ Hooks.on("renderTidy5eSheet", (app, html, data) => {
 Hooks.once("ready", () => {
 	console.log("Tidy5e Sheet is ready!");
 	
+	// can be removed when 0.7.x is stable
 	if (window.BetterRolls) {
 	  window.BetterRolls.hooks.addActorSheet("Tidy5eSheet");
 	}
-	
+
+  game.settings.register("tidy5e-sheet", "useExpandedSheet", {
+    name: game.i18n.localize("TIDY5E.Settings.UseExpandedSheet.name"),
+    hint: game.i18n.localize("TIDY5E.Settings.UseExpandedSheet.hint"),
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean
+  });
+
 	game.settings.register("tidy5e-sheet", "useRoundPortraits", {
-		name: "PC Sheets: Sheets use round portraits.",
-		hint: "You should check this if you use round portraits. It will adapt the hp overlay and portait buttons to make it look nicer. Also looks nice on square portraits without a custom frame.",
+		name: game.i18n.localize("TIDY5E.Settings.UseRoundPortraits.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.UseRoundPortraits.hint"),
 		scope: "world",
 		config: true,
 		default: false,
 		type: Boolean
 	});
 	game.settings.register("tidy5e-sheet", "hpOverlayBorder", {
-		name: "PC Sheets: Border width for the hit point overlay",
-		hint: "If your portrait has a frame you can adjust the Hit Point overlay to compensate the frame width. It might look nicer if the overlay doesn't tint the border.",
+		name: game.i18n.localize("TIDY5E.Settings.HpOverlayBorder.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.HpOverlayBorder.hint"),
 		scope: "world",
 		config: true,
 		default: 0,
 		type: Number
 	});
 	game.settings.register("tidy5e-sheet", "disableHpOverlay", {
-		name: "Disable the hit point overlay.",
-		hint: "If you don't like the video game style Hit Point overlay on your character's portrait you can disable it.",
+		name: game.i18n.localize("TIDY5E.Settings.DisableHpOverlay.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.DisableHpOverlay.hint"),
 		scope: "user",
 		config: true,
 		default: false,
 		type: Boolean
 	});
 	game.settings.register("tidy5e-sheet", "hideClassList", {
-		name: "Hide character class list",
-		hint: "Checking this option will hide the character's class list next to the level label. The sheet can handle 3 classes well, more than that will work but things get shifty ;)",
+		name: game.i18n.localize("TIDY5E.Settings.HideClassList.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.HideClassList.hint"),
 		scope: "user",
 		config: true,
 		default: false,
 		type: Boolean
 	});
 	game.settings.register("tidy5e-sheet", "disableInspiration", {
-		name: "Disable Inspiration Tracker",
-		hint: "If your campaign doesn't use inspiration you can disable the tracker completely.",
+		name: game.i18n.localize("TIDY5E.Settings.DisableInspiration.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.DisableInspiration.hint"),
 		scope: "world",
 		config: true,
 		default: false,
 		type: Boolean
 	});
 	game.settings.register("tidy5e-sheet", "disableExhaustion", {
-		name: "Disable Exhaustion Tracker",
-		hint: "If your campaign doesn't use exhaustion you can disable the tracker completely.",
+		name: game.i18n.localize("TIDY5E.Settings.DisableExhaustion.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.DisableExhaustion.hint"),
 		scope: "world",
 		config: true,
 		default: false,
 		type: Boolean
 	});
 	game.settings.register("tidy5e-sheet", "noInspirationAnimation", {
-		name: "No inspiration indicator animation.",
-		hint: "If it's too distracting, you can disable the subtle animation of the glowing inspiration indicator.",
+		name: game.i18n.localize("TIDY5E.Settings.DisableInspirationAnimation.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.DisableInspirationAnimation.hint"),
 		scope: "user",
 		config: true,
 		default: false,
 		type: Boolean
 	});
 	game.settings.register("tidy5e-sheet", "hideIfZero", {
-		name: "Hide Exhaustion and Inspiration when not available (0)",
-		hint: "Check this option if you want to hide Exhaustion if its level is 0 and Inspiration if you have none. Appears on hover.",
+		name: game.i18n.localize("TIDY5E.Settings.HideIfZero.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.HideIfZero.hint"),
 		scope: "user",
 		config: true,
 		default: false,
 		type: Boolean
 	});
 	game.settings.register("tidy5e-sheet", "exhaustionOnHover", {
-		name: "Show exhaustion tracker only on hover",
-		hint: "If you check this option the exhaustion tracker will only be visible when you hover over the portrait",
+		name: game.i18n.localize("TIDY5E.Settings.ExhaustionOnHover.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.ExhaustionOnHover.hint"),
 		scope: "user",
 		config: true,
 		default: false,
 		type: Boolean
 	});
 	game.settings.register("tidy5e-sheet", "inspirationOnHover", {
-		name: "Show inspiration indicator only on hover",
-		hint: "If you check this option the inspiration indicator will only be visible when you hover over the portrait",
+		name: game.i18n.localize("TIDY5E.Settings.InspirationOnHover.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.InspirationOnHover.hint"),
 		scope: "user",
 		config: true,
 		default: false,
 		type: Boolean
 	});
 	game.settings.register("tidy5e-sheet", "restOnHover", {
-		name: "Show rest button on hover",
-		hint: "If you check this option the rest button will only be visible when you hover over the portrait",
+		name: game.i18n.localize("TIDY5E.Settings.RestOnHover.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.RestOnHover.hint"),
 		scope: "user",
 		config: true,
 		default: false,
 		type: Boolean
 	});
   game.settings.register("tidy5e-sheet", "moveTraits", {
-    name: "Move traits below resources",
-    hint: "Check this if you want to show the traits below the resources.",
+		name: game.i18n.localize("TIDY5E.Settings.MoveTraits.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.MoveTraits.hint"),
     scope: "user",
     config: true,
     default: false,
     type: Boolean
   });
   game.settings.register("tidy5e-sheet", "pcToggleTraits", {
-    name: "Show Toggle button for character traits",
-    hint: "Check this if you want to show a button to toggle empty traits.",
+		name: game.i18n.localize("TIDY5E.Settings.PcToggleTraits.name"),
+		hint: game.i18n.localize("TIDY5E.Settings.PcToggleTraits.hint"),
     scope: "user",
     config: true,
     default: false,

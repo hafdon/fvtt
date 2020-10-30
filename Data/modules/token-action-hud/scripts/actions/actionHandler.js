@@ -20,40 +20,49 @@ export class ActionHandler {
         this.categoryManager = categoryManager;
     }
 
+    /** @public */
     registerCoreCategories(categories) {
         this.categoryManager.addCoreCategories(categories);
     }
 
+    /** @public */
     async buildActionList(token, multipleTokens) {
         let actionList = await this.doBuildActionList(token, multipleTokens);
-        this._doBuildFurtherActions(token, actionList);
+        this._doBuildFurtherActions(token, actionList, multipleTokens);
         this.registerCoreCategories(actionList.categories);
         await this.categoryManager.addCategoriesToActionList(this, actionList);
         return actionList;
     }
 
+    /** @public */
     doBuildActionList(token) {};
 
-    _doBuildFurtherActions(token, actionList) {
-        this.furtherActionHandlers.forEach(handler => handler.extendActionList(actionList))
+    /** @protected */
+    _doBuildFurtherActions(token, actionList, multipleTokens) {
+        this.furtherActionHandlers.forEach(handler => handler.extendActionList(actionList, multipleTokens))
     }
 
+    /** @public */
     addFurtherActionHandler(handler) {
         this.furtherActionHandlers.push(handler);
     }
 
+    /** @public */
     initializeEmptyActionList() {
         return new ActionList();
     }
 
+    /** @public */
     initializeEmptyActionSet() {
         return new ActionSet();
     }
 
+    /** @public */
     initializeEmptyAction() {
         return new Action();
     }
 
+    /** @public */
     initializeEmptyCategory(categoryId) {
         let category = new ActionCategory();
         category.id = categoryId;
@@ -66,6 +75,7 @@ export class ActionHandler {
         return subcategory;
     }
 
+    /** @protected */
     _combineCategoryWithList(result, categoryName, category, push = true) {
         if (!category)
             return;
@@ -82,6 +92,7 @@ export class ActionHandler {
             result.categories.unshift(category);
     }
 
+    /** @protected */
     _combineSubcategoryWithCategory(category, subcategoryName, subcategory) {
         if (!subcategory)
             return;
@@ -93,5 +104,13 @@ export class ActionHandler {
             category.subcategories.push(subcategory);
         else
             settings.Logger.debug('subcategory criteria not met, disposing of', subcategoryName)
+    }
+
+    /** @protected */
+    _foundrySort(a, b) {
+        if (!(a?.data?.sort || b?.data?.sort))
+            return 0;
+
+        return a.data.sort - b.data.sort;
     }
 }

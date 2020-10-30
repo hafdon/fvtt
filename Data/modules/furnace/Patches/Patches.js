@@ -6,10 +6,12 @@ class FurnacePatching {
         if (func === undefined)
             return;
         let funcStr = func.toString()
-        let lines = funcStr.split("\n")
-        if (lines[line_number].trim() == line.trim()) {
+        // Check for newlines so it can work on minified content too
+        const splitChar = funcStr.indexOf("\n") >= 0 ? "\n" : ";";
+        let lines = funcStr.split(splitChar)
+        if (lines[line_number] !== undefined && lines[line_number].trim() == line.trim()) {
             lines[line_number] = lines[line_number].replace(line, new_line);
-            let fixed = lines.join("\n")
+            let fixed = lines.join(splitChar)
             if (klass !== undefined) {
                 let classStr = klass.toString()
                 fixed = classStr.replace(funcStr, fixed)
@@ -61,6 +63,12 @@ class FurnacePatching {
     }
 
     static init() {
+        // Fix Settings Extender issue on 0.7.5 by preventing settings crash if one dtype is invalid
+        const patchedFormDataExtended = FurnacePatching.patchMethod(FormDataExtended, "toObject", 9,
+            "if ( (v !== null) && ( window[dtype] instanceof Function ) ) v = window[dtype](v);",
+            "if ( (v !== null) && ( window[dtype] instanceof Function ) ) { try { v = window[dtype](v); } catch (err) {} }");
+        if (patchedFormDataExtended)
+            FormDataExtended = patchedFormDataExtended;
     }
 }
 FurnacePatching.ORIG_PRREFIX = "__furnace_original_"

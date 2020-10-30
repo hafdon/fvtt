@@ -5,7 +5,10 @@ export class MagicItemActionListExtender extends ActionListExtender {
     constructor() { super(); }
 
     /** @override */
-    extendActionList(actionList) {
+    extendActionList(actionList, multipleTokens) {
+        if (multipleTokens)
+            return;
+            
         let tokenId = actionList.tokenId;
         let actorId = actionList.actorId;
 
@@ -15,7 +18,7 @@ export class MagicItemActionListExtender extends ActionListExtender {
         let itemCategories = actionList.categories.find(c => c.id === 'inventory');
         let actor = MagicItems.actor(actorId);
 
-        if (!actor)
+        if (!(actor && itemCategories))
             return;
 
         let magicItems = actor.items ?? [];

@@ -7,6 +7,7 @@
 
   --darkmode-primary-accent: #48BB78;
   --darkmode-secondary-accent: rgba(0,150,150,.325);
+  --darkmode-always-prepared-accent: rgba(0,150,150,.325);
   --danger-500: #F56565;
   --danger-700: #C53030;
 }
@@ -268,7 +269,7 @@
   color: var(--darkmode-primary-color);
 }
 
-.tidy5eDark .tidy5e.sheet.actor .traits .senses div[contenteditable="true"]:before {
+.tidy5eDark .tidy5e.sheet.actor .traits .senses div[contenteditable]:before {
   color: var(--darkmode-primary-color);
 }
 
@@ -312,9 +313,12 @@
 }
 
 .tidy5eDark .tidy5e.sheet.actor .inventory-list:not(.inventory-header) .item.attuned,
-.tidy5eDark .tidy5e.sheet.actor .inventory-list:not(.inventory-header) .item.prepared,
-.tidy5eDark .tidy5e.sheet.actor .inventory-list:not(.inventory-header) .item.alwaysPrepared  {
+.tidy5eDark .tidy5e.sheet.actor .inventory-list:not(.inventory-header) .item.prepared  {
   background: var(--darkmode-secondary-accent);
+}
+
+.tidy5eDark .tidy5e.sheet.actor .inventory-list .item.alwaysPrepared {
+  background: var(--darkmode-always-prepared-accent);
 }
 
 .tidy5eDark .tidy5e.sheet.actor .inventory-list .item-attuned {
@@ -559,11 +563,11 @@
   color: var(--danger-700);
 }
 
-.tidy5eDark .tidy5e.sheet [contenteditable=true]:empty:before {
+.tidy5eDark .tidy5e.sheet [contenteditable]:empty:before {
   color: var(--darkmode-tertiary-color);
 }
 
-.tidy5eDark .tidy5e.sheet [contenteditable=true],
+.tidy5eDark .tidy5e.sheet [contenteditable],
 .tidy5eDark .tidy5e.sheet input[type="text"] {
   border: none;
   box-shadow: 0px 0px 0 3px transparent inset;
@@ -627,4 +631,9 @@
 .tidy5eDark .tidy5e.sheet.actor a.entity-link i,
 .tidy5eDark .tidy5e.sheet.actor a.inline-roll i {
   color: #121212;
+}
+
+/* font color fix */
+.tidy5eDark .tidy5e.sheet.actor .inventory-list .item .item-name {
+  color: inherit !important;
 }

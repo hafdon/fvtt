@@ -1,10 +1,12 @@
 import { ActionHandler5e } from './actions/dnd5e/dnd5e-actions.js';
 import { MagicItemActionListExtender } from './actions/dnd5e/magicItemsExtender.js';
-import { ItemMacroActionListExtender } from './actions/dnd5e/itemMacroExtender.js';
+import { ItemMacroActionListExtender } from './actions/itemMacroExtender.js';
 import { ActionHandlerWfrp } from './actions/wfrp4e/wfrp4e-actions.js';
 import { ActionHandlerPf2e } from './actions/pf2e/pf2e-actions.js';
 import { ActionHandlerDw } from './actions/dungeonworld/dw-actions.js';
 import { ActionHandlerSfrpg } from './actions/sfrpg/sfrpg-actions.js';
+import { ActionHandlerSw5e } from './actions/sw5e/sw5e-actions.js';
+import { ActionHandlerDemonlord } from './actions/demonlord/demonlord-actions.js';
 import { CompendiumMacroPreHandler } from './rollHandlers/compendiumMacroPreHandler.js';
 
 import * as roll5e from './rollHandlers/dnd5e/dnd5e-factory.js';
@@ -12,60 +14,89 @@ import * as rollWfrp from './rollHandlers/wfrp4e/wfrp4e-factory.js';
 import * as rollPf2e from './rollHandlers/pf2e/pf2e-factory.js';
 import * as rollDw from './rollHandlers/dungeonworld/dw-factory.js';
 import * as rollSf from './rollHandlers/sfrpg/sfrpg-factory.js';
+import * as rollSw from './rollHandlers/sw5e/sw5e-factory.js';
+import * as rollDemonlord from './rollHandlers/demonlord/demonlord-factory.js';
+import { ItemMacroPreRollHandler } from './rollHandlers/pre-itemMacro.js';
 
 
 export class HandlersManager {
     // Currently only planning for one kind of action handler for each system
     static getActionHandler(system, filterManager, categoryManager) {
+        let handler;
+
         switch (system) {
             case 'dnd5e':
-                return HandlersManager.getActionHandler5e(filterManager, categoryManager);
+                handler = HandlersManager.getActionHandler5e(filterManager, categoryManager);
+                break;
             case 'pf2e':
-                return new ActionHandlerPf2e(filterManager, categoryManager);
+                handler = new ActionHandlerPf2e(filterManager, categoryManager);
+                break;
             case 'wfrp4e':
-                return new ActionHandlerWfrp(filterManager, categoryManager);
+                handler = new ActionHandlerWfrp(filterManager, categoryManager);
+                break;
             case 'dungeonworld':
-                return new ActionHandlerDw(filterManager, categoryManager);
+                handler = new ActionHandlerDw(filterManager, categoryManager);
+                break;
             case 'sfrpg':
-                return new ActionHandlerSfrpg(filterManager, categoryManager);
+                handler = new ActionHandlerSfrpg(filterManager, categoryManager);
+                break;
+            case 'sw5e':
+                handler = new ActionHandlerSw5e(filterManager, categoryManager);
+                break;
+            case 'demonlord':
+                handler = new ActionHandlerDemonlord(filterManager, categoryManager);
+                break;
+            default:
+                throw new Error('System not supported by Token Action HUD');
         }
-        throw new Error('System not supported by Token Action HUD');
+
+        if (HandlersManager.isModuleActive('itemacro'))
+            handler.addFurtherActionHandler(new ItemMacroActionListExtender())
+
+        return handler;
     }
 
     static getActionHandler5e(filterManager, categoryManager) {
         let actionHandler = new ActionHandler5e(filterManager, categoryManager);
         if (HandlersManager.isModuleActive('magicitems'))
             actionHandler.addFurtherActionHandler(new MagicItemActionListExtender())
-        if (HandlersManager.isModuleActive('itemacro'))
-            actionHandler.addFurtherActionHandler(new ItemMacroActionListExtender())
         return actionHandler;
     }
 
     // Possibility for several types of rollers (e.g. BetterRolls, MinorQOL for DND5e),
     // so pass off to a RollHandler factory
     static getRollHandler(system, handlerId) {
-        let rollHandler;
+        let handler;
         switch (system) {
             case 'dnd5e':
-                rollHandler = roll5e.getRollHandler(handlerId)
+                handler = roll5e.getRollHandler(handlerId)
                 break;
             case 'pf2e':
-                rollHandler =  rollPf2e.getRollHandler(handlerId);
+                handler = rollPf2e.getRollHandler(handlerId);
                 break;
             case 'wfrp4e':
-                rollHandler =  rollWfrp.getRollHandler(handlerId);
+                handler = rollWfrp.getRollHandler(handlerId);
                 break;
             case 'dungeonworld':
-                rollHandler =  rollDw.getRollHandler(handlerId);
+                handler = rollDw.getRollHandler(handlerId);
                 break;
             case 'sfrpg':
-                rollHandler =  rollSf.getRollHandler(handlerId);
+                handler = rollSf.getRollHandler(handlerId);
+                break;
+            case 'sw5e':
+                handler = rollSw.getRollHandler(handlerId);
+                break;
+            case 'demonlord':
+                handler = rollDemonlord.getRollHandler(handlerId);
                 break;
         }
 
-        rollHandler.addPreRollHandler(new CompendiumMacroPreHandler())
+        handler.addPreRollHandler(new CompendiumMacroPreHandler())
 
-        return rollHandler;
+        if (HandlersManager.isModuleActive('itemacro'))
+            handler.addPreRollHandler(new ItemMacroPreRollHandler())
+
+        return handler;
     }
 
     // Not yet implemented.
@@ -77,20 +108,27 @@ export class HandlersManager {
                 let coreTitle = 'Core 5e';
                 if (HandlersManager.isModuleActive('midi-qol'))
                     coreTitle += ` [supports ${HandlersManager.getModuleTitle('midi-qol')}]`;
-                choices = {core: coreTitle};
+                choices = { core: coreTitle };
                 this.addModule(choices, 'betterrolls5e');
                 this.addModule(choices, 'minor-qol');
                 break;
             case 'pf2e':
-                choices = {'core': 'Core PF2E'};
+                choices = { 'core': 'Core PF2E' };
                 break;
             case 'wfrp4e':
-                choices = {'core': 'Core Wfrp'};
+                choices = { 'core': 'Core Wfrp' };
                 break;
             case 'dungeonworld':
-                choices = {'core': 'Core DungeonWorld'};
+                choices = { 'core': 'Core DungeonWorld' };
+                break;
             case 'sfrpg':
-                choices = {'core': 'Core sfrpg'};
+                choices = { 'core': 'Core Starfinder' };
+                break;
+            case 'sw5e':
+                choices = { 'core': 'Core Star Wars RPG' };
+                break;
+            case 'demonlord':
+                choices = { 'core': 'Core Shadow of the Demon Lord' };
                 break;
         }
 

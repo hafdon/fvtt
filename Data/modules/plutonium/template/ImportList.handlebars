@@ -20,7 +20,7 @@
 		{{/if}}
 
 		{{#each cols}}
-			<button class="btn-5et col-{{width}} px-1 sort {{field}}" data-sort="{{field}}">{{name}}</button>
+			<button class="btn-5et col-{{width}} px-1 sort" data-sort="{{field}}" {{#if title}}title="{{title}}"{{/if}}>{{name}}</button>
 		{{/each}}
 	</div>
 
@@ -38,7 +38,7 @@
 				{{#if ../isPreviewable}}
 					<div class="col-0-5 px-1 flex-vh-center">
 						<div class="flex-vh-center btn-group">
-							<button class="imp__btn-import-single btn btn-5et btn-xxs" title="Click and Hold to Preview">
+							<button class="imp__btn-import-single btn btn-5et btn-xxs" title="Click and Hold to Preview (SHIFT to Keep Open)">
 								<span class="ve-muted fas fa-eye"></span>
 							</button>
 							<button class="imp__btn-import-single btn btn-5et btn-xxs" title="Click to Import">
@@ -50,7 +50,7 @@
 
 				{{#each ../cols}}
 					<span
-							class="px-1 col-{{width}} {{#if rowClassName}}{{rowClassName}}{{/if}} {{#compare field "source" operator="==="}}{{#with (lookup .. field) as |source|}}{{getSourceColorClass source}}{{/with}}{{/compare}}"
+							class="px-1 col-{{width}} {{#if rowClassName}}{{rowClassName}}{{/if}} {{#if classNameProp}}{{{lookup .. classNameProp}}}{{/if}}"
 							{{#if titleProp}}title="{{lookup .. titleProp}}"{{/if}}
 					>
 						{{#if displayProp}}{{{lookup .. displayProp}}}{{else}}{{{lookup .. field}}}{{/if}}

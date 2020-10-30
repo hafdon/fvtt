@@ -150,7 +150,6 @@ export default class Item5e extends Item {
 
     // Get the Item's data
     const itemData = this.data;
-    const actorData = this.actor ? this.actor.data : {};
     const data = itemData.data;
     const C = CONFIG.DND5E;
     const labels = {};
@@ -223,16 +222,12 @@ export default class Item5e extends Item {
     // Item Actions
     if ( data.hasOwnProperty("actionType") ) {
 
-      // Save DC
-      let save = data.save || {};
-      if ( !save.ability ) save.dc = null;
-      else if ( this.isOwned ) { // Actor owned items
-        if ( save.scaling === "spell" ) save.dc = actorData.data.attributes.spelldc;
-        else if ( save.scaling !== "flat" ) save.dc = this.actor.getSpellDC(save.scaling);
-      } else { // Un-owned items
+      // Saving throws for unowned items
+      const save = data.save;
+      if ( save?.ability && !this.isOwned ) {
         if ( save.scaling !== "flat" ) save.dc = null;
+        labels.save = game.i18n.format("DND5E.SaveDC", {dc: save.dc || "", ability: C.abilities[save.ability]});
       }
-      labels.save = save.ability ? `${game.i18n.localize("DND5E.AbbreviationDC")} ${save.dc || ""} ${C.abilities[save.ability]}` : "";
 
       // Damage
       let dam = data.damage || {};
@@ -298,12 +293,19 @@ export default class Item5e extends Item {
       user: game.user._id,
       type: CONST.CHAT_MESSAGE_TYPES.OTHER,
       content: html,
+      flavor: this.name,
       speaker: {
         actor: this.actor._id,
         token: this.actor.token,
         alias: this.actor.name
-      }
+      },
+      flags: {"core.canPopout": true}
     };
+
+    // If the consumable was destroyed in the process - embed the item data in the surviving message
+    if ( (this.data.type === "consumable") && !this.actor.items.has(this.id) ) {
+      chatData.flags["dnd5e.itemData"] = this.data;
+    }
 
     // Toggle default roll mode
     rollMode = rollMode || game.settings.get("core", "rollMode");
@@ -438,7 +440,7 @@ export default class Item5e extends Item {
     // Maybe initiate template placement workflow
     if ( this.hasAreaTarget && placeTemplate ) {
       const template = AbilityTemplate.fromItem(this);
-      if ( template ) template.drawPreview(event);
+      if ( template ) template.drawPreview();
       if ( this.owner && this.owner.sheet ) this.owner.sheet.minimize();
     }
     return true;
@@ -617,14 +619,17 @@ export default class Item5e extends Item {
     const consume = itemData.consume;
     if ( consume?.type === "ammo" ) {
       const ammo = this.actor.items.get(consume.target);
-      const q = ammo.data.data.quantity;
-      if ( q && (q - consume.amount >= 0) ) {
-        let ammoBonus = ammo.data.data.attackBonus;
-        if ( ammoBonus ) {
-          parts.push("@ammo");
-          rollData["ammo"] = ammoBonus;
-          title += ` [${ammo.name}]`;
-          this._ammo = ammo;
+      if(ammo?.data){
+        const q = ammo.data.data.quantity;
+        const consumeAmount = consume.amount ?? 0;
+        if ( q && (q - consumeAmount >= 0) ) {
+          let ammoBonus = ammo.data.data.attackBonus;
+          if ( ammoBonus ) {
+            parts.push("@ammo");
+            rollData["ammo"] = ammoBonus;
+            title += ` [${ammo.name}]`;
+            this._ammo = ammo;
+          }
         }
       }
     }
@@ -847,7 +852,7 @@ export default class Item5e extends Item {
    * Place an attack roll using an item (weapon, feat, spell, or equipment)
    * Rely upon the d20Roll logic for the core implementation
    *
-   * @return {Promise.<Roll>}   A Promise which resolves to the created Roll instance
+   * @return {Promise<Roll>}   A Promise which resolves to the created Roll instance
    */
   async rollFormula(options={}) {
     if ( !this.data.data.formula ) {
@@ -932,7 +937,7 @@ export default class Item5e extends Item {
     // Maybe initiate template placement workflow
     if ( this.hasAreaTarget && placeTemplate ) {
       const template = AbilityTemplate.fromItem(this);
-      if ( template ) template.drawPreview(event);
+      if ( template ) template.drawPreview();
       if ( this.owner && this.owner.sheet ) this.owner.sheet.minimize();
     }
     return true;
@@ -1056,48 +1061,41 @@ export default class Item5e extends Item {
     const isTargetted = action === "save";
     if ( !( isTargetted || game.user.isGM || message.isAuthor ) ) return;
 
-    // Get the Actor from a synthetic Token
+    // Recover the actor for the chat card
     const actor = this._getChatCardActor(card);
     if ( !actor ) return;
 
-    // Get the Item
-    const item = actor.getOwnedItem(card.dataset.itemId);
+    // Get the Item from stored flag data or by the item ID on the Actor
+    const storedData = message.getFlag("dnd5e", "itemData");
+    const item = storedData ? this.createOwned(storedData, actor) : actor.getOwnedItem(card.dataset.itemId);
     if ( !item ) {
       return ui.notifications.error(game.i18n.format("DND5E.ActionWarningNoItem", {item: card.dataset.itemId, name: actor.name}))
     }
     const spellLevel = parseInt(card.dataset.spellLevel) || null;
 
-    // Get card targets
-    let targets = [];
-    if ( isTargetted ) {
-      targets = this._getChatCardTargets(card);
-      if ( !targets.length ) {
-        ui.notifications.warn(game.i18n.localize("DND5E.ActionWarningNoToken"));
-        return button.disabled = false;
-      }
-    }
-
-    // Attack and Damage Rolls
-    if ( action === "attack" ) await item.rollAttack({event});
-    else if ( action === "damage" ) await item.rollDamage({event, spellLevel});
-    else if ( action === "versatile" ) await item.rollDamage({event, spellLevel, versatile: true});
-    else if ( action === "formula" ) await item.rollFormula({event, spellLevel});
-
-    // Saving Throws for card targets
-    else if ( action === "save" ) {
-      for ( let a of targets ) {
-        const speaker = ChatMessage.getSpeaker({scene: canvas.scene, token: a.token});
-        await a.rollAbilitySave(button.dataset.ability, { event, speaker });
-      }
-    }
-
-    // Tool usage
-    else if ( action === "toolCheck" ) await item.rollToolCheck({event});
-
-    // Spell Template Creation
-    else if ( action === "placeTemplate") {
-      const template = AbilityTemplate.fromItem(item);
-      if ( template ) template.drawPreview(event);
+    // Handle different actions
+    switch ( action ) {
+      case "attack":
+        await item.rollAttack({event}); break;
+      case "damage":
+        await item.rollDamage({event, spellLevel}); break;
+      case "versatile":
+        await item.rollDamage({event, spellLevel, versatile: true}); break;
+      case "formula":
+        await item.rollFormula({event, spellLevel}); break;
+      case "save":
+        const targets = this._getChatCardTargets(card);
+        for ( let token of targets ) {
+          const speaker = ChatMessage.getSpeaker({scene: canvas.scene, token: token});
+          await token.actor.rollAbilitySave(button.dataset.ability, { event, speaker });
+        }
+        break;
+      case "toolCheck":
+        await item.rollToolCheck({event}); break;
+      case "placeTemplate":
+        const template = AbilityTemplate.fromItem(item);
+        if ( template ) template.drawPreview();
+        break;
     }
 
     // Re-enable the button
@@ -1155,10 +1153,9 @@ export default class Item5e extends Item {
    * @private
    */
   static _getChatCardTargets(card) {
-    const character = game.user.character;
-    const controlled = canvas.tokens.controlled;
-    const targets = controlled.reduce((arr, t) => t.actor ? arr.concat([t.actor]) : arr, []);
-    if ( character && (controlled.length === 0) ) targets.push(character);
+    let targets = canvas.tokens.controlled.filter(t => !!t.actor);
+    if ( !targets.length && game.user.character ) targets = targets.concat(game.user.character.getActiveTokens());
+    if ( !targets.length ) ui.notifications.warn(game.i18n.localize("DND5E.ActionWarningNoToken"));
     return targets;
   }
 

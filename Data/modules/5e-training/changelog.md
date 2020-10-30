@@ -1,5 +1,38 @@
 # Change Log
 
+## Version 0.4.7
+- Added the `CrashTrainingTabReady` hook, which fires when the downtime tab is ready. Example usage:
+```js
+Hooks.on(`CrashTrainingTabReady`, (app, html, data) => {
+  console.log("Crash's 5e Downtime Tracking | Downtime tab ready!");
+});
+```
+
+## Version 0.4.6
+Improvements:
+- Changed the way activity data is updated behind the scenes so things don't explode for no good reason. Special thanks to Ethck#6879 for slogging through it with me.
+- Added Chinese localization thanks to hmqgg#5775
+
+Fixes:
+- Fixed a bug where the names of the rolls were displaying as ??? in the audit log. This doesn't fix any activities that have been logged as ??? already, but will prevent them from saving that way going forward.
+
+## Version 0.4.5
+Compatibility patch for 0.7.1+
+- Modifies the way flags are updated to prevent data loss when using Foundry core versions higher than 0.7.0
+
+## Version 0.4.4
+Improvements:
+- Added the ability to select tools in addition to skills and ability checks. Tools are limited to those the actor has in their inventory. This means they're not available on NPC sheets.
+
+Changes:
+- "Ability" progression mode is now called "Ability/Skill/Tool Check" mode.
+- "DC" progression mode is now called "Check with DC".
+- Together, these modes are referred to as "Check-Based" progression modes, since they both utilize checks. You'll see them referred to this way in the module settings.
+
+## Version 0.4.3
+Fixes:
+- Enhanced compatibility with Ethck's very cool downtime module. Clicking things will no longer open dialogs from two modules, and styles no longer wreak havoc with one another.
+
 ## Version 0.4.2
 Improvements:
 - Added an option to toggle the display of the downtime tab on NPC sheets independently.

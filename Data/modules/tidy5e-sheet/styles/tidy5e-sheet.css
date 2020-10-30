@@ -6,6 +6,12 @@
 	--default-faint-color: rgba(0,0,0,.075);
 	--default-primary-accent: #ff6400;
 	--default-secondary-accent: rgba(210,0,255,.1);
+	--always-prepared-accent: rgba(210,0,255,.1);
+}
+
+/* temporary color fix for core bug */
+.tidy5e.sheet.actor .inventory-list {
+	color: inherit !important;
 }
 
 /* font settings */
@@ -120,7 +126,7 @@
 
 /* sheet settings */
 
-.tidy5e.sheet [contenteditable=true] {
+.tidy5e.sheet [contenteditable] {
 	border: none;
 	outline: none; 
 	display: inline-block;
@@ -131,7 +137,7 @@
 	-o-user-select: text;
 }
 
-.tidy5e.sheet [contenteditable=true]:empty:before {
+.tidy5e.sheet [contenteditable]:empty:before {
   content: attr(data-placeholder);
   pointer-events: none;
   display: block; /* For Firefox */
@@ -200,7 +206,7 @@
 	box-shadow: none;
 }
  
-.tidy5e.sheet [contenteditable=true],
+.tidy5e.sheet [contenteditable],
 .tidy5e.sheet input[type="text"]{
 	border: none;
 	box-shadow: 0px 0px 0 3px transparent inset;
@@ -238,12 +244,9 @@
 	padding: 0;
 }
 
-/*.tidy5e.sheet.actor ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.tidy5e.sheet.actor .item-summary p:not(:first-child) {
+	margin-top: .5em;
 }
-*/
 
 .tidy5e.sheet .character-details ul {
 	list-style: none;
@@ -1373,14 +1376,14 @@
 	position: absolute;
 }
 
-.tidy5e.sheet.actor .traits .senses div[contenteditable="true"] {	
+.tidy5e.sheet.actor .traits .senses div[contenteditable] {	
   font-size: 12px;
   line-height: 14px;
   padding-top: 1px;
   width: 100%;
 }
 
-.tidy5e.sheet.actor .traits .senses div[contenteditable="true"]:before { 
+.tidy5e.sheet.actor .traits .senses div[contenteditable]:before { 
   content: attr(data-label);
   line-height: 14px;
   font-weight: 700;
@@ -2129,9 +2132,12 @@
 
 /* Equipped/Prepared Highlight */
 .tidy5e.sheet.actor .inventory-list .item.attuned,
-.tidy5e.sheet.actor .inventory-list .item.prepared,
-.tidy5e.sheet.actor .inventory-list .item.alwaysPrepared {
+.tidy5e.sheet.actor .inventory-list .item.prepared {
 	background: var(--default-secondary-accent);
+}
+
+.tidy5e.sheet.actor .inventory-list .item.alwaysPrepared {
+	background: var(--always-prepared-accent);
 }
 
 .tidy5e.sheet.actor .inventory-list .item-detail,
@@ -2149,7 +2155,7 @@
 
 .tidy5e.sheet.actor .spell-slots,
 .tidy5e.sheet.actor .spell-comps {
-	flex: 0 0 55px;
+	flex: 0 0 65px;
 	min-width: auto;
 	text-align: center;
 	padding: 0;
@@ -2505,6 +2511,18 @@
   padding: 0 0 0 1.5em;
 }
 
+.tidy5e.sheet.actor .editor {
+    min-height: 382px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tidy5e.sheet.actor .tox.tox-tinymce {
+    border: none;
+    flex: 1;
+    min-height: 100px;
+}
+
 /* Portrait hover options */
 
 .tidy5e.sheet.actor .exhaustionOnHover .exhaustion-container,
@@ -2543,13 +2561,13 @@
     height: 380px;
 	}
 
-	.dnd5e.sheet.actor.character ul.skills-list li.skill {
+	.tidy5e.dnd5e.sheet.actor.character ul.skills-list li.skill {
 		border: none;
     flex: 0 0 21px;
     height: 21px;
 	}
 
-	.dnd5e.sheet.actor ul.skills-list li.skill .skill-proficiency {
+	.tidy5e.dnd5e.sheet.actor ul.skills-list li.skill .skill-proficiency {
     margin-right: 4px;
 	}
 
