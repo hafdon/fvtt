@@ -29,3 +29,9 @@ Players will only be able to edit HP if they own the combatant's token.
 The module also includes the ability to rearrange combatants by dragging and dropping them. This is handled by setting the combatant being dragged to a new initiative that's the average of the two combatants it's landing in-between. This means that if you're using dexterity tie-breakers, the tiebreaker will become a number much higher than possible dexterity scores due to the average math.
 
 If you're not using dexterity tie breakers, the module includes an optional setting to reflow combatant initiative if the combatants have identical initiative. For example, if you drop a combatant on top of another combatant that has an initiative of 18 and the combatant after that one has an 18 as well, the combatants will have new initiatives equal to 20, 19, and 18. If this setting isn't enabled, the combatants won't appear to change since the order is initiative followed by the alphabetical name.
+
+### End of Turn Target Removal
+
+When enabled, this will remove all targets from all tokens when the turn/round is updated in the combat tracker. Going backwards, forwards, and ending combat will cause all targets to be removed from all tokens. This is system agnostic. Enabling will cause a refresh of all connected clients.
+
+#### ***Note! This is in direct conflict with other target removal modules like Midi-QoL. For this reason it is off by default.***

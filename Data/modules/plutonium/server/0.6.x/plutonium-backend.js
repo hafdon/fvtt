@@ -8,7 +8,7 @@ const files = require("./dist/files/files");
 const _VERSION = "0.1.5";
 
 /**
- * Requires a modified "main.js" to bind the handler.
+ * Requires a modified "main.js" to bind the handler. Install at your own risk.
  */
 class Plutonium {
 	static init () {
@@ -160,7 +160,8 @@ class Plutonium {
 						logger.info(`Saved image ${`${numDownloaded}`.padStart(lenLen, " ")}/${len} to ${outputPath}.`);
 					} catch (e) {
 						numDownloaded++;
-						logger.error(`Failed to save image ${`${numDownloaded}`.padStart(lenLen, " ")}/${len} from ${fileMeta.uri} to ${outputPath}.`);
+						logger.error(`Failed to save image ${`${numDownloaded}`.padStart(lenLen, " ")}/${len} from ${fileMeta.uri} to ${outputPath}. Error was: ${e.message}`);
+						logger.error(e)
 					}
 
 					if (ptrIsCancelled._) return;

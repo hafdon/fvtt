@@ -22,9 +22,9 @@
   "changelog": "",
   "background": "",
   "system": "dnd5e",
-  "coreVersion": "0.7.5",
-  "systemVersion": 0.98,
-  "nextSession": "2020-10-24T17:30:00.000Z",
+  "coreVersion": "0.7.9",
+  "systemVersion": "1.2.0",
+  "nextSession": "2020-12-26T18:30:00.000Z",
   "availability": 0,
   "unavailable": false
 }

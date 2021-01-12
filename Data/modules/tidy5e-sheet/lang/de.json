@@ -1,169 +1,210 @@
 {
-	"TIDY5E.EditActorImage": "Bild bearbeiten",
+	"TIDY5E.Subclass": "Unterklasse",
+	"TIDY5E.EditActorImage": "Linksklick: Bild bearbeiten",
+	"TIDY5E.ShowActorImage": "Rechtsklick: Charakter-Bilder zeigen",
+	"TIDY5E.ShowPortraitArt": "zeige Portrait",
+	"TIDY5E.ShowTokenArt": "zeige Token",
 
-	"TIDY5E.Exhaustion0": "Kein negativer Effekt",
-	"TIDY5E.Exhaustion1": "Nachteil auf Fähigkeitsproben",
-	"TIDY5E.Exhaustion2": "Bewegung halbiert",
-	"TIDY5E.Exhaustion3": "Nachteil auf Angriffswürfe und Rettungswürfe",
+	"TIDY5E.Exhaustion0": "Keine negativen Effekte",
+	"TIDY5E.Exhaustion1": "Nachteil auf Fähigkeits-Proben",
+	"TIDY5E.Exhaustion2": "Geschwindigkeit halbiert",
+	"TIDY5E.Exhaustion3": "Nachteil auf Angriffs- und Rettungswürfe",
 	"TIDY5E.Exhaustion4": "Maximale Trefferpunkte halbiert",
-	"TIDY5E.Exhaustion5": "Bewegung auf 0 reduziert",
+	"TIDY5E.Exhaustion5": "Geschwindigkeit auf 0 reduziert",
 	"TIDY5E.Exhaustion6": "Tod",
 
-	"TIDY5E.RestHint": "Mach eine Rast",
+	"TIDY5E.RestHint": "Rasten",
 	"TIDY5E.RestS": "Kurze Rast",
 	"TIDY5E.RestL": "Lange Rast",
 
-	"TIDY5E.AttrHitPoints": "Trefferpunkte",
-
-	"TIDY5E.HitDiceHint": "bei Rast nutzen",
-
 	"TIDY5E.Journal": "Tagebuch",
 
-	"TIDY5E.SkillPassive": "Passiv",
+	"TIDY5E.RestoreOnRest": "Bei Rast regenerieren",
 
-	"TIDY5E.RestoreOnRest": "Bei Rast erneuern",
-
-	"TIDY5E.BioTraits": "Merkmale",
-	"TIDY5E.BioIdeals": "Ideale",
-	"TIDY5E.BioBonds": "Bindungen",
-	"TIDY5E.BioFlaws": "Mängel",
-	"TIDY5E.BioAppearance": "Erscheinung",
-	"TIDY5E.BioBackground": "Hintergrund/Biografie",
-
-	"TIDY5E.JournalPoi": "Interessante Persönlichkeiten",
+	"TIDY5E.JournalPoi": "Interessante Personen",
 	"TIDY5E.JournalLoi": "Interessante Orte",
 	"TIDY5E.JournalQuests": "Aufträge",
 	"TIDY5E.JournalMisc": "Verschiedenes",
 	"TIDY5E.JournalEntries": "Tagebucheinträge",
 
-	"TIDY5E.DeleteDisabled": "Löschen deaktiviert",
-	"TIDY5E.DeleteEnabled": "Löschen aktiviert",
-	"TIDY5E.DeleteDisabledHint": "Zeige Löschen-Knopf",
-	"TIDY5E.DeleteEnabledHint": "Verstecke Löschen-Knopf",
+	"TIDY5E.EnableEdit": "Bearbeiten erlauben",
+	"TIDY5E.DisableEdit": "Bearbeiten verbieten",
+	"TIDY5E.EditHint": "Schaltet Sichtbarkeit von Hinzufügen/Löschen Buttons und leeren Sektionen um.",
+	
+	"TIDY5E.EmptySection": "Dieser Bereich ist leer. Entsperre den Charakterbogen zum Bearbeiten.",
+	"TIDY5E.GmOnlyEdit": "Nur der Spielleiter kann diesen Bereich bearbeiten.",
 
-	"TIDY5E.ConvertCurrencyHint": "Währung in höchste Einheit konvertieren",
-	"TIDY5E.ConvertCurrencyButton": "konvertieren",
+	"TIDY5E.AttunementWarning": "Einstimmungs-Warnung: Du kannst dich maximal auf {number} Gegenständen einstimmen!",
+	"TIDY5E.AttunementItems": "Eingestimmte Gegenstände",
+	"TIDY5E.AttunementMax": "Maximale Einstimmungen",
+	
+	"TIDY5E.GridLayout": "Raster-Ansicht",
+	"TIDY5E.ListLayout": "Listen-Ansicht",
 
-	"TIDY5E.Encumbrance": "Belastung",
+	"TIDY5E.Encumbrance": "Traglast",
 
 	"TIDY5E.EditSpell": "Zauber bearbeiten",
 	"TIDY5E.DeleteSpell": "Zauber löschen",
-	"TIDY5E.AddFav": "Zu Favoriten hinzufügen",
-	"TIDY5E.RemoveFav": "Aus Favoriten entfernen",
+	"TIDY5E.AddFav": "Favorit hinzufügen",
+	"TIDY5E.isFav": "Favorit",
+	"TIDY5E.RemoveFav": "Favorit löschen",
 
-	"TIDY5E.ToggleInfo": "Infos umschalten",
+	"TIDY5E.ToggleInfo": "Info umschalten",
+	"TIDY5E.ToggleMovement": "Wechseln zwischen moderner und alter Geschwindigkeitsanzeige",
 
-	"TIDY5E.Show" : "zeige/editiere",
-	"TIDY5E.Hide" : "verstecke",
-	"TIDY5E.Edit" : "editiere",
-	"TIDY5E.SkillsNotProficient" : "ungeübte",
-	"TIDY5E.TraitsEmpty" : "leere",
-
-	"TIDY5E.AbbrArmorClass" : "RK",
-
-	"TIDY5E.strAbility" : "Stä",
-	"TIDY5E.dexAbility" : "Gew",
-	"TIDY5E.conAbility" : "Kon",
-	"TIDY5E.intAbility" : "Int",
-	"TIDY5E.wisAbility" : "Wei",
-	"TIDY5E.chaAbility" : "Cha",
+	"TIDY5E.Show" : "zeigen/bearbeiten",
+	"TIDY5E.Hide" : "verstecken",
+	"TIDY5E.Edit" : "bearbeiten",
+	"TIDY5E.TraitsEmpty" : "leeren Merkmale",
 
 	"TIDY5E.Abilities" : "Fähigkeiten",
 
 	"TIDY5E.Environment" : "Umgebung",
 
+	"TIDY5E.CurrencyAbbrCP" : "KM",
+	"TIDY5E.CurrencyAbbrSP" : "SM",
+	"TIDY5E.CurrencyAbbrGP" : "GM",
+	"TIDY5E.CurrencyAbbrEP" : "EM",
+	"TIDY5E.CurrencyAbbrPP" : "PM",
+
+	"TIDY5E.SearchItem" : "Suche Gegenstand",
+	"TIDY5E.SearchSpell" : "Suche Zauber",
+	"TIDY5E.SearchClear" : "Suchfeld leeren",
+	"TIDY5E.SearchHint" : "Fange einfach an einzutippen nach was du suchst.",
+
 	"TIDY5E.AbbrMod" : "Mod",
+	"TIDY5E.SpellAttackMod" : "Attacke Mod",
+	"TIDY5E.PreparedSpells" : "Vorbereitete Zauber",
+	"TIDY5E.PreparedSpellsMax" : "Maximum für vorbereitete Zauber",
+	"TIDY5E.Components" : "Komp.",
+	"TIDY5E.SpellSchool" : "Schule",
 
+	"TIDY5E.TokenLinked" : "Token mit Actor verknüpft",
+	"TIDY5E.TokenUnlinked" : "Token nicht mit Actor verknüpft",
 
-	"TIDY5E.Settings.PcLabel" : "PC-Bogen: ",
-	"TIDY5E.Settings.NpcLabel" : "NPC-Bogen: ",
+	"TIDY5E.ItemDetailsHeadline" : "Mechaniken/Flavor-Text",
+
+	"TIDY5E.Settings.GlobalLabel" : "Global",
+	"TIDY5E.Settings.UserLabel" : "Nutzer",
+	"TIDY5E.Settings.PcLabel" : "SCs",
+	"TIDY5E.Settings.NpcLabel" : "NSCs",
+	"TIDY5E.Settings.VehicleLabel" : "Fahrzeuge",
 
 	"TIDY5E.Settings.UseExpandedSheet" : {
-		"name" : "Erweitere Ansicht für eingeschränkte Characterbögen.",
-		"hint" : "Die erweiterete Ansicht für eingeschränkte Charakterbögen zeigt den gesamten Charakterbogen (ohne persönliche Notizen) für Spieler mit eingeschränkter Berechtigung für diesen Charakter."
+		"name" : "Erweitererte eingeschränkte Ansicht für Charakterbögen.",
+		"hint" : "Zeigt Spielern mit eingeschränkten Rechten den gesamten Charakterbogen abzüglich Tagebuch."
 	},
-	"TIDY5E.Settings.UseDarkMode" : {
-		"name" : "Alternativen Darkmode nutzen.",
-		"hint" : "Aktiviere diese Option um das alternate Darkmode Layout zu nutzen."
+	"TIDY5E.Settings.DisableRightClick" : {
+		"name" : "Rechtsklick-Menü deaktivieren.",
+		"hint" : "Im Falle von Modulkonflikten oder persönlicher Vorliebe kann das Rechtsklickmenü deaktiviert werden. Stattdessen erscheint ein Menü-Button neben Gegenständen. Der Mittelklick bleibt."
 	},
-	"TIDY5E.Settings.PrimaryAccentColor" : {
-		"name" : "Primäre Akzentfarbe.",
-		"hint" : "Überschreibt die primäre Akzentfarbe (Standard: #ff6400/Darkmode: #48BB78) um Buttons, Eingabefelder und Interaktionen hervorzuheben. Gültige Werte sind z. B. red/#ff0000/rgba(255,0,0)/rgba(255,0,0,1)."
+	"TIDY5E.Settings.UseClassicControls" : {
+		"name" : "Klassische Gegenstand-Steuerung in Listenansicht nutzen.",
+		"hint" : "Zeigt die Gegenstandsteuerung immer an ohne Rechtsklick. Trifft nur auf SC-Gegenstands/Zauber-Inventar in der Listenansicht zu."
 	},
-	"TIDY5E.Settings.SecondaryAccentColor" : {
-		"name" : "Sekundäre Akzentfarbe.",
-		"hint" : "Überschreibt die sekundäre Akzentfarbe (Standard: rgba(210,0,255,.1)/Darkmode: rgba(0,150,150,.325)) um Buttons, Eingabefelder und Interaktionen hervorzuheben. Gültige Werte sind z. B. red/#ff0000/rgba(255,0,0)/rgba(255,0,0,1)."
+	"TIDY5E.Settings.ContextRollButtons" : {
+		"name" : "Zeige midiQol/Better Rolls Gegenstand-Button im Context-Menu",
+		"hint" : "Standardmäßig werden Gegenstands-Buttons in den Zusatzinfos angezeigt. Aktivieren, um sie in das Contextmenü zu verschieben. Nützlich für die Rasteransicht oder wenn sie oft benötigt werden."
 	},
-	"TIDY5E.Settings.AlwaysPreparedAccentColor" : {
-		"name" : "Akzentfarbe für ständig vorbereitete Zaubersprüche.",
-		"hint" : "Überschreibt die Akzentfarbe (Standard: rgba(210,0,255,.1)/Darkmode: rgba(0,150,150,.325)) für ständig vorbereitete Zaubersprüche. Gültige Werte sind z. B. red/#ff0000/rgba(255,0,0)/rgba(255,0,0,1)."
+	"TIDY5E.Settings.GmEditPermission" : {
+		"name" : "SL kann immer SC-Bögen bearbeiten.",
+		"hint" : "Einschalten, um SLs immer das Bearbeiten von Spielerbögen zu erlauben ohne das Schloss zu ändern."
+	},
+	"TIDY5E.Settings.GmEditEffects" : {
+		"name" : "Nur SL darf Effekte bearbeiten.",
+		"hint" : "Einschalten, um nur SLs zu erlauben Aktive Effekte für SCs zu bearbeiten. Spieler sehen weiterhin die angewandten Effekte."
+	},
+	"TIDY5E.Settings.AlwaysShowQty" : {
+		"name" : "Immer Gegenstandsmenge anzeigen.",
+		"hint" : "Einschalten um Gegestandsanzahl niemals auszublenden."
+	},
+	"TIDY5E.Settings.SheetTheme" : {
+		"name" : "Tidy5e Farbschema.",
+		"hint" : "Nutze das helle Standarschema oder das dunkle Alternativschema von Tidy5e.",
+		"default": "Standard (hell)",
+		"dark": "Alternativ (dunkel)"
 	},
 	"TIDY5E.Settings.UseRoundPortraits" : {
-		"name" : "Bögen nutzen runde Portraits.",
-		"hint" : "Aktiviere diese Option wenn du runde Portraits nutzt. Portraits, Trefferpunkt-Overlays und Overlay Buttons werden abgerunden."
+		"name" : "Runde Portraits.",
+		"hint" : "Wähle runde Portraits/Icons für Darsteller.",
+		"all": "Alle Darsteller",
+		"pc": "Nur für SCs",
+		"npc": "Nur für NSCs/Fahrzeuge",
+		"default": "Keine"
+	},
+	"TIDY5E.Settings.ShowNpcRest" : {
+		"name" : "Rast für NSCs.",
+		"hint" : "Einschalten, um den Rast-Button auch für NSCs anzuzeigen."
+	},
+	"TIDY5E.Settings.LinkMarker" : {
+		"name" : "Verknüpfte/unverknüpfte NSCs markieren.",
+		"hint" : "Fügt farbige Rahmen und Icons zu verknüpften/unverknüpften NSC-Bögen hinzu.",
+		"default": "Kein Verknüpfungsmarker (standard)",
+		"unlinked": "Unverknüpfte Token hervorheben",
+		"both": "Verknüpfte und unverknüpfte Token hervorheben"
 	},
 	"TIDY5E.Settings.HpOverlayBorder" : {
-		"name" : "Rahmenstärke für Trefferpunkt-Overlay.",
-		"hint" : "Falls Portraits einen Rahmen haben kann mit dieser Option das Trefferpunkt-Overlay so angepasst werden, dass der Rahmen ausgespart wird."
+		"name" : "Trefferpunkt-Overlay verschieben.",
+		"hint" : "Trage einen Wert ein, um Portraitrahmen zu kompensieren und eine Einfärbung zu verhindern."
 	},
 	"TIDY5E.Settings.DisableHpOverlay" : {
-		"name" : "Trefferpunkt-Overlay deaktivieren.",
-		"hint" : "Deaktiviert das Trefferpunkt-Overlay falls dir die Darstellung nicht gefällt."
+		"name" : "Trefferpunkt-Overlay verstecken.",
+		"hint" : "Einschalten, um das Trefferpunkt-Overlay für diesen Darstellertyp zu verstecken."
+	},
+	"TIDY5E.Settings.DisableHpBar" : {
+		"name" : "Lebensbalken deaktivieren.",
+		"hint" : "Aktivieren, um den farbigen Balken zur Anzeige des Rest-Lebens unter dem Portrait zu deaktivieren (Trefferpunkte bleiben weiter sichtbar)."
 	},
 	"TIDY5E.Settings.HideClassList" : {
-		"name" : "Klassenliste verstecken.",
-		"hint" : "Diese Option versteckt die Auflictung der Charakterklaasen neben der XP-Anzeige. Der Bogen verkraftet bis zu 3 Klassen ohne Probleme, bei mehr kann sich das Layout verschieben."
+		"name" : "Charakter-Klassenliste verstecken.",
+		"hint" : "Einschalten, um die Klassenliste unter dem Namen eines Charakters zu verstecken."
 	},
 	"TIDY5E.Settings.DisableInspirationAnimation" : {
-		"name" : "Keine Inspiration-Animation.",
-		"hint" : "Deaktiviert den pulsierenden Effekt für den Inspiration-Marker."
+		"name" : "Unbewegter Inspirations-Tracker.",
+		"hint" : "Einschalten, um die Animation des Inspirations-Trackers zu deaktivieren."
 	},
 	"TIDY5E.Settings.DisableInspiration" : {
-		"name" : "Inspiration-Marker deaktivieren.",
-		"hint" : "Wenn deine Kampagne keine Inspiration nutzt, lässt sich der Marker deaktivieren."
+		"name" : "Inspirations-Tracker deaktivieren.",
+		"hint" : "Wenn deine Kampagne keine Inspiration nutzt, kannst du den Tracker komplett ausblenden."
+	},
+	"TIDY5E.Settings.ExhaustionEffects" : {
+		"name" : "Erschöpfunseffekte (nutzt Aktive Effekte).",
+		"hint" : "Füge die passenden Effekte bei Wechsel der Eschöpfungsstufe hinzu - erfordert midiQol für Nachteils-Würfe!"
 	},
 	"TIDY5E.Settings.DisableExhaustion" : {
-		"name" : "Erschöpfungsmarker deaktivieren.",
-		"hint" : "Wenn deine Kampagne keine Erschöpfung nutzt, lässt sich der Marker deaktivieren."
+		"name" : "Erschöpfungs-Tracker deaktivieren.",
+		"hint" : "Wenn deine Kampagne keine Erschöpfungsregeln nutzt, kannst du den Tracker komplett ausblenden."
 	},
 	"TIDY5E.Settings.HideIfZero" : {
-		"name" : "Verstecke Erschöpfung und Inspiration solange sie Null betragen.",
-		"hint" : "Aktiviere diese Option um den Erschöpfung- und Inspiration-Marker zu verstecken solange die Werte Null betragen. Erscheinen wenn man über das Portrait fährt."
+		"name" : "Verstecke Erschöpfungs- und Inspirations-Tracker bei 0.",
+		"hint" : "Einschalten, um Erschöpfungs- und Inspirations-Tracker bei 0 zu verstecken. Erscheint bei Maushover."
 	},
 	"TIDY5E.Settings.ExhaustionOnHover" : {
-		"name" : "Zeige Erschöpfung nur beim Daraufzeigen.",
-		"hint" : "Der Erschöpfung-Marker bleibt immer versteckt und erscheint nur beim Zeigen auf das Portrait."
+		"name" : "Zeige Erschöpfungs-Tracker bei Hover.",
+		"hint" : "Einschalten, um den Erschöpfungs-Tracker grundsätzlich nur bei Maushover zu zeigen."
 	},
 	"TIDY5E.Settings.InspirationOnHover" : {
-		"name" : "Zeige Inspiration nur beim Daraufzeigen.",
-		"hint" : "Der Inspiration-Marker bleibt immer versteckt und erscheint nur beim Zeigen auf das Portrait."
-	},
-	"TIDY5E.Settings.RestOnHover" : {
-		"name" : "Zeige Rasten-Button beim Daraufzeigen.",
-		"hint" : "Der Rasten-Button bleibt immer versteckt und erscheint nur beim Zeigen auf das Portrait."
+		"name" : "Zeige Inspirations-Tracker bei Hover.",
+		"hint" : "Einschalten, um den Inspirations-Tracker grundsätzlich nur bei Maushover zu zeigen."
 	},
 	"TIDY5E.Settings.MoveTraits" : {
-		"name" : "Schiebe Eigenschaften unter Resourcen.",
-		"hint" : "Aktivieren, um die Eigenschaftenliste unter die Ressourcen zu verschieben."
+		"name" : "Verschiebe Merkmale unter Ressourcen.",
+		"hint" : "Einschalten, um Merkmalliste von der linken Seite unter die Ressourcen zu verschieben."
 	},
 	"TIDY5E.Settings.PcToggleTraits" : {
-		"name" : "Zeige Umschalter für Charakter-Eigenschaften.",
-		"hint" : "Aktivieren, um leere Charakter-Eigenschaften über einen Button ein-/auszublenden."
+		"name" : "Leere Charakter-Merkmale umschalten.",
+		"hint" : "Standardmäßig sind leere Merkmale immer sichtbar. Einschalten, um per Schalter zu wechseln."
 	},
 	"TIDY5E.Settings.AlwaysShowTraits" : {
-		"name" : "NPC-Eigenschaften immer zeigen.",
-		"hint" : "Aktivieren, um immer alle NPC-Eigenschaften zu zeigen, auch leere."
+		"name" : "Merkmale immer anzeigen.",
+		"hint" : "Standardmäßig sind leere Merkmale per Schalter ausgeblendet. Einschalten, um immer anzuzeigen."
+	},
+	"TIDY5E.Settings.ShowTraitLabels" : {
+		"name" : "Beschriftung von Merkmalen.",
+		"hint" : "Standardmäßig werden nur Icons für Merkmale angezeigt. Einschalten, um auch Beschriftungen für Merkmale anzuzeigen."
 	},
 	"TIDY5E.Settings.AlwaysShowSkills" : {
-		"name" : "NPC-Fähigkeiten immer zeigen.",
-		"hint" : "Aktivieren, um immer alle MPC-Fähigkeiten zu zeigen, auch ungeübte."
-	},
-	"TIDY5E.Settings.MarkLinked" : {
-		"name" : "Mit Actor verknüpften Bogen hervorheben.",
-		"hint" : "Zeigt einen farbigen Rahmen um einen Bogen an, wenn das Token mit einem Actor verknüpft ist."
-	},
-	"TIDY5E.Settings.MarkUnlinked" : {
-		"name" : "Nicht mit Actor verknüpften Bogen hervorheben.",
-		"hint" : "Zeigt einen farbigen Rahmen um einen Bogen an, wenn das Token nicht mit einem Actor verknüpft ist."
+		"name" : "Fähigkeiten immer anzeigen.",
+		"hint" : "Standardmäßig sind ungeübte Fähigkeiten per Schalter ausgeblendet. Einschalten, um immer anzuzeigen."
 	}
 }

@@ -1,5 +1,5 @@
 import {Filter} from './filter.js';
-import * as settings from '../../settings.js';
+import {Logger} from '../../logger.js';
 
 export class FilterManager {
     filters = [];
@@ -12,7 +12,7 @@ export class FilterManager {
         if (!savedFilters)
             return;
 
-        settings.Logger.debug('saved filters:', savedFilters);
+        Logger.debug('saved filters:', savedFilters);
 
         Object.entries(savedFilters).forEach(f => {
             let filter = new Filter(f[0]);
@@ -65,18 +65,18 @@ export class FilterManager {
         return filter.getFilteredIds();
     }
 
-    setFilteredElements(filterId, elements, isBlocklist) {
+    async setFilteredElements(filterId, elements, isBlocklist) {
         let filter = this._getFilter(filterId);        
-        filter.setFilteredElements(elements, isBlocklist);
+        await filter.setFilteredElements(elements, isBlocklist);
     }
 
-    clearFilter(filterId) {
+    async clearFilter(filterId) {
         let filter = this.filters.find(f => f.id === filterId);
 
         if (!filter)
             return;
 
-        filter.clearFlag();
+        await filter.clearFlag();
         
         this.filters.splice(this.filters.indexOf(filter), 1);
     }

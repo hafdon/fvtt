@@ -43,12 +43,14 @@ export class PcActionHandlerPf2e {
 
     /** @private */
     _forCharacter(result, tokenId, actor) {
+        let toggles = this._getTogglesCategory(actor, tokenId);
         let strikes = this._getStrikesList(actor, tokenId);
         let actions = this.baseHandler._getActionsList(actor, tokenId);
         let spells = this.baseHandler._getSpellsList(actor, tokenId);
         let feats = this.baseHandler._getFeatsList(actor, tokenId);
         let items = this.baseHandler._getItemsList(actor, tokenId);
         
+        this.baseHandler._combineCategoryWithList(result, this.i18n('tokenactionhud.toggles'), toggles);
         this.baseHandler._combineCategoryWithList(result, this.i18n('tokenactionhud.strikes'), strikes);
         this.baseHandler._combineCategoryWithList(result, this.i18n('tokenactionhud.actions'), actions);
         this.baseHandler._combineCategoryWithList(result, this.i18n('tokenactionhud.inventory'), items);
@@ -57,53 +59,65 @@ export class PcActionHandlerPf2e {
     }
 
     /** @private */
-    _getStrikesList(actor, tokenId) {
-        let macroType = 'strike';
-        let result = this.baseHandler.initializeEmptyCategory('strikes');
-        result.cssClass = 'oneLine';
+    _getTogglesCategory(actor, tokenId) {
+        if (!settings.get('separateTogglesCategory'))
+            return;
 
-        let strikes = actor.data.data.actions.filter(a => a.type === macroType);
-        
-        let calculateAttackPenalty = settings.get('calculateAttackPenalty');
-
-        strikes.forEach(s => {
-            let subcategory = this.baseHandler.initializeEmptySubcategory();
-            let glyph = s.glyph;
-            if (glyph)
-                subcategory.icon = `<span style='font-family: "Pathfinder2eActions"'>${glyph}</span>`
-
-            let map = Math.abs(parseInt(s.variants[1].label.split(' ')[1]));
-            let attackMod = s.totalModifier;
-            
-            let currentMap = 0;
-            let currentBonus = attackMod;
-            let calculatePenalty = calculateAttackPenalty;
-
-            let variantsMap = s.variants.map(function (v) {
-                let name;
-                if (currentBonus === attackMod || calculatePenalty) {
-                    name = currentBonus >= 0 ? `+${currentBonus}` : `${currentBonus}`;
-                }
-                else {
-                    name = currentMap >= 0 ? `+${currentMap}` : `${currentMap}`;
-                }
-                currentMap -= map;
-                currentBonus -= map;
-                return {_id: encodeURIComponent(`${this.name}>${this.variants.indexOf(v)}`), name: name }
-            }.bind(s));
-
-            variantsMap[0].img = s.imageUrl;
-            subcategory.actions = this.baseHandler._produceMap(tokenId, variantsMap, macroType);
-            
-            let damageEncodedValue = [macroType, tokenId, encodeURIComponent(s.name+'>damage')].join(this.baseHandler.delimiter);
-            let critEncodedValue = [macroType, tokenId, encodeURIComponent(s.name+'>critical')].join(this.baseHandler.delimiter);
-            subcategory.actions.push({name: this.i18n('tokenactionhud.damage'), encodedValue: damageEncodedValue, id: encodeURIComponent(s.name+'>damage')})
-            subcategory.actions.push({name: this.i18n('tokenactionhud.critical'), encodedValue: critEncodedValue, id: encodeURIComponent(s.name+'>critical')})
-
-            this.baseHandler._combineSubcategoryWithCategory(result, s.name, subcategory);
-        });
+        let result = this.baseHandler.initializeEmptyCategory('toggles');
+        this._addTogglesCategories(actor, tokenId, result);
 
         return result;
+    }
+
+    /** @private */
+    _getStrikesList(actor, tokenId) {
+        let result = this.baseHandler.initializeEmptyCategory('strikes');
+        result.cssClass = 'oneLine';
+        
+        if (!settings.get('separateTogglesCategory'))
+            this._addTogglesCategories(actor, tokenId, result);
+            
+        this.baseHandler._addStrikesCategories(actor, tokenId, result);
+
+        return result;
+    }
+
+    /** @private */
+    _addTogglesCategories(actor, tokenId, category) {
+        const macroType = 'toggle';
+        const toggleActions = actor.data.data.toggles?.actions;
+
+        if (!toggleActions)
+            return;
+
+        let subcategory = this.baseHandler.initializeEmptySubcategory();
+        subcategory.actionsClass = 'excludeFromWidthCalculation';
+
+        toggleActions.forEach(t => {
+            let toggleKey = this._getToggleKey(t.inputName);
+            if (!toggleKey)
+                return;
+
+            let id = toggleKey;
+            let encodedValue = [macroType, tokenId, toggleKey].join(this.baseHandler.delimiter);
+            let name = t.label.startsWith('PF2E.') ? this.baseHandler.i18n(t.label) : t.label;
+            let cssClass = t.checked ? 'active': '';
+
+            let action = {id: id, encodedValue: encodedValue, name: name, cssClass: cssClass};
+
+            subcategory.actions.push(action);
+        });
+        
+        this.baseHandler._combineSubcategoryWithCategory(category, this.baseHandler.i18n('tokenactionhud.toggles'), subcategory);
+    }
+
+    /** @private */
+    _getToggleKey(inputName) {
+        const rollOptionPrefix = 'flags.pf2e.rollOptions.';
+        if (!inputName.includes(rollOptionPrefix))
+            return '';
+
+        return inputName.substring(rollOptionPrefix.length);
     }
 
     /** @private */
@@ -133,20 +147,20 @@ export class PcActionHandlerPf2e {
     _getSkillsList(actor, tokenId) {
         let result = this.baseHandler.initializeEmptyCategory('skills');
         
-        let abbr = settings.get('abbreviateSkills');
+        let abbreviated = settings.get('abbreviateSkills');
 
-        let actorSkills = actor.data.data.skills;
-        let skillMap = Object.keys(actorSkills).map(k => { 
-            let name = abbr ? k.charAt(0).toUpperCase()+k.slice(1) : CONFIG.PF2E.skills[k];
-            return {'_id': k, 'name': name}
-        });
-
+        let actorSkills = Object.entries(actor.data.data.skills);
+        
+        let skillMap = actorSkills.filter(s => !s[1].lore)
+            .map(s => this.baseHandler.createSkillMap(tokenId, 'skill', s, abbreviated));
         let skills = this.baseHandler.initializeEmptySubcategory();
-        skills.actions = this.baseHandler._produceMap(tokenId, skillMap, 'skill');
+        skills.actions = skillMap;
 
-        let loreItems = actor.items.filter(i => i.data.type === 'lore').sort(this._foundrySort);;
+        let loreMap = actorSkills.filter(s => s[1].lore)
+            .sort(this._foundrySort)
+            .map(s => this.baseHandler.createSkillMap(tokenId, 'skill', s, abbreviated));
         let lore = this.baseHandler.initializeEmptySubcategory();
-        lore.actions = this.baseHandler._produceMap(tokenId, loreItems, 'lore');
+        lore.actions = loreMap;
 
         this.baseHandler._combineSubcategoryWithCategory(result, this.i18n('tokenactionhud.skills'), skills);
         this.baseHandler._combineSubcategoryWithCategory(result, this.i18n('tokenactionhud.lore'), lore);
@@ -160,13 +174,15 @@ export class PcActionHandlerPf2e {
         let result = this.baseHandler.initializeEmptyCategory('attributes');
         let attributes = this.baseHandler.initializeEmptySubcategory();
 
-        let rollableAttributes = Object.entries(actor.data.data.attributes).filter(a => { if(a[1]) return !!a[1].roll });
+        let rollableAttributes = Object.entries(actor.data.data.attributes).filter(a => !!a[1]?.roll );
         let attributesMap = rollableAttributes.map(a => {
-            let name = a[0].charAt(0).toUpperCase()+a[0].slice(1);
+            let key = a[0];
+            let data = a[1];
+            let name = data.label ? data.label : key.charAt(0).toUpperCase()+key.slice(1);
             return { _id: a[0], name: name } 
         });
         
-        attributes.actions = this.baseHandler._produceMap(tokenId, attributesMap, macroType);
+        attributes.actions = this.baseHandler._produceActionMap(tokenId, attributesMap, macroType);
         
         this.baseHandler._combineSubcategoryWithCategory(result, this.i18n('tokenactionhud.attributes'), attributes);
 

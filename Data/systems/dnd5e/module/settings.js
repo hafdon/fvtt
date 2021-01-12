@@ -7,8 +7,8 @@ export const registerSystemSettings = function() {
     name: "System Migration Version",
     scope: "world",
     config: false,
-    type: Number,
-    default: 0
+    type: String,
+    default: ""
   });
 
   /**
@@ -80,18 +80,6 @@ export const registerSystemSettings = function() {
     config: true,
     default: false,
     type: Boolean,
-  });
-
-  /**
-   * Option to automatically create Spell Measured Template on roll
-   */
-  game.settings.register("dnd5e", "alwaysPlaceSpellTemplate", {
-    name: "SETTINGS.5eAutoSpellTemplateN",
-    hint: "SETTINGS.5eAutoSpellTemplateL",
-    scope: "client",
-    config: true,
-    default: false,
-    type: Boolean
   });
 
   /**

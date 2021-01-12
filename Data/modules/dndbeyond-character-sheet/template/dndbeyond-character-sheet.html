@@ -58,10 +58,11 @@
                             </div>
                         </li>
                         <li class="attribute speed">
-                            <h4 class="attribute-name box-title">{{ localize "DND5E.Speed" }}</h4>
+                            <h4 class="form-group attribute-name box-title">
+                                <a class="config-button" data-action="movement" title="{{localize 'DND5E.MovementConfig'}}">{{ localize "DND5E.Speed" }}</a>
+                            </h4>
                             <div class="attribute-value">
-                                <input name="data.attributes.speed.value" type="text"
-                                        value="{{data.attributes.speed.value}}" placeholder="0"/>
+                                {{movement.primary}}
                             </div>
                         </li>
                         <li class="attribute initiative">
@@ -184,7 +185,7 @@
             <div class="flex-row secondheaderrow">
                 <div class="flex-column col2">
 
-                    <div class=" savingthrows">
+                    <div class="savingthrows">
                         <h4 class="box-title">Saving Throws</h4>
                         {{!-- Ability Scores --}}
                         <ul class="skills-list">
@@ -192,7 +193,7 @@
                             <li class="skill flexrow ability" data-ability="{{id}}">
                                 <input type="hidden" name="data.abilities.{{id}}.proficient" value="{{ability.proficient}}" data-dtype="Number"/>
                                 <a class="proficiency-toggle ability-proficiency" title="Proficiency">{{{ability.icon}}}</a>
-                                <h4 class="skill-name ability-name rollable"><span class="ability-save" title="Saving Throw">{{ability.label}}</span></h4>
+                                <h4 class=""><span class="ability-save" title="Saving Throw">{{ability.label}}</span></h4>
                                 <span class="skill-mod ability-save" title="Saving Throw">{{numberFormat ability.save decimals=0 sign=true}}</span>
                             </li>
                         {{/each}}
@@ -200,7 +201,7 @@
                     </div>
         
                     <div class=" savingthrows">
-                        <h4 class="box-title death-save rollable">{{ localize "DND5E.DeathSave" }}</h4>
+                        <h4 class="box-title death-save rollable" data-action="rollDeathSave">{{ localize "DND5E.DeathSave" }}</h4>
                         <ul class="skills-list">
                             <li class="skill flexrow ability">
                                 <i class="fas fa-check proficiency-toggle ability-proficiency"></i> 
@@ -255,12 +256,18 @@
                     </ul>
         
                     <div class=" sensestraits">
-                        <h4 class="box-title">Senses & Traits</h4>
+                        <h4 class="box-title">Senses & Special Traits</h4>
                         <div class="skills-list">
-                            <div class="form-group {{#unless data.traits.senses}}inactive{{/unless}}">
-                                <input type="text" name="data.traits.senses" value="{{data.traits.senses}}" placeholder="None"/>
+                            <div class="form-group">
+                                <a class="config-button" data-action="senses" title="Configure Senses"><i class="fas fa-eye" style="color: #c53131; float: left;"></i></a>
+                                <a class="config-button" data-action="flags" title="Configure Special Traits"><i class="far fa-check-circle" style="color: #c53131; float: left;"></i></a>
+                                <ul class="traits-list">
+                                    {{#each senses as |v k|}}
+                                        <li class="tag {{k}}">{{v}}</li>
+                                    {{/each}}
+                                    </ul>
                             </div>
-                            <a class="configure-flags"><i class="fas fa-cog"></i></a>
+                            
                         </div>
                     </div>
         
@@ -365,10 +372,11 @@
                     <a class="item" data-tab="inventory">{{ localize "DND5E.Inventory" }}</a>
                     <a class="item" data-tab="features">{{ localize "DND5E.Features" }}</a>
                     <a class="item" data-tab="spellbook">{{ localize "DND5E.Spellbook" }}</a>
+                    <a class="item" data-tab="effects">{{ localize "DND5E.Effects" }}</a>
                     <a class="item" data-tab="biography">{{ localize "DND5E.Biography" }}</a>
                 </nav>
               
-                {{!-- NPC Sheet Body --}}
+                {{!-- Sheet Body --}}
                 <section class="sheet-body">
               
                     
@@ -385,7 +393,7 @@
                         </div>
               
                         
-                        <ol class="inventory-list">
+                        <ol class="items-list inventory-list">
                             <li class="inventory-header flexrow">
                                 <h3 class="item-name flexrow">Inventory</h3>
                         
@@ -571,7 +579,7 @@
                                     {{/if}}
                                 </li>
                             
-                                <ol class="item-list">
+                                <ol class="items-list">
                                 {{#each section.items as |item iid|}}
                                     <li class="item flexrow {{#if isDepleted}}depleted{{/if}}" data-item-id="{{item._id}}">
                                         <div class="item-name flexrow rollable">
@@ -640,7 +648,7 @@
                                     <div class="item-controls"></div>
                                 </li>
                             
-                                <ol class="item-list">
+                                <ol class="items-list">
                                 {{#each section.spells as |item i|}}
                                     <li class="item flexrow" data-item-id="{{item._id}}">
                                         <div class="item-name flexrow rollable">
@@ -717,7 +725,7 @@
                                     <div class="item-controls"></div>
                                 </li>
                             
-                                <ol class="item-list">
+                                <ol class="items-list">
                                 {{#each section.spells as |item i|}}
                                     {{#if item.data.preparation.prepared}}
                                         <li class="item flexrow" data-item-id="{{item._id}}">
@@ -806,7 +814,7 @@
                             {{/if}}
                         </div>
                         
-                        <ol class="inventory-list">
+                        <ol class="items-list inventory-list">
                         {{#each inventory as |section sid|}}
                             <li class="inventory-header flexrow">
                                 <h3 class="item-name flexrow">{{localize section.label}}</h3>
@@ -910,7 +918,7 @@
                             </ul>
                         </div>
 
-                        <ol class="inventory-list">
+                        <ol class="items-list inventory-list">
                         {{#each features as |section sid|}}
                             <li class="inventory-header flexrow">
                                 <h3 class="item-name flexrow">{{localize section.label}}</h3>
@@ -1015,7 +1023,7 @@
                             </div>
                         </div>
                         
-                        <ol class="inventory-list">
+                        <ol class="items-list inventory-list">
                         {{#each spellbook as |section|}}
                             <li class="item flexrow inventory-header spellbook-header">
                                 <div class="item-name flexrow">
@@ -1111,6 +1119,11 @@
                             </li>
                         {{/each}}
                         </ol>
+                    </div>
+              
+                    {{!-- Effects Tab --}}
+                    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+                        {{> "systems/dnd5e/templates/actors/parts/active-effects.html"}}
                     </div>
               
                     {{!-- Biography Tab --}}

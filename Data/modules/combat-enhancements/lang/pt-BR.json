@@ -6,5 +6,5 @@
   "COMBAT_ENHANCEMENTS.setting.enableHpField.label": "Ativar campo PV",
   "COMBAT_ENHANCEMENTS.setting.enableHpField.description": "Ative um campo editável de PV no rastreador de combate para MJs e proprietários de atores.",
   "COMBAT_ENHANCEMENTS.setting.enableHpRadial.label": "Ativar barra circular de PV",
-  "COMBAT_ENHANCEMENTS.setting.enableHpRadial.description": "Permite uma barra de progresso circular para a PV nos retratos de atores no rastreador de combate. A visibilidade é determinada pelas configurações de visibilidade da Barra 1 nos tokens (os MJs sempre podem ver as barras se estiverem ativadas aqui)."
+  "COMBAT_ENHANCEMENTS.setting.enableHpRadial.description": "Permite uma barra de progresso circular para a PV nos retratos de atores no rastreador de combate. A visibilidade é determinada pelas configurações de visibilidade da Barra 1 nos tokens"
 }

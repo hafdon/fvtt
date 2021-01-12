@@ -4,6 +4,7 @@ import {ActionSubcategory} from './entities/actionSubcategory.js';
 import {ActionSet} from './entities/actionSet.js';
 import {Action} from './entities/action.js';
 import * as settings from '../settings.js';
+import { GenericActionHandler } from './genericActionHandler.js';
 
 export class ActionHandler {
     i18n = (toTranslate) => game.i18n.localize(toTranslate);
@@ -18,18 +19,20 @@ export class ActionHandler {
     constructor(filterManager, categoryManager) {
         this.filterManager = filterManager;
         this.categoryManager = categoryManager;
+        this.genericActionHandler = new GenericActionHandler(this);
     }
 
     /** @public */
-    registerCoreCategories(categories) {
-        this.categoryManager.addCoreCategories(categories);
+    async registerCoreCategories(categories) {
+        await this.categoryManager.addCoreCategories(categories);
     }
 
     /** @public */
     async buildActionList(token, multipleTokens) {
         let actionList = await this.doBuildActionList(token, multipleTokens);
+        this._addGenericCategories(token, actionList, multipleTokens);
         this._doBuildFurtherActions(token, actionList, multipleTokens);
-        this.registerCoreCategories(actionList.categories);
+        await this.registerCoreCategories(actionList.categories);
         await this.categoryManager.addCategoriesToActionList(this, actionList);
         return actionList;
     }
@@ -38,12 +41,19 @@ export class ActionHandler {
     doBuildActionList(token) {};
 
     /** @protected */
+    _addGenericCategories(token, actionList, multipleTokens) {
+        if (token || multipleTokens)
+            this.genericActionHandler.addGenericCategories(token, actionList, multipleTokens);
+    }
+
+    /** @protected */
     _doBuildFurtherActions(token, actionList, multipleTokens) {
         this.furtherActionHandlers.forEach(handler => handler.extendActionList(actionList, multipleTokens))
     }
 
     /** @public */
     addFurtherActionHandler(handler) {
+        settings.Logger.debug(`Adding further action handler: ${handler.constructor.name}`)
         this.furtherActionHandlers.push(handler);
     }
 

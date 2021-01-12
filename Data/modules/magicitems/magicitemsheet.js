@@ -14,12 +14,14 @@ export class MagicItemSheet {
      * @param data
      */
     static bind(app, html, data) {
-        let sheet = magicItemSheets[app.id];
-        if(!sheet) {
-            sheet = new MagicItemSheet(app.actor.id);
-            magicItemSheets[app.id] = sheet;
+        if(MagicItemActor.get(app.actor.id)) {
+            let sheet = magicItemSheets[app.id];
+            if(!sheet) {
+                sheet = new MagicItemSheet(app.actor.id);
+                magicItemSheets[app.id] = sheet;
+            }
+            sheet.init(html, data);
         }
-        sheet.init(html, data);
     }
 
     /**
@@ -59,11 +61,11 @@ export class MagicItemSheet {
             await this.renderTemplate('magic-item-spell-sheet', 'magic-items-spells-content', 'spellbook');
         }
 
-        this.actor.items.forEach(item => {
-            let itemEl = this.html.find(`.inventory .inventory-list .item-list .item[data-item-id="${item.id}"]`);
+        this.actor.items.filter(item => item.visible).forEach(item => {
+            let itemEl = this.html.find(`.inventory-list .item-list .item[data-item-id="${item.id}"]`);
             let h4 = itemEl.find('h4');
             if(!h4.find('i.fa-magic').length) {
-                h4.append('<i class="fas fa-magic attuned" title="Magic Item"></i>');
+                h4.append('<i class="fas fa-magic attuned" style="margin-left: 5px;" title="Magic Item"></i>');
             }
         });
 
@@ -95,14 +97,14 @@ export class MagicItemSheet {
         this.html.find('.item div.magic-item-image').click(evt => this.onItemRoll(evt));
         this.html.find('.item h4.spell-name').click(evt => this.onItemShow(evt));
         this.actor.items.forEach(item => {
-            this.html.find(`input[name="flags.magicitems.${item.id}.uses"]`).change(evt => {
+            this.html.find(`input[data-item-id="magicitems.${item.id}.uses"]`).change(evt => {
                 item.setUses(MAGICITEMS.numeric(evt.currentTarget.value, item.uses));
-                this.render();
+                item.update();
             });
             item.ownedEntries.forEach(entry => {
-                this.html.find(`input[name="flags.magicitems.${item.id}.${entry.id}.uses"]`).change(evt => {
+                this.html.find(`input[data-item-id="magicitems.${item.id}.${entry.id}.uses"]`).change(evt => {
                     entry.uses = MAGICITEMS.numeric(evt.currentTarget.value, entry.uses);
-                    this.render();
+                    item.update();
                 });
             });
         });

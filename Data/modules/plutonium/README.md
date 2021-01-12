@@ -27,13 +27,13 @@ to
 ```js
 // Foundry 0.6.x
 require("init")(process.argv, global.paths, initLogging)
-	.then(() => require("plutonium-backend").init());
+	.then(() => require("plutonium-backend.js").init());
 
 // ===========================================================
 
 // Foundry 0.7.x
 require("init")(process.argv, global.paths, startupMessages)
-	.then(() => require("plutonium-backend").init());
+	.then(() => require("plutonium-backend.js").init());
 ```
 - Copy the `plutonium-backend.js` file from `server/<your Foundry version>/` to the folder containing `main.js`
 - Launch Foundry, and pray that nothing explodes. If everything is working, the in-game Foundry logo (in the top-left of the screen) will show the running Plutonium backend version.

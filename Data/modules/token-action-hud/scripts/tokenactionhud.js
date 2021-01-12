@@ -1,21 +1,26 @@
 import * as settings from './settings.js';
-import { HandlersManager } from './handlersManager.js';
 import { TagDialogHelper } from './utilities/tagDialogHelper.js';
 import { CategoryResizer } from './utilities/categoryResizer.js';
 
 export class TokenActionHUD extends Application {
     i18n = (toTranslate) => game.i18n.localize(toTranslate);
 
-    constructor(actions, rollHandler, filterManager, categoryManager) {
+    refresh_timeout = null;
+    tokens = null;
+    rendering = false;
+    categoryHovered = '';
+
+    constructor(systemManager) {
         super();
-        this.refresh_timeout = null;
-        this.tokens = null;
-        this.actions = actions;
-        this.rollHandler = rollHandler;
-        this.filterManager = filterManager;
-        this.categoryManager = categoryManager;
-        this.rendering = false;
-        this.categoryHovered = '';
+        this.systemManager = systemManager;
+    }
+
+    async init(user) {
+        this.actions = await this.systemManager.getActionHandler(user);
+
+        this.rollHandler = this.systemManager.getRollHandler();
+        this.filterManager = this.systemManager.getFilterManager();
+        this.categoryManager = this.systemManager.getCategoryManager();
     }
 
     updateSettings() {
@@ -24,9 +29,7 @@ export class TokenActionHUD extends Application {
     }
 
     updateRollHandler() {
-        let handlerId = settings.get('rollHandler');
-        let system = game.data.system.id;
-        this.rollHandler = HandlersManager.getRollHandler(system, handlerId);
+        this.rollHandler = this.systemManager.getRollHandler();
     }
 
     setTokensReference(tokens) {
@@ -117,32 +120,52 @@ export class TokenActionHUD extends Application {
 
             TagDialogHelper.showFilterDialog(game.tokenActionHUD.filterManager, id);
         }
+        
+        function closeCategory(event) {
+            if (game.tokenActionHUD.rendering)
+                return;
+            let category = $(this)[0];
+            $(category).removeClass('hover');
+            let id = category.id;
+            game.tokenActionHUD.clearHoveredCategory(id);
+        }
 
-        html.find('.tah-title-button').click('click', e => handlePossibleFilterButtonClick(e));
-        html.find('.tah-title-button').contextmenu('click', e => handlePossibleFilterButtonClick(e));      
+        function openCategory(event) {
+            let category = $(this)[0];
+            closeAllCategories(event);
+            $(category).addClass('hover');
+            let id = category.id;
+            game.tokenActionHUD.setHoveredCategory(id);
+            CategoryResizer.resizeHoveredCategory(id);
+        }
+
+        function closeAllCategories(event) {
+            html.find('.tah-category').removeClass('hover');
+        }
+
+        function toggleCategory(event) {
+            let category = $(this.parentElement);
+            let boundClick;
+            if ($(category).hasClass('hover')) {
+                boundClick = closeCategory.bind(this.parentElement);
+                boundClick(event);
+            }             
+            else {
+                boundClick = openCategory.bind(this.parentElement);
+                boundClick(event);
+            }
+        }
+
+        html.find('.tah-title-button').contextmenu('click', e => handlePossibleFilterButtonClick(e));
         
         html.find('.tah-subtitle').click('click', e => handlePossibleFilterSubtitleClick(e));
         html.find('.tah-subtitle').contextmenu('click', e => handlePossibleFilterSubtitleClick(e));
 
-        html.find('.tah-category').hover(
-            // mouseenter    
-            function() {
-                let category = $(this)[0];
-                $(category).addClass('hover');
-                let id = category.id;
-                game.tokenActionHUD.setHoveredCategory(id);
-                CategoryResizer.resizeHoveredCategory(id);
-            },
-            // mouseleave
-            function() {
-                if (game.tokenActionHUD.rendering)
-                    return;
-                let category = $(this)[0];
-                $(category).removeClass('hover');
-                let id = category.id;
-                game.tokenActionHUD.clearHoveredCategory(id);
-            }
-        );
+        if (settings.get('clickOpenCategory')) {
+            html.find('.tah-title-button').click('click', toggleCategory);
+        } else {
+            html.find('.tah-category').hover(openCategory,closeCategory);
+        }
 
         html.find(categoriesIcon).mousedown(ev => {
             ev.preventDefault();
@@ -290,17 +313,22 @@ export class TokenActionHUD extends Application {
         if (this.categoryHovered === '')
             return;
 
-        let id = `#${this.categoryHovered}`
+        let id = `#${this.categoryHovered}`;
         let category = $(id);
         
         if (!category[0])
             return;
 
-        category.mouseenter();
+        if (settings.get('clickOpenCategory')) {
+            let button = category.find('.tah-title-button')[0];
+            button.click();
+        } else {
+            category.mouseenter();
+        }
     }
 
-    resetHud() {
-        this.resetFlags();
+    async resetHud() {
+        await this.resetFlags();
         this.resetPosition();
     }
 
@@ -310,10 +338,10 @@ export class TokenActionHUD extends Application {
         this.update();
     }
 
-    resetFlags() {
+    async resetFlags() {
         settings.Logger.info(`Resetting Token Action HUD filter and category flags`);
-        this.categoryManager.reset();
-        this.filterManager.reset();
+        await this.categoryManager.reset();
+        await this.filterManager.reset();
         this.update();
     }
 
@@ -345,7 +373,7 @@ export class TokenActionHUD extends Application {
     validTokenChange(token) {
         let controlled = this.tokens?.controlled;
 
-        return controlled.some(t => t.id === token._id) || (controlled?.length === 0 && canvas.tokens.placeables.some(t => t.id === this.targetActions?.tokenId));
+        return controlled.some(t => t.id === token._id) || (controlled?.length === 0 && canvas?.tokens?.placeables?.some(t => t.id === this.targetActions?.tokenId));
     }
 
     // Is something being hovered on, is the setting on, and is it the token you're currently selecting.
@@ -396,7 +424,7 @@ export class TokenActionHUD extends Application {
                 return null;
             
             let character = game.user.character
-            let token = canvas.tokens.placeables.find(t => t.actor._id === character._id)
+            let token = canvas?.tokens?.placeables.find(t => t.actor?._id === character?._id)
             if (token)
                 return token;
             
@@ -418,6 +446,6 @@ export class TokenActionHUD extends Application {
     _userHasPermission(token = '') {
         let actor = token.actor;
         let user = game.user;
-        return game.user.isGM || actor.hasPerm(user, "OWNER");
+        return game.user.isGM || actor?.hasPerm(user, "OWNER");
     }
 }

@@ -1,7 +1,5 @@
 ![GitHub All Releases](https://img.shields.io/github/downloads/crash1115/5e-training/total) ![GitHub Releases](https://img.shields.io/github/downloads/crash1115/5e-training/latest/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/crash1115/5e-training?label=latest%20version)
 
-WARNING: Using versions of this module lower than 0.4.5 with versions of Foundry above 0.7.0 can result in PERMANENT loss of downtime activities. If you're upgrading to Foundry 0.7.x PLEASE make sure you're running version 0.4.5 of Downtime Tracking.
-
 # Crash's 5e Downtime Tracking
 Does your group do a lot of downtime activities? Do you have a hard time keeping track of it all? Then this is the mod for you!
 
@@ -58,13 +56,11 @@ If you'd like to contribute, please get in touch with me or create a pull reques
 
 ## Compatibility
 ### Supported Modules
-- Sky's Alt D&D 5e Character Sheet
-- Tidy5e Sheet (including dark mode with your custom colors!)
-- D&D5E Dark Mode (works with both the default sheet and Sky's Alt 5e sheet)
-- Ethck's Downtime Tracking
+- Should work with most alternate sheet modules
 
 ### Unsupported Modules
 - Obsidian (no plans to support at this time)
+- MARS 5e (I'm currently looking into what it'll take to support this, but haven't yet had the time)
 
 ## Got Questions? Find a Bug?
 Contact me on Discord (CRASH1115#2944) to chat, or create an issue right here on GitHub.

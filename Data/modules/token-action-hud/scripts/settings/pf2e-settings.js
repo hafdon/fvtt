@@ -1,4 +1,4 @@
-export function registerSettings(app, updateSettings) {    
+export function register(app, updateSettings) {    
     game.settings.register(app,'showPcAbilities', {
         name: game.i18n.localize('tokenactionhud.settings.pf2e.showPcAbilities.name'),
         hint: game.i18n.localize('tokenactionhud.settings.pf2e.showPcAbilities.hint'),
@@ -19,9 +19,29 @@ export function registerSettings(app, updateSettings) {
         onChange: value => { updateSettings(value); }
     });
     
+    game.settings.register(app,'showOldNpcStrikes', {
+        name: game.i18n.localize('tokenactionhud.settings.pf2e.showOldNpcStrikes.name'),
+        hint: game.i18n.localize('tokenactionhud.settings.pf2e.showOldNpcStrikes.hint'),
+        scope: "client",
+        config: true,
+        type: Boolean,
+        default: true,
+        onChange: value => { updateSettings(value); }
+    });
+    
     game.settings.register(app,'ignorePassiveActions', {
         name: game.i18n.localize('tokenactionhud.settings.pf2e.ignorePassiveActions.name'),
         hint: game.i18n.localize('tokenactionhud.settings.pf2e.ignorePassiveActions.hint'),
+        scope: "client",
+        config: true,
+        type: Boolean,
+        default: false,
+        onChange: value => { updateSettings(value); }
+    });
+
+    game.settings.register(app,'separateTogglesCategory', {
+        name: game.i18n.localize('tokenactionhud.settings.pf2e.separateTogglesCategory.name'),
+        hint: game.i18n.localize('tokenactionhud.settings.pf2e.separateTogglesCategory.hint'),
         scope: "client",
         config: true,
         type: Boolean,

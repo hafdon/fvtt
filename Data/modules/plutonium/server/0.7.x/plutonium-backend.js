@@ -4,11 +4,12 @@ const fs = require("fs");
 const path = require("path");
 const url = require("url");
 const files = require("./dist/files/files");
+const packages = require("./dist/packages/views");
 
-const _VERSION = "0.1.6";
+const _VERSION = "0.2.0";
 
 /**
- * Requires a modified "main.js" to bind the handler.
+ * Requires a modified "main.js" to bind the handler. Install at your own risk.
  */
 class Plutonium {
 	static init () {
@@ -30,9 +31,13 @@ class Plutonium {
 		logger.info(`Received Plutonium request of type "${json.type}"`);
 		switch (json.type) {
 			case "getVersion": return this._pHandleGetVersion(req, res);
+
 			case "artBrowserCopyToLocal": return this._pHandleArtBrowserCopyToLocal(req, res);
 			case "artBrowserDownloadPack": return this._pHandleArtBrowserDownloadPack(req, res);
 			case "artBrowserCancelDownloadPack": return this._pHandleArtBrowserCancelDownloadPack(req, res);
+
+			case "installPackage": return this._pHandleInstallPackage(req, res);
+
 			default: return this._sendError(res, 400, `Unknown Plutonium POST type "${json.type}".`);
 		}
 	}
@@ -160,7 +165,8 @@ class Plutonium {
 						logger.info(`Saved image ${`${numDownloaded}`.padStart(lenLen, " ")}/${len} to ${outputPath}.`);
 					} catch (e) {
 						numDownloaded++;
-						logger.error(`Failed to save image ${`${numDownloaded}`.padStart(lenLen, " ")}/${len} from ${fileMeta.uri} to ${outputPath}.`);
+						logger.error(`Failed to save image ${`${numDownloaded}`.padStart(lenLen, " ")}/${len} from ${fileMeta.uri} to ${outputPath}. Error was: ${e.message}`);
+						logger.error(e)
 					}
 
 					if (ptrIsCancelled._) return;
@@ -221,6 +227,11 @@ class Plutonium {
 		delete Plutonium._ACTIVE_ART_PACK_DOWNLOADS[user._id];
 
 		res.send({});
+	}
+
+	static async _pHandleInstallPackage (req, res) {
+		const out = await packages["installPackage"](req.body.manifest);
+		res.send(out);
 	}
 }
 Plutonium._ACTIVE_ART_PACK_DOWNLOADS = {};

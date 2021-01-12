@@ -1,16 +1,16 @@
+{{#if hasVisibleItems}}
 <div class="magic-items-spells-content">
 	<div class="inventory-filters spellbook-filters magic-items-head">
-	    <label><h3>Magic Items</h3></label>
+		<label><h3>Magic Items - {{localize "MAGICITEMS.SheetTot"}}: {{magicItemsCount}}, {{localize "MAGICITEMS.SheetActives"}}:
+			{{magicItemsActiveCount}}</h3></label>
 	</div>
 	{{#each items as |item i|}}
-	{{#if hasSpells}}
-	<li class="item flexrow inventory-header spellbook-header">
-	    <div class="item-name flexrow">
-	        <h3>{{name}}</h3>
-	    </div>
+	{{#if (and visible active hasSpells)}}
+	<li class="items-header spellbook-header flexrow">
+		<h3 class="item-name flexrow">{{name}}</h3>
 		{{#if chargesOnWholeItem}}
 	    <div class="spell-slots">
-	        <input name="flags.magicitems.{{id}}.uses" type="text" value="{{uses}}" placeholder="0"/>
+	        <input data-item-id="magicitems.{{id}}.uses" type="text" value="{{uses}}" placeholder="0"/>
 	        <span class="sep"> / </span>
 	        <input type="text" value="{{charges}}" placeholder="0"/>
 	    </div>
@@ -24,12 +24,13 @@
 	    {{#each spells as |spell|}}
 	        <li class="item flexrow magic-item" data-magic-item-id="{{../id}}" data-item-id="{{spell.id}}" draggable="true">
 	            <div class="item-name flexrow rollable">
-	                <div class="item-image magic-item-image" style="background-image: url({{spell.img}})"></div>
-	                <h4 class="spell-name">{{spell.name}}</h4>
+	                <div class="item-image magic-item-image" style="background-image: url({{spell.img}})">
+					</div>
+	                <h4 class="spell-name">{{spell.displayName}}</h4>
 	            </div>
 				{{#if ../chargesPerSpell}}
 				<div class="spell-slots">
-					<input name="flags.magicitems.{{../id}}.{{spell.id}}.uses" type="text" value="{{spell.uses}}" placeholder="0"/>
+					<input data-item-id="magicitems.{{../id}}.{{spell.id}}.uses" type="text" value="{{spell.uses}}" placeholder="0"/>
 					<span class="sep"> / </span>
 					<input type="text" value="{{../charges}}" placeholder="0"/>
 				</div>
@@ -45,12 +46,13 @@
 		{{#each tableAsSpells as |table|}}
 		<li class="item flexrow magic-item" data-magic-item-id="{{../id}}" data-item-id="{{table.id}}" draggable="true">
 			<div class="item-name flexrow rollable">
-				<div class="item-image magic-item-image" style="background-image: url({{table.img}})"></div>
-				<h4 class="spell-name">{{table.name}}</h4>
+				<div class="item-image magic-item-image" style="background-image: url({{table.img}})">
+				</div>
+				<h4 class="spell-name">{{table.displayName}}</h4>
 			</div>
 			{{#if ../chargesPerSpell}}
 			<div class="spell-slots">
-				<input name="flags.magicitems.{{../id}}.{{table.id}}.uses" type="text" value="{{table.uses}}" placeholder="0"/>
+				<input data-item-id="magicitems.{{../id}}.{{table.id}}.uses" type="text" value="{{table.uses}}" placeholder="0"/>
 				<span class="sep"> / </span>
 				<input type="text" value="{{../charges}}" placeholder="0"/>
 			</div>
@@ -67,3 +69,4 @@
 	{{/if}}
 	{{/each}}
 </div>
+{{/if}}

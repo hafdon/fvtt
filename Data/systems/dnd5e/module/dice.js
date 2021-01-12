@@ -195,6 +195,8 @@ async function _d20RollDialog({template, title, parts, data, rollMode, dialogOpt
  * @param {string} flavor         Flavor text to use in the posted chat message
  * @param {boolean} allowCritical Allow the opportunity for a critical hit to be rolled
  * @param {Boolean} critical      Flag this roll as a critical hit for the purposes of fast-forward rolls
+ * @param {number} criticalBonusDice    A number of bonus damage dice that are added for critical hits
+ * @param {number} criticalMultiplier   A critical hit multiplier which is applied to critical hits
  * @param {Boolean} fastForward   Allow fast-forward advantage selection
  * @param {Function} onClose      Callback for actions to take when the dialog form is closed
  * @param {Object} dialogOptions  Modal dialog options
@@ -204,14 +206,14 @@ async function _d20RollDialog({template, title, parts, data, rollMode, dialogOpt
  * @return {Promise}              A Promise which resolves once the roll workflow has completed
  */
 export async function damageRoll({parts, actor, data, event={}, rollMode=null, template, title, speaker, flavor,
-  allowCritical=true, critical=false, fastForward=null, dialogOptions, chatMessage=true, messageData={}}={}) {
+  allowCritical=true, critical=false, criticalBonusDice=0, criticalMultiplier=2, fastForward=null,
+  dialogOptions={}, chatMessage=true, messageData={}}={}) {
 
   // Prepare Message Data
   messageData.flavor = flavor || title;
   messageData.speaker = speaker || ChatMessage.getSpeaker();
   const messageOptions = {rollMode: rollMode || game.settings.get("core", "rollMode")};
   parts = parts.concat(["@bonus"]);
-  fastForward = fastForward ?? (event && (event.shiftKey || event.altKey || event.ctrlKey || event.metaKey));
 
   // Define inner roll function
   const _roll = function(parts, crit, form) {
@@ -228,11 +230,12 @@ export async function damageRoll({parts, actor, data, event={}, rollMode=null, t
 
     // Modify the damage formula for critical hits
     if ( crit === true ) {
-      let add = (actor && actor.getFlag("dnd5e", "savageAttacks")) ? 1 : 0;
-      let mult = 2;
-      // TODO Backwards compatibility - REMOVE LATER
-      if (isNewerVersion(game.data.version, "0.6.9")) roll.alter(mult, add);
-      else roll.alter(add, mult);
+      roll.alter(criticalMultiplier, 0);      // Multiply all dice
+      if ( roll.terms[0] instanceof Die ) {   // Add bonus dice for only the main dice term
+        roll.terms[0].alter(1, criticalBonusDice);
+        roll._formula = roll.formula;
+      }
+      roll.dice.forEach(d => d.options.critical = true);
       messageData.flavor += ` (${game.i18n.localize("DND5E.Critical")})`;
       if ( "flags.dnd5e.roll" in messageData ) messageData["flags.dnd5e.roll"].critical = true;
     }
@@ -248,7 +251,7 @@ export async function damageRoll({parts, actor, data, event={}, rollMode=null, t
   };
 
   // Create the Roll instance
-  const roll = fastForward ? _roll(parts, critical || event.altKey) : await _damageRollDialog({
+  const roll = fastForward ? _roll(parts, critical) : await _damageRollDialog({
     template, title, parts, data, allowCritical, rollMode: messageOptions.rollMode, dialogOptions, roll: _roll
   });
 

@@ -49,6 +49,16 @@ Hooks.once('init', async function() {
     type: Boolean,
   });
 
+  game.settings.register('combat-enhancements', 'removeTargets', {
+    name: game.i18n.localize('COMBAT_ENHANCEMENTS.setting.removeTargets.label'),
+    hint: game.i18n.localize('COMBAT_ENHANCEMENTS.setting.removeTargets.description'),
+    scope: 'world',
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: () => location.reload(),
+  });
+
   let combatSidebar = new CombatSidebarCe();
   combatSidebar.startup();
 });
