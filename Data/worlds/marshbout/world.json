@@ -8,7 +8,53 @@
   "scripts": [],
   "esmodules": [],
   "styles": [],
-  "packs": [],
+  "packs": [
+    {
+      "label": "Marshbout",
+      "entity": "JournalEntry",
+      "name": "marshbout",
+      "path": "packs/marshbout.db",
+      "system": "dnd5e",
+      "package": "world",
+      "absPath": "/Users/starkat/Library/Application Support/FoundryVTT/Data/worlds/marshbout/packs/marshbout.db"
+    },
+    {
+      "label": "Marshbout_Scene",
+      "entity": "Scene",
+      "name": "marshboutscene",
+      "path": "packs/marshboutscene.db",
+      "system": "dnd5e",
+      "package": "world",
+      "absPath": "/Users/starkat/Library/Application Support/FoundryVTT/Data/worlds/marshbout/packs/marshboutscene.db"
+    },
+    {
+      "label": "Marshbout_Actor",
+      "entity": "Actor",
+      "name": "marshboutactor",
+      "path": "packs/marshboutactor.db",
+      "system": "dnd5e",
+      "package": "world",
+      "absPath": "/Users/starkat/Library/Application Support/FoundryVTT/Data/worlds/marshbout/packs/marshboutactor.db"
+    },
+    {
+      "label": "Marshbout_RollTable",
+      "entity": "RollTable",
+      "name": "marshboutrolltable",
+      "path": "packs/marshboutrolltable.db",
+      "system": "dnd5e",
+      "package": "world",
+      "absPath": "/Users/starkat/Library/Application Support/FoundryVTT/Data/worlds/marshbout/packs/marshboutrolltable.db"
+    },
+    {
+      "label": "Marshbout_Item",
+      "entity": "Item",
+      "name": "marshboutitem",
+      "path": "packs/marshboutitem.db",
+      "system": "dnd5e",
+      "package": "world",
+      "absPath": "/Users/starkat/Library/Application Support/FoundryVTT/Data/worlds/marshbout/packs/marshboutitem.db"
+    }
+  ],
   "languages": [],
   "authors": [],
   "keywords": [],
@@ -26,5 +72,6 @@
   "systemVersion": "1.2.4",
   "nextSession": "2021-01-24T19:30:00.000Z",
   "availability": 0,
-  "unavailable": false
+  "unavailable": false,
+  "id": "marshbout"
 }
