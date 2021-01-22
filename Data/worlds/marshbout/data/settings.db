@@ -35,5 +35,3 @@
 {"_id":"x2fDchrHEsycH7jJ","key":"core.sheetClasses","value":"{\"Actor\":{\"character\":\"dnd5e.Tidy5eSheet\",\"npc\":\"dnd5e.ActorSheet5eNPC\"},\"Item\":{\"loot\":\"dnd5e.ItemSheet5e\"}}"}
 {"key":"tidy5e-sheet.disableInspiration","value":"true","_id":"yQV0mkQH10P4hIh3"}
 {"key":"pointer.version","value":"\"2.3.1\"","_id":"z5RIlHLGKRnENo6v"}
-{"_id":"jOjBnbk6K6AMwQqM","key":"quick-insert.filtersSheets","value":"{\"baseFilters\":{\"class\":\"dnd5e.classes\",\"feat\":\"dnd5e.classfeatures\",\"npc.feat\":\"dnd5e.monsterfeatures\",\"spell\":\"dnd5e.spells\",\"weapon\":\"dnd5e.items\",\"equipment\":\"dnd5e.items\",\"consumable\":\"dnd5e.items\",\"backpack\":\"dnd5e.items\",\"tool\":\"dnd5e.items\",\"loot\":\"dnd5e.items\"}}"}
-{"_id":"jOjBnbk6K6AMwQqM","key":"quick-insert.filtersSheets","value":"{\"baseFilters\":{\"class\":\"dnd5e.classes\",\"feat\":\"dnd5e.classfeatures\",\"npc.feat\":\"dnd5e.monsterfeatures\",\"spell\":\"dnd5e.spells\",\"weapon\":\"dnd5e.items\",\"equipment\":\"dnd5e.items\",\"consumable\":\"dnd5e.items\",\"backpack\":\"dnd5e.items\",\"tool\":\"dnd5e.items\",\"loot\":\"dnd5e.items\"}}"}

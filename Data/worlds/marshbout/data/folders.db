@@ -1,23 +1,17 @@
 {"_id":"1rJeQMjAwEFFzp63","name":"items","type":"JournalEntry","sort":3500000,"flags":{},"parent":"chRB4RaWmwYi7lO0","sorting":"a","color":""}
 {"name":"retired","type":"JournalEntry","sort":3800000,"flags":{},"parent":"wf40lADkdvhEIKuG","sorting":"a","color":"","_id":"2d95Jc9UUV15cYkh"}
-{"name":"Feniendum's Spellbook","type":"Item","sort":300000,"flags":{},"parent":null,"color":"","_id":"2uMCDsrnOmQ99MGa"}
 {"_id":"3raMqXjxKE8cvKwn","name":"007 Arc: Seomra Crann & Xanthuc Temple","type":"JournalEntry","sort":700000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
-{"name":"Effects","type":"Actor","sort":1725000,"flags":{},"parent":null,"sorting":"a","color":"","_id":"4HybJnlcGsfXuqRT"}
-{"name":"Weapons","type":"Item","sort":100000,"flags":{},"parent":null,"color":"","_id":"5LaphOSK4aLCDMt6"}
-{"name":"Stato's Den","type":"Actor","sort":1200000,"flags":{},"parent":null,"color":"","_id":"6AmSbGb0jvvB3L5B"}
+{"_id":"4HybJnlcGsfXuqRT","name":"_combat_tracker_fx","type":"Actor","sort":1725000,"flags":{},"parent":null,"sorting":"a","color":"#5e8c54"}
 {"_id":"7FU7CCEBg8xZrzdi","name":"003 Arc: Von Veen","type":"JournalEntry","sort":200000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
 {"name":"Spells","type":"Item","sort":null,"flags":{},"parent":null,"_id":"8e9LjzR0LZBrGmHh"}
 {"_id":"Cec7aiKp7sFrzQHB","name":"books","type":"JournalEntry","sort":3200000,"flags":{},"parent":"chRB4RaWmwYi7lO0","sorting":"a","color":""}
 {"_id":"ELRJta15dz3vF5py","name":"010 Alternate Reality: Stato's Den","type":"JournalEntry","sort":900000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
-{"name":"retired","type":"Actor","sort":1625000,"flags":{},"parent":"O8WUmDNBMZxehhEe","sorting":"a","color":"","_id":"EgFAEQsTAdvLczPT"}
 {"_id":"GF8k0MkmV1DIfHvo","name":"002 Arc: The Gnoll Village","type":"JournalEntry","sort":100000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
 {"_id":"HnsRctNEFA19GYLE","name":"PCs","type":"JournalEntry","sort":600000,"flags":{},"parent":null,"sorting":"a","color":""}
 {"_id":"Ho4c14ccdD0ZFAmy","name":"009 Arc: Road to Calliope","type":"JournalEntry","sort":600000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
-{"_id":"HtMyceJvJzRd8gOb","name":"NPCs","type":"Actor","sort":500000,"flags":{},"parent":null,"color":"#c24f00"}
 {"name":"recaps","type":"JournalEntry","sort":null,"flags":{},"parent":null,"color":"","_id":"IP5jjt32nMAmwHHo"}
 {"name":"events","type":"JournalEntry","sort":3700000,"flags":{},"parent":"chRB4RaWmwYi7lO0","sorting":"a","color":"","_id":"IahJpr0JiteucCD5"}
 {"_id":"JgV2pzFqoIEmRdHZ","name":"006 Interlude: The Karbunqle","type":"JournalEntry","sort":500000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
-{"name":"Classes","type":"Item","sort":null,"flags":{},"parent":null,"_id":"M3gtzdoR17aVoAQP"}
 {"_id":"MIMO1i0zuh6iza61","name":"maps","type":"JournalEntry","sort":200000,"flags":{},"parent":"sFfN93bzEwcqcSqV","sorting":"a","color":""}
 {"_id":"NdtTfwZe9YTsCoFv","name":"dm folder","type":"JournalEntry","sort":700000,"flags":{},"parent":null,"sorting":"a","color":""}
 {"name":"PCs","type":"Actor","sort":600000,"flags":{},"parent":null,"color":"#002a66","_id":"O8WUmDNBMZxehhEe"}
@@ -25,26 +19,13 @@
 {"name":"maps","type":"Scene","sort":200000,"flags":{},"parent":null,"color":"","_id":"S25vgokhRhrz1ElP"}
 {"_id":"Tbev7nPs0FJzqZih","name":"005 Arc: Wrestling Druids","type":"JournalEntry","sort":400000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
 {"_id":"YQonjgXSLBnFUZ2O","name":"000 Day by day","type":"JournalEntry","sort":1200000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
-{"_id":"a1xd8Vk9onynTMVv","name":"Peryton","type":"Actor","sort":650000,"flags":{},"parent":null,"color":""}
 {"name":"Creatures","type":"Actor","sort":1825000,"flags":{},"parent":null,"sorting":"a","_id":"bqhvDrAC09ZBclKw"}
 {"_id":"chRB4RaWmwYi7lO0","name":"world","type":"JournalEntry","sort":2900000,"flags":{},"parent":null,"sorting":"a","color":""}
 {"_id":"czpWrAnwoEB0zrc0","name":"001 Prelude: Marshbout","type":"JournalEntry","sort":1100000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
 {"_id":"gNDm5xMcEMxCyTVb","name":"004 Arc: The Grenlich","type":"JournalEntry","sort":300000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
 {"_id":"hDm6B341cArazF8V","name":"tactical","type":"Scene","sort":500000,"flags":{},"parent":null,"sorting":"a","color":""}
-{"name":"Tables","type":"RollTable","sort":null,"flags":{},"parent":null,"_id":"mBbRMDoHh9RUl1RI"}
 {"_id":"nEIZOAbBi8YZmJDe","name":"011 Arc: Hat Baskets","type":"JournalEntry","sort":1000000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
 {"name":"Items","type":"Item","sort":200000,"flags":{},"parent":null,"_id":"q8eukcHk2G533rmz"}
 {"_id":"sFfN93bzEwcqcSqV","name":"scenes, environments, maps","type":"JournalEntry","sort":3600000,"flags":{},"parent":"chRB4RaWmwYi7lO0","sorting":"a","color":""}
 {"_id":"srmjxCv4QHqVw5AK","name":"factions, deities, groups","type":"JournalEntry","sort":3400000,"flags":{},"parent":"chRB4RaWmwYi7lO0","sorting":"a","color":""}
-{"_id":"vefgbkd0YcstUxkK","name":"Map pins","type":"JournalEntry","sort":3900000,"flags":{},"parent":null,"sorting":"a","color":""}
 {"_id":"wf40lADkdvhEIKuG","name":"characters","type":"JournalEntry","sort":3300000,"flags":{},"parent":"chRB4RaWmwYi7lO0","sorting":"a","color":""}
-{"$$deleted":true,"_id":"vefgbkd0YcstUxkK"}
-{"$$deleted":true,"_id":"HtMyceJvJzRd8gOb"}
-{"$$deleted":true,"_id":"EgFAEQsTAdvLczPT"}
-{"$$deleted":true,"_id":"a1xd8Vk9onynTMVv"}
-{"$$deleted":true,"_id":"6AmSbGb0jvvB3L5B"}
-{"_id":"4HybJnlcGsfXuqRT","name":"_combat_tracker_fx","type":"Actor","sort":1725000,"flags":{},"parent":null,"sorting":"a","color":"#5e8c54"}
-{"$$deleted":true,"_id":"mBbRMDoHh9RUl1RI"}
-{"$$deleted":true,"_id":"M3gtzdoR17aVoAQP"}
-{"$$deleted":true,"_id":"5LaphOSK4aLCDMt6"}
-{"$$deleted":true,"_id":"2uMCDsrnOmQ99MGa"}
