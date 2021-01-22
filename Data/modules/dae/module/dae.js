@@ -541,18 +541,20 @@ function daeCustomEffect(actor, change) {
 }
 // Special case handling of (expr)dX
 function attackDamageBonusEval(bonusString, actor) {
+    /*
     if (typeof bonusString === "string") {
-        const special = bonusString.match(/\((.*)\)d([0-9]*)/);
-        if (special && special.length === 3) {
-            try {
-                return new Roll(special[1], daeRollData(actor)).roll().total + "d" + special[2];
-            }
-            catch (err) {
-                console.warn(`DAE eval error for: ${special[1]} in actor ${actor.name}`);
-                return bonusString;
-            }
+      const special = bonusString.match(/\((.*)\)d([0-9]*)/);
+      if (special && special.length === 3) {
+        try {
+            return new Roll(special[1], daeRollData(actor)).roll().total + "d" + special[2];
         }
+        catch (err) {
+            console.warn(`DAE eval error for: ${special[1]} in actor ${actor.name}`);
+            return bonusString;
+        }
+      }
     }
+    */
     return `${bonusString}`;
 }
 function doCustomValue(actor, current, change, validValues) {

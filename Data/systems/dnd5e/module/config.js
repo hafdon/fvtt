@@ -57,6 +57,16 @@ DND5E.alignments = {
 /* -------------------------------------------- */
 
 /**
+ * An enumeration of item attunement types
+ * @enum {number}
+ */
+DND5E.attunementTypes = {
+  NONE: 0,
+  REQUIRED: 1,
+  ATTUNED: 2,
+}
+
+/**
  * An enumeration of item attunement states
  * @type {{"0": string, "1": string, "2": string}}
  */
@@ -303,6 +313,18 @@ DND5E.damageResistanceTypes = mergeObject(duplicate(DND5E.damageTypes), {
 
 /* -------------------------------------------- */
 
+/**
+ * The valid units of measure for movement distances in the game system.
+ * By default this uses the imperial units of feet and miles.
+ * @type {Object<string,string>}
+ */
+DND5E.movementTypes = {
+  "burrow": "DND5E.MovementBurrow",
+  "climb": "DND5E.MovementClimb",
+  "fly": "DND5E.MovementFly",
+  "swim": "DND5E.MovementSwim",
+  "walk": "DND5E.MovementWalk",
+}
 
 /**
  * The valid units of measure for movement distances in the game system.
@@ -506,16 +528,19 @@ DND5E.weaponTypes = {
  * @type {Object}
  */
 DND5E.weaponProperties = {
+  "ada": "DND5E.WeaponPropertiesAda",
   "amm": "DND5E.WeaponPropertiesAmm",
-  "hvy": "DND5E.WeaponPropertiesHvy",
   "fin": "DND5E.WeaponPropertiesFin",
   "fir": "DND5E.WeaponPropertiesFir",
   "foc": "DND5E.WeaponPropertiesFoc",
+  "hvy": "DND5E.WeaponPropertiesHvy",
   "lgt": "DND5E.WeaponPropertiesLgt",
   "lod": "DND5E.WeaponPropertiesLod",
+  "mgc": "DND5E.WeaponPropertiesMgc",
   "rch": "DND5E.WeaponPropertiesRch",
   "rel": "DND5E.WeaponPropertiesRel",
   "ret": "DND5E.WeaponPropertiesRet",
+  "sil": "DND5E.WeaponPropertiesSil",
   "spc": "DND5E.WeaponPropertiesSpc",
   "thr": "DND5E.WeaponPropertiesThr",
   "two": "DND5E.WeaponPropertiesTwo",

@@ -598,6 +598,16 @@
   padding: 2px 2px 0px;
 }
 
+.tidy5e.sheet.actor .grid-layout .item-list .items-footer {
+  flex: 0 0 75px;
+  display: flex;
+  justify-content: stretch;
+}
+
+.tidy5e.sheet.actor .grid-layout .item-list .items-footer a {
+  flex-grow: 1;
+}
+
 .swade.actor .header-field-add {
   display: flex;
 }

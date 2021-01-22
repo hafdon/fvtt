@@ -144,6 +144,54 @@ function registerMenu({ menu, ...options }) {
     game.settings.registerMenu(MODULE_NAME, menu, options);
 }
 
+const i18n = (name, replacements) => {
+    if (replacements) {
+        return game.i18n.format(`QUICKINSERT.${name}`, replacements);
+    }
+    return game.i18n.localize(`QUICKINSERT.${name}`);
+};
+function isTextInputElement(element) {
+    return (element.tagName == "TEXTAREA" ||
+        (element.tagName == "INPUT" && element.type == "text"));
+}
+// General utils
+const ALPHA = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+function randomId(idLength = 10) {
+    const values = new Uint8Array(idLength);
+    window.crypto.getRandomValues(values);
+    return String.fromCharCode(...values.map(x => ALPHA.charCodeAt(x % ALPHA.length)));
+}
+// Some black magic from the internet,
+// places caret at end of contenteditable
+function placeCaretAtEnd(el) {
+    el.focus();
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    range.collapse(false);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+}
+// Simple utility function for async waiting
+// Nicer to await waitFor(100) than nesting setTimeout callback hell
+function resolveAfter(msec) {
+    return new Promise(res => setTimeout(res, msec));
+}
+class TimeoutError extends Error {
+    constructor(timeoutMsec) {
+        super(`did not complete within ${timeoutMsec}ms`);
+    }
+}
+function withDeadline(p, timeoutMsec) {
+    return Promise.race([
+        p,
+        new Promise((res, rej) => setTimeout(() => rej(new TimeoutError(timeoutMsec)), timeoutMsec)),
+    ]);
+}
+function permissionListEq(a, b) {
+    return a.length === b.length && [...a].every(value => b.includes(value));
+}
+
 var EntityType;
 (function (EntityType) {
     EntityType["ACTOR"] = "Actor";
@@ -212,10 +260,6 @@ class SearchItem {
         this.name = name;
         this.img = img;
     }
-    // Get the uuid value compatible with fromUuid
-    get uuid() {
-        return "";
-    }
     // Get the draggable attributes in order to make custom elements
     get draggableAttrs() {
         return {};
@@ -263,14 +307,12 @@ class EntitySearchItem extends SearchItem {
             };
         }
         this.entityType = entity.entity;
+        this.uuid = `${this.entityType}.${this.id}`;
     }
     static fromEntities(entities) {
         return entities
             .filter(e => e.visible)
             .map(entity => new EntitySearchItem(entity));
-    }
-    get uuid() {
-        return `${this.entityType}.${this.id}`;
     }
     // Get the draggable attributes in order to make custom elements
     get draggableAttrs() {
@@ -319,13 +361,11 @@ class CompendiumSearchItem extends SearchItem {
         this.package = pack.collection;
         this.packageName = pack?.metadata?.label || pack.title;
         this.entityType = pack.entity;
+        this.uuid = `Compendium.${this.package}.${this.id}`;
     }
     static fromCompendium(compendium) {
         const cIndex = compendium.index;
         return cIndex.map((item) => new CompendiumSearchItem(compendium, item));
-    }
-    get uuid() {
-        return `Compendium.${this.package}.${this.id}`;
     }
     // Get the draggable attributes in order to make custom elements
     get draggableAttrs() {
@@ -408,14 +448,14 @@ class SearchLib {
             this.index.addAll(index);
         }
     }
-    indexCompendiums(collections = null) {
-        if (collections) {
-            for (const collection of collections) {
-                this.indexCompendium(game.packs.get(collection));
+    async indexCompendiums(refresh = false) {
+        for await (const res of loadIndexes(refresh)) {
+            if (res.error) {
+                console.log("Quick Insert | Index loading failure", res);
+                continue;
             }
-        }
-        for (const pack of game.packs) {
-            this.indexCompendium(pack);
+            console.log("Quick Insert | Index loading success", res);
+            this.indexCompendium(game.packs.get(res.pack));
         }
     }
     indexDefaults() {
@@ -452,6 +492,58 @@ function formatMatch(result, formatFn) {
                 text.substring(end + 1);
     });
     return text;
+}
+// refresh = request new index for all compendiums
+async function* loadIndexes(refresh) {
+    // Information about failures
+    const failures = {};
+    const timeout = globalThis.QuickInsert.config.timeout ?? 1500;
+    const packsRemaining = [];
+    for (const pack of game.packs) {
+        if (packEnabled(pack)) {
+            failures[pack.collection] = { errors: 0 };
+            packsRemaining.push(pack);
+        }
+    }
+    while (packsRemaining.length > 0) {
+        const pack = packsRemaining.shift();
+        let promise;
+        // Refresh pack index
+        if (refresh || pack.index.length === 0) {
+            try {
+                promise = failures[pack.collection].waiting ?? pack.getIndex();
+                await withDeadline(promise, timeout * (failures[pack.collection].errors + 1));
+            }
+            catch (error) {
+                ++failures[pack.collection].errors;
+                if (error instanceof TimeoutError) {
+                    failures[pack.collection].waiting = promise;
+                }
+                else {
+                    delete failures[pack.collection].waiting;
+                }
+                yield {
+                    error: error,
+                    pack: pack.collection,
+                    packsLeft: packsRemaining.length,
+                    errorCount: failures[pack.collection].errors,
+                };
+                if (failures[pack.collection].errors <= 4) {
+                    // Pack failed, will be retried later.
+                    packsRemaining.push(pack);
+                }
+                else {
+                    console.warn(`Quick Insert | Package "${pack.collection}" could not be indexed `);
+                }
+                continue;
+            }
+        }
+        yield {
+            pack: pack.collection,
+            packsLeft: packsRemaining.length,
+            errorCount: failures[pack.collection].errors,
+        };
+    }
 }
 
 var FilterType;
@@ -689,54 +781,6 @@ function matchFilterConfig(config, item) {
         entityMatch = config.entities.includes(item.item.entityType);
     }
     return (folderMatch || compendiumMatch) && entityMatch;
-}
-
-const i18n = (name, replacements) => {
-    if (replacements) {
-        return game.i18n.format(`QUICKINSERT.${name}`, replacements);
-    }
-    return game.i18n.localize(`QUICKINSERT.${name}`);
-};
-function isTextInputElement(element) {
-    return (element.tagName == "TEXTAREA" ||
-        (element.tagName == "INPUT" && element.type == "text"));
-}
-// General utils
-const ALPHA = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-function randomId(idLength = 10) {
-    const values = new Uint8Array(idLength);
-    window.crypto.getRandomValues(values);
-    return String.fromCharCode(...values.map(x => ALPHA.charCodeAt(x % ALPHA.length)));
-}
-// Some black magic from the internet,
-// places caret at end of contenteditable
-function placeCaretAtEnd(el) {
-    el.focus();
-    const range = document.createRange();
-    range.selectNodeContents(el);
-    range.collapse(false);
-    const sel = window.getSelection();
-    sel.removeAllRanges();
-    sel.addRange(range);
-}
-// Simple utility function for async waiting
-// Nicer to await waitFor(100) than nesting setTimeout callback hell
-function resolveAfter(msec) {
-    return new Promise(res => setTimeout(res, msec));
-}
-class TimeoutError extends Error {
-    constructor(timeoutMsec) {
-        super(`did not complete within ${timeoutMsec}ms`);
-    }
-}
-function withDeadline(p, timeoutMsec) {
-    return Promise.race([
-        p,
-        new Promise((res, rej) => setTimeout(() => rej(new TimeoutError(timeoutMsec)), timeoutMsec)),
-    ]);
-}
-function permissionListEq(a, b) {
-    return a.length === b.length && [...a].every(value => b.includes(value));
 }
 
 var ContextMode;
@@ -992,25 +1036,6 @@ class QuickInsertCore {
     }
 }
 const QuickInsert = new QuickInsertCore();
-// Ensure that all compendiums have an index.
-// If you don't worry about staleness call it with refresh = false
-async function preloadCompendiumIndexes(refresh, timeout = 1500) {
-    const failures = {};
-    for (const pack of game.packs) {
-        if (!packEnabled(pack)) {
-            continue;
-        }
-        if (refresh || pack.index.length === 0) {
-            try {
-                await withDeadline(pack.getIndex(), timeout);
-            }
-            catch (error) {
-                failures[pack.collection] = error;
-            }
-        }
-    }
-    return failures;
-}
 // Ensure that only one loadSearchIndex function is running at any one time.
 let isLoading = false;
 async function loadSearchIndex(refresh) {
@@ -1021,19 +1046,11 @@ async function loadSearchIndex(refresh) {
     const start = performance.now();
     QuickInsert.searchLib = new SearchLib();
     QuickInsert.searchLib.indexDefaults();
-    for (let attemptsLeft = 3; attemptsLeft != 0; attemptsLeft--) {
-        const failures = await preloadCompendiumIndexes(refresh, QuickInsert.config.indexTimeout);
-        if (Object.entries(failures).length == 0)
-            break;
-        console.warn(`Quick Insert | Failed to preload compendium indexes, retrying in 1 second (retries left: ${attemptsLeft - 1})`, failures);
-        refresh = false;
-        await new Promise(r => setTimeout(r, 1000));
-    }
-    console.log("Quick Insert | Pre-loaded compendium indexes successfully");
-    QuickInsert.searchLib.indexCompendiums();
     QuickInsert.filters.resetFilters();
     QuickInsert.filters.loadDefaultFilters();
     QuickInsert.filters.loadSave();
+    console.log("Quick Insert | Indexing compendiums...");
+    await QuickInsert.searchLib.indexCompendiums(refresh);
     console.log(`Quick Insert | Search index and filters completed. Indexed ${
     // @ts-ignore
     QuickInsert.searchLib?.index?.fuse._docs.length || 0} items in ${performance.now() - start}ms`);
@@ -1675,7 +1692,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (19:0) {#if active}
+// (18:0) {#if active}
 function create_if_block(ctx) {
 	let ul;
 	let each_blocks = [];
@@ -1726,7 +1743,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (31:10) {:else}
+// (30:10) {:else}
 function create_else_block(ctx) {
 	let html_tag;
 	let raw_value = /*item*/ ctx[10].icon + "";
@@ -1751,7 +1768,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (29:10) {#if item.img}
+// (28:10) {#if item.img}
 function create_if_block_1(ctx) {
 	let img;
 	let img_src_value;
@@ -1775,7 +1792,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (38:12) {#each actions as action}
+// (37:12) {#each actions as action}
 function create_each_block_1(ctx) {
 	let i;
 	let i_class_value;
@@ -1836,7 +1853,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (21:4) {#each results as { item, match, actions, defaultAction }
+// (20:4) {#each results as { item, match, actions, defaultAction }
 function create_each_block(key_1, ctx) {
 	let li;
 	let a;
@@ -2431,7 +2448,7 @@ class SearchEntitiesMode extends SearchMode {
         this.onAction(this.selectedAction || this.results[index].defaultAction, this.results[index].item, evt.shiftKey);
     }
     async onAction(actionId, item, shiftKey) {
-        console.info(actionId, item.name);
+        console.info("Quick Insert | Action", actionId, item.name);
         const res = ENTITYACTIONS[actionId](item);
         if (this.isInsertMode) {
             const val = await res;
@@ -2664,7 +2681,8 @@ class SearchApp extends Application {
         if (this.attachedContext.filter) {
             this.activateMode(ActiveMode.Filter);
             if (typeof this.attachedContext.filter === "string") {
-                const found = QuickInsert.filters.getFilterByTag(this.attachedContext.filter);
+                const found = QuickInsert.filters.getFilterByTag(this.attachedContext.filter) ??
+                    QuickInsert.filters.getFilter(this.attachedContext.filter);
                 if (found) {
                     this.searchFiltersMode.selectFilter(found);
                 }

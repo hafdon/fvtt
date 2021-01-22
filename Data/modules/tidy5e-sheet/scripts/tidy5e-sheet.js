@@ -2,10 +2,11 @@ import { DND5E } from "../../../systems/dnd5e/module/config.js";
 import ActorSheet5e from "../../../systems/dnd5e/module/actor/sheets/base.js";
 import ActorSheet5eCharacter from "../../../systems/dnd5e/module/actor/sheets/character.js";
 import { tidy5eSettings } from "./app/settings.js";
+// import { Tidy5eUserSettings } from './app/settings.js';
 
 import { preloadTidy5eHandlebarsTemplates } from "./app/tidy5e-templates.js";
 import { tidy5eListeners } from "./app/listeners.js";
-import { activeEffectsExhaustion } from "./app/exhaustion.js";
+// import { activeEffectsExhaustion } from "./app/exhaustion.js";
 import { tidy5eContextMenu } from "./app/context-menu.js";
 import { tidy5eSearchFilter } from "./app/search-filter.js";
 import { addFavorites } from "./app/tidy5e-favorites.js";
@@ -224,33 +225,35 @@ async function countInventoryItems(app, html, data){
 
 // count attuned items
 async function countAttunedItems(app, html, data){
-  let actor = game.actors.entities.find(a => a.data._id === data.actor._id),
-			count = actor.data.data.details.attunedItemsCount;
-  // if no items are counted set default value to 3
-  if (!actor.data.data.details.attunedItemsMax) {
-  	await actor.update({"data.details.attunedItemsMax": 3});
-  }
+	if(data.editable){
+		let actor = game.actors.entities.find(a => a.data._id === data.actor._id),
+				count = actor.data.data.details.attunedItemsCount;
+		// if no items are counted set default value to 3
+		if (!actor.data.data.details.attunedItemsMax) {
+			await actor.update({"data.details.attunedItemsMax": 3});
+		}
 
-  if (!count) {
-  	await actor.update({"data.details.attunedItemsCount": 0});
-  }
+		if (!count) {
+			await actor.update({"data.details.attunedItemsCount": 0});
+		}
 
-  let items = actor.data.items;
-	let attunedItems = 0;
+		let items = actor.data.items;
+		let attunedItems = 0;
 
-  for (var i = 0; i < items.length; i++){
-  	if (items[i].data.attunement == 2){
-  		attunedItems++;
-  	}
-  }
+		for (var i = 0; i < items.length; i++){
+			if (items[i].data.attunement == 2){
+				attunedItems++;
+			}
+		}
 
-  await actor.update({"data.details.attunedItemsCount": attunedItems});
+		await actor.update({"data.details.attunedItemsCount": attunedItems});
 
-  // html.find('.attuned-items-counter .attuned-items-current').text(attunedItems);
-  if(actor.data.data.details.attunedItemsCount > actor.data.data.details.attunedItemsMax) {
-  	html.find('.attuned-items-counter').addClass('overattuned');
-  	ui.notifications.warn(`${game.i18n.format("TIDY5E.AttunementWarning", {number: count})}`);
-  }
+		// html.find('.attuned-items-counter .attuned-items-current').text(attunedItems);
+		if(actor.data.data.details.attunedItemsCount > actor.data.data.details.attunedItemsMax) {
+			html.find('.attuned-items-counter').addClass('overattuned');
+			ui.notifications.warn(`${game.i18n.format("TIDY5E.AttunementWarning", {number: count})}`);
+		}
+	}
 }
 
 // handle traits list display
@@ -266,15 +269,17 @@ async function toggleTraitsList(app, html, data){
 
 // Check Death Save Status
 async function checkDeathSaveStatus(app, html, data){
-	var actor = game.actors.entities.find(a => a.data._id === data.actor._id);
-	var data = actor.data.data;
-	var currentHealth = data.attributes.hp.value;
-	var deathSaveSuccess = data.attributes.death.success;
-	var deathSaveFailure = data.attributes.death.failure;
+	if(data.editable){
+		var actor = game.actors.entities.find(a => a.data._id === data.actor._id);
+		var data = actor.data.data;
+		var currentHealth = data.attributes.hp.value;
+		var deathSaveSuccess = data.attributes.death.success;
+		var deathSaveFailure = data.attributes.death.failure;
 
-	if(currentHealth > 0 && deathSaveSuccess != 0 || currentHealth > 0 && deathSaveFailure != 0){
-			await actor.update({"data.attributes.death.success": 0});
-			await actor.update({"data.attributes.death.failure": 0});
+		if(currentHealth > 0 && deathSaveSuccess != 0 || currentHealth > 0 && deathSaveFailure != 0){
+				await actor.update({"data.attributes.death.success": 0});
+				await actor.update({"data.attributes.death.failure": 0});
+		}
 	}
 }
 
@@ -284,10 +289,16 @@ async function editProtection(app, html, data) {
   if(game.user.isGM && game.settings.get("tidy5e-sheet", "gmCanAlwaysEdit")) {
 
   } else if(!actor.getFlag('tidy5e-sheet', 'allow-edit')){
+
+		// if(game.settings.get("tidy5e-sheet", "totalEditLock")){
+		// 	console.log('Sheet is blocked from editing');
+		// 	html.find('input, select').prop('disabled', true);
+		// 	html.find('[contenteditable]').prop('contenteditable', false);
+		// }
     
     let itemContainer = html.find('.inventory-list.items-list, .effects-list.items-list');
     html.find('.inventory-list .items-header:not(.spellbook-header), .effects-list .items-header').each(function(){
-      if($(this).next('.item-list').find('li').length <= 1){
+      if(($(this).next('.item-list').find('li').length - $(this).next('.item-list').find('li.items-footer').length) == 0){
         $(this).next('.item-list').addClass('hidden').hide();
 				$(this).addClass('hidden').hide();
       }
@@ -330,35 +341,39 @@ async function editProtection(app, html, data) {
 }
 
 // Add Character Class List
-async function addClassList(app, html, data) { 
-	if (!game.settings.get("tidy5e-sheet", "hideClassList")) {
-		let actor = game.actors.entities.find(a => a.data._id === data.actor._id);
-		let classList = [];
-		let items = data.actor.items;
-		for (let item of items) {
-			if (item.type === "class") {
-				let levels = (item.data.levels) ? `<span class="levels-info">${item.data.levels}</span>` : ``;
-				let subclass = (item.data.subclass) ? `<span class="subclass-info">(${item.data.subclass})</span>` : ``;
-				classList.push(item.name + levels + subclass);
+async function addClassList(app, html, data) {
+	if(data.editable){
+		if (!game.settings.get("tidy5e-sheet", "hideClassList")) {
+			let actor = game.actors.entities.find(a => a.data._id === data.actor._id);
+			let classList = [];
+			let items = data.actor.items;
+			for (let item of items) {
+				if (item.type === "class") {
+					let levels = (item.data.levels) ? `<span class="levels-info">${item.data.levels}</span>` : ``;
+					let subclass = (item.data.subclass) ? `<span class="subclass-info">(${item.data.subclass})</span>` : ``;
+					classList.push(item.name + levels + subclass);
+				}
 			}
+			classList = "<ul class='class-list'><li class='class-item'>" + classList.join("</li><li class='class-item'>") + "</li></ul>";
+			mergeObject(actor, {"data.flags.tidy5e-sheet.classlist": classList});
+			let classListTarget = html.find('.general-information');
+			classListTarget.after(classList);
 		}
-		classList = "<ul class='class-list'><li class='class-item'>" + classList.join("</li><li class='class-item'>") + "</li></ul>";
-		mergeObject(actor, {"data.flags.tidy5e-sheet.classlist": classList});
-		let classListTarget = html.find('.general-information');
-		classListTarget.after(classList);
 	}
 }
 
-// Calculare Spell Attack modifier
+// Calculate Spell Attack modifier
 async function spellAttackMod(app,html,data){
-	let actor = game.actors.entities.find(a => a.data._id === data.actor._id),
-			prof = actor.data.data.attributes.prof,
-			spellAbility = html.find('.spellcasting-attribute select option:selected').val(),
-			abilityMod = actor.data.data.abilities[spellAbility].mod,
-			spellAttackMod = prof + abilityMod,
-			text = spellAttackMod > 0 ? '+'+spellAttackMod : spellAttackMod;
-	// console.log('Prof: '+prof+ '/ Spell Ability: '+spellAbility+ '/ ability Mod: '+abilityMod+'/ Spell Attack Mod:'+spellAttackMod);
-	html.find('.spell-mod .spell-attack-mod').html(text);
+	if(data.editable){
+		let actor = game.actors.entities.find(a => a.data._id === data.actor._id),
+				prof = actor.data.data.attributes.prof,
+				spellAbility = html.find('.spellcasting-attribute select option:selected').val(),
+				abilityMod = spellAbility != '' ? actor.data.data.abilities[spellAbility].mod : 0,
+				spellAttackMod = prof + abilityMod,
+				text = spellAttackMod > 0 ? '+'+spellAttackMod : spellAttackMod;
+		// console.log('Prof: '+prof+ '/ Spell Ability: '+spellAbility+ '/ ability Mod: '+abilityMod+'/ Spell Attack Mod:'+spellAttackMod);
+		html.find('.spell-mod .spell-attack-mod').html(text);
+	}
 }
 
 // Abbreviate Currency
@@ -368,6 +383,30 @@ async function abbreviateCurrency(app,html,data) {
 		let abbr = game.i18n.localize(`TIDY5E.CurrencyAbbr${currency}`);
 		$(this).html(abbr);
 	});
+}
+
+// transform DAE formulas for maxPreparesSpells
+function tidyCustomEffect(actor, change) {
+  if (change.key !== "data.details.maxPreparedSpells") return;
+  if (change.value?.length > 0) {
+    let oldValue =  getProperty(actor.data, change.key) || 0;
+    let changeText = change.value.trim();
+    let op = "none";
+    if (["+","-","/","*","="].includes(changeText[0])) {
+      op = changeText[0];
+      changeText = changeText.slice(1);
+    }
+    const value = new Roll(changeText, actor.getRollData()).roll().total;
+    oldValue = Number.isNumeric(oldValue) ? parseInt(oldValue) : 0;
+    switch (op) {
+      case "+": return setProperty(actor.data, change.key, oldValue + value);
+      case "-": return setProperty(actor.data, change.key, oldValue - value);
+      case "*": return setProperty(actor.data, change.key, oldValue * value);
+      case "/": return setProperty(actor.data, change.key, oldValue / value);
+      case "=": return setProperty(actor.data, change.key, value);
+      default:  return setProperty(actor.data, change.key, value);
+    }
+  }
 }
 
 // Manage Sheet Options
@@ -436,6 +475,8 @@ async function setSheetClasses(app, html, data) {
 // Preload tidy5e Handlebars Templates
 Hooks.once("init", () => {
 	preloadTidy5eHandlebarsTemplates();
+	Hooks.on("applyActiveEffect", tidyCustomEffect);
+	// Tidy5eUserSettings.init();
 });
 
 // Register Tidy5e Sheet and make default character sheet
@@ -447,7 +488,6 @@ Actors.registerSheet("dnd5e", Tidy5eSheet, {
 Hooks.on("renderTidy5eSheet", (app, html, data) => {
 	setSheetClasses(app, html, data);
 	editProtection(app, html, data);
-	addFavorites(app, html, data, position);
 	addClassList(app, html, data);
 	toggleTraitsList(app, html, data)
 	checkDeathSaveStatus(app, html, data);
@@ -455,7 +495,8 @@ Hooks.on("renderTidy5eSheet", (app, html, data) => {
 	countAttunedItems(app, html, data);
 	abbreviateCurrency(app,html,data);
 	spellAttackMod(app,html,data);
-	console.log(data);
+	addFavorites(app, html, data, position);
+	// console.log(data.actor);
 	// console.log("Tidy5e Sheet rendered!");
 });
 

@@ -10,7 +10,7 @@
   "dataPath": "/Users/starkat/Library/Application Support/FoundryVTT",
   "proxySSL": false,
   "proxyPort": null,
-  "minifyStaticFiles": false,
+  "minifyStaticFiles": true,
   "updateChannel": "beta",
   "language": "en.core",
   "world": "marshbout"

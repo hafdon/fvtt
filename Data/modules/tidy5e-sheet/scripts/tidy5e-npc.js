@@ -89,18 +89,6 @@ export default class Tidy5eNPC extends ActorSheet5e {
     const spellbook = this._prepareSpellbook(data, spells);
 
     // Organize Features
-    /*
-    for ( let item of other ) {
-      // if ( item.type === "weapon" ) features.weapons.items.push(item);
-      // else 
-      if ( item.type === "weapon" || item.type === "feat" ) {
-        if ( item.data.activation.type ) features.actions.items.push(item);
-        else features.passive.items.push(item);
-      }
-      else features.equipment.items.push(item);
-    }
-    */
-
     for ( let item of other ) {
       if ( item.type === "weapon" ) features.weapons.items.push(item);
       else if ( item.type === "feat" ) {
@@ -204,6 +192,14 @@ export default class Tidy5eNPC extends ActorSheet5e {
 		tidy5eShowActorArt(html, actor);
 
     
+    html.find(".toggle-personality-info").click( async (event) => {
+       if(actor.getFlag('tidy5e-sheet', 'showNpcPersonalityInfo')){
+        await actor.unsetFlag('tidy5e-sheet', 'showNpcPersonalityInfo');
+      } else {
+        await actor.setFlag('tidy5e-sheet', 'showNpcPersonalityInfo', true);
+      }
+    });
+
     html.find(".rollable[data-action=rollInitiative]").click(function(){
       return actor.rollInitiative({createCombatants: true});
     });
@@ -355,24 +351,27 @@ async function toggleItemMode(app, html, data){
 
 // restore scroll position
 async  function resetTempHp(app, html, data){
-  let actor = app.actor,
-      temp = actor.data.data.attributes.hp.temp,
-      tempmax = actor.data.data.attributes.hp.tempmax;
+	if(data.editable){
+    let actor = app.actor,
+        temp = actor.data.data.attributes.hp.temp,
+        tempmax = actor.data.data.attributes.hp.tempmax;
 
-  if(temp == 0){
-    actor.update({ 'data.attributes.hp.temp': null });
-  }
-  if(tempmax == 0){
-    actor.update({ 'data.attributes.hp.tempmax': null });
+    if(temp == 0){
+      actor.update({ 'data.attributes.hp.temp': null });
+    }
+    if(tempmax == 0){
+      actor.update({ 'data.attributes.hp.tempmax': null });
+    }
   }
 }
 
 // Set Sheet Classes
 async function setSheetClasses(app, html, data) {
   const {token} = app;
-  // if (game.settings.get("tidy5e-sheet", "disableRightClick")) {
-	// 	html.find('.tidy5e-sheet .items-list').addClass('alt-context');
-  // }
+  const actor = app.actor;
+  if(actor.getFlag('tidy5e-sheet', 'showNpcPersonalityInfo')){
+    html.find('.tidy5e-sheet .left-notes').removeClass('hidden');
+  }
   if (game.settings.get("tidy5e-sheet", "disableRightClick")) {
 		if(game.settings.get("tidy5e-sheet", "useClassicControls")){
 			html.find('.tidy5e-sheet .grid-layout .items-list').addClass('alt-context');
@@ -442,14 +441,14 @@ async function editProtection(app, html, data) {
   if(!actor.getFlag('tidy5e-sheet', 'allow-edit')){
     let itemContainer = html.find('.inventory-list:not(.spellbook-list).items-list');
     html.find('.inventory-list:not(.spellbook-list) .items-header').each(function(){
-      if($(this).next('.item-list').find('li').length <= 1){
-        $(this).next('.item-list').remove();
-        $(this).remove();
+      if(($(this).next('.item-list').find('li').length - $(this).next('.item-list').find('li.items-footer').length) == 0){
+        $(this).next('.item-list').addClass('hidden').hide();
+				$(this).addClass('hidden').hide();
       }
     });
     
-    html.find('.inventory-list .items-footer').remove();
-    html.find('.inventory-list .item-control.item-delete').remove();
+    html.find('.inventory-list .items-footer').addClass('hidden').hide();
+		html.find('.inventory-list .item-control.item-delete').remove();
 
     let actor = app.actor,
         legAct = actor.data.data.resources.legact.max,
@@ -457,7 +456,7 @@ async function editProtection(app, html, data) {
         lair = actor.data.data.resources.lair.value;
 
     if(!lair && legAct <= 1 && legRes <= 1) {
-      html.find('.counters').remove();
+      html.find('.counters').addClass('hidden').hide();
     }
 
     if(itemContainer.children().length < 1){
