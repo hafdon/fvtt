@@ -1,5 +1,5 @@
-import { ValidSpec, aboutTimeInstalled, confirmDelete } from "../dae.js";
-import { i18n, confirmAction, daeSpecialDurations } from "../../dae.js";
+import { ValidSpec, aboutTimeInstalled, confirmDelete, cubActive, conditionalVisibilityActive } from "../dae.js";
+import { i18n, confirmAction, daeSpecialDurations, daeMacroRepeats, log } from "../../dae.js";
 export class DAEActiveEffectConfig extends ActiveEffectConfig {
     constructor(object = {}, options = {}) {
         super(object, options);
@@ -12,6 +12,62 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         }
         else
             this.tokenMagicEffects["invalid"] = "module not installed";
+        this.fieldsList = Object.keys(ValidSpec.allSpecsObj);
+        //@ts-ignore
+        if (window.MidiQOL?.midiFlags)
+            this.fieldsList = this.fieldsList.concat(window.MidiQOL.midiFlags);
+        this.fieldsList.sort();
+        //@ts-ignore
+        log(`There are ${this.fieldsList.length} fields to choose from of which ${window.MidiQOL?.midiFlags?.length || 0} come from midi-qol and ${ValidSpec.allSpecs.length} from dae`);
+        this.fieldsList = this.fieldsList.join(", ");
+        this.traitList = duplicate(CONFIG.DND5E.damageResistanceTypes);
+        Object.keys(CONFIG.DND5E.damageResistanceTypes).forEach(type => {
+            this.traitList[`-${type}`] = `-${CONFIG.DND5E.damageResistanceTypes[type]}`;
+        });
+        this.languageList = duplicate(CONFIG.DND5E.languages);
+        Object.keys(CONFIG.DND5E.languages).forEach(type => {
+            this.languageList[`-${type}`] = `-${CONFIG.DND5E.languages[type]}`;
+        });
+        this.conditionList = duplicate(CONFIG.DND5E.conditionTypes);
+        Object.keys(CONFIG.DND5E.conditionTypes).forEach(type => {
+            this.conditionList[`-${type}`] = `-${CONFIG.DND5E.conditionTypes[type]}`;
+        });
+        this.toolProfList = duplicate(CONFIG.DND5E.toolProficiencies);
+        Object.keys(CONFIG.DND5E.toolProficiencies).forEach(type => {
+            this.toolProfList[`-${type}`] = `-${CONFIG.DND5E.toolProficiencies[type]}`;
+        });
+        this.armorProfList = duplicate(CONFIG.DND5E.armorProficiencies);
+        Object.keys(CONFIG.DND5E.armorProficiencies).forEach(type => {
+            this.armorProfList[`-${type}`] = `-${CONFIG.DND5E.armorProficiencies[type]}`;
+        });
+        this.weaponProfList = duplicate(CONFIG.DND5E.weaponProficiencies);
+        Object.keys(CONFIG.DND5E.weaponProficiencies).forEach(type => {
+            this.weaponProfList[`-${type}`] = `-${CONFIG.DND5E.weaponProficiencies[type]}`;
+        });
+        if (cubActive) {
+            this.cubConditionList = {};
+            game.cub.conditions?.forEach(cubc => {
+                this.cubConditionList[cubc.name] = cubc.name;
+            });
+        }
+        const ConditionalVisibilityNames = ["invisible", "hidden", "obscured", "indarkness"];
+        const ConditionalVisibilityVisionNames = ["blindsight", "devilssight", "seeinvisible", "tremorsense", "truesight"];
+        if (conditionalVisibilityActive) {
+            this.ConditionalVisibilityList = {};
+            ConditionalVisibilityNames.forEach(cvc => {
+                this.ConditionalVisibilityList[cvc] = i18n(`CONVIS.${cvc}`);
+            });
+            this.ConditionalVisibilityVisionList = {};
+            ConditionalVisibilityVisionNames.forEach(cvc => {
+                this.ConditionalVisibilityVisionList[cvc] = i18n(`CONVIS.${cvc}`);
+            });
+        }
+        this.validFields = ValidSpec.allSpecs
+            .filter(e => e._fieldSpec.includes(""))
+            .reduce((mods, em) => {
+            mods[em._fieldSpec] = em._label;
+            return mods;
+        }, {});
     }
     /** @override */
     static get defaultOptions() {
@@ -19,8 +75,9 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
             classes: ["sheet", "active-effect-sheet"],
             title: "EFFECT.ConfigTitle",
             template: `./modules/dae/templates/DAEActiveSheetConfig.html`,
-            width: 750,
+            width: 900,
             height: "auto",
+            resizable: true,
             tabs: [{ navSelector: ".tabs", contentSelector: "form", initial: "details" }]
         });
     }
@@ -40,23 +97,38 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
     /* ----------------------------------------- */
     getOptionsForSpec(spec) {
         if (spec === "data.traits.languages.value")
-            return CONFIG.DND5E.languages;
+            return this.languageList;
         if (spec === "data.traits.ci.value")
-            return CONFIG.DND5E.conditionTypes;
+            return this.conditionList;
         if (spec === "data.traits.toolProf.value")
-            return CONFIG.DND5E.toolProficiencies;
+            return this.toolProfList;
         if (spec === "data.traits.armorProf.value")
-            return CONFIG.DND5E.armorProficiencies;
+            return this.armorProfList;
         if (spec === "data.traits.weaponProf.value")
-            return CONFIG.DND5E.weaponProficiencies;
+            return this.weaponProfList;
         if (["data.traits.di.value", "data.traits.dr.value", "data.traits.dv.value"].includes(spec))
-            return CONFIG.DND5E.damageResistanceTypes;
+            return this.traitList;
         if (spec.includes("data.skills") && spec.includes("value"))
             return { 0: "Not Proficient", 0.5: "Half Proficiency", 1: "Proficient", 2: "Expertise" };
         if (spec.includes("data.skills") && spec.includes("ability"))
             return CONFIG.DND5E.abilities;
         if (spec.includes("tokenMagic"))
             return this.tokenMagicEffects;
+        if (spec === "macro.CUB")
+            return this.cubConditionList;
+        if (spec === "macro.ConditionalVisibility")
+            return this.ConditionalVisibilityList;
+        if (spec === "macro.ConditionalVisibilityVision")
+            return this.ConditionalVisibilityVisionList;
+        blindsight: false;
+        devilssight: false;
+        hidden: false;
+        indarkness: false;
+        invisible: false;
+        obscured: false;
+        seeinvisible: true;
+        tremorsense: false;
+        truesight: false;
         if (spec === "data.traits.size")
             return CONFIG.DND5E.actorSizes;
         return false;
@@ -71,25 +143,27 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
             obj[e[1]] = game.i18n.localize("EFFECT.MODE_" + e[0]);
             return obj;
         }, {});
+        //@ts-ignore
         data.specialDuration = daeSpecialDurations;
-        data.effect = this.object.data;
+        data.macroRepeats = daeMacroRepeats;
         if (this.object.parent) {
             data.isItem = this.object.parent.__proto__.constructor.name === CONFIG.Item.entityClass.name;
             data.isActor = this.object.parent.__proto__.constructor.name === CONFIG.Actor.entityClass.name;
         }
-        data.validFields = ValidSpec.allSpecs
-            .filter(e => e._fieldSpec.includes(""))
-            .reduce((mods, em) => {
-            mods[em._fieldSpec] = em._label;
-            return mods;
-        }, {});
+        data.validFields = this.validFields;
         data.submitText = "EFFECT.Submit";
         //@ts-ignore
         data.effect.changes.forEach(change => {
-            if ([-1, undefined].includes(ValidSpec.allSpecsObj[change.key]?.forcedMode))
+            if (change.key.startsWith("flags.midi-qol")) {
+                //@ts-ignore
+                change.modes = [allModes[CONST.ACTIVE_EFFECT_MODES.CUSTOM]];
+            }
+            else if ([-1, undefined].includes(ValidSpec.allSpecsObj[change.key]?.forcedMode)) {
                 change.modes = allModes;
-            else
+            }
+            else {
                 change.modes = [allModes[ValidSpec.allSpecsObj[change.key]?.forcedMode]];
+            }
             change.options = this.getOptionsForSpec(change.key);
             if (!change.priority)
                 change.priority = change.mode * 10;
@@ -97,19 +171,27 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         if (aboutTimeInstalled && data.effect.duration?.startTime) {
             const Gametime = game.Gametime;
             const startTime = Gametime.DT.createFromSeconds(data.effect.duration.startTime).shortDate();
-            data.startTimeString = startTime.date + " " + startTime.time;
+            data.startTimeString = (startTime.date + " " + startTime.time) || "";
             if (data.effect.duration.seconds) {
                 const endTime = Gametime.DT.createFromSeconds(data.effect.duration.startTime + data.effect.duration.seconds).shortDate();
                 data.durationString = endTime.date + " " + endTime.time;
             }
         }
+        if (!data.effect.flags.dae?.specialDuration)
+            setProperty(data.effect.flags, "dae.specialDuration", []);
+        if (typeof data.effect.flags.dae?.specialDuration === "string") {
+            data.effect.flags.dae.specialDuration = [data.effect.flags.dae.specialDuration];
+        }
         data.sourceName = await this.object.sourceName;
+        data.fieldsList = this.fieldsList;
+        // console.error("data fieldsList ", data.fieldsList)
         // data.effect.flags.dae.stackable = this.object.data.flags?.dae?.stackable ||false;
         return data;
     }
     _keySelected(event) {
         const target = event.target;
-        $(target.parentElement.parentElement.children[1]).find(".keyinput").val(ValidSpec.allSpecs[target.selectedIndex].fieldSpec);
+        // $(target.parentElement.parentElement.children[1]).find(".keylist").val(ValidSpec.allSpecs[target.selectedIndex].fieldSpec)
+        $(target.parentElement.parentElement.parentElement.children[0]).find(".awesomplete").val(ValidSpec.allSpecs[target.selectedIndex].fieldSpec);
         return this.submit({ preventClose: true }).then(() => this.render());
     }
     /* ----------------------------------------- */
@@ -117,6 +199,11 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
     activateListeners(html) {
         super.activateListeners(html);
         html.find(".keylist").change(this._keySelected.bind(this));
+        html.find(".awesomplete").on("awesomplete-selectcomplete", this._textSelected.bind(this));
+    }
+    /* ----------------------------------------- */
+    _textSelected(event) {
+        return this.submit({ preventClose: true }).then(() => this.render());
     }
     /* ----------------------------------------- */
     _onEffectControl(event) {
@@ -140,7 +227,7 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         const idx = last ? last.dataset.index + 1 : 0;
         const change = $(`
     <li class="effect-change" data-index="${idx}">
-        <input type="text" name="changes.${idx}.key" value="data.attributes.str.mod"/>
+        <input type="text" name="changes.${idx}.key" value=""/>
         <input type="number" name="changes.${idx}.mode" value="2"/>
         <input type="text" name="changes.${idx}.value" value="0"/>
         <input type="number" name="changes.${idx}.priority" value="0">
@@ -189,3 +276,17 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         }
     }
 }
+/*
+<div class="keylist">
+<select name="selectedKey" data-dtype="String">
+  {{selectOptions ../validFields selected=change.key}}
+</select>
+</div>
+
+<input class="keyinput" type="text" name="changes.{{i}}.key" value="{{change.key}}" />
+          <div class="keylist">
+            <select name="selectedKey" data-dtype="String">
+              {{selectOptions ../validFields selected=change.key}}
+            </select>
+          </div>
+*/ 

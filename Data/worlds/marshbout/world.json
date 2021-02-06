@@ -66,11 +66,11 @@
   "readme": "",
   "bugs": "",
   "changelog": "",
-  "background": "",
+  "background": "old_five_clan_road_framed.png",
   "system": "dnd5e",
   "coreVersion": "0.7.9",
   "systemVersion": "1.2.4",
-  "nextSession": "2021-01-24T19:30:00.000Z",
+  "nextSession": "2021-01-30T18:30:00.000Z",
   "availability": 0,
   "unavailable": false,
   "id": "marshbout"

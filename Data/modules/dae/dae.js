@@ -12,9 +12,9 @@
 // Import TypeScript modules
 import { registerSettings } from "./module/settings.js";
 import { preloadTemplates } from "./module/preloadTemplates.js";
-import { daeSetupActions, doEffects, daeInitActions, ValidSpec, fetchParams } from "./module/dae.js";
+import { daeSetupActions, doEffects, daeInitActions, ValidSpec, fetchParams, daeMacro } from "./module/dae.js";
 import { daeReadyActions } from "./module/dae.js";
-import { GMAction, GMActionMessage } from "./module/GMAction.js";
+import { convertDuration, GMAction, GMActionMessage } from "./module/GMAction.js";
 import { migrateItem, migrateActorItems, migrateAllActors, removeActorEffects, fixupMonstersCompendium, fixupActors, fixupBonuses, migrateAllItems, migrateActorDAESRD, migrateAllActorsDAESRD, migrateAllNPCDAESRD } from "./module/migration.js";
 import { ActiveEffects } from "./module/apps/ActiveEffects.js";
 import { patchingSetup, patchingInitSetup, patchSpecialTraits } from "./module/patching.js";
@@ -53,6 +53,7 @@ Hooks.once('init', async function () {
     // Register custom sheets (if any)
 });
 export let daeSpecialDurations;
+export let daeMacroRepeats;
 Hooks.once('ready', async function () {
     if (!["dnd5e", "sw5e"].includes(game.system.id))
         return;
@@ -60,26 +61,24 @@ Hooks.once('ready', async function () {
     daeReadyActions();
     // setupDAEMacros();
     GMAction.readyActions();
-    daeSpecialDurations = {
-        "None": "",
-        "1Action": i18n("dae.1Action"),
-        "1Attack": i18n("dae.1Attack"),
-        "1Hit": i18n("dae.1Hit"),
-        "turnStart": i18n("dae.turnStart"),
-        "turnEnd": i18n("dae.turnEnd"),
-        "isAttacked": i18n("dae.isAttacked"),
-        "isDamaged": i18n("dae.isDamaged")
-    };
+    daeSpecialDurations = { "None": "" };
+    if (game.modules.get("midi-qol")?.active) {
+        daeSpecialDurations["1Action"] = i18n("dae.1Action");
+        daeSpecialDurations["1Attack"] = i18n("dae.1Attack");
+        daeSpecialDurations["1Hit"] = i18n("dae.1Hit");
+        daeSpecialDurations["isAttacked"] = i18n("dae.isAttacked");
+        daeSpecialDurations["isDamaged"] = i18n("dae.isDamaged");
+    }
+    if (game.modules.get("times-up")?.active && isNewerVersion(game.modules.get("times-up").data.version, "0.0.9")) {
+        daeSpecialDurations["turnStart"] = i18n("dae.turnStart");
+        daeSpecialDurations["turnEnd"] = i18n("dae.turnEnd");
+        daeMacroRepeats = {
+            "none": "",
+            "startEveryTurn": i18n("dae.startEveryTurn"),
+            "endEveryTurn": i18n("dae.endEveryTurn")
+        };
+    }
     patchSpecialTraits();
-    /*
-    CONFIG.DND5E.timePeriods["1Action"] = i18n("dae.1Action")
-    CONFIG.DND5E.timePeriods["1Attack"] = i18n("dae.1Attack")
-    CONFIG.DND5E.timePeriods["1Hit"] = i18n("dae.1Hit")
-    CONFIG.DND5E.timePeriods["turnStart"] = i18n("dae.turnStart")
-    CONFIG.DND5E.timePeriods["turnEnd"] = i18n("dae.turnEnd")
-    CONFIG.DND5E.timePeriods["isAttacked"] = i18n("dae.isAttacked")
-    CONFIG.DND5E.timePeriods["isDamaged"] = i18n("dae.isDamaged")
-    */
 });
 /* ------------------------------------ */
 /* Setup module							*/
@@ -99,6 +98,7 @@ Hooks.once('setup', function () {
         GMActionMessage,
         GMAction,
         doEffects,
+        daeMacro: daeMacro,
         migrateItem: migrateItem,
         convertAllItems: migrateAllItems,
         migrateActorItems: migrateActorItems,
@@ -124,7 +124,8 @@ Hooks.once('setup', function () {
         getFlag: getFlag,
         migrateActorDAESRD: migrateActorDAESRD,
         migrateAllActorsDAESRD: migrateAllActorsDAESRD,
-        migrateAllNPCDAESRD: migrateAllNPCDAESRD
+        migrateAllNPCDAESRD: migrateAllNPCDAESRD,
+        convertDuration
     };
 });
 /* ------------------------------------ */

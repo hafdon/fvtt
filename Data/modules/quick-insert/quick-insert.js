@@ -45,21 +45,21 @@ const moduleSettings = [
         default: false,
         scope: "world",
     },
-    {
-        setting: settings.INDEX_DEFERRED_DELAY,
-        name: "QUICKINSERT.SettingsIndexDeferredDelay",
-        hint: "QUICKINSERT.SettingsIndexDeferredDelayHint",
-        type: Number,
-        choices: {
-            0: "QUICKINSERT.SettingsIndexDeferredDelayImmediate",
-            500: "QUICKINSERT.SettingsIndexDeferredDelay05s",
-            1000: "QUICKINSERT.SettingsIndexDeferredDelay1s",
-            2000: "QUICKINSERT.SettingsIndexDeferredDelay2s",
-            "-1": "QUICKINSERT.SettingsIndexDeferredDelayOnFirstOpen",
-        },
-        default: 1000,
-        scope: "world",
-    },
+    // {
+    //   setting: settings.INDEX_DEFERRED_DELAY,
+    //   name: "QUICKINSERT.SettingsIndexDeferredDelay",
+    //   hint: "QUICKINSERT.SettingsIndexDeferredDelayHint",
+    //   type: Number,
+    //   choices: {
+    //     0: "QUICKINSERT.SettingsIndexDeferredDelayImmediate",
+    //     500: "QUICKINSERT.SettingsIndexDeferredDelay05s",
+    //     1000: "QUICKINSERT.SettingsIndexDeferredDelay1s",
+    //     2000: "QUICKINSERT.SettingsIndexDeferredDelay2s",
+    //     "-1": "QUICKINSERT.SettingsIndexDeferredDelayOnFirstOpen",
+    //   },
+    //   default: 1000,
+    //   scope: "world",
+    // },
     {
         setting: settings.QUICKOPEN,
         name: "QUICKINSERT.SettingsQuickOpen",
@@ -2987,12 +2987,12 @@ Hooks.once("ready", function () {
         });
     });
     console.log("Quick Insert | Search Application ready");
-    const deferredDelay = getSetting(settings.INDEX_DEFERRED_DELAY);
-    if (deferredDelay != -1) {
-        setTimeout(() => {
-            loadSearchIndex(false);
-        }, getSetting(settings.INDEX_DEFERRED_DELAY));
-    }
+    // const deferredDelay = getSetting(settings.INDEX_DEFERRED_DELAY);
+    // if (deferredDelay != -1) {
+    //   setTimeout(() => {
+    //     loadSearchIndex(false);
+    //   }, getSetting(settings.INDEX_DEFERRED_DELAY));
+    // }
 });
 // Exports and API usage
 globalThis.QuickInsert = QuickInsert;

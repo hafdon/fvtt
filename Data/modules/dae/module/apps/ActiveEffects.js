@@ -1,5 +1,5 @@
 // import {ItemEffectSelector} from "./apps/daeSelector"
-import { ValidSpec, cubActive, confirmDelete, aboutTimeInstalled, lookupCUB } from "../dae.js";
+import { ValidSpec, cubActive, confirmDelete, aboutTimeInstalled } from "../dae.js";
 import { i18n, confirmAction, daeSpecialDurations } from "../../dae.js";
 import { DAEActiveEffectConfig } from "./DAEActiveEffectConfig.js";
 export class ActiveEffects extends FormApplication {
@@ -49,12 +49,12 @@ export class ActiveEffects extends FormApplication {
             else if (newAe.duration.label) {
                 newAe.duration.label = newAe.duration.label.replace("Seconds", "s").replace("Rounds", "R").replace("Turns", "T");
             }
-            if ((ae.data.flags?.dae?.specialDuration ?? "None") !== "None") {
-                newAe.duration.label += ", " + daeSpecialDurations[ae.data.flags.dae.specialDuration];
-                newAe.isTemporary = true;
-            }
-            else
-                newAe.isTemporary = ae.isTemporary;
+            let specialDuration = getProperty(ae.data.flags, "dae.specialDuration") || [daeSpecialDurations["None"]];
+            if (typeof specialDuration === "string")
+                specialDuration = [ae.data.flags.dae.specialDuration];
+            newAe.duration.label += ", " + `[${specialDuration.map(dur => daeSpecialDurations[dur])}]`;
+            newAe.isTemporary = true;
+            newAe.isTemporary = ae.isTemporary;
             newAe.sourceName = ae.sourceName;
             if (newAe.sourceName === newAe.label)
                 newAe.sourceName = "";
@@ -99,8 +99,6 @@ export class ActiveEffects extends FormApplication {
         this.effectList = { "new": "new" };
         efl.forEach(se => {
             if (cubActive && game.cub.getCondition(se.label) && se.id.startsWith("combat-utility-belt")) {
-                if (lookupCUB)
-                    this.effectList["CUB:" + se.id] = "CUB:" + se.label;
                 this.effectList[se.id] = se.label + " (CUB)";
             }
             else
@@ -193,6 +191,7 @@ export class ActiveEffects extends FormApplication {
         html.find('.effect-add').click(async (ev) => {
             let effect_name = $(ev.currentTarget).parents(".effect-header").find(".newEffect option:selected").text();
             let AEDATA;
+            let id = Object.entries(this.effectList).find(([key, value]) => value === effect_name)[0];
             if (effect_name === "new") {
                 //@ts-ignore
                 AEDATA = {
@@ -202,18 +201,7 @@ export class ActiveEffects extends FormApplication {
                     transfer: false,
                 };
             }
-            else if (cubActive && lookupCUB && game.cub.getCondition(effect_name.replace("CUB:", ""))) {
-                AEDATA = {
-                    label: effect_name,
-                    icon: game.cub.getCondition(effect_name.replace("CUB:", "")).activeEffect?.icon || game.cub.getCondition(effect_name.replace("CUB:", "")).icon || "icons/svg/mystery-man.svg",
-                    changes: [],
-                    transfer: false
-                };
-                let id = Object.entries(this.effectList).find(([key, value]) => value === effect_name)[0];
-                AEDATA["flags.core.statusId"] = id;
-            }
             else {
-                let id = Object.entries(this.effectList).find(([key, value]) => value === effect_name)[0];
                 AEDATA = CONFIG.statusEffects.find(se => se.id === id);
                 AEDATA.label = i18n(AEDATA.label);
                 //TODO remove this when core has this already?
