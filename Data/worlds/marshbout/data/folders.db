@@ -5,6 +5,7 @@
 {"_id":"5bgB6CIvIUmHzKot","name":"places","type":"JournalEntry","sort":4100000,"flags":{},"parent":"sFfN93bzEwcqcSqV","sorting":"a","color":"#2a2f4c"}
 {"_id":"7FU7CCEBg8xZrzdi","name":"003 Arc: Von Veen","type":"JournalEntry","sort":200000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
 {"name":"Spells","type":"Item","sort":null,"flags":{},"parent":null,"_id":"8e9LjzR0LZBrGmHh"}
+{"name":"mlt","type":"JournalEntry","sort":4600000,"flags":{},"parent":null,"sorting":"a","color":"","_id":"8rpQ1mnTFKygYqlN"}
 {"_id":"Cec7aiKp7sFrzQHB","name":"books","type":"JournalEntry","sort":100000,"flags":{},"parent":"1rJeQMjAwEFFzp63","sorting":"a","color":"#2a2f4c"}
 {"_id":"ELRJta15dz3vF5py","name":"009 Alternate Reality: Stato's Den","type":"JournalEntry","sort":900000,"flags":{},"parent":"IP5jjt32nMAmwHHo","sorting":"a","color":"#43171b"}
 {"_id":"ExZyE8HOol3JKy7C","name":"historical","type":"JournalEntry","sort":4000000,"flags":{},"parent":"IahJpr0JiteucCD5","sorting":"a","color":"#2a2f4c"}

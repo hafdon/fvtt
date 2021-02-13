@@ -668,12 +668,12 @@ function prepareData() {
 }
 async function addTokenMagicChange(actor, change, tokens, tokenMagic) {
     for (let token of tokens) {
-        tokenMagic.addFilters(token, change.value);
+        await tokenMagic.addFilters(token, change.value);
     }
 }
 async function removeTokenMagicChange(actor, change, tokens, tokenMagic) {
     for (let token of tokens) {
-        tokenMagic.deleteFilters(token, change.value);
+        await tokenMagic.deleteFilters(token, change.value);
     }
 }
 async function removeCVChange(actor, change, tokens, CV) {
@@ -714,8 +714,8 @@ async function handleRemoveConcentration(actor, effect, tokens) {
     const concentrationData = getProperty(actor.data.flags, "midi-qol.concentration-data");
     if (!concentrationData)
         return;
-    if (concentrationData.templateId) {
-        canvas.templates.get(concentrationData.templateId).delete();
+    if (concentrationData.templates) {
+        canvas.templates.deleteMany(concentrationData.templates);
     }
     requestGMAction(GMAction.actions.deleteEffects, { targets: concentrationData.targets, origin: concentrationData.uuid });
     await actor.unsetFlag("midi-qol", "concentration-data");
@@ -805,6 +805,15 @@ export async function daeDeleteActiveEffectActions(actor, effects) {
 function daeUpdateActiveEffectActions(...args) {
     //consider toggling according to isactive
 }
+export async function getSelfTarget(actor) {
+    if (actor.token)
+        return actor.token;
+    const speaker = ChatMessage.getSpeaker({ actor });
+    if (speaker.token)
+        return canvas.tokens.get(speaker.token);
+    //@ts-ignore
+    return Token.fromActor(actor);
+}
 export async function daeMacro(action, actor, effects, lastArgOptions = {}) {
     //  if (actor.__proto__.constructor.name === CONFIG.Item.entityClass.name) return;
     let result;
@@ -825,6 +834,7 @@ export async function daeMacro(action, actor, effects, lastArgOptions = {}) {
                 origin: effect.origin,
                 efData: effect,
                 actorId: actor.id,
+                tokenId: actor.token ? actor.token.id : (await getSelfTarget(actor))?.id
             }, { overwrite: false, insertKeys: true, insertValues: true, inplace: false });
             //@ts-ignore 
             if (!lastArgOptions?.tokenId) // avoid a gratuitous getSpeaker if not required
@@ -924,6 +934,9 @@ async function evalArgs({ effectData = null, itemData = null, context, actor, ch
         // already an array so no tokenizing
         fields = change.value;
         // We have already done evalArgs
+    }
+    else if (typeof change.value === "string" && change.value.indexOf("@") === -1) {
+        fields = [change.value];
     }
     else {
         // the normal args case do the lookups.
