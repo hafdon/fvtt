@@ -1,8 +1,7 @@
-"use strict";
-
 class SharedConsts {}
 
 SharedConsts.MODULE_TITLE = "Plutonium";
+SharedConsts.MODULE_TITLE_FAKE = "SRD: Enhanced"
 SharedConsts.MODULE_NAME = "plutonium";
 SharedConsts.MODULE_NAME_FAKE = "srd5e";
 SharedConsts.MODULE_DIR = "./dist/plutonium";

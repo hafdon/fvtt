@@ -9,17 +9,17 @@
 <a href="https://www.youtube.com/channel/UCxhr66d1sjfXU4SQ5MEqPvg" title="YouTube"><img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/youtube.svg" /></a></span>
 </div><br/>
 
-![https://img.shields.io/badge/Foundry%20VTT%20compatibility-0.7.6=>0.7.7-green](https://img.shields.io/badge/Foundry%20VTT%20compatibility-0.7.6=>0.7.7-green)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
+![https://img.shields.io/badge/Foundry%20VTT%20compatibility-0.7.6=>0.7.9-green](https://img.shields.io/badge/Foundry%20VTT%20compatibility-0.7.6=>0.7.9-green)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/death-save/combat-utility-belt) 
-![GitHub Releases](https://img.shields.io/github/downloads/death-save/combat-utility-belt/latest/total) 
-![GitHub All Releases](https://img.shields.io/github/downloads/death-save/combat-utility-belt/total?label=Downloads+total)  
+[![GitHub downloads (latest)](https://img.shields.io/badge/dynamic/json?label=Downloads@latest&query=assets[?(@.name.includes('zip'))].download_count&url=https://api.github.com/repos/death-save/combat-utility-belt/releases/latest&color=green)](https://github.com/death-save/combat-utility-belt/releases/latest)
+[![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Install%20Base&query=package.installs&suffix=%&url=https://forge-vtt.com/api/bazaar/package/combat-utility-belt&colorB=brightgreen)](https://forge-vtt.com/)
 
 
 # Combat Utility Belt
-*made with ❤ by Evan Clarke* ([DEATH SAVE DEVELOPMENT](https://deathsave.dev))  
+*made with ❤ by [DEATH SAVE DEVELOPMENT](https://deathsave.dev)*
 
 
 ---
@@ -185,6 +185,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/DanOrc"><img src="https://avatars1.githubusercontent.com/u/9914380?v=4" width="100px;" alt=""/><br /><sub><b>DanOrc</b></sub></a><br /><a href="#ideas-DanOrc" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/death-save/combat-utility-belt/issues?q=author%3ADanOrc" title="Bug reports">🐛</a> <a href="#question-DanOrc" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="https://github.com/acd-jake"><img src="https://avatars1.githubusercontent.com/u/67855941?v=4" width="100px;" alt=""/><br /><sub><b>acd-jake</b></sub></a><br /><a href="#translation-acd-jake" title="Translation">🌍</a></td>
   </tr>
 </table>
 

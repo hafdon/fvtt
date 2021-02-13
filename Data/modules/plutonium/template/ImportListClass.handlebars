@@ -20,7 +20,7 @@
 
 	<div class="veapp__list mb-1 h-100">
 		{{#each rows}}
-			<label class="flex w-100 imp__row">
+			<label class="flex w-100 veapp__list-row-hoverable">
 				{{#if ../isRadio}}
 					<div class="col-1 flex-vh-center"><div class="fltr-cls__tgl"></div></div>
 				{{else}}
@@ -31,7 +31,7 @@
 			</label>
 
 			{{#each subRows}}
-				<label class="flex w-100 imp__row">
+				<label class="flex w-100 veapp__list-row-hoverable">
 					{{#if ../../isRadio}}
 						<div class="col-1 flex-vh-center"><div class="fltr-cls__tgl"></div></div>
 					{{else}}
