@@ -4,9 +4,10 @@
  * @return {Promise}
  */
 export const preloadHandlebarsTemplates = async function() {
+  return loadTemplates([
 
-  // Define template paths to load
-  const templatePaths = [
+    // Shared Partials
+    "systems/dnd5e/templates/actors/parts/active-effects.html",
 
     // Actor Sheet Partials
     "systems/dnd5e/templates/actors/parts/actor-traits.html",
@@ -19,8 +20,5 @@ export const preloadHandlebarsTemplates = async function() {
     "systems/dnd5e/templates/items/parts/item-activation.html",
     "systems/dnd5e/templates/items/parts/item-description.html",
     "systems/dnd5e/templates/items/parts/item-mountable.html"
-  ];
-
-  // Load the template parts
-  return loadTemplates(templatePaths);
+  ]);
 };

@@ -20,43 +20,53 @@
 		{{/if}}
 
 		{{#each cols}}
-			<button class="btn-5et col-{{width}} px-1 sort {{field}}" data-sort="{{field}}">{{name}}</button>
+			<button class="btn-5et col-{{width}} px-1 sort" data-sort="{{field}}" {{#if title}}title="{{title}}"{{/if}}>{{name}}</button>
 		{{/each}}
 	</div>
 
 	<div class="veapp__list mb-1 h-100">
 		{{#each rows}}
-			<label class="row imp__row flex-v-center">
-				<span class="{{#if ../isPreviewable}}col-0-5{{else}}col-1{{/if}} px-1 flex-vh-center">
-					{{#if ../isRadio}}
-						<input type="radio" name="radio" class="no-events">
-					{{else}}
-						<input type="checkbox" class="no-events">
+			<div class="w-100 flex-col no-shrink veapp__list-row">
+				<label class="w-100 veapp__list-row-hoverable flex-v-center">
+					<span class="{{#if ../isPreviewable}}col-0-5{{else}}col-1{{/if}} px-1 flex-vh-center">
+						{{#if ../isRadio}}
+							<input type="radio" name="radio" class="no-events">
+						{{else}}
+							<input type="checkbox" class="no-events">
+						{{/if}}
+					</span>
+
+					{{#if ../isPreviewable}}
+						<div class="col-0-5 px-1 flex-vh-center">
+							<div class="flex-vh-center btn-group">
+								<button class="imp__btn-import-single btn btn-5et btn-xxs ve-muted" title="Click to Toggle Preview">
+									<span class="glyphicon glyphicon-expand"></span>
+								</button>
+
+								<button class="imp__btn-import-single btn btn-5et btn-xxs ve-muted" title="Click to Import">
+									<span class="fas fa-download"></span>
+								</button>
+							</div>
+						</div>
 					{{/if}}
-				</span>
+
+					{{#each ../cols}}
+						<span
+								class="px-1 col-{{width}} {{#if rowClassName}}{{rowClassName}}{{/if}} {{#if classNameProp}}{{{lookup .. classNameProp}}}{{/if}}"
+								{{#if titleProp}}title="{{lookup .. titleProp}}"{{/if}}
+						>
+							{{#if displayProp}}{{{lookup .. displayProp}}}{{else}}{{{lookup .. field}}}{{/if}}
+						</span>
+					{{/each}}
+				</label>
 
 				{{#if ../isPreviewable}}
-					<div class="col-0-5 px-1 flex-vh-center">
-						<div class="flex-vh-center btn-group">
-							<button class="imp__btn-import-single btn btn-5et btn-xxs" title="Click and Hold to Preview">
-								<span class="ve-muted fas fa-eye"></span>
-							</button>
-							<button class="imp__btn-import-single btn btn-5et btn-xxs" title="Click to Import">
-								<span class="ve-muted fas fa-download"></span>
-							</button>
-						</div>
+					<div class="ve-hidden flex">
+						<div class="col-0-5"></div>
+						<div class="col-11-5 imp__wrp-preview py-2 pr-2"></div>
 					</div>
 				{{/if}}
-
-				{{#each ../cols}}
-					<span
-							class="px-1 col-{{width}} {{#if rowClassName}}{{rowClassName}}{{/if}} {{#compare field "source" operator="==="}}{{#with (lookup .. field) as |source|}}{{getSourceColorClass source}}{{/with}}{{/compare}}"
-							{{#if titleProp}}title="{{lookup .. titleProp}}"{{/if}}
-					>
-						{{#if displayProp}}{{{lookup .. displayProp}}}{{else}}{{{lookup .. field}}}{{/if}}
-					</span>
-				{{/each}}
-			</label>
+			</div>
 		{{/each}}
 	</div>
 

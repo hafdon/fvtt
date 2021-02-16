@@ -1,0 +1,56 @@
+.sadness-chan-chat-message-header,
+.sadness-chan-chat-stats-header {
+  display: flex;
+  align-items: center;
+}
+.sadness-chan-chat-message-header__portrait,
+.sadness-chan-chat-stats-header__portrait {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.sadness-chan-chat-message-header__portrait.no-border,
+.sadness-chan-chat-stats-header__portrait.no-border {
+  border: none;
+}
+
+.sadness-chan-chat-stats-body__rolls {
+  list-style: none;
+  margin: 5px 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+}
+.sadness-chan-chat-stats-body__rolls-roll {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 1px;
+  width: 50%;
+}
+.sadness-chan-chat-stats-body__rolls-roll-dice {
+  background-image: url("../../icons/svg/d20-grey.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  width: 24px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.sadness-chan-chat-stats-body__rolls-roll-dice.min {
+  color: #aa0200;
+  filter: sepia(0.5) hue-rotate(-60deg);
+}
+.sadness-chan-chat-stats-body__rolls-roll-dice.max {
+  color: #18520b;
+  filter: sepia(0.5) hue-rotate(60deg);
+}
+.sadness-chan-chat-stats-body__rolls-roll-dice.avg span {
+  margin-left: -2px;
+}
+
+.sadness-chan-form-crtFailMessages, .sadness-chan-form-crtSuccessMessages, .sadness-chan-form-portraits {
+  resize: vertical;
+}

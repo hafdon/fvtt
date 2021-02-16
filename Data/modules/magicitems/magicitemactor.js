@@ -35,8 +35,8 @@ export class MagicItemActor {
         this.id = actor.id;
         this.listeners = [];
         this.destroyed = [];
+        this.listening = true;
         this.instrument();
-        this.handleEvents();
         this.buildItems();
     }
 
@@ -55,6 +55,7 @@ export class MagicItemActor {
     fireChange() {
         this.listeners.forEach(listener => listener());
     }
+
 
     /**
      * Apply the aspects on the necessary actor pointcuts.
@@ -112,30 +113,18 @@ export class MagicItemActor {
     }
 
     /**
-     * Handle update events on this actor in order to rebuild the magic items.
+     * Temporarily suspends the interception of events, used for example to avoid intercepting a change
+     * made by the client itself.
      */
-    handleEvents() {
-        Hooks.on(`updateActor`, (actor, options, apps, userId) => {
-            if(this.actor.id === actor.id && userId === game.user._id ) {
-                this.buildItems();
-            }
-        });
-        Hooks.on(`createOwnedItem`, (actor, item, options, userId) => {
-            if(this.actor.id === actor.id && userId === game.user._id) {
-                this.buildItems();
-            }
-        });
-        Hooks.on(`updateOwnedItem`, (actor, item, data, options, userId) => {
-            if(this.actor.id === actor.id && userId === game.user._id) {
-                this.buildItems();
-            }
-        });
-        Hooks.on(`deleteOwnedItem`, (actor, item, options, userId) => {
-            if(this.actor.id === actor.id && userId === game.user._id) {
-                this.actor.setFlag("magicitems", `-=${item.id}`, null);
-                this.buildItems();
-            }
-        });
+    suspendListening() {
+        this.listening = false;
+    }
+
+    /**
+     * Resume a temporarily suspended interception of events.
+     */
+    resumeListening() {
+        this.listening  = true;
     }
 
     /**
@@ -158,6 +147,8 @@ export class MagicItemActor {
         if(result) {
             this.items.forEach(item => {
                 item.onShortRest();
+                if (result.newDay)
+                    item.onNewDay();
             });
             this.fireChange();
         }
@@ -173,6 +164,8 @@ export class MagicItemActor {
         if(result) {
             this.items.forEach(item => {
                 item.onLongRest();
+                if (result.newDay)
+                    item.onNewDay();
             });
             this.fireChange();
         }
@@ -180,10 +173,39 @@ export class MagicItemActor {
 
     /**
      *
+     * @returns {*}
+     */
+    get visibleItems() {
+        return this.items.filter(item => item.visible);
+    }
+
+    /**
+     *
      * @returns {boolean}
      */
     hasMagicItems() {
-        return this.items.length > 0;
+        return this.hasVisibleItems;
+    }
+
+    /**
+     *
+     */
+    get hasVisibleItems() {
+        return this.items.reduce((visible, item) => visible || item.visible, false);
+    }
+
+    /**
+     * Returns the number of visible magic items owned by the actor.
+     */
+    get magicItemsCount() {
+        return this.visibleItems.length;
+    }
+
+    /**
+     * returns the number of visible actives magic items owned by the actor.
+     */
+    get magicItemsActiveCount() {
+        return this.visibleItems.reduce((actives, item) => actives + item.active, 0);
     }
 
     /**
@@ -191,11 +213,7 @@ export class MagicItemActor {
      * @returns {boolean}
      */
     hasItemsSpells() {
-        return this.items
-            .reduce(
-                (hasSpells, item) => hasSpells || item.hasSpells,
-                false
-            );
+        return this.visibleItems.reduce((hasSpells, item) => hasSpells || item.hasSpells, false);
     }
 
     /**
@@ -203,11 +221,7 @@ export class MagicItemActor {
      * @returns {boolean}
      */
     hasItemsFeats() {
-        return this.items
-            .reduce(
-                (hasFeats, item) => hasFeats || item.hasFeats,
-                false
-            );
+        return this.visibleItems.reduce((hasFeats, item) => hasFeats || item.hasFeats, false);
     }
 
     /**

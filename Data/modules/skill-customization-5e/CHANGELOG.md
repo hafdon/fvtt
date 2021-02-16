@@ -1,5 +1,30 @@
 # CHANGELOG
 
+## [2.3.0] 2021-01-16
+
+### CHANGED
+
+- Use libWrapper for more robust compatibility with other modules.
+- Bump core compatible version.
+
+## [2.2.0] 2020-12-20
+
+### API
+
+- Return the result from the monkey-patched Actor5e#rollSkill so that it can be used "downstream" (Thanks CarlosFdez for the suggestion).
+
+### CHANGED
+
+- Bump compatible core version.
+
+## [2.1.1] 2020-09-30
+
+Double check compatibility with core foundry 0.7.3 and dnd5e 0.9.6.
+
+### CHANGED
+
+- Ensure that when "0" or "-" is entered for a skill bonus, the flag for that skill is unset and the sheet displays "-".
+
 ## [2.1.0] 2020-07-29
 
 ### FIXED

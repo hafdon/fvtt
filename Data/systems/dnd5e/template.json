@@ -27,10 +27,6 @@
           "cha": {
             "value": 10,
             "proficient": 0
-          },
-          "san": {
-            "value": 10,
-            "proficient": 0
           }
         },
         "attributes": {
@@ -47,6 +43,15 @@
           "init": {
             "value": 0,
             "bonus": 0
+          },
+          "movement": {
+            "burrow": 0,
+            "climb": 0,
+            "fly": 0,
+            "swim": 0,
+            "walk": 30,
+            "units": "ft",
+            "hover": false
           }
         },
         "details": {
@@ -84,11 +89,15 @@
       },
       "creature": {
         "attributes": {
-          "spellcasting": "int",
-          "speed": {
-            "value": "30 ft",
+          "senses": {
+            "darkvision": 0,
+            "blindsight": 0,
+            "tremorsense": 0,
+            "truesight": 0,
+            "units": "ft",
             "special": ""
-          }
+          },
+          "spellcasting": "int"
         },
         "details": {
           "alignment": "",
@@ -111,17 +120,9 @@
             "value": 0,
             "ability": "str"
           },
-          "com": {
-            "value": 0,
-            "ability": "san"
-          },
           "dec": {
             "value": 0,
             "ability": "cha"
-          },
-          "dph": {
-            "value": 0,
-            "ability": "san"
           },
           "his": {
             "value": 0,
@@ -143,17 +144,9 @@
             "value": 0,
             "ability": "wis"
           },
-          "myt": {
-            "value": 0,
-            "ability": "san"
-          },
           "nat": {
             "value": 0,
             "ability": "int"
-          },
-          "occ": {
-            "value": 0,
-            "ability": "san"
           },
           "prc": {
             "value": 0,
@@ -166,10 +159,6 @@
           "per": {
             "value": 0,
             "ability": "cha"
-          },
-          "psy": {
-            "value": 0,
-            "ability": "san"
           },
           "rel": {
             "value": 0,
@@ -189,7 +178,6 @@
           }
         },
         "traits": {
-          "senses": "",
           "languages": {
             "value": [],
             "custom": ""
@@ -198,52 +186,42 @@
         "spells": {
           "spell1": {
             "value": 0,
-            "max": 0,
             "override": null
           },
           "spell2": {
             "value": 0,
-            "max": 0,
             "override": null
           },
           "spell3": {
             "value": 0,
-            "max": 0,
             "override": null
           },
           "spell4": {
             "value": 0,
-            "max": 0,
             "override": null
           },
           "spell5": {
             "value": 0,
-            "max": 0,
             "override": null
           },
           "spell6": {
             "value": 0,
-            "max": 0,
             "override": null
           },
           "spell7": {
             "value": 0,
-            "max": 0,
             "override": null
           },
           "spell8": {
             "value": 0,
-            "max": 0,
             "override": null
           },
           "spell9": {
             "value": 0,
-            "max": 0,
             "override": null
           },
           "pact": {
             "value": 0,
-            "max": 0,
             "override": null
           }
         },
@@ -275,6 +253,7 @@
         }
       }
     },
+    "htmlFields": ["details.biography.value", "details.biography.public"],
     "character": {
       "templates": ["common", "creature"],
       "attributes": {
@@ -296,6 +275,7 @@
           "min": 0,
           "max": 300
         },
+        "appearance": "",
         "trait": "",
         "ideal": "",
         "bond": "",
@@ -399,8 +379,7 @@
         "capacity": {
           "creature": "",
           "cargo": 0
-        },
-        "speed": ""
+        }
       },
       "traits": {
         "size": "lg",
@@ -435,6 +414,7 @@
         "weight": 0,
         "price": 0,
         "attuned": false,
+        "attunement": 0,
         "equipped": false,
         "rarity": "",
         "identified": true
@@ -451,6 +431,7 @@
         },
         "target": {
           "value": null,
+          "width": null,
           "units": "",
           "type": ""
         },
@@ -499,6 +480,7 @@
         }
       }
     },
+    "htmlFields": ["description.value", "description.chat", "description.unidentified"],
     "backpack": {
       "templates": ["itemDescription", "physicalItem"],
       "capacity": {
@@ -585,7 +567,7 @@
         "supply": 0
       },
       "preparation": {
-        "mode": null,
+        "mode": "prepared",
         "prepared": false
       },
       "scaling": {

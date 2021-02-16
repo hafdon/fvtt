@@ -13,3 +13,8 @@
 8. separate items for characters from items that to-kill NPCs might drop?
 
 ki as the key
+
+9. little bat claws that wrap around two of their fingers , like rings, - can turn into a bat
+10. for "puzzles" - have it turn into combat if it goes weird, and also make it multi-stage or multi-step
+11. for skipping from NPC to NPC : introduce or transition by describing what they are doing physically (they twiddle things fingers, lick their lips, etc)
+12. 

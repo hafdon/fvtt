@@ -2,6 +2,8 @@ import { RollHandler } from '../rollHandler.js';
 import * as settings from '../../settings.js';
 
 export class RollHandlerBasePf2e extends RollHandler {
+    BLIND_ROLL_MODE = 'blindroll';
+
     constructor() {
         super();
     }
@@ -17,23 +19,54 @@ export class RollHandlerBasePf2e extends RollHandler {
         let tokenId = payload[1];
         let actionId = payload[2];
 
+        let renderable = ['item', 'feat', 'action', 'lore'];
+        if (renderable.includes(macroType) && this.isRenderItem())
+            return this.doRenderItem(tokenId, actionId);
+
+            
+        let currentRollMode;
+        if (this._isBlindRollClick(event)) {
+            currentRollMode = game.settings.get('core', 'rollMode');
+            await this._updateRollMode(this.BLIND_ROLL_MODE);
+        }
+
+        try {
+            const knownCharacters = ['character', 'familiar', 'npc'];
+            if (tokenId === 'multi') {
+                const controlled = canvas.tokens.controlled.filter(t => knownCharacters.includes(t.actor?.data.type));
+                for (let token of controlled) {
+                    let idToken = token.data._id;
+                    await this._handleMacros(event, macroType, idToken, actionId);
+                }
+            } else {
+                await this._handleMacros(event, macroType, tokenId, actionId);
+            }
+        } catch (e) {
+            throw e;
+
+        } finally {
+            if (this._isBlindRollClick(event)) {
+                if (currentRollMode) {
+                    await this._updateRollMode(currentRollMode);
+                }
+            }
+        }
+    }
+
+    async _handleMacros(event, macroType, tokenId, actionId) {
         let actor = super.getActor(tokenId);
         let charType;
         if (actor)
             charType = actor.data.type;
 
-        let renderable = ['item', 'feat', 'action', 'lore'];
-        if (renderable.includes(macroType) && this.isRenderItem())
-            return this.doRenderItem(tokenId, actionId);
-
-        let sharedActions = ['ability', 'spell', 'item', 'skill', 'lore', 'utility']
-
+        let sharedActions = ['ability', 'spell', 'item', 'skill', 'lore', 'utility', 'toggle', 'strike']
         if (!sharedActions.includes(macroType)) {
             switch (charType) {
                 case 'npc':
-                    this._handleUniqueActionsNpc(macroType, event, tokenId, actor, actionId);
+                    await this._handleUniqueActionsNpc(macroType, event, tokenId, actor, actionId);
                     break;
                 case 'character':
+                case 'familiar':
                     await this._handleUniqueActionsChar(macroType, event, tokenId, actor, actionId);
                     break;
             }
@@ -44,10 +77,7 @@ export class RollHandlerBasePf2e extends RollHandler {
                 this._rollAbility(event, actor, actionId);
                 break;
             case 'skill':
-                this._rollSkill(event, actor, actionId);
-                break;  
-            case 'lore':
-                this._rollLoreSkill(event, actor, actionId);
+                await this._rollSkill(event, actor, actionId);
                 break;
             case 'action':
             case 'feat':
@@ -60,7 +90,18 @@ export class RollHandlerBasePf2e extends RollHandler {
             case 'utility':
                 this._performUtilityMacro(event, tokenId, actionId);
                 break;
+            case 'toggle':
+                await this._performToggleMacro(event, tokenId, actionId);
+                break;
+            case 'strike':
+                this._rollStrikeChar(event, tokenId, actor, actionId);
+                break;  
         }
+    }
+
+    /** @private */
+    _isBlindRollClick(event) {
+        return this.isCtrl(event) && !(this.isRightClick(event) || this.isAlt(event) || this.isShift(event));
     }
 
     /** @private */
@@ -69,9 +110,6 @@ export class RollHandlerBasePf2e extends RollHandler {
             case 'save':
                 this._rollSaveChar(event, actor, actionId);
                 break;
-            case 'strike':
-                this._rollStrikeChar(event, tokenId, actor, actionId);
-                break;  
             case 'attribute':
                 this._rollAttributeChar(event, actor, actionId);
                 break;
@@ -86,23 +124,40 @@ export class RollHandlerBasePf2e extends RollHandler {
             case 'dying':
                 await this._adjustAttribute(event, actor, macroType, 'value', actionId);
                 break;
+            case 'familiarAttack':
+                this._rollFamiliarAttack(event, actor);
+                break;
         }
     }
 
     /** @private */
-    _handleUniqueActionsNpc(macroType, event, tokenId, actor, actionId) {
+    async _handleUniqueActionsNpc(macroType, event, tokenId, actor, actionId) {
         switch (macroType) {
             case 'save':
                 this._rollSaveNpc(event, actor, actionId);
                 break;
-            case 'strike':
+            case 'npcStrike':
                 this._rollStrikeNpc(event, tokenId, actor, actionId);
                 break;  
             case 'attribute':
-                this._rollAttributeNpc(event, actor, actionId);
+                await this._rollAttributeNpc(event, tokenId, actor, actionId);
                 break;
         }
     }
+
+    /** @private */
+    _rollSkill(event, actor, actionId) {
+        let skill = actor.data.data.skills[actionId];
+
+        if (!skill || !skill.roll) {
+            actor.rollSkill(event, actionId);
+        }
+        else {
+            var abilityBased = `${skill.ability}-based`;
+            const opts = actor.getRollOptions(['all', 'skill-check', abilityBased, CONFIG.PF2E.skills[actionId] ?? actionId]);
+            skill.roll(event, opts);
+        }
+    }    
 
     /** @private */
     _rollAbility(event, actor, actionId) {
@@ -122,8 +177,11 @@ export class RollHandlerBasePf2e extends RollHandler {
     }
 
     /** @private */
-    _rollAttributeNpc(event, actor, actionId) {
-        actor.rollAttribute(event, actionId);
+    async _rollAttributeNpc(event, tokenId, actor, actionId) {
+        if (actionId === 'initiative')
+            await actor.rollInitiative({createCombatants:true});
+        else
+            actor.rollAttribute(event, actionId);
     }
 
     /** @private */
@@ -187,23 +245,8 @@ export class RollHandlerBasePf2e extends RollHandler {
         actor.rollSave(event, actionId);
     }
 
-    /** @private */
-    _rollLoreSkill(event, actor, actionId) {
-        let item = actor.getOwnedItem(actionId);
-
-        actor.rollLoreSkill(event, item);
-    }
-
-    /** @private */
-    _rollSkill(event, actor, actionId) {
-        let skill = actor.data.data.skills[actionId];
-        if (!skill) {
-            actor.rollSkill(event, actionId);
-        }
-        else {
-            const opts = actor.getRollOptions(['all', 'skill-check', CONFIG.PF2E.skills[actionId] ?? actionId]);
-            skill.roll(event);
-        }
+    async _updateRollMode(rollMode) {
+        await game.settings.set('core', 'rollMode', rollMode);
     }
 
     /** @private */
@@ -287,6 +330,12 @@ export class RollHandlerBasePf2e extends RollHandler {
     }
 
     /** @private */
+    _rollFamiliarAttack(event, actor) {
+        const options = actor.getRollOptions(['all', 'attack']);
+        actor.data.data.attack.roll(event, options);
+    }
+
+    /** @private */
     _rollSpell(event, tokenId, actor, actionId) {
         let actionParts = decodeURIComponent(actionId).split('>');
 
@@ -362,6 +411,7 @@ export class RollHandlerBasePf2e extends RollHandler {
             if (!item.data.hasOwnProperty('contextualData'))
                 item.data.contextualData = {};
             item.data.contextualData.spellLvl = castLevel;
+            data.spellLvl = castLevel;
         }
 
         const template = `systems/pf2e/templates/chat/${item.data.type}-card.html`;
@@ -400,8 +450,8 @@ export class RollHandlerBasePf2e extends RollHandler {
         let token = super.getToken(tokenId);
 
         switch(actionId) {
-            case 'shortRest':
-                this._executeMacroByName('Treat Wounds Macro');
+            case 'treatWounds':
+                this._executeMacroByName('Treat Wounds');
                 break;
             case 'longRest':
                 this._executeMacroByName('Rest for the Night');
@@ -443,5 +493,19 @@ export class RollHandlerBasePf2e extends RollHandler {
         let update = {data: {attributes: {[property]: {[valueName]: value}}}};
 
         await actor.update(update);
+    }
+
+    async _performToggleMacro(event, tokenId, actionId) {
+        const actor = super.getActor(tokenId);
+
+        const input = actionId.split('.');
+
+        if (input?.length !== 2)
+            return;
+
+        const rollName = input[0];
+        const optionName = input[1];
+
+        await actor.toggleRollOption(rollName, optionName);
     }
 }

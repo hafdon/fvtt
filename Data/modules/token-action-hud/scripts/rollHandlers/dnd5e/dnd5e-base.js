@@ -1,5 +1,5 @@
-import { RollHandler } from "../rollHandler.js"
-import * as settings from "../../settings.js";
+import { RollHandler } from '../rollHandler.js'
+import * as settings from '../../settings.js';
 
 export class RollHandlerBase5e extends RollHandler {
     constructor() {
@@ -7,7 +7,7 @@ export class RollHandlerBase5e extends RollHandler {
     }
 
     /** @override */
-    doHandleActionEvent(event, encodedValue) {
+    async doHandleActionEvent(event, encodedValue) {
         let payload = encodedValue.split('|');
         
         if (payload.length != 3) {
@@ -19,44 +19,45 @@ export class RollHandlerBase5e extends RollHandler {
         let actionId = payload[2];
 
         if (tokenId === 'multi') {
-            if (macroType === 'utility' && actionId.includes('toggle')) {
-                this.performMultiToggleUtilityMacro(actionId);
-            }
-            else {
-                canvas.tokens.controlled.forEach(t => {
-                    let idToken = t.data._id;
-                    this._handleMacros(event, macroType, idToken, actionId);
-                });
-            }
+            for (let t of canvas.tokens.controlled) {
+                let idToken = t.data._id;
+                await this._handleMacros(event, macroType, idToken, actionId);
+            };
         } else {
-            this._handleMacros(event, macroType, tokenId, actionId);
+            await this._handleMacros(event, macroType, tokenId, actionId);
         }
     }
 
-    _handleMacros(event, macroType, tokenId, actionId) {
+    async _handleMacros(event, macroType, tokenId, actionId) {
         switch (macroType) {
-            case "ability":
+            case 'ability':
                 this.rollAbilityMacro(event, tokenId, actionId);
                 break;
-            case "skill":
+            case 'skill':
                 this.rollSkillMacro(event, tokenId, actionId);
                 break;
-            case "abilitySave":
+            case 'abilitySave':
                 this.rollAbilitySaveMacro(event, tokenId, actionId);
                 break;
-            case "abilityCheck":
+            case 'abilityCheck':
                 this.rollAbilityCheckMacro(event, tokenId, actionId);
                 break;
-            case "item":
-            case "spell":
-            case "feat": 
+            case 'item':
+            case 'spell':
+            case 'feat': 
                 if (this.isRenderItem())
                     this.doRenderItem(tokenId, actionId);
                 else
                     this.rollItemMacro(event, tokenId, actionId);
                 break;
-            case "utility":
-                this.performUtilityMacro(event, tokenId, actionId);
+            case 'utility':
+                await this.performUtilityMacro(event, tokenId, actionId);
+                break;
+            case 'effect':
+                await this.toggleEffect(event, tokenId, actionId);
+                break;
+            case 'condition':
+                await this.toggleCondition(event, tokenId, actionId);
             default:
                 break;
         }
@@ -64,29 +65,24 @@ export class RollHandlerBase5e extends RollHandler {
     
     rollAbilityMacro(event, tokenId, checkId) {
         const actor = super.getActor(tokenId);
-       actor.rollAbility(...this.getRollBody(event, actor, checkId));
+       actor.rollAbility(checkId, {event: event});
     }
     
     rollAbilityCheckMacro(event, tokenId, checkId) {
         const actor = super.getActor(tokenId);
-        actor.rollAbilityTest(...this.getRollBody(event, actor, checkId));
+        actor.rollAbilityTest(checkId, {event: event});
     }
 
     rollAbilitySaveMacro(event, tokenId, checkId) {
         const actor = super.getActor(tokenId);
-        actor.rollAbilitySave(...this.getRollBody(event, actor, checkId));
+        actor.rollAbilitySave(checkId, {event: event});
     }
     
     rollSkillMacro(event, tokenId, checkId) {
         const actor = super.getActor(tokenId);
-        actor.rollSkill(...this.getRollBody(event, actor, checkId));
+        actor.rollSkill(checkId, {event: event});
     }
 
-    getRollBody(event, actor, checkId) {
-        const speaker = ChatMessage.getSpeaker({scene: canvas.scene, token: actor.token});
-        return [checkId, {speaker: speaker, event, event}];
-    }
-    
     rollItemMacro(event, tokenId, itemId) {
         let actor = super.getActor(tokenId);
         let item = super.getItem(actor, itemId);
@@ -96,7 +92,7 @@ export class RollHandlerBase5e extends RollHandler {
             return;
         }
         
-        if (item.data.type === "spell")
+        if (item.data.type === 'spell')
             return actor.useSpell(item);
             
         return item.roll({event});
@@ -106,7 +102,7 @@ export class RollHandlerBase5e extends RollHandler {
         return (item.data.data.recharge && !item.data.data.recharge.charged && item.data.data.recharge.value);
     }
     
-    performUtilityMacro(event, tokenId, actionId) {
+    async performUtilityMacro(event, tokenId, actionId) {
         let actor = super.getActor(tokenId);
         let token = super.getToken(tokenId);
 
@@ -119,7 +115,7 @@ export class RollHandlerBase5e extends RollHandler {
                 break;
             case 'inspiration':
                 let update = !actor.data.data.attributes.inspiration;
-                actor.update({"data.attributes.inspiration": update});
+                actor.update({'data.attributes.inspiration': update});
                 break;
             case 'toggleCombat':
                 token.toggleCombat();
@@ -129,31 +125,64 @@ export class RollHandlerBase5e extends RollHandler {
                 token.toggleVisibility();
                 break;
             case 'deathSave':
-                actor.rollDeathSave();
+                actor.rollDeathSave({event});
+                break;
+            case 'initiative':
+                await this.performInitiativeMacro(tokenId);
                 break;
         }
     }
 
-    async performMultiToggleUtilityMacro(actionId) {
-        if (actionId === 'toggleVisibility') {
-            const allVisible = canvas.tokens.controlled.every(t => !t.data.hidden);
-            canvas.tokens.controlled.forEach(t => {
-                if (allVisible)
-                    t.toggleVisibility();
-                else if (t.data.hidden)
-                    t.toggleVisibility();
-            })
+    async performInitiativeMacro(tokenId) {
+        let actor = super.getActor(tokenId);
+        
+        await actor.rollInitiative({createCombatants: true});
+            
+        Hooks.callAll('forceUpdateTokenActionHUD')
+    }
+
+    async toggleEffect(event, tokenId, effectId) {
+        const actor = super.getActor(tokenId);
+        const effect = actor.effects.entries.find(e => e.id === effectId);
+
+        if (!effect)
+            return;
+
+        const statusId = effect.data.flags.core?.statusId;
+        if (statusId) {
+            await this.toggleCondition(event, tokenId, statusId);
+            return;
+        }
+            
+        await effect.update({disabled: !effect.data.disabled});
+        Hooks.callAll('forceUpdateTokenActionHUD')
+    }
+
+    async toggleCondition(event, tokenId, effectId) {
+        const token = super.getToken(tokenId);
+        const isRightClick = this.isRightClick(event);
+        if (effectId.includes('combat-utility-belt.') && game.cub && !isRightClick) {
+            const cubCondition = this.findCondition(effectId)?.label;            
+            if (!cubCondition)
+                return;
+            
+            game.cub.hasCondition(cubCondition, token) ? 
+                await game.cub.removeCondition(cubCondition, token) : await game.cub.addCondition(cubCondition, token);
+        } else {
+            const condition = this.findCondition(effectId);
+            if (!condition)
+                return;
+            
+            isRightClick ? 
+                await token.toggleOverlay(condition) : await token.toggleEffect(condition);
         }
 
-        if (actionId === 'toggleCombat') {
-            const allInCombat = canvas.tokens.controlled.every(t => t.data.inCombat);
-            for (let t of canvas.tokens.controlled) {
-                if (allInCombat)
-                    await t.toggleCombat();
-                else if (!t.data.inCombat)
-                    await t.toggleCombat();
-            }
-            Hooks.callAll('forceUpdateTokenActionHUD')
-        }
+        Hooks.callAll('forceUpdateTokenActionHUD')
     }
+
+    findCondition(id) {
+        return CONFIG.statusEffects.find(effect => effect.id === id);
+    }
+
+
 }

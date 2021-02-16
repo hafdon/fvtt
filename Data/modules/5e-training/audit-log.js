@@ -57,8 +57,7 @@ export default class AuditLog extends FormApplication {
 
     let actorId = formData.actorId;
     let actor = game.actors.get(actorId);
-    let flags = actor.data.flags['5e-training'];
-    let activities = flags.trainingItems;
+    let activities = await actor.getFlag("5e-training", "trainingItems");
 
     // Same loop as before. Cycle through each activity, if it's got no change array,
     //  move on to the next one. If it does, cycle through it and see if the timestamp
@@ -75,10 +74,8 @@ export default class AuditLog extends FormApplication {
       }
     }
 
-    flags.trainingItems = activities;
-    actor.update({'flags.5e-training': null}).then(function(){
-      actor.update({'flags.5e-training': flags});
-    });
+    // Update actor and flags
+    await actor.setFlag("5e-training", "trainingItems", activities);
 
   }
 

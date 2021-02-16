@@ -27,9 +27,9 @@ export class FilterCategory {
             if (!existingCat.subcategories.length)
                 return;
 
-            this.addSubcategoriesToCategory(actionHandler, existingCat);
+            await this.addSubcategoriesToCategory(actionHandler, existingCat);
         } else {
-            this.doAddToActionList(actionHandler, actionList);
+            await this.doAddToActionList(actionHandler, actionList);
         }
     }
 
@@ -40,7 +40,7 @@ export class FilterCategory {
         let result = actionHandler.initializeEmptyCategory(this.id);
         result.core = this.core;
 
-        this.addSubcategoriesToCategory(actionHandler, result);
+        await this.addSubcategoriesToCategory(actionHandler, result);
 
         actionHandler._combineCategoryWithList(actionList, this.title, result, this.push);
     }
@@ -54,7 +54,7 @@ export class FilterCategory {
     async selectSubcategories(selection) {
         for (let subcat of selection) {
             if (subcat.type === SubcategoryType.COMPENDIUM)
-                this.addCompendiumSubcategory(subcat);
+                await this.addCompendiumSubcategory(subcat);
             else
                 this.addMacroSubcategory(subcat);
         }
@@ -66,13 +66,13 @@ export class FilterCategory {
         for (var i = this.subcategories.length - 1; i >= 0; i--) {
             let subcat = this.subcategories[i];
             if (!titleMap.includes(subcat.title))
-               this.removeSubcategory(i)
+               await this.removeSubcategory(i)
         }
 
-        this.updateFlag();
+        await this.updateFlag();
     }
 
-    addCompendiumSubcategory(compendium) {
+    async addCompendiumSubcategory(compendium) {
         if (this.subcategories.some(c => c.compendiumId === compendium.id))
             return;
 
@@ -81,7 +81,7 @@ export class FilterCategory {
 
         let hudCompendium = new CompendiumSubcategory(this.filterManager, this.key, compendium.id, compendium.title);
         hudCompendium.createFilter();
-        hudCompendium.submitFilterSuggestions();
+        await hudCompendium.submitFilterSuggestions();
 
         this.subcategories.push(hudCompendium);
     }
@@ -97,30 +97,30 @@ export class FilterCategory {
         this.subcategories.push(subcategory);
     }
 
-    updateFlag() {
+    async updateFlag() {
         let update = {categories: {[this.key]: {title: this.title, id: this.id, push: this.push, core: this.core}}};
-        game.user.update({flags: {'token-action-hud': update}});
+        await game.user.update({flags: {'token-action-hud': update}});
 
         for (let subcategory of this.subcategories) {
-            subcategory.updateFlag(this.key);
+            await subcategory.updateFlag(this.key);
         }
     }
 
-    removeSubcategory(index) {
+    async removeSubcategory(index) {
         let subcategory = this.subcategories[index];
-        subcategory.clearFilter();
-        subcategory.unsetFlag(this.key);
+        await subcategory.clearFilter();
+        await subcategory.unsetFlag(this.key);
         this.subcategories.splice(index, 1);
     }
 
-    prepareForDelete() {
-        this.clearFilters();
-        this.unsetFlag();
+    async prepareForDelete() {
+        await this.clearFilters();
+        await this.unsetFlag();
     }
 
-    clearFilters() {
+    async clearFilters() {
         for (let c of this.subcategories) {
-            c.clearFilter();
+            await c.clearFilter();
         }
     }
 

@@ -24,12 +24,18 @@ export class ActionHandlerSfrpg extends ActionHandler {
 
         actionList.actorId = actor._id;
 
-        actionList = this._buildItemCategory(token, actionList);
-        actionList = this._buildSpellsCategory(token, actionList);
-        actionList = this._buildFeatsCategory(token, actionList);
-        actionList = this._buildSkillCategory(token, actor, actionList);
-        actionList = this._buildAbilitiesCategory(token, actionList);
-        actionList = this._buildSavesCategory(token, actionList);
+        if (actor.data.type !== 'starship') {
+            this._buildItemCategory(token, actionList);
+            this._buildSpellsCategory(token, actionList);
+            this._buildFeatsCategory(token, actionList);
+            this._buildSkillCategory(token, actor, actionList);
+            this._buildAbilitiesCategory(token, actionList);
+            this._buildSavesCategory(token, actionList);
+        } else {
+            this._addStarshipWeapons(token, actor, actionList);
+            await this._addCrewActions(token, actor, actionList);
+            this._addShields(token, actor, actionList);
+        }
 
         settings.Logger.debug('SFRPG ActionList:', actionList);
         
@@ -40,20 +46,17 @@ export class ActionHandlerSfrpg extends ActionHandler {
     }
 
     _buildItemCategory(token, actionList){
-
         var itemList = token.actor.data.items;
         let tokenId = token.data._id;
 
         var itemsCategoryName = this.i18n('tokenactionhud.equipment');
         var itemsMacroType = "item";
-        let itemsCategory = this.initializeEmptyCategory(itemsCategoryName);
+        let itemsCategory = this.initializeEmptyCategory('equipment');
         
         itemsCategory = this._addSubcategoryByType(this.i18n('tokenactionhud.weapons'), "weapon",itemsMacroType, itemList, tokenId, itemsCategory);
         itemsCategory = this._addSubcategoryByType(this.i18n('tokenactionhud.consumables'), "consumable",itemsMacroType, itemList, tokenId, itemsCategory);
 
         this._combineCategoryWithList(actionList, itemsCategoryName, itemsCategory);
-    
-        return actionList;
     }
 
     _buildFeatsCategory(token, actionList){
@@ -64,20 +67,19 @@ export class ActionHandlerSfrpg extends ActionHandler {
         var itemsCategoryName = this.i18n('tokenactionhud.features');
         var itemsMacroType = "feat";
         let itemsCategory = this.initializeEmptyCategory(itemsCategoryName);
-        
-        console.log(itemList.map(item => item.data.actionType));
 
-        itemsCategory = this._addSubcategoryByActionType(this.i18n('tokenactionhud.mwa'), "mwak", itemsMacroType, itemList, tokenId, itemsCategory);
-        itemsCategory = this._addSubcategoryByActionType(this.i18n('tokenactionhud.rwa'), "rwak", itemsMacroType, itemList, tokenId, itemsCategory);
-        itemsCategory = this._addSubcategoryByActionType(this.i18n('tokenactionhud.msa'), "msak", itemsMacroType, itemList, tokenId, itemsCategory);
-        itemsCategory = this._addSubcategoryByActionType(this.i18n('tokenactionhud.rsa'), "rsak", itemsMacroType, itemList, tokenId, itemsCategory);
-        itemsCategory = this._addSubcategoryByActionType(this.i18n('tokenactionhud.healing'), "heal", itemsMacroType, itemList, tokenId, itemsCategory);
+        this._addSubcategoryByActionType(this.i18n('tokenactionhud.mwa'), "mwak", itemsMacroType, itemList, tokenId, itemsCategory);
+        this._addSubcategoryByActionType(this.i18n('tokenactionhud.rwa'), "rwak", itemsMacroType, itemList, tokenId, itemsCategory);
+        this._addSubcategoryByActionType(this.i18n('tokenactionhud.msa'), "msak", itemsMacroType, itemList, tokenId, itemsCategory);
+        this._addSubcategoryByActionType(this.i18n('tokenactionhud.rsa'), "rsak", itemsMacroType, itemList, tokenId, itemsCategory);
+        this._addSubcategoryByActionType(this.i18n('tokenactionhud.healing'), "heal", itemsMacroType, itemList, tokenId, itemsCategory);
+
+        if (settings.get('showMiscFeats')) {
+            const miscFeats = itemList.filter(i => !['mwak', 'rwak', 'msak', 'rsak', 'heal'].includes(i.data.actionType));
+            this._addSubcategoryByItemList(this.i18n('tokenactionhud.misc'), itemsMacroType, miscFeats, tokenId, itemsCategory);
+        }
 
         this._combineCategoryWithList(actionList, itemsCategoryName, itemsCategory);
-    
-        return actionList;
-
-
     }
   
     _buildSpellsCategory(token, actionList){
@@ -97,29 +99,44 @@ export class ActionHandlerSfrpg extends ActionHandler {
         }
 
         this._combineCategoryWithList(actionList, categoryName, category);
-    
-        return actionList;
     }        
 
     /** @private */
     _buildSkillCategory(token, actor, actionList) {
+        if (!actor.data.data.skills)
+            return actionList;
+
         let category = this.initializeEmptyCategory('skills');
         let macroType = 'skill';
         
-        let skillsActions = Object.entries(CONFIG.SFRPG.skills).map(e => {
-            let name = e[1];
-            let encodedValue = [macroType, token.data._id, e[0]].join(this.delimiter);
-            let icon = this._getClassSkillIcon(actor.data.data.skills[e[0]].value)
-            return { name: name, id: e[0], encodedValue: encodedValue, icon: icon };
+        const actorSkills = Object.entries(actor.data.data.skills);
+        const coreSkills = CONFIG.SFRPG.skills;
+
+        let skillsActions = actorSkills.map(s => {
+            let key = s[0];
+            let data = s[1];
+            let name;
+            if (key.startsWith('pro')) {
+                name = coreSkills['pro'];
+                if (!!data.subname)
+                    name += ` (${data.subname})`;
+            } else {
+                name = coreSkills[key];
+            }
+
+            let encodedValue = [macroType, token.data._id, key].join(this.delimiter);
+            let icon = this._getClassSkillIcon(data.value)
+            return { name: name, id: key, encodedValue: encodedValue, icon: icon };
+        }).sort((a,b) => {
+            return a.name.toUpperCase().localeCompare(b.name.toUpperCase(), undefined, {sensitivity: 'base'})
         });
+        
         let skillsCategory = this.initializeEmptySubcategory();
         skillsCategory.actions = skillsActions;
 
         let skillsTitle = this.i18n('tokenactionhud.skills');
         this._combineSubcategoryWithCategory(category, skillsTitle, skillsCategory);
         this._combineCategoryWithList(actionList, skillsTitle, category);
-
-        return actionList;
     }      
 
     /** @private */
@@ -138,8 +155,6 @@ export class ActionHandlerSfrpg extends ActionHandler {
         let abilitiesTitle = this.i18n('tokenactionhud.abilities');
         this._combineSubcategoryWithCategory(category, abilitiesTitle, abilitiesCategory);
         this._combineCategoryWithList(actionList, abilitiesTitle, category);
-
-        return actionList;
     }      
 
     /** @private */
@@ -158,17 +173,23 @@ export class ActionHandlerSfrpg extends ActionHandler {
         let savesTitle = this.i18n('tokenactionhud.saves');
         this._combineSubcategoryWithCategory(category, savesTitle, savesCategory);
         this._combineCategoryWithList(actionList, savesTitle, category);
-
-        return actionList;
     }
 
-    _addSubcategoryByActionType(subCategoryName, actionType, macroType, itemList, tokenId, category){
-        
-        
+    _addSubcategoryByActionType(subCategoryName, actionType, macroType, itemList, tokenId, category) {  
         let subCategory = this.initializeEmptySubcategory();    
 
         let itemsOfType = itemList.filter(item => item.data.actionType == actionType);
         subCategory.actions = itemsOfType.map(item => this._buildItemAction(tokenId, macroType, item));
+                  
+        this._combineSubcategoryWithCategory(category, subCategoryName, subCategory);
+        
+        return category;
+    }
+
+    _addSubcategoryByItemList(subCategoryName, macroType, itemList, tokenId, category) {  
+        let subCategory = this.initializeEmptySubcategory();
+
+        subCategory.actions = itemList.map(item => this._buildItemAction(tokenId, macroType, item));
                   
         this._combineSubcategoryWithCategory(category, subCategoryName, subCategory);
         
@@ -322,5 +343,168 @@ export class ActionHandlerSfrpg extends ActionHandler {
             day: `<i class="fas fa-hourglass-end"></i>`
         };
         return icon[action];
+    }
+
+    /** @private */
+    _addStarshipWeapons(token, actor, actionList) {
+        const itemType = 'starshipWeapon';
+        const weapons = actor.data.items.filter(i => i.type === itemType); //.filter(w => w.data.mount.mounted && w.data.mount.activated);
+        if (weapons.length === 0)
+        return;
+        
+        const category = this.initializeEmptyCategory(itemType);
+        
+        const groupedWeapons = weapons.reduce((grouped, w) => {
+            const groupName = w.data.mount.arc;
+            if (!grouped.hasOwnProperty(groupName))
+            grouped[groupName] = [];
+            
+            grouped[groupName].push(w);
+            
+            return grouped;
+        }, {});
+        
+        const macroType = 'item';
+        const order = ['forward', 'starboard', 'port', 'aft', 'turret'];
+        order.forEach(mount => {
+            const groupWeapons = groupedWeapons[mount];
+            if (!groupWeapons)
+                return;
+
+            const subcategory = this.initializeEmptySubcategory(mount);
+
+            groupWeapons.forEach(a => {
+                const actionName = a.name;
+                const encodedValue = [macroType, token.id, a._id].join(this.delimiter);
+                const action = {name: actionName, encodedValue: encodedValue, id: a._id, img: this._getImage(a)};
+                action.info1 = a.data.pcu ?? '';
+
+                subcategory.actions.push(action);
+            });
+
+            const capitalMount = mount.charAt(0).toUpperCase() + mount.slice(1);
+            const subName = this.i18n('SFRPG.ShipSystems.StarshipArcs.' + capitalMount);
+            this._combineSubcategoryWithCategory(category, subName, subcategory);
+        });        
+        
+        var categoryName = this.i18n('tokenactionhud.weapons');
+        this._combineCategoryWithList(actionList, categoryName, category);
+    }
+
+    /** @private */
+    async _addCrewActions(token, actor, actionList) {
+        if (!actor.useStarshipAction)
+            return;
+            
+        const macroType = 'crewAction';
+        const category = this.initializeEmptyCategory(macroType);
+        const actions = await game.packs.get("sfrpg.starship-actions").getContent();
+
+        const groupedActions = actions.reduce((grouped, a) => {
+            const role = a.data.data.role;
+            if (!grouped.hasOwnProperty(role))
+                grouped[role] = [];
+
+            grouped[role].push(a);
+
+            return grouped;
+        }, {});
+
+        const order = ['captain', 'pilot', 'gunner', 'engineer', 'scienceOfficer', 'chiefMate', 'magicOfficer', 'openCrew', 'minorCrew'];
+
+        order.forEach(role => {
+            const crew = actor.data.data.crew;
+            const crewRole = crew[role];
+            const npcRole = crew.npcData[role];
+
+            if (!this._shouldShowCrewOptions(crew, crewRole, npcRole))
+                return;
+
+            const groupActions = groupedActions[role];
+            const subcategory = this.initializeEmptySubcategory(role);
+
+            groupActions.forEach(a => {
+                const actionName = a.name;
+                const encodedValue = [macroType, token.id, a._id].join(this.delimiter);
+                const action = {name: actionName, encodedValue: encodedValue, id: a._id, img: this._getImage(a)};
+                action.info1 = a.data.data.resolvePointCost ?? '';
+
+                subcategory.actions.push(action);
+            });
+
+            if (crewRole) {
+                if (crew.useNPCCrew) {
+                    subcategory.info1 = crew.npcData[role].numberOfUses;
+                } else {
+                    subcategory.info1 = crewRole.limit > 0 ? `${crewRole.actors.length}/${crewRole.limit}` : crewRole.actors.length;
+                }
+            }
+
+            const capitalRole = role.charAt(0).toUpperCase() + role.slice(1);
+            const subName = this.i18n('SFRPG.StarshipSheet.Role.' + capitalRole);
+            this._combineSubcategoryWithCategory(category, subName, subcategory);
+        })
+
+        const catName = this.i18n('tokenactionhud.crewActions');
+        this._combineCategoryWithList(actionList, catName, category);
+    }
+
+    _shouldShowCrewOptions(crew, crewRole, npcRole) {
+        if (!crewRole)
+            return true;
+
+        if (crewRole.actors?.length > 0 && !crew.useNPCCrew)
+            return true;
+
+        if (crew.useNPCCrew && npcRole?.numberOfUses > 0)
+            return true;
+
+        return false;
+    }
+
+
+    /** @private */
+    _addShields(token, actor, actionList) {
+        const macroType = 'shields';
+        const category = this.initializeEmptySubcategory(macroType);
+
+        const shields = actor.data.data.attributes?.shields;
+        if (!shields)
+        return actionList;
+        
+        category.info1 = `${shields.value}/${shields.max}`;
+        
+        const sides = ['forward', 'starboard', 'aft', 'port'];
+        const amounts = [
+            {name: '-10', value:'-10'},
+            {name: '-5', value: '-5'},
+            {name: '-1', value: '-1'},
+            {name: '+1', value: '+1'},
+            {name: '+5', value: '+5'},
+            {name: '+10', value: '+10'}
+        ];
+        
+        const quadrants = actor.data.data.quadrants;
+        sides.forEach(side => {
+            const currShields = quadrants[side]['shields'];
+            if (!currShields)
+                return;
+            
+            const subcategory = this.initializeEmptySubcategory(side);
+            subcategory.info1 = `${currShields.value}/${shields.limit}`;
+
+            amounts.forEach(amount => {
+                const encodedValue = [macroType, token.id, `${side}.${amount.value}`].join(this.delimiter);
+                const action = { name: amount.name, encodedValue: encodedValue, id: amount.value, cssClass:'shrink' };
+                subcategory.actions.push(action);
+            })
+
+            const capitalSide = side.charAt(0).toUpperCase() + side.slice(1);
+            const subName = this.i18n('SFRPG.StarshipSheet.Sides.' + capitalSide);
+            this._combineSubcategoryWithCategory(category, subName, subcategory);
+        });
+
+        const catName = this.i18n('tokenactionhud.shields');
+        this._combineCategoryWithList(actionList, catName, category);
     }
 }

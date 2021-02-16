@@ -1,13 +1,15 @@
+import {ClassFeatures} from "./classFeatures.js"
+
 // Namespace Configuration Values
 export const DND5E = {};
 
 // ASCII Artwork
 DND5E.ASCII = `_______________________________
-______      ______ _____ _____ 
+______      ______ _____ _____
 |  _  \\___  |  _  \\  ___|  ___|
-| | | ( _ ) | | | |___ \\| |__  
-| | | / _ \\/\\ | | |   \\ \\  __| 
-| |/ / (_>  < |/ //\\__/ / |___ 
+| | | ( _ ) | | | |___ \\| |__
+| | | / _ \\/\\ | | |   \\ \\  __|
+| |/ / (_>  < |/ //\\__/ / |___
 |___/ \\___/\\/___/ \\____/\\____/
 _______________________________`;
 
@@ -22,8 +24,7 @@ DND5E.abilities = {
   "con": "DND5E.AbilityCon",
   "int": "DND5E.AbilityInt",
   "wis": "DND5E.AbilityWis",
-  "cha": "DND5E.AbilityCha",
-  "san": "DND5E.AbilitySan"
+  "cha": "DND5E.AbilityCha"
 };
 
 DND5E.abilityAbbreviations = {
@@ -32,8 +33,7 @@ DND5E.abilityAbbreviations = {
   "con": "DND5E.AbilityConAbbr",
   "int": "DND5E.AbilityIntAbbr",
   "wis": "DND5E.AbilityWisAbbr",
-  "cha": "DND5E.AbilityChaAbbr",
-  "san": "DND5E.AbilitySanAbbr"
+  "cha": "DND5E.AbilityChaAbbr"
 };
 
 /* -------------------------------------------- */
@@ -53,6 +53,30 @@ DND5E.alignments = {
   'ne': "DND5E.AlignmentNE",
   'ce': "DND5E.AlignmentCE"
 };
+
+/* -------------------------------------------- */
+
+/**
+ * An enumeration of item attunement types
+ * @enum {number}
+ */
+DND5E.attunementTypes = {
+  NONE: 0,
+  REQUIRED: 1,
+  ATTUNED: 2,
+}
+
+/**
+ * An enumeration of item attunement states
+ * @type {{"0": string, "1": string, "2": string}}
+ */
+DND5E.attunements = {
+  0: "DND5E.AttunementNone",
+  1: "DND5E.AttunementRequired",
+  2: "DND5E.AttunementAttuned"
+};
+
+/* -------------------------------------------- */
 
 
 DND5E.weaponProficiencies = {
@@ -289,15 +313,44 @@ DND5E.damageResistanceTypes = mergeObject(duplicate(DND5E.damageTypes), {
 
 /* -------------------------------------------- */
 
+/**
+ * The valid units of measure for movement distances in the game system.
+ * By default this uses the imperial units of feet and miles.
+ * @type {Object<string,string>}
+ */
+DND5E.movementTypes = {
+  "burrow": "DND5E.MovementBurrow",
+  "climb": "DND5E.MovementClimb",
+  "fly": "DND5E.MovementFly",
+  "swim": "DND5E.MovementSwim",
+  "walk": "DND5E.MovementWalk",
+}
+
+/**
+ * The valid units of measure for movement distances in the game system.
+ * By default this uses the imperial units of feet and miles.
+ * @type {Object<string,string>}
+ */
+DND5E.movementUnits = {
+  "ft": "DND5E.DistFt",
+  "mi": "DND5E.DistMi"
+}
+
+/**
+ * The valid units of measure for the range of an action or effect.
+ * This object automatically includes the movement units from DND5E.movementUnits
+ * @type {Object<string,string>}
+ */
 DND5E.distanceUnits = {
   "none": "DND5E.None",
   "self": "DND5E.DistSelf",
   "touch": "DND5E.DistTouch",
-  "ft": "DND5E.DistFt",
-  "mi": "DND5E.DistMi",
   "spec": "DND5E.Special",
   "any": "DND5E.DistAny"
 };
+for ( let [k, v] of Object.entries(DND5E.movementUnits) ) {
+  DND5E.distanceUnits[k] = v;
+}
 
 /* -------------------------------------------- */
 
@@ -379,16 +432,15 @@ DND5E.hitDieTypes = ["d6", "d8", "d10", "d12"];
 /* -------------------------------------------- */
 
 /**
- * Character senses options
- * @type {Object}
+ * The set of possible sensory perception types which an Actor may have
+ * @type {object}
  */
 DND5E.senses = {
-  "bs": "DND5E.SenseBS",
-  "dv": "DND5E.SenseDV",
-  "ts": "DND5E.SenseTS",
-  "tr": "DND5E.SenseTR"
+  "blindsight": "DND5E.SenseBlindsight",
+  "darkvision": "DND5E.SenseDarkvision",
+  "tremorsense": "DND5E.SenseTremorsense",
+  "truesight": "DND5E.SenseTruesight"
 };
-
 
 /* -------------------------------------------- */
 
@@ -401,21 +453,16 @@ DND5E.skills = {
   "ani": "DND5E.SkillAni",
   "arc": "DND5E.SkillArc",
   "ath": "DND5E.SkillAth",
-  "com": "DND5E.SkillCom",
   "dec": "DND5E.SkillDec",
-  "dph": "DND5E.SkillDph",
   "his": "DND5E.SkillHis",
   "ins": "DND5E.SkillIns",
   "itm": "DND5E.SkillItm",
   "inv": "DND5E.SkillInv",
   "med": "DND5E.SkillMed",
-  "myt": "DND5E.SkillMyt",
   "nat": "DND5E.SkillNat",
-  "occ": "DND5E.SkillOcc",
   "prc": "DND5E.SkillPrc",
   "prf": "DND5E.SkillPrf",
   "per": "DND5E.SkillPer",
-  "psy": "DND5E.SkillPsy",
   "rel": "DND5E.SkillRel",
   "slt": "DND5E.SkillSlt",
   "ste": "DND5E.SkillSte",
@@ -426,15 +473,14 @@ DND5E.skills = {
 /* -------------------------------------------- */
 
 DND5E.spellPreparationModes = {
+  "prepared": "DND5E.SpellPrepPrepared",
+  "pact": "DND5E.PactMagic",
   "always": "DND5E.SpellPrepAlways",
   "atwill": "DND5E.SpellPrepAtWill",
-  "innate": "DND5E.SpellPrepInnate",
-  "pact": "DND5E.PactMagic",
-  "prepared": "DND5E.SpellPrepPrepared"
+  "innate": "DND5E.SpellPrepInnate"
 };
 
 DND5E.spellUpcastModes = ["always", "pact", "prepared"];
-
 
 DND5E.spellProgression = {
   "none": "DND5E.SpellNone",
@@ -482,16 +528,19 @@ DND5E.weaponTypes = {
  * @type {Object}
  */
 DND5E.weaponProperties = {
+  "ada": "DND5E.WeaponPropertiesAda",
   "amm": "DND5E.WeaponPropertiesAmm",
-  "hvy": "DND5E.WeaponPropertiesHvy",
   "fin": "DND5E.WeaponPropertiesFin",
   "fir": "DND5E.WeaponPropertiesFir",
   "foc": "DND5E.WeaponPropertiesFoc",
+  "hvy": "DND5E.WeaponPropertiesHvy",
   "lgt": "DND5E.WeaponPropertiesLgt",
   "lod": "DND5E.WeaponPropertiesLod",
+  "mgc": "DND5E.WeaponPropertiesMgc",
   "rch": "DND5E.WeaponPropertiesRch",
   "rel": "DND5E.WeaponPropertiesRel",
   "ret": "DND5E.WeaponPropertiesRet",
+  "sil": "DND5E.WeaponPropertiesSil",
   "spc": "DND5E.WeaponPropertiesSpc",
   "thr": "DND5E.WeaponPropertiesThr",
   "two": "DND5E.WeaponPropertiesTwo",
@@ -684,18 +733,15 @@ DND5E.CR_EXP_LEVELS = [
   20000, 22000, 25000, 33000, 41000, 50000, 62000, 75000, 90000, 105000, 120000, 135000, 155000
 ];
 
+// Character Features Per Class And Level
+DND5E.classFeatures = ClassFeatures;
+
 // Configure Optional Character Flags
 DND5E.characterFlags = {
-  "powerfulBuild": {
-    name: "DND5E.FlagsPowerfulBuild",
-    hint: "DND5E.FlagsPowerfulBuildHint",
-    section: "Racial Traits",
-    type: Boolean
-  },
-  "savageAttacks": {
-    name: "DND5E.FlagsSavageAttacks",
-    hint: "DND5E.FlagsSavageAttacksHint",
-    section: "Racial Traits",
+  "diamondSoul": {
+    name: "DND5E.FlagsDiamondSoul",
+    hint: "DND5E.FlagsDiamondSoulHint",
+    section: "Feats",
     type: Boolean
   },
   "elvenAccuracy": {
@@ -735,6 +781,12 @@ DND5E.characterFlags = {
     section: "Feats",
     type: Boolean
   },
+  "powerfulBuild": {
+    name: "DND5E.FlagsPowerfulBuild",
+    hint: "DND5E.FlagsPowerfulBuildHint",
+    section: "Racial Traits",
+    type: Boolean
+  },
   "reliableTalent": {
     name: "DND5E.FlagsReliableTalent",
     hint: "DND5E.FlagsReliableTalentHint",
@@ -749,15 +801,27 @@ DND5E.characterFlags = {
     type: Boolean
   },
   "weaponCriticalThreshold": {
-    name: "DND5E.FlagsCritThreshold",
-    hint: "DND5E.FlagsCritThresholdHint",
+    name: "DND5E.FlagsWeaponCritThreshold",
+    hint: "DND5E.FlagsWeaponCritThresholdHint",
     section: "Feats",
     type: Number,
     placeholder: 20
-  }
+  },
+  "spellCriticalThreshold": {
+    name: "DND5E.FlagsSpellCritThreshold",
+    hint: "DND5E.FlagsSpellCritThresholdHint",
+    section: "Feats",
+    type: Number,
+    placeholder: 20
+  },
+  "meleeCriticalDamageDice": {
+    name: "DND5E.FlagsMeleeCriticalDice",
+    hint: "DND5E.FlagsMeleeCriticalDiceHint",
+    section: "Feats",
+    type: Number,
+    placeholder: 0
+  },
 };
 
 // Configure allowed status flags
-DND5E.allowedActorFlags = [
-  "isPolymorphed", "originalActor"
-].concat(Object.keys(DND5E.characterFlags));
+DND5E.allowedActorFlags = ["isPolymorphed", "originalActor"].concat(Object.keys(DND5E.characterFlags));

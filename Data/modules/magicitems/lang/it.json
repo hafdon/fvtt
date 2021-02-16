@@ -1,4 +1,16 @@
 {
+    "MAGICITEMS.SettingIdentifiedOnly": "Solo identificati",
+    "MAGICITEMS.SettingIdentifiedOnlyHint": "Mostra i poteri dei soli oggetti magici identificati",
+    "MAGICITEMS.SettingHideFromPlayers": "Nascondi Impostazioni ai Giocatori",
+    "MAGICITEMS.SettingHideFromPlayersHint": "Nascondi ai giocatori il tab di impostazioni per gli oggetti magici",
+
+    "MAGICITEMS.SheetActivation": "Opzioni di Attivazione",
+    "MAGICITEMS.SheetActivationEquipped": "Equipaggiato",
+    "MAGICITEMS.SheetActivationAttuned": "In Sintonia",
+
+    "MAGICITEMS.SheetTot": "totali",
+    "MAGICITEMS.SheetActives": "attivi",
+
     "MAGICITEMS.RechargeUnitDaily": "Giornaliero",
     "MAGICITEMS.RechargeUnitDawn": "All'Alba",
     "MAGICITEMS.RechargeUnitSunset": "Al Tramonto",
@@ -10,20 +22,34 @@
 
     "MAGICITEMS.RechargeTypeNumeric": "Numerico",
     "MAGICITEMS.RechargeTypeFormula": "Formula",
+    "MAGICITEMS.RechargeTypeFull": "Completa",
+    "MAGICITEMS.RechargeTypeFullText": "Ricaricato al massimo delle cariche",
 
     "MAGICITEMS.DestroyCheckAlways": "Sempre",
     "MAGICITEMS.DestroyCheck1D20":  "1 su d20",
+    "MAGICITEMS.JusDestroyType": "Distruggi",
+    "MAGICITEMS.LoosePowersType":  "Perde i Poteri",
+
+    "MAGICITEMS.EffectTypeConsume": "Consuma",
+    "MAGICITEMS.EffectTypeDestroy": "Distruggi",
 
     "MAGICITEMS.SheetEnabled": "E' un Oggetto Magico?",
     "MAGICITEMS.SheetCharges": "Numero di Cariche Massime",
-    "MAGICITEMS.SheetDestroy": "Distruggi a 0 cariche",
+    "MAGICITEMS.SheetDestroyPre": "Distruggi",
+    "MAGICITEMS.SheetDestroyPost": "a 0 Cariche",
+    "MAGICITEMS.SheetObjectTarget": "Oggetto",
+    "MAGICITEMS.SheetSpellTarget": "Incantesimo",
+    "MAGICITEMS.SheetDestroyFlavorText": "Messaggio visualizzato in chat",
     "MAGICITEMS.SheetRechargeable": "Ricaricable",
     "MAGICITEMS.SheetRecharge": "Ricarica",
+    "MAGICITEMS.SheetRechargedBy": "Ricarica di",
+    "MAGICITEMS.SheetChargesLabel": "cariche",
     "MAGICITEMS.SheetSpell": "Incantesimo",
     "MAGICITEMS.SheetFeat": "Privilegio",
     "MAGICITEMS.SheetTable": "Tabella",
     "MAGICITEMS.SheetLevel": "Livello",
     "MAGICITEMS.SheetConsumption": "Consumo",
+    "MAGICITEMS.SheetEffect": "Effetto",
     "MAGICITEMS.SheetUpcast": "Upcast",
     "MAGICITEMS.SheetCost": "Costo/Lvl",
     "MAGICITEMS.SheetNoRecharge": "Non Ricaricabile",
@@ -36,6 +62,13 @@
     "MAGICITEMS.SheetCanUpcastYes": "si",
     "MAGICITEMS.SheetCanUpcastNo": "no",
     "MAGICITEMS.SheetUsage": "Utilizzo",
+    "MAGICITEMS.SheetSortingMode": "Tipo Ordinamento",
+    "MAGICITEMS.SheetSortByLevel": "Livello",
+    "MAGICITEMS.SheetFeatOnUsage": "All'Uso",
+    "MAGICITEMS.SheetSortAlphabetically": "Alfabetico",
+    "MAGICITEMS.SheetConsumptionConsume": "Consumo",
+    "MAGICITEMS.SheetConsumptionDestroy": "Distruggi Oggetto",
+    "MAGICITEMS.SheetConsumptionDestroyMessage": "Dopo il suo utilizzo l’oggetto viene distrutto.",
 
     "MAGICITEMS.UpcastDialogLevel": "Lancia al livello",
     "MAGICITEMS.UpcastDialogConsumption": "Consumo",
@@ -67,7 +100,10 @@
 
     "MAGICITEMS.TableUsageAsSpell": "Come incantesimo",
     "MAGICITEMS.TableUsageAsFeat": "Come privilegio",
-    "MAGICITEMS.TableUsageTriggerOnUsage": "Innesca all'utilizzo",
+    "MAGICITEMS.TableUsageTriggerOnUsage": "All'utilizzo",
+
+    "MAGICITEMS.SheetFeatEffect0": "Consuma",
+    "MAGICITEMS.SheetFeatEffect1": "Distruggi",
 
     "MAGICITEMS.WarnNoActor": "you have no controlled actor, select an actor and retry.",
     "MAGICITEMS.WarnNoMagicItem": "Your controlled Actor does not have an item named ",

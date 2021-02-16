@@ -1,5 +1,6 @@
 .combatant {
-  position: relative; }
+  position: relative;
+  height: 60px; }
   .combatant::after {
     content: '';
     display: block;
@@ -15,6 +16,13 @@
     -o-transition: all ease-in-out 0.25s;
     transition: all ease-in-out 0.25s;
     pointer-events: none; }
+  .combatant .token-resource {
+    padding-right: 6px;
+    line-height: 75px;
+    height: 100%;
+    color: #bfbfbf; }
+  .combatant .token-initiative {
+    padding-top: 14px; }
   .combatant .ce-image-wrapper {
     position: relative;
     width: 48px;

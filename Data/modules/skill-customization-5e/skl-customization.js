@@ -1,10 +1,4 @@
-/**
- * Author: Cole Schultz (cole#9640)
- * Software License: GNU GPLv3
- */
-
-// Import JavaScript modules
-import { Utils } from "./utils.js";
+import { libWrapper } from "./lib/libWrapper/shim.js";
 
 const EMPTY_VALUE = "-";
 const MODULE_NAME = "skill-customization-5e";
@@ -18,11 +12,8 @@ Hooks.once("setup", () => {
 Hooks.on("renderActorSheet", injectActorSheet);
 
 function patchActor5ePrepareData() {
-    Utils.log("Patching Actor5e.prepareData()");
-    const oldPrepareData = CONFIG.Actor.entityClass.prototype.prepareData;
-
-    CONFIG.Actor.entityClass.prototype.prepareData = function () {
-        oldPrepareData.call(this);
+    libWrapper.register(MODULE_NAME, "CONFIG.Actor.entityClass.prototype.prepareData", function patchedPrepareData(wrapped, ...args) {
+        wrapped(...args);
 
         const skills = this.data.data.skills;
         for (let key in skills) {
@@ -39,22 +30,24 @@ function patchActor5ePrepareData() {
                 skill.passive = 10 + skill.total + passiveBonus;
             }
         }
-    };
+    }, "WRAPPER");
 }
 
 function patchActor5eRollSkill() {
-    Utils.log("Patching Actor5e.rollSkill()");
-    const oldRollSkill = CONFIG.Actor.entityClass.prototype.rollSkill;
-
-    CONFIG.Actor.entityClass.prototype.rollSkill = function (skillId, options = {}) {
-        const extraOptions = {
-            parts: ["@extra"],
-            data: {
-                extra: this.getFlag(MODULE_NAME, `${skillId}.${SKILL_BONUS_KEY}`),
-            },
-        };
-        oldRollSkill.call(this, skillId, mergeObject(options, extraOptions));
-    };
+    libWrapper.register(MODULE_NAME, "CONFIG.Actor.entityClass.prototype.rollSkill", function patchedRollSkill(wrapped, ...args) {
+        const [ skillId, options ] = args;
+        const skillBonus = this.getFlag(MODULE_NAME, `${skillId}.${SKILL_BONUS_KEY}`);
+        if (skillBonus) {
+            const extraOptions = {
+                parts: ["@extra"],
+                data: {
+                    extra: skillBonus,
+                },
+            };
+            mergeObject(options, extraOptions);
+        }
+        return wrapped(...args);
+    });
 }
 
 function injectActorSheet(app, html, data) {
@@ -103,13 +96,22 @@ function injectActorSheet(app, html, data) {
 
         textBoxElement.change(async function (event) {
             const bonusValue = event.target.value;
-            const rollResult = await new Roll(`1d20 + ${bonusValue}`).roll();
-            const valid = !isNaN(rollResult._total);
-
-            if (valid) {
-                actor.setFlag(MODULE_NAME, bonusKey, bonusValue);
+            if (bonusValue === "-" || bonusValue === "0") {
+                await actor.unsetFlag(MODULE_NAME, bonusKey);
+                textBoxElement.val(EMPTY_VALUE);
             } else {
-                textBoxElement.val(actor.getFlag(MODULE_NAME, bonusKey) || EMPTY_VALUE);
+                try {
+                    const rollResult = await new Roll(`1d20 + ${bonusValue}`).roll();
+                    const valid = !isNaN(rollResult._total);
+
+                    if (valid) {
+                        await actor.setFlag(MODULE_NAME, bonusKey, bonusValue);
+                    } else {
+                        textBoxElement.val(actor.getFlag(MODULE_NAME, bonusKey) || EMPTY_VALUE);
+                    }
+                } catch (err) {
+                    textBoxElement.val(actor.getFlag(MODULE_NAME, bonusKey) || EMPTY_VALUE);
+                }
             }
         });
 

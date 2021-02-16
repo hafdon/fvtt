@@ -4,6 +4,7 @@ import {ActionSubcategory} from './entities/actionSubcategory.js';
 import {ActionSet} from './entities/actionSet.js';
 import {Action} from './entities/action.js';
 import * as settings from '../settings.js';
+import { GenericActionHandler } from './genericActionHandler.js';
 
 export class ActionHandler {
     i18n = (toTranslate) => game.i18n.localize(toTranslate);
@@ -18,42 +19,60 @@ export class ActionHandler {
     constructor(filterManager, categoryManager) {
         this.filterManager = filterManager;
         this.categoryManager = categoryManager;
+        this.genericActionHandler = new GenericActionHandler(this);
     }
 
-    registerCoreCategories(categories) {
-        this.categoryManager.addCoreCategories(categories);
+    /** @public */
+    async registerCoreCategories(categories) {
+        await this.categoryManager.addCoreCategories(categories);
     }
 
+    /** @public */
     async buildActionList(token, multipleTokens) {
         let actionList = await this.doBuildActionList(token, multipleTokens);
-        this._doBuildFurtherActions(token, actionList);
-        this.registerCoreCategories(actionList.categories);
+        this._addGenericCategories(token, actionList, multipleTokens);
+        this._doBuildFurtherActions(token, actionList, multipleTokens);
+        await this.registerCoreCategories(actionList.categories);
         await this.categoryManager.addCategoriesToActionList(this, actionList);
         return actionList;
     }
 
+    /** @public */
     doBuildActionList(token) {};
 
-    _doBuildFurtherActions(token, actionList) {
-        this.furtherActionHandlers.forEach(handler => handler.extendActionList(actionList))
+    /** @protected */
+    _addGenericCategories(token, actionList, multipleTokens) {
+        if (token || multipleTokens)
+            this.genericActionHandler.addGenericCategories(token, actionList, multipleTokens);
     }
 
+    /** @protected */
+    _doBuildFurtherActions(token, actionList, multipleTokens) {
+        this.furtherActionHandlers.forEach(handler => handler.extendActionList(actionList, multipleTokens))
+    }
+
+    /** @public */
     addFurtherActionHandler(handler) {
+        settings.Logger.debug(`Adding further action handler: ${handler.constructor.name}`)
         this.furtherActionHandlers.push(handler);
     }
 
+    /** @public */
     initializeEmptyActionList() {
         return new ActionList();
     }
 
+    /** @public */
     initializeEmptyActionSet() {
         return new ActionSet();
     }
 
+    /** @public */
     initializeEmptyAction() {
         return new Action();
     }
 
+    /** @public */
     initializeEmptyCategory(categoryId) {
         let category = new ActionCategory();
         category.id = categoryId;
@@ -66,6 +85,7 @@ export class ActionHandler {
         return subcategory;
     }
 
+    /** @protected */
     _combineCategoryWithList(result, categoryName, category, push = true) {
         if (!category)
             return;
@@ -82,6 +102,7 @@ export class ActionHandler {
             result.categories.unshift(category);
     }
 
+    /** @protected */
     _combineSubcategoryWithCategory(category, subcategoryName, subcategory) {
         if (!subcategory)
             return;
@@ -93,5 +114,13 @@ export class ActionHandler {
             category.subcategories.push(subcategory);
         else
             settings.Logger.debug('subcategory criteria not met, disposing of', subcategoryName)
+    }
+
+    /** @protected */
+    _foundrySort(a, b) {
+        if (!(a?.data?.sort || b?.data?.sort))
+            return 0;
+
+        return a.data.sort - b.data.sort;
     }
 }

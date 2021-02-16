@@ -4,25 +4,56 @@ import {MagicItemTab} from "./magicItemtab.js";
 
 //CONFIG.debug.hooks = true;
 
+Handlebars.registerHelper('enabled', function(value, options) {
+    return Boolean(value) ? "" : "disabled";
+});
+
+Hooks.once('init', () => {
+
+    game.settings.register("magicitems", "identifiedOnly", {
+        name: "MAGICITEMS.SettingIdentifiedOnly",
+        hint: "MAGICITEMS.SettingIdentifiedOnlyHint",
+        scope: "world",
+        type: Boolean,
+        default: true,
+        config: true,
+    });
+
+    game.settings.register("magicitems", "hideFromPlayers", {
+        name: "MAGICITEMS.SettingHideFromPlayers",
+        hint: "MAGICITEMS.SettingHideFromPlayersHint",
+        scope: "world",
+        type: Boolean,
+        default: false,
+        config: true,
+    });
+
+    if(typeof Babele !== 'undefined') {
+
+        Babele.get().register({
+            module: 'magicitems',
+            lang: 'it',
+            dir: 'lang/packs/it'
+        });
+    }
+});
+
 Hooks.once('ready', () => {
-    game.actors.entities.forEach(actor => {
+    game.actors.entities.filter(actor => actor.permission >= 1).forEach(actor => {
         MagicItemActor.bind(actor);
     });
 });
 
 Hooks.once('createActor', (actor) => {
-    MagicItemActor.bind(actor);
+    if(actor.permission >= 2) {
+        MagicItemActor.bind(actor);
+    }
 });
 
 Hooks.on(`renderItemSheet5e`, (app, html, data) => {
-    MagicItemTab.bind(app, html, data);
-});
-
-Hooks.on(`renderItemSheet5eDark`, (app, html, data) => {
-    MagicItemTab.bind(app, html, data);
-});
-
-Hooks.on(`renderDarkItemSheet5e`, (app, html, data) => {
+    if(!game.user.isGM && game.settings.get("magicitems", "hideFromPlayers")) {
+        return;
+    }
     MagicItemTab.bind(app, html, data);
 });
 
@@ -30,31 +61,7 @@ Hooks.on(`renderActorSheet5eCharacter`, (app, html, data) => {
     MagicItemSheet.bind(app, html, data);
 });
 
-Hooks.on(`renderActorSheet5eCharacterDark`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderDarkSheet`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
 Hooks.on(`renderActorSheet5eNPC`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderActorSheet5eNPCDark`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderAlt5eSheet`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderDNDBeyondCharacterSheet5e`, (app, html, data) => {
-    MagicItemSheet.bind(app, html, data);
-});
-
-Hooks.on(`renderTidy5eSheet`, (app, html, data) => {
     MagicItemSheet.bind(app, html, data);
 });
 
@@ -77,6 +84,27 @@ Hooks.on("hotbarDrop", async (bar, data, slot) => {
     return false;
 });
 
+Hooks.on(`createOwnedItem`, (actor) => {
+    const miActor = MagicItemActor.get(actor.id);
+    if(miActor && miActor.listening && miActor.actor.id === actor.id) {
+        miActor.buildItems();
+    }
+});
+
+Hooks.on(`updateOwnedItem`, (actor) => {
+    const miActor = MagicItemActor.get(actor.id);
+    if(miActor && miActor.listening && miActor.actor.id === actor.id) {
+        setTimeout(miActor.buildItems.bind(miActor), 500);
+    }
+});
+
+Hooks.on(`deleteOwnedItem`, (actor) => {
+    const miActor = MagicItemActor.get(actor.id);
+    if(miActor && miActor.listening && miActor.actor.id === actor.id) {
+        miActor.buildItems();
+    }
+});
+
 window.MagicItems = {
 
     actor: function(id) {
@@ -94,5 +122,13 @@ window.MagicItems = {
         if ( !magicItemActor ) return ui.notifications.warn(game.i18n.localize("MAGICITEMS.WarnNoActor"));
 
         magicItemActor.rollByName(magicItemName, itemName);
+    },
+
+    bindItemSheet: function(app, html, data) {
+        MagicItemTab.bind(app, html, data);
+    },
+
+    bindCharacterSheet: function(app, html, data) {
+        MagicItemSheet.bind(app, html, data);
     }
 };

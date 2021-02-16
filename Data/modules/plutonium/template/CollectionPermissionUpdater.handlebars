@@ -10,7 +10,7 @@
 
 	<div class="flex-col w-100 h-100 overflow-x-scroll relative">
 		<!-- Player names row -->
-		<div class="row flex-v-center no-shrink">
+		<div class="w-100 flex-v-center no-shrink">
 			<!-- A dummy/spacer name -->
 			<div class="permu__cell-ent-name permu__cell-ent-name--header no-shrink"></div>
 			<div class="permu__cell-start-spacer no-shrink"></div>
@@ -29,7 +29,7 @@
 		</div>
 
 		<!-- Mass-update controls row -->
-		<div class="row flex-v-center permu__row-head no-shrink">
+		<div class="w-100 flex-v-center permu__row-head no-shrink">
 			<!-- A dummy/spacer name -->
 			<div class="permu__cell-ent-name permu__cell-ent-name--header no-shrink"></div>
 			<div class="permu__cell-start-spacer no-shrink"></div>
@@ -74,7 +74,7 @@
 		<!-- List of entities -->
 		<div class="veapp__list mb-1 h-100 flex-col permu__list">
 			{{#each entities}}
-				<div class="row flex-v-center permu__row-ent no-shrink" data-permu-entity-id="{{id}}">
+				<div class="w-100 flex-v-center permu__row-ent no-shrink" data-permu-entity-id="{{id}}">
 					<div class="permu__cell-ent-name no-shrink pr-1" title="{{path}}{{name}}">{{path}}{{name}}</div>
 					<div class="permu__cell-start-spacer no-shrink"></div>
 

@@ -1,4 +1,16 @@
 {
+    "MAGICITEMS.SettingIdentifiedOnly": "Only identified",
+    "MAGICITEMS.SettingIdentifiedOnlyHint": "Show Magic powers only for identified items",
+    "MAGICITEMS.SettingHideFromPlayers": "Hide Settings Tab From Players",
+    "MAGICITEMS.SettingHideFromPlayersHint": "Hide the magic items settings tab for players",
+
+    "MAGICITEMS.SheetActivation": "Activation Options",
+    "MAGICITEMS.SheetActivationEquipped": "Equipped",
+    "MAGICITEMS.SheetActivationAttuned": "Attuned",
+
+    "MAGICITEMS.SheetTot": "tot",
+    "MAGICITEMS.SheetActives": "actives",
+
     "MAGICITEMS.RechargeUnitDaily": "Daily",
     "MAGICITEMS.RechargeUnitDawn": "At Dawn",
     "MAGICITEMS.RechargeUnitSunset": "At Sunset",
@@ -10,20 +22,34 @@
 
     "MAGICITEMS.RechargeTypeNumeric": "Numeric",
     "MAGICITEMS.RechargeTypeFormula": "Formula",
+    "MAGICITEMS.RechargeTypeFull": "Full",
+    "MAGICITEMS.RechargeTypeFullText": "Recharged to maximum charges",
 
     "MAGICITEMS.DestroyCheckAlways": "Always",
     "MAGICITEMS.DestroyCheck1D20":  "1 on d20",
+    "MAGICITEMS.JusDestroyType": "Just Destroy",
+    "MAGICITEMS.LoosePowersType":  "Loose Powers",
+
+    "MAGICITEMS.EffectTypeConsume": "Consume",
+    "MAGICITEMS.EffectTypeDestroy": "Destroy",
 
     "MAGICITEMS.SheetEnabled": "Is a Magic Item?",
     "MAGICITEMS.SheetCharges": "Max Number of Charges",
-    "MAGICITEMS.SheetDestroy": "Destroy At 0 Charges",
+    "MAGICITEMS.SheetDestroyPre": "Destroy",
+    "MAGICITEMS.SheetDestroyPost": "At 0 Charges",
+    "MAGICITEMS.SheetObjectTarget": "Item",
+    "MAGICITEMS.SheetSpellTarget": "Spell",
+    "MAGICITEMS.SheetDestroyFlavorText": "Chat Message Flavor",
     "MAGICITEMS.SheetRechargeable": "Rechargeable",
     "MAGICITEMS.SheetRecharge": "Recharge",
+    "MAGICITEMS.SheetRechargedBy": "Recharge by",
+    "MAGICITEMS.SheetChargesLabel": "charges",
     "MAGICITEMS.SheetSpell": "Spell",
     "MAGICITEMS.SheetFeat": "Feat",
     "MAGICITEMS.SheetTable": "Table",
     "MAGICITEMS.SheetLevel": "Level",
-    "MAGICITEMS.SheetConsumption": "Consumption",
+    "MAGICITEMS.SheetConsumption": "Consumpt.",
+    "MAGICITEMS.SheetEffect": "Effect",
     "MAGICITEMS.SheetUpcast": "Upcast",
     "MAGICITEMS.SheetCost": "Cost/Lvl",
     "MAGICITEMS.SheetNoRecharge": "Not Rechargeable",
@@ -36,6 +62,13 @@
     "MAGICITEMS.SheetCanUpcastYes": "yes",
     "MAGICITEMS.SheetCanUpcastNo": "no",
     "MAGICITEMS.SheetUsage": "Usage",
+    "MAGICITEMS.SheetSortingMode": "Sorting Mode",
+    "MAGICITEMS.SheetSortByLevel": "Level",
+    "MAGICITEMS.SheetFeatOnUsage": "At Use",
+    "MAGICITEMS.SheetSortAlphabetically": "Alphabetically",
+    "MAGICITEMS.SheetConsumptionConsume": "Consume",
+    "MAGICITEMS.SheetConsumptionDestroy": "Destroy item",
+    "MAGICITEMS.SheetConsumptionDestroyMessage": "After its use, the object is destroyed.",
 
     "MAGICITEMS.UpcastDialogLevel": "Cast at Level",
     "MAGICITEMS.UpcastDialogConsumption": "Consumption",
@@ -67,7 +100,10 @@
 
     "MAGICITEMS.TableUsageAsSpell": "As spell",
     "MAGICITEMS.TableUsageAsFeat": "As Feat",
-    "MAGICITEMS.TableUsageTriggerOnUsage": "Trigger on usage",
+    "MAGICITEMS.TableUsageTriggerOnUsage": "At Use",
+
+    "MAGICITEMS.SheetFeatEffect0": "Consume",
+    "MAGICITEMS.SheetFeatEffect1": "Destroy",
 
     "MAGICITEMS.WarnNoActor": "you have no controlled actor, select an actor and retry.",
     "MAGICITEMS.WarnNoMagicItem": "Your controlled Actor does not have an item named ",
