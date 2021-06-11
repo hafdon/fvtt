@@ -295,7 +295,7 @@ export async function migrateActorDAESRD(actor, includeSRD = false) {
             case "loot":
             case "consumable":
             case "tool":
-            case "bakcpack":
+            case "backpack":
                 if (includeSRD)
                     replaceData = findDAEItem(itemData, [midiPack, itemPack, magicItemsPack, dndSRDItemsPack]);
                 else
@@ -324,5 +324,5 @@ export async function migrateActorDAESRD(actor, includeSRD = false) {
     console.warn(actor.name, "replaced ", count, " out of ", replaceItems.length, " items from the DAE SRD");
 }
 function removeDynamiceffects(actor) {
-    //.update({"flags.-=dynamiceffects": null})
+    actor.update({ "flags.-=dynamiceffects": null });
 }

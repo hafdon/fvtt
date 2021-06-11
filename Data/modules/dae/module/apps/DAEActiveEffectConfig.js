@@ -19,31 +19,60 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         this.fieldsList.sort();
         //@ts-ignore
         log(`There are ${this.fieldsList.length} fields to choose from of which ${window.MidiQOL?.midiFlags?.length || 0} come from midi-qol and ${ValidSpec.allSpecs.length} from dae`);
-        this.fieldsList = this.fieldsList.join(", ");
-        this.traitList = duplicate(CONFIG.DND5E.damageResistanceTypes);
-        Object.keys(CONFIG.DND5E.damageResistanceTypes).forEach(type => {
-            this.traitList[`-${type}`] = `-${CONFIG.DND5E.damageResistanceTypes[type]}`;
-        });
-        this.languageList = duplicate(CONFIG.DND5E.languages);
-        Object.keys(CONFIG.DND5E.languages).forEach(type => {
-            this.languageList[`-${type}`] = `-${CONFIG.DND5E.languages[type]}`;
-        });
-        this.conditionList = duplicate(CONFIG.DND5E.conditionTypes);
-        Object.keys(CONFIG.DND5E.conditionTypes).forEach(type => {
-            this.conditionList[`-${type}`] = `-${CONFIG.DND5E.conditionTypes[type]}`;
-        });
-        this.toolProfList = duplicate(CONFIG.DND5E.toolProficiencies);
-        Object.keys(CONFIG.DND5E.toolProficiencies).forEach(type => {
-            this.toolProfList[`-${type}`] = `-${CONFIG.DND5E.toolProficiencies[type]}`;
-        });
-        this.armorProfList = duplicate(CONFIG.DND5E.armorProficiencies);
-        Object.keys(CONFIG.DND5E.armorProficiencies).forEach(type => {
-            this.armorProfList[`-${type}`] = `-${CONFIG.DND5E.armorProficiencies[type]}`;
-        });
-        this.weaponProfList = duplicate(CONFIG.DND5E.weaponProficiencies);
-        Object.keys(CONFIG.DND5E.weaponProficiencies).forEach(type => {
-            this.weaponProfList[`-${type}`] = `-${CONFIG.DND5E.weaponProficiencies[type]}`;
-        });
+        if (game.system.id === "dnd5e") {
+            this.fieldsList = this.fieldsList.join(", ");
+            this.traitList = duplicate(CONFIG.DND5E.damageResistanceTypes);
+            Object.keys(CONFIG.DND5E.damageResistanceTypes).forEach(type => {
+                this.traitList[`-${type}`] = `-${CONFIG.DND5E.damageResistanceTypes[type]}`;
+            });
+            this.languageList = duplicate(CONFIG.DND5E.languages);
+            Object.keys(CONFIG.DND5E.languages).forEach(type => {
+                this.languageList[`-${type}`] = `-${CONFIG.DND5E.languages[type]}`;
+            });
+            this.conditionList = duplicate(CONFIG.DND5E.conditionTypes);
+            Object.keys(CONFIG.DND5E.conditionTypes).forEach(type => {
+                this.conditionList[`-${type}`] = `-${CONFIG.DND5E.conditionTypes[type]}`;
+            });
+            this.toolProfList = duplicate(CONFIG.DND5E.toolProficiencies);
+            Object.keys(CONFIG.DND5E.toolProficiencies).forEach(type => {
+                this.toolProfList[`-${type}`] = `-${CONFIG.DND5E.toolProficiencies[type]}`;
+            });
+            this.armorProfList = duplicate(CONFIG.DND5E.armorProficiencies);
+            Object.keys(CONFIG.DND5E.armorProficiencies).forEach(type => {
+                this.armorProfList[`-${type}`] = `-${CONFIG.DND5E.armorProficiencies[type]}`;
+            });
+            this.weaponProfList = duplicate(CONFIG.DND5E.weaponProficiencies);
+            Object.keys(CONFIG.DND5E.weaponProficiencies).forEach(type => {
+                this.weaponProfList[`-${type}`] = `-${CONFIG.DND5E.weaponProficiencies[type]}`;
+            });
+        }
+        else {
+            this.fieldsList = this.fieldsList.join(", ");
+            this.traitList = duplicate(CONFIG.SW5E.damageResistanceTypes);
+            Object.keys(CONFIG.SW5E.damageResistanceTypes).forEach(type => {
+                this.traitList[`-${type}`] = `-${CONFIG.SW5E.damageResistanceTypes[type]}`;
+            });
+            this.languageList = duplicate(CONFIG.SW5E.languages);
+            Object.keys(CONFIG.SW5E.languages).forEach(type => {
+                this.languageList[`-${type}`] = `-${CONFIG.SW5E.languages[type]}`;
+            });
+            this.conditionList = duplicate(CONFIG.SW5E.conditionTypes);
+            Object.keys(CONFIG.SW5E.conditionTypes).forEach(type => {
+                this.conditionList[`-${type}`] = `-${CONFIG.SW5E.conditionTypes[type]}`;
+            });
+            this.toolProfList = duplicate(CONFIG.SW5E.toolProficiencies);
+            Object.keys(CONFIG.SW5E.toolProficiencies).forEach(type => {
+                this.toolProfList[`-${type}`] = `-${CONFIG.SW5E.toolProficiencies[type]}`;
+            });
+            this.armorProfList = duplicate(CONFIG.SW5E.armorProficiencies);
+            Object.keys(CONFIG.SW5E.armorProficiencies).forEach(type => {
+                this.armorProfList[`-${type}`] = `-${CONFIG.SW5E.armorProficiencies[type]}`;
+            });
+            this.weaponProfList = duplicate(CONFIG.SW5E.weaponProficiencies);
+            Object.keys(CONFIG.SW5E.weaponProficiencies).forEach(type => {
+                this.weaponProfList[`-${type}`] = `-${CONFIG.SW5E.weaponProficiencies[type]}`;
+            });
+        }
         if (cubActive) {
             this.cubConditionList = {};
             game.cub.conditions?.forEach(cubc => {
@@ -110,8 +139,12 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
             return this.traitList;
         if (spec.includes("data.skills") && spec.includes("value"))
             return { 0: "Not Proficient", 0.5: "Half Proficiency", 1: "Proficient", 2: "Expertise" };
-        if (spec.includes("data.skills") && spec.includes("ability"))
-            return CONFIG.DND5E.abilities;
+        if (spec.includes("data.skills") && spec.includes("ability")) {
+            if (game.system.id === "dnd5e")
+                return CONFIG.DND5E.abilities;
+            else
+                return CONFIG.SW5E.abilities;
+        }
         if (spec.includes("tokenMagic"))
             return this.tokenMagicEffects;
         if (spec === "macro.CUB")
@@ -120,15 +153,17 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
             return this.ConditionalVisibilityList;
         if (spec === "macro.ConditionalVisibilityVision")
             return this.ConditionalVisibilityVisionList;
-        blindsight: false;
-        devilssight: false;
-        hidden: false;
-        indarkness: false;
-        invisible: false;
-        obscured: false;
-        seeinvisible: true;
-        tremorsense: false;
-        truesight: false;
+        /*
+            blindsight: false
+        devilssight: false
+        hidden: false
+        indarkness: false
+        invisible: false
+        obscured: false
+        seeinvisible: true
+        tremorsense: false
+        truesight: false
+        */
         if (spec === "data.traits.size")
             return CONFIG.DND5E.actorSizes;
         return false;
@@ -156,7 +191,7 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         data.effect.changes.forEach(change => {
             if (change.key.startsWith("flags.midi-qol")) {
                 //@ts-ignore
-                change.modes = [allModes[CONST.ACTIVE_EFFECT_MODES.CUSTOM]];
+                change.modes = allModes; //change.mode ? allModes: [allModes[CONST.ACTIVE_EFFECT_MODES.CUSTOM]];
             }
             else if ([-1, undefined].includes(ValidSpec.allSpecsObj[change.key]?.forcedMode)) {
                 change.modes = allModes;
@@ -185,8 +220,6 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         }
         data.sourceName = await this.object.sourceName;
         data.fieldsList = this.fieldsList;
-        // console.error("data fieldsList ", data.fieldsList)
-        // data.effect.flags.dae.stackable = this.object.data.flags?.dae?.stackable ||false;
         return data;
     }
     _keySelected(event) {
@@ -219,7 +252,33 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
                     button.closest(".effect-change").remove();
                     this.submit({ preventClose: true }).then(() => this.render());
                 });
+            case "add-specDur":
+                this._addSpecDuration(button);
+                return this.submit({ preventClose: true }).then(() => this.render());
+            case "delete-specDur":
+                return confirmAction(confirmDelete, () => {
+                    button.closest(".effect-special-duration").remove();
+                    this.submit({ preventClose: true }).then(() => this.render());
+                });
         }
+    }
+    _addSpecDuration(button) {
+        const durations = button.closest(".tab").querySelector(".special-duration-list");
+        const last = durations.lastElementChild;
+        const idx = last ? last.dataset.index + 1 : 0;
+        const duration = $(` 
+    <li class="effect-special-duration flexrow" data-index="${idx}">
+    <div class="formgroup">
+      <select name="flags.dae.specialDuration.${idx}" data-dtype="string">
+        {{selectOptions ../specialDuration selected=label}}
+      </select>
+      <div class="effect-controls">
+        <a class="effect-control" data-action="delete-specDur"><i class="fas fa-trash"></i></a>
+      </div>
+    </div>
+  </li>
+    `);
+        durations.appendChild(duration[0]);
     }
     /* ----------------------------------------- */
     _addEffectChange(button) {
@@ -258,9 +317,17 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
             //@ts-ignore
             c.priority = Number.isNumeric(c.priority) ? parseInt(c.priority) : c.mode * 10;
         }
+        if (formData.flags?.dae?.specialDuration) {
+            const newSpecDur = [];
+            Object.values(formData.flags?.dae?.specialDuration).forEach(value => newSpecDur.push(value));
+            formData.flags.dae.specialDuration = newSpecDur;
+        }
         //@ts-ignore isNumeric
         if (Number.isNumeric(formData.duration.startTime)) {
-            formData.duration.startTime = game.time.worldTime + parseInt(formData.duration.startTime);
+            let startTime = parseInt(formData.duration.startTime);
+            if (startTime <= 3600) { // Only acdept durations of 1 hour or less as the start time field
+                formData.duration.startTime = game.time.worldTime + parseInt(formData.duration.startTime);
+            }
         }
         setProperty(formData, "flags.dae.transfer", formData.transfer);
         //setProperty(formData, "flags.dae", {stackable: formData.flags.dae.stackable});
@@ -277,17 +344,3 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         }
     }
 }
-/*
-<div class="keylist">
-<select name="selectedKey" data-dtype="String">
-  {{selectOptions ../validFields selected=change.key}}
-</select>
-</div>
-
-<input class="keyinput" type="text" name="changes.{{i}}.key" value="{{change.key}}" />
-          <div class="keylist">
-            <select name="selectedKey" data-dtype="String">
-              {{selectOptions ../validFields selected=change.key}}
-            </select>
-          </div>
-*/ 

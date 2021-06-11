@@ -2,14 +2,6 @@
 {{> "modules/tidy5e-sheet/templates/actors/parts/tidy5e-inventory-header.html"}}
 
 <div class="grid-layout">
-
-  <div class="item-info-container">
-    <i class="item-info-container-background fab fa-d-and-d"></i>
-    <div class="item-info-container-content">
-      <!-- Info Card here -->
-    </div>
-  </div>
-    
   <ul class="inventory-list items-list">
     {{#each sections as |section sid|}}
     <li class="items-header">
@@ -47,7 +39,7 @@
 
         </div>
 
-        <div class="info-card {{~#if (or item.flags.magicitems.enabled item.data.properties.mgc)}} magic-item {{/if}} {{item.attunement.cls}} {{~#if item.data.equipped}} equipped {{/if}}">
+        <div class="info-card {{~#if (or item.flags.magicitems.enabled item.data.properties.mgc)}} magic-item {{/if}} {{item.attunement.cls}} {{~#if item.data.equipped}} equipped {{/if}}" data-item-id="{{item._id}}">
           <p class="info-card-name">{{item.name}}</p>
           <div class="info-card-states">
             {{~#if (or item.flags.magicitems.enabled item.data.properties.mgc)}}<span><i class="fas fa-magic"></i>Magic Item</span>{{/if}}
@@ -64,12 +56,12 @@
             <!-- {{#if item.data.quantity}} {{/if}} -->
             <span class="info-quantity"><b>{{localize 'DND5E.Quantity'}}:</b> {{item.data.quantity}}</span>
           </div>
-          <div class="info-card-description">
-            <!-- item description -->
+          <div class="description-wrap">
+            <div class="info-card-description">
+              <!-- item description -->
+            </div>
           </div>
-          <div class="info-card-hint">
-            <span><i class="fas fa-mouse"></i> middle mouse click for full item info.</span>
-          </div>
+				  <article class="mod-roll-buttons"></article>
         </div>
 
         {{#if ../../owner}}
@@ -81,11 +73,11 @@
           
           {{#if item.attunement}}
             <a class="item-control item-attunement {{#if (eq item.data.attunement 2) }}active{{/if}} {{item.attunement.cls}}" title="{{localize item.attunement.title}}">
-              <i class="fas fa-sun"></i> <span class="control-label">{{localize item.attunement.title}}</span>
+              <i class="fas fa-sun"></i> <span class="control-label">{{#if (eq item.data.attunement 2) }}{{localize "TIDY5E.Deattune"}}{{else}}{{localize "TIDY5E.Attune"}}{{/if}}</span>
             </a>
           {{/if}}
 
-          <a class="item-control item-toggle {{item.toggleClass}}"><i class="fas fa-user-alt-slash icon-off"></i><i class="fas fa-user-alt icon-on"></i> {{item.toggleTitle}}</a>
+          <a class="item-control item-toggle {{item.toggleClass}}">{{#if (eq item.toggleClass 'active')}}<i class="fas fa-user-alt"></i> <span class="control-label">{{localize "TIDY5E.Unequip"}}</span>{{else}}<i class="fas fa-user-alt inactive"></i> <span class="control-label">{{localize "TIDY5E.Equip"}}</span>{{/if}}</a>
           
           <hr class="context-divider">
           <a class="item-control item-edit"><i class="fas fa-pencil-alt"></i>{{localize "DND5E.ItemEdit"}}</a>

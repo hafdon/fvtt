@@ -1,3 +1,4 @@
+import { BitDSystemManager } from './bitd.js';
 import { Dnd5eSystemManager } from './dnd5e.js';
 import { DemonlordSystemManager } from './demonlord.js';
 import { DungeonWorldSystemManager } from './dungeonworld.js';
@@ -10,10 +11,17 @@ import { Wfrp4eSystemManager } from './wfrp4e.js';
 import { LancerSystemManager } from './lancer.js';
 import { SwadeSystemManager } from './swade.js';
 import { StarWarsFFGSystemManager } from './starwarsffg.js';
+import { Tormenta20SystemManager } from './tormenta20.js';
+import { SymbaroumSystemManager } from './symbaroum.js';
+import { AlienrpgSystemManager } from './alienrpg.js';
+import { OD6SSystemManager } from './od6s.js';
+import { CthackSystemManager } from './cthack.js';
 
 export class SystemManagerFactory {
     static create(system, appName) {
         switch(system) {
+            case 'blades-in-the-dark':
+                return new BitDSystemManager(appName);
             case 'demonlord':
                 return new DemonlordSystemManager(appName);
             case 'dnd5e':
@@ -24,6 +32,8 @@ export class SystemManagerFactory {
                 return new Pf1SystemManager(appName);
             case 'D35E':
                 return new D35ESystemManager(appName);
+            case 'od6s':
+                return new OD6SSystemManager(appName);
             case 'pf2e':
                 return new Pf2eSystemManager(appName);
             case 'sfrpg':
@@ -38,6 +48,14 @@ export class SystemManagerFactory {
                 return new SwadeSystemManager(appName);
             case 'starwarsffg':
                 return new StarWarsFFGSystemManager(appName);
+            case 'tormenta20':
+                return new Tormenta20SystemManager(appName);
+            case 'symbaroum':
+                return new SymbaroumSystemManager(appName);
+            case 'alienrpg':
+                return new AlienrpgSystemManager(appName);
+            case 'cthack':
+                return new CthackSystemManager(appName);
         }
     }
 }

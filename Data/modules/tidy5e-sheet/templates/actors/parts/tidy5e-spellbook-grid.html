@@ -2,14 +2,6 @@
 {{> "modules/tidy5e-sheet/templates/actors/parts/tidy5e-spellbook-header.html"}}
 
 <div class="grid-layout">
-
-  <div class="item-info-container">
-    <i class="item-info-container-background fab fa-d-and-d"></i>
-    <div class="item-info-container-content">
-      <!-- Info Card here -->
-    </div>
-  </div>
-
   <ul class="inventory-list spellbook-list items-list">
     {{#each spellbook as |section|}}
     <li class="items-header spellbook-header">
@@ -37,7 +29,7 @@
 
     <ul class="item-list">
       {{#each section.spells as |item i|}}
-      <li class="item {{#if ../../owner}}context-enabled{{/if}} {{~#if section.canPrepare}} preparable{{/if}} {{~#if data.preparation.prepared}} prepared{{/if}}{{#if (eq data.preparation.mode 'always')}} alwaysPrepared{{/if}}" data-item-id="{{item._id}}" {{#if section.canPrepare}} title="{{item.toggleTitle}}"{{/if}}>
+      <li class="item {{#if ../../owner}}context-enabled{{/if}} {{~#if section.canPrepare}} preparable{{/if}} {{~#if data.preparation.prepared}} prepared{{/if}}{{#if (eq data.preparation.mode 'always')}} alwaysPrepared{{/if}}" data-item-id="{{item._id}}">
         {{~#if item.flags.favtab}} 
         {{~#if item.flags.favtab.isFavorite}} 
           <i class="fas fa-bookmark icon-fav" title="{{localize 'TIDY5E.isFav'}}"></i>
@@ -59,7 +51,7 @@
         </div>
         {{/if}}
 
-        <div class="info-card">
+        <div class="info-card {{~#if item.data.preparation.prepared}} equipped {{/if}}{{#if (eq data.preparation.mode 'always')}} alwaysPrepared{{/if}}" data-item-id="{{item._id}}">
           <p class="info-card-name">{{item.name}}</p>
           <div class="info-card-states">
             <span><!-- <i class="fas fa-hat-wizard"></i><b>{{localize 'DND5E.SpellSchool'}}:</b>  -->{{labels.school}}</span>
@@ -74,14 +66,12 @@
             <span><i class="fas fa-bolt"></i><b>{{localize 'DND5E.Charges'}}:</b> {{item.data.uses.value}}/{{item.data.uses.max}}</span>
             {{/if}}
           </div>
-
-          <div class="info-card-description">
-            <!-- item description -->
+          <div class="description-wrap">
+            <div class="info-card-description">
+              <!-- item description -->
+            </div>
           </div>
-
-          <div class="info-card-hint">
-            <span><i class="fas fa-mouse"></i> middle mouse click for full item info.</span>
-          </div>
+				  <article class="mod-roll-buttons"></article>
         </div>
 
         {{#if ../../owner}}
@@ -91,7 +81,7 @@
         <div class="item-controls context-menu">
           <hr class="context-divider">
           {{#if (and section.canPrepare (ne data.preparation.mode 'always')) }}
-          <a class="item-control item-toggle {{item.toggleClass}}"><i class="fas fa-book icon-on"></i><i class="fas fa-book icon-off"></i> {{item.toggleTitle}}</a>
+          <a class="item-control item-toggle {{item.toggleClass}}"><i class="fas fa-book icon-on"></i><i class="fas fa-book icon-off"></i> {{#if (eq item.toggleClass 'active')}}{{localize 'TIDY5E.Unprepare'}}{{else}}{{localize 'TIDY5E.Prepare'}}{{/if}}</a>
           {{/if}}
           <hr class="context-divider">
           <a class="item-control item-edit" title="{{localize 'TIDY5E.EditSpell'}}"><i class="fas fa-pencil-alt"></i> {{localize 'TIDY5E.EditSpell'}}</a>

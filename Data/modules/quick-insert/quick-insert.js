@@ -5,8 +5,6 @@ const SAVE_SETTINGS_REVISION = 1;
 var settings;
 (function (settings) {
     settings["QUICKOPEN"] = "quickOpen";
-    settings["SEARCH_ANYWHERE_COMPAT"] = "searchAnywhereCompatible";
-    settings["LIST_STYLE"] = "listStyle";
     settings["ENABLE_GLOBAL_CONTEXT"] = "enableGlobalContext";
     settings["INDEXING_DISABLED"] = "indexingDisabled";
     settings["FILTERS_CLIENT"] = "filtersClient";
@@ -15,7 +13,9 @@ var settings;
     settings["FILTERS_SHEETS_ENABLED"] = "filtersSheetsEnabled";
     settings["GM_ONLY"] = "gmOnly";
     settings["INDEX_GUARD_ENABLED"] = "indexGuardEnabled";
-    settings["INDEX_DEFERRED_DELAY"] = "indexDeferredDelay";
+    settings["AUTOMATIC_INDEXING"] = "automaticIndexing";
+    settings["INDEX_TIMEOUT"] = "indexTimeout";
+    settings["SEARCH_BUTTON"] = "searchButton";
 })(settings || (settings = {}));
 const noop = () => {
     return;
@@ -45,21 +45,42 @@ const moduleSettings = [
         default: false,
         scope: "world",
     },
-    // {
-    //   setting: settings.INDEX_DEFERRED_DELAY,
-    //   name: "QUICKINSERT.SettingsIndexDeferredDelay",
-    //   hint: "QUICKINSERT.SettingsIndexDeferredDelayHint",
-    //   type: Number,
-    //   choices: {
-    //     0: "QUICKINSERT.SettingsIndexDeferredDelayImmediate",
-    //     500: "QUICKINSERT.SettingsIndexDeferredDelay05s",
-    //     1000: "QUICKINSERT.SettingsIndexDeferredDelay1s",
-    //     2000: "QUICKINSERT.SettingsIndexDeferredDelay2s",
-    //     "-1": "QUICKINSERT.SettingsIndexDeferredDelayOnFirstOpen",
-    //   },
-    //   default: 1000,
-    //   scope: "world",
-    // },
+    {
+        setting: settings.AUTOMATIC_INDEXING,
+        name: "QUICKINSERT.SettingsAutomaticIndexing",
+        hint: "QUICKINSERT.SettingsAutomaticIndexingHint",
+        type: Number,
+        choices: {
+            3000: "QUICKINSERT.SettingsAutomaticIndexing3s",
+            5000: "QUICKINSERT.SettingsAutomaticIndexing5s",
+            10000: "QUICKINSERT.SettingsAutomaticIndexing10s",
+            "-1": "QUICKINSERT.SettingsAutomaticIndexingOnFirstOpen",
+        },
+        default: -1,
+        scope: "client",
+    },
+    {
+        setting: settings.INDEX_TIMEOUT,
+        name: "QUICKINSERT.SettingsIndexTimeout",
+        hint: "QUICKINSERT.SettingsIndexTimeoutHint",
+        type: Number,
+        choices: {
+            1500: "QUICKINSERT.SettingsIndexTimeout1_5s",
+            3000: "QUICKINSERT.SettingsIndexTimeout3s",
+            7000: "QUICKINSERT.SettingsIndexTimeout7s",
+            9500: "QUICKINSERT.SettingsIndexTimeou9_5s",
+        },
+        default: 1500,
+        scope: "world",
+    },
+    {
+        setting: settings.SEARCH_BUTTON,
+        name: "QUICKINSERT.SettingsSearchButton",
+        hint: "QUICKINSERT.SettingsSearchButtonHint",
+        type: Boolean,
+        default: false,
+        scope: "client",
+    },
     {
         setting: settings.QUICKOPEN,
         name: "QUICKINSERT.SettingsQuickOpen",
@@ -88,7 +109,7 @@ const moduleSettings = [
             packs: {},
         },
         scope: "world",
-        config: false,
+        config: false, // Doesn't show up in config
     },
     {
         setting: settings.FILTERS_CLIENT,
@@ -99,7 +120,7 @@ const moduleSettings = [
             disabled: [],
             filters: [],
         },
-        config: false,
+        config: false, // Doesn't show up in config
     },
     {
         setting: settings.FILTERS_WORLD,
@@ -110,7 +131,7 @@ const moduleSettings = [
             filters: [],
         },
         scope: "world",
-        config: false,
+        config: false, // Doesn't show up in config
     },
     {
         setting: settings.FILTERS_SHEETS,
@@ -118,7 +139,7 @@ const moduleSettings = [
         type: Object,
         default: {},
         scope: "world",
-        config: false,
+        config: false, // Doesn't show up in config
     },
 ];
 function registerSetting(callback, { setting, ...options }) {
@@ -212,6 +233,7 @@ const IndexedEntityTypes = [
     // EntityType.PLAYLIST, // TODO: Play on selection? Open sidebar?
     EntityType.ROLLTABLE,
     EntityType.SCENE,
+    // EntityType.USER,
 ];
 const EntityCollections = {
     [EntityType.ACTOR]: "actors",
@@ -223,6 +245,7 @@ const EntityCollections = {
     [EntityType.SCENE]: "scenes",
     [EntityType.USER]: "users",
 };
+const ignoredFolderNames = { _fql_quests: true };
 function enabledEntityTypes() {
     const disabled = getSetting(settings.INDEXING_DISABLED);
     return IndexedEntityTypes.filter(t => 
@@ -239,6 +262,10 @@ function packEnabled(pack) {
     // Pack enabled?
     //@ts-ignore
     if (disabled?.packs?.[pack.collection]?.includes(game.user.role)) {
+        return false;
+    }
+    // Pack entity type indexed?
+    if (!IndexedEntityTypes.includes(pack.entity)) {
         return false;
     }
     // Not hidden?
@@ -311,8 +338,16 @@ class EntitySearchItem extends SearchItem {
     }
     static fromEntities(entities) {
         return entities
-            .filter(e => e.visible)
-            .map(entity => new EntitySearchItem(entity));
+            .filter(e => {
+            return e.visible && !(e.folder && ignoredFolderNames[e.folder.name]);
+        })
+            .map(this.fromEntity);
+    }
+    static fromEntity(entity) {
+        if (ui["PDFoundry"] && "pdfoundry" in entity.data.flags) {
+            return new PDFoundySearchItem(entity);
+        }
+        return new EntitySearchItem(entity);
     }
     // Get the draggable attributes in order to make custom elements
     get draggableAttrs() {
@@ -352,12 +387,24 @@ class EntitySearchItem extends SearchItem {
         (await this.get())?.sheet.render(true);
     }
     async get() {
-        return game[EntityCollections[this.entityType]].get(this.id);
+        return getCollectionFromType(this.entityType).get(this.id);
+    }
+}
+class PDFoundySearchItem extends EntitySearchItem {
+    get icon() {
+        return `<img class="pdf-thumbnail" src="modules/pdfoundry/assets/pdf_icon.svg" alt="PDF Icon">`;
+    }
+    get journalLink() {
+        return `@PDF[${this.name}|page=1]{${this.name}}`;
+    }
+    async show() {
+        const entity = await this.get();
+        ui?.PDFoundry.openPDFByName(this.name, { entity });
     }
 }
 class CompendiumSearchItem extends SearchItem {
     constructor(pack, item) {
-        super(item.id || item._id, item.name, item.img);
+        super(item._id, item.name, item.img);
         this.package = pack.collection;
         this.packageName = pack?.metadata?.label || pack.title;
         this.entityType = pack.entity;
@@ -408,10 +455,10 @@ class CompendiumSearchItem extends SearchItem {
     }
 }
 function isEntity(item) {
-    return item.constructor.name === "EntitySearchItem";
+    return item instanceof EntitySearchItem;
 }
 function isCompendiumEntity(item) {
-    return item.constructor.name === "CompendiumSearchItem";
+    return item instanceof CompendiumSearchItem;
 }
 class FuseSearchIndex {
     constructor() {
@@ -460,8 +507,7 @@ class SearchLib {
     }
     indexDefaults() {
         for (const type of enabledEntityTypes()) {
-            const coll = EntityCollections[type];
-            this.index.addAll(EntitySearchItem.fromEntities(game[coll].entities));
+            this.index.addAll(EntitySearchItem.fromEntities(getCollectionFromType(type).entities));
         }
     }
     addItem(item) {
@@ -497,7 +543,7 @@ function formatMatch(result, formatFn) {
 async function* loadIndexes(refresh) {
     // Information about failures
     const failures = {};
-    const timeout = globalThis.QuickInsert.config.timeout ?? 1500;
+    const timeout = getSetting(settings.INDEX_TIMEOUT);
     const packsRemaining = [];
     for (const pack of game.packs) {
         if (packEnabled(pack)) {
@@ -544,6 +590,9 @@ async function* loadIndexes(refresh) {
             errorCount: failures[pack.collection].errors,
         };
     }
+}
+function getCollectionFromType(type) {
+    return game[EntityCollections[type]];
 }
 
 var FilterType;
@@ -642,11 +691,11 @@ class SearchFilterCollection {
                 id: EntityCollections[type],
                 type: FilterType.Default,
                 tag: EntityCollections[type],
-                subTitle: `${game.i18n.localize(`ENTITY.${game[EntityCollections[type]].entity}`)}`,
+                subTitle: `${game.i18n.localize(`ENTITY.${getCollectionFromType(type).entity}`)}`,
                 filterConfig: {
                     folders: "any",
                     compendiums: "any",
-                    entities: [game[EntityCollections[type]].entity],
+                    entities: [getCollectionFromType(type).entity],
                 },
             };
         }));
@@ -660,11 +709,11 @@ class SearchFilterCollection {
                 id: `dir.${EntityCollections[type]}`,
                 type: FilterType.Default,
                 tag: `dir.${EntityCollections[type]}`,
-                subTitle: game[EntityCollections[type]].directory?.title,
+                subTitle: getCollectionFromType(type).directory?.title,
                 filterConfig: {
                     folders: "any",
                     compendiums: [],
-                    entities: [game[EntityCollections[type]].entity],
+                    entities: [getCollectionFromType(type).entity],
                 },
             };
         }));
@@ -948,6 +997,10 @@ class CharacterSheetContext extends SearchContext {
         if (typeof item == "string")
             return;
         fromUuid(item.uuid).then(e => {
+            if (isNewerVersion(game.data.version, "0.7.8")) {
+                //@ts-ignore
+                return this.entitySheet._onDropItem({}, e);
+            }
             if (isNewerVersion(game.data.version, "0.6.9")) {
                 //@ts-ignore
                 return this.entitySheet._onDropItemCreate(e);
@@ -1001,13 +1054,6 @@ class EmbeddedContext extends BrowseContext {
 
 // Module singleton class that contains everything
 class QuickInsertCore {
-    constructor() {
-        // The config is not for user settings, but for programmatic config,
-        // e.g. depending on the system compendium sizes
-        this.config = {
-            indexTimeout: 1500,
-        };
-    }
     matchBoundKeyEvent(event) {
         if (this.app.embeddedMode || !event)
             return false;
@@ -1017,7 +1063,9 @@ class QuickInsertCore {
             keySetting = keySetting + "  ";
         }
         const key = window.Azzu.SettingsTypes.KeyBinding.parse(keySetting);
-        if (key.key === " " && canvas.controls?.ruler?.waypoints?.length > 0) {
+        if (key.key === " " &&
+            canvas.ready &&
+            canvas.controls?.ruler?.waypoints?.length > 0) {
             return false;
         }
         return (window.Azzu.SettingsTypes.KeyBinding.eventIsForBinding(event, key) &&
@@ -1027,6 +1075,14 @@ class QuickInsertCore {
     }
     open(context) {
         this.app.render(true, { context });
+    }
+    toggle(context) {
+        if (this.app.open) {
+            this.app.closeDialog();
+        }
+        else {
+            this.open(context);
+        }
     }
     search(text, filter = null, max = 100) {
         return this.searchLib.search(text, filter, max);
@@ -1049,7 +1105,7 @@ async function loadSearchIndex(refresh) {
     QuickInsert.filters.resetFilters();
     QuickInsert.filters.loadDefaultFilters();
     QuickInsert.filters.loadSave();
-    console.log("Quick Insert | Indexing compendiums...");
+    console.log(`Quick Insert | Indexing compendiums with timeout set to ${getSetting(settings.INDEX_TIMEOUT)}ms`);
     await QuickInsert.searchLib.indexCompendiums(refresh);
     console.log(`Quick Insert | Search index and filters completed. Indexed ${
     // @ts-ignore
@@ -1293,10 +1349,10 @@ function cloneFilterConfig(original) {
 class FilterList extends FormApplication {
     constructor(object, options = {}) {
         super(object, options);
-        this.editors = {};
+        this.filterEditors = {};
         this.onFiltersUpdated = () => {
             this.render(true);
-            Object.entries(this.editors).forEach(([id, editor]) => {
+            Object.entries(this.filterEditors).forEach(([id, editor]) => {
                 editor.filter = QuickInsert.filters.getFilter(id);
                 editor.rendered && editor.render(true);
             });
@@ -1370,10 +1426,10 @@ class FilterList extends FormApplication {
         });
     }
     editFilter(id) {
-        if (!this.editors[id]) {
-            this.editors[id] = new FilterEditor(QuickInsert.filters.filters.find(f => f.id === id));
+        if (!this.filterEditors[id]) {
+            this.filterEditors[id] = new FilterEditor(QuickInsert.filters.filters.find(f => f.id === id));
         }
-        this.editors[id].render(true);
+        this.filterEditors[id].render(true);
     }
     newFilter(original) {
         const scope = `
@@ -1449,6 +1505,9 @@ class FilterList extends FormApplication {
         else {
             Hooks.once("QuickInsert:FiltersUpdated", () => this.editFilter(newId));
         }
+    }
+    async _updateObject() {
+        return;
     }
 }
 
@@ -1566,7 +1625,7 @@ const ENTITYACTIONS = {
                 return new CompendiumSearchItem(pack, indexItem);
             }
             else {
-                const entity = game[EntityCollections[res.collection]].get(res.resultId);
+                const entity = getCollectionFromType(res.collection).get(res.resultId);
                 return new EntitySearchItem(entity);
             }
         }
@@ -2547,6 +2606,9 @@ class SearchApp extends Application {
             }
         };
     }
+    get open() {
+        return this._state > 0;
+    }
     get searchMode() {
         if (this.mode === ActiveMode.Filter) {
             return this.searchFiltersMode;
@@ -2966,33 +3028,43 @@ Hooks.once("ready", function () {
         if (QuickInsert.matchBoundKeyEvent(evt)) {
             evt.stopPropagation();
             evt.preventDefault();
-            QuickInsert.open();
+            QuickInsert.toggle();
         }
     });
     enabledEntityTypes().forEach(type => {
         Hooks.on(`create${type}`, entity => {
             if (!entity.visible)
                 return;
-            QuickInsert.searchLib?.addItem(new EntitySearchItem(entity));
+            QuickInsert.searchLib?.addItem(EntitySearchItem.fromEntity(entity));
         });
         Hooks.on(`update${type}`, entity => {
             if (!entity.visible) {
                 QuickInsert.searchLib?.removeItem(entity.uuid);
                 return;
             }
-            QuickInsert.searchLib?.replaceItem(new EntitySearchItem(entity));
+            QuickInsert.searchLib?.replaceItem(EntitySearchItem.fromEntity(entity));
         });
         Hooks.on(`delete${type}`, entity => {
             QuickInsert.searchLib?.removeItem(entity.uuid);
         });
     });
     console.log("Quick Insert | Search Application ready");
-    // const deferredDelay = getSetting(settings.INDEX_DEFERRED_DELAY);
-    // if (deferredDelay != -1) {
-    //   setTimeout(() => {
-    //     loadSearchIndex(false);
-    //   }, getSetting(settings.INDEX_DEFERRED_DELAY));
-    // }
+    const indexDelay = getSetting(settings.AUTOMATIC_INDEXING);
+    if (indexDelay != -1) {
+        setTimeout(() => {
+            console.log("Quick Insert | Automatic indexing initiated");
+            loadSearchIndex(false);
+        }, getSetting(settings.AUTOMATIC_INDEXING));
+    }
+});
+Hooks.on("renderSceneControls", (controls, html) => {
+    if (!getSetting(settings.SEARCH_BUTTON))
+        return;
+    const searchBtn = $(`<li class="scene-control" title="Quick Insert" class="quick-insert-open">
+          <i class="fas fa-search"></i>
+      </li>`);
+    html.append(searchBtn);
+    searchBtn.on("click", () => QuickInsert.open());
 });
 // Exports and API usage
 globalThis.QuickInsert = QuickInsert;

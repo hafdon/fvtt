@@ -160,6 +160,14 @@ export class ActionHandlerPf2e extends ActionHandler {
         let longRestValue = ['utility', tokenId, 'longRest'].join(this.delimiter);
         let longRestAction = {id: 'longRest', name: this.i18n('tokenactionhud.restNight'), encodedValue: longRestValue}
         restActions.push(longRestAction)
+
+        if (game.settings.get('pf2e', 'staminaVariant')) {
+            let takeBreatherValue = ['utility', tokenId, 'takeABreather'].join(this.delimiter);
+            let takeBreatherAction = {id: 'takeABreather', name: this.i18n('tokenactionhud.takeBreather'), encodedValue: takeBreatherValue};
+
+            restActions.push(takeBreatherAction);
+        }
+
         rests.actions = restActions;
 
         const utilityName = this.i18n('tokenactionhud.utility');
@@ -246,7 +254,7 @@ export class ActionHandlerPf2e extends ActionHandler {
     }
 
     /** @private */
-    _addStrikesCategories(actor, tokenId, category, info) {
+    _addStrikesCategories(actor, tokenId, category) {
         let macroType = 'strike';
         let strikes = actor.data.data.actions?.filter(a => a.type === macroType);
         if (actor.data.type === 'character')
@@ -291,11 +299,32 @@ export class ActionHandlerPf2e extends ActionHandler {
             subcategory.actions.push({name: this.i18n('tokenactionhud.damage'), encodedValue: damageEncodedValue, id: encodeURIComponent(s.name+'>damage')})
             subcategory.actions.push({name: this.i18n('tokenactionhud.critical'), encodedValue: critEncodedValue, id: encodeURIComponent(s.name+'>critical')})
             
-            if (info)
-                subcategory.info1 = info;
-                
+            let ammoAction = this._ammoInfo(tokenId, actor, s);
+            if (!!ammoAction) {
+                subcategory.actions.push(ammoAction);   
+            }
+            
             this._combineSubcategoryWithCategory(category, s.name, subcategory);
         });
+    }
+
+    /** @private */
+    _ammoInfo(tokenId, actor, strike) {
+        if (!strike.selectedAmmoId)
+            return;
+        
+        const item = actor.getOwnedItem(strike.selectedAmmoId);
+
+        if (!item) {
+            return {name: this.i18n('tokenactionhud.noammo'), encodedValue: 'noammo', id: 'noammo'};
+        }
+
+        let encodedValue = ['ammo', tokenId, item._id].join(this.delimiter);
+        let img = this._getImage(item);
+        let action = { name: item.name, encodedValue: encodedValue, id: item._id, img: img };
+        action.info1 = item.data.data.quantity?.value
+
+        return action;
     }
 
     /** @private */
@@ -364,13 +393,17 @@ export class ActionHandlerPf2e extends ActionHandler {
         let result = Object.values(spells);
 
         result.sort((a,b) => {
-            if (a.data.data.level.value === b.data.data.level.value)
+            if (this._getSpellLevel(a) === this._getSpellLevel(b))
                 return a.name.toUpperCase().localeCompare(b.name.toUpperCase(), undefined, {sensitivity: 'base'});
-            return a.data.data.level.value - b.data.data.level.value;
+            return this._getSpellLevel(a) - this._getSpellLevel(b);
         });
 
         return result;
     }    
+
+    _getSpellLevel(spellItem) {
+        return !!spellItem.data.data.heightenedLevel?.value ? parseInt(spellItem.data.data.heightenedLevel.value) : parseInt(spellItem.data.data.level.value);
+    }
     
     /** @private */
     _categoriseSpells(actor, tokenId, spells) {
@@ -440,7 +473,7 @@ export class ActionHandlerPf2e extends ActionHandler {
         })
 
         spells.forEach( function(s) {
-            var level = s.data.data.level.value;
+            var level = this._getSpellLevel(s);
             var spellbookId = s.data.data.location?.value;
 
             let spellbook;
@@ -614,31 +647,12 @@ export class ActionHandlerPf2e extends ActionHandler {
         let result = this.initializeEmptyCategory('saves');
 
         let actorSaves = actor.data.data.saves;
-        let saveMap = Object.keys(actorSaves).map(k => { return {_id: k, name: CONFIG.PF2E.saves[k]}});
+        let saveMap = Object.keys(actorSaves).map(k => { return {_id: k, name: game.i18n.localize(CONFIG.PF2E.saves[k])}});
 
         let saves = this.initializeEmptySubcategory();
         saves.actions = this._produceActionMap(tokenId, saveMap, 'save');
 
         this._combineSubcategoryWithCategory(result, this.i18n('tokenactionhud.saves'), saves);
-
-        return result;
-    }
-
-    /** @private */
-    _getAbilityList(actor, tokenId) {
-        let result = this.initializeEmptyCategory('abilities');
-
-        let abbr = settings.get('abbreviateSkills');
-
-        let actorAbilities = actor.data.data.abilities;
-        let abilityMap = Object.keys(actorAbilities).map(k => { 
-            let name = abbr ? k.charAt(0).toUpperCase() + k.slice(1) : CONFIG.PF2E.abilities[k];
-            return {_id: k, name: name}});
-
-        let abilities = this.initializeEmptySubcategory();
-        abilities.actions = this._produceActionMap(tokenId, abilityMap, 'ability');
-
-        this._combineSubcategoryWithCategory(result, this.i18n('tokenactionhud.abilities'), abilities);
 
         return result;
     }
@@ -709,6 +723,14 @@ export class ActionHandlerPf2e extends ActionHandler {
             let longRestValue = ['utility', tokenId, 'longRest'].join(this.delimiter);
             let longRestAction = {id: 'longRest', name: this.i18n('tokenactionhud.restNight'), encodedValue: longRestValue}
             restActions.push(longRestAction)
+
+            if (game.settings.get('pf2e', 'staminaVariant')) {
+                let takeBreatherValue = ['utility', tokenId, 'takeABreather'].join(this.delimiter);
+                let takeBreatherAction = {id: 'takeABreather', name: this.i18n('tokenactionhud.takeBreather'), encodedValue: takeBreatherValue};
+
+                restActions.push(takeBreatherAction);
+            }
+
             rests.actions = restActions;
             
             this._combineSubcategoryWithCategory(result, this.i18n('tokenactionhud.rests'), rests);

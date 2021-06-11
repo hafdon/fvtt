@@ -1,5 +1,65 @@
 # CHANGELOG
 
+## [1.0.9] 2021-04-07
+
+### FIXED
+
+- Fixed an issue that would cause the other formula "Auto Roll" button in the item sheet to not work correctly.
+
+## [1.0.8] 2021-03-31
+
+### CHANGED
+
+- Ensure that that item cards with embedded check rolls add the proper core dnd5e flags to indicate roll type.
+  - This should increase compatibility with other modules which key off of that flag
+
+## [1.0.7] 2021-03-27
+
+### API
+
+- `patchedRollDamage` now matches the return signature of the original `rollDamage` method.
+  - Previously it would return an array of damage part rolls, now it returns a single roll containing the combined results of all individual part rolls.
+  - This is a breaking API change, but should not affect normal users.
+
+### FIXED
+
+- Fixed an issue that would cause some options passed to d20 roll functions to be overwritten.
+
+## [1.0.6] 2021-03-24
+
+### CHANGED
+
+- When auto roll checks is on, and the user quits out of the roll dialog for the check without rolling, abort the item roll.
+
+### FIXED
+
+- Fixed an issue that would cause items without attack rolls to ignore the critical modifier key for auto damage rolls.
+
+## [1.0.5] 2021-02-23
+
+### FIXED
+
+- Fixed an issue that would cause tools or other items that don't have damage to not show in character sheets
+- Fixed an issue that would cause weapons with versatile damage to have an empty primary formula group when MRE was first enabled or the item was first imported.
+- Fixed an issue that would prevent damage from rolling as critical damage when auto roll checks and auto roll damage were both enabled.
+- Fixed an issue that would cause auto damage to be rolled as critical when holding the advantage modifier key to roll the auto attack roll with advantage.
+
+## [1.0.4] 2021-02-19
+
+### FIXED
+
+- Fixed an issue that would prevent the formula group config from being edited if there was one or fewer formula groups, or one or fewer damage formulae on the item.
+
+### CHANGED
+
+- When the first damage formula is added to an item, or if an item does not have any formulae assigned to any formula groups, assign all formulae to the first formula group.
+
+## [1.0.3] 2021-02-13
+
+### FIXED
+
+- Fixed an issue that would prevent items which had been destroyed on consumption from working correctly
+
 ## [1.0.2] 2021-01-26
 
 ### FIXED

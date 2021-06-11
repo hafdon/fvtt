@@ -1,20 +1,23 @@
 import { useAbilitySave, daeCreateActiveEffectActions, daeDeleteActiveEffectActions, displayTraits } from "./dae.js";
 //@ts-ignore
 // import {d20Roll} from "../../../systems/dnd5e/module/dice.js";
-import { debug, log, warn, } from "../dae.js";
+import { debug, log, error, warn, } from "../dae.js";
 function rollAbilitySave(abilityId, options = { event, fastForward: null, advantage: null, disadvantage: null }) {
     const label = CONFIG.DND5E.abilities[abilityId];
     const abl = this.data.data.abilities[abilityId];
-    const parts = ["@save"];
+    if (!abl) {
+        error("rollAbilitySave: ability not specified");
+        return undefined;
+    }
     const data = this.getRollData();
+    const parts = ["@save"];
     // data = {save: abl.save}; // TP use abl.save rather than abl.mod
     data.save = abl.save;
     // Include a global actor ability save bonus - if it is numberic it has already been included
     const actorBonus = getProperty(this.data.data.bonuses, "abilities.save");
-    //@ts-ignore
-    if (!!actorBonus && !Number.isNumeric(actorBonus)) {
+    data.save -= abl.saveBonus; // this was added in prepareDerivedData
+    if (!!actorBonus) {
         parts.push("@saveBonus");
-        //@ts-ignore
         data.saveBonus = actorBonus;
     }
     // Add provided extra roll parts now because they will get clobbered by mergeObject below
@@ -32,13 +35,7 @@ function rollAbilitySave(abilityId, options = { event, fastForward: null, advant
         parts: parts,
         data: data,
         title: game.i18n.format(savePromptTitle, { ability: label }),
-        messageData,
-        //@ts-ignore shfitKey
-        fastForward: options.fastForward || options.disadvantage || options.advantage || (options.event?.shiftKey || options.event?.ctrlKey || options.event?.altKey || options.event?.metaKey),
-        //@ts-ignore altKey
-        advantage: options.advantage || options.event?.altKey,
-        //@ts-ignore ctrlKey
-        disadvantage: options.disadvantage || options.event?.ctrlKey || options.event?.metaKey,
+        messageData
     });
     //@ts-ignore
     if (game.system.id !== "sw5e")
@@ -215,13 +212,14 @@ export async function patchingInitSetup() {
 }
 // Allow limited recursion of the formula replace function for things like
 // bonuses.heal.damage in spell formulas.
-function replaceFormulaData(wrapped, formula, ...args) {
+export function replaceFormulaData(wrapped, ...args) {
+    let [formula, data, { missing = "", warn = false } = {}] = args;
     let result = formula;
     const maxIterations = 3;
     for (let i = 0; i < maxIterations; i++) {
         if (!result.includes("@"))
             break;
-        result = wrapped(result, ...args);
+        result = wrapped(result, data, { missing, warn });
     }
     return result;
 }

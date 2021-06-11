@@ -218,8 +218,9 @@ let deleteEffects = async (targets, origin) => {
         if (!targetActor) {
             error("could not find actor for ", idData);
         }
-        const effectsToDelete = targetActor.effects.filter(ef => ef.data.origin === origin);
-        targetActor.deleteEmbeddedEntity("ActiveEffect", effectsToDelete.map(ef => ef.id));
+        const effectsToDelete = targetActor.effects?.filter(ef => ef.data.origin === origin);
+        if (effectsToDelete?.length > 0)
+            await targetActor.deleteEmbeddedEntity("ActiveEffect", effectsToDelete.map(ef => ef.id));
     }
 };
 // delete a token from the specified scene and recreate it on the target scene.

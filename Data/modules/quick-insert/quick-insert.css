@@ -570,24 +570,20 @@
   a.item-create {
   flex: 1 0 auto;
 }
-.dnd5e.sheet.actor
-  .inventory-list
-  .inventory-header
-  .item-controls
-  a.quick-insert-link {
+
+.dnd5e.sheet.actor .items-list .item-controls a.quick-insert-link {
   flex: 0 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.dnd5e.sheet.actor
-  .inventory-list
-  .inventory-header
-  .item-controls
-  a.quick-insert-link
-  i::before {
+.dnd5e.sheet.actor .items-list .item-controls a.quick-insert-link i::before {
   font-size: 14px;
+}
+
+.dnd5e.sheet.actor .inventory-list .item-controls {
+  flex: 0 0 55px;
 }
 
 .tidy5e.sheet.actor

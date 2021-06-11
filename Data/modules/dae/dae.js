@@ -19,11 +19,12 @@ import { migrateItem, migrateActorItems, migrateAllActors, removeActorEffects, f
 import { ActiveEffects } from "./module/apps/ActiveEffects.js";
 import { patchingSetup, patchingInitSetup, patchSpecialTraits } from "./module/patching.js";
 import { DAEActiveEffectConfig } from "./module/apps/DAEActiveEffectConfig.js";
-import { teleportToToken, blindToken, restoreVision, setTokenVisibility, setTileVisibility, moveToken, renameToken, getTokenFlag, setTokenFlag, setFlag, unsetFlag, getFlag } from "./module/daeMacros.js";
+import { teleportToToken, blindToken, restoreVision, setTokenVisibility, setTileVisibility, moveToken, renameToken, getTokenFlag, setTokenFlag, setFlag, unsetFlag, getFlag, deleteActiveEffect } from "./module/daeMacros.js";
 export let setDebugLevel = (debugText) => {
     debugEnabled = { "none": 0, "warn": 1, "debug": 2, "all": 3 }[debugText] || 0;
     // 0 = none, warnings = 1, debug = 2, all = 3
-    CONFIG.debug.hooks = debugEnabled >= 3;
+    if (debugEnabled >= 3)
+        CONFIG.debug.hooks = true;
 };
 export var debugEnabled;
 // 0 = none, warnings = 1, debug = 2, all = 3
@@ -33,6 +34,7 @@ export let log = (...args) => console.log("dae | ", ...args);
 export let warn = (...args) => { if (debugEnabled > 0)
     console.warn("dae | ", ...args); };
 export let error = (...args) => console.error("dae | ", ...args);
+export let timelog = (...args) => warn("dae | ", Date.now(), ...args);
 export let i18n = key => {
     return game.i18n.localize(key);
 };
@@ -62,13 +64,6 @@ Hooks.once('ready', async function () {
     // setupDAEMacros();
     GMAction.readyActions();
     daeSpecialDurations = { "None": "" };
-    if (game.modules.get("midi-qol")?.active) {
-        daeSpecialDurations["1Action"] = i18n("dae.1Action");
-        daeSpecialDurations["1Attack"] = i18n("dae.1Attack");
-        daeSpecialDurations["1Hit"] = i18n("dae.1Hit");
-        daeSpecialDurations["isAttacked"] = i18n("dae.isAttacked");
-        daeSpecialDurations["isDamaged"] = i18n("dae.isDamaged");
-    }
     if (game.modules.get("times-up")?.active && isNewerVersion(game.modules.get("times-up").data.version, "0.0.9")) {
         daeSpecialDurations["turnStart"] = i18n("dae.turnStart");
         daeSpecialDurations["turnEnd"] = i18n("dae.turnEnd");
@@ -77,6 +72,35 @@ Hooks.once('ready', async function () {
             "startEveryTurn": i18n("dae.startEveryTurn"),
             "endEveryTurn": i18n("dae.endEveryTurn")
         };
+    }
+    if (game.modules.get("midi-qol")?.active) {
+        daeSpecialDurations["1Action"] = i18n("dae.1Action");
+        daeSpecialDurations["1Attack"] = i18n("dae.1Attack");
+        let attackTypes = ["mwak", "rwak", "msak", "rsak"];
+        if (game.system.id === "sw5e")
+            attackTypes = ["mwak", "rwak", "mpak", "rpak"];
+        attackTypes.forEach(at => {
+            daeSpecialDurations[`1Attack:${at}`] = `${CONFIG.DND5E.itemActionTypes[at]}: ${i18n("dae.1Attack")}`;
+        });
+        daeSpecialDurations["1Hit"] = i18n("dae.1Hit");
+        daeSpecialDurations["DamageDealt"] = i18n("dae.DamageDealt");
+        daeSpecialDurations["isAttacked"] = i18n("dae.isAttacked");
+        daeSpecialDurations["isDamaged"] = i18n("dae.isDamaged");
+        daeSpecialDurations["isSave"] = `${i18n("dae.isRollBase")} ${i18n("dae.isSaveDetail")}`;
+        daeSpecialDurations["isSaveSuccess"] = `${i18n("dae.isRollBase")} ${i18n("dae.isSaveDetail")}: ${i18n("dae.success")}`;
+        daeSpecialDurations["isSaveFailure"] = `${i18n("dae.isRollBase")} ${i18n("dae.isSaveDetail")}: ${i18n("dae.failure")}`;
+        daeSpecialDurations["isCheck"] = `${i18n("dae.isRollBase")} ${i18n("dae.isCheckDetail")}`;
+        daeSpecialDurations["isSkill"] = `${i18n("dae.isRollBase")} ${i18n("dae.isSkillDetail")}`;
+        Object.keys(CONFIG.DND5E.abilities).forEach(abl => {
+            daeSpecialDurations[`isSave.${abl}`] = `${i18n("dae.isRollBase")} ${CONFIG.DND5E.abilities[abl]} ${i18n("dae.isSaveDetail")}`;
+            daeSpecialDurations[`isCheck.${abl}`] = `${i18n("dae.isRollBase")} ${CONFIG.DND5E.abilities[abl]} ${i18n("dae.isCheckDetail")}`;
+        });
+        Object.keys(CONFIG.DND5E.damageTypes).forEach(dt => {
+            daeSpecialDurations[`isDamaged.${dt}`] = `${i18n("dae.isDamaged")}: ${CONFIG.DND5E.damageTypes[dt]}`;
+        });
+        Object.keys(CONFIG.DND5E.skills).forEach(skillId => {
+            daeSpecialDurations[`isSkill.${skillId}`] = `${i18n("dae.isRollBase")} ${i18n("dae.isSkillDetail")} ${CONFIG.DND5E.skills[skillId]}`;
+        });
     }
     patchSpecialTraits();
 });
@@ -122,10 +146,12 @@ Hooks.once('setup', function () {
         setFlag: setFlag,
         unsetFlag: unsetFlag,
         getFlag: getFlag,
+        deleteActiveEffect: deleteActiveEffect,
         migrateActorDAESRD: migrateActorDAESRD,
         migrateAllActorsDAESRD: migrateAllActorsDAESRD,
         migrateAllNPCDAESRD: migrateAllNPCDAESRD,
-        convertDuration
+        convertDuration,
+        confirmAction
     };
 });
 /* ------------------------------------ */
@@ -137,11 +163,11 @@ Hooks.once("ready", () => {
     if (!game.modules.get("lib-wrapper")?.active && game.user.isGM)
         ui.notifications.warn("The 'Dynamic effects using Active Effects' module recommends to install and activate the 'libWrapper' module.");
 });
-export function confirmAction(toCheck, confirmFunction) {
+export function confirmAction(toCheck, confirmFunction, title = i18n("dae.confirm")) {
     if (toCheck) {
         let d = new Dialog({
             // localize this text
-            title: i18n("dae.confirm"),
+            title,
             content: `<p>${i18n("dae.sure")}</p>`,
             buttons: {
                 one: {

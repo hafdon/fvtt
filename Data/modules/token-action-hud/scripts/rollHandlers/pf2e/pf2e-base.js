@@ -19,7 +19,7 @@ export class RollHandlerBasePf2e extends RollHandler {
         let tokenId = payload[1];
         let actionId = payload[2];
 
-        let renderable = ['item', 'feat', 'action', 'lore'];
+        let renderable = ['item', 'feat', 'action', 'lore', 'ammo'];
         if (renderable.includes(macroType) && this.isRenderItem())
             return this.doRenderItem(tokenId, actionId);
 
@@ -238,11 +238,9 @@ export class RollHandlerBasePf2e extends RollHandler {
         await actor.updateEmbeddedEntity("OwnedItem", update);
     }
 
-    
-
     /** @private */
     _rollSaveNpc(event, actor, actionId) {
-        actor.rollSave(event, actionId);
+        actor.data.data.saves[actionId].roll(event);
     }
 
     async _updateRollMode(rollMode) {
@@ -277,8 +275,24 @@ export class RollHandlerBasePf2e extends RollHandler {
             default:
                 options = actor.getRollOptions(['all', 'attack-roll']);
                 strike.variants[strikeType]?.roll(event, options);
+                this._consumeAmmo(actor, strike);
                 break;
         }
+    }
+
+    /** @private */
+    _consumeAmmo(actor, strike) {
+        if (!strike.selectedAmmoId)
+            return;
+            
+        const ammo = actor.getOwnedItem(strike.selectedAmmoId);
+
+        if (ammo.quantity < 1) {
+            ui.notifications.error(game.i18n.localize('PF2E.ErrorMessage.NotEnoughAmmo'));
+            return;
+        }
+            
+        ammo.consume();
     }
 
     /** @private */
@@ -455,6 +469,9 @@ export class RollHandlerBasePf2e extends RollHandler {
                 break;
             case 'longRest':
                 this._executeMacroByName('Rest for the Night');
+                break;
+            case 'takeABreather':
+                this._executeMacroByName('Take a Breather');
                 break;
             case 'toggleCombat':
                 token.toggleCombat();

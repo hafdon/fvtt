@@ -467,6 +467,7 @@ import {libWrapper} from './shim.js';
 				||	update.hasOwnProperty("dim")
 				||	update.hasOwnProperty("bright")
 				||	update.hasOwnProperty("distance")
+				||	update.hasOwnProperty("hidden")
 				)){
 				return;
 			}
@@ -572,7 +573,7 @@ import {libWrapper} from './shim.js';
 			const center = TokenAttacher.getCenter(type, data);
 			if(overrideData) data = mergeObject(data, overrideData);
 
-			pos = {base_id: getProperty(data, '_id'), xy: {x:data.x, y:data.y}, center: {x:center.x, y:center.y}, rotation:data.rotation ?? data.direction};
+			pos = {base_id: getProperty(data, '_id'), xy: {x:data.x, y:data.y}, center: {x:center.x, y:center.y}, rotation:data.rotation ?? data.direction, hidden: data.hidden};
 
 			if(!return_data) return base.setFlag(moduleName, "pos", pos);
 
@@ -1420,6 +1421,7 @@ import {libWrapper} from './shim.js';
 		}
 
 		static async deleteToken(entity, token_data, userId){
+			if(!TokenAttacher.isFirstActiveGM()) return;
 			const attached=getProperty(token_data, `flags.${moduleName}.attached`) || {};
 			if(Object.keys(attached).length == 0) return true;
 
@@ -1442,7 +1444,7 @@ import {libWrapper} from './shim.js';
 		static async updateAttachedCreatedToken(type, parent, entity, options, userId){
 			if(!TokenAttacher.isFirstActiveGM()) return;
 			const token = canvas.tokens.get(entity._id);
-
+			if(!token) return;
 			//Checks for multilevel tokens and v&m
 			if(getProperty(game, 'multilevel')) {
 				if(game.multilevel._isReplicatedToken(token)) token.unsetFlag(moduleName, 'attached');
@@ -1588,6 +1590,7 @@ import {libWrapper} from './shim.js';
 							}
 							let update = {
 								_id: base._id, 
+								hidden: getProperty(base, `flags.${moduleName}.pos.hidden`) ?? base.hidden, 
 								[`flags.${moduleName}.attached`]:new_attached, 
 								[`flags.${moduleName}.pos.base_id`]:base._id,
 								[`flags.${moduleName}.-=prototypeAttached`]: null,
@@ -1685,7 +1688,7 @@ import {libWrapper} from './shim.js';
 		}
 
 		static mapActorForExport(actor){
-			return {img:actor.data.img, name:actor.data.name, folder:actor.data.folder || null, token: actor.data.token};
+			return {img:actor.data.img, name:actor.data.name, folder:actor.data.folder || null, token: actor.data.token, flags: actor.data.flags};
 		}
 
 		static async getActorsWithPrototype(){
@@ -1799,7 +1802,7 @@ import {libWrapper} from './shim.js';
 			}
 			await Promise.all(allPromises);
 			actors.forEach(async actor => {
-				await Actor.create({type: game.system.entityTypes.Actor[0], img:actor.img, name:actor.name, folder:await parentMap[actor.folder].value, token: actor.token});
+				await Actor.create({type: game.system.entityTypes.Actor[0], img:actor.img, name:actor.name, folder:await parentMap[actor.folder].value, token: actor.token, flags: actor.flags});
 			});
 		}
 
@@ -1815,7 +1818,7 @@ import {libWrapper} from './shim.js';
 			let worldCompendium = await Compendium.create({label:label, name: name, entity:"Actor"});
 			let creates = [];
 			actors.forEach(async actor => {
-				creates.push({type: game.system.entityTypes.Actor[0], img:actor.img, name:actor.name, token: actor.token});
+				creates.push({type: game.system.entityTypes.Actor[0], img:actor.img, name:actor.name, token: actor.token, flags: actor.flags});
 			});
 			// if(!imported.hasOwnProperty('data-model') || imported['data-model'] !== game.settings.get(moduleName, "data-model-version")){
 			// 		//Maybe add some compendium migration code if necessary	

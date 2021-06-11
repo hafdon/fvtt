@@ -97,6 +97,33 @@
           </div>
         {{/if}}
 
+        
+        <div class="info-card {{~#if (or item.flags.magicitems.enabled item.data.properties.mgc)}} magic-item {{/if}} {{item.attunement.cls}} {{~#if item.data.equipped}} equipped {{/if}}" data-item-id="{{item._id}}">
+          <p class="info-card-name">{{item.name}}</p>
+          <div class="info-card-states">
+            {{~#if (or item.flags.magicitems.enabled item.data.properties.mgc)}}<span><i class="fas fa-magic"></i>Magic Item</span>{{/if}}
+            {{~#if item.attunement}}<span class="info-attuned {{item.attunement.cls}}"><i class="fas fa-sun"></i>{{localize item.attunement.title}}</span>{{/if}}
+          </div>
+          {{#if item.hasUses }}
+          <div class="info-card-amount">
+            <span><i class="fas fa-bolt"></i><b>{{localize 'DND5E.Charges'}}:</b> {{item.data.uses.value}}/{{item.data.uses.max}}</span>
+          </div>
+           {{/if}}
+          <div class="info-card-amount">
+            <!-- {{#if item.totalWeight}} {{/if}} -->
+            <span class="info-weight"><b>{{localize 'DND5E.Weight'}}:</b> {{ item.totalWeight }} {{localize "DND5E.AbbreviationLbs"}}</span>
+            <!-- {{#if item.data.quantity}} {{/if}} -->
+            <span class="info-quantity"><b>{{localize 'DND5E.Quantity'}}:</b> {{item.data.quantity}} &times; {{item.data.price}} {{localize 'TIDY5E.CurrencyAbbrGP'}}</span>
+          </div>
+          <div class="description-wrap">
+            <div class="info-card-description">
+              <!-- item description -->
+            </div>
+          </div>
+				  <article class="mod-roll-buttons"></article>
+        </div>
+
+
         {{#if ../../owner}}
         <div class="activate-context-menu">
           <i class="fas fa-ellipsis-v"></i>
@@ -106,11 +133,11 @@
 
           {{#if item.attunement}}
             <a class="item-control item-attunement {{#if (eq item.data.attunement 2) }}active{{/if}} {{item.attunement.cls}}" title="{{localize item.attunement.title}}">
-              <i class="fas fa-sun"></i> <span class="control-label">{{localize item.attunement.title}}</span>
+              <i class="fas fa-sun"></i> <span class="control-label">{{#if (eq item.data.attunement 2) }}{{localize "TIDY5E.Deattune"}}{{else}}{{localize "TIDY5E.Attune"}}{{/if}}</span>
             </a>
           {{/if}}
           {{#unless @root.isVehicle}}
-          <a class="item-control item-toggle {{item.toggleClass}}" title="{{item.toggleTitle}}">{{#if (eq item.toggleClass 'active')}}<i class="fas fa-user-alt"></i>{{else}}<i class="fas fa-user-alt inactive"></i>{{/if}} <span class="control-label">{{item.toggleTitle}}</span></a>
+          <a class="item-control item-toggle {{item.toggleClass}}" title="{{item.toggleTitle}}">{{#if (eq item.toggleClass 'active')}}<i class="fas fa-user-alt"></i> <span class="control-label">{{localize "TIDY5E.Unequip"}}</span>{{else}}<i class="fas fa-user-alt inactive"></i> <span class="control-label">{{localize "TIDY5E.Equip"}}</span>{{/if}}</a>
           {{/unless}}
 
           <hr class="context-divider">

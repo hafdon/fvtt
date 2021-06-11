@@ -7,9 +7,12 @@ SharedConsts.MODULE_NAME_FAKE = "srd5e";
 SharedConsts.MODULE_DIR = "./dist/plutonium";
 SharedConsts.MODULE_SCRIPT = "plutonium-main.js";
 
-SharedConsts.PACKS_CREATURES = "./packs/creatures.db";
-SharedConsts.PACKS_SPELLS = "./packs/spells.db";
-SharedConsts.PACKS_ITEMS = "./packs/items.db";
+SharedConsts.PACK_NAME_CREATURES = "creatures"
+SharedConsts.PACK_NAME_SPELLS = "spells"
+SharedConsts.PACK_NAME_ITEMS = "items"
+SharedConsts.PACK_CREATURES = `./packs/${SharedConsts.PACK_NAME_CREATURES}.db`;
+SharedConsts.PACK_SPELLS = `./packs/${SharedConsts.PACK_NAME_SPELLS}.db`;
+SharedConsts.PACK_ITEMS = `./packs/${SharedConsts.PACK_NAME_ITEMS}.db`;
 
 SharedConsts.MODULE_LOCATION = `modules/${SharedConsts.MODULE_NAME}`;
 

@@ -18,6 +18,15 @@ export const registerSettings = function () {
         name: game.i18n.localize("dae.useDAESheet.Name"),
         hint: game.i18n.localize("dae.useDAESheet.Hint"),
     });
+    game.settings.register("dae", "noDupDamageMacro", {
+        name: "dae.noDupDamageMacro.Name",
+        hint: "dae.noDupDamageMacro.Hint",
+        scope: "world",
+        default: false,
+        type: Boolean,
+        config: true,
+        onChange: fetchParams
+    });
     game.settings.register("dae", "expireRealTime", {
         name: "dae.expireRealTime.Name",
         hint: "dae.expireRealTime.Hint",
@@ -35,16 +44,6 @@ export const registerSettings = function () {
         onChange: fetchParams,
         name: game.i18n.localize("dae.displayTraits.Name"),
         hint: game.i18n.localize("dae.displayTraits.Hint"),
-    });
-    game.settings.register("dae", "playersCanSeeEffects", {
-        scope: "world",
-        default: "None",
-        config: true,
-        type: String,
-        choices: { none: "Never", view: "View Only", edit: "Edit" },
-        onChange: fetchParams,
-        name: game.i18n.localize("dae.playersCanSeeEffects.Name"),
-        hint: game.i18n.localize("dae.playersCanSeeEffects.Hint"),
     });
     game.settings.register("dae", "useAbilitySave", {
         name: game.i18n.localize("dae.useAbilitySave.Name"),
@@ -76,15 +75,6 @@ export const registerSettings = function () {
     game.settings.register("dae", "confirmDelete", {
         name: game.i18n.localize("dae.confirmDelete.Name"),
         hint: game.i18n.localize("dae.confirmDelete.Hint"),
-        scope: "world",
-        default: false,
-        type: Boolean,
-        config: true,
-        onChange: fetchParams
-    });
-    game.settings.register("dae", "ehnanceStatusEffects", {
-        name: "dae.enhanceStatusEffects.Name",
-        hint: "dae.enhanceStatusEffects.Hint",
         scope: "world",
         default: false,
         type: Boolean,

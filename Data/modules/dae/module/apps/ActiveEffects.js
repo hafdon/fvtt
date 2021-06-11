@@ -71,7 +71,7 @@ export class ActiveEffects extends FormApplication {
                     change.value = change.value.substring(0, 30) + " ... ";
                 }
                 else if (Array.isArray(change.value)) {
-                    if (change.value[0].length > 20)
+                    if (typeof change.value[0] === "string" && change.value[0].length > 20)
                         change.value[0] = "<Macro>";
                     change.value = change.value.join("|");
                 }
@@ -196,7 +196,7 @@ export class ActiveEffects extends FormApplication {
             if (effect_name === "new") {
                 //@ts-ignore
                 AEDATA = {
-                    label: "New Active Effect",
+                    label: this.object.name,
                     icon: this.object.img || "icons/svg/mystery-man.svg",
                     changes: [],
                     transfer: false,

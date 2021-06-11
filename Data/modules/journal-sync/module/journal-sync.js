@@ -1,17 +1,50 @@
 "use strict";
 import * as Constants from "./constants.js"
 import * as Logger from './logger.js'
-import * as FS from './journalFileSystem.js'
 
-let markdownSourcePath, journalEditorLink;
+let markdownPathOptions, markdownSourcePath, journalEditorLink, importWorldPath, exportWorldPath;
 let enableTracing = false;
 let newImportedFiles = "";
 let skippedJournalFolders, skippedJournalEntries;
 
+// parses the string back to something the FilePicker can understand as an option
+export function parse(str) {
+  let matches = str.match(/\[(.+)\]\s*(.+)/);
+  if (matches) {
+    let source = matches[1];
+    const current = matches[2].trim();
+    const [s3, bucket] = source.split(":");
+    if (bucket !== undefined) {
+      return {
+        activeSource: s3,
+        bucket: bucket,
+        current: current,
+      };
+    } else {
+      return {
+        activeSource: s3,
+        bucket: null,
+        current: current,
+      };
+    }
+  }
+  // failsave, try it at least
+  return {
+    activeSource: "data",
+    bucket: null,
+    current: str,
+  };
+}
+
 export async function fetchParams(silent = false) {
-    markdownSourcePath = game.settings.get(Constants.MODULE_NAME, "MarkdownSourcePath");
+    markdownPathOptions = parse(game.settings.get(Constants.MODULE_NAME, "MarkdownSourcePath"));
+    markdownSourcePath = markdownPathOptions.current;
+
     journalEditorLink = game.settings.get(Constants.MODULE_NAME, "JournalEditorLink");
     enableTracing = game.settings.get(Constants.MODULE_NAME, "EnableTracing");
+    
+    importWorldPath = game.settings.get(Constants.MODULE_NAME, "ImportWorldPath");
+    exportWorldPath = game.settings.get(Constants.MODULE_NAME, "ExportWorldPath");
 
     skippedJournalFolders = game.settings.get(Constants.MODULE_NAME, "SkipJournalFolders").split(',');
     skippedJournalEntries = game.settings.get(Constants.MODULE_NAME, "SkipJournalEntries").split(',');
@@ -53,7 +86,7 @@ export async function readyModule() {
     let buildPath = '';
     validMarkdownSourcePath().split('/').forEach((path) => {
         buildPath += path + '/';
-        FS.createDirectory("data", buildPath)
+        FilePicker.createDirectory(markdownPathOptions.activeSource, buildPath)
             .then((result) => {
                 Logger.log(`Creating ${buildPath}`);
             })
@@ -78,8 +111,8 @@ export async function readyModule() {
                 break;
 
             case "test": // /js test
-                FS.browse("data", validMarkdownSourcePath()).then((result) => {
-                    // ChatMessage.create({content: JSON.stringify(result)});
+                FilePicker.browse(markdownPathOptions.activeSource, "/").then((result) => {
+                     ChatMessage.create({content: JSON.stringify(result)});
                 });
 
                 console.log(game.journal);
@@ -150,17 +183,19 @@ export async function readyModule() {
 }
 
 async function startImport() {
-    await createJournalFolders(validMarkdownSourcePath(), null);
-    let result = await FS.browse("data", validMarkdownSourcePath());
+    await createJournalFolders(validMarkdownSourcePath()+validImportWorldPath(), null);
+    let result = await FilePicker.browse(markdownPathOptions.activeSource, validMarkdownSourcePath()+validImportWorldPath());
     for (let [key, file] of Object.entries(result.files)) {
-        await importFile(file);
+        if(isValidFile(file)) {
+            await importFile(file);
+        }
     }
     for (let [key, folder] of Object.entries(result.dirs)) {
         await importFolder(folder);
     }
 
     ui.notifications.info("Import completed");
-    // FS.browse("data", validMarkdownSourcePath()).then((result) => {
+    // FilePicker.browse(markdownPathOptions.activeSource, validMarkdownSourcePath()).then((result) => {
     //     console.log(result);
     //     result.files.forEach(file => {
     //         importFile(file);
@@ -175,12 +210,12 @@ async function startExport() {
     let journalFolders = await createFolderTree(game.folders.filter(f => (f.data.type === "JournalEntry") && f.displayed))
 
     journalFolders.forEach(folderEntity => {
-        exportFolder(folderEntity, validMarkdownSourcePath());
+        exportFolder(folderEntity, validMarkdownSourcePath()+validExportWorldPath());
     });
 
     game.journal.filter(f => (f.data.folder === "")).forEach((value, key, map) => {
         Logger.logTrace(`m[${key}] = ${value.data.name} - ${value.data.folder} - ${value.data.type}`);
-        exportJournal(value, validMarkdownSourcePath());
+        exportJournal(value, validMarkdownSourcePath()+validExportWorldPath());
     });
     ui.notifications.info("Export completed");
 }
@@ -188,8 +223,29 @@ async function startExport() {
 function validMarkdownSourcePath() {
     let validMarkdownSourcePath = markdownSourcePath.replace("\\", "/");
     validMarkdownSourcePath += validMarkdownSourcePath.endsWith("/") ? "" : "/";
-    validMarkdownSourcePath += game.world.name + "/";
+//  validMarkdownSourcePath += game.world.name + "/";
     return validMarkdownSourcePath;
+}
+
+function validImportWorldPath() {
+    let validImportWorldPath = importWorldPath == "" ? (game.world.name + "/") : importWorldPath;
+    validImportWorldPath += validImportWorldPath.endsWith("/") ? "" : "/";
+    return validImportWorldPath;
+}
+
+function validExportWorldPath() {
+    let validExportWorldPath = exportWorldPath == "" ? (game.world.name + "/") : exportWorldPath;
+    validExportWorldPath += validExportWorldPath.endsWith("/") ? "" : "/";
+    return validExportWorldPath;
+}
+
+function isValidFile(filename) {
+    return filename.endsWith('.md');
+}
+
+function isValidFileName(filename) {
+    var re = /^(?!\.)(?!com[0-9]$)(?!con$)(?!lpt[0-9]$)(?!nul$)(?!prn$)[^\|\*\?\\:<>/$"]*[^\.\|\*\?\\:<>/$"]+$/
+    return re.test(filename);
 }
 
 function generateJournalFileName(journalEntity) {
@@ -203,13 +259,13 @@ function getJournalIdFromFilename(fileName) {
 
 function getJournalTitleFromFilename(fileName) {
     // 'sdfkjs dflksjd kljf skldjf(IDIDIDIID).md
-    return fileName.replace(`(${getJournalIdFromFilename(fileName)}).md`, '');
+    // Remove the ID if i is there and any .md remaining so it is just the file name with no extension.
+    return fileName.replace(`(${getJournalIdFromFilename(fileName)}).md`, '').replace('.md', '');
 }
 
 function last(array) {
     return array[array.length - 1];
 }
-
 
 function hasJsonStructure(str) {
     if (typeof str !== 'string') return false;
@@ -225,10 +281,12 @@ function hasJsonStructure(str) {
 
 async function importFolder(importFolderPath) {
     Logger.logTrace(`Importing folder: ${importFolderPath}`);
-    let result = await FS.browse("data", importFolderPath);
+    let result = await FilePicker.browse(markdownPathOptions.activeSource, importFolderPath);
 
     for (let [key, file] of Object.entries(result.files)) {
-        await importFile(file);
+        if(isValidFile(file)) {
+            await importFile(file);
+        }
     }
 
     for (let [key, folder] of Object.entries(result.dirs)) {
@@ -239,7 +297,7 @@ async function importFolder(importFolderPath) {
 // This will create the journal folder in FVTT
 async function createJournalFolders(rootPath, parentFolderId) {
     Logger.logTrace(`createJournalFolders | Params(folder = ${rootPath} parent = ${parentFolderId})`)
-    let result = await FS.browse("data", rootPath)
+    let result = await FilePicker.browse(markdownPathOptions.activeSource, rootPath)
     for (let [key, folder] of Object.entries(result.dirs)) {
         let thisFolderName = last(decodeURIComponent(folder).split('/'));
         let folderDetails = game.folders.filter(f => (f.data.type === "JournalEntry") && (f.data.name === thisFolderName) && (f.data.parent === parentFolderId));
@@ -259,7 +317,12 @@ async function createJournalFolders(rootPath, parentFolderId) {
 
 async function importFile(file) {
     Logger.logTrace(`importFile | params(file = ${file})`);
-    var journalPath = decodeURIComponent(file).replace(validMarkdownSourcePath(), '').trim();
+    var journalPath = decodeURIComponent(file).replace(validMarkdownSourcePath()+validImportWorldPath(), '').trim();
+    var pathUrl = (journalPath.startsWith('https://') ? new URL(journalPath) : '')
+    if(pathUrl) {
+        var tempPathArray = pathUrl.pathname.split("/");
+        journalPath = tempPathArray.slice(2).join("/").replace(/\%20/gi," ");
+    }
     var journalId = getJournalIdFromFilename(journalPath).trim();
     var journalName = getJournalTitleFromFilename(last(journalPath.split('/'))).trim();
     var parentPath = journalPath.replace(last(journalPath.split('/')), '').trim();
@@ -285,7 +348,8 @@ async function importFile(file) {
 
     Logger.logTrace(`'${file}','${journalPath}','${journalId}','${journalName}','${parentPath}','${currentParent}'`);
 
-    fetch('/' + file).then(response => {
+    if(!pathUrl) file = '/' + file;
+    fetch(file).then(response => {
         response.text().then(journalContents => {
             let updated = false;
             let md = "";
@@ -306,7 +370,7 @@ async function importFile(file) {
             });
 
             if (!updated) {
-                Logger.log(`Creating ${journalPath} with ID ${journalId} named ${journalName}`);
+                Logger.log(`Creating ${journalPath} named ${journalName}`);
                 JournalEntry.create({ name: journalName, content: md, folder: currentParent }).then(journal => { journal.show(); });
                 ChatMessage.create({ content: `Added ${journalName}, please run export and delete '${journalName}.md'` });
             }
@@ -320,7 +384,21 @@ async function exportFolder(folder, parentPath) {
     let folderPath = (parentPath + '/' + folder.data.name).replace("//", "/").trim();
 
     // Create folder directory on server. 
-    FS.createDirectory("data", folderPath)
+    // Try and create parent path before child, have to catch error 
+    // as no way to check for folder existance that I saw.
+    FilePicker.createDirectory(markdownPathOptions.activeSource, parentPath)
+        .then((result) => {
+            Logger.log(`Creating ${parentPath}`);
+        })
+        .catch((error) => {
+            if (!error.includes("EEXIST")) {
+                Logger.log(error);
+            } else {
+                Logger.log(`${parentPath} exists`);
+            }
+        });
+
+    FilePicker.createDirectory(markdownPathOptions.activeSource, folderPath)
         .then((result) => {
             Logger.log(`Creating ${folderPath}`);
             folder.content.forEach(journalEntry => {
@@ -351,6 +429,11 @@ async function exportJournal(journalEntry, parentPath) {
         return;
     }
 
+    if(!isValidFileName(journalEntry.name)) {
+        ChatMessage.create({ content: `Unable to export:<br /> <strong>${parentPath}/${journalEntry.name}</strong><br />It has invalid character(s) in its name that can not be used in file names.<br /><br /> These characters are invalid: <pre>| * ? \ : < > $</pre><br />Please rename the Journal Entry and export again.` });
+    }
+    
+
     let md = "";
     let journalFileName = generateJournalFileName(journalEntry);
 
@@ -364,7 +447,10 @@ async function exportJournal(journalEntry, parentPath) {
         md = converter.makeMarkdown(journalEntry.data.content).split('\r\n');
     }
 
-    FS.upload("data", parentPath, new File(md, journalFileName), { bucket: null })
+    let blob = new Blob([md], {type: "text/markdown"});
+    let file = new File([blob], journalFileName, {type: "text/markdown"});
+
+    FilePicker.upload(markdownPathOptions.activeSource, parentPath, file, { bucket: null })
         .then((result) => {
             Logger.log(`Uploading ${parentPath}/${journalFileName}`);
         })

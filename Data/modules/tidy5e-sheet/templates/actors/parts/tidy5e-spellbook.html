@@ -30,13 +30,14 @@
         <div class="items-header-comps"  title="{{localize 'DND5E.SpellComponents'}}"><i class="fas fa-mortar-pestle"></i></div>
         <div class="items-header-school" title="{{localize 'DND5E.SpellSchool'}}"><i class="fas fa-hat-wizard"></i></div>
         <div class="items-header-target" title="{{localize 'DND5E.SpellTarget'}}">{{localize 'DND5E.Target'}}</div>
+        <div class="items-header-range" title="{{localize 'DND5E.SpellRange'}}">{{localize 'DND5E.Range'}}</div>
         <div class="items-header-usage" title="{{localize 'DND5E.SpellUsage'}}">{{localize 'DND5E.Usage'}}</div>
       </div>
     </li>
 
     <ul class="item-list">
       {{#each section.spells as |item i|}}
-      <li class="item {{#if ../../owner}}context-enabled{{/if}} {{~#if data.preparation.prepared}} prepared{{/if}}{{#if (eq data.preparation.mode 'always')}} alwaysPrepared{{/if}}" data-item-id="{{item._id}}" {{#if (eq data.preparation.mode 'always')}} title="{{item.toggleTitle}}"{{/if}}>
+      <li class="item {{#if ../../owner}}context-enabled{{/if}} {{~#if data.preparation.prepared}} prepared{{/if}}{{#if (eq data.preparation.mode 'always')}} alwaysPrepared{{/if}}" data-item-id="{{item._id}}">
         <div class="item-name rollable">
           <div class="item-image" style="background-image: url({{item.img}})">
             <i class="fa fa-dice-d20"></i>
@@ -65,14 +66,39 @@
           {{/each}}
         </div>
         <div class="item-detail spell-school" title="{{localize 'DND5E.SpellSchool'}}: {{labels.school}}"><span class="truncate">{{labels.school}}</span></div>
-        <div class="item-detail spell-target" title="{{localize 'DND5E.SpellTarget'}} | {{localize 'DND5E.Range'}}: {{labels.range}}">
+        <div class="item-detail spell-target" title="{{localize 'DND5E.Target'}}: {{labels.target}}">
           {{#if labels.target}}
           {{labels.target}}
           {{else}}{{ localize 'DND5E.None' }}
           {{/if}}
         </div>
+        <div class="item-detail spell-range" title="{{localize 'DND5E.Range'}}: {{labels.range}}">
+          {{labels.range}}
+        </div>
         <div class="item-detail spell-action" title="{{localize 'DND5E.SpellUsage'}}">{{labels.activation}}</div>
-
+        
+        <div class="info-card {{~#if item.data.preparation.prepared}} equipped {{/if}}{{#if (eq data.preparation.mode 'always')}} alwaysPrepared{{/if}}" data-item-id="{{item._id}}">
+          <p class="info-card-name">{{item.name}}</p>
+          <div class="info-card-states">
+            <span><!-- <i class="fas fa-hat-wizard"></i><b>{{localize 'DND5E.SpellSchool'}}:</b>  -->{{labels.school}}</span>
+            {{#if ../../owner}}
+            {{#if section.canPrepare}}
+              <span>{{item.toggleTitle}}</span>
+            {{/if}}
+            {{/if}}
+          </div>
+          <div class="info-card-amount">
+            {{#if item.hasUses }}
+            <span><i class="fas fa-bolt"></i><b>{{localize 'DND5E.Charges'}}:</b> {{item.data.uses.value}}/{{item.data.uses.max}}</span>
+            {{/if}}
+          </div>
+          <div class="description-wrap">
+            <div class="info-card-description">
+              <!-- item description -->
+            </div>
+          </div>
+				  <article class="mod-roll-buttons"></article>
+        </div>
 
         {{#if ../../owner}}
         <div class="activate-context-menu">
@@ -80,8 +106,8 @@
         </div>
         <div class="item-controls context-menu">
           <hr class="context-divider">
-          {{#if section.canPrepare}}
-          <a class="item-control item-toggle {{item.toggleClass}}" title="{{item.toggleTitle}}">{{#if (eq item.toggleClass 'active')}}<i class="fas fa-book"></i>{{else}}<i class="fas fa-book inactive"></i>{{/if}} <span class="control-label">{{item.toggleTitle}}</span></a>
+          {{#if (and section.canPrepare (ne data.preparation.mode 'always'))}}
+          <a class="item-control item-toggle {{item.toggleClass}}" title="{{item.toggleTitle}}">{{#if (eq item.toggleClass 'active')}}<i class="fas fa-book"></i> <span class="control-label">{{localize 'TIDY5E.Unprepare'}}</span>{{else}}<i class="fas fa-book inactive"></i> <span class="control-label">{{localize 'TIDY5E.Prepare'}}</span>{{/if}}</a>
           {{/if}}
           <hr class="context-divider">
           <a class="item-control item-edit" title="{{localize 'TIDY5E.EditSpell'}}"><i class="fas fa-pencil-alt"></i> <span class="control-label">{{localize 'TIDY5E.EditSpell'}}</span></a>

@@ -1,6 +1,6 @@
 <h2 class="spellbook-title">{{ localize "DND5E.Spellbook" }} <i class="fas fa-caret-down"></i><i class="fas fa-caret-up"></i></h2>
 
-<div class="list-layout">
+<div class="spellbook list-layout">
 
   <ul class="inventory-list items-list spellbook-list {{#if actor.flags.tidy5e-sheet.allow-edit}}unlocked{{/if}}">
     {{#each spellbook as |section|}}
@@ -37,7 +37,7 @@
 
     <ul class="item-list">
       {{#each section.spells as |item i|}}
-      <li class="item {{#if ../../owner}}context-enabled{{/if}} {{~#if data.preparation.prepared}} prepared {{/if}}" data-item-id="{{item._id}}" title="{{item.toggleTitle}}">
+      <li class="item {{#if ../../owner}}context-enabled{{/if}} {{~#if data.preparation.prepared}} prepared {{/if}}" data-item-id="{{item._id}}">
         <div class="item-name rollable">
           <div class="item-image" style="background-image: url({{item.img}})">
             <i class="fa fa-dice-d20"></i>
@@ -68,6 +68,30 @@
 
         <div class="item-detail spell-action">{{labels.activation}}</div>
 
+        <div class="info-card {{~#if item.data.preparation.prepared}} equipped {{/if}}{{#if (eq data.preparation.mode 'always')}} alwaysPrepared{{/if}}" data-item-id="{{item._id}}">
+          <p class="info-card-name">{{item.name}}</p>
+          <div class="info-card-states">
+            <span><!-- <i class="fas fa-hat-wizard"></i><b>{{localize 'DND5E.SpellSchool'}}:</b>  -->{{labels.school}}</span>
+            {{#if ../../owner}}
+            {{#if section.canPrepare}}
+              <span>{{item.toggleTitle}}</span>
+            {{/if}}
+            {{/if}}
+          </div>
+          <div class="info-card-amount">
+            {{#if item.hasUses }}
+            <span><i class="fas fa-bolt"></i><b>{{localize 'DND5E.Charges'}}:</b> {{item.data.uses.value}}/{{item.data.uses.max}}</span>
+            {{/if}}
+          </div>
+          <div class="description-wrap">
+            <div class="info-card-description">
+              <!-- item description -->
+            </div>
+          </div>
+				  <article class="mod-roll-buttons"></article>
+        </div>
+
+
         {{#if ../../owner}}
         <div class="activate-context-menu">
           <i class="fas fa-ellipsis-v"></i>
@@ -75,7 +99,7 @@
         <div class="item-controls context-menu">
           <hr class="context-divider">
           {{#if data.preparation}}
-          <a class="item-control item-toggle {{item.toggleClass}}">{{#if (eq item.toggleClass 'active')}}<i class="fas fa-book"></i>{{else}}<i class="fas fa-book inactive"></i>{{/if}}  <span class="control-label">{{item.toggleTitle}}</span></a>
+          <a class="item-control item-toggle {{item.toggleClass}}">{{#if (eq item.toggleClass 'active')}}<i class="fas fa-book"></i> <span class="control-label">{{localize 'TIDY5E.Unprepare'}}</span>{{else}}<i class="fas fa-book inactive"></i> <span class="control-label">{{localize 'TIDY5E.Prepare'}}</span>{{/if}}</a>
           {{/if}}
           <hr class="context-divider">
           <a class="item-control item-edit" title="{{localize 'TIDY5E.EditSpell'}}"><i class="fas fa-pencil-alt"></i>  <span class="control-label">{{localize 'TIDY5E.EditSpell'}}</span></a>

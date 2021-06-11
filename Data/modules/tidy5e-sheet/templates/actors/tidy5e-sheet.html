@@ -1,5 +1,21 @@
 <form class="{{cssClass}}" autocomplete="off">
 	<div class="tidy5e-sheet {{#if actor.flags.tidy5e-sheet.allow-edit}}allow-edit{{/if}}">
+
+		{{!-- Item Info Card --}}
+		<section id="item-info-container">
+			<i class="item-info-container-background fab fa-d-and-d"></i>
+			<div class="info-wrap">
+				<article id="item-info-container-content">
+					<!-- Info Card here -->
+				</article>
+				<!-- <article class="mod-roll-buttons"></article> -->
+				<article class="info-card-hint">
+					<p><span class="key">X</span> {{localize "TIDY5E.ItemCardsKeyHint"}}</p>
+					<p><i class="fas fa-mouse"></i> {{localize "TIDY5E.ItemCardsMouseHint"}}</p>
+				</article>
+			</div>
+		</section>
+    
 		{{!-- Sheet Header --}}
 		<header class="tidy5e-header">
 			
@@ -125,7 +141,7 @@
 					<input data-input="{{actor._id}}-name" name="name" type="hidden" value="{{actor.name}}" placeholder="{{ localize 'DND5E.Name' }}" maxlength="40">
           <h1 class="char-name" {{#if owner}}contenteditable="true"{{/if}} spellcheck="false" data-target="{{actor._id}}-name" data-placeholder="{{ localize 'DND5E.Name' }}" data-maxlength="40">{{actor.name}}</h1>
 					<div class="level-information {{#if disableExperience}}noxp{{/if}}">
-						<h2 class="level">LVL {{data.details.level}}</h2>
+						<h2 class="level">{{ localize 'DND5E.AbbreviationLevel' }} {{data.details.level}}</h2>
 						{{#unless disableExperience}}
 						<div class="xp-tracker">
 							<div class="experience">
@@ -140,10 +156,15 @@
 						</div>
 						{{/unless}}
 					</div>
+				</section>
+				<section class="bonus-information">
+					{{!-- Player Name --}}
+					<div id="playerName">
+						<input data-input="{{actor._id}}-playerName" name="data.details.playerName" type="hidden" value="{{data.details.playerName}}" placeholder="{{ localize 'TIDY5E.PlayerName' }}" maxlength="40">
+						<span class="playerName" {{#if owner}}contenteditable="true"{{/if}} spellcheck="false" data-target="{{actor._id}}-playerName" data-placeholder="{{ localize 'TIDY5E.PlayerName' }}" data-maxlength="40">{{data.details.playerName}}</span>
+					</div>
 					{{!-- Character Class List --}}
 				</section>
-
-				{{!-- Character Class List --}}
 
 				{{!-- Character Summary --}}
 
@@ -311,6 +332,8 @@
 					{{!-- Traits --}}
 					<div class="alt-trait-pos"></div>
 
+					{{!-- Actions --}}
+					<div class="actions-target list-layout"></div>
 					{{!-- Favorites --}}
 					<div class="favorites-target"></div>
 				</section>
@@ -346,6 +369,19 @@
 
 			{{!-- Biography Tab --}}
 			<div class="tab biography" data-group="primary" data-tab="biography">
+				<div class="top-notes note-entries">
+					<article>
+						<ul class="character-details">
+							<li><span>{{ localize "TIDY5E.Gender" }}:</span><span {{#if owner}}contenteditable="true"{{/if}} spellcheck="false" data-target="{{actor._id}}-gender" data-maxlength="40">{{data.details.gender}}</span><input data-input="{{actor._id}}-gender" type="hidden" name="data.details.gender" value="{{data.details.gender}}"></li>
+							<li><span>{{ localize "TIDY5E.Age" }}:</span><span {{#if owner}}contenteditable="true"{{/if}} spellcheck="false" data-target="{{actor._id}}-age" data-maxlength="5">{{data.details.age}}</span><input data-input="{{actor._id}}-age" type="hidden" name="data.details.age" value="{{data.details.age}}"></li>
+							<li><span>{{ localize "TIDY5E.Height" }}:</span><span {{#if owner}}contenteditable="true"{{/if}} spellcheck="false" data-target="{{actor._id}}-height" data-maxlength="20">{{data.details.height}}</span><input data-input="{{actor._id}}-height" type="hidden" name="data.details.height" value="{{data.details.height}}"></li>
+							<li><span>{{ localize "TIDY5E.Weight" }}:</span><span {{#if owner}}contenteditable="true"{{/if}} spellcheck="false" data-target="{{actor._id}}-weight" data-maxlength="20">{{data.details.weight}}</span><input data-input="{{actor._id}}-weight" type="hidden" name="data.details.weight" value="{{data.details.weight}}"></li>
+							<li><span>{{ localize "TIDY5E.Eyes" }}:</span><span {{#if owner}}contenteditable="true"{{/if}} spellcheck="false" data-target="{{actor._id}}-eyes" data-maxlength="40">{{data.details.eyes}}</span><input data-input="{{actor._id}}-eyes" type="hidden" name="data.details.eyes" value="{{data.details.eyes}}"></li>
+							<li><span>{{ localize "TIDY5E.Skin" }}:</span><span {{#if owner}}contenteditable="true"{{/if}} spellcheck="false" data-target="{{actor._id}}-skin" data-maxlength="40">{{data.details.skin}}</span><input data-input="{{actor._id}}-skin" type="hidden" name="data.details.skin" value="{{data.details.skin}}"></li>
+							<li><span>{{ localize "TIDY5E.Hair" }}:</span><span {{#if owner}}contenteditable="true"{{/if}} spellcheck="false" data-target="{{actor._id}}-hair" data-maxlength="40">{{data.details.hair}}</span><input data-input="{{actor._id}}-hair" type="hidden" name="data.details.hair" value="{{data.details.hair}}"></li>
+						</ul>
+					</article>
+				</div>
 				<div class="left-notes note-entries">
 					<article>
 						<div class="section-titles biopage">{{ localize "DND5E.PersonalityTraits" }}</div>

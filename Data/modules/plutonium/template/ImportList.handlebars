@@ -10,13 +10,13 @@
 
 	<div class="flex-v-stretch input-group input-group--bottom mb-1 no-shrink" data-name="wrp-btns-sort">
 		{{#if isRadio}}
-			<button class="btn-5et {{#if isPreviewable}}col-0-5{{else}}col-1{{/if}} px-1" disabled></button>
+			<button class="btn-5et {{#if isPreviewable}}col-0-4{{else}}col-1{{/if}} px-1" disabled></button>
 		{{else}}
-			<label class="btn btn-5et {{#if isPreviewable}}col-0-5{{else}}col-1{{/if}} px-1 flex-vh-center"><input type="checkbox" name="cb-select-all"></label>
+			<label class="btn btn-5et {{#if isPreviewable}}col-0-4{{else}}col-1{{/if}} px-1 flex-vh-center"><input type="checkbox" name="cb-select-all"></label>
 		{{/if}}
 
 		{{#if isPreviewable}}
-			<button class="btn-5et col-0-5 px-1" disabled></button>
+			<button class="btn-5et col-0-6 px-1 ve-muted" name="btn-toggle-all-previews">[+]</button>
 		{{/if}}
 
 		{{#each cols}}
@@ -28,7 +28,7 @@
 		{{#each rows}}
 			<div class="w-100 flex-col no-shrink veapp__list-row">
 				<label class="w-100 veapp__list-row-hoverable flex-v-center">
-					<span class="{{#if ../isPreviewable}}col-0-5{{else}}col-1{{/if}} px-1 flex-vh-center">
+					<span class="{{#if ../isPreviewable}}col-0-4{{else}}col-1{{/if}} px-1 flex-vh-center">
 						{{#if ../isRadio}}
 							<input type="radio" name="radio" class="no-events">
 						{{else}}
@@ -37,16 +37,9 @@
 					</span>
 
 					{{#if ../isPreviewable}}
-						<div class="col-0-5 px-1 flex-vh-center">
-							<div class="flex-vh-center btn-group">
-								<button class="imp__btn-import-single btn btn-5et btn-xxs ve-muted" title="Click to Toggle Preview">
-									<span class="glyphicon glyphicon-expand"></span>
-								</button>
-
-								<button class="imp__btn-import-single btn btn-5et btn-xxs ve-muted" title="Click to Import">
-									<span class="fas fa-download"></span>
-								</button>
-							</div>
+						<div class="col-0-6 px-1 flex-vh-center">
+							<div class="ui-list__btn-inline" title="Toggle Preview">[+]</div>
+							<div class="ui-list__btn-inline" title="Import">[&#10151;]</div>
 						</div>
 					{{/if}}
 
@@ -59,13 +52,6 @@
 						</span>
 					{{/each}}
 				</label>
-
-				{{#if ../isPreviewable}}
-					<div class="ve-hidden flex">
-						<div class="col-0-5"></div>
-						<div class="col-11-5 imp__wrp-preview py-2 pr-2"></div>
-					</div>
-				{{/if}}
 			</div>
 		{{/each}}
 	</div>
