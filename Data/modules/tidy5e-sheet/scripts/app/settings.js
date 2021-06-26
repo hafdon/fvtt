@@ -90,6 +90,8 @@ export class Tidy5eUserSettings extends FormApplication {
 			'editEffectsGmOnlyEnabled',
 			'editGmAlwaysEnabled',
 			
+			'ammoEquippedOnly',
+			'journalTabDisabled',
 			'playerNameEnabled',
 			'classListDisabled',
 			'hideIfZero',
@@ -98,7 +100,8 @@ export class Tidy5eUserSettings extends FormApplication {
 			'restingForNpcsChatDisabled',
 			'editTotalLockEnabled',
 			'portraitStyle',
-			'expandedSheetEnabled'
+			'expandedSheetEnabled',
+			'defaultActionsTab'
 		]
 
 		// return game.settings.get('tidy5e-sheet', 'user-settings');

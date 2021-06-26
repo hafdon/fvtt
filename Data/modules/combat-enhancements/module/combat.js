@@ -50,7 +50,7 @@ export class CombatSidebarCe {
         }
 
         // Retrieve the combatant for this actor, or exit if not valid.
-        const combatant = game.combat.combatants.find(c => c._id == $actorRow.data('combatant-id'));
+        const combatant = game.combat.data.combatants.find(c => c._id == $actorRow.data('combatant-id'));
         if (!combatant) {
           return;
         }
@@ -59,10 +59,11 @@ export class CombatSidebarCe {
 
         // Check for bad numbers, otherwise convert into a Number type.
         let value = $input.val();
+        let inputValue = getProperty(actor.data, $input.attr('name'));
         if (dataset.dtype == 'Number') {
           value = Number(value);
           if (Number.isNaN(value)) {
-            $input.val(actor.data.data.attributes.hp.value);
+            $input.val(inputValue);
             return false;
           }
         }
@@ -71,8 +72,9 @@ export class CombatSidebarCe {
         let updateData = {};
         // If this started with a "+" or "-", handle it as a relative change.
         let operation = $input.val().match(/^\+|\-/g);
+        console.log($input.attr('name'));
         if (operation) {
-          updateData[$input.attr('name')] = Number(actor.data.data.attributes.hp.value) + value;
+          updateData[$input.attr('name')] = Number(inputValue) + value;
         }
         // Otherwise, set it absolutely.
         else {
@@ -96,7 +98,7 @@ export class CombatSidebarCe {
             // Store the combatant type for reference. We have to do this
             // because dragover doesn't have access to the drag data, so we
             // store it as a new type entry that can be split later.
-            let newCombatant = game.combat.combatants.find(c => c._id == dragData.combatantId);
+            let newCombatant = game.combat.data.combatants.find(c => c._id == dragData.combatantId);
             event.originalEvent.dataTransfer.setData(`newtype--${dragData.actorType}`, '');
 
             // Set the drag image.
@@ -165,7 +167,7 @@ export class CombatSidebarCe {
             }
 
             // Retrieve the combatant being dropped.
-            let newCombatant = combat.combatants.find(c => c._id == data.combatantId);
+            let newCombatant = combat.data.combatants.find(c => c._id == data.combatantId);
 
             // Retrieve the combatants grouped by type.
             let combatants = this.getCombatantsData(false);
@@ -228,7 +230,7 @@ export class CombatSidebarCe {
 
               // If there are updates, update the combatants at once.
               if (updates) {
-                await combat.updateCombatant(updates);
+                await combat.updateEmbeddedDocuments('Combatant', updates, {});
                 ui.combat.render();
               }
             }
@@ -242,7 +244,7 @@ export class CombatSidebarCe {
         return;
       }
 
-      let inCombat = game.combat.combatants.find(c => c?.actor?.data?._id == actor?.data?._id);
+      let inCombat = game.combat.data.combatants.find(c => c?.actor?.data?._id == actor?.data?._id);
       if (inCombat) {
         ui.combat.render();
       }
@@ -250,7 +252,7 @@ export class CombatSidebarCe {
 
     Hooks.on('updateToken', (scene, token, data, options, id) => {
       if (data.actorData && game.combat) {
-        let inCombat = game.combat.combatants.find(c => c.tokenId == token._id);
+        let inCombat = game.combat.data.combatants.find(c => c.tokenId == token._id);
         if (inCombat) {
           ui.combat.render();
         }
@@ -342,7 +344,7 @@ export class CombatSidebarCe {
         let displayHealthRadials = game.settings.get('combat-enhancements', 'enableHpRadial');
 
         // Retrieve the health bars mode from the token's resource settings.
-        let displayBarsMode = Object.entries(CONST.TOKEN_DISPLAY_MODES).find(i => i[1] == combatant.token.displayBars)[0];
+        let displayBarsMode = Object.entries(CONST.TOKEN_DISPLAY_MODES).find(i => i[1] == combatant._token.data.displayBars)[0];
         // Assume player characters should always show their health bar.
         let displayHealth = alwaysOnType && group == alwaysOnType ? true : false;
 
@@ -351,8 +353,8 @@ export class CombatSidebarCe {
           combatant.combatAttr = 'attributes.hp';
         }
 
-        if (combatant.token.bar1.attribute) {
-          combatant.combatAttr = combatant.token.bar1.attribute;
+        if (combatant._token.data.bar1.attribute) {
+          combatant.combatAttr = combatant._token.data.bar1.attribute;
         }
 
         // If this is a group other than character (such as NPC), we need to

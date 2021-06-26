@@ -59,7 +59,7 @@ function init() {
             },
         });
     }
-    Hooks.on("renderActorSheetSFRPGCharacter", app => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
+    Hooks.on("renderActorSheetSFRPGCharacter", (app) => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
         sheetSfrpgRenderHook(app, "character"));
     console.log("Quick Insert | sfrpg system extensions initiated");
 }

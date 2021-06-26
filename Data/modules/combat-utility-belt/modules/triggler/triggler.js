@@ -37,6 +37,8 @@ export class Triggler {
      * @param {*} target 
      */
     static async _executeTrigger(trigger, target) {
+        const actor = target instanceof Actor ? target : (target instanceof TokenDocument || target instanceof Token) ? target.actor : null;
+        const token = target instanceof TokenDocument ? target : target instanceof Token ? target.data : null;
         const conditionMap = Sidekick.getSetting(SETTING_KEYS.enhancedConditions.map);
         const matchedApplyConditions = conditionMap.filter(m => m.applyTrigger === trigger.id);
         const matchedRemoveConditions = conditionMap.filter(m => m.removeTrigger === trigger.id);
@@ -48,7 +50,7 @@ export class Triggler {
         if (removeConditionNames.length) await EnhancedConditions.removeCondition(removeConditionNames, target, {warn: false});
 
         for (const macro of matchedMacros) {
-            await macro.execute();
+            await macro.execute({actor, token});
         }
     }
 
@@ -60,18 +62,20 @@ export class Triggler {
      * @param {*} entryPoint2
      */
     static async _processUpdate(entity, update, entryPoint1, entryPoint2) {
+        if (!entity || !update) return;
+
         // if (entryPoint1 && !hasProperty(update, entryPoint1)) {
         //     return;
         // }
         
         const triggers = Sidekick.getSetting(SETTING_KEYS.triggler.triggers);
-        const entityType = entity instanceof Actor ? "Actor" : entity instanceof Token ? "Token" : null;
+        const entityType = entity instanceof Actor ? "Actor" : (entity instanceof Token || entity instanceof TokenDocument) ? "Token" : null;
 
         if (!entityType) {
             return;
         }
 
-        const hasPlayerOwner = !!(entityType === "Actor" ? entity.hasPlayerOwner : entityType === "Token" ? entity.actor.hasPlayerOwner : null);
+        const hasPlayerOwner = !!(entity.hasPlayerOwner ?? entity.document?.hasPlayerOwner);
 
         /**
          * process each trigger in turn, checking for a match in the update payload,
@@ -85,11 +89,7 @@ export class Triggler {
             const npcOnly = trigger.npcOnly;
             const notZero = trigger.notZero;
 
-            if (pcOnly && !hasPlayerOwner) {
-                continue;
-            }
-
-            if (npcOnly && hasPlayerOwner) {
+            if ((pcOnly && !hasPlayerOwner) || (npcOnly && hasPlayerOwner)) {
                 continue;
             }
 
@@ -259,7 +259,7 @@ export class Triggler {
      * @param {*} userId 
      */
     static _onUpdateActor(actor, update, options, userId) {
-        if (game.userId !== userId) {
+        if (game.userId !== userId || actor.isToken) {
             return;
         }
 
@@ -271,22 +271,16 @@ export class Triggler {
 
     /**
      * Update token handler
-     * @param {*} scene 
-     * @param {*} tokenData 
+     * @param {Token} token
      * @param {*} update 
      * @param {*} options 
      * @param {*} userId 
      */
-    static _onUpdateToken(scene, tokenData, update, options, userId) {
+    static _onUpdateToken(token, update, options, userId) {
         if (game.userId !== userId) {
             return;
         }
 
-        // if (!hasProperty(update, "actorData.data")) {
-        //     return;
-        // }
-
-        const token = canvas.tokens.get(tokenData._id);
         const actorDataProp = `actorData.data`;
         const actorProp = `actor.data.data`;
         

@@ -50,13 +50,13 @@ function init() {
             },
         });
     }
-    Hooks.on("renderActorSheet5eCharacter", app => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
+    Hooks.on("renderActorSheet5eCharacter", (app) => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
         sheet5eRenderHook(app, "character"));
-    Hooks.on("renderActorSheet5eNPC", app => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
+    Hooks.on("renderActorSheet5eNPC", (app) => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
         sheet5eRenderHook(app, "npc"));
-    Hooks.on("renderTidy5eSheet", app => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
+    Hooks.on("renderTidy5eSheet", (app) => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
         sheet5eRenderHook(app, "character"));
-    Hooks.on("renderTidy5eNPC", app => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
+    Hooks.on("renderTidy5eNPC", (app) => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
         sheet5eRenderHook(app, "npc"));
     console.log("Quick Insert | dnd5e system extensions initiated");
 }

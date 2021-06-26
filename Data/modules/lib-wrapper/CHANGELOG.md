@@ -1,8 +1,61 @@
+# 1.7.3.0 (2021-06-22)
+
+- Update 'About' pane in the settings with more information about reporting issues.
+- Update documentation
+  - Explain differences between the full library and the shim.
+  - Add information about how to obtain support.
+
+# 1.7.2.0 (2021-06-19)
+
+- Rename `error-listeners.js` to `listeners.js` (see [Issue #42](https://github.com/ruipin/fvtt-lib-wrapper/issues/42)).
+- Do not prefix `libWrapper-` to `listeners.js` file in the sourcemap.
+- Explicitly announce compatibility with Foundry 0.8.7.
+- Add `bugs` attribute to manifest, and enable [Bug Reporter](https://github.com/League-of-Foundry-Developers/bug-reporter) support.
+- Miscellaneous code cleanup.
+- Update documentation:
+  - Add section about Systems.
+  - Add section about Mixins.
+  - Add section about `super`.
+- Update release script to properly handle commas in the manifest file, as well as be easier to maintain.
+
+# 1.7.1.0 (2021-06-14)
+
+- Include Git commit hash in manifest.
+  - Update release scripts.
+  - Update version parsing code.
+
+# 1.7.0.0 (2021-06-09)
+
+- **[BREAKING]** Removed `libWrapper.clear_modules` API, `libWrapper.ClearModule` hook, and `LibWrapperModuleError` exception class (all deprecated since v1.6.0.0).
+- Implement backend system for ignoring known potential conflicts (part of [Issue #33](https://github.com/ruipin/fvtt-lib-wrapper/issues/33))
+  - Added `libWrapper.ignore_conflicts` API method to allow package developers to have libWrapper not warn the user about certain conflicts.
+  - Add a toggle to the 'Conflicts' tab in the settings dialog to display detected conflicts that were ignored. These are hidden by default.
+  - Hooks `libWrapper.ConflictDetected` and `libWrapper.OverrideLost` now also get passed a list of all unique `target` parameters that have been used to register wrappers for a given method, instead of just the first one ever used. This is important for methods that are reachable through more than one target path.
+
+# 1.6.2.0 (2021-06-04)
+
+- Fix errors seen when wrapping inherited properties.
+  - These were caused by a terser bug ([terser/terser #1003](https://github.com/terser/terser/issues/1003)).
+- Clean up `Wrapper` singleton detection code.
+- Explicitly announce compatibility with Foundry 0.8.6.
+
+
+# 1.6.1.0 (2021-05-26)
+
+- Fix infinite loop leading to a `RangeError: Maximum call stack size exceeded` error when both libWrapper wrappers and manual wrappers are present on a method inherited from a parent class.
+  - Fixes the incompatibility between "TouchVTT" and "Drag Ruler" when libWrapper was active.
+- Fix module ID not displaying correctly in settings dialog for `MANUAL` wrappers.
+
+# 1.6.0.1 (2021-05-24)
+
+- No code changes.
+- Explicitly announce compatibility with Foundry 0.8.5.
+
 # 1.6.0.0 (2021-05-10)
 
 - **[BREAKING]** Remove `libWrapperReady` hook (deprecated since v1.5.0.0, `libWrapper.Ready` should be used instead).
 - Rename all instances of `module` to `package`, given the library now officially supports systems and worlds.
-  - Deprecate `libWrapper.clear_module` method (now `libWrapper.clear_all`) and the `libWrapper.ClearModule` hook (now `libWrapper.ClearAll`).
+  - Deprecate `libWrapper.clear_module` method (now `libWrapper.unregister_all`) and the `libWrapper.ClearModule` hook (now `libWrapper.UnregisterAll`).
   - Deprecate `libWrapper.ModuleError` (now `libWrapper.PackageError`).
   - Deprecate all `libWrapper.Error.module` getters (now `libWrapper.Error.package_id`).
 - Rewrite module auto-detection functionality to be able to handle systems and worlds correctly.

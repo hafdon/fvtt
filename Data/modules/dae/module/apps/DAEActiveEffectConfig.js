@@ -1,5 +1,13 @@
 import { ValidSpec, aboutTimeInstalled, confirmDelete, cubActive, conditionalVisibilityActive } from "../dae.js";
 import { i18n, confirmAction, daeSpecialDurations, daeMacroRepeats, log } from "../../dae.js";
+export var otherFields = [];
+export function addAutoFields(fields) {
+    fields.forEach(f => {
+        if (!otherFields.includes(f))
+            otherFields.push(f);
+    });
+    otherFields.sort();
+}
 export class DAEActiveEffectConfig extends ActiveEffectConfig {
     constructor(object = {}, options = {}) {
         super(object, options);
@@ -13,9 +21,9 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         else
             this.tokenMagicEffects["invalid"] = "module not installed";
         this.fieldsList = Object.keys(ValidSpec.allSpecsObj);
+        this.fieldsList = this.fieldsList.concat(otherFields);
         //@ts-ignore
-        if (window.MidiQOL?.midiFlags)
-            this.fieldsList = this.fieldsList.concat(window.MidiQOL.midiFlags);
+        // if (window.MidiQOL?.midiFlags)  this.fieldsList = this.fieldsList.concat(window.MidiQOL.midiFlags);
         this.fieldsList.sort();
         //@ts-ignore
         log(`There are ${this.fieldsList.length} fields to choose from of which ${window.MidiQOL?.midiFlags?.length || 0} come from midi-qol and ${ValidSpec.allSpecs.length} from dae`);
@@ -81,7 +89,7 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         }
         const ConditionalVisibilityNames = ["invisible", "hidden", "obscured", "indarkness"];
         const ConditionalVisibilityVisionNames = ["blindsight", "devilssight", "seeinvisible", "tremorsense", "truesight"];
-        if (conditionalVisibilityActive) {
+        if (conditionalVisibilityActive && false) {
             this.ConditionalVisibilityList = {};
             ConditionalVisibilityNames.forEach(cvc => {
                 this.ConditionalVisibilityList[cvc] = i18n(`CONVIS.${cvc}`);
@@ -169,7 +177,7 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         return false;
     }
     /** @override */
-    async getData(options) {
+    getData(options) {
         const data = super.getData(options);
         //@ts-ignore
         const allModes = Object.entries(CONST.ACTIVE_EFFECT_MODES)
@@ -182,8 +190,10 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         data.specialDuration = daeSpecialDurations;
         data.macroRepeats = daeMacroRepeats;
         if (this.object.parent) {
-            data.isItem = this.object.parent.__proto__.constructor.name === CONFIG.Item.entityClass.name;
-            data.isActor = this.object.parent.__proto__.constructor.name === CONFIG.Actor.entityClass.name;
+            //@ts-ignore documentClass
+            data.isItem = this.object.parent instanceof CONFIG.Item.documentClass;
+            //@ts-ignore documentClass
+            data.isActor = this.object.parent instanceof CONFIG.Actor.documentClass;
         }
         data.validFields = this.validFields;
         data.submitText = "EFFECT.Submit";
@@ -197,7 +207,9 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
                 change.modes = allModes;
             }
             else {
-                change.modes = [allModes[ValidSpec.allSpecsObj[change.key]?.forcedMode]];
+                const mode = {};
+                mode[ValidSpec.allSpecsObj[change.key]?.forcedMode] = allModes[ValidSpec.allSpecsObj[change.key]?.forcedMode];
+                change.modes = mode;
             }
             change.options = this.getOptionsForSpec(change.key);
             if (!change.priority)
@@ -206,7 +218,7 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         if (aboutTimeInstalled && data.effect.duration?.startTime) {
             //@ts-ignore
             const Gametime = window.Gametime;
-            const startTime = Gametime.DT.createFromSeconds(data.effect.duration.startTime).shortDate();
+            let startTime = Gametime.DT.createFromSeconds(data.effect.duration.startTime).shortDate();
             data.startTimeString = (startTime.date + " " + startTime.time) || "";
             if (data.effect.duration.seconds) {
                 const endTime = Gametime.DT.createFromSeconds(data.effect.duration.startTime + data.effect.duration.seconds).shortDate();
@@ -218,7 +230,7 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         if (typeof data.effect.flags.dae?.specialDuration === "string") {
             data.effect.flags.dae.specialDuration = [data.effect.flags.dae.specialDuration];
         }
-        data.sourceName = await this.object.sourceName;
+        data.sourceName = this.object.sourceName;
         data.fieldsList = this.fieldsList;
         return data;
     }
@@ -301,46 +313,35 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         if (!formData.changes)
             formData.changes = [];
         formData.changes = Object.values(formData.changes);
-        for (let c of formData.changes) {
-            if (typeof ValidSpec.allSpecsObj[c.key]?.sampleValue === "number") {
-                //@ts-ignore
-                if (Number.isNumeric(c.value))
-                    c.value = parseFloat(c.value);
-            }
-            if (typeof ValidSpec.allSpecsObj[c.key]?.sampleValue === "string") {
-                if (typeof c.value === "number")
-                    c.value = `${c.value}`;
-            }
-            // stored mode is a selection index ok for the list, but not "forced Mode"
-            if (ValidSpec.allSpecsObj[c.key]?.forcedMode !== -1)
-                c.mode = ValidSpec.allSpecsObj[c.key]?.forcedMode || c.mode;
-            //@ts-ignore
-            c.priority = Number.isNumeric(c.priority) ? parseInt(c.priority) : c.mode * 10;
-        }
         if (formData.flags?.dae?.specialDuration) {
             const newSpecDur = [];
             Object.values(formData.flags?.dae?.specialDuration).forEach(value => newSpecDur.push(value));
             formData.flags.dae.specialDuration = newSpecDur;
         }
+        else
+            setProperty(formData, "flags.dae.specialDuration", []);
+        //@ts-ignore
         //@ts-ignore isNumeric
-        if (Number.isNumeric(formData.duration.startTime)) {
+        if (Number.isNumeric(formData.duration.startTime) && Math.abs(Number(formData.duration.startTime) < 3600)) {
             let startTime = parseInt(formData.duration.startTime);
-            if (startTime <= 3600) { // Only acdept durations of 1 hour or less as the start time field
+            if (Math.abs(startTime) <= 3600) { // Only acdept durations of 1 hour or less as the start time field
                 formData.duration.startTime = game.time.worldTime + parseInt(formData.duration.startTime);
             }
         }
+        else if (this.object.parent.isOwned)
+            formData.duration.startTime = null;
         setProperty(formData, "flags.dae.transfer", formData.transfer);
         //setProperty(formData, "flags.dae", {stackable: formData.flags.dae.stackable});
         if (this.object.parent.isOwned) { // we are editing an owned item
-            let itemData = this.object.parent.data;
+            let itemData = this.object.parent.data.toObject();
             itemData.effects.forEach(efData => {
                 if (efData._id == this.object.id)
-                    mergeObject(efData, expandObject(formData), { overwrite: true, inplace: true });
+                    mergeObject(efData, formData, { overwrite: true, inplace: true });
             });
-            this.object.parent.actor.updateOwnedItem(itemData);
+            return this.object.parent.actor.updateEmbeddedDocuments("Item", [itemData], { diff: true });
         }
         else {
-            return this.object.update(formData);
+            await this.object.update(formData);
         }
     }
 }

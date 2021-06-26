@@ -86,8 +86,8 @@
 
 					{{!-- Inspiration --}}
 					<div class="inspiration has-note {{#if actor.data.attributes.inspiration}}inspiration-1{{else}}inspiration-0{{/if}}">
-						<input id="{{actor._id}}-inspiration" type="checkbox" name="data.attributes.inspiration" data-dtype="Boolean" {{checked data.attributes.inspiration}}>
-						<label for="{{actor._id}}-inspiration">
+						<input id="{{@root/appId}}-inspiration" type="checkbox" name="data.attributes.inspiration" data-dtype="Boolean" {{checked data.attributes.inspiration}}>
+						<label for="{{@root/appId}}-inspiration">
 							<i class="inspiration-icon fas fa-dice-d20"></i>
 						</label>
 						<div class="note">{{ localize 'DND5E.Inspiration' }}</div>
@@ -103,9 +103,9 @@
 						</div>
 					</div>
 					{{!-- Hit Dice --}}
-					<div class="portrait-hd has-note" title="{{ localize 'DND5E.HitDice' }}: {{data.attributes.hd}}/{{data.details.level}}">
+					<div class="portrait-hd has-note" title="{{ localize 'DND5E.HitDice' }}: {{data.attributes.hd}}/{{data.details.level}}&#10;{{localize 'DND5E.HitDiceConfig'}}">
 						<div class="note">{{ localize 'DND5E.HitDice' }}: {{data.attributes.hd}}/{{data.details.level}}</div>
-						<div class="current-hd">{{data.attributes.hd}}<!-- <span>/</span>{{data.details.level}} --></div>
+						<a class="current-hd config-button" data-action="hit-dice" >{{data.attributes.hd}}</a>
 					</div>
 
 					{{!-- Hit Points --}}
@@ -222,8 +222,8 @@
 								<span>{{numberFormat data.attributes.init.total decimals=0 sign=true}}</span>
 							</div>
 							<footer class="value-footer">
-								<label for="{{actor._id}}-ini-mod">{{ localize 'TIDY5E.AbbrMod' }}</label>
-								<input id="{{actor._id}}-ini-mod" class="ini-mod" name="data.attributes.init.value" type="text" placeholder="0" data-dtype="Number" value="{{numberFormat data.attributes.init.value decimals=0 sign=true}}" maxlength="2">
+								<label for="{{@root/appId}}-ini-mod">{{ localize 'TIDY5E.AbbrMod' }}</label>
+								<input id="{{@root/appId}}-ini-mod" class="ini-mod" name="data.attributes.init.value" type="text" placeholder="0" data-dtype="Number" value="{{numberFormat data.attributes.init.value decimals=0 sign=true}}" maxlength="2">
 						</footer>
 						</li>
 					</ul>
@@ -238,11 +238,11 @@
 									<input class="ability-score" name="data.abilities.{{id}}.value" type="text" value="{{ability.value}}" data-dtype="Number" placeholder="10">
 								</div>
 								<div class="ability-modifiers value-footer">
-									<span class="ability-mod" title="{{ localize 'DND5E.AbilityModifier' }}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+									<span class="ability-mod rollable" title="{{ localize 'DND5E.AbilityModifier' }}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
 									<input type="hidden" name="data.abilities.{{id}}.proficient" value="{{ability.proficient}}" data-dtype="Number">
 									<a class="proficiency-toggle ability-proficiency" title="{{ localize 'DND5E.Proficiency' }}">
 										{{{ability.icon}}}</a>
-									<span class="ability-save" title="{{ localize 'DND5E.ActionSave' }}">{{numberFormat ability.save decimals=0 sign=true}}</span>
+									<span class="ability-save rollable" title="{{ localize 'DND5E.ActionSave' }}">{{numberFormat ability.save decimals=0 sign=true}}</span>
 								</div>
 								<span class="mod-label ability-mod-label">{{ localize 'TIDY5E.AbbrMod' }}</span>
 								<span class="mod-label save-mod-label">{{ localize 'TIDY5E.AbbrSavingThrow' }}</span>
@@ -279,15 +279,17 @@
 
 					{{!-- Skills --}}
 					<ul class="skills-list">
-						{{#each data.skills as |skill s|}}
+            {{#each config.skills as |label s|}}
+            {{#with (lookup ../data.skills s) as |skill|}}
 						<li class="skill {{#if skill.value}}proficient{{/if}}" data-skill="{{s}}">
 							<input type="hidden" name="data.skills.{{s}}.value" value="{{skill.value}}" data-dtype="Number">
 							<a class="proficiency-toggle skill-proficiency" title="{{skill.hover}}">{{{skill.icon}}}</a>
-							<h4 class="skill-name rollable">{{skill.label}}</h4>
+							<h4 class="skill-name rollable">{{label}}</h4>
 							<span class="skill-ability">{{skill.ability}}</span>
 							<span class="skill-mod">{{numberFormat skill.total decimals=0 sign=true}}</span>
-							<span class="skill-passive" title="{{skill.label}} ({{ localize 'DND5E.Passive' }})">({{skill.passive}})</span>
+							<span class="skill-passive" title="{{label}} ({{ localize 'DND5E.Passive' }})">({{skill.passive}})</span>
 						</li>
+						{{/with}}
 						{{/each}}
 					</ul>
 
@@ -305,12 +307,12 @@
 								<span class="res-options"><i class="fas fa-cog"></i></span>
 								<div class="res-rest">
 									<h4>{{ localize "TIDY5E.RestoreOnRest" }}</h4>
-									<input id="{{../actor._id}}-{{res.name}}.sr" name="data.resources.{{res.name}}.sr" type="checkbox" {{checked res.sr}}>
-									<label for="{{../actor._id}}-{{res.name}}.sr" class="checkbox" title="{{ localize 'TIDY5E.RestS' }}">
+									<input id="{{@root/appId}}-{{res.name}}.sr" name="data.resources.{{res.name}}.sr" type="checkbox" {{checked res.sr}}>
+									<label for="{{@root/appId}}-{{res.name}}.sr" class="checkbox" title="{{ localize 'TIDY5E.RestS' }}">
 										{{ localize "DND5E.RestS" }} 
 									</label>
-									<input id="{{../actor._id}}-{{res.name}}.lr" name="data.resources.{{res.name}}.lr" type="checkbox" {{checked res.lr}}>
-									<label for="{{../actor._id}}-{{res.name}}.lr" class="checkbox" title="{{ localize 'TIDY5E.RestL' }}">
+									<input id="{{@root/appId}}-{{res.name}}.lr" name="data.resources.{{res.name}}.lr" type="checkbox" {{checked res.lr}}>
+									<label for="{{@root/appId}}-{{res.name}}.lr" class="checkbox" title="{{ localize 'TIDY5E.RestL' }}">
 										{{ localize "DND5E.RestL" }} 
 									</label>
 								</div>

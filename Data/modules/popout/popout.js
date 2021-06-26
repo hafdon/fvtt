@@ -6,23 +6,11 @@ class PopoutModule {
     this.TIMEOUT_INTERVAL = 50; // ms
     this.MAX_TIMEOUT = 1000; // ms
     // Random id to prevent collision with other modules;
-    this.ID = randomID(24);
-    this.compatHandlers = [
-      async (app, node) => {
-        // PDFoundry
-        if (window.ui.PDFoundry !== undefined) {
-          app._viewer = false;
-          if (app.pdfData && app.pdfData.url !== undefined) {
-            app.open(app.pdfData.url, app.pdfData.offset);
-          }
-          app.onViewerReady();
-        }
-        return;
-      },
-    ];
+    this.ID = randomID(24); // eslint-disable-line no-undef
   }
 
   log(msg, ...args) {
+    // eslint-disable-next-line no-undef
     if (game && game.settings.get("popout", "verboseLogs")) {
       const color = "background: #6699ff; color: #000; font-size: larger;";
       console.debug(`%c PopoutModule: ${msg}`, color, ...args);
@@ -53,7 +41,7 @@ class PopoutModule {
       x2: -Infinity,
       y2: -Infinity,
     };
-    const maxBoundingbox = Array.from(elem.getElementsByTagName("*"))
+    Array.from(elem.getElementsByTagName("*"))
       .map((item) => item.getBoundingClientRect())
       .reduce(maxRectReducer, initialValue);
     return {
@@ -65,6 +53,7 @@ class PopoutModule {
   }
 
   async init() {
+    /* eslint-disable no-undef */
     game.settings.register("popout", "showButton", {
       name: game.i18n.localize("POPOUT.showButton"),
       scope: "client",
@@ -90,26 +79,24 @@ class PopoutModule {
     });
     game.settings.register("popout", "verboseLogs", {
       name: "Enable more module logging.",
-      hint:
-        "Enables more verbose module logging. This is useful for debugging the module. But otherwise should be left off.",
+      hint: "Enables more verbose module logging. This is useful for debugging the module. But otherwise should be left off.",
       scope: "client",
       config: false,
       default: false,
       type: Boolean,
     });
+    /* eslint-enable no-undef */
 
     // We replace the games window registry with a proxy object so we can intercept
     // every new application window creation event.
     const handler = {
       ownKeys: (target) => {
-        return Reflect.ownKeys(target).filter((app) =>
-        {
-            const appId = parseInt(app);
-            if (!isNaN(appId)) {
-                return !this.poppedOut.has(appId);
-            }
-        }
-        );
+        return Reflect.ownKeys(target).filter((app) => {
+          const appId = parseInt(app);
+          if (!isNaN(appId)) {
+            return !this.poppedOut.has(appId);
+          }
+        });
       },
       set: (obj, prop, value) => {
         const result = Reflect.set(obj, prop, value);
@@ -125,13 +112,14 @@ class PopoutModule {
         return result;
       },
     };
-    ui.windows = new Proxy(ui.windows, handler);
-    this.log("Installed window interceptor", ui.windows);
+    ui.windows = new Proxy(ui.windows, handler); // eslint-disable-line no-undef
+    this.log("Installed window interceptor", ui.windows); // eslint-disable-line no-undef
 
     // NOTE(posnet: 2020-07-12): we need to initialize TinyMCE to ensure its plugins,
     // are loaded into the frame. Otherwise our popouts will not be able to access
     // the lazy loaded JavaScript mce plugins.
     // This will affect any module that lazy loads JavaScript. And require special handling.
+    /* eslint-disable no-undef */
     const elem = $(
       `<div style="display: none;"><p id="mce_init"> foo </p></div>`
     );
@@ -139,6 +127,7 @@ class PopoutModule {
     const config = { target: elem[0], plugins: CONFIG.TinyMCE.plugins };
     const editor = await tinyMCE.init(config);
     editor[0].remove();
+    /* eslint-enable no-undef */
   }
 
   async addPopout(app) {
@@ -150,11 +139,12 @@ class PopoutModule {
 
     let waitRender = Math.floor(this.MAX_TIMEOUT / this.TIMEOUT_INTERVAL);
     while (
-      app._state !== Application.RENDER_STATES.RENDERED &&
+      app._state !== Application.RENDER_STATES.RENDERED && // eslint-disable-line no-undef
       waitRender-- > 0
     ) {
       await new Promise((r) => setTimeout(r, this.TIMEOUT_INTERVAL));
     }
+    // eslint-disable-next-line no-undef
     if (app._state !== Application.RENDER_STATES.RENDERED) {
       this.log("Timeout out waiting for app to render");
       return;
@@ -164,22 +154,30 @@ class PopoutModule {
       return;
     }
 
-    const domID = `popout_${this.ID}_${app.appId}`;
+    let domID = this.appToID(app);
     if (!document.getElementById(domID)) {
       // Don't create a second link on re-renders;
+      /* eslint-disable no-undef */
       const link = $(
         `<a id="${domID}"><i class="fas fa-external-link-alt"></i>${game.i18n.localize(
           "POPOUT.PopOut"
         )}</a>`
       );
-      link.on("click", () => this.onPopoutClicked(domID, app));
+      /* eslint-enable no-undef */
+
+      link.on("click", () => this.onPopoutClicked(app));
+      // eslint-disable-next-line no-undef
       if (game && game.settings.get("popout", "showButton")) {
-        const title = app.element.find(".window-title").after(link);
+        app.element.find(".window-title").after(link);
       }
       this.log("Attached", app);
     }
   }
 
+  appToID(app) {
+    const domID = `popout_${this.ID}_${app.appId}`;
+    return domID;
+  }
   handleChildDialog(app) {
     // This handler attempts to make behavior less confusing for modal/dialog like interactions
     // with a popped out window. A concrete example being a `pick spell level dialog` in response to
@@ -224,6 +222,7 @@ class PopoutModule {
       if (state.window._popout_last_click > deadline) {
         this.log("Intercepting likely dialog of popped out window.", app);
         // We only nest popout intercepted application if they extend the Dialog class.
+        // eslint-disable-next-line no-undef
         if (app instanceof Dialog) {
           this.moveDialog(app, state.app);
           return true;
@@ -259,6 +258,7 @@ class PopoutModule {
     // We manually intercept the setPosition function of the dialog app in
     // order to handle re-renders that change the position.
     // In particular the FilePicker application.
+    // eslint-disable-next-line no-unused-vars
     app.setPosition = (args) => {
       this.log("Intercepted dialog setting position", app.constructor.name);
     };
@@ -268,7 +268,7 @@ class PopoutModule {
     parent.node.parentNode.insertBefore(node, parent.node.nextSibling);
     node.style.display = setDisplay;
     parent.children.push(app);
-    Hooks.callAll("PopOut:dialog", app, parent);
+    Hooks.callAll("PopOut:dialog", app, parent); // eslint-disable-line no-undef
   }
 
   createDocument() {
@@ -315,14 +315,16 @@ class PopoutModule {
       height: "100%",
     };
 
+    // eslint-disable-next-line no-undef
     if (game.settings.get("popout", "useWindows")) {
       const position = app.element.position(); // JQuery position function.
       let width = app.element.innerWidth();
       let height = app.element.innerHeight();
       let left = position.left;
       let top = position.top;
-
+      // eslint-disable-next-line no-undef
       if (game && game.settings.get("popout", "trueBoundingBox")) {
+        // eslint-disable-line no-undef
         const bounding = this.recursiveBoundingBox(app.element[0]);
         if (bounding.x < left) {
           offsets.left = `${left - bounding.x}`;
@@ -357,17 +359,41 @@ class PopoutModule {
 
   createWindow(features) {
     const popout = window.open("about:blank", "_blank", features);
+    if (!popout) {
+      return null;
+    }
     popout.location.hash = "popout";
     popout._rootWindow = window;
     this.log("Window opened", popout);
     return popout;
   }
 
-  onPopoutClicked(domID, app) {
+  onPopoutClicked(app) {
     // Check if popout in Electron window
     if (navigator.userAgent.toLowerCase().indexOf(" electron/") !== -1) {
-      ui.notifications.warn(game.i18n.localize("POPOUT.electronWarning"));
+      ui.notifications.warn(game.i18n.localize("POPOUT.electronWarning")); // eslint-disable-line no-undef
       return;
+    }
+
+    if (window.ui.windows[app.appId] === undefined) {
+      // eslint-disable-line no-undef
+      this.log("Attempt to open not a user interface window.");
+      return;
+    }
+
+    if (this.poppedOut.has(app.appId)) {
+      // This check is to ensure PopOut is idempotent to popout calls.
+      let currentState = this.poppedOut.get(app.appId);
+      if (currentState && currentState.window && !currentState.window.closed) {
+        currentState.window.focus();
+        return;
+      } else if (
+        currentState &&
+        currentState.window &&
+        currentState.window.closed
+      ) {
+        this.poppedOut.delete(app.appId);
+      }
     }
 
     const { windowFeatures, offsets } = this.windowFeatures(app);
@@ -377,7 +403,7 @@ class PopoutModule {
     const state = {
       app: app,
       node: app.element[0],
-      position: duplicate(app.position),
+      position: duplicate(app.position), // eslint-disable-line no-undef
       minimized: app._minimized,
       display: app.element[0].style.display,
       css: app.element[0].style.cssText,
@@ -397,7 +423,7 @@ class PopoutModule {
       this.log("Failed to open window", popout);
       state.node.style.display = state.display;
       state.node._minimized = false;
-      ui.notifications.warn(game.i18n.localize("POPOUT.failureWarning"));
+      ui.notifications.warn(game.i18n.localize("POPOUT.failureWarning")); // eslint-disable-line no-undef
       return;
     }
 
@@ -419,9 +445,11 @@ class PopoutModule {
     // so that their event handlers are preserved.
     const shallowHeader = state.header.cloneNode(false);
     shallowHeader.classList.remove("draggable");
+    let domID = this.appToID(app);
     for (const child of [...state.header.children]) {
       if (child.id == domID) {
         // Change Close button
+        /* eslint-disable no-unused-vars, no-undef */
         $(child)
           .html(
             `<i class="fas fa-sign-in-alt"></i>${game.i18n.localize(
@@ -429,10 +457,11 @@ class PopoutModule {
             )}`
           )
           .off("click")
-          .on("click", (ev) => {
+          .on("click", (event) => {
             popout._popout_dont_close = true;
             popout.close();
           });
+        /* eslint-enable no-unused-vars, no-undef */
       }
       shallowHeader.appendChild(child);
     }
@@ -509,16 +538,17 @@ class PopoutModule {
           }
         }
         this.poppedOut.delete(appId);
-        await popout.close();
 
         // Force a re-render or close it
         if (popout._popout_dont_close) {
-          Hooks.callAll("PopOut:popin", app);
-          app.render(true);
+          Hooks.callAll("PopOut:popin", app); // eslint-disable-line no-undef
+          await app.render(true);
           this.addPopout(app);
         } else {
-          app.close();
+          Hooks.callAll("PopOut:close", app, node); // eslint-disable-line no-undef
+          await app.close();
         }
+        await popout.close();
       }
       event.returnValue = true;
     });
@@ -554,23 +584,22 @@ class PopoutModule {
 
       const opened = window.open(a.href, "_blank");
       if (!opened) {
-        ui.notifications.warn(game.i18n.localize("POPOUT.failureWarning"));
+        ui.notifications.warn(game.i18n.localize("POPOUT.failureWarning")); // eslint-disable-line no-undef
       }
     });
 
     // We wait longer than just the DOMContentLoaded
     // because of how the document is constructed manually.
     popout.addEventListener("load", async (event) => {
-      const body = event.target.getElementsByTagName("body")[0];
-      const node = targetDoc.adoptNode(state.node);
-      for (let fn of this.compatHandlers) {
-        try {
-          await fn.bind(this)(app, node);
-        } catch (err) {
-          this.log("Compat err", err);
-        }
+      if (popout.screenX < 0 || popout.screenY < 0) {
+        // Fallback in case for some reason the popout out window is not
+        // on the visible screen. May not work or be blocked by popout blockers,
+        // but it is the best we can do.
+        popout.moveTo(50, 50);
       }
 
+      const body = event.target.getElementsByTagName("body")[0];
+      const node = targetDoc.adoptNode(state.node);
       body.style.overflow = "auto";
       body.append(state.node);
 
@@ -592,16 +621,22 @@ class PopoutModule {
       // event handler will also fail. But that is bad practice.
       // The following regex will find examples of delegated event handlers in foundry.js
       // `on\(("|')[^'"]+("|'), *("|')`
-      const jBody = $(body);
-      jBody.on("click", "a.entity-link", window.TextEditor._onClickEntityLink);
+      const jBody = $(body); // eslint-disable-line no-undef
+      jBody.on(
+        "click",
+        "a.entity-link",
+        window.TextEditor._onClickEntityLink !== undefined
+          ? window.TextEditor._onClickEntityLink
+          : window.TextEditor._onClickContentLink
+      );
       jBody.on(
         "dragstart",
         "a.entity-link",
         window.TextEditor._onDragEntityLink
       );
       jBody.on("click", "a.inline-roll", window.TextEditor._onClickInlineRoll);
-
       this.log("Final node", node, app);
+      Hooks.callAll("PopOut:loaded", app, node); // eslint-disable-line no-undef
     });
 
     // -------------------- Install intercept methods ----------------
@@ -615,7 +650,7 @@ class PopoutModule {
     const oldClose = app.close.bind(app);
     app.close = function () {
       // Prevent closing of popped out windows with ESC in main page
-      if (game.keyboard.isDown("Escape")) return;
+      if (game.keyboard.isDown("Escape")) return; // eslint-disable-line no-undef
       popout.close();
     };
 
@@ -642,11 +677,44 @@ class PopoutModule {
     state.maximize = oldMaximize;
     state.close = oldClose;
     this.poppedOut.set(app.appId, state);
-    Hooks.callAll("PopOut:popout", app, popout, state);
+    Hooks.callAll("PopOut:popout", app, popout); // eslint-disable-line no-undef
+  }
+
+  // Public API
+  static popoutApp(app) {
+    if (PopoutModule.singleton) {
+      PopoutModule.singleton.onPopoutClicked(app);
+    }
   }
 }
 
+/* eslint-disable no-undef */
 Hooks.on("ready", () => {
   PopoutModule.singleton = new PopoutModule();
   PopoutModule.singleton.init();
+
+  // eslint-disable-next-line no-unused-vars
+  Hooks.on("PopOut:loaded", async (app, node) => {
+    // PDFoundry
+    if (window.ui.PDFoundry !== undefined) {
+      app._viewer = false;
+      if (app.pdfData && app.pdfData.url !== undefined) {
+        app.open(app.pdfData.url, app.pdfData.offset);
+      }
+      app.onViewerReady();
+    }
+    return;
+  });
+
+  // eslint-disable-next-line no-unused-vars
+  Hooks.on("PopOut:close", async (app, node) => {
+    // PDFoundry
+    if (app.pdfData !== undefined) {
+      if (app.actorSheet && app.actorSheet.close) {
+        await app.actorSheet.close();
+      }
+    }
+    return;
+  });
 });
+/* eslint-enable no-undef */

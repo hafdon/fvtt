@@ -36,9 +36,8 @@ export class NpcActionHandlerPf2e {
         let result = this.baseHandler.initializeEmptyCategory('strikes');
         result.cssClass = 'oneLine';
         
-        if (settings.get('showOldNpcStrikes')) {
-            this._addNpcStrikesCategories(actor, tokenId, result);
-        }
+        if (!settings.get('separateTogglesCategory'))
+            this._addTogglesCategories(actor, tokenId, result);
 
         const info = this.baseHandler.i18n('tokenactionhud.experimental');
 
@@ -48,59 +47,41 @@ export class NpcActionHandlerPf2e {
     }
 
     /** @private */
-    _addNpcStrikesCategories(actor, tokenId, category) {
-        let strikes = actor.items.filter(a => a.type === 'melee').sort(this._foundrySort);
-        
-        let calculateAttackPenalty = settings.get('calculateAttackPenalty')
-        
-        const macroType = 'npcStrike';
-        strikes.forEach(s => {
-            let subcategory = this.baseHandler.initializeEmptySubcategory();
-            let actionIcon = parseInt((s.data.data.actions || {}).value, 10) || 1;
-            subcategory.icon = this.baseHandler._getActionIcon(actionIcon)
-            
-            let variantsMap = [];
-            let map = (s.data.data.traits.value || []).includes('agile') || s.data.isAgile ? 4 : 5;
-            let attackMod = s.data.data.bonus.value;
-            
-            if (!attackMod)
-                attackMod = s.data.data.bonus.total ?? 0;
-            
-            let currentMap = 0;
-            let currentBonus = attackMod;
+    _addTogglesCategories(actor, tokenId, category) {
+        const macroType = 'toggle';
+        const toggleActions = actor.data.data.toggles?.actions;
 
-            for (let i = 0; i < 3; i++) {
-                if (currentBonus === attackMod || calculateAttackPenalty) {
-                    name = currentBonus >= 0 ? `+${currentBonus}` : `${currentBonus}`;
-                }
-                else {
-                    name = currentMap >= 0 ? `+${currentMap}` : `${currentMap}`;
-                }
-                currentMap -= map;
-                currentBonus -= map;
+        if (!toggleActions)
+            return;
 
-                variantsMap.push({_id: `${s.data._id}>${i}`, name: name});
-            }
-            
-            variantsMap[0].img = s.data.img;
-            subcategory.actions = this.baseHandler._produceActionMap(tokenId, variantsMap, macroType);
-            
-            let damageEncodedValue = [macroType, tokenId, encodeURIComponent(s.data._id+'>damage')].join(this.baseHandler.delimiter);
-            let critEncodedValue = [macroType, tokenId, encodeURIComponent(s.data._id+'>critical')].join(this.baseHandler.delimiter);
-            subcategory.actions.push({name: this.i18n('tokenactionhud.damage'), encodedValue: damageEncodedValue, id: encodeURIComponent(s.data._id+'>damage')})
-            subcategory.actions.push({name: this.i18n('tokenactionhud.critical'), encodedValue: critEncodedValue, id: encodeURIComponent(s.data._id+'>critical')})
+        let subcategory = this.baseHandler.initializeEmptySubcategory();
+        subcategory.actionsClass = 'excludeFromWidthCalculation';
 
-            let attackEffects = s.data.data.attackEffects?.value;
-            if (attackEffects.length > 0) {
-                attackEffects.forEach(a => {
-                    let id = `plus>${encodeURIComponent(a)}`;
-                    let encodedValue = [macroType, tokenId, id].join(this.baseHandler.delimiter);
-                    subcategory.actions.push({name: `Plus ${a}`, encodedValue: encodedValue, id: id})
-                });
-            }
-            
-            this.baseHandler._combineSubcategoryWithCategory(category, s.name, subcategory);
+        toggleActions.forEach(t => {
+            let toggleKey = this._getToggleKey(t.inputName);
+            if (!toggleKey)
+                return;
+
+            let id = toggleKey;
+            let encodedValue = [macroType, tokenId, toggleKey].join(this.baseHandler.delimiter);
+            let name = t.label.startsWith('PF2E.') ? this.baseHandler.i18n(t.label) : t.label;
+            let cssClass = t.checked ? 'active': '';
+
+            let action = {id: id, encodedValue: encodedValue, name: name, cssClass: cssClass};
+
+            subcategory.actions.push(action);
         });
+        
+        this.baseHandler._combineSubcategoryWithCategory(category, this.baseHandler.i18n('tokenactionhud.toggles'), subcategory);
+    }
+
+    /** @private */
+    _getToggleKey(inputName) {
+        const rollOptionPrefix = 'flags.pf2e.rollOptions.';
+        if (!inputName.includes(rollOptionPrefix))
+            return '';
+
+        return inputName.substring(rollOptionPrefix.length);
     }
 
     /** @private */
@@ -134,7 +115,7 @@ export class NpcActionHandlerPf2e {
         let result = this.baseHandler.initializeEmptyCategory('attributes');
         let attributes = this.baseHandler.initializeEmptySubcategory();
 
-        let attributesMap = [{_id: 'perception', name: 'Perception'},{_id: 'initiative', name: 'Initiative'}]
+        let attributesMap = [{id: 'perception', name: 'Perception'},{id: 'initiative', name: 'Initiative'}]
         
         attributes.actions = this.baseHandler._produceActionMap(tokenId, attributesMap, macroType);
         

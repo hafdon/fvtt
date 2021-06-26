@@ -54,10 +54,10 @@ function init() {
             },
         });
     }
-    Hooks.on("renderSwadeCharacterSheet", app => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
+    Hooks.on("renderSwadeCharacterSheet", (app) => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
         sheetSwadeRenderHook(app, "character"));
-    Hooks.on("renderSwadeNPCSheet", app => sheetSwadeRenderHook(app, "npc"));
-    Hooks.on("renderSwadeVehicleSheet", app => sheetSwadeRenderHook(app, "vehicle"));
+    Hooks.on("renderSwadeNPCSheet", (app) => sheetSwadeRenderHook(app, "npc"));
+    Hooks.on("renderSwadeVehicleSheet", (app) => sheetSwadeRenderHook(app, "vehicle"));
     console.log("Quick Insert | swade system extensions initiated");
 }
 

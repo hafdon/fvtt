@@ -74,14 +74,12 @@ Hooks.once('init', () => {
         scope: 'world',
         config: true
     });
-});
-
-Hooks.once('ready', () => {
 
     const searchField = new AutoCompletionField();
-    const KeyBinding = window.Azzu.SettingsTypes.KeyBinding;
+    game.searchAnywhere = searchField;
 
     document.onkeydown = function (evt) {
+        const KeyBinding = window.Azzu.SettingsTypes.KeyBinding;
         const cmd = game.settings.get('searchanywhere', 'settingCommand');
 
         if (evt.key === "Escape" && (searchField.visible || CommandMenu.visible)) {
@@ -91,7 +89,11 @@ Hooks.once('ready', () => {
             return;
         }
 
-        const stringValue = game.settings.get('searchanywhere', 'settingKey');
+        let stringValue = game.settings.get('searchanywhere', 'settingKey');
+        if (stringValue.endsWith("+")) {
+            stringValue = stringValue + "  ";
+        }
+
         const parsedValue = KeyBinding.parse(stringValue);
         const withShift = KeyBinding.parse('Shift + ' + stringValue);
         const bind = KeyBinding.eventIsForBinding(evt, parsedValue);
@@ -100,14 +102,18 @@ Hooks.once('ready', () => {
         if (bind || (cmd === 'onShift' && bindWithShift)) {
             evt.stopPropagation();
             searchField.show(
-                game.i18n.localize(`SEARCHANYWHERE.searchHint`),
-                cmd === 'always' || (cmd === 'onShift' && bindWithShift)
+                    game.i18n.localize(`SEARCHANYWHERE.searchHint`),
+                    cmd === 'always' || (cmd === 'onShift' && bindWithShift)
             );
             return;
         }
 
         SEARCHABLE_ENTITY_TYPES.forEach(type => {
-            const stringTypeValue = game.settings.get('searchanywhere', `setting${type}Key`);
+            let stringTypeValue = game.settings.get('searchanywhere', `setting${type}Key`);
+            if (stringTypeValue.endsWith("+")) {
+                stringTypeValue = stringTypeValue + "  ";
+            }
+
             const parsedTypeValue = KeyBinding.parse(stringTypeValue);
             const withShiftType = KeyBinding.parse('Shift + ' + stringTypeValue);
 
@@ -117,9 +123,9 @@ Hooks.once('ready', () => {
             if (bindType || (cmd === 'onShift' && bindTypeWithShift)) {
                 evt.stopPropagation();
                 searchField.show(
-                    game.i18n.localize(`SEARCHANYWHERE.search${type}Hint`),
-                    cmd === 'always' || (cmd === 'onShift' && bindTypeWithShift),
-                    {"entityType": type }
+                        game.i18n.localize(`SEARCHANYWHERE.search${type}Hint`),
+                        cmd === 'always' || (cmd === 'onShift' && bindTypeWithShift),
+                        {"entityType": type }
                 );
                 return false;
             }
@@ -131,6 +137,14 @@ Hooks.once('ready', () => {
             searchField.hide();
         }
     };
+});
+
+Hooks.once('ready', () => {
+
+    const hideShowForPlayers = game.settings.get('searchanywhere', 'settingPlayers');
+    if(hideShowForPlayers && !game.user.isGM) {
+        return;
+    }
 
     collectSheets(CONFIG.Actor).forEach(sheetClass => new DragHandler(`render${sheetClass}`, 'Actor'));
     collectSheets(CONFIG.Item).forEach(sheetClass => new DragHandler(`render${sheetClass}`, 'Item'));
@@ -186,6 +200,35 @@ stripHtml = function(html) {
 
     return $("<div>").html(html).text();
 };
+
+function promiseAllStepN(n, list) {
+    let tail = list.splice(n);
+    let head = list;
+    let resolved = [];
+    let processed = 0;
+    return new Promise(resolve=>{
+        head.forEach( x => {
+            let res = x();
+            resolved.push(res);
+            res.then(y => {
+                runNext();
+                return y
+            })
+        });
+        function runNext(){
+            if(processed === tail.length) {
+                resolve(Promise.all(resolved))
+            } else {
+                resolved.push(tail[processed]().then(x=>{
+                    runNext();
+                    return x
+                }));
+                processed++
+            }
+        }
+    })
+}
+Promise.allConcurrent = n => list =>  promiseAllStepN(n, list);
 
 class Loader {
 
@@ -253,6 +296,7 @@ class AutoCompletionField {
     constructor() {
         this._createIndex();
         this._buildHtml();
+        this.buffer = null;
     }
 
     /**
@@ -308,22 +352,6 @@ class AutoCompletionField {
             }
         });
 
-        Hooks.on('renderSceneControls', (controls, html) => {
-            const searchBtn = $(
-                `<li class="scene-control">
-                    <i class="fas fa-search"></i>
-                </li>`
-            );
-            html.append(searchBtn);
-            searchBtn[0].addEventListener('click', evt => {
-                evt.stopPropagation();
-                this.show(
-                    game.i18n.localize(`SEARCHANYWHERE.searchHint`),
-                    true
-                );
-            });
-        });
-
         SEARCHABLE_ENTITY_TYPES.forEach(entityType => {
             Hooks.on(`create${entityType}`, (entity) => {
                 this.index.add(new EntitySuggestionData(entity, entityType));
@@ -333,7 +361,9 @@ class AutoCompletionField {
             });
             Hooks.on(`delete${entityType}`, (entity) => {
                 let suggestion = this.index.find(entity.id);
-                this.index.remove(suggestion);
+                if(suggestion) {
+                    this.index.remove(suggestion);
+                }
             });
         });
 
@@ -345,11 +375,13 @@ class AutoCompletionField {
      * @private
      */
     _buildIndex() {
+        this.indexBuilding = true;
         return new Promise((resolve, reject) => {
 
             Loader.show("Building search indexes in progress, please wait...");
 
-            Promise.all(game.packs.map(pack => pack.getIndex())).then(indexes => {
+            const supportedPacks = game.packs.filter(pack => !['Scene', 'Playlist'].includes(pack.documentClass.documentName));
+            Promise.allConcurrent(10)(supportedPacks.map(pack => () => pack.getIndex())).then(indexes => {
 
                 let suggestions = [].concat(
                     game.actors.map(entity => new EntitySuggestionData(entity)),
@@ -363,20 +395,23 @@ class AutoCompletionField {
                 indexes.forEach((index, idx) => {
                     suggestions = suggestions.concat(
                         index.map(
-                            entry => new CompendiumSuggestionData(entry, game.packs.entries[idx])
+                            entry => new CompendiumSuggestionData(entry, game.packs.contents[idx])
                         )
                     );
                 });
 
                 this.index.add(suggestions);
 
+                this.indexBuilding = false;
                 this.isIndexBuilt = true;
 
                 Loader.hide();
 
                 resolve(true);
 
+
             }).catch(err => {
+                this.indexBuilding = false;
                 Loader.hide();
                 console.error(`Unable fetch compendium indexes: ${err}`);
                 resolve(false);
@@ -414,7 +449,7 @@ class AutoCompletionField {
 
         if(this.isIndexBuilt) {
             _show();
-        } else {
+        } else if(!this.indexBuilding) {
             this._buildIndex().then(built => {
                 _show();
             });
@@ -436,8 +471,18 @@ class AutoCompletionField {
      * @param done
      */
     lookup(query, done) {
-        this.state = this._whichState(query);
-        this.state.lookup(query, done);
+
+        if(this.buffer) {
+            clearTimeout(this.buffer);
+        }
+
+        let doLookup = () => {
+            this.state = this._whichState(query);
+            this.state.lookup(query, done);
+            this.buffer = null;
+        };
+
+        this.buffer = setTimeout(doLookup, 300);
     }
 
     /**
@@ -730,11 +775,11 @@ class EntitySuggestionData {
     }
 
     get icon() {
-        return SUGGESTION_ICON_TYPES[this.entity.entity];
+        return SUGGESTION_ICON_TYPES[this.entity.documentName];
     }
 
     get entityType() {
-        return this.entity.entity;
+        return this.entity.documentName;
     }
 
     get collection() {
@@ -747,7 +792,7 @@ class EntitySuggestionData {
             case 'JournalEntry': return 'modules/searchanywhere/icons/book.svg';
             case 'RollTable': return 'icons/svg/d20-grey.svg';
         }
-        return !this.entity.img || this.entity.img === DEFAULT_TOKEN ? 'modules/searchanywhere/icons/mystery-man.svg' : this.entity.img;
+        return !this.entity.img || this.entity.img === CONST.DEFAULT_TOKEN ? 'modules/searchanywhere/icons/mystery-man.svg' : this.entity.img;
     }
 
     allowed() {
@@ -862,7 +907,7 @@ class CompendiumSuggestionData {
     }
 
     get entityType() {
-        return this.pack.entity;
+        return this.pack.documentClass.documentName;
     }
 
     get collection() {
@@ -874,7 +919,7 @@ class CompendiumSuggestionData {
             case 'JournalEntry': return 'modules/searchanywhere/icons/book.svg';
             case 'RollTable': return 'icons/svg/d20-grey.svg';
         }
-        return !this.entry.img || this.entry.img === DEFAULT_TOKEN ? 'modules/searchanywhere/icons/mystery-man.svg' : this.entry.img;
+        return !this.entry.img || this.entry.img === CONST.DEFAULT_TOKEN ? 'modules/searchanywhere/icons/mystery-man.svg' : this.entry.img;
     }
 
     allowed() {
@@ -908,7 +953,7 @@ class CompendiumSuggestionData {
     }
 
     render() {
-        this.pack.getEntity(this.entry._id)
+        this.pack.getDocument(this.entry._id)
             .then(entity => {
                 const sheet = entity.sheet;
                 sheet.options.editable = false;
@@ -954,8 +999,7 @@ class CompendiumSuggestionData {
     import() {
         this.pack.getEntity(this.entry._id)
             .then(entity => {
-                const packName = entity.compendium.collection;
-                entity.collection.importFromCollection(packName, entity._id);
+                entity.collection.importFromCompendium(this.pack, entity._id);
             })
             .catch(err => {
                 console.error(`Unable roll compendium table: ${err}`);

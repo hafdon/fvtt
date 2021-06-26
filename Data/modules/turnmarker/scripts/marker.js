@@ -1,6 +1,6 @@
 import {MarkerAnimation} from './markeranimation.js';
 import {Settings} from './settings.js';
-import {findTokenById, Flags, FlagScope, socketAction, socketName} from './utils.js';
+import {findTokenById, findTileById, Flags, FlagScope, socketAction, socketName} from './utils.js';
 
 /**
  * Provides functionality for creating, moving, and animating the turn marker
@@ -12,15 +12,16 @@ export class Marker {
      */
     static async deleteTurnMarker() {
         const to_delete = canvas.scene.getEmbeddedCollection('Tile')
-            .filter(tile => tile.flags.turnMarker)
+            .filter(tile => "flags" in tile.data)
+            .filter(tile => tile.data.flags.turnMarker)
             .map(tile => tile._id);
         if (!game.user.isGM) {
             game.socket.emit(socketName, {
                 mode: socketAction.deleteTurnMarker,
-                tileData: to_delete.data
+                tileId: to_delete
             });
         } else {
-            await canvas.scene.deleteEmbeddedEntity('Tile', to_delete);
+            await canvas.scene.deleteEmbeddedDocuments('Tile', to_delete);
         }
     }
 
@@ -29,15 +30,16 @@ export class Marker {
      */
     static async deleteOnDeckMarker() {
         const to_delete = canvas.scene.getEmbeddedCollection('Tile')
-            .filter(tile => tile.flags.deckMarker)
+            .filter(tile => "flags" in tile.data)
+            .filter(tile => tile.data.flags.deckMarker)
             .map(tile => tile._id);
         if (!game.user.isGM) {
             game.socket.emit(socketName, {
                 mode: socketAction.deleteOnDeckMarker,
-                tileData: to_delete.data
+                tileId: to_delete
             });
         } else {
-            await canvas.scene.deleteEmbeddedEntity('Tile', to_delete);
+            await canvas.scene.deleteEmbeddedDocuments('Tile', to_delete);
         }
     }
 
@@ -56,7 +58,7 @@ export class Marker {
                 let dims = this.getImageDimensions(token, false, "turnmarker");
                 let center = this.getImageLocation(token, false, "turnmarker");
 
-                let newTile = new Tile({
+                let newTile = await canvas.scene.createEmbeddedDocuments("Tile", [{
                     img: Settings.getImagePath(),
                     width: dims.w,
                     height: dims.h,
@@ -67,11 +69,9 @@ export class Marker {
                     hidden: token.data.hidden,
                     locked: false,
                     flags: {turnMarker: true}
-                });
+                }]);
 
-                let tile = await canvas.scene.createEmbeddedEntity('Tile', newTile.data);
-
-                return tile._id;
+                return newTile._id;
             } else {
                 return null;
             }
@@ -88,7 +88,7 @@ export class Marker {
             let token = findTokenById(tokenId);
             let dims = this.getImageDimensions(token, false, "deckmarker");
             let center = this.getImageLocation(token, false, "deckmarker");
-            let newTile = new Tile({
+            let newTile = canvas.scene.createEmbeddedDocuments("Tile", [{
                 img: Settings.getOnDeckImagePath(),
                 width: dims.w,
                 height: dims.h,
@@ -99,10 +99,10 @@ export class Marker {
                 hidden: token.data.hidden,
                 locked: false,
                 flags: {deckMarker: true}
-            });
+            }]);
 
             if (game.user.isGM) {
-                await canvas.scene.createEmbeddedEntity('Tile', newTile.data);
+                await canvas.scene.createEmbeddedDocuments('Tile', newTile.data);
             }
         }
     }
@@ -113,16 +113,17 @@ export class Marker {
      */
     static async deleteStartMarker() {
         const to_delete = canvas.scene.getEmbeddedCollection('Tile')
-            .filter(tile => tile.flags.startMarker)
+            .filter(tile => "flags" in tile.data)
+            .filter(tile => tile.data.flags.startMarker)
             .map(tile => tile._id);
         if (!game.user.isGM) {
             game.socket.emit(socketName, {
                 mode: socketAction.deleteStartMarker,
-                tileData: to_delete.data
+                tileId: to_delete
             });
         } else {
             await canvas.scene.unsetFlag(FlagScope, Flags.startMarkerPlaced);
-            await canvas.scene.deleteEmbeddedEntity('Tile', to_delete);
+            await canvas.scene.deleteEmbeddedDocuments('Tile', to_delete);
         }
     }
 
@@ -137,21 +138,20 @@ export class Marker {
             let token = findTokenById(tokenId);
             let dims = this.getImageDimensions(token);
             let center = this.getImageLocation(token);
-            let newTile = new Tile({
-                img: Settings.getStartMarker(),
-                width: dims.w,
-                height: dims.h,
-                x: center.x,
-                y: center.y,
-                z: 900,
-                rotation: 0,
-                hidden: token.data.hidden,
-                locked: false,
-                flags: {startMarker: true}
-            });
 
             if (game.user.isGM) {
-                await canvas.scene.createEmbeddedEntity('Tile', newTile.data);
+                let newTile = await canvas.scene.createEmbeddedDocuments("Tile", [{
+                    img: Settings.getStartMarker(),
+                    width: dims.w,
+                    height: dims.h,
+                    x: center.x,
+                    y: center.y,
+                    z: 900,
+                    rotation: 0,
+                    hidden: token.data.hidden,
+                    locked: false,
+                    flags: {startMarker: true}
+                }]);
                 await canvas.scene.setFlag(FlagScope, Flags.startMarkerPlaced, true);
             }
         }
@@ -167,14 +167,14 @@ export class Marker {
         let dims = this.getImageDimensions(token, false, marker_type);
         let center = this.getImageLocation(token, false, marker_type);
 
-        await canvas.scene.updateEmbeddedEntity('Tile', {
+        await canvas.scene.updateEmbeddedDocuments('Tile', [{
             _id: markerId,
             width: dims.w,
             height: dims.h,
             x: center.x,
             y: center.y,
             hidden: token.data.hidden
-        });
+        }]);
     }
 
     /**
@@ -193,10 +193,10 @@ export class Marker {
         if (game.user.isGM) {
             let tile = canvas.tiles.placeables.find(t => t.data.flags.turnMarker == true);
             if (tile) {
-                await canvas.scene.updateEmbeddedEntity('Tile', {
+                await canvas.scene.updateEmbeddedEntity('Tile', [{
                     _id: tile.id,
                     img: Settings.getImagePath()
-                });
+                }]);
             }
         }
     }
@@ -208,10 +208,10 @@ export class Marker {
         if (game.user.isGM) {
             let tile = canvas.tiles.placeables.find(t => t.data.flags.deckMarker == true);
             if (tile) {
-                await canvas.scene.updateEmbeddedEntity('Tile', {
+                await canvas.scene.updateEmbeddedEntity('Tile', [{
                     _id: tile.id,
                     img: Settings.getOnDeckImagePath()
-                });
+                }]);
             }
         }
     }
@@ -243,12 +243,22 @@ export class Marker {
                 newWidth = newHeight = token.w * ratio;
                 break;
             default: // Gridless and Square
-                newWidth = token.w * ratio;
-                newHeight = token.h * ratio;
+                newWidth = this.getSmallerDimension(token.w, token.h) * ratio;
+                newHeight = this.getSmallerDimension(token.w, token.h) * ratio;
                 break;
         }
 
         return {w: newWidth, h: newHeight};
+    }
+
+    /**
+     * Returns the smaller dimension, so we can prevent lopsided markers when we have larger tokens on square/gridless
+     * @param width
+     * @param height
+     * @returns {*}
+     */
+    static getSmallerDimension(width, height) {
+        return width < height ? width : height;
     }
 
     /**
@@ -272,8 +282,8 @@ export class Marker {
                 newY = token.center.y - ((token.w * ratio) / 2);
                 break;
             default: // Gridless and Square
-                newX = token.center.x - ((token.w * ratio) / 2);
-                newY = token.center.y - ((token.h * ratio) / 2);
+                newX = token.center.x - ((this.getSmallerDimension(token.w, token.h) * ratio) / 2);
+                newY = token.center.y - ((this.getSmallerDimension(token.w, token.h) * ratio) / 2);
         }
 
         return {x: newX, y: newY};

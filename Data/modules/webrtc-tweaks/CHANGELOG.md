@@ -1,3 +1,14 @@
+# v0.5.8
+* Minor refactor for more consistency
+* Update compatible FVTT version to v0.8.6
+
+# v0.5.7
+* Fix github workflow for packaging of language files
+
+# v0.5.6
+* Switch to esmodule format for easier maintenance
+* Update compatibility to FVTT v0.8.5
+
 # v0.5.5
 * Update compatibility to FVTT v0.8.1
 

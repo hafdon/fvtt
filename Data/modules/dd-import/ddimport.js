@@ -21,7 +21,7 @@ Hooks.on("init", () => {
       bucket: "",
       region: "",
       path: "worlds/" + game.world.name,
-      offset: 0.1,
+      offset: 0.0,
       fidelity: 3,
       multiImageMode: "g",
       webpConversion: true,
@@ -81,6 +81,7 @@ class DDImporter extends Application
     data.s3Region = settings.region || "";
     data.path = settings.path || "";
     data.offset = settings.offset || 0;
+    data.padding = settings.padding || 0.25
 
     data.multiImageModes = {
       "g": "Grid",
@@ -101,11 +102,15 @@ class DDImporter extends Application
     DDImporter.checkFidelity(html)
     DDImporter.checkSource(html)
     DDImporter.checkExtension(html)
+    this.setRangeValue(html)
+
 
     html.find(".path-input").keyup(ev => DDImporter.checkPath(html))
     html.find(".fidelity-input").change(ev => DDImporter.checkFidelity(html))
     html.find(".source-selector").change(ev => DDImporter.checkSource(html))
     html.find('[name="extension"]').change(ev => DDImporter.checkExtension(html))
+    
+    html.find(".padding-input").change(ev => this.setRangeValue(html))
 
     html.find(".add-file").click(async ev => {
       var newfile = document.createElement("input");
@@ -120,12 +125,15 @@ class DDImporter extends Application
       html.find(".multi-mode-section")[0].style.display = ""
     })
 
+
+
     html.find(".import-map").click(async ev => {
       try
       {
         let sceneName = html.find('[name="sceneName"]').val()
         let fidelity = parseInt(html.find('[name="fidelity"]').val())
         let offset = parseFloat(html.find('[name="offset"]').val().replace(',', '.'))
+        let padding = parseFloat(html.find('[name="padding"]').val())
         let source = html.find('[name="source"]').val()
         let extension = html.find('[name="extension"]').val()
         let bucket = html.find('[name="bucket"]').val()
@@ -134,6 +142,7 @@ class DDImporter extends Application
         let filecount = html.find('[name="filecount"]').val()
         let mode =  html.find('[name="multi-mode"]').val()
         let toWebp =  html.find('[name="convert-to-webp"]')[0].checked
+        let objectWalls =  html.find('[name="object-walls"]')[0].checked
         let wallsAroundFiles =  html.find('[name="walls-around-files"]')[0].checked
         let imageFileName = html.find('[name="imageFileName"]').val()
         let selected_extension = extension
@@ -154,14 +163,26 @@ class DDImporter extends Application
             console.log("SKIPPING")
             continue
           }
-          files.push(JSON.parse(await fe[0].files[0].text()));
-          fileName = fileName + '-' + fe[0].files[0].name.split(".")[0];
-          // save the first filename
-          if(files.length == 1){
-            firstFileName = fe[0].files[0].name.split(".")[0]
+          try {
+            files.push(JSON.parse(await fe[0].files[0].text()));
+            fileName = fileName + '-' + fe[0].files[0].name.split(".")[0];
+            // save the first filename
+            if(files.length == 1){
+              firstFileName = fe[0].files[0].name.split(".")[0]
+            }
+          }catch(e){
+            if (filecount > 1){
+              ui.notifications.warning("Skipping due to error while importing: " + fe[0].files[0].name + " " + e)
+            }else{
+              throw(e)
+            }
           }
         }
         // keep the original filename if it is only one file at all
+        if (files.length == 0){
+          ui.notifications.error("Skipped all files while importing.")
+          throw new Error("Skipped all files");
+        }
         if (files.length == 1){
           fileName = firstFileName;
         }else{
@@ -271,9 +292,12 @@ class DDImporter extends Application
           "environment": files[0]["environment"],
           "lights": [],
         }
+
         // adapt the walls
         for (var fidx=0; fidx < files.length; fidx++){
           let f = files[fidx];
+          if (objectWalls)
+            f.line_of_sight = f.line_of_sight.concat(f.objects_line_of_sight || [])
           f.line_of_sight.forEach(function(los){
             los.forEach(function(z){
               z.x += f.pos_in_grid.x
@@ -311,7 +335,7 @@ class DDImporter extends Application
         ui.notifications.notify("upload still in progress, please wait")
         await p
         ui.notifications.notify("creating scene")
-        DDImporter.DDImport(aggregated, sceneName, fileName, path, fidelity, offset, extension, bucket, region, source)
+        DDImporter.DDImport(aggregated, sceneName, fileName, path, fidelity, offset, padding, extension, bucket, region, source)
 
         game.settings.set("dd-import", "importSettings", {
           source: source,
@@ -320,6 +344,7 @@ class DDImporter extends Application
           region: region,
           path: path,
           offset: offset,
+          padding: padding,
           fidelity: fidelity,
           multiImageMode: mode,
           webpConversion: toWebp,
@@ -332,6 +357,12 @@ class DDImporter extends Application
       }
 
     })
+  }
+
+  setRangeValue(html)
+  {
+    let val = html.find(".padding-input").val()
+    html.find(".range-value")[0].textContent = val
   }
 
   static checkPath(html)
@@ -413,9 +444,17 @@ class DDImporter extends Application
   static image2Canvas(canvas, file, extension){
     return new Promise( function(resolve){
       var image = new Image();
+      image.decoding='sync';
       image.addEventListener('load', function() {
-          canvas.drawImage(image, file.pos_in_image.x, file.pos_in_image.y);
-          resolve()
+          image.decode().then(() => {
+            canvas.drawImage(image, file.pos_in_image.x, file.pos_in_image.y);
+            resolve()
+          }).catch(e => {
+            console.log("decode failed because of DOMException, lets try directly");
+            console.log(e);
+            canvas.drawImage(image, file.pos_in_image.x, file.pos_in_image.y);
+            resolve()
+          });
       });
       image.src = "data:image/"+extension+";base64,"+file.image
     });
@@ -426,15 +465,13 @@ class DDImporter extends Application
     await FilePicker.upload(source, path, uploadFile, { bucket: bucket })
   }
 
-  static async DDImport(file, sceneName, fileName, path, fidelity, offset, extension, bucket, region, source) {
+  static async DDImport(file, sceneName, fileName, path, fidelity, offset, padding, extension, bucket, region, source) {
     if (path && path[path.length-1] != "/")
       path = path + "/"
-    if (path && path[0] != "/")
-      path = "/" + path
-    if (!path)
-      path = "/"
     let imagePath = path + fileName + "." + extension;
     if (source === "s3") {
+      if (imagePath[0] != "/")
+        imagePath = "/" + imagePath
       imagePath = "https://" + bucket + ".s3." + region + ".amazonaws.com" + imagePath;
     }
     let newScene = new Scene({
@@ -443,14 +480,16 @@ class DDImporter extends Application
       img: imagePath,
       width: file.resolution.pixels_per_grid * file.resolution.map_size.x,
       height: file.resolution.pixels_per_grid * file.resolution.map_size.y,
-      padding: 0,
+      padding: padding,
       shiftX : 0,
       shiftY : 0
     })
-    let walls = this.GetWalls(file, newScene, 6 - fidelity, offset)
-    let doors = this.GetDoors(file, newScene, offset)
-    let lights = this.GetLights(file, newScene);
-    mergeObject(newScene.data, {walls: walls.concat(doors), lights: lights})
+    newScene.data.update(
+      {
+        walls : this.GetWalls(file, newScene, 6 - fidelity, offset).concat(this.GetDoors(file, newScene, offset)).map(w => w.toObject()), 
+        lights : this.GetLights(file, newScene).map(l => l.toObject())
+      })
+    //mergeObject(newScene.data, {walls: walls.concat(doors), lights: lights})
     let scene = await Scene.create(newScene.data);
     scene.createThumbnail().then(thumb => {
       scene.update({"thumb" :  thumb.thumb});
@@ -499,14 +538,14 @@ class DDImporter extends Application
     let sceneDimensions = Canvas.getDimensions(scene.data)
     let offsetX = sceneDimensions.paddingX;
     let offsetY = sceneDimensions.paddingY;
-    return new Wall({
+    return new WallDocument({
       c: [
         (pointA.x * file.resolution.pixels_per_grid) + offsetX,
         (pointA.y * file.resolution.pixels_per_grid) + offsetY,
         (pointB.x * file.resolution.pixels_per_grid) + offsetX,
         (pointB.y * file.resolution.pixels_per_grid) + offsetY
       ]
-    }).data
+    })
   }
 
   static preprocessWalls(wallSet, numToSkip) {
@@ -605,6 +644,9 @@ class DDImporter extends Application
      * x = (m2-m1)/(k1-k2)
      * y = k1*x + m1
      */
+    if(wallinfo1.slope == undefined && wallinfo2.slope == undefined){
+      return { x: wallinfo1.x, y: (wallinfo1.y + wallinfo2.y)/2 }
+    }
     if (wallinfo1.slope == undefined) {
       let m2 = wallinfo2.y - wallinfo2.slope * wallinfo2.x
       return { x: wallinfo1.x, y: wallinfo2.slope * wallinfo1.x + m2 }
@@ -634,16 +676,16 @@ class DDImporter extends Application
       ddDoors = this.makeOffsetWalls(ddDoors, offset)
     }
     for (let door of ddDoors) {
-      doors.push(new Wall({
+      doors.push(new WallDocument({
         c : [
           (door.bounds[0].x   * file.resolution.pixels_per_grid) + offsetX,
           (door.bounds[0].y   * file.resolution.pixels_per_grid) + offsetY,
           (door.bounds[1].x * file.resolution.pixels_per_grid) + offsetX,
           (door.bounds[1].y * file.resolution.pixels_per_grid) + offsetY
         ],
-        door: game.settings.get("dd-import", "openableWindows") ? true : door.closed, // If openable windows - all portals should be doors, otherwise, only portals that "block light" should be openable (doors)
+        door: game.settings.get("dd-import", "openableWindows") ?  1 : (door.closed ? 1 : 0), // If openable windows - all portals should be doors, otherwise, only portals that "block light" should be openable (doors)
         sense: (door.closed) ? CONST.WALL_SENSE_TYPES.NORMAL : CONST.WALL_SENSE_TYPES.NONE
-      }).data)
+      }))
     }
 
     return doors
@@ -655,7 +697,7 @@ class DDImporter extends Application
     let offsetX = sceneDimensions.paddingX;
     let offsetY = sceneDimensions.paddingY;
     for (let light of file.lights) {
-      let newLight = new AmbientLight({
+      let newLight = new AmbientLightDocument({
         t: "l",
         x: (light.position.x * file.resolution.pixels_per_grid) + offsetX,
         y: (light.position.y * file.resolution.pixels_per_grid) + offsetY,

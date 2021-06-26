@@ -215,6 +215,33 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "FuyuEnnju",
+      "name": "长耳",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55729032?v=4",
+      "profile": "https://github.com/FuyuEnnju",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "Wibble199",
+      "name": "Will Bennion",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3984322?v=4",
+      "profile": "https://github.com/Wibble199",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "flamewave000",
+      "name": "flamewave000",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3588046?v=4",
+      "profile": "https://github.com/flamewave000",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

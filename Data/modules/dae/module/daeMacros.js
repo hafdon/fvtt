@@ -69,6 +69,10 @@ export let teleportToToken = async (token, targetTokenName, xGridOffset = 0, yGr
     //@ts-ignore target.scene.data.grid
     return teleport(token, target.scene, target.token.x + xGridOffset * target.scene.data.grid, target.token.y + yGridOffset * canvas.scene.data.grid);
 };
+export async function createToken(tokenData, x, y) {
+    let targetSceneId = canvas.scene.id;
+    requestGMAction(GMAction.actions.createToken, { userId: game.user.id, targetSceneId, tokenData, x, y });
+}
 export let teleport = async (token, targetScene, xpos, ypos) => {
     let x = parseInt(xpos);
     let y = parseInt(ypos);
@@ -126,9 +130,8 @@ export let macroReadySetup = () => {
 export function getTokenFlag(token, flagName) {
     return getProperty(token, `data.flags.dae.${flagName}`);
 }
-export function deleteActiveEffect(tokenId, origin) {
-    console.error("Delete effects ", tokenId, origin);
-    requestGMAction(GMAction.actions.deleteEffects, { targets: [{ tokenId }], origin });
+export function deleteActiveEffect(actorUuid, origin) {
+    requestGMAction(GMAction.actions.deleteEffects, { targets: [{ actorUuid }], origin });
 }
 export function setTokenFlag(token, flagName, flagValue) {
     const tokenId = (typeof token === "string") ? token : token.id;
@@ -138,18 +141,16 @@ export function getFlag(actor, flagId) {
     let theActor;
     if (!actor)
         return error(`dae.getFlag: actor not defined`);
-    if (typeof actor === "string") {
+    if (typeof actor === "string") { // assume tstring === tokenId
         theActor = canvas.tokens.get(actor)?.actor;
         if (!theActor)
-            theActor = game.actors.get(actor);
+            theActor = game.actors.get(actor); // if not a token maybe an actor
     }
     else {
-        const id = actor.id;
-        const token = canvas.tokens.get(actor.id);
-        if (token)
-            theActor = token.actor;
+        if (actor instanceof Actor)
+            theActor = actor;
         else
-            theActor = game.actors.get(actor.id);
+            theActor = actor.actor;
     }
     if (!theActor)
         return error(`dae.getFlag: actor not defined`);
@@ -160,15 +161,20 @@ export function setFlag(actor, flagId, value) {
     if (typeof actor === "string") {
         return requestGMAction(GMAction.actions.setFlag, { actorId: actor, flagId, value });
     }
+    if (actor instanceof Token)
+        actor = actor.actor;
     if (!actor)
         return error(`dae.setFlag: actor not defined`);
-    return requestGMAction(GMAction.actions.setFlag, { actorId: actor.id, flagId, value });
+    return requestGMAction(GMAction.actions.setFlag, { actorId: actor.id, actorUuid: actor.uuid, flagId, value });
 }
 export function unsetFlag(actor, flagId) {
+    //@ts-ignore
     if (typeof actor === "string") {
         return requestGMAction(GMAction.actions.unsetFlag, { actorId: actor, flagId });
     }
+    if (actor instanceof Token)
+        actor = actor.actor;
     if (!actor)
         return error(`dae.setFlag: actor not defined`);
-    return requestGMAction(GMAction.actions.unsetFlag, { actorId: actor.id, flagId });
+    return requestGMAction(GMAction.actions.unsetFlag, { actorId: actor.id, actorUuid: actor.uuid, flagId });
 }

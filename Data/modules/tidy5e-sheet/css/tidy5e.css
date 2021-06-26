@@ -360,6 +360,14 @@
   line-height: 1;
 }
 
+.tidy5e.sheet.actor #item-info-container-content .info-card .ammo-switch {
+  height: unset;
+  margin-left: 0;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-family: 'Signika';
+}
+
 .tidy5e.sheet.actor #item-info-container-content .info-card .info-card-states,
 .tidy5e.sheet.actor #item-info-container-content .info-card .info-card-trade,
 .tidy5e.sheet.actor #item-info-container-content .info-card .info-card-amount,
@@ -1940,6 +1948,14 @@
   vertical-align: baseline;
 }
 
+.tidy5e.sheet.actor .skills-list .skill .skill-proficiency:not(.proficiency-toggle) {
+  cursor: default;
+}
+
+.tidy5e.sheet.actor .skills-list .skill .skill-proficiency:not(.proficiency-toggle):hover {
+  color: var(--tertiary-color);
+}
+
 .tidy5e.sheet.actor .skills-list .skill .skill-mod,
 .tidy5e.sheet.actor .skills-list .skill .skill-passive {
   text-align: right;
@@ -2819,6 +2835,13 @@
 
 .tidy5e.sheet.actor .items-list .item.expanded .item-name .item-image {
   border-radius: 5px 0 0 0;
+}
+
+.tidy5e.sheet.actor .items-list .item .ammo-switch {
+  height: unset;
+  margin-left: 4px;
+  font-size: 12px;
+  font-family: 'Signika';
 }
 
 .tidy5e.sheet.actor .items-list .item .item-charges {
@@ -4042,6 +4065,10 @@
 
 .tidy5e.sheet.actor.npc .level-information .level [contenteditable] {
   color: var(--secondary-color);
+}
+
+.tidy5e.sheet.actor.npc .origin-summary .creature-type .config-button:hover {
+  color: var(--primary-accent);
 }
 
 .tidy5e.sheet.actor.npc .origin-summary .environment {

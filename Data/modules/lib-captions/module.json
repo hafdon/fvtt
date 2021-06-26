@@ -1,0 +1,54 @@
+{
+    "name": "lib-captions",
+    "title": "libCaptions",
+    "description": "Library module for providing live captioning display support to FoundryVTT",
+    "author": "bekit",
+    "authors": [
+        {
+            "name": "bekit",
+            "email": "fvtt-module-help@bekit.net",
+            "url": "https://bekit.net",
+            "discord": "bekit#4213",
+            "patreon": "bekit",
+            "ko-fi": "bekit",
+            "twitter": "@bekit"
+        }
+    ],
+    "version": "0.1.2",
+    "minimumCoreVersion": "0.7.0",
+    "compatibleCoreVersion": "0.8.6",
+    "manifestPlusVersion": "1.1.0",
+    "esmodules": [
+        "src/libCaptions.js"
+    ],
+    "styles": [
+        "css/libCaptions.css"
+    ],
+    "url": "https://github.com/bekriebel/fvtt-module-lib-captions",
+    "manifest": "https://github.com/bekriebel/fvtt-module-lib-captions/releases/latest/download/module.json",
+    "download": "https://github.com/bekriebel/fvtt-module-lib-captions/releases/download/v0.1.2/fvtt-module-lib-captions.zip",
+    "readme": "https://github.com/bekriebel/fvtt-module-lib-captions/blob/main/README.md",
+    "changelog": "https://github.com/bekriebel/fvtt-module-lib-captions/blob/main/CHANGELOG.md",
+    "bugs": "https://github.com/bekriebel/fvtt-module-lib-captions/issues",
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "media": [
+        {
+            "type": "cover",
+            "url": "https://raw.githubusercontent.com/bekriebel/fvtt-module-lib-captions/main/example-images/cover.png"
+        },
+        {
+            "type": "icon",
+            "url": "https://raw.githubusercontent.com/bekriebel/fvtt-module-lib-captions/main/example-images/icon.png"
+        },
+        {
+            "type": "screenshot",
+            "url": "https://raw.githubusercontent.com/bekriebel/fvtt-module-lib-captions/main/example-images/example-jitsi_captions.webp"
+        }
+    ]
+}

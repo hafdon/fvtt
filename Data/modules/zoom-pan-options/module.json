@@ -3,16 +3,18 @@
     "title": "Zoom/Pan Options",
     "description": "Adds cursor-based zoom, touchpad/scrollwheel zoom/pan support, and other options.",
     "author": "shem",
-    "version": "1.5.3",
+    "version": "1.6.1",
     "minimumCoreVersion": "0.6.0",
-    "compatibleCoreVersion": "0.7.9",
+    "compatibleCoreVersion": "0.8.5",
     "esmodules": [
         "scripts/zoom-pan-options.js"
     ],
     "url": "https://github.com/itamarcu/ZoomPanOptions",
     "manifest": "https://github.com/itamarcu/ZoomPanOptions/releases/latest/download/module.json",
-    "download": "https://github.com/itamarcu/ZoomPanOptions/releases/download/1.5.3/module.zip",
-    "readme": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/README.md",
+    "download": "https://github.com/itamarcu/ZoomPanOptions/releases/download/1.6.1/module.zip",
+    "readme": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/Readme.md",
+    "changelog": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/Changelog.md",
+    "license": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/License.txt",
     "bugs": "https://github.com/itamarcu/ZoomPanOptions/issues",
     "authors": [
         {
@@ -22,15 +24,17 @@
             "reddit": "u/Shemetz"
         }
     ],
-    "manifestPlusVersion": "1.0.0",
+    "manifestPlusVersion": "1.2.0",
     "media": [
         {
             "type": "icon",
-            "url": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/metadata/icon.png"
+            "url": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/metadata/icon.png",
+            "caption": "Zoom/Pan Options"
         },
         {
             "type": "cover",
-            "url": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/metadata/cover.png"
+            "url": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/metadata/cover.png",
+            "caption": "Zoom/Pan Options"
         }
     ]
 }

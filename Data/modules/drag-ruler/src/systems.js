@@ -8,7 +8,10 @@ export function getDefaultSpeedAttribute() {
 		case "lancer":
 			return "actor.data.data.mech.speed"
 		case "pf1":
-			return "actor.data.data.attributes.speed.land.total"
+		case "D35E":
+			return "actor.data.data.attributes.speed.land.total"		
+		case "sfrpg":
+			return "actor.data.data.attributes.speed.value";
 		case "shadowrun5e":
 			return "actor.data.data.movement.walk.value";
 		case "swade":
@@ -25,6 +28,8 @@ export function getDefaultDashMultiplier() {
 		case "dnd5e":
 		case "lancer":
 		case "pf1":
+		case "D35E":
+		case "sfrpg":
 		case "shadowrun5e":
 			return 2
 	}

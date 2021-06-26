@@ -59,7 +59,7 @@ function init() {
             },
         });
     }
-    Hooks.on("renderActorSheetWfrp4eCharacter", app => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
+    Hooks.on("renderActorSheetWfrp4eCharacter", (app) => getSetting(settings.FILTERS_SHEETS_ENABLED) &&
         sheetWfrp4eRenderHook(app, "character"));
     console.log("Quick Insert | wfrp4e system extensions initiated");
 }

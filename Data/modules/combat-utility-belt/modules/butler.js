@@ -102,6 +102,13 @@ export const KNOWN_GAME_SYSTEMS = {
         healthAttribute: "attributes.hp",
         initiative: "attributes.init.mod"
     },
+    ironclaw2e: {
+        id: "ironclaw2e",
+        name: "Ironclaw Second Edition",
+        concentrationAttribute: "",
+        healthAttribute: "",
+        initiative: ""
+    },
     other: {
         id: "other",
         name: "Custom/Other",
@@ -194,7 +201,8 @@ export const DEFAULT_CONFIG = {
         }
     },
     giveXP: {
-        enable: false
+        enable: false,
+        modifier: 1
     },
     hideNames: {
         enable: false,
@@ -324,6 +332,9 @@ export const FLAGS = {
         conditionId: "conditionId",
         overlay: "overlay"
     },
+    giveXP: {
+        deselectByDefault: "deselectByDefault"
+    },
     mightySummoner: {
         mightySummoner: "mightySummoner"
     },
@@ -369,7 +380,8 @@ export const SETTING_KEYS = {
         suppressPreventativeSaveReminder: "conditionsSuppressPreventativeSaveReminder"
     },
     giveXP: {
-        enable: "enableGiveXP"
+        enable: "enableGiveXP",
+        modifier: "giveXpModifier"
     },
     hideNames: {
         enable: "enableHideNPCNames",

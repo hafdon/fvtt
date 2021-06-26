@@ -12,22 +12,28 @@ import { addFavorites } from "./app/tidy5e-favorites.js";
 import { tidy5eClassicControls } from "./app/classic-controls.js";
 import { tidy5eShowActorArt } from "./app/show-actor-art.js";
 import { tidy5eItemCard } from "./app/itemcard.js";
+import { tidy5eAmmoSwitch } from "./app/ammo-switch.js";
 
 let position = 0;
 
-export class Tidy5eSheet extends ActorSheet5eCharacter {
 
+export class Tidy5eSheet extends ActorSheet5eCharacter {
+	
 	get template() {
 		if ( !game.user.isGM && this.actor.limited && !game.settings.get("tidy5e-sheet", "expandedSheetEnabled") ) return "modules/tidy5e-sheet/templates/actors/tidy5e-sheet-ltd.html";
 		return "modules/tidy5e-sheet/templates/actors/tidy5e-sheet.html";
 	}
 	
 	static get defaultOptions() {
+		let defaultTab = game.settings.get("tidy5e-sheet", "defaultActionsTab") != 'default' ? 'attributes' : 'actions';
+		if (!game.modules.get('character-actions-list-5e')?.active) defaultTab = 'description';
+
 	  return mergeObject(super.defaultOptions, {
 			classes: ["tidy5e", "sheet", "actor", "character"],
 			blockFavTab: true,
 			width: 740,
-			height: 840
+			height: 840,
+			tabs: [{navSelector: ".tabs", contentSelector: ".sheet-body", initial: defaultTab}]
 		});
 	}
 
@@ -42,6 +48,8 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
     	let Id = id.charAt(0).toUpperCase() + id.slice(1);
       data.data.abilities[id].abbr = game.i18n.localize(`DND5E.Ability${Id}Abbr`);
 		});
+
+		data.appId = this.appId;
 
     return data;
   }
@@ -61,11 +69,12 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 		
 		let actor = this.actor;
 
-    tidy5eListeners(html, actor);
-    tidy5eContextMenu(html);
+		tidy5eListeners(html, actor);
+		tidy5eContextMenu(html);
 		tidy5eSearchFilter(html, actor);
 		tidy5eShowActorArt(html, actor);
 		tidy5eItemCard(html, actor);
+		tidy5eAmmoSwitch(html, actor);
 
 		// store Scroll Pos
 		const attributesTab = html.find('.tab.attributes');
@@ -198,9 +207,12 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 	// add actions module
 	async _renderInner(...args) {
 		const html = await super._renderInner(...args);
+		const actionsListApi = game.modules.get('character-actions-list-5e')?.api;
+		let injectCharacterSheet;
+		if(game.modules.get('character-actions-list-5e')?.active) injectCharacterSheet = game.settings.get('character-actions-list-5e', 'inject-characters');
 		
 		try {
-			if(game.modules.get('character-actions-list-5e')?.active){
+			if(game.modules.get('character-actions-list-5e')?.active && injectCharacterSheet){
 				// Update the nav menu
 				const actionsTabButton = $('<a class="item" data-tab="actions">' + game.i18n.localize(`DND5E.ActionPl`) + '</a>');
 				const tabs = html.find('.tabs[data-group="primary"]');
@@ -215,7 +227,7 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 
 				// const actionsTab = html.find('.actions-target');
 				
-				const actionsTabHtml = $(await CAL5E.renderActionsList(this.actor));
+				const actionsTabHtml = $(await actionsListApi.renderActionsList(this.actor));
 				actionsLayout.html(actionsTabHtml);
 			}
 			} catch (e) {
@@ -242,6 +254,7 @@ async function countInventoryItems(app, html, data){
 // count attuned items
 async function countAttunedItems(app, html, data){
 	let actor = app.actor;
+	// console.log(actor)
 	// let actor = game.actors.entities.find(a => a.data._id === data.actor._id),
 	if(data.editable && !actor.compendium){
 		let	count = actor.data.data.details.attunedItemsCount;
@@ -255,13 +268,7 @@ async function countAttunedItems(app, html, data){
 		}
 
 		let items = actor.data.items;
-		let attunedItems = 0;
-
-		for (var i = 0; i < items.length; i++){
-			if (items[i].data.attunement == 2){
-				attunedItems++;
-			}
-		}
+		let attunedItems = items.filter(item => item.data.data.attunement === 2).length;
 
 		await actor.update({"data.details.attunedItemsCount": attunedItems});
 
@@ -310,7 +317,8 @@ async function editProtection(app, html, data) {
 		
 		if(game.settings.get("tidy5e-sheet", "editTotalLockEnabled")){
 			html.find(".skill input").prop('disabled', true);
-			html.find(".skill .proficiency-toggle").remove();
+			// html.find(".skill .proficiency-toggle").remove();
+			html.find(".skill .proficiency-toggle").removeClass('proficiency-toggle');
 			html.find(".ability-score").prop('disabled', true);
 			html.find(".ac-display input").prop('disabled', true);
 			html.find(".initiative input").prop('disabled', true);
@@ -465,6 +473,9 @@ async function setSheetClasses(app, html, data) {
 	let actor = app.actor;
 	if (!game.settings.get("tidy5e-sheet", "playerNameEnabled")) {
 		html.find('.tidy5e-sheet #playerName').remove();
+	}
+	if (game.settings.get("tidy5e-sheet", "journalTabDisabled")) {
+		html.find('.tidy5e-sheet .tidy5e-navigation a[data-tab="journal"]').remove();
 	}
 	if (game.settings.get("tidy5e-sheet", "rightClickDisabled")) {
 		if(game.settings.get("tidy5e-sheet", "classicControlsEnabled")){

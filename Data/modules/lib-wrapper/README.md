@@ -18,33 +18,44 @@ Library for [Foundry VTT](https://foundryvtt.com/) which provides package develo
     - [1.2.3. As a Contributor](#123-as-a-contributor)
   - [1.3. Usage](#13-usage)
     - [1.3.1. Summary](#131-summary)
-    - [1.3.2. Common Pitfalls](#132-common-pitfalls)
+    - [1.3.2. Common Issues and Pitfalls](#132-common-issues-and-pitfalls)
       - [1.3.2.1. Not allowed to register wrappers before the `init` hook.](#1321-not-allowed-to-register-wrappers-before-the-init-hook)
       - [1.3.2.2. OVERRIDE wrappers have a different call signature](#1322-override-wrappers-have-a-different-call-signature)
       - [1.3.2.3. Arrow Functions do not support `this`](#1323-arrow-functions-do-not-support-this)
+      - [1.3.2.4. Using `super` inside wrappers](#1324-using-super-inside-wrappers)
+      - [1.3.2.5. Patching Mixins](#1325-patching-mixins)
     - [1.3.3. LibWrapper API](#133-libwrapper-api)
       - [1.3.3.1. Registering a wrapper](#1331-registering-a-wrapper)
       - [1.3.3.2. Unregistering a wrapper](#1332-unregistering-a-wrapper)
       - [1.3.3.3. Clear all wrappers for a given package](#1333-clear-all-wrappers-for-a-given-package)
-      - [1.3.3.4. Library Versioning](#1334-library-versioning)
-        - [1.3.3.4.1. Testing for a specific libWrapper version](#13341-testing-for-a-specific-libwrapper-version)
-      - [1.3.3.5. Fallback / Polyfill detection](#1335-fallback--polyfill-detection)
-      - [1.3.3.6. Exceptions](#1336-exceptions)
-      - [1.3.3.7. Hooks](#1337-hooks)
-      - [1.3.3.8. Examples](#1338-examples)
-    - [1.3.4. Compatibility Shim](#134-compatibility-shim)
+      - [1.3.3.4. Ignore conflicts matching specific filters](#1334-ignore-conflicts-matching-specific-filters)
+      - [1.3.3.5. Library Versioning](#1335-library-versioning)
+        - [1.3.3.5.1. Testing for a specific libWrapper version](#13351-testing-for-a-specific-libwrapper-version)
+      - [1.3.3.6. Fallback / Polyfill detection](#1336-fallback--polyfill-detection)
+      - [1.3.3.7. Exceptions](#1337-exceptions)
+      - [1.3.3.8. Hooks](#1338-hooks)
+      - [1.3.3.9. Examples](#1339-examples)
+    - [1.3.4. Using libWrapper inside a System](#134-using-libwrapper-inside-a-system)
+    - [1.3.5. Compatibility Shim](#135-compatibility-shim)
+  - [1.4. Support](#14-support)
+    - [1.4.1. Module-specific Support](#141-module-specific-support)
+    - [1.4.2. Community Support](#142-community-support)
+    - [1.4.3. LibWrapper Support](#143-libwrapper-support)
+
 
 ## 1.1. Why?
 
 One of the biggest causes of incompatibility between packages is them patching the same method, breaking each other. This module attempts to improve this situation, and also provide package developers with a flexible and easy-to-use API to wrap/monkey-patch core Foundry VTT code.
 
-As a bonus, it provides the GM with package conflict detection, as well as the possibility of prioritizing and/or deprioritizing certain packages, which can help resolve conflicts if they do arise.
+As a bonus, it provides the Game Master with package conflict detection, as well as the possibility of prioritizing and/or deprioritizing certain packages, which can help resolve conflicts if they do arise.
 
 <img src="https://raw.githubusercontent.com/ruipin/fvtt-lib-wrapper/7cb19d4def1d5ebf84f4df5753f8e48ecfc1523c/example_priorities.png" width="200">
 <img src="https://raw.githubusercontent.com/ruipin/fvtt-lib-wrapper/7cb19d4def1d5ebf84f4df5753f8e48ecfc1523c/example_conflicts.png" width="200">
 <img src="https://raw.githubusercontent.com/ruipin/fvtt-lib-wrapper/7cb19d4def1d5ebf84f4df5753f8e48ecfc1523c/example_active_wrappers.png" width="200">
 
 <sup>Note: Images may be out-of-date.</sup>
+
+
 
 
 ## 1.2. Installation
@@ -60,7 +71,7 @@ As a bonus, it provides the GM with package conflict detection, as well as the p
 ### 1.2.2. As a Library
 You have multiple options here.
 
-1.  Include the provided [shim](#134-compatibility-shim) in your project.
+1.  Include the provided [shim](#135-compatibility-shim) in your project.
 
     or
 
@@ -81,7 +92,7 @@ You have multiple options here.
 
     or
 
-4.  Require your users to install this library. One simple example that achieves this is provided below. Reference the more complex example in the provided [shim](#134-compatibility-shim) if you prefer a dialog (including an option to dismiss it permanently) instead of a simple notification.
+4.  Require your users to install this library. One simple example that achieves this is provided below. Reference the more complex example in the provided [shim](#135-compatibility-shim) if you prefer a dialog (including an option to dismiss it permanently) instead of a simple notification.
 
     ```javascript
     Hooks.once('ready', () => {
@@ -100,7 +111,7 @@ You have multiple options here.
     ]
     ```
 
-If you pick options #2 or #3 and actively recommend to the user to install libWrapper using e.g. a notification, it is a good idea to give the user a way to permanently dismiss said notification. The provided [shim](#134-compatibility-shim) does this by having a "Don't remind me again" option in the alert dialog.
+If you pick options #2 or #3 and actively recommend to the user to install libWrapper using e.g. a notification, it is a good idea to give the user a way to permanently dismiss said notification. The provided [shim](#135-compatibility-shim) does this by having a "Don't remind me again" option in the alert dialog.
 
 Once your package is released, you should consider adding it to the wiki list of [Modules using libWrapper](https://github.com/ruipin/fvtt-lib-wrapper/wiki/Modules-using-libWrapper). This list can also be used as an additional (unofficial) source of libWrapper usage examples.
 
@@ -108,6 +119,7 @@ Once your package is released, you should consider adding it to the wiki list of
 ### 1.2.3. As a Contributor
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 
 
 
@@ -149,13 +161,14 @@ libWrapper.register('my-fvtt-package', 'Foo.prototype.bar', function (wrapped, .
 ```
 
 
-### 1.3.2. Common Pitfalls
+### 1.3.2. Common Issues and Pitfalls
 
 #### 1.3.2.1. Not allowed to register wrappers before the `init` hook.
 
 Due to Foundry limitations, information related to installed packages is not available until the `init` hook. As such, libWrapper will wait until then to initialize itself.
 
-Any attempts to register wrappers before then will throw an exception. If using the [shim](#134-compatibility-shim), its `libWrapper` symbol will be undefined until then.
+Any attempts to register wrappers before then will throw an exception. If using the [shim](#135-compatibility-shim), its `libWrapper` symbol will be undefined until then.
+
 
 #### 1.3.2.2. OVERRIDE wrappers have a different call signature
 
@@ -167,6 +180,7 @@ libWrapper.register('my-fvtt-package', 'Foo.prototype.bar', function (...args) {
     return;
 }, 'OVERRIDE');
 ```
+
 
 #### 1.3.2.3. Arrow Functions do not support `this`
 
@@ -189,9 +203,71 @@ libWrapper.register('my-fvtt-package', 'Foo.prototype.bar', function (wrapped, .
 ```
 
 
+#### 1.3.2.4. Using `super` inside wrappers
+
+Sometimes, it is desired to call a superclass method directly. Traditionally, `super` would be the right tool to do this. However, due to the specifics of how `super` works in Javascript it cannot be used outside of the class definition, and therefore does not work inside wrappers.
+
+As a result, to call a superclass method directly you will need to manually find the superclass method definition yourself. This can be done multiple ways, and two examples are provided below.
+
+The examples below assume `this` is of class `ChildClass`, that the superclass has the name `SuperClass`, and that the method we wish to call is `superclass_method`.
+
+1. Travel the class hierarchy automatically, using `Object.getPrototypeOf`:
+
+    ```javascript
+    Object.getPrototypeOf(ChildClass).prototype.superclass_method.apply(this, args);
+    ```
+
+2. Hardcode the class we wish to call:
+
+    ```javascript
+    SuperClass.prototype.superclass_method.apply(this, args);
+    ```
+
+The first option should be preferred, as it will work even if the superclass name (`SuperClass` in this example) changes in a future Foundry update.
+
+
+#### 1.3.2.5. Patching Mixins
+
+Since FoundryVTT 0.8.x, the core Foundry code makes heavy use of mixins. Since mixins are essentially a function that returns a class, patching the mixin directly is not possible.
+
+Instead, you should patch these methods on the classes that inherit from the mixins.
+
+For example, in the Foundry code we have the following (with irrelevant code stripped):
+
+```javascript
+const CanvasDocumentMixin = Base => class extends ClientDocumentMixin(Base) {
+    /* ... */
+
+    _onCreate(data, options, userId) {
+        /* ... */
+    }
+
+    /* ... */
+}
+
+/* ... */
+
+class TileDocument extends CanvasDocumentMixin(foundry.documents.BaseTile) {
+    /* ... */
+}
+```
+
+If we wanted to patch the method `_onCreate` which `TileDocument` inherits from `CanvasDocumentMixin(foundry.documents.BaseTile)`, we could do the following:
+
+```javascript
+libWrapper.register('navbar-tweaks', 'TileDocument.prototype._onCreate', function(wrapped, ...args) {
+  console.log("TileDocument.prototype._onCreate called");
+  return wrapped(...args);
+}, 'WRAPPER');
+```
+
+
+
+
 ### 1.3.3. LibWrapper API
 
 ⚠ Anything not documented in this section is not officially supported, and could change or break at any moment without notice.
+
 
 #### 1.3.3.1. Registering a wrapper
 To register a wrapper function, you should call the method `libWrapper.register(package_id, target, fn, type)`:
@@ -284,30 +360,58 @@ static unregister(package_id, target, fail=true) { /* ... */ }
 
 
 #### 1.3.3.3. Clear all wrappers for a given package
-To clear all wrapper functions belonging to a given package, you should call the method `libWrapper.clear_all(package_id)`.
+To clear all wrapper functions belonging to a given package, you should call the method `libWrapper.unregister_all(package_id)`.
 
 ```javascript
 /**
- * Clear all wrappers created by a given package.
+ * Unregister all wrappers created by a given package.
  *
- * Triggers FVTT hook 'libWrapper.ClearAll' when successful.
+ * Triggers FVTT hook 'libWrapper.UnregisterAll' when successful.
  *
  * @param {string} package_id  The package identifier, i.e. the 'id' field in your module/system/world's manifest.
  */
-static clear_all(package_id) { /* ... */ }
+static unregister_all(package_id) { /* ... */ }
 ```
 
 
-#### 1.3.3.4. Library Versioning
+#### 1.3.3.4. Ignore conflicts matching specific filters
+To ask libWrapper to ignore specific conflicts when detected, instead of warning the user, you should call the method `libWrapper.ignore_conflicts(package_id, ignore_ids, targets)`.
 
-This library follows [Semantic Versioning](https://semver.org/), with two custom fields `SUFFIX` and `META`, used together to track release meta-data (e.g. unstable versions or release candidates) and manifest-only changes (e.g. when `compatibleCoreVersion` increases).
+```javascript
+/**
+ * Ignore conflicts matching specific filters when detected, instead of warning the user.
+ *
+ * This can be used when there are conflict warnings that are known not to cause any issues, but are unable to be resolved.
+ * Conflicts will be ignored if they involve both 'package_id' and one of 'ignore_ids', and relate to one of 'targets'.
+ *
+ * Note that the user can still see the list of detected conflicts that were ignored, by toggling "Show ignored conflicts" in the "Conflicts" tab in the libWrapper settings.
+ *
+ * First introduced in v1.7.0.0.
+ *
+ * @param {string}            package_id  The package identifier, i.e. the 'id' field in your module/system/world's manifest. This will be the module that owns this ignore entry.
+ * @param {(string|string[])} ignore_ids  Other package ID(s) with which conflicts should be ignored.
+ * @param {(string|string[])} targets     Target(s) for which conflicts should be ignored, corresponding to the 'target' parameter to libWrapper.register.
+ *
+ * @param {Object} options [Optional] Additional options to libWrapper.
+ *
+ * @param {boolean} options.ignore_errors  [Optional] If 'true', will also ignore confirmed conflicts (i.e. errors), rather than only potential conflicts (i.e. warnings).
+ *     Be careful when setting this to 'true', as confirmed conflicts are almost certainly something the user should be made aware of.
+ *     Defaults to 'false'.
+ */
+static ignore_conflicts(package_id, ignore_ids, targets, options={}) { /* ... */ }
+```
+
+
+#### 1.3.3.5. Library Versioning
+
+This library follows [Semantic Versioning](https://semver.org/), with two custom fields `SUFFIX` and `META`. These are used to track manifest-only changes (e.g. when `compatibleCoreVersion` increases) and track release meta-data (e.g. release candidates and unstable versions) respectively. See below for examples.
 
 The version string will always have format `<MAJOR>.<MINOR>.<PATCH>.<SUFFIX><META>`.
 
 The `MAJOR`, `MINOR`, `PATCH` and `SUFFIX` fields will always be integers.
 
-The `META` field is always a string, although it will often be empty.
-This last field is unnecessary when comparing versions, as a change to this field will always cause one of the other fields to be incremented.
+The `META` field is always a string, although it will often be empty. The `-` character between `SUFFIX` and `META` is optional if `META` is empty or does not start with a digit.
+This last field `META` is unnecessary when comparing versions, as a change to this field will always cause one of the other fields to be incremented.
 
 A few (non-exhaustive) examples of valid version strings and the corresponding `[MAJOR, MINOR, PATCH, SUFFIX, META]`:
 
@@ -334,6 +438,12 @@ static get version() { /* ... */ }
  */
 static get versions() { /* ... */ }
 
+/**
+ * Get the Git version identifier.
+ * @returns {string}  Git version identifier, usually 'HEAD' or the commit hash.
+ */
+static get git_version() { return GIT_VERSION };
+
 
 // Methods
 /**
@@ -349,7 +459,8 @@ static get versions() { /* ... */ }
 static version_at_least(major, minor=0, patch=0, suffix=0) { /* ... */ }
 ```
 
-##### 1.3.3.4.1. Testing for a specific libWrapper version
+
+##### 1.3.3.5.1. Testing for a specific libWrapper version
 
 Sometimes you might wish to alert the user when an old version is detected, for example when you use functionality introduced in more recent versions.
 
@@ -366,7 +477,7 @@ else {
 
 The arguments `minor`, `patch` and `suffix` are optional. Note the usage of `?.` to ensure this works (and is falsy) before v1.4.0.0.
 
-If you wish to detect versions below v1.4.0.0, you should instead use `versions` instead:
+If you wish to detect versions below v1.4.0.0, you should use `versions` instead:
 
 ```javascript
 const [lwmajor, lwminor, lwpatch, lwsuffix] = libWrapper.versions;
@@ -385,9 +496,9 @@ else {
 ```
 
 
-#### 1.3.3.5. Fallback / Polyfill detection
+#### 1.3.3.6. Fallback / Polyfill detection
 
-To detect whether the `libWrapper` object contains the full library or a fallback/polyfill implementation (e.g. the [shim](#134-compatibility-shim)), you can check `libWrapper.is_fallback`.
+To detect whether the `libWrapper` object contains the full library or a fallback/polyfill implementation (e.g. the [shim](#135-compatibility-shim)), you can check `libWrapper.is_fallback`.
 
 The library module will set this property to `false`, while fallback/polyfill implementations will set it to `true`.
 
@@ -399,8 +510,7 @@ static get is_fallback() { /* ... */ }
 ```
 
 
-
-#### 1.3.3.6. Exceptions
+#### 1.3.3.7. Exceptions
 
 Since v1.2.0.0, various custom exception classes are used by libWrapper, and available in the global `libWrapper` object.
 
@@ -431,7 +541,8 @@ Since v1.2.0.0, various custom exception classes are used by libWrapper, and ava
 
 These are available both with and without the `LibWrapper` prefix, for example `libWrapper.Error` and `libWrapper.LibWrapperError` are equivalent and return the same exception class.
 
-#### 1.3.3.7. Hooks
+
+#### 1.3.3.8. Hooks
 
 Since v1.4.0.0, the libWrapper library triggers Hooks for various events, listed below:
 
@@ -453,17 +564,18 @@ Since v1.4.0.0, the libWrapper library triggers Hooks for various events, listed
         - `1`: Package ID whose wrapper is being unregistered (the `package_id` parameter to `libWrapper.unregister`).
         - `2`: Wrapper target (the `target` parameter to `libWrapper.unregister`).
 
-* `libWrapper.ClearAll`:
-    - Triggered when `libWrapper.clear_all` completes successfully.
+* `libWrapper.UnregisterAll`:
+    - Triggered when `libWrapper.unregister_all` completes successfully.
     - Parameters:
-        - `1`: Package ID whose wrappers are being unregistered (the `package_id` parameter to `libWrapper.clear_all`).
+        - `1`: Package ID whose wrappers are being unregistered (the `package_id` parameter to `libWrapper.unregister_all`).
 
 * `libWrapper.ConflictDetected`:
     - Triggered when a conflict is detected.
     - Parameters:
         - `1`: Package ID which triggered the conflict, or `«unknown»` if unknown.
         - `2`: Conflicting package ID.
-        - `3`: Wrapper target (the `target` parameter to `libWrapper.register`).
+        - `3`: Wrapper name (first `target` parameter provided by any module when registering a wrapper to the same method).
+        - `4`: List of all unique `target` strings provided by modules when registering a wrapper to the same method.
     - If this hook returns `false`, the user will not be notified of this conflict.
 
 * `libWrapper.OverrideLost`:
@@ -471,17 +583,59 @@ Since v1.4.0.0, the libWrapper library triggers Hooks for various events, listed
     - Parameters:
         - `1`: Existing package ID whose wrapper is being unregistered.
         - `2`: New package ID whose wrapper is being registered.
-        - `3`: Wrapper target (the `target` parameter to `libWrapper.register`).
+        - `3`: Wrapper name (first `target` parameter provided by any module when registering a wrapper to the same method).
+        - `4`: List of all unique `target` strings provided by modules when registering a wrapper to the same method.
     - If this hook returns `false`, this event will not be treated as a conflict.
 
 
-#### 1.3.3.8. Examples
+#### 1.3.3.9. Examples
 
 A list of packages using libWrapper, which can be used as further examples, can be found in the wiki page [Modules using libWrapper](https://github.com/ruipin/fvtt-lib-wrapper/wiki/Modules-using-libWrapper).
 
 
-### 1.3.4. Compatibility Shim
+
+
+### 1.3.4. Using libWrapper inside a System
+
+The libWrapper library has official support for all types of packages, including systems.
+
+However, it is recommended that you read through the warnings and recommendations in [SYSTEMS.md](SYSTEMS.md) before you use it inside a system.
+
+
+
+### 1.3.5. Compatibility Shim
 
 The [shim.js](shim/shim.js) file in this repository can be used to avoid a hard dependency on libWrapper.
 
 See the respective documentation in [shim/SHIM.md](shim/SHIM.md).
+
+
+
+## 1.4. Support
+
+As with any piece of software, you might sometimes encounter issues with libWrapper that are not already answered above. This section covers what you can do to find support.
+
+
+### 1.4.1. Module-specific Support
+
+When libWrapper notifies you of an error, it will usually let you know whether the issue is caused by a specific module or by libWrapper itself.
+
+Many modules have support channels set up by their developers. If libWrapper warns you about a specific module, and you are aware of such a support channel, you should use it.
+
+Most libWrapper errors are not caused by libWrapper itself, but instead by a module that uses it. Reporting these issues to the libWrapper team directly is a waste of time, as we will not be able to help. These issues will simply be closed as "invalid".
+
+### 1.4.2. Community Support
+
+The easiest way to find support when there are no module-specific support channels is to ask the community.
+
+The largest community-provided support channels are:
+- [FoundryVTT Discord](https://discord.gg/foundryvtt)'s #modules-troubleshooting channel
+- [FoundryVTT Reddit](https://www.reddit.com/r/FoundryVTT)
+
+### 1.4.3. LibWrapper Support
+
+⚠ *Do not open a support ticket using the link below unless you are seeing an **internal libWrapper error** or are a **package developer**. We also do not provide support for packages that promote or otherwise endorse piracy. Your issue will be closed as invalid if you do not fulfill these requirements.*
+
+If you encounter an internal libWrapper error, or are a module developer looking for support (i.e. bug reports, feature requests, questions, etc), you may get in touch by opening a new issue on the [libWrapper issue tracker](https://github.com/ruipin/fvtt-lib-wrapper/issues). It is usually a good idea to search the existing issues first in case yours has already been answered before.
+
+If your support request relates to an error, please describe with as much detail as possible the error you are seeing, and what you have already done to troubleshoot it. Providing a step-by-step description of how to reproduce it or a snippet of code that triggers the issue is especially welcome, and will ensure you get an answer as fast as possible.

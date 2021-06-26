@@ -44,6 +44,8 @@ export class ActiveEffects extends FormApplication {
             let newAe = duplicate(ae.data);
             newAe.duration = duplicate(ae.duration);
             if (aboutTimeInstalled && newAe.duration?.type === "seconds") {
+                //TODO change these to a simple calendar function after release
+                //TODO change this to window.Gametime.ElapsedTime.timeString permanently
                 //@ts-ignore
                 newAe.duration.label = window.Gametime.DTM.timeString(ae.duration.remaining);
             }
@@ -105,7 +107,8 @@ export class ActiveEffects extends FormApplication {
             else
                 this.effectList[se.id] = se.label;
         });
-        const isItem = this.object.__proto__.constructor.name === CONFIG.Item.entityClass.name;
+        //@ts-ignore documentClass;
+        const isItem = this.object instanceof CONFIG.Item.documentClass;
         let data = {
             actives: actives,
             isGM: game.user.isGM,
@@ -185,6 +188,8 @@ export class ActiveEffects extends FormApplication {
             });
         });
         html.find('.effect-edit').click(async (ev) => {
+            if (this.object.parent instanceof Item)
+                return; // TODO Think about editing effects on items in bags
             const effect_id = $(ev.currentTarget).parents(".effect-header").attr("effect-id");
             let effect = this.object.effects.get(effect_id);
             new DAEActiveEffectConfig(effect).render(true);
@@ -209,7 +214,10 @@ export class ActiveEffects extends FormApplication {
                 AEDATA["flags.core.statusId"] = id;
             }
             //@ts-ignore
-            const effectId = (await this.object.createEmbeddedEntity("ActiveEffect", AEDATA))._id;
+            const created = await this.object.createEmbeddedDocuments("ActiveEffect", [AEDATA]);
+            if (!created || created.legnth === 0)
+                return;
+            const effectId = created[0].id;
             let effect = this.object.effects.get(effectId);
             new DAEActiveEffectConfig(effect).render(true);
             this.render();

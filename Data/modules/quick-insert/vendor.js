@@ -1,7 +1,7 @@
 /**
- * Fuse.js v6.4.3 - Lightweight fuzzy-search (http://fusejs.io)
+ * Fuse.js v6.4.6 - Lightweight fuzzy-search (http://fusejs.io)
  *
- * Copyright (c) 2020 Kiro Risk (http://kiro.me)
+ * Copyright (c) 2021 Kiro Risk (http://kiro.me)
  * All Rights Reserved. Apache Software License 2.0
  *
  * http://www.apache.org/licenses/LICENSE-2.0
@@ -280,6 +280,7 @@ const SPACE = /[^ ]+/g;
 // Set to 3 decimals to reduce index size.
 function norm(mantissa = 3) {
   const cache = new Map();
+  const m = Math.pow(10, mantissa);
 
   return {
     get(value) {
@@ -289,7 +290,10 @@ function norm(mantissa = 3) {
         return cache.get(numTokens)
       }
 
-      const n = parseFloat((1 / Math.sqrt(numTokens)).toFixed(mantissa));
+      const norm = 1 / Math.sqrt(numTokens);
+
+      // In place of `toFixed(mantissa)`, for faster computation
+      const n = parseFloat(Math.round(norm * m) / m);
 
       cache.set(numTokens, n);
 
@@ -456,42 +460,6 @@ function parseIndex(data, { getFn = Config.getFn } = {}) {
   myIndex.setKeys(keys);
   myIndex.setIndexRecords(records);
   return myIndex
-}
-
-function transformMatches(result, data) {
-  const matches = result.matches;
-  data.matches = [];
-
-  if (!isDefined(matches)) {
-    return
-  }
-
-  matches.forEach((match) => {
-    if (!isDefined(match.indices) || !match.indices.length) {
-      return
-    }
-
-    const { indices, value } = match;
-
-    let obj = {
-      indices,
-      value
-    };
-
-    if (match.key) {
-      obj.key = match.key.src;
-    }
-
-    if (match.idx > -1) {
-      obj.refIndex = match.idx;
-    }
-
-    data.matches.push(obj);
-  });
-}
-
-function transformScore(result, data) {
-  data.score = result.score;
 }
 
 function computeScore(
@@ -1125,7 +1093,7 @@ class IncludeMatch extends BaseMatch {
 
     return {
       isMatch,
-      score: isMatch ? 1 : 0,
+      score: isMatch ? 0 : 1,
       indices
     }
   }
@@ -1433,6 +1401,94 @@ function parse(query, options, { auto = true } = {}) {
   return next(query)
 }
 
+// Practical scoring function
+function computeScore$1(
+  results,
+  { ignoreFieldNorm = Config.ignoreFieldNorm }
+) {
+  results.forEach((result) => {
+    let totalScore = 1;
+
+    result.matches.forEach(({ key, norm, score }) => {
+      const weight = key ? key.weight : null;
+
+      totalScore *= Math.pow(
+        score === 0 && weight ? Number.EPSILON : score,
+        (weight || 1) * (ignoreFieldNorm ? 1 : norm)
+      );
+    });
+
+    result.score = totalScore;
+  });
+}
+
+function transformMatches(result, data) {
+  const matches = result.matches;
+  data.matches = [];
+
+  if (!isDefined(matches)) {
+    return
+  }
+
+  matches.forEach((match) => {
+    if (!isDefined(match.indices) || !match.indices.length) {
+      return
+    }
+
+    const { indices, value } = match;
+
+    let obj = {
+      indices,
+      value
+    };
+
+    if (match.key) {
+      obj.key = match.key.src;
+    }
+
+    if (match.idx > -1) {
+      obj.refIndex = match.idx;
+    }
+
+    data.matches.push(obj);
+  });
+}
+
+function transformScore(result, data) {
+  data.score = result.score;
+}
+
+function format(
+  results,
+  docs,
+  {
+    includeMatches = Config.includeMatches,
+    includeScore = Config.includeScore
+  } = {}
+) {
+  const transformers = [];
+
+  if (includeMatches) transformers.push(transformMatches);
+  if (includeScore) transformers.push(transformScore);
+
+  return results.map((result) => {
+    const { idx } = result;
+
+    const data = {
+      item: docs[idx],
+      refIndex: idx
+    };
+
+    if (transformers.length) {
+      transformers.forEach((transformer) => {
+        transformer(result, data);
+      });
+    }
+
+    return data
+  })
+}
+
 class Fuse {
   constructor(docs, options = {}, index) {
     this.options = { ...Config, ...options };
@@ -1710,56 +1766,7 @@ class Fuse {
   }
 }
 
-// Practical scoring function
-function computeScore$1(results, { ignoreFieldNorm = Config.ignoreFieldNorm }) {
-  results.forEach((result) => {
-    let totalScore = 1;
-
-    result.matches.forEach(({ key, norm, score }) => {
-      const weight = key ? key.weight : null;
-
-      totalScore *= Math.pow(
-        score === 0 && weight ? Number.EPSILON : score,
-        (weight || 1) * (ignoreFieldNorm ? 1 : norm)
-      );
-    });
-
-    result.score = totalScore;
-  });
-}
-
-function format(
-  results,
-  docs,
-  {
-    includeMatches = Config.includeMatches,
-    includeScore = Config.includeScore
-  } = {}
-) {
-  const transformers = [];
-
-  if (includeMatches) transformers.push(transformMatches);
-  if (includeScore) transformers.push(transformScore);
-
-  return results.map((result) => {
-    const { idx } = result;
-
-    const data = {
-      item: docs[idx],
-      refIndex: idx
-    };
-
-    if (transformers.length) {
-      transformers.forEach((transformer) => {
-        transformer(result, data);
-      });
-    }
-
-    return data
-  })
-}
-
-Fuse.version = '6.4.3';
+Fuse.version = '6.4.6';
 Fuse.createIndex = createIndex;
 Fuse.parseIndex = parseIndex;
 Fuse.config = Config;
@@ -2122,22 +2129,24 @@ function get_spread_update(levels, updates) {
     }
     return update;
 }
-function mount_component(component, target, anchor) {
+function mount_component(component, target, anchor, customElement) {
     const { fragment, on_mount, on_destroy, after_update } = component.$$;
     fragment && fragment.m(target, anchor);
-    // onMount happens before the initial afterUpdate
-    add_render_callback(() => {
-        const new_on_destroy = on_mount.map(run).filter(is_function);
-        if (on_destroy) {
-            on_destroy.push(...new_on_destroy);
-        }
-        else {
-            // Edge case - component was destroyed immediately,
-            // most likely as a result of a binding initialising
-            run_all(new_on_destroy);
-        }
-        component.$$.on_mount = [];
-    });
+    if (!customElement) {
+        // onMount happens before the initial afterUpdate
+        add_render_callback(() => {
+            const new_on_destroy = on_mount.map(run).filter(is_function);
+            if (on_destroy) {
+                on_destroy.push(...new_on_destroy);
+            }
+            else {
+                // Edge case - component was destroyed immediately,
+                // most likely as a result of a binding initialising
+                run_all(new_on_destroy);
+            }
+            component.$$.on_mount = [];
+        });
+    }
     after_update.forEach(add_render_callback);
 }
 function destroy_component(component, detaching) {
@@ -2162,7 +2171,6 @@ function make_dirty(component, i) {
 function init(component, options, instance, create_fragment, not_equal, props, dirty = [-1]) {
     const parent_component = current_component;
     set_current_component(component);
-    const prop_values = options.props || {};
     const $$ = component.$$ = {
         fragment: null,
         ctx: null,
@@ -2174,9 +2182,10 @@ function init(component, options, instance, create_fragment, not_equal, props, d
         // lifecycle
         on_mount: [],
         on_destroy: [],
+        on_disconnect: [],
         before_update: [],
         after_update: [],
-        context: new Map(parent_component ? parent_component.$$.context : []),
+        context: new Map(parent_component ? parent_component.$$.context : options.context || []),
         // everything else
         callbacks: blank_object(),
         dirty,
@@ -2184,7 +2193,7 @@ function init(component, options, instance, create_fragment, not_equal, props, d
     };
     let ready = false;
     $$.ctx = instance
-        ? instance(component, prop_values, (i, ret, ...rest) => {
+        ? instance(component, options.props || {}, (i, ret, ...rest) => {
             const value = rest.length ? rest[0] : ret;
             if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
                 if (!$$.skip_bound && $$.bound[i])
@@ -2213,7 +2222,7 @@ function init(component, options, instance, create_fragment, not_equal, props, d
         }
         if (options.intro)
             transition_in(component.$$.fragment);
-        mount_component(component, options.target, options.anchor);
+        mount_component(component, options.target, options.anchor, options.customElement);
         flush();
     }
     set_current_component(parent_component);

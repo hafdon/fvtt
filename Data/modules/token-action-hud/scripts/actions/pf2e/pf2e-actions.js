@@ -34,7 +34,7 @@ export class ActionHandlerPf2e extends ActionHandler {
         if (!knownActors.includes(actorType))
             return result;
         
-        result.actorId = actor._id;
+        result.actorId = actor.id;
 
         if (actorType === 'character' || actorType === 'familiar')
             this.pcActionHandler.buildActionList(result, tokenId, actor);
@@ -59,7 +59,6 @@ export class ActionHandlerPf2e extends ActionHandler {
 
         this._addMultiSkills(list, tokenId, actors);
         this._addMultiSaves(list, tokenId, actors);
-        this._addMultiAbilities(list, tokenId, actors);
         this._addMultiAttributes(list, tokenId, actors);
         this._addMultiUtilities(list, tokenId, actors);
     }
@@ -84,29 +83,11 @@ export class ActionHandlerPf2e extends ActionHandler {
                 name = data.name;
 
             const encodedValue = [macroType, tokenId, key].join(this.delimiter);
-            const action = {name: name, encodedValue: encodedValue, id: key};
+            const action = {name: game.i18n.localize(name), encodedValue: encodedValue, id: key};
             subcategory.actions.push(action);
         })
 
         const skillsName = this.i18n('tokenactionhud.commonSkills');
-        this._combineSubcategoryWithCategory(category, skillsName, subcategory);
-        this._combineCategoryWithList(list, skillsName, category);
-    }
-
-    _addMultiAbilities(list, tokenId, actors) {
-        const macroType = 'ability';
-        const category = this.initializeEmptyCategory(macroType);
-        const subcategory = this.initializeEmptySubcategory(macroType);
-
-        Object.entries(CONFIG.PF2E.abilities).forEach(ability => {
-            const key = ability[0];
-            const name = ability[1];
-            const encodedValue = [macroType, tokenId, key].join(this.delimiter);
-            const action = {name: name, encodedValue: encodedValue, id: key};
-            subcategory.actions.push(action);
-        })
-
-        const skillsName = this.i18n('tokenactionhud.abilities');
         this._combineSubcategoryWithCategory(category, skillsName, subcategory);
         this._combineCategoryWithList(list, skillsName, category);
     }
@@ -120,7 +101,7 @@ export class ActionHandlerPf2e extends ActionHandler {
             const key = save[0];
             const name = save[1];
             const encodedValue = [macroType, tokenId, key].join(this.delimiter);
-            const action = {name: name, encodedValue: encodedValue, id: key};
+            const action = {name: game.i18n.localize(name), encodedValue: encodedValue, id: key};
             subcategory.actions.push(action);
         })
 
@@ -134,7 +115,7 @@ export class ActionHandlerPf2e extends ActionHandler {
         let result = this.initializeEmptyCategory('attributes');
         let attributes = this.initializeEmptySubcategory();
 
-        let attributesMap = [{_id: 'perception', name: 'Perception'},{_id: 'initiative', name: 'Initiative'}]
+        let attributesMap = [{id: 'perception', name: 'Perception'},{id: 'initiative', name: 'Initiative'}]
         
         attributes.actions = this._produceActionMap(tokenId, attributesMap, macroType);
         
@@ -181,7 +162,7 @@ export class ActionHandlerPf2e extends ActionHandler {
         let result = this.initializeEmptyCategory('items');
         
         let filter = ['weapon', 'equipment', 'consumable', 'armor', 'backpack'];
-        let items = (actor.items ?? []).filter(a => a.data.data.equipped?.value && !a.data.data.containerId?.value.length)
+        let items = (actor.items ?? []).filter(a => a.data.data.equipped?.value && !a.data.data.containerId?.value?.length)
             .filter(i => filter.includes(i.data.type)).sort(this._foundrySort);
         
         let weaponList = items.filter(i => i.type === 'weapon');
@@ -218,10 +199,10 @@ export class ActionHandlerPf2e extends ActionHandler {
     /** @private */
     _addContainerSubcategories(tokenId, macroType, category, actor, items) {
         const allContainerIds = [...new Set(actor.items.filter(i => i.data.data.containerId?.value).map(i => i.data.data.containerId.value))];
-        const containers = (items ?? []).filter(i => allContainerIds.includes(i._id));
+        const containers = (items ?? []).filter(i => allContainerIds.includes(i.id));
 
         containers.forEach(container => {
-            const containerId = container._id;
+            const containerId = container.id;
             const contents = actor.items.filter(i => i.data.data.containerId?.value === containerId).sort(this._foundrySort);
             if (contents.length === 0)
                 return;
@@ -257,8 +238,9 @@ export class ActionHandlerPf2e extends ActionHandler {
     _addStrikesCategories(actor, tokenId, category) {
         let macroType = 'strike';
         let strikes = actor.data.data.actions?.filter(a => a.type === macroType);
-        if (actor.data.type === 'character')
+        if (actor.data.type === 'character' && !!strikes) {
             strikes = strikes.filter(s => s.ready);
+        }
 
         if (!strikes)
             return;
@@ -288,7 +270,7 @@ export class ActionHandlerPf2e extends ActionHandler {
                 }
                 currentMap -= map;
                 currentBonus -= map;
-                return {_id: encodeURIComponent(`${this.name}>${this.variants.indexOf(v)}`), name: name }
+                return {id: encodeURIComponent(`${this.name}>${this.variants.indexOf(v)}`), name: name }
             }.bind(s));
 
             variantsMap[0].img = s.imageUrl;
@@ -313,15 +295,15 @@ export class ActionHandlerPf2e extends ActionHandler {
         if (!strike.selectedAmmoId)
             return;
         
-        const item = actor.getOwnedItem(strike.selectedAmmoId);
+        const item = actor.items.get(strike.selectedAmmoId);
 
         if (!item) {
             return {name: this.i18n('tokenactionhud.noammo'), encodedValue: 'noammo', id: 'noammo'};
         }
 
-        let encodedValue = ['ammo', tokenId, item._id].join(this.delimiter);
+        let encodedValue = ['ammo', tokenId, item.id].join(this.delimiter);
         let img = this._getImage(item);
-        let action = { name: item.name, encodedValue: encodedValue, id: item._id, img: img };
+        let action = { name: item.name, encodedValue: encodedValue, id: item.id, img: img };
         action.info1 = item.data.data.quantity?.value
 
         return action;
@@ -380,12 +362,44 @@ export class ActionHandlerPf2e extends ActionHandler {
         let filter = ['spell'];
         let items = (actor.items ?? []).filter(a => filter.includes(a.type));
 
-        let spellsSorted = this._sortSpellsByLevel(items);
+        let signatureSpellsAdded = this._addSignatureSpells(actor, items);
+        let spellsSorted = this._sortSpellsByLevel(signatureSpellsAdded);
         let spellCategories = this._categoriseSpells(actor, tokenId, spellsSorted);
         
         this._combineSubcategoryWithCategory(result, this.i18n('tokenactionhud.spells'), spellCategories);
 
         return result;
+    }
+
+    /** @private */
+    _addSignatureSpells(actor, spells) {
+        const actorLevel = actor.data.data.details.level.value;
+        const highestSpellSlot = Math.ceil(actorLevel/2);
+        let signatureSpellIds = [];
+        actor.items.forEach(item => {
+            if (item.data.type === "spellcastingEntry") {
+                signatureSpellIds = signatureSpellIds.concat(item.data.data.signatureSpells.value);
+            }
+        });
+
+        let heightenedSignatureSpells = [];
+        spells.forEach(spell => {
+            if (signatureSpellIds.includes(spell.data.id)) {
+                const spellBaseLevel = spell.data.data.level.value;
+                for (let i=(spellBaseLevel+1); i<=highestSpellSlot; i++) {
+                    let heightenedSpell = Object.create(Object.getPrototypeOf(spell));
+                    Object.defineProperty(heightenedSpell, 'data', {
+                        value: duplicate(spell.data),
+                        configurable: true,
+                        writable: true
+                    });
+                    heightenedSpell.data.data.heightenedLevel = {value:i};
+                    heightenedSignatureSpells.push(heightenedSpell);
+                }
+            }
+        });
+
+        return spells.concat(heightenedSignatureSpells);
     }
 
     /** @private */
@@ -450,12 +464,13 @@ export class ActionHandlerPf2e extends ActionHandler {
                     let spell = { name: s.name, encodedValue: encodedValue, id: s.data._id };
                     spell.img = this._getImage(s);
                     spell.icon = this._getActionIcon(s.data.data?.time?.value)
+                    spell.spellLevel = level;
 
                     this._addSpellInfo(s, spell);
                     levelSubcategory.actions.push(spell);
 
                     if (level > 0) {
-                        let spellExpend = { name: '-', encodedValue: encodedValue+'>expend', id: s.data._id, cssClass: 'stickLeft'};
+                        let spellExpend = { name: '-', encodedValue: encodedValue+'>expend', id: s.data.id, cssClass: 'stickLeft'};
                         levelSubcategory.actions.push(spellExpend);
                     }
                 });
@@ -530,6 +545,7 @@ export class ActionHandlerPf2e extends ActionHandler {
             let spell = { name: s.name, encodedValue: encodedValue, id: s.data._id };
             spell.img = this._getImage(s);
             spell.icon = this._getActionIcon(s.data.data?.time?.value)
+            spell.spellLevel = level;
             this._addSpellInfo(s, spell);
             levelCategory.actions.push(spell);     
                   
@@ -567,11 +583,11 @@ export class ActionHandlerPf2e extends ActionHandler {
             if (maxSlots > 0) {          
                 category.info1 = `${valueSlots}/${maxSlots}`;
 
-                increaseId = `${spellbook._id}>focus>slotIncrease`;
+                increaseId = `${spellbook.id}>focus>slotIncrease`;
                 let increaseEncodedValue = ['spellSlot', tokenId, increaseId].join(this.delimiter);
                 category.actions.unshift({id: increaseId, name: '+', encodedValue: increaseEncodedValue, cssClass:'shrink'})
         
-                decreaseId = `${spellbook._id}>focus>slotDecrease`;
+                decreaseId = `${spellbook.id}>focus>slotDecrease`;
                 let decreaseEncodedValue = ['spellSlot', tokenId, decreaseId].join(this.delimiter);
                 category.actions.unshift({id: decreaseId, encodedValue: decreaseEncodedValue, name: '-', cssClass:'shrink'})
             }
@@ -586,11 +602,11 @@ export class ActionHandlerPf2e extends ActionHandler {
             if (maxSlots > 0) {
                 category.info1 = `${valueSlots}/${maxSlots}`;
 
-                increaseId = `${spellbook._id}>${slotLevel}>slotIncrease`;
+                increaseId = `${spellbook.id}>${slotLevel}>slotIncrease`;
                 let increaseEncodedValue = ['spellSlot', tokenId, increaseId].join(this.delimiter);
                 category.actions.unshift({encodedValue: increaseEncodedValue, name: '+', id: increaseId, cssClass:'shrink'})
     
-                decreaseId = `${spellbook._id}>${slotLevel}>slotDecrease`;
+                decreaseId = `${spellbook.id}>${slotLevel}>slotDecrease`;
                 let decreaseEncodedValue = ['spellSlot', tokenId, decreaseId].join(this.delimiter);
                 category.actions.unshift({encodedValue: decreaseEncodedValue, name: '-', id: increaseId, cssClass:'shrink'})
             }
@@ -605,9 +621,13 @@ export class ActionHandlerPf2e extends ActionHandler {
     }
 
     _addComponentsInfo(s, spell) {
-        let components = s.data.data.components?.value.split(',');
-        let spellInfo = components.map(c => c.trim().charAt(0).toUpperCase()).join('');
-        spell.info1 = spellInfo;
+        let components = s.components;
+        if (components) {
+            spell.info1 = components.value;
+        } else {
+            components = s.data.data.components?.value.split(',');
+            spell.info1 = components.map(c => c.trim().charAt(0).toUpperCase()).join('');
+        }
     }
 
     _addAttackDamageInfo(s, spell) {
@@ -647,7 +667,7 @@ export class ActionHandlerPf2e extends ActionHandler {
         let result = this.initializeEmptyCategory('saves');
 
         let actorSaves = actor.data.data.saves;
-        let saveMap = Object.keys(actorSaves).map(k => { return {_id: k, name: game.i18n.localize(CONFIG.PF2E.saves[k])}});
+        let saveMap = Object.keys(actorSaves).map(k => { return {id: k, name: game.i18n.localize(CONFIG.PF2E.saves[k])}});
 
         let saves = this.initializeEmptySubcategory();
         saves.actions = this._produceActionMap(tokenId, saveMap, 'save');
@@ -662,7 +682,7 @@ export class ActionHandlerPf2e extends ActionHandler {
             let key = skillEntry[0];
             let data = skillEntry[1];
 
-            let name = abbreviated ? key.charAt(0).toUpperCase()+key.slice(1) : data.name.charAt(0).toUpperCase()+data.name.slice(1);
+            let name = abbreviated || !data.name ? key.charAt(0).toUpperCase()+key.slice(1) : data.name?.charAt(0).toUpperCase()+data.name?.slice(1);
 
             let value = data.value;
             let info = '';
@@ -673,7 +693,7 @@ export class ActionHandlerPf2e extends ActionHandler {
                     info = `${value}`;
             }
 
-            let action = this._produceActionMap(tokenId, [{'_id': key, 'name': name}], macroType);
+            let action = this._produceActionMap(tokenId, [{'id': key, 'name': name}], macroType);
             action[0].info1 = info;
             return action[0];
     }
@@ -781,7 +801,7 @@ export class ActionHandlerPf2e extends ActionHandler {
 
     /** @private */
     _produceAction(tokenId, item, type, isPassive = false) {
-        let encodedValue = [type, tokenId, item._id].join(this.delimiter);
+        let encodedValue = [type, tokenId, item.id].join(this.delimiter);
         let icon;
         let actions = item.data?.data?.actions;
         let actionType = item.data?.data?.actionType?.value;
@@ -793,7 +813,7 @@ export class ActionHandlerPf2e extends ActionHandler {
         }
 
         let img = this._getImage(item);
-        return { name: item.name, encodedValue: encodedValue, id: item._id, img: img, icon: icon };
+        return { name: item.name, encodedValue: encodedValue, id: item.id, img: img, icon: icon };
     }
     
     _getActionIcon(action) {

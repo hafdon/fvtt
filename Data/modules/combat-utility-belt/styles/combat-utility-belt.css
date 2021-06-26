@@ -4,6 +4,10 @@ ul.chat-message.condition-list {
     padding: 0;
 }
 
+ul.chat-message.condition-list li {
+    align-items: center;
+}
+
 .chat-message.condition-list .remove-row,
 .chat-message.condition-list .undo-remove {
    flex: 0 0 20px;
@@ -26,6 +30,7 @@ img.condition-icon {
 }
 
 .enhanced-conditions div.condition-icon {
+    display: flex;
     flex: 0 0 24px; 
     margin: 0px 6px 0px 0px;
 }
@@ -68,7 +73,7 @@ ol.condition-lab {
     padding: 0px;
 }
 
-li.condition-lab.row {
+.condition-lab li.row {
     border-bottom: 2px groove beige;
 }
 
@@ -109,6 +114,11 @@ li.condition-lab.row {
 .condition-lab .flexcol.text-entry.journal {
     flex: 2;
     margin: 0px 0px 3px 0px;
+}
+
+.condition-lab .reference div.enriched-link {
+  flex: 0 1 0%;
+  margin: 3px;
 }
 
 .condition-lab .reference-type {
@@ -207,6 +217,23 @@ li.condition-lab.row {
     cursor: grab;
     line-height: 60px;
     opacity: 0.5;
+}
+
+.condition-lab div.change-order {
+    position: relative;
+    max-width: 25px;
+}
+
+.condition-lab .change-order a {
+    position: absolute;
+}
+
+.condition-lab .change-order a.move-up {
+    top: 20%;
+}
+
+.condition-lab .change-order a.move-down {
+    bottom: 20%;
 }
 
 .condition-lab .options {
@@ -512,6 +539,10 @@ li.condition-lab.row {
 
 #cub-triggler-form .advanced-trigger-operator {
   flex: 0;
+}
+
+#settings div#combat-utility-belt {
+  margin: 0;
 }
 
 /* ABOUT */

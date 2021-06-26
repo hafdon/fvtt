@@ -1,7 +1,7 @@
 import {measure} from "./foundry_imports.js"
 import {getMovementHistory} from "./movement_tracking.js";
 import {settingsKey} from "./settings.js";
-import {getSnapPointForToken} from "./util.js";
+import {getSnapPointForEntity} from "./util.js";
 
 export class DragRulerRuler extends Ruler {
 	// Functions below are overridden versions of functions in Ruler
@@ -33,18 +33,24 @@ export class DragRulerRuler extends Ruler {
 
 	toJSON() {
 		const json = super.toJSON();
-		if (this.draggedToken)
-			json["draggedToken"] = this.draggedToken.data._id;
+		if (this.draggedEntity) {
+			const isToken = this.draggedEntity instanceof Token;
+			json["draggedEntityIsToken"] = isToken;
+			json["draggedEntity"] = this.draggedEntity.id;
+		}
 		return json;
 	}
 
 	update(data) {
 		// Don't show a GMs drag ruler to non GM players
-		if (data.draggedToken && this.user.isGM && !game.user.isGM && !game.settings.get(settingsKey, "showGMRulerToPlayers"))
+		if (data.draggedEntity && this.user.isGM && !game.user.isGM && !game.settings.get(settingsKey, "showGMRulerToPlayers"))
 			return;
 
-		if (data.draggedToken) {
-			this.draggedToken = canvas.tokens.get(data.draggedToken);
+		if (data.draggedEntity) {
+			if (data.draggedEntityIsToken)
+				this.draggedEntity = canvas.tokens.get(data.draggedEntity);
+			else
+				this.draggedEntity = canvas.templates.get(data.draggedEntity);
 		}
 		super.update(data);
 	}
@@ -60,13 +66,14 @@ export class DragRulerRuler extends Ruler {
 
 	_endMeasurement() {
 		super._endMeasurement();
-		this.draggedToken = null;
+		this.draggedEntity = null;
 	}
 
 	// The functions below aren't present in the orignal Ruler class and are added by Drag Ruler
 	dragRulerAddWaypoint(point, snap=true) {
-		if (snap)
-			point = getSnapPointForToken(point.x, point.y, this.draggedToken);
+		if (snap) {
+			point = getSnapPointForEntity(point.x, point.y, this.draggedEntity);
+		}
 		this.waypoints.push(new PIXI.Point(point.x, point.y));
 		this.labels.addChild(new PreciseText("", CONFIG.canvasTextStyle));
 	}
@@ -93,7 +100,7 @@ export class DragRulerRuler extends Ruler {
 			game.user.broadcastActivity({ruler: this});
 		}
 		else {
-			const token = this.draggedToken;
+			const token = this.draggedEntity;
 			this._endMeasurement();
 
 			// Deactivate the drag workflow in mouse
@@ -109,12 +116,12 @@ export class DragRulerRuler extends Ruler {
 	async dragRulerRecalculate(tokenIds) {
 		if (this._state !== Ruler.STATES.MEASURING)
 			return;
-		if (tokenIds && !tokenIds.includes(this.draggedToken.id))
+		if (tokenIds && !tokenIds.includes(this.draggedEntity.id))
 			return;
 		const waypoints = this.waypoints.filter(waypoint => !waypoint.isPrevious);
 		this.dragRulerClearWaypoints();
 		if (game.settings.get(settingsKey, "enableMovementHistory"))
-			this.dragRulerAddWaypointHistory(getMovementHistory(this.draggedToken));
+			this.dragRulerAddWaypointHistory(getMovementHistory(this.draggedEntity));
 		for (const waypoint of waypoints) {
 			this.dragRulerAddWaypoint(waypoint, false);
 		}

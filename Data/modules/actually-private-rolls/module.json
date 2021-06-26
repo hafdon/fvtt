@@ -1,13 +1,26 @@
 {
-    "name": "actually-private-rolls",
-    "title": "Actually Private Rolls",
-    "description": "Hides Private GM Rolls completely rather then just obfuscating the result.",
-    "version": "0.2",
-    "author": "Felix#6196",
-    "scripts": ["actually-private-rolls.js"],
-    "url": "https://github.com/syl3r86/Actually-Private-Rolls",
-    "manifest": "https://raw.githubusercontent.com/syl3r86/Actually-Private-Rolls/master/module.json",
-    "download": "https://github.com/syl3r86/Actually-Private-Rolls/archive/v0.2.zip",
-    "minimumCoreVersion": "0.5.5",
-    "compatibleCoreVersion": "0.6.1"
+  "name": "actually-private-rolls",
+  "title": "Actually Private Rolls",
+  "description": "Hides Private GM Rolls completely rather then just obfuscating the result.",
+  "author": "Felix#6196",
+  "authors": [],
+  "url": "https://github.com/syl3r86/Actually-Private-Rolls",
+  "flags": {},
+  "version": "0.2",
+  "minimumCoreVersion": "0.5.5",
+  "compatibleCoreVersion": "0.6.1",
+  "scripts": [
+    "actually-private-rolls.js"
+  ],
+  "esmodules": [],
+  "styles": [],
+  "languages": [],
+  "packs": [],
+  "system": [],
+  "dependencies": [],
+  "socket": false,
+  "manifest": "https://raw.githubusercontent.com/syl3r86/Actually-Private-Rolls/master/module.json",
+  "download": "https://github.com/syl3r86/Actually-Private-Rolls/archive/master.zip",
+  "protected": false,
+  "coreTranslation": false
 }

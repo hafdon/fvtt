@@ -18,8 +18,6 @@
   "QUICKINSERT.SettingsEnableGlobalContextHint": "La Asignación de teclas abrirá Quick Insert en Modo de Navegación incluso cuando no haya ningún contexto en el que anclarlo.",
   "QUICKINSERT.SettingsClickToInsert": "Haga click en resultados para enviar",
   "QUICKINSERT.SettingsClickToInsertHint": "Si se deshabilita, haciendo clic en el resultado de una búsqueda la mostrará en lugar de enviar/insertar",
-  "QUICKINSERT.SettingsIndexGuardEnabled": "Experimental: Protección contra Indexación",
-  "QUICKINSERT.SettingsIndexGuardEnabledHint": "Intenta habilitar esta opción si tienes demasiado a menudo errores del tipo \"ENOENT:...\". Puede ocasionar que los usuarios tengan que recargar más frecuentemente.",
   "QUICKINSERT.SettingsAutomaticIndexing": "Indexación automática",
   "QUICKINSERT.SettingsAutomaticIndexingHint": "Indexar automáticamente en segundo plano al iniciar. En momentos de alta carga del sistema puede producir bajada del rendimiento",
   "QUICKINSERT.SettingsAutomaticIndexing3s": "3 segundos",

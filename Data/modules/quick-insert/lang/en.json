@@ -15,8 +15,6 @@
   "QUICKINSERT.SettingsEnableGlobalContextHint": "Keybind will open Quick Insert in Browse Mode even when there's no context to attach to.",
   "QUICKINSERT.SettingsClickToInsert": "Click result to submit",
   "QUICKINSERT.SettingsClickToInsertHint": "If disabled, clicking a search result will always show it instead of submitting/inserting",
-  "QUICKINSERT.SettingsIndexGuardEnabled": "Experimental: Index Guard",
-  "QUICKINSERT.SettingsIndexGuardEnabledHint": "Try enabling this if you are often getting the \"ENOENT:...\" errors. May cause extra reloads for all users when setting is changed.",
   "QUICKINSERT.SettingsAutomaticIndexing": "Automatic indexing",
   "QUICKINSERT.SettingsAutomaticIndexingHint": "Automatically index in the background on startup. Indexing during high load may cause errors or slowdowns",
   "QUICKINSERT.SettingsAutomaticIndexing3s": "3 seconds",

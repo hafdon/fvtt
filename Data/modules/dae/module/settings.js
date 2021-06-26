@@ -91,4 +91,13 @@ export const registerSettings = function () {
         choices: { none: "None", warn: "warnings", debug: "debug", all: "all" },
         onChange: fetchParams
     });
+    game.settings.register("dae", "disableEffects", {
+        name: "dae.DisableEffects.Name",
+        hint: "dae.DisableEffects.Hint",
+        scope: "world",
+        default: false,
+        type: Boolean,
+        config: true,
+        onChange: () => window.location.reload()
+    });
 };

@@ -21,7 +21,7 @@
             </div>
             {{#if hasReference}}
             <div class="condition-reference">
-                {{condition.referenceId}}{ {{~condition.name~}} }
+                {{condition.referenceId}}
             </div>
             {{else}}
             <div class="condition-name" style="flex: 2; margin: 3px 0px 0px 0px" height="20px">
@@ -34,7 +34,7 @@
             </div>
             {{else}}
             <div class="remove-row">
-                <a name="remove-row" title="{{localize "ENHANCED_CONDITIONS.ChatCard.Buttons.Removed"}}"><i class="fas fa-times"></i></a>
+                <a name="remove-row" title="{{localize "ENHANCED_CONDITIONS.ChatCard.Buttons.Remove"}}"><i class="fas fa-times"></i></a>
             </div>
             {{/if}}
         </li>

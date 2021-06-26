@@ -1,10 +1,10 @@
-import { Fuse, SvelteComponent, init, safe_not_equal, element, attr, insert, update_keyed_each, detach, empty, noop as noop$1, createEventDispatcher, afterUpdate, space, text, set_attributes, toggle_class, append, listen, set_data, stop_propagation, get_spread_update, destroy_each, destroy_block, assign, binding_callbacks, HtmlTag } from './vendor.js';
+import { Fuse, SvelteComponent, init, safe_not_equal, element, attr, insert, update_keyed_each, detach, empty, noop, createEventDispatcher, afterUpdate, space, text, set_attributes, toggle_class, append, listen, set_data, stop_propagation, get_spread_update, destroy_each, destroy_block, assign, binding_callbacks, HtmlTag } from './vendor.js';
 
 const MODULE_NAME = "quick-insert";
 const SAVE_SETTINGS_REVISION = 1;
 var settings;
 (function (settings) {
-    settings["QUICKOPEN"] = "quickOpen";
+    // QUICKOPEN = "quickOpen", // dead setting
     settings["ENABLE_GLOBAL_CONTEXT"] = "enableGlobalContext";
     settings["INDEXING_DISABLED"] = "indexingDisabled";
     settings["FILTERS_CLIENT"] = "filtersClient";
@@ -12,14 +12,11 @@ var settings;
     settings["FILTERS_SHEETS"] = "filtersSheets";
     settings["FILTERS_SHEETS_ENABLED"] = "filtersSheetsEnabled";
     settings["GM_ONLY"] = "gmOnly";
-    settings["INDEX_GUARD_ENABLED"] = "indexGuardEnabled";
     settings["AUTOMATIC_INDEXING"] = "automaticIndexing";
     settings["INDEX_TIMEOUT"] = "indexTimeout";
     settings["SEARCH_BUTTON"] = "searchButton";
+    settings["KEY_BIND"] = "keyBind";
 })(settings || (settings = {}));
-const noop = () => {
-    return;
-};
 const moduleSettings = [
     {
         setting: settings.GM_ONLY,
@@ -35,14 +32,6 @@ const moduleSettings = [
         hint: "QUICKINSERT.SettingsFiltersSheetsEnabledHint",
         type: Boolean,
         default: true,
-        scope: "world",
-    },
-    {
-        setting: settings.INDEX_GUARD_ENABLED,
-        name: "QUICKINSERT.SettingsIndexGuardEnabled",
-        hint: "QUICKINSERT.SettingsIndexGuardEnabledHint",
-        type: Boolean,
-        default: false,
         scope: "world",
     },
     {
@@ -80,13 +69,6 @@ const moduleSettings = [
         type: Boolean,
         default: false,
         scope: "client",
-    },
-    {
-        setting: settings.QUICKOPEN,
-        name: "QUICKINSERT.SettingsQuickOpen",
-        hint: "QUICKINSERT.SettingsQuickOpenHint",
-        type: window.Azzu.SettingsTypes.KeyBinding,
-        default: "Ctrl +  ",
     },
     {
         setting: settings.ENABLE_GLOBAL_CONTEXT,
@@ -147,11 +129,11 @@ function registerSetting(callback, { setting, ...options }) {
         config: true,
         scope: "client",
         ...options,
-        onChange: callback || noop,
+        onChange: callback || undefined,
     });
 }
 function registerSettings(callbacks = {}) {
-    moduleSettings.forEach(item => {
+    moduleSettings.forEach((item) => {
         registerSetting(callbacks[item.setting], item);
     });
 }
@@ -180,7 +162,7 @@ const ALPHA = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 function randomId(idLength = 10) {
     const values = new Uint8Array(idLength);
     window.crypto.getRandomValues(values);
-    return String.fromCharCode(...values.map(x => ALPHA.charCodeAt(x % ALPHA.length)));
+    return String.fromCharCode(...values.map((x) => ALPHA.charCodeAt(x % ALPHA.length)));
 }
 // Some black magic from the internet,
 // places caret at end of contenteditable
@@ -196,7 +178,7 @@ function placeCaretAtEnd(el) {
 // Simple utility function for async waiting
 // Nicer to await waitFor(100) than nesting setTimeout callback hell
 function resolveAfter(msec) {
-    return new Promise(res => setTimeout(res, msec));
+    return new Promise((res) => setTimeout(res, msec));
 }
 class TimeoutError extends Error {
     constructor(timeoutMsec) {
@@ -210,7 +192,7 @@ function withDeadline(p, timeoutMsec) {
     ]);
 }
 function permissionListEq(a, b) {
-    return a.length === b.length && [...a].every(value => b.includes(value));
+    return a.length === b.length && [...a].every((value) => b.includes(value));
 }
 
 var EntityType;
@@ -248,7 +230,7 @@ const EntityCollections = {
 const ignoredFolderNames = { _fql_quests: true };
 function enabledEntityTypes() {
     const disabled = getSetting(settings.INDEXING_DISABLED);
-    return IndexedEntityTypes.filter(t => 
+    return IndexedEntityTypes.filter((t) => 
     //@ts-ignore
     !disabled?.entities?.[t]?.includes(game.user.role));
 }
@@ -338,7 +320,7 @@ class EntitySearchItem extends SearchItem {
     }
     static fromEntities(entities) {
         return entities
-            .filter(e => {
+            .filter((e) => {
             return e.visible && !(e.folder && ignoredFolderNames[e.folder.name]);
         })
             .map(this.fromEntity);
@@ -477,12 +459,12 @@ class FuseSearchIndex {
         this.fuse.add(item);
     }
     removeByUuid(uuid) {
-        this.fuse.remove(i => i?.uuid == uuid);
+        this.fuse.remove((i) => i?.uuid == uuid);
     }
     search(query) {
         return this.fuse
             .search(query)
-            .map(res => ({ item: res.item, match: res.matches }));
+            .map((res) => ({ item: res.item, match: res.matches }));
     }
 }
 class SearchLib {
@@ -617,7 +599,7 @@ class SearchFilterCollection {
                 ...this.worldFilters,
                 ...this.clientFilters,
             ];
-            this.combinedFilters.forEach(f => (f.disabled = this.disabled.includes(f.id)));
+            this.combinedFilters.forEach((f) => (f.disabled = this.disabled.includes(f.id)));
             this.dirty = false;
         }
         return this.combinedFilters;
@@ -638,13 +620,13 @@ class SearchFilterCollection {
         if (!query) {
             return [...this.filters];
         }
-        return this.filters.filter(f => f.tag.includes(query));
+        return this.filters.filter((f) => f.tag.includes(query));
     }
     getFilter(id) {
-        return this.filters.find(f => f.id == id);
+        return this.filters.find((f) => f.id == id);
     }
     getFilterByTag(tag) {
-        return this.filters.filter(f => !f.disabled).find(f => f.tag == tag);
+        return this.filters.filter((f) => !f.disabled).find((f) => f.tag == tag);
     }
     addFilter(filter) {
         if (filter.type == FilterType.World) {
@@ -657,15 +639,15 @@ class SearchFilterCollection {
         }
     }
     deleteFilter(id) {
-        const f = this.filters.find(f => f.id === id);
+        const f = this.filters.find((f) => f.id === id);
         if (f.type == FilterType.World) {
-            const x = this.worldFilters.findIndex(f => f.id === id);
+            const x = this.worldFilters.findIndex((f) => f.id === id);
             if (x != -1) {
                 this.worldFilters.splice(x, 1);
             }
         }
         else if (f.type == FilterType.Client) {
-            const x = this.clientFilters.findIndex(f => f.id === id);
+            const x = this.clientFilters.findIndex((f) => f.id === id);
             if (x != -1) {
                 this.clientFilters.splice(x, 1);
             }
@@ -686,7 +668,7 @@ class SearchFilterCollection {
         this.dirty = true;
     }
     loadEntityFilters() {
-        this.defaultFilters = this.defaultFilters.concat(enabledEntityTypes().map(type => {
+        this.defaultFilters = this.defaultFilters.concat(enabledEntityTypes().map((type) => {
             return {
                 id: EntityCollections[type],
                 type: FilterType.Default,
@@ -704,7 +686,7 @@ class SearchFilterCollection {
         // TODO: find a way to find directories that the user is allowed to see
         if (!game.user.isGM)
             return;
-        this.defaultFilters = this.defaultFilters.concat(enabledEntityTypes().map(type => {
+        this.defaultFilters = this.defaultFilters.concat(enabledEntityTypes().map((type) => {
             return {
                 id: `dir.${EntityCollections[type]}`,
                 type: FilterType.Default,
@@ -720,7 +702,7 @@ class SearchFilterCollection {
     }
     loadCompendiumFilters() {
         this.defaultFilters = this.defaultFilters.concat(game.packs
-            .map(pack => {
+            .map((pack) => {
             if (!packEnabled(pack))
                 return null;
             return {
@@ -735,7 +717,7 @@ class SearchFilterCollection {
                 },
             };
         })
-            .filter(f => f != null));
+            .filter((f) => f != null));
     }
     loadClientSave() {
         const clientSave = getSetting(settings.FILTERS_CLIENT);
@@ -996,7 +978,7 @@ class CharacterSheetContext extends SearchContext {
     onSubmit(item) {
         if (typeof item == "string")
             return;
-        fromUuid(item.uuid).then(e => {
+        fromUuid(item.uuid).then((e) => {
             if (isNewerVersion(game.data.version, "0.7.8")) {
                 //@ts-ignore
                 return this.entitySheet._onDropItem({}, e);
@@ -1014,8 +996,7 @@ function identifyContext(target) {
         if (target.name === "command") {
             if (target
                 .closest(".macro-sheet")
-                .querySelector('select[name="type"]').value ===
-                "script") {
+                .querySelector('select[name="type"]').value === "script") {
                 return new ScriptMacroContext(target);
             }
             return new InputContext(target);
@@ -1057,21 +1038,7 @@ class QuickInsertCore {
     matchBoundKeyEvent(event) {
         if (this.app.embeddedMode || !event)
             return false;
-        let keySetting = getSetting(settings.QUICKOPEN);
-        // keybinds ending with space are trimmed by 0.7.x settings window
-        if (keySetting.endsWith("+")) {
-            keySetting = keySetting + "  ";
-        }
-        const key = window.Azzu.SettingsTypes.KeyBinding.parse(keySetting);
-        if (key.key === " " &&
-            canvas.ready &&
-            canvas.controls?.ruler?.waypoints?.length > 0) {
-            return false;
-        }
-        return (window.Azzu.SettingsTypes.KeyBinding.eventIsForBinding(event, key) &&
-            !$(document.activeElement)
-                .closest(".app.window-app")
-                .is("#client-settings"));
+        return KeybindLib.isBoundTo(event, "quick-insert", settings.KEY_BIND);
     }
     open(context) {
         this.app.render(true, { context });
@@ -1188,7 +1155,7 @@ class FilterEditor extends Application {
         form
             .find(`input[name^="${this.filter.id}_${type}."].disabled`)
             .removeClass("disabled");
-        const selectedAny = formData.find(r => r.name.endsWith(".Any"));
+        const selectedAny = formData.find((r) => r.name.endsWith(".Any"));
         if (selectedAny) {
             const other = form.find(`input[name^="${this.filter.id}_${type}."]:not(input[name="${this.filter.id}_${selectedAny.name}"])`);
             other.prop("checked", false);
@@ -1205,15 +1172,15 @@ class FilterEditor extends Application {
     processForm() {
         const form = this.element.find("form");
         let formData = form.serializeArray();
-        formData.forEach(d => {
+        formData.forEach((d) => {
             d.name = this.unPrefix(d.name);
         });
-        const name = formData.find(p => p.name == "name").value.trim();
-        const title = formData.find(p => p.name == "title").value;
-        formData = formData.filter(p => p.name != "name" && p.name != "title");
-        const compendiums = formData.filter(r => r.name.startsWith("Compendium."));
-        const folders = formData.filter(r => r.name.startsWith("Folder."));
-        const entity = formData.filter(r => r.name.startsWith("Entity."));
+        const name = formData.find((p) => p.name == "name").value.trim();
+        const title = formData.find((p) => p.name == "title").value;
+        formData = formData.filter((p) => p.name != "name" && p.name != "title");
+        const compendiums = formData.filter((r) => r.name.startsWith("Compendium."));
+        const folders = formData.filter((r) => r.name.startsWith("Folder."));
+        const entity = formData.filter((r) => r.name.startsWith("Entity."));
         this.fixAny("Compendium", form, compendiums);
         this.fixAny("Folder", form, folders);
         this.fixAny("Entity", form, entity);
@@ -1227,7 +1194,7 @@ class FilterEditor extends Application {
         if (!this.isEditable())
             return;
         const { name, title, formData } = this.processForm();
-        const config = parseFilterConfig(formData.map(x => x.name));
+        const config = parseFilterConfig(formData.map((x) => x.name));
         const oldTag = this.filter.tag;
         if (name != "") {
             this.filter.tag = name;
@@ -1249,7 +1216,7 @@ class FilterEditor extends Application {
             this.element.find(".example-out").append(QuickInsert.app.element);
         }
         else {
-            Hooks.once(`render${QuickInsert.app.constructor.name}`, app => {
+            Hooks.once(`render${QuickInsert.app.constructor.name}`, (app) => {
                 this.element.find(".example-out").append(app.element);
             });
         }
@@ -1267,7 +1234,7 @@ class FilterEditor extends Application {
             (this.filter.type == FilterType.World && !game.user.isGM)) {
             this.element.find("input").prop("disabled", true);
         }
-        this.element.find(".open-here").on("click", evt => {
+        this.element.find(".open-here").on("click", (evt) => {
             evt.preventDefault();
             this.attachQuickInsert();
         });
@@ -1275,7 +1242,7 @@ class FilterEditor extends Application {
     getData() {
         let folders = [];
         if (game.user.isGM) {
-            folders = game.folders.map(folder => ({
+            folders = game.folders.map((folder) => ({
                 label: folder.name,
                 name: this.prefix(`Folder.${folder._id}`),
                 selected: this.filter.filterConfig.folders.includes(folder._id),
@@ -1293,8 +1260,8 @@ class FilterEditor extends Application {
                     selected: this.filter.filterConfig.compendiums === "any",
                 },
                 ...game.packs
-                    .filter(pack => packEnabled(pack))
-                    .map(pack => ({
+                    .filter((pack) => packEnabled(pack))
+                    .map((pack) => ({
                     name: this.prefix(`Compendium.${pack.collection}`),
                     label: `${pack.metadata.label} - ${pack.collection}`,
                     selected: this.filter.filterConfig.compendiums.includes(pack.collection),
@@ -1306,7 +1273,7 @@ class FilterEditor extends Application {
                     label: i18n("FilterEditorEntityAny"),
                     selected: this.filter.filterConfig.entities === "any",
                 },
-                ...enabledEntityTypes().map(type => ({
+                ...enabledEntityTypes().map((type) => ({
                     name: this.prefix(`Entity.${type}`),
                     label: game.i18n.localize(`ENTITY.${type}`),
                     selected: this.filter.filterConfig.entities.includes(type),
@@ -1376,7 +1343,7 @@ class FilterList extends FormApplication {
     getData() {
         return {
             filters: [
-                ...QuickInsert.filters.filters.map(filter => ({
+                ...QuickInsert.filters.filters.map((filter) => ({
                     id: filter.id,
                     icon: typeIcons[filter.type],
                     tag: filter.tag,
@@ -1402,32 +1369,32 @@ class FilterList extends FormApplication {
         this.element.find(".create-filter").on("click", () => {
             this.newFilter();
         });
-        this.element.find("i.delete").on("click", evt => {
+        this.element.find("i.delete").on("click", (evt) => {
             const id = evt.target.closest("tr").dataset["id"];
             QuickInsert.filters.deleteFilter(id);
         });
-        this.element.find("i.edit").on("click", evt => {
+        this.element.find("i.edit").on("click", (evt) => {
             const id = evt.target.closest("tr").dataset["id"];
             this.editFilter(id);
         });
-        this.element.find("i.duplicate").on("click", evt => {
+        this.element.find("i.duplicate").on("click", (evt) => {
             const id = evt.target.closest("tr").dataset["id"];
-            this.newFilter(QuickInsert.filters.filters.find(f => f.id === id));
+            this.newFilter(QuickInsert.filters.filters.find((f) => f.id === id));
         });
-        this.element.find("i.enable").on("click", evt => {
+        this.element.find("i.enable").on("click", (evt) => {
             const id = evt.target.closest("tr").dataset["id"];
-            QuickInsert.filters.filters.find(f => f.id === id).disabled = false;
+            QuickInsert.filters.filters.find((f) => f.id === id).disabled = false;
             QuickInsert.filters.filtersChanged(FilterType.Client);
         });
-        this.element.find("i.disable").on("click", evt => {
+        this.element.find("i.disable").on("click", (evt) => {
             const id = evt.target.closest("tr").dataset["id"];
-            QuickInsert.filters.filters.find(f => f.id === id).disabled = true;
+            QuickInsert.filters.filters.find((f) => f.id === id).disabled = true;
             QuickInsert.filters.filtersChanged(FilterType.Client);
         });
     }
     editFilter(id) {
         if (!this.filterEditors[id]) {
-            this.filterEditors[id] = new FilterEditor(QuickInsert.filters.filters.find(f => f.id === id));
+            this.filterEditors[id] = new FilterEditor(QuickInsert.filters.filters.find((f) => f.id === id));
         }
         this.filterEditors[id].render(true);
     }
@@ -1531,7 +1498,7 @@ class SheetFilters extends FormApplication {
             filters: Object.entries(customFilters).map(([key, filter]) => ({
                 key,
                 noFilter: filter === "",
-                options: filters.map(f => ({
+                options: filters.map((f) => ({
                     ...f,
                     selected: filter === f.tag || filter === f.id,
                 })),
@@ -1578,7 +1545,7 @@ async function importSystemIntegration() {
 function registerTinyMCEPlugin() {
     // TinyMCE addon registration
     tinymce.PluginManager.add("quickinsert", function (editor) {
-        editor.on("keydown", evt => {
+        editor.on("keydown", (evt) => {
             if (QuickInsert.matchBoundKeyEvent(evt)) {
                 evt.stopPropagation();
                 evt.preventDefault();
@@ -1603,15 +1570,15 @@ function registerTinyMCEPlugin() {
 }
 
 const ENTITYACTIONS = {
-    show: item => item.show(),
-    roll: item => item.get().then(e => e.draw()),
-    viewScene: item => item.get().then(e => e.view()),
-    activateScene: item => item.get().then(e => {
+    show: (item) => item.show(),
+    roll: (item) => item.get().then((e) => e.draw()),
+    viewScene: (item) => item.get().then((e) => e.view()),
+    activateScene: (item) => item.get().then((e) => {
         game.user.isGM && e.activate();
     }),
-    execute: item => item.get().then(e => e.execute()),
-    insert: item => item,
-    rollInsert: item => item.get().then(async (e) => {
+    execute: (item) => item.get().then((e) => e.execute()),
+    insert: (item) => item,
+    rollInsert: (item) => item.get().then(async (e) => {
         const roll = e.roll();
         for (const res of roll.results) {
             if (res.resultId == "") {
@@ -1621,7 +1588,7 @@ const ENTITYACTIONS = {
                 const pack = game.packs.get(res.collection);
                 const indexItem = game.packs
                     .get(res.collection)
-                    .index.find(i => i._id === res.resultId);
+                    .index.find((i) => i._id === res.resultId);
                 return new CompendiumSearchItem(pack, indexItem);
             }
             else {
@@ -1675,7 +1642,7 @@ const BrowseEntityActions = (() => {
             },
         ],
     };
-    IndexedEntityTypes.forEach(type => {
+    IndexedEntityTypes.forEach((type) => {
         if (actions[type])
             return;
         actions[type] = [
@@ -1717,7 +1684,7 @@ const InsertEntityActions = (() => {
         ],
     };
     // Add others
-    IndexedEntityTypes.forEach(type => {
+    IndexedEntityTypes.forEach((type) => {
         if (!actions[type]) {
             // If nothing else, add "Show"
             actions[type] = [
@@ -1733,9 +1700,9 @@ const InsertEntityActions = (() => {
     return actions;
 })();
 
-/* src/app/SearchResults.svelte generated by Svelte v3.31.0 */
+/* src/app/SearchResults.svelte generated by Svelte v3.38.2 */
 
-function get_each_context(ctx, list, i) {
+function get_each_context$1(ctx, list, i) {
 	const child_ctx = ctx.slice();
 	child_ctx[10] = list[i].item;
 	child_ctx[11] = list[i].match;
@@ -1751,8 +1718,8 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (18:0) {#if active}
-function create_if_block(ctx) {
+// (19:0) {#if active}
+function create_if_block$1(ctx) {
 	let ul;
 	let each_blocks = [];
 	let each_1_lookup = new Map();
@@ -1760,9 +1727,9 @@ function create_if_block(ctx) {
 	const get_key = ctx => /*item*/ ctx[10].uuid;
 
 	for (let i = 0; i < each_value.length; i += 1) {
-		let child_ctx = get_each_context(ctx, each_value, i);
+		let child_ctx = get_each_context$1(ctx, each_value, i);
 		let key = get_key(child_ctx);
-		each_1_lookup.set(key, each_blocks[i] = create_each_block(key, child_ctx));
+		each_1_lookup.set(key, each_blocks[i] = create_each_block$1(key, child_ctx));
 	}
 
 	return {
@@ -1786,8 +1753,8 @@ function create_if_block(ctx) {
 		},
 		p(ctx, dirty) {
 			if (dirty & /*results, selectedIndex, callAction, selectedAction, formatMatch*/ 46) {
-				const each_value = /*results*/ ctx[1];
-				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, ul, destroy_block, create_each_block, null, get_each_context);
+				each_value = /*results*/ ctx[1];
+				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, ul, destroy_block, create_each_block$1, null, get_each_context$1);
 			}
 		},
 		d(detaching) {
@@ -1802,7 +1769,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (30:10) {:else}
+// (31:10) {:else}
 function create_else_block(ctx) {
 	let html_tag;
 	let raw_value = /*item*/ ctx[10].icon + "";
@@ -1827,7 +1794,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (28:10) {#if item.img}
+// (29:10) {#if item.img}
 function create_if_block_1(ctx) {
 	let img;
 	let img_src_value;
@@ -1851,7 +1818,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (37:12) {#each actions as action}
+// (38:12) {#each actions as action}
 function create_each_block_1(ctx) {
 	let i;
 	let i_class_value;
@@ -1912,8 +1879,8 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (20:4) {#each results as { item, match, actions, defaultAction }
-function create_each_block(key_1, ctx) {
+// (21:4) {#each results as { item, match, actions, defaultAction }
+function create_each_block$1(key_1, ctx) {
 	let li;
 	let a;
 	let t0;
@@ -2088,9 +2055,9 @@ function create_each_block(key_1, ctx) {
 	};
 }
 
-function create_fragment(ctx) {
+function create_fragment$1(ctx) {
 	let if_block_anchor;
-	let if_block = /*active*/ ctx[0] && create_if_block(ctx);
+	let if_block = /*active*/ ctx[0] && create_if_block$1(ctx);
 
 	return {
 		c() {
@@ -2106,7 +2073,7 @@ function create_fragment(ctx) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
 				} else {
-					if_block = create_if_block(ctx);
+					if_block = create_if_block$1(ctx);
 					if_block.c();
 					if_block.m(if_block_anchor.parentNode, if_block_anchor);
 				}
@@ -2115,8 +2082,8 @@ function create_fragment(ctx) {
 				if_block = null;
 			}
 		},
-		i: noop$1,
-		o: noop$1,
+		i: noop,
+		o: noop,
 		d(detaching) {
 			if (if_block) if_block.d(detaching);
 			if (detaching) detach(if_block_anchor);
@@ -2126,7 +2093,7 @@ function create_fragment(ctx) {
 
 const func = str => `<strong>${str}</strong>`;
 
-function instance($$self, $$props, $$invalidate) {
+function instance$1($$self, $$props, $$invalidate) {
 	
 	const dispatch = createEventDispatcher();
 	let { active } = $$props;
@@ -2136,7 +2103,13 @@ function instance($$self, $$props, $$invalidate) {
 	let resultList;
 
 	afterUpdate(() => {
-		resultList?.children[selectedIndex]?.scrollIntoView({ block: "nearest" });
+		var _a;
+
+		(_a = resultList === null || resultList === void 0
+		? void 0
+		: resultList.children[selectedIndex]) === null || _a === void 0
+		? void 0
+		: _a.scrollIntoView({ block: "nearest" });
 	});
 
 	function callAction(actionId, item, shiftKey) {
@@ -2177,7 +2150,7 @@ class SearchResults extends SvelteComponent {
 	constructor(options) {
 		super();
 
-		init(this, options, instance, create_fragment, safe_not_equal, {
+		init(this, options, instance$1, create_fragment$1, safe_not_equal, {
 			active: 0,
 			results: 1,
 			selectedIndex: 2,
@@ -2186,17 +2159,17 @@ class SearchResults extends SvelteComponent {
 	}
 }
 
-/* src/app/SearchFiltersResults.svelte generated by Svelte v3.31.0 */
+/* src/app/SearchFiltersResults.svelte generated by Svelte v3.38.2 */
 
-function get_each_context$1(ctx, list, i) {
+function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
 	child_ctx[8] = list[i];
 	child_ctx[10] = i;
 	return child_ctx;
 }
 
-// (16:0) {#if active}
-function create_if_block$1(ctx) {
+// (17:0) {#if active}
+function create_if_block(ctx) {
 	let ul;
 	let each_blocks = [];
 	let each_1_lookup = new Map();
@@ -2204,9 +2177,9 @@ function create_if_block$1(ctx) {
 	const get_key = ctx => /*item*/ ctx[8].id;
 
 	for (let i = 0; i < each_value.length; i += 1) {
-		let child_ctx = get_each_context$1(ctx, each_value, i);
+		let child_ctx = get_each_context(ctx, each_value, i);
 		let key = get_key(child_ctx);
-		each_1_lookup.set(key, each_blocks[i] = create_each_block$1(key, child_ctx));
+		each_1_lookup.set(key, each_blocks[i] = create_each_block(key, child_ctx));
 	}
 
 	return {
@@ -2230,8 +2203,8 @@ function create_if_block$1(ctx) {
 		},
 		p(ctx, dirty) {
 			if (dirty & /*results, selectedIndex, selected*/ 22) {
-				const each_value = /*results*/ ctx[1];
-				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, ul, destroy_block, create_each_block$1, null, get_each_context$1);
+				each_value = /*results*/ ctx[1];
+				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, ul, destroy_block, create_each_block, null, get_each_context);
 			}
 		},
 		d(detaching) {
@@ -2246,8 +2219,8 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (18:4) {#each results as item, i (item.id)}
-function create_each_block$1(key_1, ctx) {
+// (19:4) {#each results as item, i (item.id)}
+function create_each_block(key_1, ctx) {
 	let li;
 	let a;
 	let span0;
@@ -2317,9 +2290,9 @@ function create_each_block$1(key_1, ctx) {
 	};
 }
 
-function create_fragment$1(ctx) {
+function create_fragment(ctx) {
 	let if_block_anchor;
-	let if_block = /*active*/ ctx[0] && create_if_block$1(ctx);
+	let if_block = /*active*/ ctx[0] && create_if_block(ctx);
 
 	return {
 		c() {
@@ -2335,7 +2308,7 @@ function create_fragment$1(ctx) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
 				} else {
-					if_block = create_if_block$1(ctx);
+					if_block = create_if_block(ctx);
 					if_block.c();
 					if_block.m(if_block_anchor.parentNode, if_block_anchor);
 				}
@@ -2344,8 +2317,8 @@ function create_fragment$1(ctx) {
 				if_block = null;
 			}
 		},
-		i: noop$1,
-		o: noop$1,
+		i: noop,
+		o: noop,
 		d(detaching) {
 			if (if_block) if_block.d(detaching);
 			if (detaching) detach(if_block_anchor);
@@ -2353,7 +2326,7 @@ function create_fragment$1(ctx) {
 	};
 }
 
-function instance$1($$self, $$props, $$invalidate) {
+function instance($$self, $$props, $$invalidate) {
 	
 	const dispatch = createEventDispatcher();
 	let { active } = $$props;
@@ -2362,7 +2335,13 @@ function instance$1($$self, $$props, $$invalidate) {
 	let resultList;
 
 	afterUpdate(() => {
-		resultList?.children[selectedIndex]?.scrollIntoView({ block: "nearest" });
+		var _a;
+
+		(_a = resultList === null || resultList === void 0
+		? void 0
+		: resultList.children[selectedIndex]) === null || _a === void 0
+		? void 0
+		: _a.scrollIntoView({ block: "nearest" });
 	});
 
 	function selected(index) {
@@ -2398,7 +2377,7 @@ function instance$1($$self, $$props, $$invalidate) {
 class SearchFiltersResults extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$1, create_fragment$1, safe_not_equal, { active: 0, results: 1, selectedIndex: 2 });
+		init(this, options, instance, create_fragment, safe_not_equal, { active: 0, results: 1, selectedIndex: 2 });
 	}
 }
 
@@ -2463,7 +2442,7 @@ class SearchEntitiesMode extends SearchMode {
             let results;
             if (this.app.selectedFilter) {
                 if (this.app.selectedFilter.filterConfig) {
-                    results = QuickInsert.searchLib.search(textInput, item => matchFilterConfig(this.app.selectedFilter.filterConfig, item), max);
+                    results = QuickInsert.searchLib.search(textInput, (item) => matchFilterConfig(this.app.selectedFilter.filterConfig, item), max);
                 }
             }
             else {
@@ -2471,9 +2450,9 @@ class SearchEntitiesMode extends SearchMode {
             }
             if (this.app.attachedContext.restrictTypes &&
                 this.app.attachedContext.restrictTypes.length > 0) {
-                results = results.filter(i => this.app.attachedContext.restrictTypes.includes(i.item.entityType));
+                results = results.filter((i) => this.app.attachedContext.restrictTypes.includes(i.item.entityType));
             }
-            this.results = results.map(res => ({
+            this.results = results.map((res) => ({
                 item: res.item,
                 match: res.match,
                 actions: getActions(res.item.entityType, this.isInsertMode),
@@ -2492,10 +2471,10 @@ class SearchEntitiesMode extends SearchMode {
             return;
         let idx;
         if (this.selectedAction) {
-            idx = actions.findIndex(a => a.id == this.selectedAction);
+            idx = actions.findIndex((a) => a.id == this.selectedAction);
         }
         else {
-            idx = actions.findIndex(a => a.id == this.results[index].defaultAction);
+            idx = actions.findIndex((a) => a.id == this.results[index].defaultAction);
         }
         const nextIdx = (idx + 1) % actions.length;
         this.view.$$set({
@@ -2555,8 +2534,8 @@ class SearchFiltersMode extends SearchMode {
             }
         }
         this.results = QuickInsert.filters.filters
-            .filter(f => !f.disabled)
-            .filter(f => f.tag.includes(cleanedInput));
+            .filter((f) => !f.disabled)
+            .filter((f) => f.tag.includes(cleanedInput));
         this.view.$$set({
             results: this.results,
             selectedIndex: (this.selectedIndex = this.results.length - 1),
@@ -2688,7 +2667,7 @@ class SearchApp extends Application {
         this.input.on("input", () => {
             this.searchInput();
         });
-        this.input.on("dragstart", evt => evt.stopPropagation());
+        this.input.on("dragstart", (evt) => evt.stopPropagation());
         const keyCodeBinds = {
             13: this._onKeyEnter,
             40: this._onKeyDown,
@@ -2696,7 +2675,7 @@ class SearchApp extends Application {
             27: this._onKeyEsc,
             9: this._onKeyTab,
         };
-        this.input.on("keydown", evt => {
+        this.input.on("keydown", (evt) => {
             if (keyCodeBinds[evt.which]) {
                 evt.preventDefault();
                 keyCodeBinds[evt.which](evt);
@@ -2705,7 +2684,7 @@ class SearchApp extends Application {
         $(this.element).hover(() => {
             this.mouseFocus = true;
             this._checkFocus();
-        }, e => {
+        }, (e) => {
             if (e.originalEvent.shiftKey)
                 return;
             this.mouseFocus = false;
@@ -2732,11 +2711,11 @@ class SearchApp extends Application {
                 results: [],
             },
         });
-        this.searchEntitiesMode.view.$on("callAction", data => {
+        this.searchEntitiesMode.view.$on("callAction", (data) => {
             const { actionId, item, shiftKey } = data.detail;
             this.searchEntitiesMode.onAction(actionId, item, shiftKey);
         });
-        this.searchFiltersMode.view.$on("selected", data => {
+        this.searchFiltersMode.view.$on("selected", (data) => {
             const { index } = data.detail;
             this.searchFiltersMode.onClick(index);
         });
@@ -2764,7 +2743,7 @@ class SearchApp extends Application {
                 .then(() => {
                 this.showHint(`Index loaded successfully`);
             })
-                .catch(reason => {
+                .catch((reason) => {
                 this.showHint(`Failed to load index ${reason}`);
             });
             // @ts-ignore
@@ -2812,9 +2791,6 @@ class SearchApp extends Application {
 }
 
 class IndexingSettings extends FormApplication {
-    get element() {
-        return super.element;
-    }
     static get defaultOptions() {
         return {
             ...super.defaultOptions,
@@ -2828,17 +2804,17 @@ class IndexingSettings extends FormApplication {
     getData() {
         const disabled = getSetting(settings.INDEXING_DISABLED);
         return {
-            entityTypes: IndexedEntityTypes.map(type => ({
+            entityTypes: IndexedEntityTypes.map((type) => ({
                 type,
                 title: `ENTITY.${type}`,
-                values: [1, 2, 3, 4].map(role => ({
+                values: [1, 2, 3, 4].map((role) => ({
                     role,
                     disabled: disabled?.entities?.[type]?.includes(role),
                 })),
             })),
-            compendiums: [...game.packs.keys()].map(pack => ({
+            compendiums: [...game.packs.keys()].map((pack) => ({
                 pack,
-                values: [1, 2, 3, 4].map(role => ({
+                values: [1, 2, 3, 4].map((role) => ({
                     role,
                     disabled: disabled?.packs?.[pack]?.includes(role),
                 })),
@@ -2889,7 +2865,7 @@ class IndexingSettings extends FormApplication {
             }
         });
         // Deselect all button
-        html.find("button.deselect-all").on("click", e => {
+        html.find("button.deselect-all").on("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
             html
@@ -2898,7 +2874,7 @@ class IndexingSettings extends FormApplication {
                 .prop("indeterminate", false);
         });
         // Select all button
-        html.find("button.select-all").on("click", e => {
+        html.find("button.select-all").on("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
             html
@@ -2970,46 +2946,30 @@ Hooks.once("init", async function () {
                 return;
             reIndexing = true;
             const order = [...game.users.entities]
-                .filter(u => u.active)
-                .map(u => u.id)
+                .filter((u) => u.active)
+                .map((u) => u.id)
                 .indexOf(game.userId);
             await resolveAfter(order * 300);
             await QuickInsert.forceIndex();
             reIndexing = false;
         },
-        [settings.INDEX_GUARD_ENABLED]: val => {
-            if (quickInsertDisabled())
-                return;
-            if (val) {
-                localStorage.setItem("IndexGuardEnabled", "enabled");
-            }
-            else {
-                localStorage.removeItem("IndexGuardEnabled");
-            }
-            window.location.reload();
-        },
+    });
+    KeybindLib.register("quick-insert", settings.KEY_BIND, {
+        name: "QUICKINSERT.SettingsQuickOpen",
+        hint: "QUICKINSERT.SettingsQuickOpenHint",
+        default: "Ctrl + Space",
+        config: true,
     });
 });
 Hooks.once("ready", function () {
     if (quickInsertDisabled())
         return;
     console.log("Quick Insert | Initializing...");
-    // Ensure index guard setting is synced with local storage.
-    if (getSetting(settings.INDEX_GUARD_ENABLED)) {
-        if (!localStorage.getItem("IndexGuardEnabled")) {
-            localStorage.setItem("IndexGuardEnabled", "enabled");
-        }
-    }
-    else {
-        if (localStorage.getItem("IndexGuardEnabled")) {
-            localStorage.removeItem("IndexGuardEnabled");
-        }
-    }
     // Initialize application base
     QuickInsert.filters = new SearchFilterCollection();
     QuickInsert.app = new SearchApp();
     registerTinyMCEPlugin();
-    importSystemIntegration().then(systemIntegration => {
+    importSystemIntegration().then((systemIntegration) => {
         if (systemIntegration) {
             QuickInsert.systemIntegration = systemIntegration;
             QuickInsert.systemIntegration.init();
@@ -3024,27 +2984,27 @@ Hooks.once("ready", function () {
             }
         }
     });
-    document.addEventListener("keydown", evt => {
+    document.addEventListener("keydown", (evt) => {
         if (QuickInsert.matchBoundKeyEvent(evt)) {
             evt.stopPropagation();
             evt.preventDefault();
             QuickInsert.toggle();
         }
     });
-    enabledEntityTypes().forEach(type => {
-        Hooks.on(`create${type}`, entity => {
+    enabledEntityTypes().forEach((type) => {
+        Hooks.on(`create${type}`, (entity) => {
             if (!entity.visible)
                 return;
             QuickInsert.searchLib?.addItem(EntitySearchItem.fromEntity(entity));
         });
-        Hooks.on(`update${type}`, entity => {
+        Hooks.on(`update${type}`, (entity) => {
             if (!entity.visible) {
                 QuickInsert.searchLib?.removeItem(entity.uuid);
                 return;
             }
             QuickInsert.searchLib?.replaceItem(EntitySearchItem.fromEntity(entity));
         });
-        Hooks.on(`delete${type}`, entity => {
+        Hooks.on(`delete${type}`, (entity) => {
             QuickInsert.searchLib?.removeItem(entity.uuid);
         });
     });

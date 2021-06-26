@@ -10,10 +10,14 @@ import { tidy5eItemCard } from "./app/itemcard.js";
 export class Tidy5eVehicle extends ActorSheet5eVehicle {
 
 	static get defaultOptions() {
+    let defaultTab = game.settings.get("tidy5e-sheet", "defaultActionsTab") != 'default' ? 'attributes' : 'actions';
+		if (!game.modules.get('character-actions-list-5e')?.active) defaultTab = 'description';
+
 	  return mergeObject(super.defaultOptions, {
 			classes: ["tidy5e", "sheet", "actor", "vehicle"],
 			width: 740,
-			height: 720
+			height: 720,
+			tabs: [{navSelector: ".tabs", contentSelector: ".sheet-body", initial: defaultTab}]
 		});
 	}
 
@@ -71,9 +75,12 @@ export class Tidy5eVehicle extends ActorSheet5eVehicle {
 	// add actions module
   async _renderInner(...args) {
     const html = await super._renderInner(...args);
+		const actionsListApi = game.modules.get('character-actions-list-5e')?.api;
+    let injectVehicleSheet;
+		if(game.modules.get('character-actions-list-5e')?.active) injectVehicleSheet = game.settings.get('character-actions-list-5e', 'inject-vehicles');
     
     try {
-			if(game.modules.get('character-actions-list-5e')?.active){
+			if(game.modules.get('character-actions-list-5e')?.active && injectVehicleSheet){
         // Update the nav menu
         const actionsTabButton = $('<a class="item" data-tab="actions">' + game.i18n.localize(`DND5E.ActionPl`) + '</a>');
         const tabs = html.find('.tabs[data-group="primary"]');
@@ -88,7 +95,7 @@ export class Tidy5eVehicle extends ActorSheet5eVehicle {
 
         // const actionsTab = html.find('.actions-target');
         
-        const actionsTabHtml = $(await CAL5E.renderActionsList(this.actor));
+        const actionsTabHtml = $(await actionsListApi.renderActionsList(this.actor));
         actionsLayout.html(actionsTabHtml);
       }
     } catch (e) {

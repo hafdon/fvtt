@@ -28,10 +28,12 @@ export class MarkerAnimation {
     }
 
     static stopAllAnimation() {
-        for (const [key, value] of Object.entries(this.animators)) {
-            canvas.app.ticker.remove(this.animators[key]);
+        if (this.animators) {
+            for (const [key, value] of Object.entries(this.animators)) {
+                canvas.app.ticker.remove(this.animators[key]);
+            }
+            this.animators = {};
         }
-        this.animators = {};
     }
 
     /**
@@ -43,19 +45,18 @@ export class MarkerAnimation {
         let tile;
         switch (marker_type) {
             case "turnmarker":
-                tile = canvas.tiles.placeables.find(t => t.data.flags.turnMarker == true);
+                tile = canvas.background.tiles.find(t => t.data.flags.turnMarker == true);
                 break;
             case "deckmarker":
-                tile = canvas.tiles.placeables.find(t => t.data.flags.deckMarker == true);
+                tile = canvas.background.tiles.find(t => t.data.flags.deckMarker == true);
                 break;
             default:
-                tile = canvas.tiles.placeables.find(t => t.data.flags.turnMarker == true);
+                tile = canvas.background.tiles.find(t => t.data.flags.turnMarker == true);
         }
-
         if (tile && tile.data.img) {
             let delta = Settings.getInterval() / 10000;
             try {
-                tile.tile.img.rotation += (delta * dt);
+                tile.tile.rotation += (delta * dt);
             } catch (err) {
                 // skip lost frames if the tile is being updated by the server
             }

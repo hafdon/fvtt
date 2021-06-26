@@ -585,6 +585,9 @@
 .dnd5e.sheet.actor .inventory-list .item-controls {
   flex: 0 0 55px;
 }
+.dnd5e.sheet .items-list .item-controls a {
+  white-space: nowrap;
+}
 
 .tidy5e.sheet.actor
   .inventory-list
