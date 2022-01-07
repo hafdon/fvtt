@@ -1,1 +1,77 @@
-const _0x42c6=['1610981tOYjiJ','_getNameStyle','52xovoms','getMaxWindowWidth','Filter/Search\x20for\x20','1ULkwDS','257230aLaiIS','mix','_modalTitle','_$wrpHtmlInner','_allData','_filterCache','getDataFromSelected','365088hsNltE','with','$modalInner','close','appendTo','104794fGDdhd','529258UCkIGH','_prevApp','activateListeners','bind','detach','<div\x20class=\x22flex-col\x20w-100\x20h-100\x22></div>','/template/_Generic.hbs','1dcJAuo','getMaxWindowHeight','232970zzcnLT','render','_getShowModal','1NjHvtc','8747hSASez'];const _0x3b29=function(_0x29f941,_0x407b6d){_0x29f941=_0x29f941-0x9f;let _0x42c64d=_0x42c6[_0x29f941];return _0x42c64d;};const _0xfe7b37=_0x3b29;(function(_0x1315f2,_0x1ec38f){const _0x52c0a4=_0x3b29;while(!![]){try{const _0x574233=parseInt(_0x52c0a4(0xa8))+-parseInt(_0x52c0a4(0xa3))*-parseInt(_0x52c0a4(0xb0))+-parseInt(_0x52c0a4(0xa9))*-parseInt(_0x52c0a4(0xbc))+parseInt(_0x52c0a4(0xb9))*parseInt(_0x52c0a4(0xb6))+parseInt(_0x52c0a4(0xbd))+-parseInt(_0x52c0a4(0xb2))*-parseInt(_0x52c0a4(0xb5))+-parseInt(_0x52c0a4(0xb7));if(_0x574233===_0x1ec38f)break;else _0x1315f2['push'](_0x1315f2['shift']());}catch(_0x360e96){_0x1315f2['push'](_0x1315f2['shift']());}}}(_0x42c6,0x51593));import{SharedConsts}from'../shared/SharedConsts.js';import{Util}from'./Util.js';const MixinModalFilterFvtt=_0x49ebeb=>class extends _0x49ebeb{constructor(..._0x541b60){super(..._0x541b60),this['_prevApp']=null;}[_0xfe7b37(0xb8)](){return'';}[_0xfe7b37(0xb4)](_0x2423c6){const _0x554704=_0xfe7b37;if(this[_0x554704(0xaa)])this['_prevApp'][_0x554704(0xa6)]();const _0x945e88=this,_0x36fafe=new class _0x4704ad extends Application{constructor(){const _0x14a41a=_0x554704;super({'title':_0x14a41a(0xbb)+_0x945e88[_0x14a41a(0xbf)],'template':SharedConsts['MODULE_LOCATION']+_0x14a41a(0xaf),'width':Util[_0x14a41a(0xba)](0x384),'height':Util[_0x14a41a(0xb1)](),'resizable':!![]}),this[_0x14a41a(0x9f)]=$(_0x14a41a(0xae));}get[_0x554704(0xa5)](){return this['_$wrpHtmlInner'];}async['close'](..._0x3ba997){const _0x4adb1b=_0x554704;_0x945e88[_0x4adb1b(0xa1)]['$wrpModalInner'][_0x4adb1b(0xad)](),await super['close'](..._0x3ba997),_0x2423c6([]);}[_0x554704(0xab)](_0x19bf55){const _0x50b693=_0x554704;this[_0x50b693(0x9f)][_0x50b693(0xa7)](_0x19bf55);}}();return _0x36fafe[_0x554704(0xb3)](!![]),this['_prevApp']=_0x36fafe,{'$modalInner':_0x36fafe['$modalInner'],'doClose':_0x36fafe[_0x554704(0xa6)][_0x554704(0xac)](_0x36fafe)};}[_0xfe7b37(0xa2)](_0x2d99b4){const _0x43d901=_0xfe7b37;return this[_0x43d901(0xa0)][_0x2d99b4['ix']];}};class ModalFilterBackgroundsFvtt extends MiscUtil[_0xfe7b37(0xbe)](ModalFilterBackgrounds)[_0xfe7b37(0xa4)](MixinModalFilterFvtt){}class ModalFilterClassesFvtt extends MiscUtil[_0xfe7b37(0xbe)](ModalFilterClasses)[_0xfe7b37(0xa4)](MixinModalFilterFvtt){}class ModalFilterFeatsFvtt extends MiscUtil[_0xfe7b37(0xbe)](ModalFilterFeats)[_0xfe7b37(0xa4)](MixinModalFilterFvtt){}class ModalFilterRacesFvtt extends MiscUtil[_0xfe7b37(0xbe)](ModalFilterRaces)[_0xfe7b37(0xa4)](MixinModalFilterFvtt){}class ModalFilterSpellsFvtt extends MiscUtil[_0xfe7b37(0xbe)](ModalFilterSpells)['with'](MixinModalFilterFvtt){}class ModalFilterItemsFvtt extends MiscUtil[_0xfe7b37(0xbe)](ModalFilterItems)['with'](MixinModalFilterFvtt){}export{ModalFilterBackgroundsFvtt,ModalFilterClassesFvtt,ModalFilterFeatsFvtt,ModalFilterRacesFvtt,ModalFilterSpellsFvtt,ModalFilterItemsFvtt};
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Util} from "./Util.js";
+
+/**
+ * @mixin
+ */
+const MixinModalFilterFvtt = clazz => class extends clazz {
+	constructor (...args) {
+		super(...args);
+
+		this._prevApp = null;
+	}
+
+	// @Override
+	_getNameStyle () { return ""; }
+
+	// @Override
+	_getShowModal (resolve) {
+		if (this._prevApp) this._prevApp.close();
+
+		const self = this;
+
+		const app = new class TempApplication extends Application {
+			constructor () {
+				super({
+					title: `Filter/Search for ${self._modalTitle}`,
+					template: `${SharedConsts.MODULE_LOCATION}/template/_Generic.hbs`,
+					width: Util.getMaxWindowWidth(900),
+					height: Util.getMaxWindowHeight(),
+					resizable: true,
+				});
+
+				this._$wrpHtmlInner = $(`<div class="flex-col w-100 h-100"></div>`);
+			}
+
+			get $modalInner () { return this._$wrpHtmlInner; }
+
+			async close (...args) {
+				self._filterCache.$wrpModalInner.detach();
+				await super.close(...args);
+				resolve([]);
+			}
+
+			activateListeners ($html) {
+				this._$wrpHtmlInner.appendTo($html);
+			}
+		}();
+
+		app.render(true);
+		this._prevApp = app;
+
+		return {$modalInner: app.$modalInner, doClose: app.close.bind(app)};
+	}
+
+	getDataFromSelected (selected) { return this._allData[selected.ix]; }
+};
+
+class ModalFilterBackgroundsFvtt extends MiscUtil.mix(ModalFilterBackgrounds).with(MixinModalFilterFvtt) {}
+
+class ModalFilterClassesFvtt extends MiscUtil.mix(ModalFilterClasses).with(MixinModalFilterFvtt) {}
+
+class ModalFilterFeatsFvtt extends MiscUtil.mix(ModalFilterFeats).with(MixinModalFilterFvtt) {}
+
+class ModalFilterRacesFvtt extends MiscUtil.mix(ModalFilterRaces).with(MixinModalFilterFvtt) {}
+
+class ModalFilterSpellsFvtt extends MiscUtil.mix(ModalFilterSpells).with(MixinModalFilterFvtt) {}
+
+class ModalFilterItemsFvtt extends MiscUtil.mix(ModalFilterItems).with(MixinModalFilterFvtt) {}
+
+export {
+	ModalFilterBackgroundsFvtt,
+	ModalFilterClassesFvtt,
+	ModalFilterFeatsFvtt,
+	ModalFilterRacesFvtt,
+	ModalFilterSpellsFvtt,
+	ModalFilterItemsFvtt,
+};

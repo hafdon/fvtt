@@ -1,1 +1,529 @@
-const _0x37e7=['104173dPVfMQ','getSourceWithPagePart','copy','toLowerCase','string','speed','(hover)','_getSpeedTypeFromMovementMode','modules/','push','equipment','every','769928FHIYSf','damageTupleMetas','58xuvpNk','/media/icon/pirate-cannon.svg','_doPopulateMovementToSpeedMap','trim','_getMovementTypeFromTerrain','siege','</div>','1HcFAxr','name','crew','getShipMovement','other','terrain','vehicle','802937KvVccG','data','1371967ujcTal','165951cDOdqb','magical','length','movement','type','_getShipMovement_ship','pace','MODULE_NAME','value','feat','max','_getLocomotionMetas','conditions','getParsedWeaponEntryData','getEntryDescription','condition','_getSpeedMetas','filter','fly','land','getAttackRange','1nefJgk','getDamagePartsAndOtherFormula','item','description','locomotion','test','/media/icon/ship-wheel.svg','sea','getShipEquipmentItem','<div>','unshift','spell','getDamageTupleMetas','weapon','getLocomotionEntries','count','replace','entry','get','Actions','swim','Unhandled\x20locomotion\x20mode\x20\x22','map','split','join','/media/icon/gears.svg','render','mode','535391LMuhjp','getSpeedEntries','grants\x20half\x20cover','splice','Unknown\x20cover\x20type\x20\x22\x22','WALKER_READONLY_GENERIC','ship','water','1hNNbeW','hover','getAttackActionType','5uLmFQB','items','includes','findIndex','air','_getShipSpeed_infwar','forEach','setFirstSection','getInfWarActionItem','entries','exec','Unhandled\x20vehicle\x20type\x20\x22','17054vYShrU','walk','vehicleType'];const _0xc0da=function(_0x6ba77c,_0x59c299){_0x6ba77c=_0x6ba77c-0xf0;let _0x37e7ad=_0x37e7[_0x6ba77c];return _0x37e7ad;};const _0x5a4ed6=_0xc0da;(function(_0x22dcc8,_0x1ce1b8){const _0x4153e0=_0xc0da;while(!![]){try{const _0x5cce3f=-parseInt(_0x4153e0(0x139))*-parseInt(_0x4153e0(0x148))+parseInt(_0x4153e0(0xfc))*-parseInt(_0x4153e0(0x136))+-parseInt(_0x4153e0(0x154))+-parseInt(_0x4153e0(0x145))*-parseInt(_0x4153e0(0x156))+parseInt(_0x4153e0(0xfa))+-parseInt(_0x4153e0(0xf3))*-parseInt(_0x4153e0(0x12e))+-parseInt(_0x4153e0(0x112))*-parseInt(_0x4153e0(0xfd));if(_0x5cce3f===_0x1ce1b8)break;else _0x22dcc8['push'](_0x22dcc8['shift']());}catch(_0x55bfbd){_0x22dcc8['push'](_0x22dcc8['shift']());}}}(_0x37e7,0xd4fbd));import{DataConverter}from'./DataConverter.js';import{SharedConsts}from'../shared/SharedConsts.js';class DataConverterVehicle{static[_0x5a4ed6(0xf6)](_0x196db1){const _0x33ec1f=_0x5a4ed6;switch(_0x196db1['vehicleType']){case'SHIP':return this['_getShipMovement_ship'](_0x196db1);case'INFWAR':return this[_0x33ec1f(0x13e)](_0x196db1);default:throw new Error(_0x33ec1f(0x144)+_0x196db1[_0x33ec1f(0x147)]+'\x22');}}static[_0x5a4ed6(0x102)](_0x39ec2c){const _0x344d55=_0x5a4ed6,_0x47e974={};(_0x39ec2c['movement']||[])[_0x344d55(0x13f)](_0x4ee29d=>{const _0x149263=_0x344d55;this['_doPopulateMovementToSpeedMap'](_0x4ee29d,_0x149263(0x116),_0x47e974),this[_0x149263(0x158)](_0x4ee29d,_0x149263(0x14d),_0x47e974);});!Object['keys'](_0x47e974)[_0x344d55(0xff)]&&_0x39ec2c[_0x344d55(0x103)]&&_0x39ec2c[_0x344d55(0xf8)]&&_0x39ec2c[_0x344d55(0xf8)][_0x344d55(0xff)]&&(_0x39ec2c[_0x344d55(0xf8)][_0x344d55(0x13f)](_0x109b83=>{const _0x1f344f=_0x344d55,_0x235905=this[_0x1f344f(0xf0)](_0x109b83);_0x47e974[_0x235905]=Math[_0x1f344f(0x107)](_0x39ec2c[_0x1f344f(0x103)],_0x47e974[_0x235905]||0x0);}),_0x47e974['units']='mi');if(!_0x47e974[_0x344d55(0x146)])_0x47e974[_0x344d55(0x146)]=0x0;return _0x47e974;}static[_0x5a4ed6(0xf0)](_0x65a256){const _0x5e7c13=_0x5a4ed6;switch(_0x65a256){case'air':return'fly';case _0x5e7c13(0x110):return _0x5e7c13(0x146);case _0x5e7c13(0x119):return _0x5e7c13(0x126);default:throw new Error('Unhandled\x20terrain\x20type\x20\x22'+_0x65a256+'\x22');}}static[_0x5a4ed6(0x158)](_0x18437d,_0x421843,_0x2269f1){const _0xfbca44=_0x5a4ed6;if(!_0x18437d[_0x421843])return;_0x18437d[_0x421843][_0xfbca44(0x13f)](_0x2f6abe=>{const _0x2134f0=_0xfbca44;if(!_0x2f6abe[_0x2134f0(0x142)]||!_0x2f6abe[_0x2134f0(0x142)][_0x2134f0(0xff)])return;const _0x1dc682=this[_0x2134f0(0x14f)](_0x2f6abe[_0x2134f0(0x12d)]);if(_0x1dc682==null){DataConverter[_0x2134f0(0x133)]['walk'](_0x2f6abe['entries'],{'string':_0x2d6ba2=>{const _0x54ee3c=_0x2134f0;_0x2d6ba2['split'](',')[_0x54ee3c(0x128)](_0x4fcf11=>_0x4fcf11[_0x54ee3c(0x159)]())[_0x54ee3c(0x10e)](Boolean)[_0x54ee3c(0x13f)](_0xcfbe18=>{const _0x33236f=_0x54ee3c;_0xcfbe18[_0x33236f(0x122)](/^(?:(burrow|climb|swim|fly) )?(\d+) ft\./g,(..._0xbf7811)=>{const _0x5a9719=_0x33236f,_0x11d039=_0xbf7811[0x1][_0x5a9719(0x14b)]()['trim'](),_0x47179c=Number(_0xbf7811[0x2]);_0x2269f1[_0x11d039]=Math[_0x5a9719(0x107)](_0x47179c,_0x2269f1[_0x11d039]||0x0);});});if(_0x2d6ba2['toLowerCase']()['includes'](_0x54ee3c(0x14e)))_0x2269f1[_0x54ee3c(0x137)]=!![];}});return;}DataConverter[_0x2134f0(0x133)][_0x2134f0(0x146)](_0x2f6abe['entries'],{'string':_0x147a43=>{const _0x3487c3=_0x2134f0;_0x147a43[_0x3487c3(0x122)](/speed (\d+) ft\./g,(..._0x52a051)=>{const _0x2fb2dc=Number(_0x52a051[0x1]);_0x2269f1[_0x1dc682]=Math['max'](_0x2fb2dc,_0x2269f1[_0x1dc682]||0x0);});if(_0x147a43['toLowerCase']()[_0x3487c3(0x13b)](_0x3487c3(0x14e)))_0x2269f1[_0x3487c3(0x137)]=!![];}});});}static['_getSpeedTypeFromMovementMode'](_0x4d4ce7){const _0xc77665=_0x5a4ed6;switch(_0x4d4ce7){case _0xc77665(0x13d):return _0xc77665(0x10f);case _0xc77665(0x135):return _0xc77665(0x126);case _0xc77665(0xfe):return null;default:throw new Error(_0xc77665(0x127)+_0x4d4ce7+'\x22');}}static[_0x5a4ed6(0x13e)](_0x2cc2cc){const _0x4b90ff=_0x5a4ed6,_0x53d7d1={};if(_0x2cc2cc[_0x4b90ff(0x14d)])_0x53d7d1[_0x4b90ff(0x146)]=_0x2cc2cc[_0x4b90ff(0x14d)];return _0x53d7d1;}static[_0x5a4ed6(0x11a)](_0x561b8b,_0x290499,_0x322fb9){const _0x176232=_0x5a4ed6;let _0x279df7=DataConverter[_0x176232(0x10b)](_0x290499);if(_0x322fb9===_0x176232(0x100)){if(_0x290499['speed']){const _0x28dfa2=_0x290499[_0x176232(0x14d)][_0x176232(0x128)](_0x49eebd=>Renderer[_0x176232(0xf9)]['ship'][_0x176232(0x12f)](_0x49eebd))['map'](_0x262b9c=>_0x176232(0x11b)+Renderer[_0x176232(0x124)]()[_0x176232(0x140)](!![])['render'](_0x262b9c)+_0x176232(0xf2));_0x279df7+=_0x28dfa2[_0x176232(0x12a)]('');}if(_0x290499['locomotion']){const _0x54b8f6=_0x290499[_0x176232(0x116)][_0x176232(0x128)](_0x4324d3=>Renderer[_0x176232(0xf9)][_0x176232(0x134)][_0x176232(0x120)](_0x4324d3))['map'](_0x166e5c=>_0x176232(0x11b)+Renderer['get']()[_0x176232(0x140)](!![])[_0x176232(0x12c)](_0x166e5c)+'</div>');_0x279df7+=_0x54b8f6['join']('');}}const _0x5e7b89={'name':_0x290499[_0x176232(0xf4)],'type':_0x176232(0x152),'data':{'description':{'value':_0x279df7,'chat':'','unidentified':''},'source':DataConverter[_0x176232(0x149)](_0x561b8b),'quantity':0x1,'weight':0x0,'price':0x0,'attuned':![],'equipped':!![],'rarity':'','identified':!![],'activation':{'type':'','cost':0x0,'condition':''},'duration':{'value':null,'units':''},'target':{'value':null,'width':null,'units':'','type':''},'range':{'value':null,'long':null,'units':''},'uses':{'value':0x0,'max':0x0,'per':null},'consume':{'type':'','target':null,'amount':null},'ability':null,'actionType':'','attackBonus':0x0,'chatFlavor':'','critical':null,'damage':{'parts':[],'versatile':''},'formula':'','save':{'ability':'','dc':null,'scaling':_0x176232(0x11d)},'armor':{'value':_0x290499['ac']||0x0,'type':_0x176232(0xf9),'dex':null},'hp':{'value':_0x290499['hp']||0x0,'max':_0x290499['hp']||0x0,'dt':_0x290499['dt'],'conditions':_0x290499['hpNote']||''},'speed':{'value':null,'conditions':''},'strength':0x0,'stealth':![],'proficient':!![]},'flags':{},'img':_0x176232(0x150)+SharedConsts[_0x176232(0x104)]+_0x176232(0x118)};if(_0x322fb9===_0x176232(0x100)){if(_0x290499[_0x176232(0x14d)]){const _0x217fed=this[_0x176232(0x10d)](_0x290499);if(_0x217fed[_0x176232(0xff)]){const _0x5499fd=_0x217fed[0x0];_0x5e7b89['data'][_0x176232(0x14d)][_0x176232(0x105)]=_0x5499fd[_0x176232(0x14d)],_0x5e7b89[_0x176232(0xfb)][_0x176232(0x14d)]['conditions']=_0x5499fd[_0x176232(0x10c)];}}if(_0x290499['locomotion']){const _0x5a3e38=this[_0x176232(0x108)](_0x290499);if(_0x5a3e38[_0x176232(0xff)]){const _0x44cbf7=_0x5a3e38[0x0];_0x5e7b89[_0x176232(0xfb)][_0x176232(0x14d)][_0x176232(0x105)]=_0x44cbf7[_0x176232(0x14d)],_0x5e7b89[_0x176232(0xfb)][_0x176232(0x14d)][_0x176232(0x109)]=_0x44cbf7[_0x176232(0x10c)];}}}return _0x5e7b89;}static[_0x5a4ed6(0x10d)](_0x54f89e){const _0x1abbfb=_0x5a4ed6;if(!_0x54f89e[_0x1abbfb(0x14d)]||!_0x54f89e[_0x1abbfb(0x14d)][_0x1abbfb(0xff)])return[];return _0x54f89e[_0x1abbfb(0x14d)][_0x1abbfb(0x128)](_0x4da02d=>{const _0x1a4544=_0x1abbfb;if(!_0x4da02d['entries']||!_0x4da02d[_0x1a4544(0x142)][_0x1a4544(0xff)]||typeof _0x4da02d[_0x1a4544(0x142)][0x0]!==_0x1a4544(0x14c))return null;const _0x1dd032=_0x4da02d[_0x1a4544(0x142)][0x0][_0x1a4544(0x129)](';')['map'](_0x4a9dcc=>_0x4a9dcc[_0x1a4544(0x159)]())[_0x1a4544(0x10e)](Boolean);return _0x1dd032['map'](_0x2f7ee7=>{const _0x55dd1b=_0x1a4544,_0x24e643=/^((?:fly|swim|burrow|climb) )?(\d+)\s*ft\.(.*?)$/[_0x55dd1b(0x143)](_0x2f7ee7);if(!_0x24e643)return null;const _0x54ceb3={'speed':Number(_0x24e643[0x2])};if(_0x24e643[0x3]){const _0x7a7bef=_0x24e643[0x3][_0x55dd1b(0x159)]()[_0x55dd1b(0x122)](/^,\s*/,'');if(_0x7a7bef)_0x54ceb3[_0x55dd1b(0x10c)]=_0x7a7bef;}return _0x54ceb3;});})[_0x1abbfb(0x10e)](Boolean)['flat']();}static[_0x5a4ed6(0x108)](_0xde284a){const _0x2de7c3=_0x5a4ed6;if(!_0xde284a['locomotion']||!_0xde284a[_0x2de7c3(0x116)][_0x2de7c3(0xff)])return[];return _0xde284a[_0x2de7c3(0x116)][_0x2de7c3(0x128)](_0x3d155b=>{const _0x3e36eb=_0x2de7c3;if(!_0x3d155b['entries']||!_0x3d155b['entries'][_0x3e36eb(0xff)]||typeof _0x3d155b['entries'][0x0]!=='string')return null;const _0xab0bb3=/^(.*?), speed (\d+)\s*ft\.(.*?)$/i[_0x3e36eb(0x143)](_0x3d155b[_0x3e36eb(0x142)][0x0]);if(!_0xab0bb3)return null;let [_0x248db8,_0x3ffa20,_0x4df133,_0x5c97f1]=_0xab0bb3;_0x3ffa20=_0x3ffa20[_0x3e36eb(0x159)](),_0x4df133=_0x4df133['trim'](),_0x5c97f1=_0x5c97f1[_0x3e36eb(0x159)]();const _0x1579b5=_0x5c97f1[_0x3e36eb(0x129)](';')['map'](_0x457d2a=>_0x457d2a[_0x3e36eb(0x159)]())[_0x3e36eb(0x10e)](Boolean),[_0x160639,..._0x59b2fd]=_0x5c97f1['includes'](';')?['',..._0x1579b5]:_0x1579b5,_0x1fdf65={'speed':Number(_0x4df133)};if(_0x160639)_0x1fdf65[_0x3e36eb(0x10c)]=_0x160639;const _0x11088e=[];return _0x59b2fd['forEach'](_0x1f9262=>{const _0xace3b2=_0x3e36eb,_0x3d2ef7=/^(\d+)\s*ft\.(.*?)$/[_0xace3b2(0x143)](_0x1f9262);if(!_0x3d2ef7)return;_0x11088e[_0xace3b2(0x151)]({'speed':Number(_0x3d2ef7[0x1]),'condition':_0x3d2ef7[0x2]});}),[_0x1fdf65,..._0x11088e];})[_0x2de7c3(0x10e)](Boolean)['flat']();}static['getShipWeaponItem'](_0x5848ba,_0x4626fd){const _0x22f4e1=_0x5a4ed6,_0x1b370b=DataConverter['getEntryDescription'](_0x4626fd),{damageTupleMetas:_0x495065,isAttack:_0x194a3f,rangeShort:_0x12c968,rangeLong:_0x3a73ee,actionType:_0x233d82,attackBonus:_0x1c57c8}=this['getParsedWeaponEntryData'](_0x5848ba,_0x4626fd),{damageParts:_0x2db4ae,formula:_0x7d618b}=DataConverter[_0x22f4e1(0x113)](_0x495065);return{'name':_0x4626fd[_0x22f4e1(0xf4)],'type':_0x22f4e1(0x11f),'data':{'description':{'value':_0x1b370b,'chat':'','unidentified':''},'source':DataConverter[_0x22f4e1(0x149)](_0x5848ba),'quantity':_0x4626fd[_0x22f4e1(0x121)]||0x1,'weight':0x0,'price':0x0,'attuned':![],'equipped':!![],'rarity':'','identified':!![],'activation':{'type':_0x194a3f?'action':'','cost':_0x194a3f?0x1:0x0,'condition':''},'duration':{'value':null,'units':''},'target':{'value':null,'width':null,'units':'','type':''},'range':{'value':_0x12c968||0x0,'long':_0x3a73ee||0x0,'units':'ft'},'uses':{'value':0x0,'max':0x0,'per':null},'consume':{'type':'','target':null,'amount':null},'ability':'','actionType':_0x233d82||'other','attackBonus':_0x1c57c8||0x0,'chatFlavor':'','critical':null,'damage':{'parts':_0x2db4ae||[],'versatile':''},'formula':_0x7d618b,'save':{'ability':'','dc':null,'scaling':_0x22f4e1(0x11d)},'armor':{'value':_0x4626fd['ac']||0x0},'hp':{'value':_0x4626fd['hp']||0x0,'max':_0x4626fd['hp']||0x0,'dt':_0x4626fd['dt'],'conditions':''},'weaponType':_0x22f4e1(0xf1),'properties':{},'proficient':!![]},'flags':{},'img':_0x22f4e1(0x150)+SharedConsts[_0x22f4e1(0x104)]+_0x22f4e1(0x157),'effects':[]};}static[_0x5a4ed6(0x10a)](_0x52aff4,_0x5f04fc){const _0x407295=_0x5a4ed6;if(!(_0x5f04fc[_0x407295(0x142)]&&_0x5f04fc[_0x407295(0x142)][0x0]&&typeof _0x5f04fc['entries'][0x0]===_0x407295(0x14c)))return;const _0x4bc905=[];let _0x3ba352=0x0;const _0x5269fd=_0x5f04fc[_0x407295(0x142)][0x0];_0x4bc905['push'](...DataConverter[_0x407295(0x11e)](_0x5269fd)[_0x407295(0x155)]);const {rangeShort:_0x53dde3,rangeLong:_0x19e9c1}=DataConverter[_0x407295(0x111)](_0x5269fd),_0x4ec977=/{@hit ([^}]+)}/gi['exec'](_0x5269fd);if(_0x4ec977){const _0x401da8=Number(_0x4ec977[0x1]);!isNaN(_0x401da8)&&(_0x3ba352=_0x401da8);}const {isAttack:_0xa5480a,actionType:_0x2a2bbb}=DataConverter[_0x407295(0x138)](_0x5269fd);return{'damageTupleMetas':_0x4bc905,'isAttack':_0xa5480a,'rangeShort':_0x53dde3,'rangeLong':_0x19e9c1,'actionType':_0x2a2bbb,'attackBonus':_0x3ba352};}static['getShipOtherItem'](_0x41cd7f,_0x299231){const _0x514f3c=_0x5a4ed6,_0x576e11=DataConverter['getEntryDescription'](_0x299231);if(/^Actions?$/i[_0x514f3c(0x117)](_0x299231['name']||''))return{'name':_0x299231[_0x514f3c(0xf4)],'type':_0x514f3c(0x106),'data':{'description':{'value':_0x576e11,'chat':'','unidentified':''},'source':DataConverter[_0x514f3c(0x149)](_0x41cd7f),'activation':{'type':_0x514f3c(0xf5),'cost':0x1,'condition':''},'duration':{'value':null,'units':''},'target':{'value':null,'width':null,'units':'','type':''},'range':{'value':null,'long':null,'units':''},'uses':{'value':0x0,'max':0x0,'per':''},'consume':{'type':'','target':'','amount':null},'ability':null,'actionType':'','attackBonus':0x0,'chatFlavor':'','critical':null,'damage':{'parts':[],'versatile':''},'formula':'','save':{'ability':'','dc':null,'scaling':_0x514f3c(0x11d)},'requirements':'','recharge':{'value':null,'charged':![]},'cover':null},'flags':{},'img':'modules/'+SharedConsts[_0x514f3c(0x104)]+'/media/icon/ship-wheel.svg'};return{'name':_0x299231[_0x514f3c(0xf4)],'type':_0x514f3c(0x106),'data':{'description':{'value':_0x576e11,'chat':'','unidentified':''},'source':DataConverter[_0x514f3c(0x149)](_0x41cd7f),'activation':{'type':'','cost':0x0,'condition':''},'duration':{'value':null,'units':''},'target':{'value':null,'width':null,'units':'','type':''},'range':{'value':null,'long':null,'units':''},'uses':{'value':0x0,'max':0x0,'per':null},'consume':{'type':'','target':null,'amount':null},'ability':null,'actionType':'','attackBonus':0x0,'chatFlavor':'','critical':null,'damage':{'parts':[],'versatile':''},'formula':'','save':{'ability':'','dc':null,'scaling':_0x514f3c(0x11d)},'requirements':'','recharge':{'value':null,'charged':![]}},'flags':{},'img':'modules/'+SharedConsts[_0x514f3c(0x104)]+_0x514f3c(0x118)};}static['getShipActionItems'](_0x4e468a,_0x581cf9){const _0x46e602=_0x5a4ed6,_0x464fc1=_0x581cf9[_0x46e602(0x13c)](_0x1492b1=>_0x1492b1[_0x46e602(0x101)]==='list'&&_0x1492b1[_0x46e602(0x13a)][_0x46e602(0x153)](_0x409afa=>_0x409afa[_0x46e602(0x101)]===_0x46e602(0x114))),_0xa647d={'name':'','type':_0x46e602(0x106),'data':{'description':{'value':'','chat':'','unidentified':''},'source':DataConverter[_0x46e602(0x149)](_0x4e468a),'activation':{'type':_0x46e602(0xf5),'cost':0x1,'condition':''},'duration':{'value':null,'units':''},'target':{'value':null,'width':null,'units':'','type':''},'range':{'value':null,'long':null,'units':''},'uses':{'value':0x0,'max':0x0,'per':''},'consume':{'type':'','target':'','amount':null},'ability':null,'actionType':'','attackBonus':0x0,'chatFlavor':'','critical':null,'damage':{'parts':[],'versatile':''},'formula':'','save':{'ability':'','dc':null,'scaling':_0x46e602(0x11d)},'requirements':'','recharge':{'value':null,'charged':![]},'cover':null},'flags':{},'img':_0x46e602(0x150)+SharedConsts['MODULE_NAME']+_0x46e602(0x118)};if(!~_0x464fc1)return _0xa647d[_0x46e602(0xf4)]=_0x46e602(0x125),_0xa647d[_0x46e602(0xfb)][_0x46e602(0x115)][_0x46e602(0x105)]=DataConverter[_0x46e602(0x10b)]({'entries':_0x581cf9}),[_0xa647d];_0x581cf9=MiscUtil['copy'](_0x581cf9);const _0x5f1ba8=_0x581cf9[_0x464fc1];return _0x581cf9[_0x46e602(0x131)](_0x464fc1,0x1),_0x5f1ba8[_0x46e602(0x13a)][_0x46e602(0x128)](_0x5df95a=>{const _0x50ca51=_0x46e602,_0x190227=_0x5df95a['name'][_0x50ca51(0x122)](/\.$/i,''),_0x24957f=MiscUtil[_0x50ca51(0x14a)](_0x581cf9);if(typeof _0x24957f[0x0]===_0x50ca51(0x14c))_0x24957f[0x0]=_0x24957f[0x0][_0x50ca51(0x122)](/, choosing from the options below[.:]/ig,'.');_0x24957f[_0x50ca51(0x11c)]({'type':_0x50ca51(0x142),'name':_0x190227,'entries':_0x5df95a['entries']||[_0x5df95a[_0x50ca51(0x123)]]});const _0x2a53db=DataConverter[_0x50ca51(0x10b)]({'entries':_0x24957f}),_0xd5fe61=MiscUtil['copy'](_0xa647d);return _0xd5fe61[_0x50ca51(0xf4)]=_0x190227,_0xd5fe61[_0x50ca51(0xfb)][_0x50ca51(0x115)][_0x50ca51(0x105)]=_0x2a53db,_0xd5fe61;});}static[_0x5a4ed6(0x141)](_0x38db58,_0x2411a2){const _0x2a9666=_0x5a4ed6,_0x4f340e=DataConverter[_0x2a9666(0x10b)](_0x2411a2),{damageTupleMetas:_0x5a2368,isAttack:_0x33620c,rangeShort:_0x2d9cb0,rangeLong:_0x4a3e7f,actionType:_0x3ca8f7,attackBonus:_0x5ab675}=this['getParsedWeaponEntryData'](_0x38db58,_0x2411a2),{damageParts:_0x24c7ab,formula:_0x32106b}=DataConverter[_0x2a9666(0x113)](_0x5a2368);let _0x3c563e=0x0;return(_0x2411a2['name']||'')['replace'](/(Grants Half Cover|Grants Three-Quarters Cover|Grants Total Cover)/ig,(..._0x2a9deb)=>{const _0x2012cb=_0x2a9666,_0x49d2bc=_0x2a9deb[0x1][_0x2012cb(0x14b)]()[_0x2012cb(0x159)]();switch(_0x49d2bc){case _0x2012cb(0x130):_0x3c563e=0.5;break;case'grants\x20three-quarters\x20cover':_0x3c563e=0.75;break;case'grants\x20total\x20cover':_0x3c563e=0x1;break;default:throw new Error(_0x2012cb(0x132)+_0x49d2bc);}}),{'name':_0x2411a2[_0x2a9666(0xf4)],'type':_0x2a9666(0x106),'data':{'description':{'value':_0x4f340e,'chat':'','unidentified':''},'source':DataConverter[_0x2a9666(0x149)](_0x38db58),'activation':{'type':_0x2a9666(0xf5),'cost':0x1,'condition':''},'duration':{'value':null,'units':''},'target':{'value':null,'width':null,'units':'','type':''},'range':{'value':_0x2d9cb0,'long':_0x4a3e7f,'units':'ft'},'uses':{'value':0x0,'max':0x0,'per':''},'consume':{'type':'','target':'','amount':null},'ability':'','actionType':_0x3ca8f7||_0x2a9666(0xf7),'attackBonus':_0x5ab675,'chatFlavor':'','critical':null,'damage':{'parts':_0x24c7ab||[],'versatile':''},'formula':_0x32106b,'save':{'ability':'','dc':null,'scaling':_0x2a9666(0x11d)},'requirements':'','recharge':{'value':null,'charged':![]},'cover':_0x3c563e},'flags':{},'img':_0x2a9666(0x150)+SharedConsts['MODULE_NAME']+_0x2a9666(0x12b)};}}export{DataConverterVehicle};
+import {DataConverter} from "./DataConverter.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+import {Vetools} from "./Vetools.js";
+import {Config} from "./Config.js";
+
+class DataConverterVehicle {
+	// region Speed
+	static getVehicleSpeed (veh) {
+		switch (veh.vehicleType) {
+			case "SHIP": return this._getVehicleSpeed_ship(veh);
+			case "INFWAR": return this._getVehicleSpeed_infwar(veh);
+			default: throw new Error(`Unhandled vehicle type "${veh.vehicleType}"`);
+		}
+	}
+
+	static _getVehicleSpeed_ship (veh) {
+		if (!veh.pace) return "";
+
+		const perHour = Config.getMetricNumber({configGroup: "importVehicle", originalValue: veh.pace, originalUnit: UNT_MILES});
+		const perDay = Config.getMetricNumber({configGroup: "importVehicle", originalValue: veh.pace * 24, originalUnit: UNT_MILES});
+
+		const unit = Config.getMetricUnit({configGroup: "importVehicle", originalUnit: UNT_MILES, isShortForm: false, isPlural: veh.pace !== 1});
+
+		return `${perHour} ${unit} per hour (${perDay} ${unit} per day)`;
+	}
+
+	static _getVehicleSpeed_infwar (veh) {
+		const speed = Config.getMetricNumber({configGroup: "importVehicle", originalValue: veh.speed, originalUnit: "ft."});
+		const unit = Config.getMetricUnit({configGroup: "importVehicle", originalUnit: "ft."});
+		return `${speed} ${unit}`;
+	}
+	// endregion
+
+	// region Movement
+	static getShipMovement (veh) {
+		switch (veh.vehicleType) {
+			case "SHIP": return this._getShipMovement_ship(veh);
+			case "INFWAR": return this._getShipMovement_infwar(veh);
+			default: throw new Error(`Unhandled vehicle type "${veh.vehicleType}"`);
+		}
+	}
+
+	static _getShipMovement_ship (veh) {
+		const out = {};
+
+		(veh.movement || []).forEach(move => {
+			this._doPopulateMovementToSpeedMap(move, "locomotion", out);
+			this._doPopulateMovementToSpeedMap(move, "speed", out);
+		});
+
+		if (!Object.keys(out).length && veh.pace && veh.terrain?.length) {
+			veh.terrain.forEach(ter => {
+				const speedProp = this._getMovementTypeFromTerrain(ter);
+				out[speedProp] = Config.getMetricNumber({configGroup: "importVehicle", originalUnit: UNT_MILES, originalValue: veh.pace});
+			});
+			out.units = Config.getMetricUnit({configGroup: "importVehicle", originalUnit: "mi"});
+		}
+
+		// Replace the default "30 foot walking speed" if we have no walking speed
+		if (!out.walk) out.walk = 0;
+
+		return out;
+	}
+
+	static _getMovementTypeFromTerrain (ter) {
+		switch (ter) {
+			case "air": return "fly";
+			case "land": return "walk";
+			case "sea": return "swim";
+			default: throw new Error(`Unhandled terrain type "${ter}"`);
+		}
+	}
+
+	static _doPopulateMovementToSpeedMap (move, prop, out) {
+		if (!move[prop]) return;
+
+		move[prop].forEach(spd => {
+			if (!spd.entries || !spd.entries.length) return;
+
+			const speedProp = this._getSpeedTypeFromMovementMode(spd.mode);
+
+			// If the speed prop comes back as "null", we should try to parse the string manually
+			if (speedProp == null) {
+				UtilDataConverter.WALKER_READONLY_GENERIC.walk(
+					spd.entries,
+					{
+						string: (str) => {
+							str.split(",").map(it => it.trim()).filter(Boolean).forEach(pt => {
+								pt.replace(/^(?:(burrow|climb|swim|fly) )?(\d+) ft\./g, (...m) => {
+									const speedType = m[1].toLowerCase().trim();
+									const speed = Config.getMetricNumber({configGroup: "importVehicle", originalUnit: UNT_FEET, originalValue: Number(m[2])});
+									out[speedType] = Math.max(speed, out[speedType] || 0);
+								});
+							});
+
+							if (str.toLowerCase().includes("(hover)")) out.hover = true;
+						},
+					},
+				);
+
+				return;
+			}
+
+			UtilDataConverter.WALKER_READONLY_GENERIC.walk(
+				spd.entries,
+				{
+					string: (str) => {
+						str.replace(/speed (\d+) ft\./g, (...m) => {
+							const speed = Config.getMetricNumber({configGroup: "importVehicle", originalUnit: UNT_FEET, originalValue: Number(m[1])});
+							out[speedProp] = Math.max(speed, out[speedProp] || 0);
+						});
+
+						if (str.toLowerCase().includes("(hover)")) out.hover = true;
+					},
+				},
+			);
+		});
+	}
+
+	static _getSpeedTypeFromMovementMode (mode) {
+		switch (mode) {
+			case "air": return "fly";
+			case "water": return "swim";
+			case "magical": return null;
+			default: throw new Error(`Unhandled locomotion mode "${mode}"`);
+		}
+	}
+
+	static _getShipMovement_infwar (veh) {
+		const out = {};
+
+		if (veh.speed) {
+			out.walk = Config.getMetricNumber({configGroup: "importVehicle", originalUnit: UNT_FEET, originalValue: veh.speed});
+			out.units = Config.getMetricUnit({configGroup: "importVehicle", originalUnit: "ft"});
+		}
+
+		return out;
+	}
+	// endregion
+
+	static async pGetShipEquipmentItem (veh, equi, prop) {
+		let description = await DataConverter.pGetEntryDescription(equi);
+
+		if (prop === "movement") {
+			if (equi.speed) {
+				const parts = equi.speed
+					.map(it => Renderer.vehicle.ship.getSpeedEntries(it))
+					.map(ents => `<div>${Renderer.get().setFirstSection(true).render(ents)}</div>`);
+				description += parts.join("");
+			}
+
+			if (equi.locomotion) {
+				const parts = equi.locomotion
+					.map(loc => Renderer.vehicle.ship.getLocomotionEntries(loc))
+					.map(ents => `<div>${Renderer.get().setFirstSection(true).render(ents)}</div>`);
+				description += parts.join("");
+			}
+		}
+
+		const out = {
+			name: equi.name,
+			type: "equipment",
+			data: {
+				description: {value: description, chat: "", unidentified: ""},
+				source: UtilDataConverter.getSourceWithPagePart(veh),
+				quantity: 1,
+				weight: 0,
+				price: 0,
+				attuned: false,
+				equipped: true,
+				rarity: "",
+				identified: true,
+				activation: {type: "", cost: 0, condition: ""},
+				duration: {value: null, units: ""},
+				target: {value: null, width: null, units: "", type: ""},
+				range: {value: null, long: null, units: ""},
+				uses: {value: 0, max: 0, per: null},
+				consume: {type: "", target: null, amount: null},
+				ability: null,
+				actionType: "",
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				damage: {parts: [], versatile: ""},
+				formula: "",
+				save: {ability: "", dc: null, scaling: "spell"},
+				armor: {value: equi.ac || 0, type: "vehicle", dex: null},
+				hp: {value: equi.hp || 0, max: equi.hp || 0, dt: equi.dt, conditions: equi.hpNote || ""},
+				speed: {value: null, conditions: ""},
+				strength: 0,
+				stealth: false,
+				proficient: true,
+			},
+			flags: {},
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				`modules/${SharedConsts.MODULE_NAME}/media/icon/ship-wheel.svg`,
+			),
+		};
+
+		// If we have movement info, use the first one available to set our speed. We _could_ instead opt to map each
+		//   piece of movement info to its own sheet item, but this would be more confusing than helpful (e.g. showing
+		//   multiple entries for "Sails" on the sheet). Just present the information textually, and let the user figure
+		//   it out.
+		// FIXME(Future) as of 2021-11-03, these do not support units
+		if (prop === "movement") {
+			if (equi.speed) {
+				const metas = this._getSpeedMetas(equi);
+				if (metas.length) {
+					const primaryMeta = metas[0];
+					out.data.speed.value = primaryMeta.speed;
+					out.data.speed.conditions = primaryMeta.condition;
+				}
+			}
+
+			if (equi.locomotion) {
+				const metas = this._getLocomotionMetas(equi);
+				if (metas.length) {
+					const primaryMeta = metas[0];
+					out.data.speed.value = primaryMeta.speed;
+					out.data.speed.conditions = primaryMeta.condition;
+				}
+			}
+		}
+
+		return out;
+	}
+
+	static _getSpeedMetas (equi) {
+		if (!equi.speed || !equi.speed.length) return [];
+
+		return equi.speed
+			.map(spd => {
+				if (!spd.entries || !spd.entries.length || typeof spd.entries[0] !== "string") return null;
+
+				const parts = spd.entries[0].split(";").map(it => it.trim()).filter(Boolean);
+				return parts.map(it => {
+					const mSpeed = /^((?:fly|swim|burrow|climb) )?(\d+)\s*ft\.(.*?)$/.exec(it);
+					if (!mSpeed) return null;
+					const out = {speed: Config.getMetricNumber({configGroup: "importVehicle", originalUnit: UNT_FEET, originalValue: Number(mSpeed[2])})};
+					if (mSpeed[3]) {
+						const conditionClean = mSpeed[3].trim().replace(/^,\s*/, "");
+						if (conditionClean) out.condition = conditionClean;
+					}
+					return out;
+				});
+			})
+			.filter(Boolean)
+			.flat();
+	}
+
+	static _getLocomotionMetas (equi) {
+		if (!equi.locomotion || !equi.locomotion.length) return [];
+
+		return equi.locomotion
+			.map(loc => {
+				if (!loc.entries || !loc.entries.length || typeof loc.entries[0] !== "string") return null;
+
+				const mSpeed = /^(.*?), speed (\d+)\s*ft\.(.*?)$/i.exec(loc.entries[0]);
+				if (!mSpeed) return null;
+
+				let [_, subMode, baseSpeed, conditionOrOtherSpeeds] = mSpeed;
+				subMode = subMode.trim(); // This appears to be a repetition of the name; ignore it
+				baseSpeed = baseSpeed.trim();
+				conditionOrOtherSpeeds = conditionOrOtherSpeeds.trim();
+
+				const otherPartsRaw = conditionOrOtherSpeeds.split(";").map(it => it.trim()).filter(Boolean);
+				const [conditionPart, ...otherParts] = conditionOrOtherSpeeds.includes(";")
+					? ["", ...otherPartsRaw]
+					: otherPartsRaw;
+
+				const outPrimary = {
+					speed: Config.getMetricNumber({configGroup: "importVehicle", originalUnit: UNT_FEET, originalValue: Number(baseSpeed)}),
+				};
+				if (conditionPart) outPrimary.condition = conditionPart;
+
+				const outSecondaries = [];
+				otherParts.forEach(part => {
+					const mSpeed = /^(\d+)\s*ft\.(.*?)$/.exec(part);
+					if (!mSpeed) return;
+					outSecondaries.push({
+						speed: Config.getMetricNumber({configGroup: "importVehicle", originalUnit: UNT_FEET, originalValue: Number(mSpeed[1])}),
+						condition: mSpeed[2],
+					});
+				});
+
+				return [outPrimary, ...outSecondaries];
+			})
+			.filter(Boolean)
+			.flat();
+	}
+
+	static async pGetShipWeaponItem (veh, weap) {
+		const description = await DataConverter.pGetEntryDescription(weap);
+
+		const {
+			damageTupleMetas,
+			isAttack,
+			rangeShort,
+			rangeLong,
+			actionType,
+			attackBonus,
+		} = DataConverter.getParsedWeaponEntryData(veh, weap);
+
+		const {damageParts, formula} = DataConverter.getDamagePartsAndOtherFormula(damageTupleMetas);
+
+		return {
+			name: weap.name,
+			type: "weapon",
+			data: {
+				description: {value: description, chat: "", unidentified: ""},
+				source: UtilDataConverter.getSourceWithPagePart(veh),
+				quantity: weap.count || 1,
+				weight: 0,
+				price: 0,
+				attuned: false,
+				equipped: true,
+				rarity: "",
+				identified: true,
+				activation: {type: isAttack ? "action" : "", cost: isAttack ? 1 : 0, condition: ""},
+				duration: {value: null, units: ""},
+				target: {value: null, width: null, units: "", type: ""},
+				range: {value: rangeShort || 0, long: rangeLong || 0, units: "ft"},
+				uses: {value: 0, max: 0, per: null},
+				consume: {type: "", target: null, amount: null},
+				ability: "",
+				actionType: actionType || "other",
+				attackBonus: attackBonus || null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				damage: {parts: damageParts || [], versatile: ""},
+				formula,
+				save: {ability: "", dc: null, scaling: "spell"},
+				armor: {value: weap.ac || 0},
+				hp: {value: weap.hp || 0, max: weap.hp || 0, dt: weap.dt, conditions: ""},
+				weaponType: "siege",
+				properties: {},
+				proficient: true,
+			},
+			flags: {},
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				`modules/${SharedConsts.MODULE_NAME}/media/icon/pirate-cannon.svg`,
+			),
+			effects: [],
+		};
+	}
+
+	static async pGetShipOtherItem (veh, ent) {
+		const description = await DataConverter.pGetEntryDescription(ent);
+
+		if (/^Actions?$/i.test(ent.name || "")) {
+			return {
+				name: ent.name,
+				type: "feat",
+				data: {
+					description: {value: description, chat: "", unidentified: ""},
+					source: UtilDataConverter.getSourceWithPagePart(veh),
+					activation: {type: "crew", cost: 1, condition: ""},
+					duration: {value: null, units: ""},
+					target: {value: null, width: null, units: "", type: ""},
+					range: {value: null, long: null, units: ""},
+					uses: {value: 0, max: 0, per: ""},
+					consume: {type: "", target: "", amount: null},
+					ability: null,
+					actionType: "",
+					attackBonus: null,
+					chatFlavor: "",
+					critical: {threshold: null, damage: ""},
+					damage: {parts: [], versatile: ""},
+					formula: "",
+					save: {ability: "", dc: null, scaling: "spell"},
+					requirements: "",
+					recharge: {value: null, charged: false},
+					cover: null,
+				},
+				flags: {},
+				img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+					`modules/${SharedConsts.MODULE_NAME}/media/icon/ship-wheel.svg`,
+				),
+			};
+		}
+
+		return {
+			name: ent.name,
+			type: "feat",
+			data: {
+				description: {value: description, chat: "", unidentified: ""},
+				source: UtilDataConverter.getSourceWithPagePart(veh),
+				activation: {type: "", cost: 0, condition: ""},
+				duration: {value: null, units: ""},
+				target: {value: null, width: null, units: "", type: ""},
+				range: {value: null, long: null, units: ""},
+				uses: {value: 0, max: 0, per: null},
+				consume: {type: "", target: null, amount: null},
+				ability: null,
+				actionType: "",
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				damage: {parts: [], versatile: ""},
+				formula: "",
+				save: {ability: "", dc: null, scaling: "spell"},
+				requirements: "",
+				recharge: {value: null, charged: false},
+			},
+			flags: {},
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				`modules/${SharedConsts.MODULE_NAME}/media/icon/ship-wheel.svg`,
+			),
+		};
+	}
+
+	static async pGetShipActionItems (veh, actionEnts) {
+		const ixActionList = actionEnts.findIndex(it => it.type === "list" && it.items.every(it => it.type === "item"));
+
+		const templateOut = {
+			name: "",
+			type: "feat",
+			data: {
+				description: {value: "", chat: "", unidentified: ""},
+				source: UtilDataConverter.getSourceWithPagePart(veh),
+				activation: {type: "crew", cost: 1, condition: ""},
+				duration: {value: null, units: ""},
+				target: {value: null, width: null, units: "", type: ""},
+				range: {value: null, long: null, units: ""},
+				uses: {value: 0, max: 0, per: ""},
+				consume: {type: "", target: "", amount: null},
+				ability: null,
+				actionType: "",
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				damage: {parts: [], versatile: ""},
+				formula: "",
+				save: {ability: "", dc: null, scaling: "spell"},
+				requirements: "",
+				recharge: {value: null, charged: false},
+				cover: null,
+			},
+			flags: {},
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				`modules/${SharedConsts.MODULE_NAME}/media/icon/ship-wheel.svg`,
+			),
+		};
+
+		if (!~ixActionList) {
+			templateOut.name = "Actions";
+			templateOut.data.description.value = await DataConverter.pGetEntryDescription({entries: actionEnts});
+			return [templateOut];
+		}
+
+		actionEnts = MiscUtil.copy(actionEnts);
+		const actionList = actionEnts[ixActionList];
+		actionEnts.splice(ixActionList, 1);
+
+		return actionList.items.pSerialAwaitMap(async li => {
+			const subName = li.name.replace(/\.$/i, "");
+
+			const fauxEntries = MiscUtil.copy(actionEnts);
+			if (typeof fauxEntries[0] === "string") fauxEntries[0] = fauxEntries[0].replace(/, choosing from the options below[.:]/ig, ".");
+			fauxEntries.unshift({type: "entries", name: subName, entries: li.entries || [li.entry]});
+
+			const description = await DataConverter.pGetEntryDescription({entries: fauxEntries});
+
+			const subOut = MiscUtil.copy(templateOut);
+			subOut.name = subName;
+			subOut.data.description.value = description;
+			return subOut;
+		});
+	}
+
+	static async pGetInfWarActionItem (veh, action) {
+		const description = await DataConverter.pGetEntryDescription(action);
+
+		const {
+			damageTupleMetas,
+			isAttack,
+			rangeShort,
+			rangeLong,
+			actionType,
+			attackBonus,
+		} = DataConverter.getParsedWeaponEntryData(veh, action);
+
+		const {damageParts, formula} = DataConverter.getDamagePartsAndOtherFormula(damageTupleMetas);
+
+		let coverType = 0;
+		(action.name || "").replace(/(Grants Half Cover|Grants Three-Quarters Cover|Grants Total Cover)/ig, (...m) => {
+			const low = m[1].toLowerCase().trim();
+			switch (low) {
+				case "grants half cover": coverType = 0.5; break;
+				case "grants three-quarters cover": coverType = 0.75; break;
+				case "grants total cover": coverType = 1; break;
+				default: throw new Error(`Unknown cover type ""${low}`);
+			}
+		});
+
+		return {
+			name: action.name,
+			type: "feat",
+			data: {
+				description: {value: description, chat: "", unidentified: ""},
+				source: UtilDataConverter.getSourceWithPagePart(veh),
+				activation: {type: "crew", cost: 1, condition: ""},
+				duration: {value: null, units: ""},
+				target: {value: null, width: null, units: "", type: ""},
+				range: {value: rangeShort, long: rangeLong, units: "ft"},
+				uses: {value: 0, max: 0, per: ""},
+				consume: {type: "", target: "", amount: null},
+				ability: "",
+				actionType: actionType || "other",
+				attackBonus: attackBonus || null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				damage: {parts: damageParts || [], versatile: ""},
+				formula,
+				save: {ability: "", dc: null, scaling: "spell"},
+				requirements: "",
+				recharge: {value: null, charged: false},
+				cover: coverType,
+			},
+			flags: {},
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				`modules/${SharedConsts.MODULE_NAME}/media/icon/gears.svg`,
+			),
+		};
+	}
+}
+
+export {DataConverterVehicle};

@@ -1,1 +1,202 @@
-var _0xb060=['10702qOtGsV','SRD','name','991ZOofdd','map','sourceShort','Source','_titleButtonRun','Select','1NKAgcG','_slPrereq','get','source','with','_content','DATA_URL_FEATS','items','Select\x20Feat','31tpCzwq','_pHasSideLoadedEffects','Import\x20Feats','Feats','init','pHasFeatSideLoadedEffects','feat','_isRadio','pGetSideData','512516okouWs','1328369wUCaTT','_pGetItemEffects','_isPreviewable','6721zKcFZF','_pImportEntry_pImportToDirectoryGeneric_pGetImportableData','DataSourceFile','Custom\x20URL','_list','Name','URL_TO_HASH_BUILDER','doAbsorbItems','411rTDhZv','pGetFeatItem','absorbFnBindListenersRadio','37qvQsCG','_doPopulateFlags','_pageFilter','pGetHomebrewSources','feats','DataSourceUrl','Item','1MwKYfj','_slAbility','_pGetEntityItem','_page','_initCreateSheetItemHook','_pMutActorUpdateFeature','absorbFnBindListeners','Upload\x20File','isStreamerMode','66089QAEAEP','5etools','1lSZNYs','Prerequisite','chosenAbilityScoreIncrease','pGetFeatItemEffects','41995SiYCul','getData'];var _0x32fa=function(_0x4abe11,_0x18f1e5){_0x4abe11=_0x4abe11-0x1d0;var _0xb0601=_0xb060[_0x4abe11];return _0xb0601;};var _0xb5c197=_0x32fa;(function(_0x4ea4ed,_0xb2c3c){var _0x40a2d4=_0x32fa;while(!![]){try{var _0x59103a=-parseInt(_0x40a2d4(0x1d4))*-parseInt(_0x40a2d4(0x20b))+-parseInt(_0x40a2d4(0x1fe))*parseInt(_0x40a2d4(0x1ec))+parseInt(_0x40a2d4(0x1e4))*-parseInt(_0x40a2d4(0x1f5))+-parseInt(_0x40a2d4(0x1e6))*-parseInt(_0x40a2d4(0x1ea))+-parseInt(_0x40a2d4(0x207))*parseInt(_0x40a2d4(0x1db))+parseInt(_0x40a2d4(0x1ef))*-parseInt(_0x40a2d4(0x1d1))+parseInt(_0x40a2d4(0x208));if(_0x59103a===_0xb2c3c)break;else _0x4ea4ed['push'](_0x4ea4ed['shift']());}catch(_0x44be9c){_0x4ea4ed['push'](_0x4ea4ed['shift']());}}}(_0xb060,0x4993d));import{MixinUserChooseImporter}from'./ImportList.js';import{Vetools}from'./Vetools.js';import{DataConverterFeat}from'./DataConverterFeat.js';import{Config}from'./Config.js';import{UtilList2}from'./UtilList2.js';import{UtilDataSource}from'./UtilDataSource.js';import{ImportListFeature}from'./ImportListFeature.js';class ImportListFeat extends ImportListFeature{static[_0xb5c197(0x202)](){var _0x22824d=_0xb5c197;this[_0x22824d(0x1df)]({'prop':'feat','importerName':'Feat'});}constructor(_0x2f884e,_0x4e872c,_0x8e4de){var _0x10f58a=_0xb5c197;_0x4e872c=_0x4e872c||{},_0x8e4de=_0x8e4de||{},super({'title':_0x10f58a(0x200),..._0x4e872c},_0x2f884e,{'props':[_0x10f58a(0x204)],'titleSearch':_0x10f58a(0x1d8),'sidebarTab':_0x10f58a(0x1fc),'gameProp':_0x10f58a(0x1fc),'defaultFolderPath':[_0x10f58a(0x201)],'folderType':_0x10f58a(0x1da),'pageFilter':new PageFilterFeats(),'page':UrlUtil['PG_FEATS'],'isPreviewable':!![],'isDedupable':!![],..._0x8e4de},{'titleLog':'feat'});}async['pGetSources'](){var _0x46e5d4=_0xb5c197;return[new UtilDataSource[(_0x46e5d4(0x1d9))](Config[_0x46e5d4(0x1f7)]('ui',_0x46e5d4(0x1e3))?_0x46e5d4(0x1ed):_0x46e5d4(0x1e5),Vetools[_0x46e5d4(0x1fb)],{'filterTypes':[UtilDataSource['SOURCE_TYP_OFFICIAL_ALL']],'isDefault':!![]}),new UtilDataSource[(_0x46e5d4(0x1d9))](_0x46e5d4(0x20e),'',{'filterTypes':[UtilDataSource['SOURCE_TYP_CUSTOM']]}),new UtilDataSource[(_0x46e5d4(0x20d))](_0x46e5d4(0x1e2),{'filterTypes':[UtilDataSource['SOURCE_TYP_CUSTOM']]}),...(await Vetools[_0x46e5d4(0x1d7)]('feat'))['map'](({name:_0x5b1fff,url:_0x53185f})=>new UtilDataSource[(_0x46e5d4(0x1d9))](_0x5b1fff,_0x53185f,{'filterTypes':[UtilDataSource['SOURCE_TYP_BREW']]}))];}[_0xb5c197(0x1eb)](){var _0xa1228c=_0xb5c197;return{'isRadio':this['_isRadio'],'isPreviewable':this[_0xa1228c(0x20a)],'titleButtonRun':this[_0xa1228c(0x1f3)],'titleSearch':this['_titleSearch'],'cols':[{'name':_0xa1228c(0x210),'width':0x4,'field':'name'},{'name':'Ability','width':0x3,'field':'ability'},{'name':_0xa1228c(0x1e7),'width':0x3,'field':'prerequisite'},{'name':_0xa1228c(0x1f2),'width':0x1,'field':_0xa1228c(0x1f8),'titleProp':'sourceLong','displayProp':_0xa1228c(0x1f1),'classNameProp':'sourceClassName','rowClassName':'text-center'}],'rows':this[_0xa1228c(0x1fa)][_0xa1228c(0x1f0)]((_0x4cee13,_0x5abccb)=>{var _0x592c23=_0xa1228c;return this[_0x592c23(0x1d6)]['constructor']['mutateForFilters'](_0x4cee13),{'name':_0x4cee13['name'],'ability':_0x4cee13[_0x592c23(0x1dc)],'prerequisite':_0x4cee13[_0x592c23(0x1f6)],'source':_0x4cee13[_0x592c23(0x1f8)],'sourceShort':Parser['sourceJsonToAbv'](_0x4cee13[_0x592c23(0x1f8)]),'sourceLong':Parser['sourceJsonToFull'](_0x4cee13[_0x592c23(0x1f8)]),'sourceClassName':Parser['sourceJsonToColor'](_0x4cee13[_0x592c23(0x1f8)]),'ix':_0x5abccb};})};}['_activateListeners_absorbListItems'](){var _0x1cc180=_0xb5c197;this[_0x1cc180(0x20f)][_0x1cc180(0x1d0)](this[_0x1cc180(0x1fa)],{'fnGetName':_0x31de66=>_0x31de66[_0x1cc180(0x1ee)],'fnGetValues':_0x516ab9=>({'source':_0x516ab9[_0x1cc180(0x1f8)],'ability':_0x516ab9['_slAbility'],'prerequisite':_0x516ab9['_slPrereq'],'hash':UrlUtil[_0x1cc180(0x211)][this[_0x1cc180(0x1de)]](_0x516ab9)}),'fnGetData':UtilList2['absorbFnGetData'],'fnBindListeners':_0x794aa7=>this[_0x1cc180(0x205)]?UtilList2[_0x1cc180(0x1d3)](this[_0x1cc180(0x20f)],_0x794aa7):UtilList2[_0x1cc180(0x1e1)](this['_list'],_0x794aa7)});}static async[_0xb5c197(0x1dd)](_0x45cd97,_0x5384b0){var _0x155ae5=_0xb5c197;return DataConverterFeat[_0x155ae5(0x1d2)](_0x5384b0);}static async['_pGetSideData'](_0x4e5ee4,_0x4a8a8d){var _0x2c6e8d=_0xb5c197;return DataConverterFeat[_0x2c6e8d(0x206)](_0x4a8a8d);}static async[_0xb5c197(0x1ff)](_0x4ee8d1,_0x5940be){var _0x4e0f0a=_0xb5c197;return DataConverterFeat[_0x4e0f0a(0x203)](_0x4ee8d1,_0x5940be);}static async[_0xb5c197(0x209)](_0x193ec7,_0x2d90ab,_0x5d08c7,_0x226666){var _0x4e4aff=_0xb5c197;return DataConverterFeat[_0x4e4aff(0x1e9)](_0x193ec7,_0x2d90ab,_0x5d08c7,{'additionalData':{'import':{'chosenAbilityScoreIncrease':_0x226666[_0x4e4aff(0x1e8)]}}});}[_0xb5c197(0x1d5)]({feature:_0xd6cc23,actor:_0x268810,importOpts:_0x40e4f7,flags:_0x3ba09c,flagsDnd5e:_0x3c25c7}){}async[_0xb5c197(0x1e0)](_0x5b28e3,_0x3766af,_0x48f40d){await DataConverterFeat['pMutActorUpdateFeat'](this['_actor'],_0x3766af,_0x5b28e3,_0x48f40d);}[_0xb5c197(0x20c)](_0x5114b2,_0x5b830c){var _0x367f3b=_0xb5c197;return DataConverterFeat[_0x367f3b(0x1d2)](_0x5114b2,_0x5b830c);}}ImportListFeat['UserChoose']=class extends MiscUtil['mix'](ImportListFeat)[_0xb5c197(0x1f9)](MixinUserChooseImporter){constructor(_0x427405){var _0x5ef08a=_0xb5c197;super(_0x427405,{'title':_0x5ef08a(0x1fd)},{'titleButtonRun':_0x5ef08a(0x1f4)});}};export{ImportListFeat};
+import {MixinUserChooseImporter} from "./ImportList.js";
+import {Vetools} from "./Vetools.js";
+import {DataConverterFeat} from "./DataConverterFeat.js";
+import {Config} from "./Config.js";
+import {UtilList2} from "./UtilList2.js";
+import {UtilDataSource} from "./UtilDataSource.js";
+import {ImportListFeature} from "./ImportListFeature.js";
+
+class ImportListFeat extends ImportListFeature {
+	// region External
+	static init () {
+		this._initCreateSheetItemHook({
+			prop: "feat",
+			importerName: "Feat",
+		});
+	}
+	// endregion
+
+	constructor (externalData, applicationOptsOverride, subclassOptsOverride) {
+		applicationOptsOverride = applicationOptsOverride || {};
+		subclassOptsOverride = subclassOptsOverride || {};
+		super(
+			{
+				title: "Import Feats",
+				...applicationOptsOverride,
+			},
+			externalData,
+			{
+				props: ["feat"],
+				dirsHomebrew: ["feat"],
+				titleSearch: "feats",
+				sidebarTab: "items",
+				gameProp: "items",
+				defaultFolderPath: ["Feats"],
+				pageFilter: new PageFilterFeats(),
+				page: UrlUtil.PG_FEATS,
+				isPreviewable: true,
+				isDedupable: true,
+				configGroup: "importFeat",
+				...subclassOptsOverride,
+			},
+			{
+				titleLog: "feat",
+			},
+		);
+	}
+
+	async pGetSources () {
+		return [
+			new UtilDataSource.DataSourceUrl(
+				Config.get("ui", "isStreamerMode") ? "SRD" : "5etools",
+				Vetools.DATA_URL_FEATS,
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_OFFICIAL_ALL],
+					isDefault: true,
+				},
+			),
+			new UtilDataSource.DataSourceUrl(
+				"Custom URL",
+				"",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			new UtilDataSource.DataSourceFile(
+				"Upload File",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			...(await this._pGetSourcesHomebrew()),
+		];
+	}
+
+	getData () {
+		return {
+			isRadio: this._isRadio,
+			isPreviewable: this._isPreviewable,
+			titleButtonRun: this._titleButtonRun,
+			titleSearch: this._titleSearch,
+			cols: [
+				{
+					name: "Name",
+					width: 4,
+					field: "name",
+				},
+				{
+					name: "Ability",
+					width: 3,
+					field: "ability",
+				},
+				{
+					name: "Prerequisite",
+					width: 3,
+					field: "prerequisite",
+				},
+				{
+					name: "Source",
+					width: 1,
+					field: "source",
+					titleProp: "sourceLong",
+					displayProp: "sourceShort",
+					classNameProp: "sourceClassName",
+					styleProp: "sourceStyle",
+					rowClassName: "text-center",
+				},
+			],
+			rows: this._content.map((it, ix) => {
+				this._pageFilter.constructor.mutateForFilters(it);
+
+				return {
+					name: it.name,
+					ability: it._slAbility,
+					prerequisite: it._slPrereq,
+					source: it.source,
+					sourceShort: Parser.sourceJsonToAbv(it.source),
+					sourceLong: Parser.sourceJsonToFull(it.source),
+					sourceClassName: Parser.sourceJsonToColor(it.source),
+					sourceStyle: BrewUtil.sourceJsonToStylePart(it.source),
+					ix,
+				};
+			}),
+		};
+	}
+
+	_activateListeners_absorbListItems () {
+		this._list.doAbsorbItems(
+			this._content,
+			{
+				fnGetName: it => it.name,
+				// values used for sorting/search
+				fnGetValues: it => ({
+					source: it.source,
+					ability: it._slAbility,
+					prerequisite: it._slPrereq,
+					hash: UrlUtil.URL_TO_HASH_BUILDER[this._page](it),
+				}),
+				fnGetData: UtilList2.absorbFnGetData,
+				fnBindListeners: it => this._isRadio
+					? UtilList2.absorbFnBindListenersRadio(this._list, it)
+					: UtilList2.absorbFnBindListeners(this._list, it),
+			},
+		);
+	}
+
+	static async _pGetEntityItem (actor, feat) { return DataConverterFeat.pGetFeatItem(feat); }
+
+	static async _pGetSideData (actor, feature) {
+		return DataConverterFeat.pGetSideData(feature);
+	}
+
+	static async _pHasSideLoadedEffects (actor, feat) { return DataConverterFeat.pHasFeatSideLoadedEffects(actor, feat); }
+
+	static async _pGetItemEffects (actor, feat, importedEmbed, dataBuilderOpts) {
+		return DataConverterFeat.pGetFeatItemEffects(
+			actor,
+			feat,
+			importedEmbed,
+			{
+				additionalData: {
+					import: {chosenAbilityScoreIncrease: dataBuilderOpts.chosenAbilityScoreIncrease},
+				},
+			},
+		);
+	}
+
+	_doPopulateFlags ({feature: feat, actor, importOpts, flags, flagsDnd5e}) {
+		// (Note that these are now instead handled, generally, by active effects)
+	}
+
+	async _pMutActorUpdateFeature (feature, actUpdate, dataBuilderOpts) {
+		await DataConverterFeat.pMutActorUpdateFeat(this._actor, actUpdate, feature, dataBuilderOpts);
+	}
+
+	_pImportEntry_pImportToDirectoryGeneric_pGetImportableData (it, getItemOpts) {
+		return DataConverterFeat.pGetFeatItem(it, getItemOpts);
+	}
+
+	static async _pGetDereferencedFeatureItem (feature) {
+		return DataConverterFeat.pGetDereferencedFeatFeatureItem(feature);
+	}
+
+	static async _pGetInitFeatureLoadeds (feature) {
+		return DataConverterFeat.pGetInitFeatFeatureLoadeds(feature);
+	}
+}
+
+ImportListFeat.UserChoose = class extends MiscUtil.mix(ImportListFeat).with(MixinUserChooseImporter) {
+	constructor (externalData) {
+		super(
+			externalData,
+			{
+				title: "Select Feat",
+			},
+			{
+				titleButtonRun: "Select",
+			},
+		);
+	}
+};
+
+export {ImportListFeat};

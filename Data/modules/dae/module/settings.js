@@ -49,25 +49,22 @@ export const registerSettings = function () {
         name: game.i18n.localize("dae.useAbilitySave.Name"),
         hint: game.i18n.localize("dae.useAbilitySave.Hint"),
         scope: "world",
-        default: true,
+        default: false,
         config: true,
         type: Boolean,
         onChange: fetchParams
     });
-    game.settings.register("dae", "calculateArmor", {
-        name: game.i18n.localize("dae.calculateArmor.Name"),
-        hint: game.i18n.localize("dae.calculateArmor.Hint"),
+    game.settings.register("dae", "ArmorDisabled", {
         scope: "world",
-        default: true,
-        config: true,
-        type: Boolean,
-        onChange: fetchParams
+        default: 0,
+        config: false,
+        type: Number
     });
-    game.settings.register("dae", "applyBaseAC", {
-        name: game.i18n.localize("dae.applyBaseAC.Name"),
-        hint: game.i18n.localize("dae.applyBaseAC.Hint"),
-        scope: "world",
-        default: true,
+    game.settings.register("dae", "showInline", {
+        scope: "client",
+        name: game.i18n.localize("dae.ShowInline.Name"),
+        hint: game.i18n.localize("dae.ShowInline.Hint"),
+        default: false,
         config: true,
         type: Boolean,
         onChange: fetchParams
@@ -81,6 +78,15 @@ export const registerSettings = function () {
         config: true,
         onChange: fetchParams
     });
+    game.settings.register("dae", "DAETitleBar", {
+        name: game.i18n.localize("dae.DAETitleBar.Name"),
+        hint: game.i18n.localize("dae.DAETitleBar.Hint"),
+        scope: "world",
+        default: true,
+        type: Boolean,
+        config: true,
+        onChange: fetchParams
+    });
     game.settings.register("dae", "ZZDebug", {
         name: "dae.Debug.Name",
         hint: "dae.Debug.Hint",
@@ -89,6 +95,15 @@ export const registerSettings = function () {
         type: String,
         config: true,
         choices: { none: "None", warn: "warnings", debug: "debug", all: "all" },
+        onChange: fetchParams
+    });
+    game.settings.register("dae", "showDeprecation", {
+        name: "dae.ShowDeprecation.Name",
+        hint: "dae.ShowDeprecation.Hint",
+        scope: "world",
+        default: false,
+        type: Boolean,
+        config: true,
         onChange: fetchParams
     });
     game.settings.register("dae", "disableEffects", {

@@ -123,6 +123,27 @@ export function registerSettings() {
         onChange: s => {}
     });
 
+    Sidekick.registerSetting(BUTLER.SETTING_KEYS.concentrator.autoEndConcentration, {
+        name: `${BUTLER.NAME}.SETTINGS.CONCENTRATOR.AutoEndConcentrationN`,
+        hint: `${BUTLER.NAME}.SETTINGS.CONCENTRATOR.AutoEndConcentrationH`,
+        default: BUTLER.DEFAULT_CONFIG.concentrator.autoEndConcentration,
+        scope: "world",
+        type: Boolean,
+        config: false,
+        onChange: s => {}
+    });
+
+    Sidekick.registerSetting(BUTLER.SETTING_KEYS.concentrator.notifyConcentration, {
+        name: `${BUTLER.NAME}.SETTINGS.CONCENTRATOR.NotifyConcentrationN`,
+        hint: `${BUTLER.NAME}.SETTINGS.CONCENTRATOR.NotifyConcentrationH`,
+        default: Sidekick.getKeyByValue(BUTLER.DEFAULT_CONFIG.concentrator.notifyConcentration, BUTLER.DEFAULT_CONFIG.concentrator.notifyConcentration.none),
+        scope: "world",
+        type: String,
+        choices: BUTLER.DEFAULT_CONFIG.concentrator.notifyConcentration,
+        config: false,
+        onChange: s => {}
+    });
+
     Sidekick.registerSetting(BUTLER.SETTING_KEYS.concentrator.notifyDouble, {
         name: "SETTINGS.Concentrator.NotifyDoubleN",
         hint: "SETTINGS.Concentrator.NotifyDoubleH",
@@ -130,6 +151,17 @@ export function registerSettings() {
         scope: "world",
         type: String,
         choices: BUTLER.DEFAULT_CONFIG.concentrator.notifyDouble,
+        config: false,
+        onChange: s => {}
+    });
+
+    Sidekick.registerSetting(BUTLER.SETTING_KEYS.concentrator.notifyEndConcentration, {
+        name: `${BUTLER.NAME}.SETTINGS.CONCENTRATOR.NotifyEndN`,
+        hint: `${BUTLER.NAME}.SETTINGS.CONCENTRATOR.NotifyEndN`,
+        default: Sidekick.getKeyByValue(BUTLER.DEFAULT_CONFIG.concentrator.notifyEndConcentration, BUTLER.DEFAULT_CONFIG.concentrator.notifyEndConcentration.none),
+        scope: "world",
+        type: String,
+        choices: BUTLER.DEFAULT_CONFIG.concentrator.notifyEndConcentration,
         config: false,
         onChange: s => {}
     });
@@ -145,12 +177,17 @@ export function registerSettings() {
         type: Boolean,
         default: false,
         config: true,
-        onChange: async s => {
+        onChange: async (s) => {
             if (s) {
                 await EnhancedConditions._onReady();
+                if (!game.cub.enhancedConditions.supported) {
+                    ui.notifications.warn(game.i18n.localize(`ENHANCED_CONDITIONS.GameSystemNotSupported`));
+                    await Sidekick.setSetting(BUTLER.SETTING_KEYS.enhancedConditions.enable, false);
+                    if (ui.cub.cubPuter) ui.cub.cubPuter.render();
+                }
             }
 
-            EnhancedConditions._toggleLabButtonVisibility(s);
+            EnhancedConditions._toggleLabButtonVisibility(s && game.cub.enhancedConditions.supported);
         }
     });
 
@@ -204,7 +241,7 @@ export function registerSettings() {
         hint: "SETTINGS.EnhancedConditions.DefaultMapsH",
         scope: "world",
         type: Object,
-        default: [],
+        default: {},
         onChange: s => {}
     });
 
@@ -231,7 +268,21 @@ export function registerSettings() {
         type: Boolean,
         config: false,
         default: BUTLER.DEFAULT_CONFIG.enhancedConditions.outputChat,
-        onChange: s => {}
+        onChange: s => {
+            if (s === true) {
+                const dialog = Dialog.confirm({
+                    title: game.i18n.localize(`${BUTLER.NAME}.ENHANCED_CONDITIONS.OutputChatConfirm.Title`),
+                    content: game.i18n.localize(`${BUTLER.NAME}.ENHANCED_CONDITIONS.OutputChatConfirm.Content`),
+                    yes: () => {
+                        const newMap = deepClone(game.cub.conditions);
+                        if (!newMap.length) return;
+                        newMap.forEach(c => c.options.outputChat = true);
+                        Sidekick.setSetting(BUTLER.SETTING_KEYS.enhancedConditions.map, newMap);
+                    },
+                    no: () => {}
+                });
+            }
+        }
     });
 
     Sidekick.registerSetting(BUTLER.SETTING_KEYS.enhancedConditions.outputCombat, {

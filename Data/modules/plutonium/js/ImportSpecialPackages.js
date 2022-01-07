@@ -1,27 +1,512 @@
-const _0x54cb=['STR_SEE_CONSOLE','3iIBxjo','Type','_ACTIVE_INSTALLATION','splice','some','#\x20Dependency\x20Manifest\x20URLs:\x0a','bytesToHumanReadable','error','getValues','val','filters','Installing\x20(','errors','_activateListeners_pInitListAndFilters','<code\x20class=\x22copyable\x22>','.\x20Would\x20you\x20like\x20to\x20install\x20them?','_activateListeners_initBtnRun','pCopyTextToClipboard','pGetPackageIndex','toDisplay','\x20module\x20dependenc','_rows','installPackage','Failed\x20to\x20install\x20world!\x20','supportURL','name','copy','141354DMYTvK','_pInstallManifest','join','<button\x20class=\x22btn\x20btn-primary\x20mr-2\x22>Copy\x20Links</button>','isUseLegacyImporter','remove','packages','manifesturlWorld','length','.fltr__mini-view','World','_lAuthor','getData','(Unnamed)','_activateListeners_pInstallDependencies','1MSidZx','2JlbdRE','_activateListeners_initBtnReset','EVNT_VALCHANGE','data','title','ies','Please\x20select\x20a\x20package\x20which\x20includes\x20a\x20module!','ImportSpecialPackages','slice','_activateListeners_getSelectedRow','forEach','Failed\x20to\x20install\x20world!','_fType','148942JdSdbH','\x20module','Please\x20select\x20something\x20to\x20import!','get','download','json','bind','[name=btn-toggle-summary]','backendEndpoint','169449oiBGLU','[name=\x22btn-reset\x22]','trim','660554bPpwEb','filter','Please\x20wait\x20until\x20the\x20currently\x20running\x20installation\x20completes!','application/json','.search','info','_sizeHumanReadable','\x22\x20has\x20','</code>','Could\x20not\x20install\x20manifest:\x0a','Failed\x20to\x20load\x20manifest\x20file!\x20','19263GxeFNJ','_handleFilterChange','push','isUseModdedInstaller','_pageFilter','checked','warn','[data-name=\x22wrp-btns-sort\x22]','authors','showCopiedEffect','12887GIBJzx','classList','post','Failed\x20to\x20install\x20module!','notifications','Failed\x20to\x20install\x20module!\x20','_list','Module\x20\x22','world','_displayManualLinks','_activateListeners_pGetManifestData','entries','size','Installing\x20(1/','\x20installed.','23323Dixydg','checkPackage','manifesturlModule','[name=\x22btn-run--world\x22]','_$iptSearch','getShowModal','split','manifest','Module','dependencies','getMaxWindowHeight','addItem','source','map','\x22\x20installed\x20successfully.','_packageIndex','_onLoadProgress','#\x20Manifest\x20URL:\x0a','pGetUserBoolean','<button\x20class=\x22btn\x20btn-default\x20btn-sm\x22>Close</button>','P_GET_BACKEND_VERSION','29ttYaCq','filterBox','manifesturl','PageFilter','shutDown','module','find','Author','_typeFilter','[name=\x22btn-run--module\x22]','https://discord.gg/7RJFVjt5Bf','World\x20\x22','pGetWithCache','getMergedPackageIndex','Unknown','importAdventure','Manual\x20Installation','_getPackageIndex','then','_authorFilter','activateListeners','author','_SUPPORT_URL','items','addToFilters','reset','cbSel','constructor','_$btnReset','click','_fAuthor','pImportManifesturlWorld','pImportManifesturlModule'];const _0x2c72=function(_0x432483,_0x1a6448){_0x432483=_0x432483-0x1c3;let _0x54cba2=_0x54cb[_0x432483];return _0x54cba2;};const _0x13959f=_0x2c72;(function(_0x327672,_0x5cc3df){const _0x26a53f=_0x2c72;while(!![]){try{const _0x176adf=parseInt(_0x26a53f(0x218))*-parseInt(_0x26a53f(0x1e1))+parseInt(_0x26a53f(0x250))+-parseInt(_0x26a53f(0x233))*-parseInt(_0x26a53f(0x242))+-parseInt(_0x26a53f(0x1f6))*parseInt(_0x26a53f(0x1d2))+parseInt(_0x26a53f(0x243))*parseInt(_0x26a53f(0x1c8))+-parseInt(_0x26a53f(0x259))+parseInt(_0x26a53f(0x25c));if(_0x176adf===_0x5cc3df)break;else _0x327672['push'](_0x327672['shift']());}catch(_0x2e9da3){_0x327672['push'](_0x327672['shift']());}}}(_0x54cb,0x5bdab));import{Vetools}from'./Vetools.js';import{SharedConsts}from'../shared/SharedConsts.js';import{Util}from'./Util.js';import{UtilList2}from'./UtilList2.js';import{Config}from'./Config.js';import{MiscUtil}from'../art-js/Util.js';class ImportSpecialPackages extends Application{constructor(){const _0x114dfa=_0x2c72;super({'title':'Package\x20Importer','template':SharedConsts['MODULE_LOCATION']+'/template/ImportSpecialPackages.hbs','height':Util[_0x114dfa(0x1eb)](),'width':0x320,'resizable':!![]}),this[_0x114dfa(0x1f0)]=null,this[_0x114dfa(0x1cc)]=null,this[_0x114dfa(0x22d)]=null;}async['pInit'](){const _0x1441cd=_0x2c72,_0x388819=await this[_0x1441cd(0x211)][_0x1441cd(0x207)]();this[_0x1441cd(0x1f0)]=await this[_0x1441cd(0x211)][_0x1441cd(0x203)](_0x388819),this[_0x1441cd(0x1cc)]=new ImportSpecialPackages[(_0x1441cd(0x1f9))]();}static async[_0x13959f(0x207)](){const _0x4d3c24=_0x13959f;try{let _0x3954dc;return _0x3954dc=await Vetools[_0x4d3c24(0x22a)](),_0x3954dc;}catch(_0x354ac5){return{'supportURL':ImportSpecialPackages[_0x4d3c24(0x20c)]};}}static async['getMergedPackageIndex'](_0x44994f=null){const _0x13c8f4=_0x13959f;_0x44994f=_0x44994f||await this[_0x13c8f4(0x207)](),_0x44994f=MiscUtil[_0x13c8f4(0x232)](_0x44994f);const _0x372783=[];return(_0x44994f['module']||[])[_0x13c8f4(0x25d)](Boolean)[_0x13c8f4(0x24d)](_0x7797e4=>{const _0x1a25b1=_0x13c8f4;_0x372783[_0x1a25b1(0x1ca)](_0x7797e4),_0x7797e4[_0x1a25b1(0x1e3)]=_0x7797e4[_0x1a25b1(0x1f8)],delete _0x7797e4['manifesturl'];const _0x773816=(_0x7797e4[_0x1a25b1(0x1e3)]||'')[_0x1a25b1(0x1e7)]('/')[_0x1a25b1(0x24b)](0x0,-0x1)['join']('/');if(!Config[_0x1a25b1(0x253)](_0x1a25b1(0x205),_0x1a25b1(0x237)))return;const _0x454732=_0x44994f[_0x1a25b1(0x1da)]['findIndex'](_0x940e90=>{const _0x48ad64=_0x1a25b1;if(_0x940e90[_0x48ad64(0x1ed)]!==_0x7797e4[_0x48ad64(0x1ed)])return![];const _0x4b89f2=this['_getBaseManifestUrl'](_0x940e90[_0x48ad64(0x1f8)]);return _0x4b89f2===_0x773816;});if(!~_0x454732)return;const [_0x377a39]=_0x44994f[_0x1a25b1(0x1da)][_0x1a25b1(0x21b)](_0x454732,0x1);_0x377a39[_0x1a25b1(0x23a)]=_0x377a39[_0x1a25b1(0x1f8)],delete _0x377a39['manifesturl'],Object[_0x1a25b1(0x1dd)](_0x377a39)['forEach'](([_0x256eae,_0x1a260e])=>{if(_0x7797e4[_0x256eae])return;_0x7797e4[_0x256eae]=_0x1a260e;});}),Config[_0x13c8f4(0x253)](_0x13c8f4(0x205),_0x13c8f4(0x237))&&(_0x44994f[_0x13c8f4(0x1da)]||[])['filter'](Boolean)[_0x13c8f4(0x24d)](_0x1d0fff=>{const _0x3ef4d0=_0x13c8f4;_0x1d0fff[_0x3ef4d0(0x23a)]=_0x1d0fff['manifesturl'],delete _0x1d0fff[_0x3ef4d0(0x1f8)],_0x372783[_0x3ef4d0(0x1ca)](_0x1d0fff);}),_0x372783[_0x13c8f4(0x24d)](_0x572899=>{const _0x4fc9df=_0x13c8f4;_0x572899['_lAuthor']=[_0x572899[_0x4fc9df(0x20b)]||'',_0x572899[_0x4fc9df(0x1d0)]||[]]['flat']()['map'](_0x1abe7d=>_0x1abe7d[_0x4fc9df(0x231)]??_0x1abe7d)[_0x4fc9df(0x1ee)](_0x38d88b=>(''+_0x38d88b)[_0x4fc9df(0x25b)]())[_0x4fc9df(0x25d)](Boolean),_0x572899[_0x4fc9df(0x1de)]&&(_0x572899[_0x4fc9df(0x1c3)]=Parser[_0x4fc9df(0x21e)](_0x572899[_0x4fc9df(0x1de)],{'fixedDigits':0x0}),_0x572899['_sizeHumanReadableTitle']=Parser[_0x4fc9df(0x21e)](_0x572899[_0x4fc9df(0x1de)],{'fixedDigits':0x3}));}),{'supportURL':_0x44994f[_0x13c8f4(0x230)],'packages':_0x372783};}[_0x13959f(0x23f)](){const _0x18b1c6=_0x13959f;return this['_rows']=this[_0x18b1c6(0x1f0)][_0x18b1c6(0x239)],{'packages':this[_0x18b1c6(0x22d)],'isLegacy':Config[_0x18b1c6(0x253)]('importAdventure',_0x18b1c6(0x237)),'supportUrl':this[_0x18b1c6(0x1f0)]['supportURL']};}['activateListeners'](_0x52bd05){const _0x4ee3af=_0x13959f;super[_0x4ee3af(0x20a)](_0x52bd05),this['_activateListeners_initBtnRun'](_0x52bd05),this[_0x4ee3af(0x244)](_0x52bd05),this[_0x4ee3af(0x225)](_0x52bd05);}[_0x13959f(0x24c)](){const _0x276554=_0x13959f,_0x55f4f5=this[_0x276554(0x1d8)][_0x276554(0x20d)][_0x276554(0x1fc)](_0x4f3619=>_0x4f3619[_0x276554(0x246)][_0x276554(0x210)][_0x276554(0x1cd)]);if(!_0x55f4f5)return ui['notifications'][_0x276554(0x1ce)](_0x276554(0x252)),null;return _0x55f4f5['ele'][_0x276554(0x1d3)][_0x276554(0x238)]('list-multi-selected'),_0x55f4f5[_0x276554(0x246)][_0x276554(0x210)][_0x276554(0x1cd)]=![],this['_rows'][_0x55f4f5['ix']];}static async[_0x13959f(0x1dc)](_0x1e84b1){const _0x274b55=_0x13959f;let _0x2eac9b;try{_0x2eac9b=await Vetools[_0x274b55(0x202)](_0x1e84b1);}catch(_0x1d94fe){ui[_0x274b55(0x1d6)]['error'](_0x274b55(0x1c7)+VeCt['STR_SEE_CONSOLE']);throw _0x1d94fe;}return _0x2eac9b;}static async[_0x13959f(0x234)](_0x3496cb){const _0x10d080=_0x13959f,_0x2d5de5=await fetch(Config['backendEndpoint'],{'method':_0x10d080(0x1d4),'headers':{'Content-Type':_0x10d080(0x25f)},'body':JSON['stringify']({'type':_0x10d080(0x1e2),'manifest':_0x3496cb})}),_0x5c951e=await _0x2d5de5[_0x10d080(0x255)]();if(_0x5c951e?.[_0x10d080(0x224)]?.[_0x10d080(0x23b)]){const _0x28efa3=_0x10d080(0x1c6)+_0x5c951e['errors'][_0x10d080(0x235)]('\x0a');return ui[_0x10d080(0x1d6)][_0x10d080(0x21f)](_0x28efa3),console['error'](_0x28efa3),![];}const _0x160f46=await fetch(Config[_0x10d080(0x258)],{'method':_0x10d080(0x1d4),'headers':{'Content-Type':_0x10d080(0x25f)},'body':JSON['stringify']({'type':_0x10d080(0x22e),'manifest':_0x3496cb})});return await _0x160f46[_0x10d080(0x255)](),!![];}static async[_0x13959f(0x241)](_0x5959ee,_0x5e3c5e){const _0x3b5fe8=_0x13959f;if(!_0x5e3c5e[_0x3b5fe8(0x1ea)])return;const _0x56c469=(_0x5e3c5e[_0x3b5fe8(0x1ea)]||[])['filter'](_0x30a36b=>!game[_0x3b5fe8(0x246)]['modules'][_0x3b5fe8(0x21c)](_0x40a0d4=>_0x40a0d4['id']===_0x30a36b[_0x3b5fe8(0x231)]));if(!_0x56c469['length'])return;const _0xbd1982=await InputUiUtil[_0x3b5fe8(0x1f3)]({'title':_0x5959ee+'\x20\x22'+_0x5e3c5e[_0x3b5fe8(0x231)]+_0x3b5fe8(0x1c4)+_0x56c469[_0x3b5fe8(0x23b)]+_0x3b5fe8(0x22c)+(_0x56c469[_0x3b5fe8(0x23b)]===0x1?'y':_0x3b5fe8(0x248))+_0x3b5fe8(0x227)});if(!_0xbd1982)return;let _0x59fd1e=0x0;SceneNavigation['_onLoadProgress'](_0x3b5fe8(0x1df)+_0x56c469[_0x3b5fe8(0x23b)]+')',0x0);for(let _0x3ab653=0x0;_0x3ab653<_0x56c469[_0x3b5fe8(0x23b)];++_0x3ab653){try{const _0x1a8116=await this[_0x3b5fe8(0x234)]({'type':'module','name':_0x5e3c5e[_0x3b5fe8(0x231)],'manifest':_0x56c469[_0x3ab653][_0x3b5fe8(0x1e8)]});if(!_0x1a8116)_0x59fd1e++;}catch(_0x1e6d20){_0x59fd1e++,console[_0x3b5fe8(0x21f)](_0x1e6d20);}SceneNavigation[_0x3b5fe8(0x1f1)](_0x3b5fe8(0x223)+(_0x3ab653+0x2)+'/'+_0x56c469[_0x3b5fe8(0x23b)]+')',(_0x3ab653+0x1)/_0x56c469[_0x3b5fe8(0x23b)]*0x64);}const _0x343d9c=_0x56c469[_0x3b5fe8(0x23b)]-_0x59fd1e;ui['notifications'][_0x59fd1e?_0x3b5fe8(0x21f):_0x3b5fe8(0x261)](_0x343d9c+_0x3b5fe8(0x251)+(_0x343d9c===0x1?'':'s')+_0x3b5fe8(0x1e0)+(_0x59fd1e?'\x20'+_0x59fd1e+'\x20error'+(_0x59fd1e===0x1?'':'s')+'.\x20'+VeCt[_0x3b5fe8(0x217)]:''));if(!_0x59fd1e&&_0x343d9c)game[_0x3b5fe8(0x1fa)]();}static async[_0x13959f(0x216)](_0x29d192){const _0x289106=_0x13959f,_0x2bf317=await this[_0x289106(0x1dc)](_0x29d192);if(!_0x2bf317)return;if(!await Config[_0x289106(0x1f5)]||!Config[_0x289106(0x253)](_0x289106(0x205),'isUseModdedInstaller'))return this[_0x289106(0x1db)](_0x2bf317);if(ImportSpecialPackages['_ACTIVE_INSTALLATION'])return ui[_0x289106(0x1d6)][_0x289106(0x1ce)](_0x289106(0x25e));ImportSpecialPackages[_0x289106(0x21a)]=!![];try{const _0x14bccc=await this[_0x289106(0x234)]({'type':_0x289106(0x1fb),'name':_0x2bf317['name'],'manifest':_0x29d192});if(!_0x14bccc)ui[_0x289106(0x1d6)][_0x289106(0x21f)](_0x289106(0x1d5));}catch(_0x5d64ec){ui['notifications']['error'](_0x289106(0x1d7)+VeCt['STR_SEE_CONSOLE']);throw _0x5d64ec;}finally{ImportSpecialPackages[_0x289106(0x21a)]=![];}await this[_0x289106(0x241)](_0x289106(0x1e9),_0x2bf317),ui[_0x289106(0x1d6)][_0x289106(0x261)](_0x289106(0x1d9)+_0x2bf317[_0x289106(0x231)]+_0x289106(0x1ef));}static async['pImportManifesturlWorld'](_0x12082a){const _0x5e15af=_0x13959f,_0x5548f0=await this['_activateListeners_pGetManifestData'](_0x12082a);if(!_0x5548f0)return;if(!await Config[_0x5e15af(0x1f5)]||!Config[_0x5e15af(0x253)](_0x5e15af(0x205),_0x5e15af(0x1cb)))return this['_displayManualLinks'](_0x5548f0);if(ImportSpecialPackages['_ACTIVE_INSTALLATION'])return ui[_0x5e15af(0x1d6)]['warn'](_0x5e15af(0x25e));ImportSpecialPackages[_0x5e15af(0x21a)]=!![];try{const _0x395ede=await this['_pInstallManifest']({'type':_0x5e15af(0x1da),'name':_0x5548f0[_0x5e15af(0x231)],'manifest':_0x12082a});if(!_0x395ede)ui[_0x5e15af(0x1d6)]['error'](_0x5e15af(0x24e));}catch(_0x39ca3c){ui[_0x5e15af(0x1d6)]['error'](_0x5e15af(0x22f)+VeCt['STR_SEE_CONSOLE']);throw _0x39ca3c;}finally{ImportSpecialPackages[_0x5e15af(0x21a)]=![];}ui['notifications']['info'](_0x5e15af(0x201)+_0x5548f0[_0x5e15af(0x231)]+'\x22\x20installed\x20successfully.');}static['_displayManualLinks'](_0x283756){const _0x1bc162=_0x13959f,{$modalInner:_0x3c3d5a,doClose:_0x5d3476}=UiUtil[_0x1bc162(0x1e6)]({'title':_0x1bc162(0x206)+(_0x283756[_0x1bc162(0x247)]?'—'+_0x283756[_0x1bc162(0x247)]:''),'isHeaderBorder':!![]}),_0x1201d2=$(_0x1bc162(0x1f4))[_0x1bc162(0x213)](()=>_0x5d3476()),_0x2b6d0f=$(_0x1bc162(0x236))[_0x1bc162(0x213)](async()=>{const _0x334a99=_0x1bc162,_0x5596fb=(_0x334a99(0x1f2)+_0x283756['manifest']+'\x0a\x0a'+(_0x283756[_0x334a99(0x1ea)]&&_0x283756[_0x334a99(0x1ea)][_0x334a99(0x23b)]?_0x334a99(0x21d)+_0x283756[_0x334a99(0x1ea)][_0x334a99(0x1ee)](_0x2513b6=>_0x2513b6['manifest'])[_0x334a99(0x235)]('\x0a'):''))[_0x334a99(0x25b)]();await MiscUtil['pCopyTextToClipboard'](_0x5596fb),JqueryUtil[_0x334a99(0x1d1)](_0x2b6d0f);}),_0x496e4d=_0x283756[_0x1bc162(0x1ea)]&&_0x283756[_0x1bc162(0x1ea)][_0x1bc162(0x23b)]?_0x283756[_0x1bc162(0x1ea)][_0x1bc162(0x1ee)](_0x1fdaaa=>{const _0x281f35=_0x1bc162,_0x17525a=$(_0x281f35(0x226)+_0x1fdaaa[_0x281f35(0x1e8)]+_0x281f35(0x1c5))['click'](async()=>{const _0x42d460=_0x281f35;await MiscUtil[_0x42d460(0x229)](_0x1fdaaa[_0x42d460(0x1e8)]),JqueryUtil[_0x42d460(0x1d1)](_0x17525a);});return $$`<div class="py-1 split-v-center">
-					<div class="mr-1">&quot;${_0x1fdaaa['name']||_0x281f35(0x240)}&quot;${_0x1fdaaa[_0x281f35(0x23e)]?'\x20<i>by</i>\x20'+_0x1fdaaa[_0x281f35(0x23e)]['joinConjunct'](',\x20','\x20and\x20'):''}:</div>
-					${_0x17525a}
-				</div>`;}):null,_0x54aae8=$(_0x1bc162(0x226)+_0x283756[_0x1bc162(0x1e8)]+'</code>')[_0x1bc162(0x213)](async()=>{const _0x5d0ddf=_0x1bc162;await MiscUtil[_0x5d0ddf(0x229)](_0x283756[_0x5d0ddf(0x1e8)]),JqueryUtil[_0x5d0ddf(0x1d1)](_0x54aae8);}),_0x24e3d9=$('<code\x20class=\x22copyable\x22>'+_0x283756['download']+_0x1bc162(0x1c5))[_0x1bc162(0x213)](async()=>{const _0x1bd997=_0x1bc162;await MiscUtil[_0x1bd997(0x229)](_0x283756[_0x1bd997(0x254)]),JqueryUtil[_0x1bd997(0x1d1)](_0x24e3d9);});$$(_0x3c3d5a)`<div class="flex-col h-100">
+import {Vetools} from "./Vetools.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {LGT, Util} from "./Util.js";
+import {UtilList2} from "./UtilList2.js";
+import {Config} from "./Config.js";
+import {MiscUtil} from "../art-js/Util.js";
+
+class ImportSpecialPackages extends Application {
+	static getNonLegacyNoteHtml () {
+		return `<p>Note that core worlds have been removed from the default index. These worlds were/are community-created, and discussing them in relation to this module is prohibited, for the safety of both communities.</p>
+		<p class="mb-0">Please <a href="${this._SUPPORT_URL}">visit the Worlds Discord server</a> to get answers for your questions, concerns, and support requests.</p>
+		<p>Alternatively, you may switch to an alternate index, by setting the &quot;Package Index URL&quot; in your <a class="veapp__lnk imp-pkg__lnk-config">config</a>.</p>`;
+	}
+
+	static bindNonLegacyNoteHandlers ($html) {
+		$html.find(`.imp-pkg__lnk-config`)
+			.click(evt => {
+				evt.preventDefault();
+				evt.stopPropagation();
+				Config.pHandleButtonClick(evt, "importAdventure");
+			});
+	}
+
+	constructor () {
+		super({
+			title: "Package Importer",
+			template: `${SharedConsts.MODULE_LOCATION}/template/ImportSpecialPackages.hbs`,
+			height: Util.getMaxWindowHeight(),
+			width: 800,
+			resizable: true,
+		});
+
+		this._packageIndex = null;
+		this._pageFilter = null;
+
+		this._rows = null;
+	}
+
+	async pInit () {
+		const packageIndex = await this.constructor._getPackageIndex();
+		this._packageIndex = await this.constructor.getMergedPackageIndex(packageIndex);
+		this._pageFilter = new ImportSpecialPackages.PageFilter();
+	}
+
+	static async _getPackageIndex () {
+		try {
+			let index;
+			index = await Vetools.pGetPackageIndex();
+			return index;
+		} catch (e) {
+			return {
+				supportURL: ImportSpecialPackages._SUPPORT_URL,
+			};
+		}
+	}
+
+	static async getMergedPackageIndex (packageIndex = null) {
+		packageIndex = packageIndex || await this._getPackageIndex();
+		packageIndex = MiscUtil.copy(packageIndex);
+
+		// A list of modules and a list of worlds are presented in the index; stitch these together where they match
+		const packages = [];
+
+		(packageIndex.module || [])
+			.filter(Boolean)
+			.forEach(moduleMeta => {
+				packages.push(moduleMeta);
+
+				moduleMeta.manifesturlModule = moduleMeta.manifesturl;
+				delete moduleMeta.manifesturl;
+
+				const baseManifestUrl = (moduleMeta.manifesturlModule || "").split("/").slice(0, -1).join("/");
+
+				const ixWorld = (packageIndex.world || []).findIndex(it => {
+					if (it.source !== moduleMeta.source) return false;
+					const baseWorldManifestUrl = this._getBaseManifestUrl(it.manifesturl);
+					return baseWorldManifestUrl === baseManifestUrl;
+				});
+
+				if (!~ixWorld) return;
+
+				const [worldMeta] = (packageIndex.world || []).splice(ixWorld, 1);
+				worldMeta.manifesturlWorld = worldMeta.manifesturl;
+				delete worldMeta.manifesturl;
+
+				// Copy over any other data
+				Object.entries(worldMeta)
+					.forEach(([k, v]) => {
+						if (moduleMeta[k]) return;
+						moduleMeta[k] = v;
+					});
+				// endregion
+			});
+
+		// Add any worlds which did not have matching modules
+		(packageIndex.world || [])
+			.filter(Boolean)
+			.forEach(worldMeta => {
+				worldMeta.manifesturlWorld = worldMeta.manifesturl;
+				delete worldMeta.manifesturl;
+				packages.push(worldMeta);
+			});
+
+		packages.forEach(it => {
+			it._lAuthor = [it.author || "", it.authors || []]
+				.flat()
+				.map(it => it.name ?? it)
+				.map(it => `${it}`.trim())
+				.filter(Boolean);
+			if (it.size) {
+				it._sizeHumanReadable = Parser.bytesToHumanReadable(it.size, {fixedDigits: 0});
+				it._sizeHumanReadableTitle = Parser.bytesToHumanReadable(it.size, {fixedDigits: 3});
+			}
+		});
+
+		return {
+			supportURL: packageIndex.supportURL,
+			packages,
+		};
+	}
+
+	getData () {
+		this._rows = this._packageIndex.packages;
+		return {
+			packages: this._rows,
+			isLegacy: Config.get("importAdventure", "isUseLegacyImporter"),
+			nonLegacyHeader: this.constructor.getNonLegacyNoteHtml(),
+			supportUrl: this._packageIndex.supportURL,
+		};
+	}
+
+	activateListeners ($html) {
+		super.activateListeners($html);
+
+		this.constructor.bindNonLegacyNoteHandlers($html);
+
+		this._activateListeners_initBtnRun($html);
+		this._activateListeners_initBtnReset($html);
+		this._activateListeners_pInitListAndFilters($html);
+	}
+
+	_activateListeners_getSelectedRow () {
+		const selItem = this._list.items.find(it => it.data.cbSel.checked);
+		if (!selItem) {
+			ui.notifications.warn(`Please select something to import!`);
+			return null;
+		}
+
+		selItem.ele.classList.remove("list-multi-selected");
+		selItem.data.cbSel.checked = false;
+
+		return this._rows[selItem.ix];
+	}
+
+	static async _activateListeners_pGetManifestData (manifestUrl) {
+		let manifestData;
+		try {
+			manifestData = await Vetools.pGetWithCache(manifestUrl);
+		} catch (e) {
+			ui.notifications.error(`Failed to load manifest file! ${VeCt.STR_SEE_CONSOLE}`);
+			throw e;
+		}
+		return manifestData;
+	}
+
+	static async _pInstallManifest (manifest) {
+		const respCheck = await fetch(
+			Config.backendEndpoint,
+			{
+				method: "post",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					type: "checkPackage",
+					manifest,
+				}),
+			},
+		);
+		const checkJson = await respCheck.json();
+		if (checkJson?.errors?.length) {
+			const msg = `Could not install manifest:\n${checkJson.errors.join("\n")}`;
+			ui.notifications.error(msg);
+			console.error(msg);
+			return false;
+		}
+
+		const resp = await fetch(
+			Config.backendEndpoint,
+			{
+				method: "post",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					type: "installPackage",
+					manifest,
+				}),
+			},
+		);
+		await resp.json();
+
+		return true;
+	}
+
+	static async _activateListeners_pInstallDependencies (installType, manifestData) {
+		if (!manifestData.dependencies) return;
+
+		const toBeInstalledDependencies = (manifestData.dependencies || []).filter(x => !game.data.modules.some(m => m.id === x.name));
+
+		if (!toBeInstalledDependencies.length) return;
+
+		const isUserInstall = await InputUiUtil.pGetUserBoolean({
+			title: `${installType} "${manifestData.name}" has ${toBeInstalledDependencies.length} module dependenc${toBeInstalledDependencies.length === 1 ? "y" : "ies"}. Would you like to install them?`,
+		});
+		if (!isUserInstall) return;
+
+		let cntErrors = 0;
+		SceneNavigation._onLoadProgress(`Installing (1/${toBeInstalledDependencies.length})`, 0);
+		for (let i = 0; i < toBeInstalledDependencies.length; ++i) {
+			try {
+				const isInstallSuccess = await this._pInstallManifest({
+					type: "module",
+					name: manifestData.name,
+					manifest: toBeInstalledDependencies[i].manifest,
+				});
+				if (!isInstallSuccess) cntErrors++;
+			} catch (e) {
+				cntErrors++;
+				console.error(e);
+			}
+			SceneNavigation._onLoadProgress(`Installing (${i + 2}/${toBeInstalledDependencies.length})`, ((i + 1) / toBeInstalledDependencies.length) * 100);
+		}
+		const cntInstalled = toBeInstalledDependencies.length - cntErrors;
+		ui.notifications[cntErrors ? "error" : "info"](`${cntInstalled} module${cntInstalled === 1 ? "" : "s"} installed.${cntErrors ? ` ${cntErrors} error${cntErrors === 1 ? "" : "s"}. ${VeCt.STR_SEE_CONSOLE}` : ""}`);
+
+		// Reload the game in order for the modules to be available
+		if (!cntErrors && cntInstalled) game.shutDown();
+	}
+
+	static async pImportManifesturlModule (manifesturlModule) {
+		const manifestData = await this._activateListeners_pGetManifestData(manifesturlModule);
+		if (!manifestData) return;
+
+		if (!(await Config.P_GET_BACKEND_VERSION) || !Config.get("importAdventure", "isUseModdedInstaller")) return this._displayManualLinks(manifestData);
+
+		if (ImportSpecialPackages._ACTIVE_INSTALLATION) return ui.notifications.warn(`Please wait until the currently running installation completes!`);
+		ImportSpecialPackages._ACTIVE_INSTALLATION = true;
+
+		try {
+			const isInstallSuccess = await this._pInstallManifest({
+				type: "module",
+				name: manifestData.name,
+				manifest: manifesturlModule,
+			});
+			if (!isInstallSuccess) ui.notifications.error(`Failed to install module!`);
+		} catch (e) {
+			ui.notifications.error(`Failed to install module! ${VeCt.STR_SEE_CONSOLE}`);
+			throw e;
+		} finally {
+			ImportSpecialPackages._ACTIVE_INSTALLATION = false;
+		}
+
+		// This may restart the game
+		await this._activateListeners_pInstallDependencies("Module", manifestData);
+
+		try {
+			game.shutDown();
+		} catch (e) {
+			ui.notifications.info(`Module "${manifestData.name}" installed successfully. You must return to setup for this change to take effect!`);
+			console.error(...LGT, e);
+		}
+	}
+
+	static async pImportManifesturlWorld (manifesturlWorld) {
+		const manifestData = await this._activateListeners_pGetManifestData(manifesturlWorld);
+		if (!manifestData) return;
+
+		if (!(await Config.P_GET_BACKEND_VERSION) || !Config.get("importAdventure", "isUseModdedInstaller")) return this._displayManualLinks(manifestData);
+
+		if (ImportSpecialPackages._ACTIVE_INSTALLATION) return ui.notifications.warn(`Please wait until the currently running installation completes!`);
+		ImportSpecialPackages._ACTIVE_INSTALLATION = true;
+
+		try {
+			const isInstallSuccess = await this._pInstallManifest({
+				type: "world",
+				name: manifestData.name,
+				manifest: manifesturlWorld,
+			});
+			if (!isInstallSuccess) ui.notifications.error(`Failed to install world!`);
+		} catch (e) {
+			ui.notifications.error(`Failed to install world! ${VeCt.STR_SEE_CONSOLE}`);
+			throw e;
+		} finally {
+			ImportSpecialPackages._ACTIVE_INSTALLATION = false;
+		}
+
+		/* This is disabled, as *something* seems to already run and attempt to install dependencies? Foundry itself? */
+		// This may restart the game
+		// await this._activateListeners_pInstallDependencies("World", manifestData);
+
+		try {
+			game.shutDown();
+		} catch (e) {
+			ui.notifications.info(`World "${manifestData.name}" installed successfully. You must return to setup for this change to take effect!`);
+			console.error(...LGT, e);
+		}
+	}
+
+	static _displayManualLinks (manifestData) {
+		const {$modalInner, doClose} = UiUtil.getShowModal({
+			title: `Manual Installation${manifestData.title ? `\u2014${manifestData.title}` : ""}`,
+			isHeaderBorder: true,
+		});
+
+		const $btnClose = $(`<button class="btn btn-default btn-sm">Close</button>`)
+			.click(() => doClose());
+
+		const $btnCopyAll = $(`<button class="btn btn-primary mr-2">Copy Links</button>`)
+			.click(async () => {
+				const txt = `# Manifest URL:
+${manifestData.manifest}
+
+${manifestData.dependencies && manifestData.dependencies.length ? `# Dependency Manifest URLs:
+${manifestData.dependencies.map(it => it.manifest).join("\n")}` : ""}`.trim();
+
+				await MiscUtil.pCopyTextToClipboard(txt);
+				JqueryUtil.showCopiedEffect($btnCopyAll);
+			});
+
+		const ptDeps = manifestData.dependencies && manifestData.dependencies.length
+			? manifestData.dependencies.map(meta => {
+				const $dispUrl = $(`<code class="copyable">${meta.manifest}</code>`)
+					.click(async () => {
+						await MiscUtil.pCopyTextToClipboard(meta.manifest);
+						JqueryUtil.showCopiedEffect($dispUrl);
+					});
+
+				return $$`<div class="py-1 split-v-center">
+					<div class="mr-1">&quot;${meta.name || "(Unnamed)"}&quot;${meta._lAuthor ? ` <i>by</i> ${meta._lAuthor.joinConjunct(", ", " and ")}` : ""}:</div>
+					${$dispUrl}
+				</div>`;
+			})
+			: null;
+
+		const $dispUrl = $(`<code class="copyable">${manifestData.manifest}</code>`)
+			.click(async () => {
+				await MiscUtil.pCopyTextToClipboard(manifestData.manifest);
+				JqueryUtil.showCopiedEffect($dispUrl);
+			});
+
+		const $dispZip = $(`<code class="copyable">${manifestData.download}</code>`)
+			.click(async () => {
+				await MiscUtil.pCopyTextToClipboard(manifestData.download);
+				JqueryUtil.showCopiedEffect($dispZip);
+			});
+
+		$$($modalInner)`<div class="flex-col h-100">
 			<div class="mt-1 mb-2 italic">For manual installation, the following links should be copy-pasted into the appropriate input forms in Foundry's &quot;Setup&quot; UI. For automatic installation, you must install and enable the backend mod. Instructions on how to do so are included in the module README, or can be found on the <a href="https://wiki.5e.tools/index.php/FoundryTool_Install" target="_blank">wiki</a>.</div>
 
 			<div class="py-1 split-v-center">
 				<div class="mr-1 bold">Manifest:</div>
-				${_0x54aae8}
+				${$dispUrl}
 			</div>
 
-			${_0x496e4d?'<hr\x20class=\x22hr-1\x22><h4\x20class=\x22my-1\x22>Dependencies</h4>':''}
-			${_0x496e4d}
+			${ptDeps ? `<hr class="hr-1"><h4 class="my-1">Dependencies</h4>` : ""}
+			${ptDeps}
 
 			<hr class="hr-1">
 			<div class="py-1 split-v-center ve-muted">
 				<div class="mr-1 bold help--hover" title="If you wish to download the zip manually and add it to your Foundry data directory, use this link. Otherwise, use the above manifest link(s) via Foundry's &quot;Setup&quot; UI">ZIP:</div>
-				${_0x24e3d9}
+				${$dispZip}
 			</div>
 
 			<div class="mt-auto">
 				<div class="flex-h-right ve-small mb-2">
 					<i class="w-50 block text-right">We recommended that you paste the links into a notepad before closing this window and returning to setup.</i>
 				</div>
-				<div class="flex-h-right">${_0x2b6d0f}${_0x1201d2}</div>
+				<div class="flex-h-right">${$btnCopyAll}${$btnClose}</div>
 			</div>
-		</div>`;}[_0x13959f(0x228)](_0x1cf70b){const _0x4858d7=_0x13959f;_0x1cf70b[_0x4858d7(0x1fc)](_0x4858d7(0x1ff))[_0x4858d7(0x213)](async()=>{const _0x446405=_0x4858d7;if(!this['_list'])return;const _0x110275=this['_activateListeners_getSelectedRow']();if(!_0x110275)return;if(!_0x110275[_0x446405(0x1e3)])return ui[_0x446405(0x1d6)][_0x446405(0x1ce)](_0x446405(0x249));await this[_0x446405(0x211)]['pImportManifesturlModule'](_0x110275[_0x446405(0x1e3)]);}),_0x1cf70b[_0x4858d7(0x1fc)](_0x4858d7(0x1e4))['click'](async()=>{const _0x1a83e7=_0x4858d7;if(!this[_0x1a83e7(0x1d8)])return;const _0x596a72=this[_0x1a83e7(0x24c)]();if(!_0x596a72)return;if(!_0x596a72[_0x1a83e7(0x23a)])return ui[_0x1a83e7(0x1d6)]['warn'](_0x1a83e7(0x249));await this[_0x1a83e7(0x211)][_0x1a83e7(0x215)](_0x596a72[_0x1a83e7(0x23a)]);});}[_0x13959f(0x244)](_0x57c3be){const _0x535b35=_0x13959f;this['_$btnReset']=_0x57c3be[_0x535b35(0x1fc)](_0x535b35(0x25a))[_0x535b35(0x213)](()=>{const _0x4e3fb6=_0x535b35;_0x57c3be[_0x4e3fb6(0x1fc)](_0x4e3fb6(0x260))[_0x4e3fb6(0x221)]('');if(this[_0x4e3fb6(0x1d8)])this[_0x4e3fb6(0x1d8)][_0x4e3fb6(0x20f)]();});}[_0x13959f(0x225)](_0x250526){const _0x73392b=_0x13959f;return this[_0x73392b(0x1e5)]=_0x250526[_0x73392b(0x1fc)](_0x73392b(0x260)),this[_0x73392b(0x1d8)]=new List({'$iptSearch':this['_$iptSearch'],'$wrpList':_0x250526['find']('.veapp__list')}),SortUtil['initBtnSortHandlers'](_0x250526['find'](_0x73392b(0x1cf)),this['_list']),this['_pageFilter']['pInitFilterBox']({'$iptSearch':this[_0x73392b(0x1e5)],'$btnReset':this[_0x73392b(0x212)],'$btnOpen':_0x250526[_0x73392b(0x1fc)]('[name=btn-filter]'),'$btnToggleSummaryHidden':_0x250526[_0x73392b(0x1fc)](_0x73392b(0x257)),'$wrpMiniPills':_0x250526['find'](_0x73392b(0x23c)),'namespace':_0x73392b(0x24a)})[_0x73392b(0x208)](()=>{const _0x56ff4f=_0x73392b;this[_0x56ff4f(0x22d)][_0x56ff4f(0x24d)](_0x411d07=>this[_0x56ff4f(0x1cc)][_0x56ff4f(0x20e)](_0x411d07)),this['_list']['doAbsorbItems'](this[_0x56ff4f(0x22d)],{'fnGetName':_0x314d46=>_0x314d46[_0x56ff4f(0x231)],'fnGetValues':_0x1a731e=>({'name':_0x1a731e[_0x56ff4f(0x231)],'author':_0x1a731e[_0x56ff4f(0x23e)],'module':!!_0x1a731e['manifesturlModule'],'world':!!_0x1a731e['manifesturlWorld']}),'fnGetData':UtilList2['absorbFnGetData'],'fnBindListeners':_0x197a3f=>UtilList2['absorbFnBindListenersRadio'](this[_0x56ff4f(0x1d8)],_0x197a3f)}),this[_0x56ff4f(0x1d8)]['init'](),this[_0x56ff4f(0x1cc)][_0x56ff4f(0x1f7)]['render'](),this[_0x56ff4f(0x1cc)][_0x56ff4f(0x1f7)]['on'](FilterBox[_0x56ff4f(0x245)],this[_0x56ff4f(0x1c9)][_0x56ff4f(0x256)](this)),this[_0x56ff4f(0x1c9)]();});}['_handleFilterChange'](){const _0x53b9d3=_0x13959f,_0x29cfab=this['_pageFilter'][_0x53b9d3(0x1f7)][_0x53b9d3(0x220)]();this[_0x53b9d3(0x1d8)][_0x53b9d3(0x25d)](_0x5d5786=>this[_0x53b9d3(0x1cc)]['toDisplay'](_0x29cfab,this[_0x53b9d3(0x22d)][_0x5d5786['ix']]));}static['_getBaseManifestUrl'](_0x5571bf){const _0x3bd6a4=_0x13959f;return(_0x5571bf||'')['split']('/')[_0x3bd6a4(0x24b)](0x0,-0x1)[_0x3bd6a4(0x235)]('/');}}ImportSpecialPackages[_0x13959f(0x20c)]=_0x13959f(0x200),ImportSpecialPackages[_0x13959f(0x21a)]=null,ImportSpecialPackages[_0x13959f(0x1f9)]=class extends PageFilter{constructor(){const _0x4572db=_0x13959f;super(),this[_0x4572db(0x1fe)]=new Filter({'header':_0x4572db(0x219)}),this[_0x4572db(0x209)]=new Filter({'header':_0x4572db(0x1fd)});}static['mutateForFilters'](_0x78cef0){const _0x361c20=_0x13959f;_0x78cef0['_fType']=[];if(_0x78cef0[_0x361c20(0x1e3)])_0x78cef0['_fType']['push']('Module');if(_0x78cef0['manifesturlWorld'])_0x78cef0['_fType'][_0x361c20(0x1ca)](_0x361c20(0x23d));_0x78cef0[_0x361c20(0x214)]=_0x78cef0[_0x361c20(0x23e)]||[_0x361c20(0x204)];}['addToFilters'](_0x31e004,_0x4cdbf6){const _0x50ef6f=_0x13959f;if(_0x4cdbf6)return;this[_0x50ef6f(0x1fe)][_0x50ef6f(0x1ec)](_0x31e004[_0x50ef6f(0x24f)]),this[_0x50ef6f(0x209)][_0x50ef6f(0x1ec)](_0x31e004[_0x50ef6f(0x214)]);}async['_pPopulateBoxOptions'](_0x8c910b){const _0x3f59c1=_0x13959f;_0x8c910b[_0x3f59c1(0x222)]=[this['_typeFilter'],this[_0x3f59c1(0x209)]];}['toDisplay'](_0x4d80f1,_0x51216c){const _0x17fb20=_0x13959f;return this['_filterBox'][_0x17fb20(0x22b)](_0x4d80f1,_0x51216c[_0x17fb20(0x24f)],_0x51216c[_0x17fb20(0x214)]);}};export{ImportSpecialPackages};
+		</div>`;
+	}
+
+	_activateListeners_initBtnRun ($html) {
+		$html.find(`[name="btn-run--module"]`).click(async () => {
+			if (!this._list) return;
+
+			const row = this._activateListeners_getSelectedRow();
+			if (!row) return;
+
+			if (!row.manifesturlModule) return ui.notifications.warn(`Please select a package which includes a module!`);
+
+			await this.constructor.pImportManifesturlModule(row.manifesturlModule);
+		});
+
+		$html.find(`[name="btn-run--world"]`).click(async () => {
+			if (!this._list) return;
+
+			const row = this._activateListeners_getSelectedRow();
+			if (!row) return;
+
+			if (!row.manifesturlWorld) return ui.notifications.warn(`Please select a package which includes a module!`);
+
+			await this.constructor.pImportManifesturlWorld(row.manifesturlWorld);
+		});
+	}
+
+	_activateListeners_initBtnReset ($html) {
+		this._$btnReset = $html.find(`[name="btn-reset"]`).click(() => {
+			$html.find(`.search`).val("");
+			if (this._list) this._list.reset();
+		});
+	}
+
+	_activateListeners_pInitListAndFilters ($html) {
+		this._$iptSearch = $html.find(`.search`);
+
+		// Init list library
+		this._list = new List({
+			$iptSearch: this._$iptSearch,
+			$wrpList: $html.find(`.veapp__list`),
+		});
+		SortUtil.initBtnSortHandlers($html.find(`[data-name="wrp-btns-sort"]`), this._list);
+
+		return this._pageFilter.pInitFilterBox({
+			$iptSearch: this._$iptSearch,
+			$btnReset: this._$btnReset,
+			$btnOpen: $html.find(`[name=btn-filter]`),
+			$btnToggleSummaryHidden: $html.find(`[name=btn-toggle-summary]`),
+			$wrpMiniPills: $html.find(`.fltr__mini-view`),
+			namespace: `ImportSpecialPackages`,
+		}).then(() => {
+			this._rows.forEach(it => this._pageFilter.addToFilters(it));
+
+			this._list.doAbsorbItems(
+				this._rows,
+				{
+					fnGetName: it => it.name,
+					fnGetValues: it => ({
+						name: it.name,
+						author: it._lAuthor,
+						module: !!it.manifesturlModule,
+						world: !!it.manifesturlWorld,
+					}),
+					fnGetData: UtilList2.absorbFnGetData,
+					fnBindListeners: it => UtilList2.absorbFnBindListenersRadio(this._list, it),
+				},
+			);
+
+			this._list.init();
+
+			this._pageFilter.filterBox.render();
+
+			this._pageFilter.filterBox.on(
+				FilterBox.EVNT_VALCHANGE,
+				this._handleFilterChange.bind(this),
+			);
+
+			this._handleFilterChange();
+		});
+	}
+
+	_handleFilterChange () {
+		const f = this._pageFilter.filterBox.getValues();
+		this._list.filter(li => this._pageFilter.toDisplay(f, this._rows[li.ix]));
+	}
+
+	static _getBaseManifestUrl (manifestUrl) { return (manifestUrl || "").split("/").slice(0, -1).join("/"); }
+}
+ImportSpecialPackages._SUPPORT_URL = "https://discord.gg/tTeWvUHev4";
+ImportSpecialPackages._ACTIVE_INSTALLATION = null;
+
+ImportSpecialPackages.PageFilter = class extends PageFilter {
+	constructor () {
+		super();
+
+		this._typeFilter = new Filter({header: "Type"});
+		this._authorFilter = new Filter({header: "Author"});
+	}
+
+	static mutateForFilters (it) {
+		it._fType = [];
+		if (it.manifesturlModule) it._fType.push("Module");
+		if (it.manifesturlWorld) it._fType.push("World");
+
+		it._fAuthor = it._lAuthor || ["Unknown"];
+	}
+
+	addToFilters (it, isExcluded) {
+		if (isExcluded) return;
+
+		this._typeFilter.addItem(it._fType);
+		this._authorFilter.addItem(it._fAuthor);
+	}
+
+	async _pPopulateBoxOptions (opts) {
+		opts.filters = [
+			this._typeFilter,
+			this._authorFilter,
+		];
+	}
+
+	toDisplay (values, it) {
+		return this._filterBox.toDisplay(
+			values,
+			it._fType,
+			it._fAuthor,
+		);
+	}
+};
+
+export {ImportSpecialPackages};

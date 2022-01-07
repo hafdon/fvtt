@@ -1,1 +1,1825 @@
-const _0x27d7=['isBase','stringify','cape\x20of','type','mgc','isAddActiveEffects','includes','some','_getItemImporterType','3233FbwORc','\x20of\x20','getActorDamageResImmVulnConditionImm','data.bonuses.rsak.damage','heavy','pGetItemItem','container','getTypeRarityAndAttunementText','_IMPORT_TYPES','siege','ability','326265WvIHWN','_ITEM_TYPE_TO_ICON','get','data','attAbvToFull','ABIL_ABVS','_pGetItemItem_pGetImagePath','isDaeActive','band\x20of','fairy-wand','mantle\x20of','isStrictMatching','join','crossed-swords','robe\x20of','data.attributes.ac.value','slice','_baseName','boots\x20of','unlock','necklace\x20of','push','max','getTypeRarityAndAttunementHtml','_getItemFlags','\x22\x20(','pLock','rel','bracer\x20of','.svg','getWithDescriptionPlugins','Unhandled\x20importer\x20type\x20\x22','bardingType','weaponCategory','name','Damage\x20Vulnerability','circlet\x20of','fin','bonusAc','_getItemAcMeta','amount','quantity','Item\x20foundryType\x20\x22','martial','510247NreSih','bonusWeaponAttack','Condition\x20Immunity','warn','rod','pocket-bow','pGetItemItemEffects','spc','lgt','log','_pGetItemItem_equipment','ADD','_ITEM_NAME_TO_DEFAULT_ABILITY','value','_WEAPON_DETAIL_CACHE','shield','_IMPORT_TYPE_WEAPON','scroll','cha','_WEAPON_DETAIL_CACHE_INIT','min','_pGetItemItem_fromSrd','Spell\x20Damage\x20Bonus\x20(Ranged)','_IMPORT_TYPE_TOOL','reqAttune','badge\x20of','MODULE_NAME_FAKE','hat\x20of','isDaeGeneratingArmorEffects','\x20+\x20{','Adamantine\x20Armor','lod','.value','bonusWeaponDamage','propDroppable','hvy','galleon','NONE','1xCVjqF','_pGetActionWeaponDetails_initCaches','attunementTypes','light','data.attributes.prof','PG_ITEMS','horse-head',',\x20@abilities.dex.mod}kl','bonusWeapon','int','_pGetItemItem_consumable','_SIZE_TO_ITEM_WEIGHT_MULT','data.abilities.','backpack','barrel','_WEAPON_DETAIL_CACHE_LOCK','\x0a\x09\x09','uppercaseFirst','Damage\x20Resistance','_SIZE_TO_ITEM_WEIGHT_AND_VALUE_EXPONENT','data.bonuses.abilities.save','getSourceWithPagePart','trim','test','helm\x20of','Adamantine\x20Ammunition','Bonus\x20','effects','Unknown','bonusAbilityCheck','bonusProficiencyBonus','Pre-caching\x20item\x20lookup...','_ITEM_PROP_MAP','sil','actor','reduce','_pGetItemItem_loot','import','_pGetItemEffects_getDrDiDvCiEffects','maxDexBonus','isImportDescriptionHeader','wis','old-wagon','dmg1','/media/icon/','scale-mail','tied-scroll','1iptIJw','importCreature','_baseSrd','goggles\x20of','thr','Proficiency\x20Bonus...\x20Bonus?','itemWeightAndValueSizeScaling','populatePropertyAndTypeReference','dmgTypeToFull','isActorItem','_IMPORT_TYPE_LOOT','consume','tool','bonusSpellAttack','_getItemItem_getItemDescription_','source','ACTIVE_EFFECT_MODES','poison','getCleanEntityName','Spell\x20Damage\x20Bonus\x20(Melee)','permissions','forEach','Damage\x20Immunity','_getSrdAliases','bonusSavingThrow','sheetItemsAmmo','Spell\x20Attack\x20Bonus\x20(Ranged)','_pIsInSrd','isNonstandardSource','ammo','Adamantine\x20Weapon','1GNkxAC','getExpandedEffects','clothes\x20of','PRIORITY_BONUS','rolling-dices','breastplate','getGenericEffect','target','isImportDescription','\x0a\x09\x09\x09\x09<div\x20class=\x22flex\x20w-100\x22>\x0a\x09\x09\x09\x09\x09<div\x20class=\x22col-4\x22>','_IMPORT_TYPE_EQUIPMENT','property','rings\x20of','UPGRADE','data.bonuses.spell.dc','acValue','weight','assign','getSrdCompendiumEntity','filterValues','_pGetItemItem_tool','amm','_pGetAdditionalData','medium','ring','getItemSource','Ability\x20Check\x20Bonus','isAddDataFlags','1wwnIUA','map','_getWeaponProperties','wondrous','.custom','ring\x20of','+@mod','filter','PRIORITY_BASE','Spell\x20Attack\x20Bonus\x20(Melee)','data.bonuses.abilities.check','_getItemItem_getItemDescription','toTitleCase','pGetAdditionalEffectsRaw_','ver','gauntlets\x20of','air-balloon','simple','replace','data.bonuses.msak.damage','variant','foundryItem','basic','_getWeaponTypeAndAbility','static','two','rarity','\x22\x20found\x20on\x20item\x20\x22','importItem','potion-ball','_pGetItemItem_getWeightAndPrice','Silvered\x20Weapon','toolbox','dexMod','_pGetItemItem_getAmmoConsumeDetails','_pGetItemEffects_getAcEffects','pHasItemSideLoadedEffects','feet','</div>\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09</div>\x0a\x09\x09<hr>','getNameWithSourcePart','_pGetItemEffects_getGenericBonus','(?:[\x20(]|^)','pGetCompendiumImage','dmg2','Silvered\x20Ammunition','length','containerCapacity','isAddPermission','floor','_IMPORT_TYPE_CONSUMABLE','pGetAdditionalData_','permission','entries','_fvttImage','eyes\x20of','619367xPYgeb','none','isEquipped','Base','\x20AC','crystal-wand','toLowerCase','baseItem','findIndex','_getItemItem_getItemUses','pGetActionWeaponDetails','loot','getDamageAndPropertiesText','1SEXExn','leather-armor','709321BIKVjW','bonusSpellDamage','weapon','_pGetCompendiumImage','MODULE_NAME','EXP','pGetItemSideData','_IMPORT_TYPE_CONTAINER','slippers\x20of','equipment','isUseExtendedActiveEffectsParser','range','fluff','_ITEM_TYPE_TO_ARMOR_TYPE','URL_TO_HASH_BUILDER','headband\x20of','ammoType','1107123uCjQta','charges','copy','77765YeBBDE','item','pGetFluff','modules/','dexterityMax','_pGetItemItem_getAttunedIdentifiedEquipped','_SIZE_TO_ITEM_VALUE_MULT','_pGetItemEffects','_variantName','foundryType','stealth','mwak','guitar','_category','data.traits.','dmgType','consumable','attunementType','Base\x20','foundryVariant','weightless','\x20+\x20@abilities.dex.mod','getMetricNumber','split','211SSYqHd','size','_ITEM_TYPE_TO_CONSUMABLE_TYPE','exec','_pGetItemItem_weapon','_ITEM_EQUIPMENT_NAME_RES','_isItemGroup'];const _0x7e76=function(_0x363de8,_0x3be97d){_0x363de8=_0x363de8-0x12a;let _0x27d79a=_0x27d7[_0x363de8];return _0x27d79a;};const _0x1349ac=_0x7e76;(function(_0x452935,_0x2c26a5){const _0xc912d4=_0x7e76;while(!![]){try{const _0x5841b9=-parseInt(_0xc912d4(0x206))*parseInt(_0xc912d4(0x133))+-parseInt(_0xc912d4(0x259))+parseInt(_0xc912d4(0x14b))*parseInt(_0xc912d4(0x15b))+parseInt(_0xc912d4(0x268))*parseInt(_0xc912d4(0x266))+-parseInt(_0xc912d4(0x192))*-parseInt(_0xc912d4(0x1b8))+parseInt(_0xc912d4(0x222))*parseInt(_0xc912d4(0x166))+parseInt(_0xc912d4(0x130))*-parseInt(_0xc912d4(0x1e7));if(_0x5841b9===_0x2c26a5)break;else _0x452935['push'](_0x452935['shift']());}catch(_0x588bd6){_0x452935['push'](_0x452935['shift']());}}}(_0x27d7,0x6773d));import{SharedConsts}from'../shared/SharedConsts.js';import{Vetools}from'./Vetools.js';import{LGT}from'./Util.js';import{Config}from'./Config.js';import{UtilApplications}from'./UtilApplications.js';import{DataConverter}from'./DataConverter.js';import{UtilActiveEffects}from'./UtilActiveEffects.js';import{UtilCompat}from'./UtilCompat.js';import{UtilCompendium}from'./UtilCompendium.js';class DataConverterItem{static async[_0x1349ac(0x263)]({size:_0x39de51,action:_0x667321,damageParts:_0x3b9f90,isSiegeWeapon:_0x41732a,isMagical:_0xc1d4d2}){const _0x5cb3c9=_0x1349ac;await Renderer[_0x5cb3c9(0x134)]['populatePropertyAndTypeReference'](),await this[_0x5cb3c9(0x1b9)]();let _0x32c5f1='',_0x364f2c=0x0,_0xfcd3b7=null,_0x4780a2=null,_0x410d30='',_0x31bfb6=_0x41732a?_0x5cb3c9(0x164):'natural',_0x314c07={},_0x31da6a=![],_0x1912d3=0x0,_0x101339=![],_0x4d3ac4=0x0;const _0x1c74e3=(_0x667321[_0x5cb3c9(0x188)]||'')[_0x5cb3c9(0x234)](/\(.*\)$/,'')[_0x5cb3c9(0x25f)](),_0x47a405=DataConverterItem['_WEAPON_DETAIL_CACHE'][_0x1c74e3]?MiscUtil['copy'](DataConverterItem[_0x5cb3c9(0x1a0)][_0x1c74e3]):null;if(_0x47a405){const {weight:_0x35b1bc,price:_0x1d32ee}=DataConverterItem[_0x5cb3c9(0x240)](_0x47a405,_0x39de51);_0x364f2c=_0x35b1bc,_0xfcd3b7=_0x1d32ee,_0x410d30=(_0x47a405[_0x5cb3c9(0x23c)]||_0x5cb3c9(0x1d4))[_0x5cb3c9(0x22e)]();const _0x498494=this['_getWeaponTypeAndAbility'](_0x47a405);_0x31bfb6=_0x498494['weaponType'],_0x314c07=this[_0x5cb3c9(0x224)](_0x47a405);const {isAttuned:_0x4f6bc8,isIdentified:_0x31ee87,attunement:_0x1446c2}=this['_pGetItemItem_getAttunedIdentifiedEquipped'](_0x47a405);_0x31da6a=_0x31da6a||_0x4f6bc8,_0x1912d3=_0x1912d3||_0x1446c2,_0x101339=_0x101339||_0x31ee87,_0x4780a2=_0x47a405[_0x5cb3c9(0x257)]||_0x4780a2;if(_0x47a405[_0x5cb3c9(0x1c0)]&&!isNaN(_0x47a405[_0x5cb3c9(0x1c0)]))_0x4d3ac4=Number(_0x47a405['bonusWeapon']);if(_0x47a405[_0x5cb3c9(0x193)]&&!isNaN(_0x47a405[_0x5cb3c9(0x193)]))_0x4d3ac4=Number(_0x47a405[_0x5cb3c9(0x1c0)]);}if(_0x3b9f90['length']>0x1&&(_0x47a405&&(_0x47a405[_0x5cb3c9(0x211)]||[])[_0x5cb3c9(0x158)]('V')||/ (?:two|both) hands/i[_0x5cb3c9(0x1cf)](JSON[_0x5cb3c9(0x153)](_0x667321[_0x5cb3c9(0x256)]||[])))){const _0xa583d7=_0x3b9f90[0x0][0x1];if(_0xa583d7){const _0x521d2e=_0x3b9f90[_0x5cb3c9(0x176)](0x1)[_0x5cb3c9(0x261)](_0x681ae7=>_0x681ae7[0x1]===_0xa583d7);if(~_0x521d2e){_0x3b9f90=MiscUtil[_0x5cb3c9(0x132)](_0x3b9f90);const [_0x24b0a9]=_0x3b9f90['splice'](_0x521d2e+0x1,0x1);_0x32c5f1=_0x24b0a9[0x0];}}}if(_0xc1d4d2)_0x314c07[_0x5cb3c9(0x156)]=!![];return{'damageParts':_0x3b9f90,'damageVersatile':_0x32c5f1,'weight':_0x364f2c,'price':_0xfcd3b7,'img':_0x4780a2,'rarity':_0x410d30,'weaponType':_0x31bfb6,'itemProperties':_0x314c07,'attuned':_0x31da6a,'attunement':_0x1912d3,'identified':_0x101339,'attackBonus':_0x4d3ac4};}static async[_0x1349ac(0x1b9)](){const _0x2fa036=_0x1349ac;if(DataConverterItem['_WEAPON_DETAIL_CACHE_INIT'])return;await DataConverterItem[_0x2fa036(0x1c7)][_0x2fa036(0x180)]();try{if(DataConverterItem[_0x2fa036(0x1a5)])return;console[_0x2fa036(0x19b)](...LGT,_0x2fa036(0x1d7));const {item:_0x30b79b}=await Vetools['pGetItems']();for(const _0x3afe82 of _0x30b79b){if(_0x3afe82['type']==='GV')continue;const _0x4cd59e=_0x3afe82[_0x2fa036(0x188)]['toLowerCase'](),_0x258acd=_0x4cd59e['replace'](/^(.*?)( \+\d+$)/,(..._0x1f9284)=>_0x1f9284[0x2][_0x2fa036(0x1ce)]()+'\x20'+_0x1f9284[0x1][_0x2fa036(0x1ce)]()),_0x1c8e38=[_0x4cd59e,_0x258acd===_0x4cd59e?null:_0x258acd][_0x2fa036(0x229)](Boolean),_0x26f7b0=MiscUtil[_0x2fa036(0x132)](_0x3afe82),_0x2a9ff8=await Renderer['item'][_0x2fa036(0x135)](_0x26f7b0);_0x26f7b0[_0x2fa036(0x257)]=await DataConverterItem[_0x2fa036(0x16c)](_0x26f7b0,_0x2a9ff8),_0x1c8e38['forEach'](_0x203536=>{const _0x4b9851=_0x2fa036;if(!DataConverterItem[_0x4b9851(0x1a0)][_0x203536]){DataConverterItem[_0x4b9851(0x1a0)][_0x203536]=_0x26f7b0;return;}const _0x99155f=DataConverterItem['_WEAPON_DETAIL_CACHE'][_0x203536];!(_0x99155f[_0x4b9851(0x1f6)]===SRC_DMG||_0x99155f[_0x4b9851(0x1f6)]===SRC_PHB)&&SourceUtil[_0x4b9851(0x203)](_0x99155f[_0x4b9851(0x1f6)])&&(DataConverterItem[_0x4b9851(0x1a0)][_0x203536]=_0x26f7b0);});}console[_0x2fa036(0x19b)](...LGT,'Pre-caching\x20complete.'),DataConverterItem[_0x2fa036(0x1a5)]=!![];}finally{DataConverterItem[_0x2fa036(0x1c7)][_0x2fa036(0x179)]();}}static async[_0x1349ac(0x160)](_0xf306ab,_0x4b50a1){const _0x4277ef=_0x1349ac;_0x4b50a1=_0x4b50a1||{},await Renderer[_0x4277ef(0x134)][_0x4277ef(0x1ee)]();const _0x2be2f9=_0xf306ab['entries']?JSON['stringify'](_0xf306ab[_0x4277ef(0x256)]):'';if(_0xf306ab[_0x4277ef(0x151)])return this['_pGetItemItem_loot'](_0xf306ab,_0x4b50a1,_0x2be2f9);let _0x4c65d4;if(await this['_pIsInSrd'](_0xf306ab))_0x4c65d4=await this[_0x4277ef(0x1a7)](_0xf306ab,_0x4b50a1,_0x2be2f9);else{const _0x5f2085=this[_0x4277ef(0x15a)](_0xf306ab);switch(_0x5f2085){case DataConverterItem[_0x4277ef(0x1a2)]:_0x4c65d4=await this[_0x4277ef(0x14f)](_0xf306ab,_0x4b50a1,_0x2be2f9);break;case DataConverterItem[_0x4277ef(0x1a9)]:_0x4c65d4=await this['_pGetItemItem_tool'](_0xf306ab,_0x4b50a1,_0x2be2f9);break;case DataConverterItem[_0x4277ef(0x253)]:_0x4c65d4=await this[_0x4277ef(0x1c2)](_0xf306ab,_0x4b50a1,_0x2be2f9);break;case DataConverterItem[_0x4277ef(0x210)]:_0x4c65d4=await this[_0x4277ef(0x19c)](_0xf306ab,_0x4b50a1,_0x2be2f9);break;case DataConverterItem[_0x4277ef(0x26f)]:_0x4c65d4=await this['_pGetItemItem_container'](_0xf306ab,_0x4b50a1,_0x2be2f9);break;case DataConverterItem[_0x4277ef(0x1f1)]:_0x4c65d4=await this[_0x4277ef(0x1dc)](_0xf306ab,_0x4b50a1,_0x2be2f9);break;default:throw new Error(_0x4277ef(0x185)+_0x5f2085+'\x22');}}if(_0x4b50a1[_0x4277ef(0x251)])_0x4c65d4[_0x4277ef(0x255)]={'default':Config[_0x4277ef(0x168)]('importItem',_0x4277ef(0x1fb))};return _0x4c65d4;}static[_0x1349ac(0x15a)](_0x40adf5){const _0x35f46d=_0x1349ac;if(_0x40adf5[_0x35f46d(0x13c)]){const _0x130cdd=_0x40adf5['foundryType'][_0x35f46d(0x25f)]()[_0x35f46d(0x1ce)]();if(DataConverterItem[_0x35f46d(0x163)][_0x130cdd])return _0x130cdd;else console[_0x35f46d(0x195)](...LGT,_0x35f46d(0x190)+_0x40adf5[_0x35f46d(0x13c)]+_0x35f46d(0x23d)+_0x40adf5[_0x35f46d(0x188)]+_0x35f46d(0x17f)+_0x40adf5['source']+')\x20is\x20not\x20a\x20supported\x20item\x20type.\x20An\x20auto-generated\x20type\x20will\x20be\x20used\x20instead.');}if(_0x40adf5[_0x35f46d(0x1e3)])return DataConverterItem[_0x35f46d(0x1a2)];if(_0x40adf5[_0x35f46d(0x155)]==='AT'||_0x40adf5[_0x35f46d(0x155)]==='T')return DataConverterItem[_0x35f46d(0x1a9)];if(_0x40adf5[_0x35f46d(0x155)]==='P'||_0x40adf5['type']==='SC'||_0x40adf5[_0x35f46d(0x155)]==='WD'&&_0x40adf5[_0x35f46d(0x131)]||_0x40adf5[_0x35f46d(0x155)]==='RD'&&_0x40adf5[_0x35f46d(0x131)]||_0x40adf5[_0x35f46d(0x155)]==='G'&&_0x40adf5[_0x35f46d(0x131)]||_0x40adf5[_0x35f46d(0x1f8)]||_0x40adf5[_0x35f46d(0x155)]==='A'||_0x40adf5[_0x35f46d(0x155)]==='AF'||_0x40adf5['type']===_0x35f46d(0x26d))return DataConverterItem['_IMPORT_TYPE_CONSUMABLE'];if(_0x40adf5['type']==='HA'||_0x40adf5[_0x35f46d(0x155)]==='MA'||_0x40adf5[_0x35f46d(0x155)]==='LA'||_0x40adf5['type']==='S'||_0x40adf5[_0x35f46d(0x186)])return DataConverterItem[_0x35f46d(0x210)];if(_0x40adf5[_0x35f46d(0x250)])return DataConverterItem[_0x35f46d(0x26f)];if(_0x40adf5['bonusAc']||_0x40adf5['ability']||_0x40adf5[_0x35f46d(0x225)])return DataConverterItem[_0x35f46d(0x210)];if(this[_0x35f46d(0x150)][_0x35f46d(0x159)](_0x25ea00=>_0x25ea00['test'](_0x40adf5[_0x35f46d(0x188)])))return DataConverterItem[_0x35f46d(0x210)];return DataConverterItem['_IMPORT_TYPE_LOOT'];}static async[_0x1349ac(0x202)](_0x4af4b7){const _0x380ed3=_0x1349ac,_0x258c1b=await UtilCompendium['getSrdCompendiumEntity'](_0x380ed3(0x134),_0x4af4b7,{'fnGetAliases':this['_getSrdAliases']});return!!_0x258c1b;}static[_0x1349ac(0x1fe)](_0x493151){const _0x1d0c5c=_0x1349ac;if(!_0x493151['name'])return[];const _0x3744a7=[];_0x3744a7[_0x1d0c5c(0x17b)](_0x493151[_0x1d0c5c(0x188)]+'s');if(_0x493151['name']['toLowerCase']()[_0x1d0c5c(0x158)](_0x1d0c5c(0x247)))_0x3744a7[_0x1d0c5c(0x17b)](_0x493151[_0x1d0c5c(0x188)][_0x1d0c5c(0x234)](/feet/g,'ft.'));if(_0x493151['name'][_0x1d0c5c(0x158)](',\x20'))_0x3744a7[_0x1d0c5c(0x17b)](_0x493151['name'][_0x1d0c5c(0x234)](/, /g,'\x20'));const _0x1d787d=/^([^(]+) \(([^)]+)\)$/[_0x1d0c5c(0x14e)](_0x493151[_0x1d0c5c(0x188)]['trim']());if(_0x1d787d)_0x3744a7[_0x1d0c5c(0x17b)](_0x1d787d[0x2]+_0x1d0c5c(0x15c)+_0x1d787d[0x1]);if(_0x1d787d)_0x3744a7[_0x1d0c5c(0x17b)](_0x1d787d[0x1]+'\x20'+_0x1d787d[0x2]);if(_0x1d787d)_0x3744a7['push'](_0x1d787d[0x1]);return _0x3744a7;}static[_0x1349ac(0x17e)](_0x184523,_0x273885){const _0x21a9be=_0x1349ac;_0x273885=_0x273885||{};const _0x4ba4b9={[SharedConsts[_0x21a9be(0x1ac)]]:{'page':UrlUtil[_0x21a9be(0x1bd)],'source':_0x184523[_0x21a9be(0x1f6)],'hash':UrlUtil[_0x21a9be(0x12d)][UrlUtil[_0x21a9be(0x1bd)]](_0x184523)}};return _0x273885[_0x21a9be(0x221)]&&(_0x4ba4b9[SharedConsts['MODULE_NAME_FAKE']][_0x21a9be(0x1b4)]=_0x21a9be(0x134),_0x4ba4b9[SharedConsts[_0x21a9be(0x1ac)]]['filterValues']=_0x273885[_0x21a9be(0x219)]),_0x4ba4b9;}static async[_0x1349ac(0x1a7)](_0x238602,_0x5e7795,_0x378055){const _0x1fe8ca=_0x1349ac,{weight:_0x243a42,price:_0x437d18}=this[_0x1fe8ca(0x240)](_0x238602,_0x5e7795[_0x1fe8ca(0x14c)]),{isAttuned:_0xbbdc2a,isIdentified:_0x587b38,isEquipped:_0x557fae,attunement:_0x3d3e74}=this['_pGetItemItem_getAttunedIdentifiedEquipped'](_0x238602),{consumeType:_0x43235b,consumeTarget:_0x3ae042,consumeAmount:_0x4daf6b}=this[_0x1fe8ca(0x244)](_0x238602,_0x5e7795),_0x261094=await UtilCompendium[_0x1fe8ca(0x218)](_0x1fe8ca(0x134),_0x238602,{'fnGetAliases':this[_0x1fe8ca(0x1fe)]}),_0x397544={..._0x261094[_0x1fe8ca(0x169)][_0x1fe8ca(0x1f2)]||{}};_0x397544[_0x1fe8ca(0x155)]=_0x397544[_0x1fe8ca(0x155)]||_0x43235b,_0x397544[_0x1fe8ca(0x20d)]=_0x397544[_0x1fe8ca(0x20d)]||_0x3ae042,_0x397544['amount']=_0x397544[_0x1fe8ca(0x18e)]||_0x4daf6b;const _0x276aa3=await this['_pGetAdditionalData'](_0x238602),_0x17c7fa=await DataConverterItem['_pGetItemItem_pGetImagePath'](_0x238602,_0x5e7795['fluff']);return{'name':UtilApplications[_0x1fe8ca(0x1f9)](DataConverter['getNameWithSourcePart'](_0x238602,{'isActorItem':_0x5e7795[_0x1fe8ca(0x1f0)]})),'type':_0x261094[_0x1fe8ca(0x155)],'data':{..._0x261094[_0x1fe8ca(0x169)],'source':DataConverter['getSourceWithPagePart'](_0x238602),'description':{'value':DataConverterItem[_0x1fe8ca(0x22d)](_0x238602),'chat':'','unidentified':''},'proficient':!![],'quantity':_0x5e7795['quantity']!=null?_0x5e7795['quantity']:_0x238602['quantity']||0x1,'weight':_0x243a42,'price':_0x437d18,'attuned':_0xbbdc2a,'identified':_0x587b38,'equipped':_0x5e7795[_0x1fe8ca(0x25b)]??_0x557fae,'rarity':(_0x238602[_0x1fe8ca(0x23c)]||_0x1fe8ca(0x1d4))[_0x1fe8ca(0x22e)](),'consume':_0x397544,'attunement':_0x3d3e74,..._0x276aa3||{}},'img':_0x17c7fa,'flags':{...this[_0x1fe8ca(0x17e)](_0x238602,_0x5e7795)},'effects':[...MiscUtil[_0x1fe8ca(0x132)](_0x261094[_0x1fe8ca(0x1d3)]||[]),...await this[_0x1fe8ca(0x13a)](_0x238602,_0x17c7fa,_0x5e7795)]};}static[_0x1349ac(0x240)](_0x6d2c82,_0x2853cc){const _0x5befe5=_0x1349ac;let _0x458155=null,_0x2ba066=null,_0x22ee0d=null;if(_0x2853cc==null||_0x2853cc===SZ_MEDIUM)return{'weight':Config[_0x5befe5(0x149)](_0x5befe5(0x23e),_0x6d2c82[_0x5befe5(0x216)]||0x0,'lb'),'price':!isNaN(_0x6d2c82[_0x5befe5(0x19f)])?_0x6d2c82[_0x5befe5(0x19f)]/0x64:null};const _0x2f9963=Config['get'](_0x5befe5(0x1e8),_0x5befe5(0x1ed));switch(_0x2f9963){case 0x1:{_0x458155=_0x6d2c82['weight']||0x0,_0x22ee0d=_0x6d2c82['value'];break;}case 0x2:{const _0x159a73=DataConverterItem['_SIZE_TO_ITEM_WEIGHT_MULT'][_0x2853cc]||0x1,_0x1980e7=DataConverterItem[_0x5befe5(0x139)][_0x2853cc]||0x1;_0x6d2c82['weight']&&!isNaN(_0x6d2c82['weight'])&&(_0x458155=Number(_0x6d2c82[_0x5befe5(0x216)])*_0x159a73);_0x6d2c82[_0x5befe5(0x19f)]&&!isNaN(_0x6d2c82[_0x5befe5(0x19f)])&&(_0x22ee0d=_0x6d2c82['value']*_0x1980e7);break;}case 0x3:{const _0x29fdf2=DataConverterItem[_0x5befe5(0x1cb)][_0x2853cc]||0x1;_0x6d2c82['weight']&&!isNaN(_0x6d2c82['weight'])&&(_0x458155=Math['floor'](_0x6d2c82[_0x5befe5(0x216)]**_0x29fdf2));if(_0x6d2c82[_0x5befe5(0x19f)]&&!isNaN(_0x6d2c82['value'])){const _0x52e7ee=_0x6d2c82[_0x5befe5(0x19f)]<0xa?0x1:_0x6d2c82['value']<0x64?0xa:0x64;_0x22ee0d=_0x6d2c82['value']/_0x52e7ee,_0x22ee0d=Math[_0x5befe5(0x252)](_0x22ee0d**_0x29fdf2),_0x22ee0d*=_0x52e7ee;}break;}}if(_0x22ee0d)_0x2ba066=_0x22ee0d/0x64;return{'weight':Config[_0x5befe5(0x149)]('importItem',_0x458155||0x0,'lb'),'price':_0x2ba066};}static[_0x1349ac(0x138)](_0x35a214){const _0x519eb3=_0x1349ac,_0x3e5c18=_0x35a214[_0x519eb3(0x23c)]===_0x519eb3(0x25a)||_0x35a214['rarity']==='unknown'||_0x35a214[_0x519eb3(0x140)]===_0x519eb3(0x238),_0x139d95=!_0x3e5c18&&!!_0x35a214[_0x519eb3(0x1aa)];let _0x14ee79;const _0x3f8fcb=this[_0x519eb3(0x15a)](_0x35a214);switch(_0x3f8fcb){case DataConverterItem[_0x519eb3(0x1a2)]:_0x14ee79=!![];break;case DataConverterItem[_0x519eb3(0x1a9)]:_0x14ee79=![];break;case DataConverterItem['_IMPORT_TYPE_CONSUMABLE']:_0x14ee79=![];break;case DataConverterItem[_0x519eb3(0x210)]:_0x14ee79=!![];break;case DataConverterItem['_IMPORT_TYPE_CONTAINER']:_0x14ee79=![];break;case DataConverterItem[_0x519eb3(0x1f1)]:_0x14ee79=![];break;default:throw new Error(_0x519eb3(0x185)+_0x3f8fcb+'\x22');}return{'isAttuned':_0x139d95,'attunement':_0x35a214[_0x519eb3(0x1aa)]?Config[_0x519eb3(0x168)]('importItem',_0x519eb3(0x144)):CONFIG['DND5E'][_0x519eb3(0x1ba)][_0x519eb3(0x1b7)],'isIdentified':!_0x3e5c18,'isEquipped':_0x14ee79};}static['_getItemItem_getItemDescription'](_0x27ce46){const _0x4e56ea=_0x1349ac;if(!Config[_0x4e56ea(0x168)]('importItem',_0x4e56ea(0x20e)))return'';return DataConverter[_0x4e56ea(0x184)](()=>this['_getItemItem_getItemDescription_'](_0x27ce46));}static[_0x1349ac(0x1f5)](_0x3c7e53){const _0x1a1d63=_0x1349ac,[_0x3557ce,_0x5006c5,_0x3b100b]=Renderer[_0x1a1d63(0x134)][_0x1a1d63(0x265)](_0x3c7e53),[_0x83c2c,_0x4b7795,_0x2a8058]=Renderer[_0x1a1d63(0x134)][_0x1a1d63(0x162)](_0x3c7e53),_0x46120f=Config[_0x1a1d63(0x168)](_0x1a1d63(0x23e),_0x1a1d63(0x1e0))?'<div>\x0a\x09\x09\x09'+Renderer[_0x1a1d63(0x134)][_0x1a1d63(0x17d)](_0x83c2c,_0x4b7795,_0x2a8058)+_0x1a1d63(0x20f)+[Parser['itemValueToFull'](_0x3c7e53),Parser['itemWeightToFull'](_0x3c7e53)][_0x1a1d63(0x229)](Boolean)[_0x1a1d63(0x172)](',\x20')[_0x1a1d63(0x1c9)]()+'</div>\x0a\x09\x09\x09\x09\x09<div\x20class=\x22col-8\x20text-right\x22>'+_0x3557ce+'\x20'+_0x5006c5+'\x20'+_0x3b100b+_0x1a1d63(0x248):'',_0x35a912=Renderer[_0x1a1d63(0x134)]['getRenderedEntries'](_0x3c7e53,{'isCompact':!![],'wrappedTypeWhitelist':Config[_0x1a1d63(0x168)](_0x1a1d63(0x23e),_0x1a1d63(0x1e0))?null:new Set([_0x1a1d63(0x236)])});return _0x46120f+_0x1a1d63(0x1c8)+_0x35a912;}static['_getItemItem_getItemUses'](_0x22ad92){const _0x423c3b=_0x1349ac;let _0x15cabc=0x0;if(_0x22ad92[_0x423c3b(0x131)]){if(isNaN(_0x22ad92[_0x423c3b(0x131)])){const _0x3cfc2b=/{@dice (\d)+d(\d+)\s*(?:[-+]\s*\d+)?}/i['exec'](_0x22ad92[_0x423c3b(0x131)]);_0x3cfc2b&&(_0x15cabc=Number(_0x3cfc2b[0x1])*Number(_0x3cfc2b[0x2])+(_0x3cfc2b[0x3]?Number(_0x3cfc2b[0x3]['replace'](/\s*/g,'')):0x0));}else _0x15cabc=_0x22ad92[_0x423c3b(0x131)];}return _0x15cabc;}static[_0x1349ac(0x239)](_0x44136d){const _0x33944d=_0x1349ac;let _0x209144='',_0x115512='str';if(_0x44136d[_0x33944d(0x155)]==='A'||_0x44136d['type']==='AF')_0x209144=_0x33944d(0x204),_0x115512='dex';else{if(_0x44136d[_0x33944d(0x155)]==='M'||_0x44136d[_0x33944d(0x155)]==='R'){if((_0x44136d[_0x33944d(0x187)]||'')[_0x33944d(0x25f)]()===_0x33944d(0x191))_0x209144='martial'+_0x44136d['type'];else{if((_0x44136d[_0x33944d(0x187)]||'')[_0x33944d(0x25f)]()===_0x33944d(0x233))_0x209144=_0x33944d(0x233)+_0x44136d['type'];}}}if(_0x44136d['type']==='R')_0x115512='dex';else{if(_0x44136d[_0x33944d(0x211)]&&_0x44136d['property'][_0x33944d(0x158)]('F'))_0x115512='dex';}return{'weaponType':_0x209144,'weaponAbility':_0x115512};}static[_0x1349ac(0x224)](_0x4fa85d){const _0x45120a=_0x1349ac,_0x3f9cff=_0x4fa85d[_0x45120a(0x211)]?_0x4fa85d['property']['map'](_0x43aec6=>DataConverterItem['_ITEM_PROP_MAP'][_0x43aec6])[_0x45120a(0x229)](Boolean)[_0x45120a(0x223)](_0x595228=>({[_0x595228]:!![]}))['reduce']((_0x261987,_0x182da9)=>Object[_0x45120a(0x217)](_0x261987,_0x182da9),{}):{};if(_0x4fa85d['_variantName']===_0x45120a(0x205)||_0x4fa85d[_0x45120a(0x13b)]===_0x45120a(0x1b0)||_0x4fa85d[_0x45120a(0x13b)]===_0x45120a(0x1d1))_0x3f9cff['ada']=!![];if(_0x4fa85d['focus'])_0x3f9cff['foc']=!![];if(!Renderer[_0x45120a(0x134)]['isMundane'](_0x4fa85d))_0x3f9cff[_0x45120a(0x156)]=!![];if(_0x4fa85d[_0x45120a(0x13b)]===_0x45120a(0x241)||_0x4fa85d[_0x45120a(0x13b)]===_0x45120a(0x24e))_0x3f9cff[_0x45120a(0x1d9)]=!![];if(_0x4fa85d['firearm'])_0x3f9cff['fir']=!![];return _0x3f9cff;}static async[_0x1349ac(0x14f)](_0x5235d2,_0x3aa06a,_0x2124be){const _0x59c369=_0x1349ac,{weaponType:_0x45b85d,weaponAbility:_0x34b4e7}=this['_getWeaponTypeAndAbility'](_0x5235d2),{weight:_0xd6038b,price:_0x4fad8a}=this[_0x59c369(0x240)](_0x5235d2,_0x3aa06a[_0x59c369(0x14c)]),{isAttuned:_0x4832ad,isIdentified:_0x3798a7,isEquipped:_0x418f5c,attunement:_0x55fc5f}=this['_pGetItemItem_getAttunedIdentifiedEquipped'](_0x5235d2),{consumeType:_0x3ceeb1,consumeTarget:_0x30164c,consumeAmount:_0x25d1c2}=this['_pGetItemItem_getAmmoConsumeDetails'](_0x5235d2,_0x3aa06a),_0x565d5d=this[_0x59c369(0x224)](_0x5235d2);let _0x5ab71f='';if(_0x5235d2[_0x59c369(0x1e3)]){_0x5ab71f=_0x5235d2[_0x59c369(0x1e3)];if(_0x5235d2[_0x59c369(0x1c0)])_0x5ab71f=''+_0x5ab71f+_0x5235d2[_0x59c369(0x1c0)];else{if(_0x5235d2[_0x59c369(0x1b3)])_0x5ab71f=''+_0x5ab71f+_0x5235d2[_0x59c369(0x1b3)];}_0x5ab71f=_0x5ab71f+_0x59c369(0x228);}let _0x446b60='';if(_0x5235d2[_0x59c369(0x24d)]){_0x446b60=_0x5235d2[_0x59c369(0x24d)];if(_0x5235d2['bonusWeapon'])_0x446b60=''+_0x446b60+_0x5235d2['bonusWeapon'];else{if(_0x5235d2[_0x59c369(0x1b3)])_0x446b60=''+_0x446b60+_0x5235d2[_0x59c369(0x1b3)];}_0x446b60=_0x446b60+_0x59c369(0x228);}let _0x275f48=0x0,_0x260318=0x0;if(_0x5235d2[_0x59c369(0x12a)]){const _0x5be4bd=(''+_0x5235d2[_0x59c369(0x12a)])[_0x59c369(0x1ce)](),_0x518340=/^(\d+)\/(\d+)$/i[_0x59c369(0x14e)](_0x5be4bd);_0x518340&&(_0x275f48=Number(_0x518340[0x1]),_0x260318=Number(_0x518340[0x2]));const _0x13c674=/^(\d+)$/i[_0x59c369(0x14e)](_0x5be4bd);if(_0x13c674)_0x275f48=Number(_0x13c674[0x1]);}else _0x5235d2[_0x59c369(0x211)]&&_0x5235d2[_0x59c369(0x211)][_0x59c369(0x158)]('R')?_0x275f48=0xa:_0x275f48=0x5;const _0x21debb=this['_getItemItem_getItemUses'](_0x5235d2),_0x4715aa=await this[_0x59c369(0x21c)](_0x5235d2),_0x50d7fc=await DataConverterItem['_pGetItemItem_pGetImagePath'](_0x5235d2,_0x3aa06a[_0x59c369(0x12b)]);return{'name':UtilApplications[_0x59c369(0x1f9)](DataConverter['getNameWithSourcePart'](_0x5235d2,{'isActorItem':_0x3aa06a[_0x59c369(0x1f0)]})),'type':_0x59c369(0x26a),'data':{'source':DataConverter[_0x59c369(0x1cd)](_0x5235d2),'description':{'value':DataConverterItem[_0x59c369(0x22d)](_0x5235d2),'chat':'','unidentified':''},'proficient':!![],'quantity':_0x3aa06a[_0x59c369(0x18f)]||_0x5235d2[_0x59c369(0x18f)]||0x1,'weight':_0xd6038b,'price':_0x4fad8a,'attuned':_0x4832ad,'identified':_0x3798a7,'equipped':_0x3aa06a[_0x59c369(0x25b)]??_0x418f5c,'rarity':(_0x5235d2[_0x59c369(0x23c)]||_0x59c369(0x1d4))[_0x59c369(0x22e)](),'damage':{'parts':[[_0x5ab71f,_0x5235d2['dmgType']?Parser[_0x59c369(0x1ef)](_0x5235d2[_0x59c369(0x142)]):'']],'versatile':_0x446b60},'range':{'value':_0x275f48,'long':_0x260318,'units':'ft'},'weaponType':_0x45b85d,'ability':_0x34b4e7,'properties':_0x565d5d,'attunement':_0x55fc5f,'activation':{'type':'action','cost':0x1,'condition':''},'duration':{'value':0x0,'units':''},'target':{'value':0x0,'units':'','type':''},'uses':{'value':_0x21debb,'max':_0x21debb,'per':''},'actionType':_0x5235d2[_0x59c369(0x155)]==='R'?'rwak':_0x59c369(0x13e),'attackBonus':_0x5235d2[_0x59c369(0x1c0)]||_0x5235d2[_0x59c369(0x193)]||0x0,'chatFlavor':'','critical':null,'formula':'','save':{'ability':'','dc':0x0},'consume':{'type':_0x3ceeb1,'target':_0x30164c,'amount':_0x25d1c2},..._0x4715aa||{}},'img':_0x50d7fc,'flags':{...this[_0x59c369(0x17e)](_0x5235d2,_0x3aa06a)},'effects':await this[_0x59c369(0x13a)](_0x5235d2,_0x50d7fc,_0x3aa06a)};}static async[_0x1349ac(0x19c)](_0x3898a6,_0x564ca2,_0x111b33){const _0x38f441=_0x1349ac,{weight:_0x75a0c,price:_0x4e8848}=this['_pGetItemItem_getWeightAndPrice'](_0x3898a6,_0x564ca2[_0x38f441(0x14c)]),{isAttuned:_0x2e578f,isIdentified:_0x190951,isEquipped:_0x21bea6,attunement:_0x39f76f}=this[_0x38f441(0x138)](_0x3898a6),{acValue:_0x1bce4a,maxDexBonus:_0x535d4c}=this[_0x38f441(0x18d)](_0x3898a6),_0x21e460=this[_0x38f441(0x262)](_0x3898a6),_0x4a58b0=await this[_0x38f441(0x21c)](_0x3898a6),_0x5982e4=await DataConverterItem['_pGetItemItem_pGetImagePath'](_0x3898a6,_0x564ca2[_0x38f441(0x12b)]);return{'name':UtilApplications['getCleanEntityName'](DataConverter[_0x38f441(0x249)](_0x3898a6,{'isActorItem':_0x564ca2[_0x38f441(0x1f0)]})),'type':_0x38f441(0x271),'data':{'source':DataConverter[_0x38f441(0x1cd)](_0x3898a6),'description':{'value':DataConverterItem[_0x38f441(0x22d)](_0x3898a6),'chat':'','unidentified':''},'proficient':!![],'quantity':_0x564ca2[_0x38f441(0x18f)]||_0x3898a6[_0x38f441(0x18f)]||0x1,'weight':_0x75a0c,'price':_0x4e8848,'attuned':_0x2e578f,'identified':_0x190951,'equipped':_0x564ca2[_0x38f441(0x25b)]??_0x21bea6,'rarity':(_0x3898a6['rarity']||'Unknown')['toTitleCase'](),'attunement':_0x39f76f,'activation':{'type':'','cost':0x0,'condition':''},'duration':{'value':null,'units':''},'target':{'value':null,'units':'','type':''},'range':{'value':null,'long':null,'units':''},'uses':{'value':_0x21e460,'max':_0x21e460,'per':null},'ability':'','actionType':'','attackBonus':0x0,'chatFlavor':'','critical':null,'damage':{'parts':[],'versatile':''},'formula':'','save':{'ability':'','dc':null},'armor':{'type':DataConverterItem[_0x38f441(0x12c)][_0x3898a6[_0x38f441(0x155)]]||'','value':_0x1bce4a,'dex':_0x535d4c},'strength':_0x3898a6['strength']||null,'stealth':!!_0x3898a6[_0x38f441(0x13d)],..._0x4a58b0||{}},'img':_0x5982e4,'flags':{...this[_0x38f441(0x17e)](_0x3898a6,_0x564ca2)},'effects':await this[_0x38f441(0x13a)](_0x3898a6,_0x5982e4,_0x564ca2)};}static async['_pGetItemItem_container'](_0x34a19a,_0x47401a,_0xe84d67){const _0x4bf011=_0x1349ac,{weight:_0x84f006,price:_0x4c3cd1}=this['_pGetItemItem_getWeightAndPrice'](_0x34a19a,_0x47401a[_0x4bf011(0x14c)]),{isAttuned:_0x3707af,isIdentified:_0x46d132,isEquipped:_0x540b00,attunement:_0x544fc9}=this[_0x4bf011(0x138)](_0x34a19a),_0x50d7a0=_0x34a19a[_0x4bf011(0x250)][_0x4bf011(0x216)]?_0x34a19a[_0x4bf011(0x250)]['weight'][_0x4bf011(0x1db)]((_0x3f9b5f,_0x6198e4)=>_0x3f9b5f+_0x6198e4,0x0):Math[_0x4bf011(0x17c)](..._0x34a19a['containerCapacity']['item'][_0x4bf011(0x223)](_0x7a97ee=>Math[_0x4bf011(0x17c)](...Object['values'](_0x7a97ee)))),_0x5ea6ed=await this[_0x4bf011(0x21c)](_0x34a19a),_0x336da3=await DataConverterItem[_0x4bf011(0x16c)](_0x34a19a,_0x47401a['fluff']);return{'name':UtilApplications['getCleanEntityName'](DataConverter[_0x4bf011(0x249)](_0x34a19a,{'isActorItem':_0x47401a[_0x4bf011(0x1f0)]})),'type':'backpack','data':{'source':DataConverter[_0x4bf011(0x1cd)](_0x34a19a),'description':{'value':DataConverterItem[_0x4bf011(0x22d)](_0x34a19a),'chat':'','unidentified':''},'quantity':_0x47401a[_0x4bf011(0x18f)]||_0x34a19a[_0x4bf011(0x18f)]||0x1,'weight':_0x84f006,'price':_0x4c3cd1,'attuned':_0x3707af,'equipped':_0x47401a[_0x4bf011(0x25b)]??_0x540b00,'identified':_0x46d132,'rarity':(_0x34a19a[_0x4bf011(0x23c)]||_0x4bf011(0x1d4))[_0x4bf011(0x22e)](),'capacity':{'type':_0x34a19a[_0x4bf011(0x250)][_0x4bf011(0x216)]?'weight':'items','value':_0x50d7a0,'weightless':!!_0x34a19a[_0x4bf011(0x250)][_0x4bf011(0x147)]},'attunement':_0x544fc9,'damage':{'parts':[]},..._0x5ea6ed||{}},'img':_0x336da3,'flags':{...this[_0x4bf011(0x17e)](_0x34a19a,_0x47401a)},'effects':await this['_pGetItemEffects'](_0x34a19a,_0x336da3,_0x47401a)};}static async[_0x1349ac(0x1c2)](_0x1107b8,_0x1792a2,_0x3f22bb){const _0x1a6175=_0x1349ac,{weight:_0x186edd,price:_0x1a4e86}=this[_0x1a6175(0x240)](_0x1107b8,_0x1792a2[_0x1a6175(0x14c)]),{isAttuned:_0x326186,isIdentified:_0x25f2b3,isEquipped:_0x5dc6d7,attunement:_0x4bb358}=this['_pGetItemItem_getAttunedIdentifiedEquipped'](_0x1107b8),_0x3badb7=(_0x1107b8['poison']?'poison':DataConverterItem[_0x1a6175(0x14d)][_0x1107b8[_0x1a6175(0x155)]])||'';let _0x21162c='',_0x3622ca=![];_0x3f22bb['replace'](/if you expend[^.]+last charge[^.]+roll[^.]+{@dice ([^}]+)}(?:[^.]+)?\.(?:[^.]+)on a[^.]+\d+[^.]+destroyed/ig,(..._0x152b1b)=>{_0x21162c=_0x152b1b[0x1],_0x3622ca=!![];});if(_0x1107b8[_0x1a6175(0x155)]==='SC'||_0x1107b8['type']==='P')_0x3622ca=!![];const _0xd64339=this[_0x1a6175(0x262)](_0x1107b8),_0x3f12d1=await this[_0x1a6175(0x21c)](_0x1107b8),_0x293793=await DataConverterItem['_pGetItemItem_pGetImagePath'](_0x1107b8,_0x1792a2['fluff']);return{'name':UtilApplications[_0x1a6175(0x1f9)](DataConverter['getNameWithSourcePart'](_0x1107b8,{'isActorItem':_0x1792a2[_0x1a6175(0x1f0)]})),'type':_0x1a6175(0x143),'data':{'source':DataConverter['getSourceWithPagePart'](_0x1107b8),'description':{'value':DataConverterItem[_0x1a6175(0x22d)](_0x1107b8),'chat':'','unidentified':''},'quantity':_0x1792a2[_0x1a6175(0x18f)]||_0x1107b8['quantity']||0x1,'weight':_0x186edd,'price':_0x1a4e86,'attuned':_0x326186,'equipped':_0x1792a2['isEquipped']??_0x5dc6d7,'identified':_0x25f2b3,'rarity':(_0x1107b8[_0x1a6175(0x23c)]||_0x1a6175(0x1d4))[_0x1a6175(0x22e)](),'consumableType':_0x3badb7,'attunement':_0x4bb358,'activation':{'type':'action','cost':0x1,'condition':''},'duration':{'value':null,'units':''},'target':{'value':null,'units':'','type':''},'range':{'value':null,'long':null,'units':''},'uses':{'value':_0xd64339,'max':_0xd64339,'per':null,'autoUse':!![],'autoDestroy':_0x3622ca},'ability':'','actionType':null,'attackBonus':0x0,'chatFlavor':'','critical':null,'damage':{'parts':[],'versatile':''},'formula':_0x21162c,'save':{'ability':'','dc':null},..._0x3f12d1||{}},'img':_0x293793,'flags':{...this[_0x1a6175(0x17e)](_0x1107b8,_0x1792a2)},'effects':await this['_pGetItemEffects'](_0x1107b8,_0x293793,_0x1792a2)};}static async[_0x1349ac(0x21a)](_0x15bdc4,_0xca22c3,_0xdf7c97){const _0x1bed47=_0x1349ac,{weight:_0xaafba3,price:_0x26766d}=this[_0x1bed47(0x240)](_0x15bdc4,_0xca22c3['size']),{isAttuned:_0xec0967,isIdentified:_0x280e17,isEquipped:_0x15517f,attunement:_0x4618e0}=this[_0x1bed47(0x138)](_0x15bdc4);let _0x482934=DataConverterItem[_0x1bed47(0x19e)][_0x15bdc4[_0x1bed47(0x188)]]||_0x1bed47(0x1c1);const _0x551b62=await this[_0x1bed47(0x21c)](_0x15bdc4),_0x56eb3a=await DataConverterItem[_0x1bed47(0x16c)](_0x15bdc4,_0xca22c3['fluff']);return{'name':UtilApplications['getCleanEntityName'](DataConverter['getNameWithSourcePart'](_0x15bdc4,{'isActorItem':_0xca22c3['isActorItem']})),'type':_0x1bed47(0x1f3),'data':{'source':DataConverter[_0x1bed47(0x1cd)](_0x15bdc4),'description':{'value':DataConverterItem[_0x1bed47(0x22d)](_0x15bdc4),'chat':'','unidentified':''},'quantity':_0xca22c3[_0x1bed47(0x18f)]||_0x15bdc4[_0x1bed47(0x18f)]||0x1,'weight':_0xaafba3,'price':_0x26766d,'attuned':_0xec0967,'equipped':_0xca22c3['isEquipped']??_0x15517f,'identified':_0x280e17,'rarity':(_0x15bdc4[_0x1bed47(0x23c)]||_0x1bed47(0x1d4))['toTitleCase'](),'proficient':0x1,'ability':_0x482934,'attunement':_0x4618e0,'chatFlavor':'','damage':{'parts':[]},..._0x551b62||{}},'img':_0x56eb3a,'flags':{...this[_0x1bed47(0x17e)](_0x15bdc4,_0xca22c3)},'effects':await this[_0x1bed47(0x13a)](_0x15bdc4,_0x56eb3a,_0xca22c3)};}static async['_pGetItemItem_loot'](_0x167339,_0xf34a84,_0x5a3ff7){const _0x5dd1fc=_0x1349ac,{weight:_0x341c3e,price:_0x121a0f}=this[_0x5dd1fc(0x240)](_0x167339,_0xf34a84['size']),{isAttuned:_0x15578b,isIdentified:_0x43cfb4,isEquipped:_0x39ad33,attunement:_0x4dd890}=this[_0x5dd1fc(0x138)](_0x167339),_0x5d435b=await this[_0x5dd1fc(0x21c)](_0x167339),_0x5a84a8=await DataConverterItem[_0x5dd1fc(0x16c)](_0x167339,_0xf34a84[_0x5dd1fc(0x12b)]);return{'name':UtilApplications['getCleanEntityName'](DataConverter['getNameWithSourcePart'](_0x167339,{'isActorItem':_0xf34a84[_0x5dd1fc(0x1f0)]})),'type':_0x5dd1fc(0x264),'data':{'source':DataConverter[_0x5dd1fc(0x1cd)](_0x167339),'description':{'value':DataConverterItem[_0x5dd1fc(0x22d)](_0x167339),'chat':'','unidentified':''},'quantity':_0xf34a84['quantity']||_0x167339[_0x5dd1fc(0x18f)]||0x1,'weight':_0x341c3e,'price':_0x121a0f,'attuned':_0x15578b,'equipped':_0xf34a84[_0x5dd1fc(0x25b)]??_0x39ad33,'identified':_0x43cfb4,'rarity':(_0x167339[_0x5dd1fc(0x23c)]||_0x5dd1fc(0x1d4))[_0x5dd1fc(0x22e)](),'attunement':_0x4dd890,'damage':{'parts':[]},..._0x5d435b||{}},'img':_0x5a84a8,'flags':{...this[_0x5dd1fc(0x17e)](_0x167339,_0xf34a84)},'effects':await this[_0x5dd1fc(0x13a)](_0x167339,_0x5a84a8,_0xf34a84)};}static async[_0x1349ac(0x16c)](_0x10e49f,_0x5d6e2f){const _0x5dbc55=_0x1349ac,_0x4b10c6=Vetools['getImageUrlFromFluff'](_0x5d6e2f);if(_0x4b10c6)return _0x4b10c6;const _0x29f9ba=await this[_0x5dbc55(0x26b)](_0x10e49f);if(_0x29f9ba)return _0x29f9ba;return _0x5dbc55(0x136)+SharedConsts[_0x5dbc55(0x26c)]+_0x5dbc55(0x1e4)+(DataConverterItem[_0x5dbc55(0x167)][_0x10e49f[_0x5dbc55(0x155)]]||_0x5dbc55(0x173))+_0x5dbc55(0x183);}static[_0x1349ac(0x244)](_0x1473a9,_0x141eed){const _0x32e250=_0x1349ac;let _0x198fb2='',_0x247835='',_0x400375=null;if(_0x1473a9[_0x32e250(0x12f)]){_0x198fb2=_0x32e250(0x204),_0x400375=0x1;if(_0x141eed['sheetItemsAmmo']){const [_0x3a8883,_0x400e4b]=_0x1473a9[_0x32e250(0x12f)][_0x32e250(0x25f)]()[_0x32e250(0x14a)]('|')['map'](_0x47f8d0=>_0x47f8d0[_0x32e250(0x1ce)]())[_0x32e250(0x229)](Boolean),_0x18315e=(_0x400e4b||SRC_DMG)[_0x32e250(0x25f)](),_0xdf3d85=_0x3a8883[_0x32e250(0x234)](/s+$/g,''),_0x3f99ea=_0x141eed[_0x32e250(0x200)]['filter'](_0x3e0731=>{const _0x3430bd=_0x32e250,_0x469cfa=_0x3e0731[_0x3430bd(0x188)][_0x3430bd(0x25f)]()[_0x3430bd(0x1ce)]()[_0x3430bd(0x234)](/s+$/g,'');return _0x469cfa===_0xdf3d85&&(!Config[_0x3430bd(0x168)](_0x3430bd(0x1dd),_0x3430bd(0x171))||(DataConverter[_0x3430bd(0x21f)](_0x3e0731)||'')[_0x3430bd(0x25f)]()===_0x18315e);});_0x3f99ea[_0x32e250(0x24f)]&&(_0x247835=_0x3f99ea[0x0]['id']);}}return{'consumeType':_0x198fb2,'consumeTarget':_0x247835,'consumeAmount':_0x400375};}static async[_0x1349ac(0x26b)](_0x48fa06){const _0x19d52c=_0x1349ac,_0x58fa5c=await UtilCompendium['pGetCompendiumImage'](_0x19d52c(0x134),_0x48fa06,{'fnGetAliases':this[_0x19d52c(0x1fe)]});if(_0x58fa5c)return _0x58fa5c;if(_0x48fa06[_0x19d52c(0x177)]){const _0x24b10b=await UtilCompendium['pGetCompendiumImage'](_0x19d52c(0x134),{'name':_0x48fa06[_0x19d52c(0x177)],'source':_0x48fa06['_baseSource']||_0x48fa06[_0x19d52c(0x1f6)],'srd':_0x48fa06[_0x19d52c(0x1e9)]},{'fnGetAliases':this[_0x19d52c(0x1fe)]});if(_0x24b10b)return _0x24b10b;}if(_0x48fa06[_0x19d52c(0x260)]&&typeof _0x48fa06[_0x19d52c(0x260)]==='string'){let [_0x19cf74,_0x3c66fb]=_0x48fa06[_0x19d52c(0x260)][_0x19d52c(0x14a)]('|');return _0x3c66fb=_0x3c66fb||SRC_DMG,UtilCompendium[_0x19d52c(0x24c)](_0x19d52c(0x134),{'name':_0x19cf74,'source':_0x3c66fb,'srd':!![]},{'fnGetAliases':this[_0x19d52c(0x1fe)]});}}static[_0x1349ac(0x18d)](_0xef31c5){const _0x5ccca8=_0x1349ac;let _0x3cf653=_0xef31c5[_0x5ccca8(0x18c)]?Number(_0xef31c5[_0x5ccca8(0x18c)]):0x0;if(isNaN(_0x3cf653))_0x3cf653=0x0;const _0x7a91e3=_0xef31c5[_0x5ccca8(0x186)]||_0xef31c5[_0x5ccca8(0x155)],_0x28ea8f=_0x7a91e3==='HA'||_0x7a91e3==='MA'||_0x7a91e3==='LA',_0x3aed74=_0x28ea8f||_0xef31c5['type']==='S';return{'acValue':_0x3aed74?(_0xef31c5['ac']||0xa)+_0x3cf653:_0x3cf653||null,'maxDexBonus':_0x7a91e3==='MA'?_0xef31c5[_0x5ccca8(0x137)]!==undefined?_0xef31c5[_0x5ccca8(0x137)]:0x2:_0x7a91e3==='HA'?0x0:null,'isBase':_0x28ea8f};}static async[_0x1349ac(0x13a)](_0x47e363,_0x128f41,_0xbcc74f){const _0x3b5f90=_0x1349ac;_0xbcc74f=_0xbcc74f||{};if(!Config['get'](_0x3b5f90(0x23e),_0x3b5f90(0x157)))return[];const _0x437e9c=this[_0x3b5f90(0x15a)](_0x47e363),_0x152348=_0x437e9c===DataConverterItem[_0x3b5f90(0x253)]||_0xbcc74f[_0x3b5f90(0x25b)]!=null&&!_0xbcc74f[_0x3b5f90(0x25b)],_0x13e7fc=[];await this[_0x3b5f90(0x246)](null,_0x47e363)&&_0x13e7fc[_0x3b5f90(0x17b)](...await this['pGetItemItemEffects'](null,_0x47e363,null,{'img':_0x128f41}));_0x13e7fc[_0x3b5f90(0x17b)](...this[_0x3b5f90(0x245)](_0x47e363,_0x128f41,_0xbcc74f,{'isDisabled':_0x152348}));if(_0x47e363[_0x3b5f90(0x1ff)]){const _0x35b6c0=this['_pGetItemEffects_getGenericBonus']({'item':_0x47e363,'img':_0x128f41,'label':'Saving\x20Throw\x20Bonus','key':_0x3b5f90(0x1cc),'prop':_0x3b5f90(0x1ff),'isDisabled':_0x152348});if(_0x35b6c0)_0x13e7fc['push'](_0x35b6c0);}if(_0x47e363['bonusSavingThrow']){const _0x4dd49c=this[_0x3b5f90(0x24a)]({'item':_0x47e363,'img':_0x128f41,'label':_0x3b5f90(0x220),'key':_0x3b5f90(0x22c),'prop':_0x3b5f90(0x1d5),'isDisabled':_0x152348});if(_0x4dd49c)_0x13e7fc[_0x3b5f90(0x17b)](_0x4dd49c);}if(_0x47e363['bonusSpellAttack']){const _0x3a0eba=this[_0x3b5f90(0x24a)]({'item':_0x47e363,'img':_0x128f41,'label':_0x3b5f90(0x22b),'key':'data.bonuses.msak.attack','prop':'bonusSpellAttack','isDisabled':_0x152348});if(_0x3a0eba)_0x13e7fc['push'](_0x3a0eba);const _0x39b36e=this[_0x3b5f90(0x24a)]({'item':_0x47e363,'img':_0x128f41,'label':_0x3b5f90(0x201),'key':'data.bonuses.rsak.attack','prop':_0x3b5f90(0x1f4),'isDisabled':_0x152348});if(_0x39b36e)_0x13e7fc[_0x3b5f90(0x17b)](_0x39b36e);}if(_0x47e363[_0x3b5f90(0x1f4)]){const _0x231c72=this[_0x3b5f90(0x24a)]({'item':_0x47e363,'img':_0x128f41,'label':_0x3b5f90(0x1fa),'key':_0x3b5f90(0x235),'prop':'bonusSpellDamage','isDisabled':_0x152348});if(_0x231c72)_0x13e7fc['push'](_0x231c72);const _0x21c791=this['_pGetItemEffects_getGenericBonus']({'item':_0x47e363,'img':_0x128f41,'label':_0x3b5f90(0x1a8),'key':_0x3b5f90(0x15e),'prop':_0x3b5f90(0x269),'isDisabled':_0x152348});if(_0x21c791)_0x13e7fc[_0x3b5f90(0x17b)](_0x21c791);}if(_0x47e363['bonusSpellSaveDc']){const _0x4f1c59=this['_pGetItemEffects_getGenericBonus']({'item':_0x47e363,'img':_0x128f41,'label':'Spell\x20Save\x20DC\x20Bonus','key':_0x3b5f90(0x214),'prop':'bonusSpellSaveDc','isDisabled':_0x152348});if(_0x4f1c59)_0x13e7fc[_0x3b5f90(0x17b)](_0x4f1c59);}if(_0x47e363[_0x3b5f90(0x1d6)]){const _0x380503=this[_0x3b5f90(0x24a)]({'item':_0x47e363,'img':_0x128f41,'label':_0x3b5f90(0x1ec),'key':_0x3b5f90(0x1bc),'prop':_0x3b5f90(0x1d6),'isDisabled':_0x152348});if(_0x380503)_0x13e7fc[_0x3b5f90(0x17b)](_0x380503);}_0x47e363[_0x3b5f90(0x165)]&&(_0x47e363[_0x3b5f90(0x165)]['static']&&Parser[_0x3b5f90(0x16b)][_0x3b5f90(0x1fc)](_0x17cc06=>{const _0x1ce55e=_0x3b5f90;if(_0x47e363[_0x1ce55e(0x165)][_0x1ce55e(0x23a)][_0x17cc06]==null)return;_0x13e7fc[_0x1ce55e(0x17b)](UtilActiveEffects[_0x1ce55e(0x20c)]({'key':_0x1ce55e(0x1c4)+_0x17cc06+_0x1ce55e(0x1b2),'value':_0x47e363[_0x1ce55e(0x165)][_0x1ce55e(0x23a)][_0x17cc06],'mode':CONST[_0x1ce55e(0x1f7)][_0x1ce55e(0x213)],'label':_0x1ce55e(0x145)+Parser[_0x1ce55e(0x16a)](_0x17cc06),'icon':_0x128f41,'disabled':_0x152348,'priority':UtilActiveEffects[_0x1ce55e(0x22a)]}));}),Parser['ABIL_ABVS'][_0x3b5f90(0x1fc)](_0x151bc7=>{const _0x4145e=_0x3b5f90;if(_0x47e363[_0x4145e(0x165)][_0x151bc7]==null)return;_0x13e7fc['push'](UtilActiveEffects[_0x4145e(0x20c)]({'key':_0x4145e(0x1c4)+_0x151bc7+'.value','value':_0x47e363[_0x4145e(0x165)][_0x151bc7],'mode':CONST[_0x4145e(0x1f7)][_0x4145e(0x19d)],'label':_0x4145e(0x1d2)+Parser[_0x4145e(0x16a)](_0x151bc7),'icon':_0x128f41,'disabled':_0x152348,'priority':UtilActiveEffects[_0x4145e(0x209)]}));}));const _0x388a85=DataConverter[_0x3b5f90(0x15d)](_0x47e363);return _0x13e7fc[_0x3b5f90(0x17b)](...this['_pGetItemEffects_getDrDiDvCiEffects']({'img':_0x128f41,'label':_0x3b5f90(0x1ca),'actProp':'dr','isDisabled':_0x152348,'actorDataDrDiDvCi':_0x388a85})),_0x13e7fc[_0x3b5f90(0x17b)](...this['_pGetItemEffects_getDrDiDvCiEffects']({'img':_0x128f41,'label':_0x3b5f90(0x1fd),'actProp':'di','isDisabled':_0x152348,'actorDataDrDiDvCi':_0x388a85})),_0x13e7fc[_0x3b5f90(0x17b)](...this[_0x3b5f90(0x1de)]({'img':_0x128f41,'label':_0x3b5f90(0x189),'actProp':'dv','isDisabled':_0x152348,'actorDataDrDiDvCi':_0x388a85})),_0x13e7fc[_0x3b5f90(0x17b)](...this[_0x3b5f90(0x1de)]({'img':_0x128f41,'label':_0x3b5f90(0x194),'actProp':'ci','isDisabled':_0x152348,'actorDataDrDiDvCi':_0x388a85})),_0x13e7fc;}static[_0x1349ac(0x245)](_0x289673,_0x218906,_0x4e173f,{isDisabled:_0x22987f}){const _0x184b81=_0x1349ac;if(UtilCompat[_0x184b81(0x1ae)]())return[];const _0x3a8a17=[],_0x57e76b=this['_getItemAcMeta'](_0x289673);if(_0x57e76b[_0x184b81(0x215)]!=null){let _0x2f2302;if(_0x57e76b['isBase']){if(Config[_0x184b81(0x168)](_0x184b81(0x1da),_0x184b81(0x272))||UtilCompat[_0x184b81(0x16d)]()){if(_0x57e76b[_0x184b81(0x1df)]===0x0)_0x2f2302=_0x57e76b['acValue'];else{if(_0x57e76b[_0x184b81(0x1df)])_0x2f2302=_0x57e76b[_0x184b81(0x215)]+_0x184b81(0x1af)+_0x57e76b[_0x184b81(0x1df)]+_0x184b81(0x1bf);else _0x2f2302=_0x57e76b[_0x184b81(0x215)]+_0x184b81(0x148);}}else{if(_0x57e76b[_0x184b81(0x1df)]===0x0)_0x2f2302=_0x57e76b[_0x184b81(0x215)];else{if(_0x57e76b['maxDexBonus'])_0x2f2302=_0x57e76b['acValue']+Math[_0x184b81(0x1a6)](0x2,_0x4e173f[_0x184b81(0x243)]||0x0);else _0x2f2302=_0x57e76b[_0x184b81(0x215)]+(_0x4e173f['dexMod']||0x0);}}}else _0x2f2302=_0x57e76b[_0x184b81(0x215)];_0x3a8a17[_0x184b81(0x17b)](UtilActiveEffects[_0x184b81(0x20c)]({'key':_0x184b81(0x175),'value':_0x2f2302,'mode':_0x57e76b[_0x184b81(0x152)]?CONST[_0x184b81(0x1f7)][_0x184b81(0x213)]:CONST[_0x184b81(0x1f7)][_0x184b81(0x19d)],'label':(_0x57e76b['isBase']?_0x184b81(0x25c):'Bonus')+_0x184b81(0x25d),'icon':_0x218906,'disabled':_0x22987f,'priority':_0x57e76b['isBase']?UtilActiveEffects[_0x184b81(0x22a)]:UtilActiveEffects[_0x184b81(0x209)]}));}return _0x3a8a17;}static[_0x1349ac(0x24a)]({item:_0x5dec94,img:_0x3206cc,label:_0x1c8df0,key:_0x1a34d9,prop:_0x5b73e2,isDisabled:_0x596182}){const _0x20ff9a=_0x1349ac,_0x12729a=!isNaN(_0x5dec94[_0x5b73e2])?Number(_0x5dec94[_0x5b73e2]):0x0;if(!_0x12729a)return null;return UtilActiveEffects[_0x20ff9a(0x20c)]({'key':_0x1a34d9,'value':_0x12729a,'mode':CONST[_0x20ff9a(0x1f7)][_0x20ff9a(0x19d)],'label':_0x1c8df0,'icon':_0x3206cc,'disabled':_0x596182,'priority':UtilActiveEffects[_0x20ff9a(0x209)]});}static[_0x1349ac(0x1de)]({img:_0x119f50,label:_0x5852c6,actProp:_0xcf0c82,isDisabled:_0x2c0080,actorDataDrDiDvCi:_0x3c4227}){const _0x1f1b33=_0x1349ac;if(!_0x3c4227[_0xcf0c82])return[];const _0x554f75=[];return _0x3c4227[_0xcf0c82][_0x1f1b33(0x19f)]&&_0x3c4227[_0xcf0c82][_0x1f1b33(0x19f)][_0x1f1b33(0x1fc)](_0x5c74f1=>{const _0xfc5294=_0x1f1b33;_0x554f75[_0xfc5294(0x17b)](UtilActiveEffects[_0xfc5294(0x20c)]({'key':'data.traits.'+_0xcf0c82+_0xfc5294(0x1b2),'value':_0x5c74f1,'mode':CONST[_0xfc5294(0x1f7)][_0xfc5294(0x19d)],'label':_0x5852c6,'icon':_0x119f50,'disabled':_0x2c0080,'priority':UtilActiveEffects[_0xfc5294(0x209)]}));}),_0x3c4227[_0xcf0c82]['custom']?.[_0x1f1b33(0x24f)]&&_0x554f75[_0x1f1b33(0x17b)](UtilActiveEffects[_0x1f1b33(0x20c)]({'key':_0x1f1b33(0x141)+_0xcf0c82+_0x1f1b33(0x226),'value':_0x3c4227[_0xcf0c82]['custom'],'mode':CONST['ACTIVE_EFFECT_MODES'][_0x1f1b33(0x19d)],'label':_0x5852c6,'icon':_0x119f50,'disabled':_0x2c0080,'priority':UtilActiveEffects['PRIORITY_BONUS']})),_0x554f75;}static async['_pGetAdditionalData'](_0x23fe38){const _0x59619d=_0x1349ac;return DataConverter[_0x59619d(0x254)](_0x23fe38,{'propBrew':_0x59619d(0x237),'fnLoadJson':Vetools[_0x59619d(0x26e)],'propJson':_0x59619d(0x134)});}static async['pHasItemSideLoadedEffects'](_0x3b9b29,_0x9b7e23){const _0xccef3=_0x1349ac;if((await DataConverter[_0xccef3(0x22f)](_0x9b7e23,{'propBrew':_0xccef3(0x237),'fnLoadJson':Vetools[_0xccef3(0x26e)],'propJson':'item'}))?.[_0xccef3(0x24f)]>0x0)return!![];if(!_0x9b7e23[_0xccef3(0x13b)])return![];const _0x3a7bde={'name':_0x9b7e23['_variantName'],'source':_0x9b7e23[_0xccef3(0x1f6)]};return(await DataConverter[_0xccef3(0x22f)](_0x3a7bde,{'propBrew':_0xccef3(0x146),'fnLoadJson':Vetools['pGetItemSideData'],'propJson':_0xccef3(0x236)}))?.[_0xccef3(0x24f)]>0x0;}static async[_0x1349ac(0x198)](_0xcd17c4,_0x326d7e,_0x5a9aec,{additionalData:_0x216769,img:_0x5a306b}={}){const _0x1d65d5=_0x1349ac,_0x3a8dab=await DataConverter['pGetAdditionalEffectsRaw_'](_0x326d7e,{'propBrew':'foundryItem','fnLoadJson':Vetools['pGetItemSideData'],'propJson':_0x1d65d5(0x134)}),_0x59caf3=UtilActiveEffects[_0x1d65d5(0x207)](_0x3a8dab||[],{'actor':_0xcd17c4,'sheetItem':_0x5a9aec,'parentName':_0x326d7e[_0x1d65d5(0x188)],'additionalData':_0x216769,'img':_0x5a306b});if(!_0x326d7e[_0x1d65d5(0x13b)])return _0x59caf3;const _0xb966dd={'name':_0x326d7e[_0x1d65d5(0x13b)],'source':_0x326d7e[_0x1d65d5(0x1f6)]},_0x548381=await DataConverter[_0x1d65d5(0x22f)](_0xb966dd,{'propBrew':_0x1d65d5(0x146),'fnLoadJson':Vetools[_0x1d65d5(0x26e)],'propJson':'variant'}),_0x5de2d5=UtilActiveEffects[_0x1d65d5(0x207)](_0x548381||[],{'actor':_0xcd17c4,'sheetItem':_0x5a9aec,'parentName':_0xb966dd[_0x1d65d5(0x188)],'additionalData':_0x216769,'img':_0x5a306b});return[..._0x59caf3,..._0x5de2d5];}}DataConverterItem[_0x1349ac(0x1a5)]=![],DataConverterItem[_0x1349ac(0x1a0)]={},DataConverterItem[_0x1349ac(0x1c7)]=new VeLock(),DataConverterItem[_0x1349ac(0x1a2)]='weapon',DataConverterItem[_0x1349ac(0x1a9)]=_0x1349ac(0x1f3),DataConverterItem['_IMPORT_TYPE_CONSUMABLE']=_0x1349ac(0x143),DataConverterItem[_0x1349ac(0x210)]=_0x1349ac(0x271),DataConverterItem['_IMPORT_TYPE_CONTAINER']=_0x1349ac(0x161),DataConverterItem[_0x1349ac(0x1f1)]='loot',DataConverterItem[_0x1349ac(0x163)]={[DataConverterItem[_0x1349ac(0x1a2)]]:!![],[DataConverterItem[_0x1349ac(0x1a9)]]:!![],[DataConverterItem[_0x1349ac(0x253)]]:!![],[DataConverterItem[_0x1349ac(0x210)]]:!![],[DataConverterItem[_0x1349ac(0x26f)]]:!![],[DataConverterItem['_IMPORT_TYPE_LOOT']]:!![]},DataConverterItem['_ITEM_TYPE_TO_ARMOR_TYPE']={'HA':_0x1349ac(0x15f),'MA':_0x1349ac(0x21d),'LA':_0x1349ac(0x1bb),'S':_0x1349ac(0x1a1)},DataConverterItem['_ITEM_TYPE_TO_CONSUMABLE_TYPE']={'A':_0x1349ac(0x204),'AF':_0x1349ac(0x204),'P':'potion','SC':_0x1349ac(0x1a3),'WD':'wand','RD':_0x1349ac(0x196)},DataConverterItem['_ITEM_NAME_TO_DEFAULT_ABILITY']={'Alchemist\x27s\x20Supplies':_0x1349ac(0x1c1),'Brewer\x27s\x20Supplies':_0x1349ac(0x1c1),'Calligrapher\x27s\x20Supplies':_0x1349ac(0x1c1),'Carpenter\x27s\x20Tools':_0x1349ac(0x1c1),'Cartographer\x27s\x20Tools':_0x1349ac(0x1c1),'Cobbler\x27s\x20Tools':'int','Cook\x27s\x20Utensils':_0x1349ac(0x1e1),'Disguise\x20Kit':_0x1349ac(0x1a4),'Forgery\x20Kit':_0x1349ac(0x1c1),'Glassblower\x27s\x20Tools':_0x1349ac(0x1c1),'Herbalism\x20Kit':'wis','Jeweler\x27s\x20Tools':'int','Leatherworker\x27s\x20Tools':_0x1349ac(0x1c1),'Mason\x27s\x20Tools':_0x1349ac(0x1c1),'Navigator\x27s\x20Tools':_0x1349ac(0x1e1),'Painter\x27s\x20Supplies':_0x1349ac(0x1c1),'Poisoner\x27s\x20Kit':_0x1349ac(0x1e1),'Potter\x27s\x20Tools':_0x1349ac(0x1c1),'Smith\x27s\x20Tools':_0x1349ac(0x1c1),'Thieves\x27\x20Tools':'dex','Tinker\x27s\x20Tools':_0x1349ac(0x1c1),'Weaver\x27s\x20Tools':_0x1349ac(0x1c1),'Woodcarver\x27s\x20Tools':_0x1349ac(0x1c1)},DataConverterItem['_ITEM_TYPE_TO_ICON']={'A':'quiver','AF':'quiver','AT':'toolbox','EM':'','EXP':'unlit-bomb','G':_0x1349ac(0x1c5),'GS':_0x1349ac(0x20a),'HA':_0x1349ac(0x20b),'INS':_0x1349ac(0x13f),'LA':_0x1349ac(0x267),'M':'crossed-swords','MA':_0x1349ac(0x1e5),'MNT':_0x1349ac(0x1be),'GV':'','P':_0x1349ac(0x23f),'R':_0x1349ac(0x197),'RD':_0x1349ac(0x25e),'RG':_0x1349ac(0x21e),'S':'checked-shield','SC':_0x1349ac(0x1e6),'SCF':'orb-wand','OTH':'','T':_0x1349ac(0x242),'TAH':'','TG':_0x1349ac(0x1c6),'VEH':_0x1349ac(0x1e2),'SHP':_0x1349ac(0x1b6),'AIR':_0x1349ac(0x232),'WD':_0x1349ac(0x16f)},DataConverterItem[_0x1349ac(0x1d8)]={'A':_0x1349ac(0x21b),'AF':_0x1349ac(0x21b),'BF':'','F':_0x1349ac(0x18b),'H':_0x1349ac(0x1b5),'L':_0x1349ac(0x19a),'LD':_0x1349ac(0x1b1),'R':'rch','RLD':_0x1349ac(0x181),'S':_0x1349ac(0x199),'T':_0x1349ac(0x1eb),'2H':_0x1349ac(0x23b),'V':_0x1349ac(0x230)},DataConverterItem[_0x1349ac(0x150)]=['amulet\x20of',_0x1349ac(0x1ab),_0x1349ac(0x16e),'belt\x20of',_0x1349ac(0x178),'bracelet\x20of',_0x1349ac(0x182),'bracers\x20of','brooch\x20of',_0x1349ac(0x154),_0x1349ac(0x18a),_0x1349ac(0x208),'crown\x20of',_0x1349ac(0x258),_0x1349ac(0x231),'gloves\x20of',_0x1349ac(0x1ea),_0x1349ac(0x1ad),_0x1349ac(0x12e),_0x1349ac(0x1d0),_0x1349ac(0x170),'mask\x20of',_0x1349ac(0x17a),'periapt\x20of',_0x1349ac(0x227),_0x1349ac(0x212),_0x1349ac(0x174),_0x1349ac(0x270)]['map'](_0x18eafc=>new RegExp(_0x1349ac(0x24b)+_0x18eafc,'i')),DataConverterItem[_0x1349ac(0x1c3)]={[SZ_FINE]:0.5,[SZ_DIMINUTIVE]:0.5,[SZ_TINY]:0.5,[SZ_SMALL]:0x1,[SZ_MEDIUM]:0x1,[SZ_LARGE]:0x2,[SZ_HUGE]:0x4,[SZ_GARGANTUAN]:0x8,[SZ_COLOSSAL]:0x10,[SZ_VARIES]:0x1},DataConverterItem[_0x1349ac(0x139)]={[SZ_FINE]:0.25,[SZ_DIMINUTIVE]:0.25,[SZ_TINY]:0.25,[SZ_SMALL]:0x1,[SZ_MEDIUM]:0x1,[SZ_LARGE]:0x4,[SZ_HUGE]:0x10,[SZ_GARGANTUAN]:0x40,[SZ_COLOSSAL]:0x100,[SZ_VARIES]:0x1},DataConverterItem[_0x1349ac(0x1cb)]={[SZ_FINE]:0.5,[SZ_DIMINUTIVE]:0.5,[SZ_TINY]:0.5,[SZ_SMALL]:0x1,[SZ_MEDIUM]:0x1,[SZ_LARGE]:0x2,[SZ_HUGE]:0x3,[SZ_GARGANTUAN]:0x4,[SZ_COLOSSAL]:0x5,[SZ_VARIES]:0x1};export{DataConverterItem};
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Vetools} from "./Vetools.js";
+import {LGT} from "./Util.js";
+import {Config} from "./Config.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {DataConverter} from "./DataConverter.js";
+import {UtilActiveEffects} from "./UtilActiveEffects.js";
+import {UtilCompat} from "./UtilCompat.js";
+import {UtilCompendium} from "./UtilCompendium.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class DataConverterItem {
+	static async pGetActionWeaponDetails ({size, action, damageParts, isSiegeWeapon, isMagical}) {
+		await Renderer.item.populatePropertyAndTypeReference();
+
+		await this._pGetActionWeaponDetails_initCaches();
+
+		let damageVersatile = "";
+		let damageCritical = "";
+		let critThreshold = null;
+		let weight = 0;
+		let price = null;
+		let img = null;
+		let rarity = "";
+		let weaponType = isSiegeWeapon ? "siege" : "natural";
+		let weaponBaseItem = null;
+		let itemProperties = {};
+		let attuned = false;
+		let attunement = 0;
+		let identified = false;
+		let attackBonus = 0;
+
+		const weaponLookupName = (action.name || "")
+			.replace(/\(.*\)$/, "") // remove parenthetical text (e.g. "(Humanoid or Hybrid Form Only)" off the end
+			.toLowerCase()
+		;
+
+		const weapon = DataConverterItem._WEAPON_DETAIL_CACHE[weaponLookupName] ? MiscUtil.copy(DataConverterItem._WEAPON_DETAIL_CACHE[weaponLookupName]) : null;
+
+		if (weapon) {
+			const {weight: tmpWeight, price: tmpPrice} = DataConverterItem._pGetItemItem_getWeightPriceRange(weapon, size);
+			weight = tmpWeight;
+			price = tmpPrice;
+
+			rarity = this._getItemItem_getRarity(weapon);
+
+			const weaponTypeAndAbility = this._getWeaponTypeBaseAndAbility(weapon);
+			weaponType = weaponTypeAndAbility.weaponType;
+			weaponBaseItem = weaponTypeAndAbility.weaponBaseItem;
+
+			itemProperties = this._getWeaponProperties(weapon);
+
+			const {isAttuned, isIdentified, attunement: tmpAttunement} = await this._pGetItemItem_pGetAttunedIdentifiedEquipped(weapon);
+			attuned = attuned || isAttuned;
+			attunement = attunement || tmpAttunement;
+			identified = identified || isIdentified;
+
+			// Custom attribute applied by the cache loader--not saved locally until this point
+			img = weapon._fvttImage || img;
+
+			if (weapon.bonusWeapon && !isNaN(weapon.bonusWeapon)) attackBonus = Number(weapon.bonusWeapon);
+			// This is more specific, so can override the generic "bonusWeapon" prop
+			if (weapon.bonusWeaponAttack && !isNaN(weapon.bonusWeaponAttack)) attackBonus = Number(weapon.bonusWeapon);
+
+			if (weapon.bonusWeaponCritDamage) damageCritical = weapon.bonusWeaponCritDamage;
+			if (weapon.critThreshold != null) critThreshold = weapon.critThreshold;
+		}
+
+		// region Versatile
+		if (damageParts.length > 1 && ((weapon && (weapon.property || []).includes("V")) || / (?:two|both) hands/i.test(JSON.stringify(action.entries || [])))) {
+			// Find the first damage term that has the same type as the main (first) damage term
+			const damageTypePrimary = damageParts[0][1];
+			if (damageTypePrimary) {
+				const ixDamagePartVersatile = damageParts.slice(1).findIndex(it => it[1] === damageTypePrimary);
+				if (~ixDamagePartVersatile) {
+					damageParts = MiscUtil.copy(damageParts);
+					const [damagePartVersatile] = damageParts.splice(ixDamagePartVersatile + 1, 1);
+					damageVersatile = damagePartVersatile[0];
+				}
+			}
+		}
+		// endregion
+
+		// region Additional properties
+		if (isMagical) itemProperties.mgc = true;
+		// endregion
+
+		return {
+			damageParts,
+			damageVersatile,
+			damageCritical,
+			critThreshold,
+			weight,
+			price,
+			img,
+			rarity,
+			weaponType,
+			weaponBaseItem,
+			itemProperties,
+			attuned,
+			attunement,
+			identified,
+			attackBonus,
+		};
+	}
+
+	static async _pGetActionWeaponDetails_initCaches () {
+		if (DataConverterItem._WEAPON_DETAIL_CACHE_INIT) return;
+
+		await DataConverterItem._WEAPON_DETAIL_CACHE_LOCK.pLock();
+		try {
+			if (DataConverterItem._WEAPON_DETAIL_CACHE_INIT) return;
+
+			console.log(...LGT, "Pre-caching item lookup...");
+
+			// Build a cache of all the items and their fluff
+			const {item: items} = await Vetools.pGetItems();
+
+			for (const item of items) {
+				if (item.type === "GV") continue;
+
+				const lowName = item.name.toLowerCase();
+				// If there's e.g. a " +1" suffix on the end, make a copy with it as a prefix instead
+				const prefixBonusKey = lowName.replace(/^(.*?)( \+\d+$)/, (...m) => `${m[2].trim()} ${m[1].trim()}`);
+
+				const itemKeys = [
+					lowName,
+					prefixBonusKey === lowName ? null : prefixBonusKey,
+				].filter(Boolean);
+
+				const cpy = MiscUtil.copy(item);
+				const procFluff = await Renderer.item.pGetFluff(cpy);
+				cpy._fvttImage = await DataConverterItem._pGetItemItem_pGetImagePath(cpy, procFluff);
+
+				itemKeys.forEach(k => {
+					if (!DataConverterItem._WEAPON_DETAIL_CACHE[k]) {
+						DataConverterItem._WEAPON_DETAIL_CACHE[k] = cpy;
+						return;
+					}
+
+					// If there is already something in the cache, prefer DMG + PHB entries, then official sources
+					const existing = DataConverterItem._WEAPON_DETAIL_CACHE[k];
+					if (
+						!(existing.source === SRC_DMG || existing.source === SRC_PHB)
+						&& SourceUtil.isNonstandardSource(existing.source)
+					) {
+						DataConverterItem._WEAPON_DETAIL_CACHE[k] = cpy;
+					}
+				});
+			}
+
+			console.log(...LGT, "Pre-caching complete.");
+
+			DataConverterItem._WEAPON_DETAIL_CACHE_INIT = true;
+		} finally {
+			DataConverterItem._WEAPON_DETAIL_CACHE_LOCK.unlock();
+		}
+	}
+
+	/**
+	 *
+	 * @param item The item entry.
+	 * @param [opts] Options object.
+	 * @param [opts.fluff] Item fluff.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 * @param [opts.quantity]
+	 * @param [opts.isEquipped]
+	 * @param [opts.size] Creature this item is to be sized for.
+	 * @param [opts.sheetItemsAmmo] Actor sheet items
+	 * @param [opts.filterValues] Pre-baked filter values to be re-used when importing this from the item.
+	 * @param [opts.dexMod] Pre-baked dexterity modifier to use in the place of a dynamic variable when creating active effects.
+	 * @param [opts.isActorItem]
+	 * @return {object}
+	 */
+	static async pGetItemItem (item, opts) {
+		opts = opts || {};
+
+		await Renderer.item.populatePropertyAndTypeReference();
+
+		const entriesStr = item.entries ? JSON.stringify(item.entries) : "";
+
+		// Treat item groups as "loot," which is a catch-all for "things with no specific properties"
+		if (item._isItemGroup) return this._pGetItemItem_loot(item, opts, entriesStr);
+
+		let out;
+		if (await this._pIsInSrd(item)) {
+			out = await this._pGetItemItem_fromSrd(item, opts, entriesStr);
+		} else {
+			const importType = await this._pGetItemImporterType(item);
+
+			switch (importType) {
+				case DataConverterItem._IMPORT_TYPE_WEAPON: out = await this._pGetItemItem_weapon(item, opts, entriesStr); break;
+				case DataConverterItem._IMPORT_TYPE_TOOL: out = await this._pGetItemItem_tool(item, opts, entriesStr); break;
+				case DataConverterItem._IMPORT_TYPE_CONSUMABLE: out = await this._pGetItemItem_consumable(item, opts, entriesStr); break;
+				case DataConverterItem._IMPORT_TYPE_EQUIPMENT: out = await this._pGetItemItem_equipment(item, opts, entriesStr); break;
+				case DataConverterItem._IMPORT_TYPE_CONTAINER: out = await this._pGetItemItem_container(item, opts, entriesStr); break;
+				case DataConverterItem._IMPORT_TYPE_LOOT: out = await this._pGetItemItem_loot(item, opts, entriesStr); break;
+				default: throw new Error(`Unhandled importer type "${importType}"`);
+			}
+		}
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importItem", "permissions")};
+
+		return out;
+	}
+
+	static async _pGetItemImporterType (item) {
+		const sideLoadedType = await this._pGetSideLoadedType(item);
+		if (sideLoadedType != null) return sideLoadedType;
+
+		// Anything with damage, treat as a weapon
+		if (item.dmg1) return DataConverterItem._IMPORT_TYPE_WEAPON;
+
+		if (
+			item.type === "AT" // Artisan's Tool
+			|| item.type === "T" // Tool
+			|| item.type === "INS" // Instrument
+			|| item.type === "GS" // Gaming Set
+		) return DataConverterItem._IMPORT_TYPE_TOOL;
+
+		if (
+			item.type === "P" // Potion
+			|| item.type === "SC" // Scroll
+			|| (item.type === "WD" && item.charges) // Wand
+			|| (item.type === "RD" && item.charges) // Rod
+			|| (item.type === "G" && item.charges) // Adventuring gear
+			|| item.poison
+			|| item.type === "A" // Ammunition
+			|| item.type === "AF" // Ammunition [futuristic]
+			|| item.type === "EXP"
+		) return DataConverterItem._IMPORT_TYPE_CONSUMABLE;
+
+		if (
+			item.type === "HA" // Heavy armor
+			|| item.type === "MA" // Medium armor
+			|| item.type === "LA" // Light armor
+			|| item.type === "S" // Shield
+			|| item.bardingType // Barding
+		) return DataConverterItem._IMPORT_TYPE_EQUIPMENT;
+
+		if (item.containerCapacity) return DataConverterItem._IMPORT_TYPE_CONTAINER;
+
+		// Classify some "other" items as "trinket"-type equipment
+		//  - Items with +AC/+Saving Throw/etc. bonuses (e.g. cloak of protection)
+		//  - Ability score modifying items (e.g. belt of giant strength)
+		//  - All other wondrous items, as there are few examples that couldn't in some way be seen as "equipment"
+		if (
+			item.bonusAc
+			|| item.bonusSavingThrow
+			|| item.bonusAbilityCheck
+			|| item.bonusSpellAttack
+			|| item.bonusSpellAttack
+			|| item.bonusSpellSaveDc
+			|| item.bonusProficiencyBonus
+			|| item.ability
+			|| item.wondrous
+		) return DataConverterItem._IMPORT_TYPE_EQUIPMENT;
+
+		// Try to process various equipment-sounding item names as equipment (e.g. rings, bracers)
+		if (this._ITEM_EQUIPMENT_NAME_RES.some(it => it.test(item.name))) return DataConverterItem._IMPORT_TYPE_EQUIPMENT;
+
+		// Treat everything else as loot
+		return DataConverterItem._IMPORT_TYPE_LOOT;
+	}
+
+	static async _pIsInSrd (item) {
+		const srdData = await UtilCompendium.getSrdCompendiumEntity("item", item, {fnGetAliases: this.getItemSrdAliases});
+		return !!srdData;
+	}
+
+	static getItemSrdAliases (entity) {
+		if (!entity.name) return [];
+
+		const out = [];
+
+		// Shitty pluralization--allows conversion of e.g. "Arrow" -> "Arrows" (the SRD name is plural, despite being
+		//   a single arrow).
+		out.push(`${entity.name}s`);
+
+		if (entity.name.toLowerCase().includes("feet")) out.push(entity.name.replace(/feet/g, "ft."));
+
+		// e.g. "Wand of the War Mage, +1" -> "Wand of the War Mage +1"
+		// Note that this also "fixes" 5etools' "shield, +1" being a generic variant, whereas "shield +1" is the specific variant.
+		//   If anybody ever decides the generic variant is what they wanted to import, they'll be in for a bad time, but
+		//   that's an acceptable loss to reduce the very-reasonable support requests this generates.
+		if (entity.name.includes(", ")) out.push(entity.name.replace(/, /g, " "));
+
+		// "Holy Water (Flask)" -> "Flask of Holy Water"
+		const mBrackets = /^([^(]+) \(([^)]+)\)$/.exec(entity.name.trim());
+		if (mBrackets) out.push(`${mBrackets[2]} of ${mBrackets[1]}`);
+
+		// "Oil (Flask)" -> "Oil Flask"
+		if (mBrackets) out.push(`${mBrackets[1]} ${mBrackets[2]}`);
+
+		// "Rations (1 day)" -> "Rations"
+		if (mBrackets) out.push(mBrackets[1]);
+
+		return out;
+	}
+
+	static _getItemFlags (item, opts) {
+		opts = opts || {};
+
+		const out = {
+			[SharedConsts.MODULE_NAME_FAKE]: {
+				page: UrlUtil.PG_ITEMS,
+				source: item.source,
+				hash: UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ITEMS](item),
+			},
+		};
+
+		if (opts.isAddDataFlags) {
+			out[SharedConsts.MODULE_NAME_FAKE].propDroppable = "item";
+			out[SharedConsts.MODULE_NAME_FAKE].filterValues = opts.filterValues;
+		}
+
+		return out;
+	}
+
+	static async _pGetItemItem_fromSrd (item, opts, entriesStr) {
+		const rangeMeta = this._getWeaponRange(item);
+		const {weight, price, rangeShort, rangeUnits, rangeLong} = this._pGetItemItem_getWeightPriceRange(item, opts.size, rangeMeta);
+		const {isAttuned, isIdentified, isEquipped, attunement} = await this._pGetItemItem_pGetAttunedIdentifiedEquipped(item);
+		const {consumeType, consumeTarget, consumeAmount} = this._pGetItemItem_getAmmoConsumeDetails(item, opts);
+
+		const srdData = await UtilCompendium.getSrdCompendiumEntity("item", item, {fnGetAliases: this.getItemSrdAliases});
+
+		const consume = {...(srdData.data.consume || {})};
+		consume.type = consume.type || consumeType;
+		consume.target = consume.target || consumeTarget;
+		consume.amount = consume.amount || consumeAmount;
+
+		const additionalData = await this._pGetAdditionalData(item);
+		const additionalFlags = await this._pGetAdditionalFlags(item);
+
+		const img = await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await DataConverterItem._pGetItemItem_pGetImagePath(item, opts.fluff),
+		);
+
+		return {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(item, {isActorItem: opts.isActorItem})),
+			type: srdData.type,
+			data: {
+				...srdData.data,
+
+				source: UtilDataConverter.getSourceWithPagePart(item),
+				description: {value: await DataConverterItem._getItemItem_pGetItemDescription(item), chat: "", unidentified: ""},
+
+				proficient: true,
+				quantity: opts.quantity != null ? opts.quantity : (item.quantity || 1),
+				weight,
+				price,
+				attuned: isAttuned,
+				identified: isIdentified,
+				equipped: opts.isEquipped ?? isEquipped,
+				rarity: this._getItemItem_getRarity(item),
+				consume,
+				range: {value: rangeShort, long: rangeLong, units: rangeUnits},
+
+				attunement,
+
+				...(additionalData || {}),
+			},
+			img,
+			flags: {
+				...this._getItemFlags(item, opts),
+				...additionalFlags,
+			},
+			effects: [
+				// Avoid adding the SRD effects (e.g. with `...MiscUtil.copy(srdData.effects || []),`) since we don't
+				//   want e.g. Ring of Protection to import with two sets of "bonus AC" effects.
+				...await this._pGetItemEffects(item, img, opts),
+			],
+		};
+	}
+
+	static _pGetItemItem_getWeightPriceRange (item, size, {rangeShort, rangeLong, rangeUnits} = {}) {
+		let weight = null;
+		let price = null;
+		let tmpValue = null;
+
+		if (size == null || size === SZ_MEDIUM) {
+			return {
+				weight: Config.getMetricNumber({configGroup: "importItem", originalValue: item.weight || 0, originalUnit: "lb"}),
+				price: !isNaN(item.value) ? item.value / 100 : null,
+				rangeShort: Config.getMetricNumber({configGroup: "importItem", originalValue: rangeShort || 0, originalUnit: "ft"}),
+				rangeLong: Config.getMetricNumber({configGroup: "importItem", originalValue: rangeLong || 0, originalUnit: "ft"}),
+				rangeUnits: Config.getMetricUnit({configGroup: "importItem", originalUnit: rangeUnits}),
+			};
+		}
+
+		const weightValueScalingMode = Config.get("importCreature", "itemWeightAndValueSizeScaling");
+
+		switch (weightValueScalingMode) {
+			// No scaling
+			case 1: {
+				weight = item.weight || 0;
+				tmpValue = item.value;
+				break;
+			}
+
+			// Multiplicative ("barding") scaling
+			case 2: {
+				const weightMult = DataConverterItem._SIZE_TO_ITEM_WEIGHT_MULT[size] || 1;
+				const valueMult = DataConverterItem._SIZE_TO_ITEM_VALUE_MULT[size] || 1;
+
+				if (item.weight && !isNaN(item.weight)) {
+					weight = Number(item.weight) * weightMult;
+				}
+
+				if (item.value && !isNaN(item.value)) {
+					tmpValue = item.value * valueMult;
+				}
+
+				break;
+			}
+
+			// Exponential ("gurt's greataxe") scaling
+			case 3: {
+				const exponent = DataConverterItem._SIZE_TO_ITEM_WEIGHT_AND_VALUE_EXPONENT[size] || 1;
+
+				if (item.weight && !isNaN(item.weight)) {
+					weight = Math.floor(item.weight ** exponent);
+				}
+
+				if (item.value && !isNaN(item.value)) {
+					const factor = item.value < 10 ? 1 : item.value < 100 ? 10 : 100;
+
+					// Convert the value to it's output currency
+					tmpValue = item.value / factor;
+
+					// Run the exponentiation on the output currency value, to avoid ridiculous numbers
+					tmpValue = Math.floor(tmpValue ** exponent);
+
+					// Convert back to copper prior to running the parsing conversion
+					tmpValue *= factor;
+				}
+
+				break;
+			}
+		}
+
+		// Currently (2020-04-26), Foundry does not support units in this field, so convert everything to gold
+		if (tmpValue) price = tmpValue / 100;
+
+		return {
+			weight: Config.getMetricNumber({configGroup: "importItem", originalValue: weight || 0, originalUnit: "lb"}),
+			price,
+
+			// Maintain range values regardless of size, as we don't have any data on how they scale
+			rangeShort: Config.getMetricNumber({configGroup: "importItem", originalValue: rangeShort || 0, originalUnit: "ft"}),
+			rangeLong: Config.getMetricNumber({configGroup: "importItem", originalValue: rangeLong || 0, originalUnit: "ft"}),
+			rangeUnits: Config.getMetricUnit({configGroup: "importItem", originalUnit: rangeUnits}),
+		};
+	}
+
+	static async _pGetItemItem_pGetAttunedIdentifiedEquipped (item) {
+		// If it's a magic item, mark it as identified
+		// If it's a magic item that requires attunement, mark it as attuned
+		const isMundane = item.rarity === "none" || item.rarity === "unknown" || item._category === "basic";
+		const isAttuned = !isMundane && !!item.reqAttune;
+
+		let isEquipped;
+		const importType = await this._pGetItemImporterType(item);
+		switch (importType) {
+			case DataConverterItem._IMPORT_TYPE_WEAPON: isEquipped = true; break;
+			case DataConverterItem._IMPORT_TYPE_TOOL: isEquipped = false; break;
+			case DataConverterItem._IMPORT_TYPE_CONSUMABLE: isEquipped = false; break;
+			case DataConverterItem._IMPORT_TYPE_EQUIPMENT: isEquipped = true; break;
+			case DataConverterItem._IMPORT_TYPE_CONTAINER: isEquipped = false; break;
+			case DataConverterItem._IMPORT_TYPE_LOOT: isEquipped = false; break;
+			default: throw new Error(`Unhandled importer type "${importType}"`);
+		}
+
+		return {
+			isAttuned,
+			// As of dnd5e v1.2.0, attunement cannot be e.g. "by <X class>", and instead is a numerical enum
+			attunement: item.reqAttune ? Config.get("importItem", "attunementType") : CONFIG.DND5E.attunementTypes.NONE,
+			isIdentified: !isMundane,
+			isEquipped,
+		};
+	}
+
+	static _getItemItem_pGetItemDescription (item) {
+		if (!Config.get("importItem", "isImportDescription")) return "";
+
+		return UtilDataConverter.pGetWithDescriptionPlugins(
+			() => this._getItemItem_pGetItemDescription_(item),
+		);
+	}
+
+	static _getItemItem_pGetItemDescription_ (item) {
+		// Render everything in the header, as Foundry doesn't have support for e.g. rarity or attunement
+		const [damage, damageType, propertiesTxt] = Renderer.item.getDamageAndPropertiesText(item);
+		const [typeRarityText, subTypeText, tierText] = Renderer.item.getTypeRarityAndAttunementText(item);
+
+		const headerPart = Config.get("importItem", "isImportDescriptionHeader") ? `<div>
+			${Renderer.item.getTypeRarityAndAttunementHtml(typeRarityText, subTypeText, tierText)}
+				<div class="flex w-100">
+					<div class="col-4">${[Parser.itemValueToFull(item), Parser.itemWeightToFull(item)].filter(Boolean).join(", ").uppercaseFirst()}</div>
+					<div class="col-8 text-right">${damage} ${damageType} ${propertiesTxt}</div>
+				</div>
+			</div>
+		<hr>` : "";
+
+		const bodyPart = Renderer.item.getRenderedEntries(
+			item,
+			{
+				isCompact: true,
+				wrappedTypeWhitelist: Config.get("importItem", "isImportDescriptionHeader") ? null : new Set(["variant"]),
+			},
+		);
+
+		return `${headerPart}
+		${bodyPart}`;
+	}
+
+	static _getItemItem_getItemUses (item) {
+		let charges = null;
+		if (item.charges) {
+			if (isNaN(item.charges)) {
+				const mDice = /{@dice (\d)+d(\d+)\s*(?:[-+]\s*\d+)?}/i.exec(item.charges);
+				if (mDice) {
+					charges = (Number(mDice[1]) * Number(mDice[2])) + (mDice[3] ? Number(mDice[3].replace(/\s*/g, "")) : 0);
+				}
+			} else charges = item.charges;
+		}
+		return charges;
+	}
+
+	static _getItemItem_getRarity (item) {
+		const rawRarity = `${(item.rarity || "unknown")}`.toLowerCase().trim();
+
+		switch (rawRarity) {
+			case "common": return "common";
+			case "uncommon": return "uncommon";
+			case "rare": return "rare";
+			case "very rare": return "veryRare";
+			case "legendary": return "legendary";
+			case "artifact": return "artifact";
+			default: return "";
+		}
+	}
+
+	static _getWeaponTypeBaseAndAbility (item) {
+		let weaponType = "";
+		let weaponAbility = "str";
+
+		if (item.type === "A" || item.type === "AF") {
+			weaponType = "ammo";
+			weaponAbility = "dex";
+		} else if (item.type === "M" || item.type === "R") {
+			if ((item.weaponCategory || "").toLowerCase() === "martial") weaponType = `martial${item.type}`;
+			else if ((item.weaponCategory || "").toLowerCase() === "simple") weaponType = `simple${item.type}`;
+		}
+
+		if (item.type === "R") weaponAbility = "dex";
+		else if (item.property && item.property.includes("F")) weaponAbility = "dex"; // Finesse
+
+		const weaponBaseItem = this._getBaseItem({item, weaponType});
+
+		return {weaponType, weaponAbility, weaponBaseItem};
+	}
+
+	static _getBaseItem ({item, weaponType = null, armorType = null, toolType = null}) {
+		// N.B.: the accepted types are limited by e.g. `weaponType` (see e.g. `_getItemBaseTypes` in dnd5e).
+		//   We ignore this, for simplicity's sake, but it may need to be implemented in the future.
+
+		let baseNameLower;
+		let baseSourceLower;
+
+		if (item.baseItem && typeof item.baseItem === "string") {
+			let [name, source] = item.baseItem.toLowerCase().trim().split("|").map(it => it.trim());
+			source = source || SRC_DMG.toLowerCase();
+
+			baseNameLower = name;
+			baseSourceLower = source;
+		}
+
+		if (item._baseName && item._baseSource) {
+			baseNameLower = item._baseName.toLowerCase();
+			baseSourceLower = item._baseSource.toLowerCase();
+		}
+
+		// dnd5e supports a limited set of base types; map to one if we can
+		if (baseSourceLower !== SRC_PHB.toLowerCase() && baseSourceLower !== SRC_DMG.toLowerCase()) return null;
+
+		if (weaponType) {
+			const key = this._getWeaponIdKey({nameLower: baseNameLower});
+			if (CONFIG.DND5E.weaponIds?.[key]) return key;
+		} else if (armorType) {
+			const key = this._getArmorShieldIdKey({nameLower: baseNameLower});
+			if (CONFIG.DND5E.shieldIds?.[key] || CONFIG.DND5E.armorIds?.[key]) return key;
+		} else if (toolType) {
+			const key = this._getToolIdKey({nameLower: baseNameLower});
+			if (CONFIG.DND5E.toolIds?.[key]) return key;
+		}
+
+		return null;
+	}
+
+	static _getWeaponRange (item) {
+		let rangeShort = 0;
+		let rangeLong = 0;
+		let rangeUnits = "ft";
+		if (item.range) {
+			const cleanRange = `${item.range}`.trim();
+			const mRangeLong = /^(\d+)\/(\d+)$/i.exec(cleanRange);
+			if (mRangeLong) {
+				rangeShort = Number(mRangeLong[1]);
+				rangeLong = Number(mRangeLong[2]);
+			}
+
+			const mRangeNum = /^(\d+)$/i.exec(cleanRange);
+			if (mRangeNum) rangeShort = Number(mRangeNum[1]);
+		} else if (item.property && item.property.includes("R")) { // Add a default 10 foot range for reach melee weapons
+			rangeShort = 10;
+		} else { // Add a default 5 foot range for melee weapons
+			rangeShort = 5;
+		}
+
+		return {rangeShort, rangeLong, rangeUnits};
+	}
+
+	static _getWeaponProperties (item) {
+		const out = item.property ? item.property.map(it => DataConverterItem._ITEM_PROP_MAP[it]).filter(Boolean).map(it => ({[it]: true})).reduce((a, b) => Object.assign(a, b), {}) : {};
+
+		if (item._variantName === "Adamantine Weapon" || item._variantName === "Adamantine Armor" || item._variantName === "Adamantine Ammunition") out.ada = true; // Adamantine
+		if (item.focus) out.foc = true; // Focus
+		if (!Renderer.item.isMundane(item)) out.mgc = true; // Magical
+		if (item._variantName === "Silvered Weapon" || item._variantName === "Silvered Ammunition") out.sil = true; // Silvered
+		if (item.firearm) out.fir = true; // Firearm
+
+		return out;
+	}
+
+	static async _pGetItemItem_weapon (item, opts, entriesStr) {
+		const {weaponType, weaponAbility, weaponBaseItem} = this._getWeaponTypeBaseAndAbility(item);
+		const rangeMeta = this._getWeaponRange(item);
+		const {weight, price, rangeShort, rangeLong, rangeUnits} = this._pGetItemItem_getWeightPriceRange(item, opts.size, rangeMeta);
+		const {isAttuned, isIdentified, isEquipped, attunement} = await this._pGetItemItem_pGetAttunedIdentifiedEquipped(item);
+		const {consumeType, consumeTarget, consumeAmount} = this._pGetItemItem_getAmmoConsumeDetails(item, opts);
+
+		// When the sheet renders, it splits this string by comma
+		const itemProperties = this._getWeaponProperties(item);
+
+		// Bonuses need to be manually applied to damage as well as the generic "bonus" field for on-hit
+		let dmg1 = "";
+		if (item.dmg1) {
+			dmg1 = item.dmg1;
+			if (item.bonusWeapon) dmg1 = `${dmg1}${item.bonusWeapon}`;
+			else if (item.bonusWeaponDamage) dmg1 = `${dmg1}${item.bonusWeaponDamage}`;
+			dmg1 = `${dmg1}+@mod`;
+		}
+
+		let dmg2 = "";
+		if (item.dmg2) {
+			dmg2 = item.dmg2;
+			if (item.bonusWeapon) dmg2 = `${dmg2}${item.bonusWeapon}`;
+			else if (item.bonusWeaponDamage) dmg2 = `${dmg2}${item.bonusWeaponDamage}`;
+			dmg2 = `${dmg2}+@mod`;
+		}
+
+		const charges = this._getItemItem_getItemUses(item);
+
+		const additionalData = await this._pGetAdditionalData(item);
+		const additionalFlags = await this._pGetAdditionalFlags(item);
+
+		const img = await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await DataConverterItem._pGetItemItem_pGetImagePath(item, opts.fluff),
+		);
+
+		return {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(item, {isActorItem: opts.isActorItem})),
+			type: "weapon",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(item),
+				description: {value: await DataConverterItem._getItemItem_pGetItemDescription(item), chat: "", unidentified: ""},
+
+				proficient: true,
+				quantity: opts.quantity || item.quantity || 1,
+				weight,
+				price,
+				attuned: isAttuned,
+				identified: isIdentified,
+				equipped: opts.isEquipped ?? isEquipped,
+				rarity: this._getItemItem_getRarity(item),
+
+				damage: {
+					parts: [
+						[dmg1, item.dmgType ? Parser.dmgTypeToFull(item.dmgType) : ""],
+					],
+					versatile: dmg2,
+				},
+				range: {value: rangeShort, long: rangeLong, units: rangeUnits},
+				weaponType: weaponType,
+				baseItem: weaponBaseItem,
+				ability: weaponAbility,
+				properties: itemProperties,
+
+				attunement,
+
+				activation: {type: "action", cost: 1, condition: this._getItemItem_getActivationCondition({item, entriesStr})},
+				duration: {value: 0, units: ""},
+				target: {value: 0, units: "", type: ""},
+				uses: {value: charges, max: charges, per: ""},
+				actionType: item.type === "R" ? "rwak" : "mwak",
+				attackBonus: item.bonusWeapon || item.bonusWeaponAttack || null,
+				chatFlavor: "",
+				critical: {
+					damage: item.bonusWeaponCritDamage ?? "",
+					threshold: item.critThreshold ?? null,
+				},
+
+				formula: "",
+				save: {ability: "", dc: 0, scaling: "spell"},
+				consume: {type: consumeType, target: consumeTarget, amount: consumeAmount},
+
+				hp: {value: 0, max: 0, dt: null, conditions: ""},
+				speed: {value: null, conditions: ""},
+
+				...(additionalData || {}),
+			},
+			img,
+			flags: {
+				...this._getItemFlags(item, opts),
+				...additionalFlags,
+			},
+			effects: await this._pGetItemEffects(item, img, opts),
+		};
+	}
+
+	static async _pGetItemItem_equipment (item, opts, entriesStr) {
+		const {weight, price} = this._pGetItemItem_getWeightPriceRange(item, opts.size);
+		const {isAttuned, isIdentified, isEquipped, attunement} = await this._pGetItemItem_pGetAttunedIdentifiedEquipped(item);
+
+		const {acValue, maxDexBonus} = this._getItemAcMeta(item);
+
+		const charges = this._getItemItem_getItemUses(item);
+		const armorType = DataConverterItem._ITEM_TYPE_TO_ARMOR_TYPE[item.bardingType ?? item.type] || "";
+		const baseItem = this._getBaseItem({item, armorType});
+
+		const additionalData = await this._pGetAdditionalData(item);
+		const additionalFlags = await this._pGetAdditionalFlags(item);
+
+		const img = await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await DataConverterItem._pGetItemItem_pGetImagePath(item, opts.fluff),
+		);
+
+		return {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(item, {isActorItem: opts.isActorItem})),
+			type: "equipment",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(item),
+				description: {value: await DataConverterItem._getItemItem_pGetItemDescription(item), chat: "", unidentified: ""},
+
+				proficient: true,
+				quantity: opts.quantity || item.quantity || 1,
+				weight,
+				price,
+				attuned: isAttuned,
+				identified: isIdentified,
+				equipped: opts.isEquipped ?? isEquipped,
+				rarity: this._getItemItem_getRarity(item),
+
+				attunement,
+
+				activation: {type: "", cost: 0, condition: this._getItemItem_getActivationCondition({item, entriesStr})},
+				duration: {value: null, units: ""},
+				target: {value: null, units: "", type: ""},
+				range: {value: null, long: null, units: ""},
+				uses: {value: charges, max: charges, per: null},
+				ability: "",
+				actionType: "",
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				damage: {parts: [], versatile: ""},
+				formula: "",
+				save: {ability: "", dc: null, scaling: "spell"},
+				armor: {
+					type: armorType,
+					value: acValue,
+					dex: maxDexBonus,
+				},
+				strength: item.strength || null,
+				stealth: !!item.stealth,
+				consume: {type: "", target: null, amount: null},
+
+				hp: {value: 0, max: 0, dt: null, conditions: ""},
+				speed: {value: null, conditions: ""},
+
+				baseItem,
+
+				...(additionalData || {}),
+			},
+			img,
+			flags: {
+				...this._getItemFlags(item, opts),
+				...additionalFlags,
+			},
+			effects: await this._pGetItemEffects(item, img, opts),
+		};
+	}
+
+	static async _pGetItemItem_container (item, opts, entriesStr) {
+		const {weight, price} = this._pGetItemItem_getWeightPriceRange(item, opts.size);
+		const {isAttuned, isIdentified, isEquipped, attunement} = await this._pGetItemItem_pGetAttunedIdentifiedEquipped(item);
+
+		const capacityValue = !item.containerCapacity
+			? 0
+			: item.containerCapacity.weight
+				? item.containerCapacity.weight.reduce((a, b) => a + b, 0)
+				: Math.max(...item.containerCapacity.item.map(itemToCount => Math.max(...Object.values(itemToCount))));
+
+		const additionalData = await this._pGetAdditionalData(item);
+		const additionalFlags = await this._pGetAdditionalFlags(item);
+
+		const img = await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await DataConverterItem._pGetItemItem_pGetImagePath(item, opts.fluff),
+		);
+
+		return {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(item, {isActorItem: opts.isActorItem})),
+			type: "backpack",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(item),
+				description: {value: await DataConverterItem._getItemItem_pGetItemDescription(item), chat: "", unidentified: ""},
+
+				quantity: opts.quantity || item.quantity || 1,
+				weight,
+				price,
+				attuned: isAttuned,
+				equipped: opts.isEquipped ?? isEquipped,
+				identified: isIdentified,
+				rarity: this._getItemItem_getRarity(item),
+				capacity: {
+					type: item.containerCapacity.weight ? "weight" : "items",
+					value: capacityValue,
+					weightless: !!item.containerCapacity.weightless,
+				},
+
+				attunement,
+
+				damage: {parts: []},
+
+				...(additionalData || {}),
+			},
+			img,
+			flags: {
+				...this._getItemFlags(item, opts),
+				...additionalFlags,
+			},
+			effects: await this._pGetItemEffects(item, img, opts),
+		};
+	}
+
+	static async _pGetItemItem_consumable (item, opts, entriesStr) {
+		const {weight, price} = this._pGetItemItem_getWeightPriceRange(item, opts.size);
+		const {isAttuned, isIdentified, isEquipped, attunement} = await this._pGetItemItem_pGetAttunedIdentifiedEquipped(item);
+
+		const consType = (item.poison ? "poison" : DataConverterItem._ITEM_TYPE_TO_CONSUMABLE_TYPE[item.type]) || "";
+
+		let rollOnCons = "";
+		let autoDestroy = false;
+
+		entriesStr.replace(/if you expend[^.]+last charge[^.]+roll[^.]+{@dice ([^}]+)}(?:[^.]+)?\.(?:[^.]+)on a[^.]+\d+[^.]+destroyed/ig, (...m) => {
+			rollOnCons = m[1];
+			autoDestroy = true;
+		});
+		if (item.type === "SC" || item.type === "P") autoDestroy = true;
+
+		// region Ammo attack/damage is added to the weapon's roll if ammo is set up
+		const actionType = ["A", "AF"].includes(item.type) ? "rwak" : null;
+		let attackBonus = null;
+
+		const dmgParts = [];
+		if (["A", "AF"].includes(item.type) && (item.bonusWeapon || item.bonusWeaponDamage)) {
+			attackBonus = Number(item.bonusWeapon || item.bonusWeaponAttack);
+
+			dmgParts.push([
+				Number(item.bonusWeapon || item.bonusWeaponDamage),
+				null,
+			]);
+		}
+		// endregion
+
+		const charges = this._getItemItem_getItemUses(item);
+
+		const additionalData = await this._pGetAdditionalData(item);
+		const additionalFlags = await this._pGetAdditionalFlags(item);
+
+		const img = await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await DataConverterItem._pGetItemItem_pGetImagePath(item, opts.fluff),
+		);
+
+		return {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(item, {isActorItem: opts.isActorItem})),
+			type: "consumable",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(item),
+				description: {value: await DataConverterItem._getItemItem_pGetItemDescription(item), chat: "", unidentified: ""},
+
+				quantity: opts.quantity || item.quantity || 1,
+				weight,
+				price,
+				attuned: isAttuned,
+				equipped: opts.isEquipped ?? isEquipped,
+				identified: isIdentified,
+				rarity: this._getItemItem_getRarity(item),
+
+				consumableType: consType,
+
+				attunement,
+
+				activation: {type: "action", cost: 1, condition: this._getItemItem_getActivationCondition({item, entriesStr})},
+				duration: {value: null, units: ""},
+				target: {value: null, units: "", type: ""},
+				range: {value: null, long: null, units: ""},
+				uses: {value: charges, max: charges, per: null, autoUse: true, autoDestroy: autoDestroy},
+				ability: "",
+				actionType,
+				attackBonus,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				damage: {
+					parts: dmgParts,
+					versatile: "",
+				},
+				formula: rollOnCons, // unsure if this is the best place to put this
+				save: {ability: "", dc: null, scaling: "spell"},
+				consume: {type: "", target: null, amount: null},
+				hp: {value: 0, max: 0, dt: null, conditions: ""},
+				speed: {value: null, conditions: ""},
+
+				...(additionalData || {}),
+			},
+			img,
+			flags: {
+				...this._getItemFlags(item, opts),
+				...additionalFlags,
+			},
+			effects: await this._pGetItemEffects(item, img, opts),
+		};
+	}
+
+	static async _pGetItemItem_tool (item, opts, entriesStr) {
+		const {weight, price} = this._pGetItemItem_getWeightPriceRange(item, opts.size);
+		const {isAttuned, isIdentified, isEquipped, attunement} = await this._pGetItemItem_pGetAttunedIdentifiedEquipped(item);
+
+		let defaultAbil = DataConverterItem._ITEM_NAME_TO_DEFAULT_ABILITY[item.name] || "int";
+
+		const toolType = DataConverterItem._ITEM_TYPE_TO_TOOL_TYPE[item.type] ?? null;
+		const baseItem = this._getBaseItem({item, toolType});
+
+		const additionalData = await this._pGetAdditionalData(item);
+		const additionalFlags = await this._pGetAdditionalFlags(item);
+
+		const img = await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await DataConverterItem._pGetItemItem_pGetImagePath(item, opts.fluff),
+		);
+
+		return {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(item, {isActorItem: opts.isActorItem})),
+			type: "tool",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(item),
+				description: {value: await DataConverterItem._getItemItem_pGetItemDescription(item), chat: "", unidentified: ""},
+
+				quantity: opts.quantity || item.quantity || 1,
+				weight,
+				price,
+				attuned: isAttuned,
+				equipped: opts.isEquipped ?? isEquipped,
+				identified: isIdentified,
+				rarity: this._getItemItem_getRarity(item),
+
+				toolType,
+				proficient: 1, // 0 = not, 1 = proficient, 2 = expert, 0.5 = jack of all trades
+				ability: defaultAbil,
+
+				attunement,
+
+				chatFlavor: "",
+				damage: {parts: []},
+
+				baseItem,
+
+				...(additionalData || {}),
+			},
+			img,
+			flags: {
+				...this._getItemFlags(item, opts),
+				...additionalFlags,
+			},
+			effects: await this._pGetItemEffects(item, img, opts),
+		};
+	}
+
+	static async _pGetItemItem_loot (item, opts, entriesStr) {
+		const {weight, price} = this._pGetItemItem_getWeightPriceRange(item, opts.size);
+		const {isAttuned, isIdentified, isEquipped, attunement} = await this._pGetItemItem_pGetAttunedIdentifiedEquipped(item);
+
+		const additionalData = await this._pGetAdditionalData(item);
+		const additionalFlags = await this._pGetAdditionalFlags(item);
+
+		const img = await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await DataConverterItem._pGetItemItem_pGetImagePath(item, opts.fluff),
+		);
+
+		return {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(item, {isActorItem: opts.isActorItem})),
+			type: "loot",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(item),
+				description: {value: await DataConverterItem._getItemItem_pGetItemDescription(item), chat: "", unidentified: ""},
+
+				quantity: opts.quantity || item.quantity || 1,
+				weight,
+				price,
+				attuned: isAttuned,
+				equipped: opts.isEquipped ?? isEquipped,
+				identified: isIdentified,
+				rarity: this._getItemItem_getRarity(item),
+
+				attunement,
+
+				damage: {parts: []},
+
+				...(additionalData || {}),
+			},
+			img,
+			flags: {
+				...this._getItemFlags(item, opts),
+				...additionalFlags,
+			},
+			effects: await this._pGetItemEffects(item, img, opts),
+		};
+	}
+
+	static async _pGetItemItem_pGetImagePath (item, fluff) {
+		const getters = [
+			this._pGetItemItem_pGetImagePath_fromPlutonium.bind(this, item, fluff),
+			this._pGetItemItem_pGetImagePath_fromFoundry.bind(this, item),
+		];
+		if (Config.get("import", "isPreferFoundryImages")) getters.reverse();
+
+		for (const getter of getters) {
+			const url = await getter();
+			if (url) return url;
+		}
+
+		return `modules/${SharedConsts.MODULE_NAME}/media/icon/${DataConverterItem._ITEM_TYPE_TO_ICON[item.type] || "crossed-swords"}.svg`;
+	}
+
+	static async _pGetItemItem_pGetImagePath_fromFoundry (item) { return this._pGetCompendiumImage(item); }
+	static async _pGetItemItem_pGetImagePath_fromPlutonium (item, fluff) { return Vetools.pGetImageUrlFromFluff(fluff); }
+
+	static _pGetItemItem_getAmmoConsumeDetails (item, opts) {
+		let consumeType = "";
+		let consumeTarget = "";
+		let consumeAmount = null;
+
+		if (item.ammoType) {
+			consumeType = "ammo";
+			consumeAmount = 1;
+
+			if (opts.sheetItemsAmmo) {
+				const [ammoTypeName, ammoTypeSource] = item.ammoType.toLowerCase().split("|").map(it => it.trim()).filter(Boolean);
+				const cleanAmmoTypeSource = (ammoTypeSource || SRC_DMG).toLowerCase();
+				const cleanAmmoTypeName = ammoTypeName.replace(/s+$/g, ""); // Remove trailing "s"
+
+				const ammoTypeItems = opts.sheetItemsAmmo.filter(sheetItem => {
+					const cleanSheetItemName = sheetItem.name.toLowerCase().trim().replace(/s+$/g, ""); // Remove trailing "s"
+					return cleanSheetItemName === cleanAmmoTypeName
+						&& (
+							!Config.get("import", "isStrictMatching")
+							|| (UtilDataConverter.getItemSource(sheetItem) || "").toLowerCase() === cleanAmmoTypeSource
+						);
+				});
+
+				if (ammoTypeItems.length) {
+					// Arbitrarily use the first matching item we find
+					consumeTarget = ammoTypeItems[0].id;
+				}
+			}
+		}
+
+		return {
+			consumeType,
+			consumeTarget,
+			consumeAmount,
+		};
+	}
+
+	static async _pGetCompendiumImage (item) {
+		const out = await UtilCompendium.pGetCompendiumImage("item", item, {fnGetAliases: this.getItemSrdAliases});
+		if (out) return out;
+
+		// If the item has an SRD base, attempt to get the image from it
+		if (item._baseName) {
+			const out = await UtilCompendium.pGetCompendiumImage(
+				"item",
+				{
+					name: item._baseName,
+					source: item._baseSource || item.source,
+					srd: item._baseSrd,
+				},
+				{
+					fnGetAliases: this.getItemSrdAliases,
+				},
+			);
+			if (out) return out;
+		}
+
+		// If the item has a base item, attempt to get the image from it
+		if (item.baseItem && typeof item.baseItem === "string") {
+			let [name, source] = item.baseItem.split("|");
+			source = source || SRC_DMG;
+			return UtilCompendium.pGetCompendiumImage(
+				"item",
+				{
+					name: name,
+					source: source,
+					srd: true, // Always try to search for SRD
+				},
+				{
+					fnGetAliases: this.getItemSrdAliases,
+				},
+			);
+		}
+	}
+
+	static _getItemAcMeta (item) {
+		let acBonus = item.bonusAc ? Number(item.bonusAc) : 0;
+		if (isNaN(acBonus)) acBonus = 0;
+
+		const itemType = item.bardingType || item.type;
+
+		const isArmorOrShield = itemType === "HA"
+			|| itemType === "MA"
+			|| itemType === "LA"
+			|| itemType === "S";
+
+		return {
+			acValue: isArmorOrShield
+				? (item.ac || 10) + acBonus
+				: (acBonus || null), // Treat `0` acBonus as `null`
+			maxDexBonus: itemType === "MA"
+				? item.dexterityMax !== undefined ? item.dexterityMax : 2
+				: itemType === "HA" ? 0 : null,
+			isTypeAutoCalculated: isArmorOrShield,
+		};
+	}
+
+	static async _pGetItemEffects (item, img, opts) {
+		opts = opts || {};
+
+		if (!Config.get("importItem", "isAddActiveEffects")) return [];
+
+		const importType = await this._pGetItemImporterType(item);
+		const isDisabled = importType === DataConverterItem._IMPORT_TYPE_CONSUMABLE || (opts.isEquipped != null && !opts.isEquipped);
+
+		const out = [];
+
+		// region Additional custom effects
+		if (await this.pHasItemSideLoadedEffects(null, item)) {
+			out.push(...(await this.pGetItemItemEffects(null, item, null, {img})));
+		}
+		// endregion
+
+		// region AC
+		out.push(...this._pGetItemEffects_getAcEffects(item, img, opts, {isDisabled}));
+		// endregion
+
+		// region Saving throws
+		if (item.bonusSavingThrow) {
+			const effect = this._pGetItemEffects_getGenericBonus({
+				item,
+				img,
+				label: "Saving Throw Bonus",
+				key: "data.bonuses.abilities.save",
+				prop: "bonusSavingThrow",
+				isDisabled,
+			});
+			if (effect) out.push(effect);
+		}
+		// endregion
+
+		// region Ability checks
+		if (item.bonusAbilityCheck) {
+			const effect = this._pGetItemEffects_getGenericBonus({
+				item,
+				img,
+				label: "Ability Check Bonus",
+				key: "data.bonuses.abilities.check",
+				prop: "bonusAbilityCheck",
+				isDisabled,
+			});
+			if (effect) out.push(effect);
+		}
+		// endregion
+
+		// region Spell attack
+		if (item.bonusSpellAttack) {
+			const effectMelee = this._pGetItemEffects_getGenericBonus({
+				item,
+				img,
+				label: "Spell Attack Bonus (Melee)",
+				key: "data.bonuses.msak.attack",
+				prop: "bonusSpellAttack",
+				isDisabled,
+			});
+			if (effectMelee) out.push(effectMelee);
+
+			const effectRanged = this._pGetItemEffects_getGenericBonus({
+				item,
+				img,
+				label: "Spell Attack Bonus (Ranged)",
+				key: "data.bonuses.rsak.attack",
+				prop: "bonusSpellAttack",
+				isDisabled,
+			});
+			if (effectRanged) out.push(effectRanged);
+		}
+		// endregion
+
+		// region Spell damage
+		if (item.bonusSpellAttack) {
+			const effectMelee = this._pGetItemEffects_getGenericBonus({
+				item,
+				img,
+				label: "Spell Damage Bonus (Melee)",
+				key: "data.bonuses.msak.damage",
+				prop: "bonusSpellDamage",
+				isDisabled,
+			});
+			if (effectMelee) out.push(effectMelee);
+
+			const effectRanged = this._pGetItemEffects_getGenericBonus({
+				item,
+				img,
+				label: "Spell Damage Bonus (Ranged)",
+				key: "data.bonuses.rsak.damage",
+				prop: "bonusSpellDamage",
+				isDisabled,
+			});
+			if (effectRanged) out.push(effectRanged);
+		}
+		// endregion
+
+		// region Spell save DC
+		if (item.bonusSpellSaveDc) {
+			const effect = this._pGetItemEffects_getGenericBonus({
+				item,
+				img,
+				label: "Spell Save DC Bonus",
+				key: "data.bonuses.spell.dc",
+				prop: "bonusSpellSaveDc",
+				isDisabled,
+			});
+			if (effect) out.push(effect);
+		}
+		// endregion
+
+		// region Proficiency bonus
+		if (item.bonusProficiencyBonus) {
+			const effect = this._pGetItemEffects_getGenericBonus({
+				item,
+				img,
+				label: "Proficiency Bonus... Bonus?", // :^)
+				key: "data.attributes.prof",
+				prop: "bonusProficiencyBonus",
+				isDisabled,
+			});
+			if (effect) out.push(effect);
+		}
+		// endregion
+
+		// region Ability scores
+		if (item.ability) {
+			if (item.ability.static) {
+				Parser.ABIL_ABVS.forEach(ab => {
+					if (item.ability.static[ab] == null) return;
+
+					out.push(UtilActiveEffects.getGenericEffect({
+						key: `data.abilities.${ab}.value`,
+						value: item.ability.static[ab],
+						mode: CONST.ACTIVE_EFFECT_MODES.UPGRADE,
+						label: `Base ${Parser.attAbvToFull(ab)}`,
+						icon: img,
+						disabled: isDisabled,
+						priority: UtilActiveEffects.PRIORITY_BASE,
+					}));
+				});
+			}
+
+			Parser.ABIL_ABVS.forEach(ab => {
+				if (item.ability[ab] == null) return;
+
+				out.push(UtilActiveEffects.getGenericEffect({
+					key: `data.abilities.${ab}.value`,
+					value: item.ability[ab],
+					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+					label: `Bonus ${Parser.attAbvToFull(ab)}`,
+					icon: img,
+					disabled: isDisabled,
+					priority: UtilActiveEffects.PRIORITY_BONUS,
+				}));
+			});
+		}
+		// endregion
+
+		// region Damage resistance/immunity/vulnerability; condition immunity
+		const actorDataDrDiDvCi = DataConverter.getActorDamageResImmVulnConditionImm(item);
+		out.push(...this._pGetItemEffects_getDrDiDvCiEffects({img, label: "Damage Resistance", actProp: "dr", isDisabled, actorDataDrDiDvCi}));
+		out.push(...this._pGetItemEffects_getDrDiDvCiEffects({img, label: "Damage Immunity", actProp: "di", isDisabled, actorDataDrDiDvCi}));
+		out.push(...this._pGetItemEffects_getDrDiDvCiEffects({img, label: "Damage Vulnerability", actProp: "dv", isDisabled, actorDataDrDiDvCi}));
+		out.push(...this._pGetItemEffects_getDrDiDvCiEffects({img, label: "Condition Immunity", actProp: "ci", isDisabled, actorDataDrDiDvCi}));
+		// endregion
+
+		// region Speed
+		const speedChanges = [];
+		if (item.modifySpeed?.multiply) {
+			Object.entries(item.modifySpeed.multiply)
+				.forEach(([speedMode, multiplier]) => {
+					if (speedMode === "*") {
+						Parser.SPEED_MODES.forEach(mode => {
+							speedChanges.push(UtilActiveEffects.getGenericChange({
+								key: `data.attributes.movement.${mode}`,
+								value: multiplier,
+								mode: CONST.ACTIVE_EFFECT_MODES.MULTIPLY,
+								priority: UtilActiveEffects.PRIORITY_BONUS,
+							}));
+						});
+						return;
+					}
+
+					speedChanges.push(UtilActiveEffects.getGenericChange({
+						key: `data.attributes.movement.${speedMode}`,
+						value: multiplier,
+						mode: CONST.ACTIVE_EFFECT_MODES.MULTIPLY,
+						priority: UtilActiveEffects.PRIORITY_BONUS,
+					}));
+				});
+		}
+
+		if (item.modifySpeed?.static) {
+			Object.entries(item.modifySpeed.static)
+				.forEach(([speedMode, value]) => {
+					speedChanges.push(UtilActiveEffects.getGenericChange({
+						key: `data.attributes.movement.${speedMode}`,
+						value: value,
+						mode: CONST.ACTIVE_EFFECT_MODES.UPGRADE,
+						priority: UtilActiveEffects.PRIORITY_BASE,
+					}));
+				});
+		}
+
+		if (item.modifySpeed?.equal) {
+			Object.entries(item.modifySpeed.equal)
+				.forEach(([speedMode, otherSpeedMode]) => {
+					speedChanges.push(UtilActiveEffects.getGenericChange({
+						key: `data.attributes.movement.${speedMode}`,
+						value: `@attributes.movement.${otherSpeedMode}`,
+						mode: CONST.ACTIVE_EFFECT_MODES.UPGRADE,
+						priority: UtilActiveEffects.PRIORITY_BASE,
+					}));
+				});
+		}
+
+		if (item.modifySpeed?.bonus) {
+			Object.entries(item.modifySpeed.bonus)
+				.forEach(([speedMode, bonus]) => {
+					// FIXME(Future) remove this to-bonus conversion when https://gitlab.com/foundrynet/dnd5e/-/issues/1233 if fixed, or, keep it if the bonuses are made to show up correctly on the sheet
+					bonus = UiUtil.intToBonus(bonus);
+
+					if (speedMode === "*") {
+						Parser.SPEED_MODES.forEach(mode => {
+							speedChanges.push(UtilActiveEffects.getGenericChange({
+								key: `data.attributes.movement.${mode}`,
+								value: bonus,
+								mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+								priority: UtilActiveEffects.PRIORITY_BONUS,
+							}));
+						});
+						return;
+					}
+
+					speedChanges.push(UtilActiveEffects.getGenericChange({
+						key: `data.attributes.movement.${speedMode}`,
+						value: bonus,
+						mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+						priority: UtilActiveEffects.PRIORITY_BONUS,
+					}));
+				});
+		}
+
+		if (speedChanges.length) {
+			out.push(UtilActiveEffects.getGenericEffect({
+				label: `Speed Adjustment`,
+				icon: img,
+				disabled: isDisabled,
+				changes: speedChanges,
+			}));
+		}
+		// endregion
+
+		// TODO(Future)
+		//  - language proficiencies
+		//  - save proficiencies?
+
+		return out;
+	}
+
+	static _pGetItemEffects_getAcEffects (item, img, opts, {isDisabled}) {
+		if (UtilCompat.isDaeGeneratingArmorEffects()) return [];
+
+		const out = [];
+
+		const acMeta = this._getItemAcMeta(item);
+		if (acMeta.acValue != null && !acMeta.isTypeAutoCalculated) {
+			out.push(UtilActiveEffects.getGenericEffect({
+				key: "data.attributes.ac.bonus",
+				value: acMeta.acValue,
+				mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+				label: `Bonus AC`,
+				icon: img,
+				disabled: isDisabled,
+				priority: UtilActiveEffects.PRIORITY_BONUS,
+			}));
+		}
+
+		return out;
+	}
+
+	static _pGetItemEffects_getGenericBonus ({item, img, label, key, prop, isDisabled}) {
+		const bonus = !isNaN(item[prop]) ? Number(item[prop]) : 0;
+		if (!bonus) return null;
+
+		return UtilActiveEffects.getGenericEffect({
+			key,
+			// FIXME(Future) remove this to-bonus conversion when https://gitlab.com/foundrynet/dnd5e/-/issues/1233 if fixed, or, keep it if the bonuses are made to show up correctly on the sheet
+			value: UiUtil.intToBonus(bonus),
+			mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+			label,
+			icon: img,
+			disabled: isDisabled,
+			priority: UtilActiveEffects.PRIORITY_BONUS,
+		});
+	}
+
+	static _pGetItemEffects_getDrDiDvCiEffects ({img, label, actProp, isDisabled, actorDataDrDiDvCi}) {
+		if (!actorDataDrDiDvCi[actProp]) return [];
+
+		const out = [];
+
+		if (actorDataDrDiDvCi[actProp].value) {
+			actorDataDrDiDvCi[actProp].value.forEach(it => {
+				out.push(UtilActiveEffects.getGenericEffect({
+					key: `data.traits.${actProp}.value`,
+					value: it,
+					mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+					label: label,
+					icon: img,
+					disabled: isDisabled,
+					priority: UtilActiveEffects.PRIORITY_BONUS,
+				}));
+			});
+		}
+
+		if (actorDataDrDiDvCi[actProp].custom?.length) {
+			out.push(UtilActiveEffects.getGenericEffect({
+				key: `data.traits.${actProp}.custom`,
+				value: actorDataDrDiDvCi[actProp].custom,
+				mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+				label: label,
+				icon: img,
+				disabled: isDisabled,
+				priority: UtilActiveEffects.PRIORITY_BONUS,
+			}));
+		}
+
+		return out;
+	}
+
+	static async _pGetAdditionalData (item) {
+		return DataConverter.pGetAdditionalData_(item, this._SIDE_DATA_OPTS);
+	}
+
+	static async _pGetAdditionalFlags (item) {
+		return DataConverter.pGetAdditionalFlags_(item, this._SIDE_DATA_OPTS);
+	}
+
+	static async _pGetSideLoadedType (item) {
+		return DataConverter.pGetSideLoadedType_(item, {...this._SIDE_DATA_OPTS, validTypes: new Set(DataConverterItem.VALID_FOUNDRY_ITEM_TYPES_IMPORT)});
+	}
+
+	static async pHasItemSideLoadedEffects (actor, item) {
+		if ((await DataConverter.pGetAdditionalEffectsRaw_(item, this._SIDE_DATA_OPTS))?.length > 0) return true;
+
+		if (!item._variantName) return false;
+		const fauxGeneric = {name: item._variantName, source: item.source};
+
+		return (await DataConverter.pGetAdditionalEffectsRaw_(fauxGeneric, {propBrew: "foundryVariant", fnLoadJson: Vetools.pGetItemSideData, propJson: "variant"}))?.length > 0;
+	}
+
+	static async pGetItemItemEffects (actor, item, sheetItem, {additionalData, img} = {}) {
+		const effectsRaw = await DataConverter.pGetAdditionalEffectsRaw_(item, this._SIDE_DATA_OPTS);
+		const effects = UtilActiveEffects.getExpandedEffects(effectsRaw || [], {actor, sheetItem, parentName: item.name, additionalData, img});
+
+		if (!item._variantName) return effects;
+		const fauxGeneric = {name: item._variantName, source: item.source};
+
+		const effectsRawVariant = await DataConverter.pGetAdditionalEffectsRaw_(fauxGeneric, {propBrew: "foundryVariant", fnLoadJson: Vetools.pGetItemSideData, propJson: "variant"});
+		const effectsVariant = UtilActiveEffects.getExpandedEffects(effectsRawVariant || [], {actor, sheetItem, parentName: fauxGeneric.name, additionalData, img});
+
+		return [...effects, ...effectsVariant];
+	}
+
+	static get _SIDE_DATA_OPTS () {
+		return {propBrew: "foundryItem", fnLoadJson: Vetools.pGetItemSideData, propJson: "item"};
+	}
+
+	static _getGenericIdKey ({nameLower}) { return nameLower.replace(/[^a-z]+/g, ""); }
+	static _getWeaponIdKey ({nameLower}) { return this._getGenericIdKey({nameLower}); }
+	static _getArmorShieldIdKey ({nameLower}) { return DataConverterItem._ITEM_NAME_TO_ARMOR_ID_KEY[nameLower] || this._getGenericIdKey({nameLower}); }
+	static _getToolIdKey ({nameLower}) { return DataConverterItem._ITEM_NAME_TO_TOOL_ID_KEY[nameLower] || this._getGenericIdKey({nameLower}); }
+
+	static _getItemItem_getActivationCondition ({item, entriesStr}) {
+		entriesStr = entriesStr || JSON.stringify(item.entries || "");
+
+		let out = "";
+
+		entriesStr.replace(/command word|command phrase/gi, (...m) => {
+			out = m[0];
+		});
+
+		return out.uppercaseFirst();
+	}
+
+	// region Currency import
+	/**
+	 * @param currency The item entry.
+	 * @param [opts] Options object.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 * @return {object}
+	 */
+	static async pGetCurrencyItem (currency, opts) {
+		opts = opts || {};
+
+		const weight = Config.getMetricNumber({configGroup: "importItem", originalValue: this._getCurrencyWeight(currency), originalUnit: "lb"});
+		const price = CurrencyUtil.getAsCopper(currency) / 100;
+
+		const out = {
+			name: "Currency",
+			type: "loot",
+			data: {
+				description: {
+					value: `<p>This collection of currency is made up of: ${Parser.getDisplayCurrency(currency)}</p>
+						<hr class="hr-2">
+						<p class="ve-muted italic">Drag-and-drop this item to an actor's sheet to add the currency to that actor.</p>`,
+					chat: "",
+					unidentified: "",
+				},
+
+				quantity: 1,
+				weight,
+				price,
+			},
+			img: "icons/commodities/currency/coins-assorted-mix-copper-silver-gold.webp",
+			flags: {
+				[SharedConsts.MODULE_NAME_FAKE]: {
+					type: DataConverterItem.FLAG_TYPE__CURRENCY,
+					currency: MiscUtil.copy(currency),
+				},
+			},
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importItem", "permissions")};
+
+		return out;
+	}
+
+	/** N.b. all 5e currencies weigh the same, surprisingly. */
+	static _getCurrencyWeight (currency) {
+		return Object.entries(currency)
+			.map(([coin, amount]) => 0.02 * (amount || 0))
+			.reduce((a, b) => a + b, 0);
+	}
+	// endregion
+}
+
+DataConverterItem._WEAPON_DETAIL_CACHE_INIT = false;
+DataConverterItem._WEAPON_DETAIL_CACHE = {};
+DataConverterItem._WEAPON_DETAIL_CACHE_LOCK = new VeLock();
+
+DataConverterItem._IMPORT_TYPE_WEAPON = "weapon";
+DataConverterItem._IMPORT_TYPE_TOOL = "tool";
+DataConverterItem._IMPORT_TYPE_CONSUMABLE = "consumable";
+DataConverterItem._IMPORT_TYPE_EQUIPMENT = "equipment";
+DataConverterItem._IMPORT_TYPE_CONTAINER = "container";
+DataConverterItem._IMPORT_TYPE_LOOT = "loot";
+
+DataConverterItem.VALID_FOUNDRY_ITEM_TYPES_IMPORT = [
+	DataConverterItem._IMPORT_TYPE_WEAPON,
+	DataConverterItem._IMPORT_TYPE_TOOL,
+	DataConverterItem._IMPORT_TYPE_CONSUMABLE,
+	DataConverterItem._IMPORT_TYPE_EQUIPMENT,
+	DataConverterItem._IMPORT_TYPE_CONTAINER,
+	DataConverterItem._IMPORT_TYPE_LOOT,
+];
+
+DataConverterItem.STACKABLE_FOUNDRY_ITEM_TYPES_IMPORT = [
+	DataConverterItem._IMPORT_TYPE_CONSUMABLE,
+	DataConverterItem._IMPORT_TYPE_LOOT,
+];
+
+DataConverterItem._ITEM_TYPE_TO_ARMOR_TYPE = {
+	"HA": "heavy",
+	"MA": "medium",
+	"LA": "light",
+	"S": "shield",
+};
+DataConverterItem._ITEM_TYPE_TO_CONSUMABLE_TYPE = {
+	A: "ammo",
+	AF: "ammo",
+	P: "potion",
+	SC: "scroll",
+	WD: "wand",
+	RD: "rod",
+};
+DataConverterItem._ITEM_TYPE_TO_TOOL_TYPE = {
+	AT: "art",
+	INS: "music",
+	GS: "game",
+};
+// NOTE: Unofficial data, loosely based on the skills shown in XGE's expanded "Tool Proficiencies" section
+DataConverterItem._ITEM_NAME_TO_DEFAULT_ABILITY = {
+	"Alchemist's Supplies": "int",
+	"Brewer's Supplies": "int",
+	"Calligrapher's Supplies": "int",
+	"Carpenter's Tools": "int",
+	"Cartographer's Tools": "int",
+	"Cobbler's Tools": "int",
+	"Cook's Utensils": "wis",
+	"Disguise Kit": "cha",
+	"Forgery Kit": "int",
+	"Glassblower's Tools": "int",
+	"Herbalism Kit": "wis",
+	"Jeweler's Tools": "int",
+	"Leatherworker's Tools": "int",
+	"Mason's Tools": "int",
+	"Navigator's Tools": "wis",
+	"Painter's Supplies": "int",
+	"Poisoner's Kit": "wis",
+	"Potter's Tools": "int",
+	"Smith's Tools": "int",
+	"Thieves' Tools": "dex",
+	"Tinker's Tools": "int",
+	"Weaver's Tools": "int",
+	"Woodcarver's Tools": "int",
+};
+DataConverterItem._ITEM_TYPE_TO_ICON = {
+	$: "cash", // Currency/gems/art objects
+	A: "quiver", // Ammunition
+	AF: "quiver", // Ammunition
+	AT: "toolbox", // Artisan Tool
+	EM: "", // Eldritch Machine
+	EXP: "unlit-bomb", // Explosive
+	G: "backpack", // Adventuring Gear
+	GS: "rolling-dices", // Gaming Set
+	HA: "breastplate", // Heavy Armor
+	INS: "guitar", // Instrument
+	LA: "leather-armor", // Light Armor
+	M: "crossed-swords", // Melee Weapon
+	MA: "scale-mail", // Medium Armor
+	MNT: "horse-head", // Mount
+	GV: "", // Generic Variant
+	P: "potion-ball", // Potion
+	R: "pocket-bow", // Ranged Weapon
+	RD: "crystal-wand", // Rod
+	RG: "ring", // Ring
+	S: "checked-shield", // Shield
+	SC: "tied-scroll", // Scroll
+	SCF: "orb-wand", // Spellcasting Focus
+	OTH: "battle-gear", // Other
+	T: "toolbox", // Tool
+	TAH: "saddle", // Tack and Harness
+	TG: "barrel", // Trade Good
+	VEH: "old-wagon", // Vehicle (land)
+	SHP: "galleon", // Vehicle (water)
+	AIR: "air-balloon", // Vehicle (air)
+	WD: "fairy-wand", // Wand
+};
+
+DataConverterItem._ITEM_PROP_MAP = {
+	"A": "amm",
+	"AF": "amm",
+	"BF": "", // Burst Fire has no mapping
+	"F": "fin",
+	"H": "hvy",
+	"L": "lgt",
+	"LD": "lod",
+	"R": "rch",
+	"RLD": "rel",
+	"S": "spc",
+	"T": "thr",
+	"2H": "two",
+	"V": "ver",
+};
+DataConverterItem._ITEM_EQUIPMENT_NAME_RES = [
+	"amulet of",
+	"badge of",
+	"band of",
+	"belt of",
+	"boots of",
+	"bracelet of",
+	"bracer of",
+	"bracers of",
+	"brooch of",
+	"cape of",
+	"circlet of",
+	"clothes of",
+	"crown of",
+	"eyes of",
+	"gauntlets of",
+	"gloves of",
+	"goggles of",
+	"hat of",
+	"headband of",
+	"helm of",
+	"mantle of",
+	"mask of",
+	"necklace of",
+	"periapt of",
+	"ring of",
+	"rings of",
+	"robe of",
+	"slippers of",
+].map(it => new RegExp(`(?:[ (]|^)${it}`, "i"));
+// Based on "Barding" from the PHB
+DataConverterItem._SIZE_TO_ITEM_WEIGHT_MULT = {
+	[SZ_FINE]: 0.5,
+	[SZ_DIMINUTIVE]: 0.5,
+	[SZ_TINY]: 0.5,
+	[SZ_SMALL]: 1,
+	[SZ_MEDIUM]: 1,
+	[SZ_LARGE]: 2,
+	[SZ_HUGE]: 4,
+	[SZ_GARGANTUAN]: 8,
+	[SZ_COLOSSAL]: 16,
+	[SZ_VARIES]: 1,
+};
+DataConverterItem._SIZE_TO_ITEM_VALUE_MULT = {
+	[SZ_FINE]: 0.25,
+	[SZ_DIMINUTIVE]: 0.25,
+	[SZ_TINY]: 0.25,
+	[SZ_SMALL]: 1,
+	[SZ_MEDIUM]: 1,
+	[SZ_LARGE]: 4,
+	[SZ_HUGE]: 16,
+	[SZ_GARGANTUAN]: 64,
+	[SZ_COLOSSAL]: 256,
+	[SZ_VARIES]: 1,
+};
+// Based on "Gurt's Greataxe" from SKT
+DataConverterItem._SIZE_TO_ITEM_WEIGHT_AND_VALUE_EXPONENT = {
+	[SZ_FINE]: 0.5,
+	[SZ_DIMINUTIVE]: 0.5,
+	[SZ_TINY]: 0.5,
+	[SZ_SMALL]: 1,
+	[SZ_MEDIUM]: 1,
+	[SZ_LARGE]: 2,
+	[SZ_HUGE]: 3,
+	[SZ_GARGANTUAN]: 4,
+	[SZ_COLOSSAL]: 5,
+	[SZ_VARIES]: 1,
+};
+
+DataConverterItem._ITEM_NAME_TO_ARMOR_ID_KEY = {
+	"half plate armor": "halfplate",
+	"hide armor": "hide",
+	"leather armor": "leather",
+	"padded armor": "padded",
+	"plate armor": "plate",
+	"splint armor": "splint",
+	"studded leather armor": "studded",
+};
+DataConverterItem._ITEM_NAME_TO_TOOL_ID_KEY = {
+	"alchemist's supplies": "alchemist",
+	"brewer's supplies": "brewer",
+	"calligrapher's supples": "calligrapher",
+	"playing card set": "card",
+	"carpenter's tools": "carpenter",
+	"cartographer's tools": "cartographer",
+	"dragonchess set": "chess",
+	"cobbler's tools": "cobbler",
+	"cook's utensils": "cook",
+	"dice set": "dice",
+	"disguise kit": "disg",
+	"forgery kit": "forg",
+	"glassblower's tools": "glassblower",
+	"herbalism kit": "herb",
+	"jeweler's tools": "jeweler",
+	"leatherworker's tools": "leatherworker",
+	"mason's tools": "mason",
+	"navigator's tools": "navg",
+	"painter's supplies": "painter",
+	"poisoner's kit": "pois",
+	"potter's tools": "potter",
+	"smith's tools": "smith",
+	"thieves' tools": "thief",
+	"tinker's tools": "tinker",
+	"weaver's tools": "weaver",
+	"woodcarver's tools": "woodcarver",
+};
+
+DataConverterItem.FLAG_TYPE__CURRENCY = "currency";
+
+export {DataConverterItem};

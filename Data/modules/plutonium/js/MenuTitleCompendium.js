@@ -1,1 +1,28 @@
-const _0x56a3=['200375UqxeoV','1168xxJtiV','_TOOL_LIST','locked','417041YfCLHM','Are\x20You\x20Sure?','_EVT_NAMESPACE','fa-external-link-alt','32378kvbnyy','\x20<b>This\x20compendium\x20is\x20locked.</b>','1XXvQMa','426404XRzeRP','142KuXPuX','map','268947YUTRjS','getDocuments','deleteDocuments','2297hEEbPu','2pVYKjs','_HOOK_NAME','31BwKdao','collection','pGetUserBoolean','pHandleButtonClick','Delete\x20All'];const _0x47d4=function(_0x1131e0,_0x22c880){_0x1131e0=_0x1131e0-0x1f1;let _0x56a3dc=_0x56a3[_0x1131e0];return _0x56a3dc;};const _0x198474=_0x47d4;(function(_0x51923b,_0x5eb3f4){const _0x227afa=_0x47d4;while(!![]){try{const _0x5da4af=-parseInt(_0x227afa(0x1f8))+parseInt(_0x227afa(0x1f5))+-parseInt(_0x227afa(0x1f6))*parseInt(_0x227afa(0x204))+-parseInt(_0x227afa(0x1f2))*parseInt(_0x227afa(0x1fc))+parseInt(_0x227afa(0x1fb))*parseInt(_0x227afa(0x1fe))+-parseInt(_0x227afa(0x203))+parseInt(_0x227afa(0x1f4))*parseInt(_0x227afa(0x207));if(_0x5da4af===_0x5eb3f4)break;else _0x51923b['push'](_0x51923b['shift']());}catch(_0x305460){_0x51923b['push'](_0x51923b['shift']());}}}(_0x56a3,0x346be));import{MenuTitle}from'./MenuTitle.js';import{PopoutSheet}from'./PopoutSheet.js';class MenuTitleCompendium extends MenuTitle{}MenuTitleCompendium[_0x198474(0x1fd)]='renderCompendium',MenuTitleCompendium[_0x198474(0x209)]='plutonium-compendium-title-menu';class MenuTitleCompendiumCleaner{static async[_0x198474(0x201)](_0x57d2df,_0x397721,_0x23b235,_0xadc25b){const _0x443f84=_0x198474,_0x37695c=await InputUiUtil[_0x443f84(0x200)]({'title':_0x443f84(0x208)+(_0x397721[_0x443f84(0x206)]?_0x443f84(0x1f3):'')});if(!_0x37695c)return;const _0x4116d9=await _0xadc25b['collection'][_0x443f84(0x1f9)]();_0xadc25b[_0x443f84(0x1ff)]['documentClass'][_0x443f84(0x1fa)](_0x4116d9[_0x443f84(0x1f7)](_0x1eedb2=>_0x1eedb2['id']),{'pack':_0xadc25b[_0x443f84(0x1ff)][_0x443f84(0x1ff)]});}}MenuTitleCompendium[_0x198474(0x205)]=[{'name':_0x198474(0x202),'Class':MenuTitleCompendiumCleaner,'iconClass':'fa-trash-alt'},{'name':'Pop\x20Out','Class':PopoutSheet,'iconClass':_0x198474(0x1f1),'additionalClassesButton':'pop__mnu-btn-open','additionalClassesPreSpacer':'pop__mnu-btn-open'}];export{MenuTitleCompendium};
+import {MenuTitle} from "./MenuTitle.js";
+
+class MenuTitleCompendium extends MenuTitle {}
+MenuTitleCompendium._HOOK_NAME = "renderCompendium";
+MenuTitleCompendium._EVT_NAMESPACE = "plutonium-compendium-title-menu";
+
+class MenuTitleCompendiumCleaner {
+	static async pHandleButtonClick (evt, app, $html, data) {
+		const isSure = await InputUiUtil.pGetUserBoolean({
+			title: `Are You Sure?${app.locked ? ` <b>This compendium is locked.</b>` : ""}`,
+		});
+		if (!isSure) return;
+
+		const content = await data.collection.getDocuments();
+		data.collection.documentClass.deleteDocuments(content.map(it => it.id), {pack: data.collection.collection});
+	}
+}
+
+// Each `Class` should have a static `pHandleButtonClick` method
+MenuTitleCompendium._TOOL_LIST = [
+	{
+		name: "Delete All",
+		Class: MenuTitleCompendiumCleaner,
+		iconClass: "fa-trash-alt",
+	},
+];
+
+export {MenuTitleCompendium};

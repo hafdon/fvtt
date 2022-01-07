@@ -1,1 +1,351 @@
-const _0xf82a=['OVERRIDE','array','placeholder','find','Unhandled\x20effect\x20mode,\x20was\x20neither\x20an\x20item\x20effect\x20nor\x20an\x20actor\x20effect!','.Item.','bind','144232uoSWsQ','length','_getExpandedEffects_recurseKey','getPriority','slice','disabled','split','data','dataType','data.resources.secondary.label','getExpandedEffects','flat','1123532yWGIko','default','data.resources.tertiary.label','data.resources.primary.label','_getExpandedEffects_getKeyPartFunctionOutput','getKeyFromCustomKey','getAvailableEffectsLookup','MODULE_NAME_FAKE','keys','trim','filter','919875PKlKEI','_AVAIL_EFFECTS_ACTOR_DND5E','10687rMGFSM','getAvailableEffects','entries','isItemEffect','getActiveEffectType','getFoundryMode','data.attributes.prof','exec','141373CbUynq','162205iIpXHV','changes','push','null','type','key','init','forEach','pop','test','getCustomKey','Item','join','map','23zaUhSN','getGenericEffect','PRIORITY_BONUS','characterFlags','max','undefined','path','ascSortLowerProp','model','toLowerCase','data.','DOWNGRADE','mode','system','PRIORITY_BASE','replace','get','_getExpandedEffects_recurseKeyPart','copy','flags.dnd5e.','_getExpandedEffects_getAllKeys','Actor.','origin','img','ACTIVE_EFFECT_MODES','451228MBUncy','icons/svg/aura.svg','endsWith','utils','Actor','DND5E','isActorEffect'];const _0x5036=function(_0x4ece14,_0x3a9e42){_0x4ece14=_0x4ece14-0x16e;let _0xf82a39=_0xf82a[_0x4ece14];return _0xf82a39;};const _0x10eb3e=_0x5036;(function(_0x26b2e1,_0x203c6d){const _0x5471aa=_0x5036;while(!![]){try{const _0x379539=-parseInt(_0x5471aa(0x1a2))*parseInt(_0x5471aa(0x1b9))+parseInt(_0x5471aa(0x195))+parseInt(_0x5471aa(0x17b))+parseInt(_0x5471aa(0x1aa))+-parseInt(_0x5471aa(0x189))+parseInt(_0x5471aa(0x1ab))+-parseInt(_0x5471aa(0x1a0));if(_0x379539===_0x203c6d)break;else _0x26b2e1['push'](_0x26b2e1['shift']());}catch(_0x132fb7){_0x26b2e1['push'](_0x26b2e1['shift']());}}}(_0xf82a,0x8ac6e));import{SharedConsts}from'../shared/SharedConsts.js';class ActiveEffectMeta{constructor(_0x58f713,_0x2f9633,_0x5db167){const _0x2d5344=_0x5036;this['path']=_0x58f713,this[_0x2d5344(0x16e)]=_0x2f9633,this['default']=_0x5db167;}get[_0x10eb3e(0x191)](){const _0x3e02c7=_0x10eb3e;return typeof this[_0x3e02c7(0x196)];}}class UtilActiveEffects{static[_0x10eb3e(0x1b1)](){const _0x2a286f=_0x10eb3e;UtilActiveEffects[_0x2a286f(0x1a1)][_0x2a286f(0x1ad)](new ActiveEffectMeta(_0x2a286f(0x1a8),CONST[_0x2a286f(0x17a)][_0x2a286f(0x182)],0x1),new ActiveEffectMeta(_0x2a286f(0x198),CONST[_0x2a286f(0x17a)][_0x2a286f(0x182)],''),new ActiveEffectMeta(_0x2a286f(0x192),CONST[_0x2a286f(0x17a)][_0x2a286f(0x182)],''),new ActiveEffectMeta(_0x2a286f(0x197),CONST[_0x2a286f(0x17a)][_0x2a286f(0x182)],''),...Object[_0x2a286f(0x1a4)](CONFIG?.[_0x2a286f(0x180)]?.[_0x2a286f(0x1bc)]||{})[_0x2a286f(0x1b8)](([_0x42ba9b,_0x3172cf])=>new ActiveEffectMeta(_0x2a286f(0x175)+_0x42ba9b,CONST[_0x2a286f(0x17a)]['OVERRIDE'],_0x3172cf[_0x2a286f(0x184)]!=null?MiscUtil[_0x2a286f(0x174)](_0x3172cf['placeholder']):_0x3172cf[_0x2a286f(0x1af)]())));}static['getAvailableEffects'](_0x4a0c30,_0x1269f){const _0x469e4f=_0x10eb3e;_0x1269f=_0x1269f||{};let _0x52ecf1;if(_0x1269f[_0x469e4f(0x1a5)])_0x52ecf1=game['system'][_0x469e4f(0x1c1)][_0x469e4f(0x1b6)];else{if(_0x1269f[_0x469e4f(0x181)])_0x52ecf1=game[_0x469e4f(0x16f)][_0x469e4f(0x1c1)][_0x469e4f(0x17f)];else throw new Error(_0x469e4f(0x186));}const _0x105967=_0x52ecf1[_0x4a0c30[_0x469e4f(0x190)][_0x469e4f(0x1af)]],_0x24803f=Object[_0x469e4f(0x1a4)](foundry[_0x469e4f(0x17e)]['flattenObject'](_0x105967))['map'](([_0x455596,_0x2d8092])=>new ActiveEffectMeta(_0x469e4f(0x1c3)+_0x455596,CONST[_0x469e4f(0x17a)]['OVERRIDE'],_0x2d8092));if(_0x1269f['isItemEffect'])return _0x24803f;return[..._0x24803f,...UtilActiveEffects[_0x469e4f(0x1a1)]]['sort'](SortUtil[_0x469e4f(0x1c0)][_0x469e4f(0x188)](null,_0x469e4f(0x1bf)));}static[_0x10eb3e(0x19b)](_0x2da062,_0x22e8d4){const _0xf42106=_0x10eb3e,_0x2ae540=this[_0xf42106(0x1a3)](_0x2da062,_0x22e8d4),_0x5bdaf5={};return _0x2ae540[_0xf42106(0x1b2)](_0x4dbdcd=>_0x5bdaf5[_0x4dbdcd[_0xf42106(0x1bf)]]=_0x4dbdcd),_0x5bdaf5;}static[_0x10eb3e(0x1a6)](_0x4b6fb8,_0x3adbc2){const _0x5bb70c=_0x10eb3e;if(!_0x3adbc2)return undefined;_0x3adbc2=this[_0x5bb70c(0x19a)](_0x3adbc2);if(!_0x4b6fb8[_0x3adbc2])return undefined;const _0x2b2406=_0x4b6fb8[_0x3adbc2];if(_0x2b2406[_0x5bb70c(0x196)]===undefined)return _0x5bb70c(0x1be);if(_0x2b2406['default']===null)return _0x5bb70c(0x1ae);if(_0x2b2406['default']instanceof Array)return _0x5bb70c(0x183);return typeof _0x2b2406['default'];}static[_0x10eb3e(0x193)](_0x354232,{actor:_0x166d41,sheetItem:_0x567aaa,parentName:parentName='',additionalData:additionalData=null,img:_0x489182}={}){const _0x44e97d=_0x10eb3e;if(!_0x354232||!_0x354232[_0x44e97d(0x18a)])return[];const _0x1647ac=[];for(const _0x1a6f3a of _0x354232){if(!_0x1a6f3a[_0x44e97d(0x1ac)]||!_0x1a6f3a['changes'][_0x44e97d(0x18a)])continue;const _0x5f207b=UtilActiveEffects['getGenericEffect']({'label':_0x1a6f3a['name']??parentName,'priority':Math[_0x44e97d(0x1bd)](..._0x1a6f3a[_0x44e97d(0x1ac)][_0x44e97d(0x1b8)](_0x5a2840=>UtilActiveEffects[_0x44e97d(0x18c)](UtilActiveEffects[_0x44e97d(0x1a7)](_0x5a2840['mode'])))),'icon':_0x567aaa?.[_0x44e97d(0x179)]??_0x489182,'disabled':!!_0x1a6f3a[_0x44e97d(0x18e)]});if(_0x166d41)_0x5f207b[_0x44e97d(0x178)]=_0x44e97d(0x177)+_0x166d41['id']+_0x44e97d(0x187)+_0x567aaa['id'];_0x5f207b['changes']=_0x5f207b[_0x44e97d(0x1ac)]||[],_0x1a6f3a[_0x44e97d(0x1ac)][_0x44e97d(0x1b2)](_0x3f8a2c=>{const _0x5b0f70=_0x44e97d,_0x578481=UtilActiveEffects[_0x5b0f70(0x1a7)](_0x3f8a2c[_0x5b0f70(0x16e)]),_0x24561f=this['_getExpandedEffects_getAllKeys']({'rawKey':_0x3f8a2c[_0x5b0f70(0x1b0)],'additionalData':additionalData});_0x24561f[_0x5b0f70(0x1b2)](_0x12885c=>{const _0x33a89a=_0x5b0f70;_0x5f207b[_0x33a89a(0x1ac)][_0x33a89a(0x1ad)]({'key':_0x12885c,'mode':_0x578481,'value':_0x3f8a2c['value'],'priority':UtilActiveEffects[_0x33a89a(0x18c)](_0x578481)});});});if(_0x5f207b['changes'][_0x44e97d(0x18a)])_0x1647ac[_0x44e97d(0x1ad)](_0x5f207b);}return _0x1647ac;}static[_0x10eb3e(0x176)]({rawKey:_0x1472fa,additionalData:_0x4a7c52}){const _0x44af2a=_0x10eb3e;if(!_0x4a7c52)return[_0x1472fa];const _0x4d22cb=_0x1472fa[_0x44af2a(0x18f)](/(<\$[^$]+\$>)/g)[_0x44af2a(0x1b8)](_0x3e4d96=>_0x3e4d96[_0x44af2a(0x19e)]())[_0x44af2a(0x19f)](Boolean);if(_0x4d22cb['length']===0x1)return[_0x1472fa];const _0x5e8c2c=_0x4d22cb[_0x44af2a(0x1b8)](_0x30fcbf=>{const _0x4fc313=_0x44af2a;if(/^<\$[^$]+\$>$/[_0x4fc313(0x1b4)](_0x30fcbf))return _0x30fcbf;return _0x30fcbf[_0x4fc313(0x18f)]('.')[_0x4fc313(0x1b8)](_0x118397=>_0x118397[_0x4fc313(0x19e)]())[_0x4fc313(0x19f)](Boolean);})[_0x44af2a(0x194)](),_0x47dea6=[];return this['_getExpandedEffects_recurseKey']({'additionalData':_0x4a7c52,'out':_0x47dea6,'stack':[],'keyParts':_0x5e8c2c,'depth':0x0}),_0x47dea6;}static['_getExpandedEffects_recurseKey']({additionalData:_0x1d557f,out:_0x291a64,stack:_0x46a2f0,keyParts:_0x2a235d,depth:_0x58420c}){const _0x204546=_0x10eb3e,_0x25e657=_0x2a235d[_0x58420c],_0x202f7d=/^<\$([^$]+)\$>$/[_0x204546(0x1a9)](_0x25e657);if(_0x202f7d){const _0x3aadb7=[];let _0xed17b0=null,_0x382c09=_0x202f7d[0x1];const _0x4aeeb1=/^([^(]+)\((.*?)\)$/[_0x204546(0x1a9)](_0x382c09);if(_0x4aeeb1){const [,_0x2a46d7,_0x44691e]=_0x4aeeb1;_0xed17b0=_0x2a46d7,_0x382c09=_0x44691e;}const _0x33ce21=_0x382c09[_0x204546(0x18f)]('.')[_0x204546(0x1b8)](_0x502e86=>_0x502e86[_0x204546(0x19e)]())[_0x204546(0x19f)](Boolean);this['_getExpandedEffects_recurseKeyPart']({'additionalData':_0x1d557f,'out':_0x3aadb7,'stack':[],'tokens':_0x33ce21,'depth':0x0});let _0x20e8c2=_0x3aadb7[_0x204546(0x1b8)](_0x30f684=>MiscUtil[_0x204546(0x172)](_0x1d557f,..._0x30f684['split']('.')));if(_0xed17b0)_0x20e8c2=_0x20e8c2[_0x204546(0x1b8)](_0x40176c=>this['_getExpandedEffects_getKeyVariableFunctionOutput']({'fn':_0xed17b0,'additionalDataValue':_0x40176c}))[_0x204546(0x194)]();_0x20e8c2[_0x204546(0x1b2)](_0x38f24c=>{const _0x202599=_0x204546,_0x2bea3f=MiscUtil[_0x202599(0x174)](_0x2a235d);_0x2bea3f[_0x58420c]=_0x38f24c,this['_getExpandedEffects_recurseKey']({'additionalData':_0x1d557f,'out':_0x291a64,'stack':_0x46a2f0,'keyParts':_0x2bea3f,'depth':_0x58420c});});}else{if(_0x58420c===_0x2a235d[_0x204546(0x18a)]-0x1){_0x291a64[_0x204546(0x1ad)]([..._0x46a2f0,_0x25e657][_0x204546(0x1b7)]('.'));return;}_0x46a2f0[_0x204546(0x1ad)](_0x25e657),this[_0x204546(0x18b)]({'additionalData':_0x1d557f,'out':_0x291a64,'stack':_0x46a2f0,'keyParts':_0x2a235d,'depth':_0x58420c+0x1}),_0x46a2f0[_0x204546(0x1b3)]();}}static['_getExpandedEffects_getKeyVariableFunctionOutput']({fn:_0x159fd9,additionalDataValue:_0x396c9e}){const _0x118762=_0x10eb3e;switch(_0x159fd9){case _0x118762(0x19d):return Object[_0x118762(0x19d)](_0x396c9e??{});default:return _0x396c9e[_0x159fd9]();}}static[_0x10eb3e(0x173)]({additionalData:_0x117d2c,out:_0x30a1a9,stack:_0x5f1778,tokens:_0x4c588d,depth:_0x367331}){const _0x2fb3a6=_0x10eb3e,_0x3c1094=_0x4c588d[_0x367331];if(_0x3c1094[_0x2fb3a6(0x17d)]('()')){const _0x504312=_0x3c1094[_0x2fb3a6(0x18d)](0x0,-0x2),_0x523e3a=this[_0x2fb3a6(0x199)]({'fn':_0x504312,'additionalData':_0x117d2c,'stack':_0x5f1778});if(_0x523e3a==null)return;const _0xfd9092=_0x523e3a instanceof Array?_0x523e3a:[_0x523e3a];_0xfd9092[_0x2fb3a6(0x1b2)](_0x133516=>{const _0x403a2f=_0x2fb3a6,_0x32fc1c=MiscUtil[_0x403a2f(0x174)](_0x4c588d);_0x32fc1c[_0x367331]=_0x133516,this['_getExpandedEffects_recurseKeyPart']({'additionalData':_0x117d2c,'out':_0x30a1a9,'stack':_0x5f1778,'tokens':_0x32fc1c,'depth':_0x367331});});}else{if(_0x367331===_0x4c588d['length']-0x1){_0x30a1a9[_0x2fb3a6(0x1ad)]([..._0x5f1778,_0x3c1094][_0x2fb3a6(0x1b7)]('.'));return;}_0x5f1778[_0x2fb3a6(0x1ad)](_0x3c1094),this[_0x2fb3a6(0x173)]({'additionalData':_0x117d2c,'out':_0x30a1a9,'stack':_0x5f1778,'tokens':_0x4c588d,'depth':_0x367331+0x1}),_0x5f1778[_0x2fb3a6(0x1b3)]();}}static['_getExpandedEffects_getKeyPartFunctionOutput']({fn:_0x54fd11,additionalData:_0x438583,stack:_0x34280f}){const _0x4dc68e=_0x10eb3e,_0x5dd66e=MiscUtil[_0x4dc68e(0x172)](_0x438583,..._0x34280f);switch(_0x54fd11){case _0x4dc68e(0x19d):return Object[_0x4dc68e(0x19d)](_0x5dd66e??{});default:return _0x5dd66e[_0x54fd11]();}}static[_0x10eb3e(0x1ba)]({key:key='',value:value='',mode:mode=CONST[_0x10eb3e(0x17a)][_0x10eb3e(0x182)],label:label='',icon:icon=_0x10eb3e(0x17c),disabled:disabled=![],priority:priority=null}={}){const _0xfb57=_0x10eb3e,_0x520f51=key||value?{'key':key,'mode':mode,'value':value,'priority':priority}:null;return{'label':label,'icon':icon,'changes':[_0x520f51][_0xfb57(0x19f)](Boolean),'disabled':disabled,'duration':{'startTime':null,'seconds':null,'rounds':null,'turns':null,'startRound':null,'startTurn':null},'origin':null,'tint':'','transfer':!![],'flags':{}};}static[_0x10eb3e(0x1b5)](_0x37e36e){const _0x47fd02=_0x10eb3e;return SharedConsts[_0x47fd02(0x19c)]+'.'+_0x37e36e;}static[_0x10eb3e(0x19a)](_0x35c1c9){const _0x398427=_0x10eb3e;return _0x35c1c9[_0x398427(0x171)](new RegExp(SharedConsts[_0x398427(0x19c)]+'\x5c.'),'');}static[_0x10eb3e(0x1a7)](_0x5d1004){const _0xa28898=_0x10eb3e;if(typeof _0x5d1004==='number')return _0x5d1004;const [,_0x52a7c9=0x0]=Object[_0xa28898(0x1a4)](CONST[_0xa28898(0x17a)])[_0xa28898(0x185)](([_0x69f987])=>_0x69f987[_0xa28898(0x1c2)]()===(''+_0x5d1004)['trim']()[_0xa28898(0x1c2)]())||[];return _0x52a7c9;}static[_0x10eb3e(0x18c)](_0x2168fb){const _0x16482d=_0x10eb3e;return _0x2168fb>=CONST['ACTIVE_EFFECT_MODES'][_0x16482d(0x1c4)]?UtilActiveEffects['PRIORITY_BASE']:UtilActiveEffects[_0x16482d(0x1bb)];}}UtilActiveEffects[_0x10eb3e(0x1a1)]=[],UtilActiveEffects[_0x10eb3e(0x170)]=0x4,UtilActiveEffects[_0x10eb3e(0x1bb)]=0x7;export{UtilActiveEffects};
+/**
+ * The active effects modes are as follows. Each has a default priority (effects are applied low-to-high)
+ *   of `10 * mode`, so...
+ * CONST.ACTIVE_EFFECT_MODES = {
+ *   "CUSTOM":      0,  =>  priority  0
+ *   "MULTIPLY":    1,  =>  priority 10
+ *   "ADD":         2,  =>  priority 20
+ *   "DOWNGRADE":   3,  =>  priority 30
+ *   "UPGRADE":     4,  =>  priority 40
+ *   "OVERRIDE":    5,  =>  priority 50
+ * }
+ * DAE uses the following priorities, to allow e.g. base AC to be modified by additional AC:
+ * "OVERRIDE"  =>  priority 4
+ * "ADD"       =>  priority 7
+ * i.e. "OVERRIDE" is applied first, then "ADD".
+ */
+
+import {SharedConsts} from "../shared/SharedConsts.js";
+
+class ActiveEffectMeta {
+	constructor (path, mode, defaultVal) {
+		this.path = path;
+		this.mode = mode;
+		this.default = defaultVal;
+	}
+
+	get dataType () { return typeof this.default; }
+}
+
+class UtilActiveEffects {
+	static init () {
+		UtilActiveEffects._AVAIL_EFFECTS_ACTOR_DND5E.push(
+			new ActiveEffectMeta("data.attributes.prof", CONST.ACTIVE_EFFECT_MODES.OVERRIDE, 1),
+
+			new ActiveEffectMeta("data.resources.primary.label", CONST.ACTIVE_EFFECT_MODES.OVERRIDE, ""),
+			new ActiveEffectMeta("data.resources.secondary.label", CONST.ACTIVE_EFFECT_MODES.OVERRIDE, ""),
+			new ActiveEffectMeta("data.resources.tertiary.label", CONST.ACTIVE_EFFECT_MODES.OVERRIDE, ""),
+
+			...Object.entries((CONFIG?.DND5E?.characterFlags) || {})
+				.map(([k, meta]) => new ActiveEffectMeta(
+					`flags.dnd5e.${k}`,
+					CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+					meta.placeholder != null ? MiscUtil.copy(meta.placeholder) : meta.type()),
+				),
+		);
+	}
+
+	/**
+	 * @param entity
+	 * @param [opts] As passed in to the render hook for an `ActiveEffectConfig`
+	 * @param [opts.isActorEffect]
+	 * @param [opts.isItemEffect]
+	 */
+	static getAvailableEffects (entity, opts) {
+		opts = opts || {};
+
+		let modelMeta;
+		if (opts.isItemEffect) modelMeta = game.system.model.Item;
+		else if (opts.isActorEffect) modelMeta = game.system.model.Actor;
+		else throw new Error(`Unhandled effect mode, was neither an item effect nor an actor effect!`);
+
+		const model = modelMeta[entity.data.type];
+
+		const baseEffects = Object.entries(foundry.utils.flattenObject(model))
+			// Default everything to "override" when displaying in the UI
+			.map(([keyPath, defaultVal]) => new ActiveEffectMeta(`data.${keyPath}`, CONST.ACTIVE_EFFECT_MODES.OVERRIDE, defaultVal));
+
+		if (opts.isItemEffect) return baseEffects;
+		return [...baseEffects, ...UtilActiveEffects._AVAIL_EFFECTS_ACTOR_DND5E].sort(SortUtil.ascSortLowerProp.bind(null, "path"));
+	}
+
+	/**
+	 * @param entity
+	 * @param [opts] As passed in to the render hook for an `ActiveEffectConfig`
+	 * @param [opts.isActorEffect]
+	 * @param [opts.isItemEffect]
+	 */
+	static getAvailableEffectsLookup (entity, opts) {
+		const effects = this.getAvailableEffects(entity, opts);
+		const out = {};
+		effects.forEach(it => out[it.path] = it);
+		return out;
+	}
+
+	static getActiveEffectType (lookup, path) {
+		if (!path) return undefined;
+
+		// Note that all custom keys are just prefixed regular keys, so this works
+		path = this.getKeyFromCustomKey(path);
+
+		if (!lookup[path]) return undefined;
+		const meta = lookup[path];
+		if (meta.default === undefined) return "undefined";
+		if (meta.default === null) return "null";
+		if (meta.default instanceof Array) return "array";
+		return typeof meta.default;
+	}
+
+	static getActiveEffectDefault (lookup, path) {
+		if (!path) return undefined;
+		path = this.getKeyFromCustomKey(path);
+		return lookup[path]?.default;
+	}
+
+	static getExpandedEffects (rawEffects, {actor, sheetItem, parentName = "", additionalData = null, img} = {}) {
+		if (!rawEffects || !rawEffects.length) return [];
+
+		const out = [];
+
+		// Convert the reduced versions in the side data to full-data effects
+		for (const effectRaw of rawEffects) {
+			if (!effectRaw.changes || !effectRaw.changes.length) continue;
+
+			const effect = UtilActiveEffects.getGenericEffect({
+				label: effectRaw.name ?? parentName,
+				priority: Math.max(...effectRaw.changes.map(it => UtilActiveEffects.getPriority(UtilActiveEffects.getFoundryMode(it.mode)))),
+				icon: sheetItem?.img ?? img,
+				disabled: !!effectRaw.disabled,
+			});
+
+			if (actor) effect.origin = `Actor.${actor.id}.Item.${sheetItem.id}`;
+
+			effect.changes = effect.changes || [];
+			effectRaw.changes.forEach(rawChange => {
+				const mode = UtilActiveEffects.getFoundryMode(rawChange.mode);
+
+				// A single raw key can be expanded to multiple keys, e.g.:
+				// `"data.abilities.<$import.chosenAbilityScoreIncrease.keys()$>.proficient"` ->
+				//   `"data.abilities.str.proficient"` and `"data.abilities.dex.proficient"`
+				const allKeys = this._getExpandedEffects_getAllKeys({rawKey: rawChange.key, additionalData});
+				allKeys.forEach(key => {
+					effect.changes.push({
+						key,
+						mode,
+						value: rawChange.value,
+						priority: UtilActiveEffects.getPriority(mode),
+					});
+				});
+			});
+
+			if (effect.changes.length) out.push(effect);
+		}
+
+		return out;
+	}
+
+	/**
+	 * Process keys which contain templates
+	 * @param rawKey
+	 * @param additionalData
+	 * @return *
+	 */
+	static _getExpandedEffects_getAllKeys ({rawKey, additionalData}) {
+		if (!additionalData) return [rawKey];
+
+		const keyVariableNonVariableSections = rawKey.split(/(<\$[^$]+\$>)/g).map(it => it.trim()).filter(Boolean);
+		if (keyVariableNonVariableSections.length === 1) return [rawKey];
+
+		// A section can either be a single `"<$a.b.c$>"` variable (the internal paths of which should NOT be split), or a
+		//   Foundry data path part; `"data.abilities."` (note the potential for leading/trailing dots). We change this
+		//   into an array of either <variable|single path part prop>.
+		const keyParts = keyVariableNonVariableSections.map(sect => {
+			if (/^<\$[^$]+\$>$/.test(sect)) return sect;
+			return sect.split(".").map(it => it.trim()).filter(Boolean);
+		}).flat();
+
+		const allKeys = [];
+		this._getExpandedEffects_recurseKey({
+			additionalData,
+			out: allKeys,
+			stack: [],
+			keyParts,
+			depth: 0,
+		});
+		return allKeys;
+	}
+
+	static _getExpandedEffects_recurseKey ({additionalData, out, stack, keyParts, depth}) {
+		const keyPart = keyParts[depth];
+
+		const mVariable = /^<\$([^$]+)\$>$/.exec(keyPart);
+		if (mVariable) {
+			const expandedAdditionalDataPaths = [];
+
+			let fnName = null;
+			let variablePart = mVariable[1];
+
+			const mFunctionOuter = /^([^(]+)\((.*?)\)$/.exec(variablePart);
+			if (mFunctionOuter) {
+				const [, fnName_, fnArg] = mFunctionOuter;
+				fnName = fnName_;
+				variablePart = fnArg;
+			}
+
+			const variableTokens = variablePart.split(".").map(it => it.trim()).filter(Boolean);
+
+			this._getExpandedEffects_recurseKeyPart({
+				additionalData,
+				out: expandedAdditionalDataPaths,
+				stack: [],
+				tokens: variableTokens,
+				depth: 0,
+			});
+
+			// Re-run at this depth, swapping in new key parts based on our expanded additional data paths
+			let nxtKeyParts = expandedAdditionalDataPaths.map(it => MiscUtil.get(additionalData, ...it.split(".")));
+
+			// If any of the parts could not be found, bail out
+			if (nxtKeyParts.some(it => it == null)) return;
+
+			if (fnName) nxtKeyParts = nxtKeyParts.map(it => this._getExpandedEffects_getKeyVariableFunctionOutput({fn: fnName, additionalDataValue: it})).flat();
+
+			nxtKeyParts.forEach(it => {
+				const nxtKeyParts = MiscUtil.copy(keyParts);
+				nxtKeyParts[depth] = it;
+				this._getExpandedEffects_recurseKey({additionalData, out, stack, keyParts: nxtKeyParts, depth});
+			});
+		} else {
+			if (depth === keyParts.length - 1) {
+				out.push([...stack, keyPart].join("."));
+				return;
+			}
+
+			stack.push(keyPart);
+			this._getExpandedEffects_recurseKey({additionalData, out, stack, keyParts, depth: depth + 1});
+			stack.pop();
+		}
+	}
+
+	static _getExpandedEffects_getKeyVariableFunctionOutput ({fn, additionalDataValue}) {
+		switch (fn) {
+			case "keys": return Object.keys(additionalDataValue ?? {});
+
+			default: return additionalDataValue[fn]();
+		}
+	}
+
+	static _getExpandedEffects_recurseKeyPart ({additionalData, out, stack, tokens, depth}) {
+		const token = tokens[depth];
+
+		if (token.endsWith("()")) {
+			const fn = token.slice(0, -2);
+			const fnRet = this._getExpandedEffects_getKeyPartFunctionOutput({fn, additionalData, stack});
+
+			// Re-run at this depth, swapping in new tokens based on our function evaluation
+			if (fnRet == null) return;
+			const fnRets = fnRet instanceof Array ? fnRet : [fnRet];
+			fnRets.forEach(it => {
+				const nxtTokens = MiscUtil.copy(tokens);
+				nxtTokens[depth] = it;
+				this._getExpandedEffects_recurseKeyPart({additionalData, out, stack, tokens: nxtTokens, depth});
+			});
+		} else {
+			if (depth === tokens.length - 1) {
+				out.push([...stack, token].join("."));
+				return;
+			}
+
+			stack.push(token);
+			this._getExpandedEffects_recurseKeyPart({additionalData, out, stack, tokens, depth: depth + 1});
+			stack.pop();
+		}
+	}
+
+	static _getExpandedEffects_getKeyPartFunctionOutput ({fn, additionalData, stack}) {
+		const prevObj = MiscUtil.get(additionalData, ...stack);
+		switch (fn) {
+			case "keys": return Object.keys(prevObj ?? {});
+
+			default: return prevObj[fn]();
+		}
+	}
+
+	static getGenericEffect (
+		{
+			label = "",
+			icon = "icons/svg/aura.svg",
+			disabled = false,
+
+			key = "",
+			value = "",
+			mode = CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+			priority = null,
+
+			changes = null,
+		} = {},
+	) {
+		if (changes && (key || value)) throw new Error(`Generic effect args "key"/"value" and "changes" are mutually exclusive!`);
+
+		const change = key || value ? this.getGenericChange({key, value, mode, priority}) : null;
+
+		return {
+			label,
+			icon,
+			changes: changes ?? [change].filter(Boolean),
+			disabled,
+			duration: {
+				startTime: null,
+				seconds: null,
+				rounds: null,
+				turns: null,
+				startRound: null,
+				startTurn: null,
+			},
+			// origin: "Item.<item ID>",
+			//   or
+			// origin: "Actor.<actor ID>.Item.<item ID>",
+			origin: null,
+			tint: "",
+			transfer: true,
+			flags: {},
+		};
+	}
+
+	static getGenericChange (
+		{
+			key,
+			value,
+			mode = CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
+			priority = null,
+		},
+	) {
+		if (key == null || value === undefined) throw new Error(`Generic effect change "key" and "value" must be defined!`);
+		return {
+			key,
+			mode,
+			value,
+			priority,
+		};
+	}
+
+	static getCustomKey (key) { return `${SharedConsts.MODULE_NAME_FAKE}.${key}`; }
+	static getKeyFromCustomKey (customKey) { return customKey.replace(new RegExp(`${SharedConsts.MODULE_NAME_FAKE}\\.`), ""); }
+
+	static getFoundryMode (modeStrOrInt) {
+		if (typeof modeStrOrInt === "number") return modeStrOrInt;
+		const [, out = 0] = Object.entries(CONST.ACTIVE_EFFECT_MODES)
+			.find(([k]) => k.toLowerCase() === `${modeStrOrInt}`.trim().toLowerCase()) || [];
+		return out;
+	}
+
+	static getPriority (mode) {
+		return mode >= CONST.ACTIVE_EFFECT_MODES.DOWNGRADE ? UtilActiveEffects.PRIORITY_BASE : UtilActiveEffects.PRIORITY_BONUS;
+	}
+}
+UtilActiveEffects._AVAIL_EFFECTS_ACTOR_DND5E = [];
+
+UtilActiveEffects.PRIORITY_BASE = 4;
+UtilActiveEffects.PRIORITY_BONUS = 7;
+
+export {UtilActiveEffects};

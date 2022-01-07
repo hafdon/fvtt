@@ -31,7 +31,7 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 	  return mergeObject(super.defaultOptions, {
 			classes: ["tidy5e", "sheet", "actor", "character"],
 			blockFavTab: true,
-			width: 740,
+			width: game.settings.get("tidy5e-sheet", "playerSheetWidth") ?? 740,
 			height: 840,
 			tabs: [{navSelector: ".tabs", contentSelector: ".sheet-body", initial: defaultTab}]
 		});
@@ -122,35 +122,8 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 			event.preventDefault();
 			let target = event.currentTarget;
 			let value = Number(target.dataset.elvl);
-			let effectName = game.settings.get('tidy5e-sheet', 'exhaustionEffectCustom');
-
-			if(game.settings.get('tidy5e-sheet', 'exhaustionEffectsEnabled') != 'custom'){	
-				let data = actor.data.data;
-				await actor.update({"data.attributes.exhaustion": value});
-			} else {
-				if(value != 0){
-					let effect = `${effectName} ${value}`;
-					let id = actor._id;
-					let tokens = canvas.tokens.placeables;
-					let index = tokens.findIndex(x => x.data.actorId === id);
-					// console.log(index);
-					if(index == -1){
-						ui.notifications.warn(`${game.i18n.localize("TIDY5E.Settings.CustomExhaustionEffect.warning")}`);
-						return;
-					}
-					let token = tokens[index];
-					game.cub.addCondition(effect, [token])
-				} else {
-					const levels = game.settings.get('tidy5e-sheet', 'exhaustionEffectCustomTiers');
-					for(let i = 1; i<=levels; i++){
-						let tier = `${effectName} ${i}`;
-						if (game.cub.hasCondition(tier)){
-							// console.log(tier)
-							await game.cub.removeCondition(tier)
-						}
-					}
-				}
-			}
+			let data = actor.data.data;
+			await actor.update({"data.attributes.exhaustion": value});
  		});
 
  		// changing item qty and charges values (removing if both value and max are 0)
@@ -160,20 +133,20 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
       let path = event.target.dataset.path;
       let data = {};
       data[path] = Number(event.target.value);
-      actor.getOwnedItem(itemId).update(data);
+      actor.items.get(itemId).update(data);
     });
 
     // creating charges for the item
     html.find('.inventory-list .item .addCharges').click(event => {
       let itemId = $(event.target).parents('.item')[0].dataset.itemId;
-      let item = actor.getOwnedItem(itemId);
+      let item = actor.items.get(itemId);
 
       item.data.uses = { value: 1, max: 1 };
       let data = {};
       data['data.uses.value'] = 1;
       data['data.uses.max'] = 1;
 
-      actor.getOwnedItem(itemId).update(data);
+      actor.items.get(itemId).update(data);
     });
 
     // toggle empty traits visibility in the traits list
@@ -189,16 +162,16 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 		html.find('.item-control.item-attunement').click( async (event) => {
 	    event.preventDefault();
  			let li = $(event.currentTarget).closest('.item'),
-					 item = actor.getOwnedItem(li.data("item-id")),
+					 item =actor.items.get(li.data("item-id")),
 					 count = actor.data.data.details.attunedItemsCount;
 
  			if(item.data.data.attunement == 2) {
- 				actor.getOwnedItem(li.data("item-id")).update({'data.attunement': 1});
+ 				actor.items.get(li.data("item-id")).update({'data.attunement': 1});
  			} else {
  				if(count >= actor.data.data.details.attunedItemsMax) {
 			  	ui.notifications.warn(`${game.i18n.format("TIDY5E.AttunementWarning", {number: count})}`);
 			  } else {
- 					actor.getOwnedItem(li.data("item-id")).update({'data.attunement': 2});
+ 					actor.items.get(li.data("item-id")).update({'data.attunement': 2});
 			  }
  			}
  		});
@@ -300,6 +273,11 @@ async function checkDeathSaveStatus(app, html, data){
 		var currentHealth = data.attributes.hp.value;
 		var deathSaveSuccess = data.attributes.death.success;
 		var deathSaveFailure = data.attributes.death.failure;
+		
+  	// console.log(`current HP: ${currentHealth}, success: ${deathSaveSuccess}, failure: ${deathSaveFailure}`);
+		if (currentHealth <=0){
+			$('.tidy5e-sheet .profile').addClass('dead');
+		}
 
 		if(currentHealth > 0 && deathSaveSuccess != 0 || currentHealth > 0 && deathSaveFailure != 0){
 				await actor.update({"data.attributes.death.success": 0});
@@ -317,6 +295,7 @@ async function editProtection(app, html, data) {
 		
 		if(game.settings.get("tidy5e-sheet", "editTotalLockEnabled")){
 			html.find(".skill input").prop('disabled', true);
+			html.find(".skill .config-button").remove();
 			// html.find(".skill .proficiency-toggle").remove();
 			html.find(".skill .proficiency-toggle").removeClass('proficiency-toggle');
 			html.find(".ability-score").prop('disabled', true);
@@ -327,9 +306,22 @@ async function editProtection(app, html, data) {
 			html.find(".res-max").prop('disabled', true);
 			html.find(".res-options").remove();
 			html.find(".ability-modifiers .proficiency-toggle").remove();
+			html.find(".ability .config-button").remove();
+			html.find(".traits .config-button,.traits .trait-selector,.traits .proficiency-selector").remove();
 			html.find('[contenteditable]').prop('contenteditable', false);
+			html.find(".spellbook .slot-max-override").remove();
 			html.find(".spellcasting-attribute select").prop('disabled', true);
+			const spellbook = html.find(".spellbook .inventory-list .item-list").length;
+			if (spellbook == 0) html.find(".item[data-tab='spellbook']").remove();
 		}
+
+		let resourcesUsed = 0;
+		html.find('.resources input[type="text"]').each( function(){
+			if( $(this).val() != ''){
+				resourcesUsed++
+			}
+		});
+		if (resourcesUsed == 0) html.find('.resources').hide();
     
 		let itemContainer = html.find('.inventory-list.items-list, .effects-list.items-list');
     html.find('.inventory-list .items-header:not(.spellbook-header), .effects-list .items-header').each(function(){
@@ -417,8 +409,8 @@ async function spellAttackMod(app,html,data){
 async function abbreviateCurrency(app,html,data) {
 	html.find('.currency .currency-item label').each(function(){
 		let currency = $(this).data('denom').toUpperCase();
-		let abbr = game.i18n.localize(`TIDY5E.CurrencyAbbr${currency}`);
-		if(abbr == `TIDY5E.CurrencyAbbr${currency}`){
+		let abbr = game.i18n.localize(`DND5E.CurrencyAbbr${currency}`);
+		if(abbr == `DND5E.CurrencyAbbr${currency}`){
 			abbr = currency;
 		}
 		$(this).html(abbr);
@@ -436,7 +428,11 @@ function tidyCustomEffect(actor, change) {
       op = changeText[0];
       changeText = changeText.slice(1);
     }
-    const value = new Roll(changeText, actor.getRollData()).roll().total;
+		const rollData = actor.getRollData();
+		Object.keys(rollData.abilities).forEach(abl => {
+			rollData.abilities[abl].mod = Math.floor((rollData.abilities[abl].value - 10) /2);
+		});
+		const value = new Roll(changeText, rollData).roll().total;
     oldValue = Number.isNumeric(oldValue) ? parseInt(oldValue) : 0;
     switch (op) {
       case "+": return setProperty(actor.data, change.key, oldValue + value);
@@ -533,6 +529,9 @@ async function setSheetClasses(app, html, data) {
 	}
 	if(game.user.isGM){
 		html.find('.tidy5e-sheet').addClass('isGM');
+	}
+	if (game.settings.get("tidy5e-sheet", "hiddenDeathSavesEnabled") && !game.user.isGM) {
+		html.find('.tidy5e-sheet .death-saves').addClass('gmOnly');
 	}
 	if (game.settings.get("tidy5e-sheet", "quantityAlwaysShownEnabled")) {
 		html.find('.item').addClass('quantityAlwaysShownEnabled');

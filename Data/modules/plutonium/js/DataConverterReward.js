@@ -1,1 +1,144 @@
-const _0x2344=['filterValues','render','isImportDescription','reward','pGetSideData','importReward','862376PUWsAz','802420TbGsuD','permission','getNameWithSourcePart','isActorItem','foundryReward','MODULE_NAME_FAKE','name','mutActorUpdate','isAddPermission','permissions','937778TyOJAx','getSourceWithPagePart','MODULE_NAME','modules/','entries','get','source','getExpandedEffects','1rqIKxj','URL_TO_HASH_BUILDER','PG_REWARDS','getWithDescriptionPlugins','1316502YTavBG','pGetRewardItemEffects','pGetSideData_','2991JyRkXX','feat','getCleanEntityName','863879FkrOav','length','321413gLOsie','pGetAdditionalData_','setFirstSection','1YRLiMR','pGetRewardSideData','_getRewardFlags','pHasRewardSideLoadedEffects','isAddDataFlags','311TKCRhf','_pGetAdditionalData','pGetAdditionalEffectsRaw_','</div>'];const _0x55fc=function(_0x5b4fef,_0x347aad){_0x5b4fef=_0x5b4fef-0xfe;let _0x2344fe=_0x2344[_0x5b4fef];return _0x2344fe;};const _0x3bf2cf=_0x55fc;(function(_0x5a257d,_0x49797d){const _0x3e9c1f=_0x55fc;while(!![]){try{const _0x4afbdc=parseInt(_0x3e9c1f(0x12e))*parseInt(_0x3e9c1f(0x12b))+parseInt(_0x3e9c1f(0x129))*parseInt(_0x3e9c1f(0x11f))+-parseInt(_0x3e9c1f(0x10d))+-parseInt(_0x3e9c1f(0x10c))+parseInt(_0x3e9c1f(0x117))+-parseInt(_0x3e9c1f(0x102))*parseInt(_0x3e9c1f(0x126))+parseInt(_0x3e9c1f(0x123));if(_0x4afbdc===_0x49797d)break;else _0x5a257d['push'](_0x5a257d['shift']());}catch(_0x31db69){_0x5a257d['push'](_0x5a257d['shift']());}}}(_0x2344,0xce31f));import{UtilApplications}from'./UtilApplications.js';import{SharedConsts}from'../shared/SharedConsts.js';import{Config}from'./Config.js';import{DataConverter}from'./DataConverter.js';import{Vetools}from'./Vetools.js';import{UtilActiveEffects}from'./UtilActiveEffects.js';class DataConverterReward{static async['pGetRewardItem'](_0x24d52a,_0x1e152a){const _0x181db6=_0x55fc;_0x1e152a=_0x1e152a||{};if(_0x1e152a['actor'])_0x1e152a[_0x181db6(0x110)]=!![];const _0x18b26e=Config[_0x181db6(0x11c)](_0x181db6(0x10b),_0x181db6(0x108))?DataConverter[_0x181db6(0x122)](()=>'<div>'+Renderer[_0x181db6(0x11c)]()[_0x181db6(0x12d)](!![])[_0x181db6(0x107)]({'entries':_0x24d52a[_0x181db6(0x11b)]},0x2)+_0x181db6(0x105)):'',_0x454069=await this[_0x181db6(0x103)](_0x24d52a),_0x5c3215={'name':UtilApplications[_0x181db6(0x128)](DataConverter[_0x181db6(0x10f)](_0x24d52a,{'isActorItem':_0x1e152a[_0x181db6(0x110)]})),'data':{'source':DataConverter[_0x181db6(0x118)](_0x24d52a),'description':{'value':_0x18b26e,'chat':'','unidentified':''},'activation':{'type':'','cost':0x0,'condition':''},'duration':{'value':0x0,'units':''},'target':{'value':0x0,'units':'','type':''},'range':{'value':0x0,'long':0x0,'units':null},'uses':{'value':0x0,'max':0x0,'per':''},'ability':'','actionType':'','attackBonus':0x0,'chatFlavor':'','critical':null,'damage':{'parts':[],'versatile':''},'formula':'','save':{'ability':'','dc':null},'requirements':'','recharge':{'value':0x0,'charged':!![]},..._0x454069},'permission':{'default':0x0},'type':_0x181db6(0x127),'img':_0x181db6(0x11a)+SharedConsts[_0x181db6(0x119)]+'/media/icon/mighty-force.svg','flags':this[_0x181db6(0xff)](_0x24d52a,_0x1e152a),'effects':[]};if(_0x1e152a[_0x181db6(0x115)])_0x5c3215[_0x181db6(0x10e)]={'default':Config[_0x181db6(0x11c)](_0x181db6(0x10b),_0x181db6(0x116))};return _0x5c3215;}static async['pMutActorUpdateReward'](_0x204555,_0x2082a4,_0x11c2a9,_0x8f4b1e){const _0xbd7dbf=_0x55fc,_0x36e739=await this[_0xbd7dbf(0x10a)](_0x11c2a9);DataConverter[_0xbd7dbf(0x114)](_0x204555,_0x2082a4,_0x11c2a9,{'sideData':_0x36e739});}static[_0x3bf2cf(0xff)](_0x3f4a40,_0x1f5507){const _0x55ba65=_0x3bf2cf;_0x1f5507=_0x1f5507||{};const _0x4e1713={[SharedConsts[_0x55ba65(0x112)]]:{'page':UrlUtil[_0x55ba65(0x121)],'source':_0x3f4a40[_0x55ba65(0x11d)],'hash':UrlUtil[_0x55ba65(0x120)][UrlUtil[_0x55ba65(0x121)]](_0x3f4a40)}};return _0x1f5507[_0x55ba65(0x101)]&&(_0x4e1713[SharedConsts['MODULE_NAME_FAKE']]['propDroppable']=_0x55ba65(0x109),_0x4e1713[SharedConsts['MODULE_NAME_FAKE']][_0x55ba65(0x106)]=_0x1f5507[_0x55ba65(0x106)]),_0x4e1713;}static async[_0x3bf2cf(0x10a)](_0x325fce){const _0x55818f=_0x3bf2cf;return DataConverter[_0x55818f(0x125)](_0x325fce,{'propBrew':_0x55818f(0x111),'fnLoadJson':async()=>DataConverterReward['_SIDE_DATA']||Vetools[_0x55818f(0xfe)](),'propJson':_0x55818f(0x109)});}static async[_0x3bf2cf(0x103)](_0x287766){const _0x3e19e2=_0x3bf2cf;return DataConverter[_0x3e19e2(0x12c)](_0x287766,{'propBrew':_0x3e19e2(0x111),'fnLoadJson':Vetools[_0x3e19e2(0xfe)],'propJson':_0x3e19e2(0x109)});}static async[_0x3bf2cf(0x100)](_0x8f63bc,_0x433c61){const _0x2564ef=_0x3bf2cf;return(await DataConverter[_0x2564ef(0x104)](_0x433c61,{'propBrew':_0x2564ef(0x111),'fnLoadJson':Vetools['pGetRewardSideData'],'propJson':_0x2564ef(0x109)}))?.[_0x2564ef(0x12a)]>0x0;}static async[_0x3bf2cf(0x124)](_0x195ee4,_0x421439,_0x459f98,{additionalData:_0x21be4b}={}){const _0x428979=_0x3bf2cf,_0x7e2dbf=await DataConverter['pGetAdditionalEffectsRaw_'](_0x421439,{'propBrew':_0x428979(0x111),'fnLoadJson':Vetools[_0x428979(0xfe)],'propJson':_0x428979(0x109)});return UtilActiveEffects[_0x428979(0x11e)](_0x7e2dbf||[],{'actor':_0x195ee4,'sheetItem':_0x459f98,'parentName':_0x421439[_0x428979(0x113)],'additionalData':_0x21be4b});}}DataConverterReward['_SIDE_DATA']=null;export{DataConverterReward};
+import {UtilApplications} from "./UtilApplications.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Config} from "./Config.js";
+import {DataConverter} from "./DataConverter.js";
+import {Vetools} from "./Vetools.js";
+import {UtilActiveEffects} from "./UtilActiveEffects.js";
+import {PageFilterClassesFoundry} from "./UtilCharactermancerClass.js";
+import {DataConverterFeature} from "./DataConverterFeature.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class DataConverterReward extends DataConverterFeature {
+	static async pGetDereferencedRewardFeatureItem (feature) {
+		// Bypass the loader, since we don't expect refs in rewards (yet)
+		if (feature.entries) return MiscUtil.copy(feature);
+
+		const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_REWARDS](feature);
+		return Renderer.hover.pCacheAndGet(UrlUtil.PG_REWARDS, feature.source, hash, {isCopy: true});
+	}
+
+	static async pGetInitRewardFeatureLoadeds (feature) {
+		const asFeatRef = {reward: `${feature.name}|${feature.source}`};
+		// Bypass the loader, since we don't expect refs in rewards (yet)
+		await PageFilterClassesFoundry.pInitRewardLoadeds({reward: asFeatRef, raw: feature});
+		return asFeatRef;
+	}
+
+	/**
+	 * @param reward
+	 * @param [opts] Options object.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 * @param [opts.isActorItem]
+	 * @param [opts.actor]
+	 */
+	static async pGetRewardItem (reward, opts) {
+		opts = opts || {};
+		if (opts.actor) opts.isActorItem = true;
+
+		const descriptionValue = await this._pGetGenericDescription(reward, "importReward");
+
+		const additionalData = await this._pGetAdditionalData(reward);
+		const additionalFlags = await this._pGetAdditionalFlags(reward);
+
+		const img = await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await this._pGetImagePath(reward, "reward"),
+		);
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(reward, {isActorItem: opts.isActorItem})),
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(reward),
+				description: {
+					value: descriptionValue,
+					chat: "",
+					unidentified: "",
+				},
+
+				activation: {type: "", cost: 0, condition: ""},
+				duration: {value: 0, units: ""},
+				target: {value: 0, units: "", type: ""},
+				range: {value: 0, long: 0, units: null},
+				uses: {value: 0, max: 0, per: ""},
+				ability: "",
+				actionType: "",
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				damage: {parts: [], versatile: ""},
+				formula: "",
+				save: {ability: "", dc: null},
+				requirements: "",
+				recharge: {value: 0, charged: true},
+
+				...additionalData,
+			},
+			permission: {default: 0},
+			type: "feat",
+			img,
+			flags: {
+				...this._getRewardFlags(reward, opts),
+				...additionalFlags,
+			},
+			effects: [],
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importReward", "permissions")};
+
+		return out;
+	}
+
+	static async pMutActorUpdateReward (actor, actorUpdate, optFeature, dataBuilderOpts) {
+		const sideData = await this.pGetSideData(optFeature);
+		DataConverter.mutActorUpdate(actor, actorUpdate, optFeature, {sideData});
+	}
+
+	static _getRewardFlags (reward, opts) {
+		opts = opts || {};
+
+		const out = {
+			[SharedConsts.MODULE_NAME_FAKE]: {
+				page: UrlUtil.PG_REWARDS,
+				source: reward.source,
+				hash: UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_REWARDS](reward),
+			},
+		};
+
+		if (opts.isAddDataFlags) {
+			out[SharedConsts.MODULE_NAME_FAKE].propDroppable = "reward";
+			out[SharedConsts.MODULE_NAME_FAKE].filterValues = opts.filterValues;
+		}
+
+		return out;
+	}
+
+	static async pGetSideData (optFeature) {
+		return DataConverter.pGetSideData_(optFeature, this._SIDE_DATA_OPTS);
+	}
+
+	static async _pGetAdditionalData (reward) {
+		return DataConverter.pGetAdditionalData_(reward, this._SIDE_DATA_OPTS);
+	}
+
+	static async _pGetAdditionalFlags (reward) {
+		return DataConverter.pGetAdditionalData_(reward, this._SIDE_DATA_OPTS);
+	}
+
+	static async pHasRewardSideLoadedEffects (actor, reward) {
+		return (await DataConverter.pGetAdditionalEffectsRaw_(reward, this._SIDE_DATA_OPTS))?.length > 0;
+	}
+
+	static async pGetRewardItemEffects (actor, reward, sheetItem, {additionalData, img} = {}) {
+		const effectsRaw = await DataConverter.pGetAdditionalEffectsRaw_(reward, {propBrew: "foundryReward", fnLoadJson: Vetools.pGetRewardSideData, propJson: "reward"});
+		return UtilActiveEffects.getExpandedEffects(effectsRaw || [], {actor, sheetItem, parentName: reward.name, additionalData, img});
+	}
+
+	static async _getPreloadSideData () { return Vetools.pGetRewardSideData(); }
+
+	static get _SIDE_DATA_OPTS () {
+		return {propBrew: "foundryReward", fnLoadJson: async () => this._SIDE_DATA || this._getPreloadSideData(), propJson: "reward"};
+	}
+}
+
+export {DataConverterReward};

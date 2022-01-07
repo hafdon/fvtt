@@ -1,32 +1,1296 @@
-const _0x1a39=['featureType','getUnmappedTool','Take\x20Average','_existingImportFeatures','_pHasSubChoice_entryData_skillProficiencies','Do\x20Not\x20Increase\x20HP','all','_level','keys','pIsNoChoice','items','showVe','_prevSubCompsDamageVulnerabilities','Choose\x20','Armor','_applyFormDataToActorUpdate_addIfNotExists','_isForceSelect','305479RUlkrP','entryData','_render_pHkIxsChosen_setCompOtherProficiencies','skillProficiencies','addFauxOptionalFeatureFeatures','pDoApplyAdditionalSpellsFormDataToActor','<span\x20class=\x22col-9-5\x22></span>','formDatasArmorProficiencies','number','full','getMetaWrpMultipleChoice_getPropPulse','subclass','_hitDice','unregisterFeatureSourceTracking','_addFauxOptionalFeatureFeatures_handleClassProgression','disabled','languageProficiencies','Saving\x20Throw\x20Proficiencies','_pIsForceDisplay_expertise','_actor','notifications','_pHasSubChoice_entryData_languageProficiencies','$getSelEnum','attAbvToFull','splitFirstSpace','_getNameAliases','isRadio','_pIsForceDisplay_toolProficiencies','title','Hit\x20die','getPreparableSpells','100245IbKfpS','entries','mergeMap','isHpAvailable','_addHookBase','<input\x20type=\x22checkbox\x22\x20name=\x22cb-select-all\x22>','simple','Unhandled\x20type\x20\x22','languages','doApplyDamageImmunityFormDataToActorUpdate','getMetaWrpMultipleChoice_getSelectedIxs','preventDefault','some','import','_subCompsAdditionalSpells','<div\x20class=\x22ml-1\x20ve-small\x20ve-muted\x22></div>','setState','toLowerCase','_lastMeta','doApplyFilterToFeatureEntries','init','loadeds','_getFormData','_getRowText','_lastSubMetas','_isSubclass','_pIsForceDisplay_savingThrowProficiencies','populateHomebrewLookup','armor','doApplySavingThrowProficienciesFormDataToActorUpdate','third','_pLock','classFeatures','additionalSpells','mode','11YaMqOo','pGetImportCompApplicationFormData','pact','splice','classSource','_subCompsSavingThrowProficiencies','pulseTools','_prevSubCompsWeaponProficiencies','traits','$ele','length','_pHasSubChoice_entryData_weaponProficiencies','MODULE_NAME_FAKE','list-multi-selected','pRender','_unlock','_pIsForceDisplay_additionalSpells','error','_prevSubCompsExpertise','_getSelectedLoadeds','doApplyProficiencyFormDataToActorUpdate','_pIsForceDisplay_damageImmunities','_existingFeatureChecker','getMappedWeaponProficiency','getImportableFeatures','1HJLQVS','pulseSavingThrows','html','page','_prevSubCompsArmorProficiencies','getSubclassFromExistingClassItem','_subCompsArmorProficiencies','isModal','expertise','_prevSubCompsAdditionalSpells','_pHasSubChoice_entryData_toolProficiencies','CHAR_MAX_LEVEL','isChooseDataRenderEntries','setId','fromClassList','PG_OPT_FEATURES','copy','unpackUidSubclassFeature','text','name','<input\x20type=\x22radio\x22\x20class=\x22no-events\x22>','source','_render_options','faces','entity','Subclass','<hr\x20class=\x22hr-2\x22>','getFilteredEntries','Condition\x20Immunities','getCasterProgression','casterProgression','state','sourceJsonToColor','isSubclass','_getOptionsNameAndCount','ml-1','pPreloadSideData','_pHasSubChoice_expertise','_prevSubCompsLanguageProficiencies','armorProficiencies','_handleSelectClickRadio','level','unpackUidClassFeature','_render_$getCbRow','hash','_className','empty','isExistingFeature','327923ufQtXF','Select\x20','_displayName','stopPropagation','MODE_NONE','existingData','_pHasEntryData_otherProficiencies','(<i\x20class=\x22fas\x20fa-check\x22></i>)','_optionsSet','type','toolProf','<input\x20type=\x22checkbox\x22\x20class=\x22no-events\x22>','_pIsForceDisplay_languageProficiencies','getOrSet','_prevSubCompsDamageResistances','getCurLevel','_fnsOnChange','formDatasSavingThrowProficiencies','__state','getComp','_getLevelGroupedFeatures','getMappedTool','_existingProficienciesCustomArmor','onchange','_pHasChoiceInSideData_chooseData','MODE_MULTICLASS','_savingThrowsProficiencies','subclassFeatures','ascSortLower','Expertise','_prevSubCompsConditionImmunities','slice','skills','startsWith','weaponProf','pIsForceDisplay','initClasses','_getUid','chooseData','_subCompsLanguageProficiencies','_subCompsExpertise','value','_getProps','_existingProficienciesArmor','_subCompsSkillProficiencies','_existingProficienciesWeapons','doApplyLanguageProficienciesFormDataToActorUpdate','features','_pGetSideData','click','URL_TO_HASH_BUILDER','constructor','<div\x20class=\x22w-100\x20mt-1\x20mb-2\x22></div>','_addFauxOptionalFeatureFeatures_getLoadeds','{@item','_handleReferenceError','getExistingClassItems','trim','doApplyConditionImmunityFormDataToActorUpdate','_getExistingProficienciesVet_','render','_pIsSubChoice','modalFilterSpells','Class','savingThrows','doApplyToolProficienciesFormDataToActorUpdate','findIndex','_existingProficienciesSavingThrows','Saving\x20Throws','getExisting','_render_pHkIxsChosen_setCompExpertise','_existingProficienciesCustomTools','getAllFeatures','formDatasDamageVulnerabilities','formDatasDamageResistances','abilities','_pHasSubChoice_entryData_savingThrowProficiencies','Language\x20Proficiencies','_subCompsWeaponProficiencies','ve-muted','deepEquals','pGetImportCompModalFormData','\x20armor','addImportFeature','class','pulseFeatures','formDatasSkillProficiencies','pGetItemWeaponType','spellcasting','_isOptions','sourceFilter','tools','weapons','map','299989ZMUqsK','getExistingProficienciesFvttSavingThrows','Add\x20multiclass\x20proficiencies\x20(this\x20is\x20my\x20second+\x20class)','_getCleanVetProfs','_list','DISPLAY_MODES','isForceSelect','_render_getSubCompTitle','_getDefaultState','assign','1/3','optionsMeta','_prevSubCompsDamageImmunities','Add\x20base\x20class\x20proficiencies\x20and\x20equipment\x20(this\x20is\x20my\x20first\x20class)','_render_noSubChoices','subComp_','toDisplay','formDatasExpertise','pulseArmor','data','includes','_subCompsDamageResistances','21607zYuWSN','formDatasWeaponProficiencies','spell','\x22></i>)','ele','ceil','<div\x20class=\x22mb-2\x20bold\x20w-100\x22>','_prevSubCompsSavingThrowProficiencies','_handleSelectClick','existingFeatureChecker','prop','_doRunFnsOnchange','split','<div\x20class=\x22bold\x20mb-2\x22>','_featureArr','optionalfeature','_pHasSubChoice_damageVulnerabilities','_existingSheetFeatures','subclassFeature','_state','shortName','_subCompsConditionImmunities','1/2','Weapon\x20Proficiencies','_modalFilterSpells','maxPreviousLevel','formDatasConditionImmunities','_maxPreviousLevel','_unregisterSubComps','cbSel','resist','getClassFromExistingClassItem','_applyFormDataToActorUpdate_applyProfList','MODE_ROLL','formDatasToolProficiencies','_pIsForceDisplay_armorProficiencies','toggleClass','_getStateTrackerData','Skill\x20Proficiencies','floor','doApplySkillFormDataToActorUpdate','<div\x20class=\x22flex-col\x20min-h-0\x20ve-small\x22></div>','getMetaWrpMultipleChoice','propPulse','gainSubclassFeature','_subCompsDamageVulnerabilities','_addFauxOptionalFeatureFeatures_getFauxFeature','proficiency\x20versatility','_getLoadedTmpUid','armorProf','get','max','subclasses','_existingProficienciesCustomWeapons','push','isNoChoice','isGainAtNextFeatureLevel','div','pGetUserInput','Weapons','_pIsForceDisplay_weaponProficiencies','exec','set','_existingProficienciesTools','featureSourceTracker','pGetFormData','88425azXCsT','spellcastingAbility','optionalfeatureProgression','getTargetLevel','foundryAdditionalData','isStrictMatching','splitTagByPipe','feat','_proxyAssignSimple','weaponProficiencies','filter','232wAwvnk','pulseWeapons','populateEntityTempData','forEach','MODE_DO_NOT_INCREASE','light','getFilteredFeatures','toolProficiencies','(<i\x20class=\x22fas\x20','className','_isModal','284cTdgcN','_featureSourceTracker','MODE_PRIMARY','_subCompsDamageImmunities','find','_pHasSubChoice_entryData_armorProficiencies','_render_renderSubComp_chooseData','savingThrowProficiencies','_pPreloadSideData','getItemSource','proficient','custom','getHitPointsAtFirstLevel','_prevSubCompsSkillProficiencies','mr-1','ixsChosen','immune','medium','_chooseData','_pIsForceDisplay_conditionImmunities','isRequiredOption','subclassShortName','half','proficiency','actor','_primaryProficiencies','pGetSideData','getUnmappedWeaponProficiency','Tool\x20Proficiencies','_isRadio','_pIsForceDisplay_damageVulnerabilities','unregister','count','_getTrackableFeatures','Tools','_pHasSubChoice_damageResistances','_render_pHkIxsChosen_setCompAdditionalSpells','getHitDiceEntry','appendTo','join','_pIsForceDisplay_damageResistances','</div>','getItemUIdFromWeaponProficiency','optionSet_','bindSelectAllCheckbox','Level\x20','Damage\x20Vulnerabilities','_pHasSubChoice_conditionImmunities','ExistingFeatureChecker','conditionImmune','getStatesForKey','_render_pHkIxsChosen_comp','addHook','withUnpatchedDiceRendering','_render_pHkIxsChosen_','vulnerable','_pGate','uid','sourceJsonToAbv','classFeature','add','_pGetLoadedsSideDataRaws','optionsSet','_render_profType','MODE_TAKE_AVERAGE','hideVe','modalTitle','updateExisting','Damage\x20Resistances','_pHasSubChoice_damageImmunities','_prevSubCompsToolProficiencies','getFeaturesGroupedByOptionsSet','doApplyWeaponProficienciesFormDataToActorUpdate','getCombinedClasses','_multiclassProficiencies','_getExistingProficienciesVet','checked','removeHook','pApplyFormDataToActor','bind','_subCompsToolProficiencies','formDatasLanguageProficiencies','_pIsForceDisplay_skillProficiencies','removeClass'];const _0x2761=function(_0x80e470,_0xc5a720){_0x80e470=_0x80e470-0x102;let _0x1a39da=_0x1a39[_0x80e470];return _0x1a39da;};const _0x587477=_0x2761;(function(_0xdd7cac,_0x22cda1){const _0x2b00c4=_0x2761;while(!![]){try{const _0x5ab9e0=parseInt(_0x2b00c4(0x140))*-parseInt(_0x2b00c4(0x1fd))+parseInt(_0x2b00c4(0x1e7))+-parseInt(_0x2b00c4(0x24a))*parseInt(_0x2b00c4(0x255))+-parseInt(_0x2b00c4(0x2ba))+parseInt(_0x2b00c4(0x189))*parseInt(_0x2b00c4(0x159))+parseInt(_0x2b00c4(0x23f))+parseInt(_0x2b00c4(0x11d));if(_0x5ab9e0===_0x22cda1)break;else _0xdd7cac['push'](_0xdd7cac['shift']());}catch(_0x112cf2){_0xdd7cac['push'](_0xdd7cac['shift']());}}}(_0x1a39,0x32ab2));import{Charactermancer_ArmorProficiencySelect,Charactermancer_ConditionImmunitySelect,Charactermancer_DamageImmunitySelect,Charactermancer_DamageResistanceSelect,Charactermancer_DamageVulnerabilitySelect,Charactermancer_ExpertiseSelect,Charactermancer_LanguageProficiencySelect,Charactermancer_SavingThrowProficiencySelect,Charactermancer_SkillProficiencySelect,Charactermancer_ToolProficiencySelect,Charactermancer_WeaponProficiencySelect}from'./UtilCharactermancer.js';import{Config}from'./Config.js';import{DataConverter}from'./DataConverter.js';import{DataConverterClass}from'./DataConverterClass.js';import{DataConverterClassSubclassFeature}from'./DataConverterClassSubclassFeature.js';import{DataConverterOptionalfeature}from'./DataConverterOptionalfeature.js';import{Vetools}from'./Vetools.js';import{LGT,Util}from'./Util.js';import{UtilActors}from'./UtilActors.js';import{Consts}from'./Consts.js';import{SharedConsts}from'../shared/SharedConsts.js';import{Charactermancer_AdditionalSpellsSelect}from'./UtilCharactermancerAdditionalSpells.js';import{UtilApplications}from'./UtilApplications.js';class PageFilterClassesFoundry extends PageFilterClassesRaw{static async[_0x587477(0x25d)](){const _0x466243=_0x587477;return Promise[_0x466243(0x2af)]([DataConverterClass[_0x466243(0x17d)](),DataConverterClassSubclassFeature['pPreloadSideData'](),DataConverterOptionalfeature[_0x466243(0x17d)]()]);}static async[_0x587477(0x1b9)](_0x323bd8,_0x5e3963){const _0x5255ef=_0x587477;switch(_0x5e3963){case _0x5255ef(0x1dd):case _0x5255ef(0x109):return DataConverterClass[_0x5255ef(0x26f)](_0x323bd8,_0x5e3963);case'classFeature':case _0x5255ef(0x20f):return DataConverterClassSubclassFeature[_0x5255ef(0x26f)](_0x323bd8,_0x5e3963);case'optionalfeature':return DataConverterOptionalfeature[_0x5255ef(0x26f)](_0x323bd8);default:throw new Error(_0x5255ef(0x124)+_0x5e3963+'\x22');}}static[_0x587477(0x1c0)](_0x1e0f22){const _0x3f4fac=_0x587477;console[_0x3f4fac(0x151)](...LGT,_0x1e0f22),ui[_0x3f4fac(0x112)][_0x3f4fac(0x151)](_0x1e0f22);}}class Charactermancer_Class_Util{static[_0x587477(0x1d1)](_0x22685b){const _0x254515=_0x587477;let _0x6c584a=[];const _0x33acdd=new Set(),_0x5d9bf9=_0x22685b[_0x254515(0x13d)][_0x254515(0x249)](_0x28fb3d=>_0x28fb3d[_0x254515(0x229)])[_0x254515(0x1e6)](_0x1b4e65=>_0x1b4e65[_0x254515(0x182)]??DataUtil[_0x254515(0x1dd)][_0x254515(0x183)](_0x1b4e65[_0x254515(0x290)]||_0x1b4e65)[_0x254515(0x182)]);return _0x22685b['classFeatures']['forEach'](_0x4f3689=>{const _0x4ae84c=_0x254515;_0x6c584a[_0x4ae84c(0x233)](_0x4f3689);if(_0x4f3689[_0x4ae84c(0x229)]){const _0x3eb542=_0x4f3689[_0x4ae84c(0x182)]??DataUtil[_0x4ae84c(0x1dd)][_0x4ae84c(0x183)](_0x4f3689[_0x4ae84c(0x290)]||_0x4f3689)[_0x4ae84c(0x182)],_0x5e2822=_0x5d9bf9[_0x4ae84c(0x1fb)](_0x3eb542)?_0x5d9bf9[_0x5d9bf9['indexOf'](_0x3eb542)+0x1]:null;_0x22685b[_0x4ae84c(0x231)]['forEach'](_0x597832=>{const _0x151940=_0x4ae84c;_0x597832[_0x151940(0x1a4)]['filter'](_0x5e8173=>{const _0x434ca4=_0x151940,_0x1deff6=_0x5e8173[_0x434ca4(0x185)]??DataUtil[_0x434ca4(0x1dd)][_0x434ca4(0x16a)](_0x5e8173[_0x434ca4(0x20f)]||_0x5e8173)['hash'],_0x8e4b62=_0x5e8173[_0x434ca4(0x182)]??DataUtil[_0x434ca4(0x1dd)][_0x434ca4(0x16a)](_0x5e8173[_0x434ca4(0x20f)]||_0x5e8173)[_0x434ca4(0x182)];if(_0x33acdd['has'](_0x1deff6))return![];if(_0x5e8173[_0x434ca4(0x235)]){if(_0x3eb542===_0x5d9bf9[0x0]&&_0x8e4b62<=_0x3eb542)return!![];if(_0x8e4b62<=_0x3eb542&&(_0x5e2822==null||_0x8e4b62<_0x5e2822))return!![];return![];}return _0x8e4b62===_0x3eb542;})['forEach'](_0x371e9=>{const _0x4ff727=_0x151940,_0x1c0857=_0x371e9[_0x4ff727(0x185)]??DataUtil[_0x4ff727(0x1dd)][_0x4ff727(0x16a)](_0x371e9[_0x4ff727(0x20f)]||_0x371e9)[_0x4ff727(0x185)];_0x33acdd[_0x4ff727(0x291)](_0x1c0857),_0x371e9['level']=_0x3eb542,_0x6c584a['push'](_0x371e9);});});}}),MiscUtil['copy'](_0x6c584a);}static[_0x587477(0x250)](_0x42cb12,_0x21c77d,_0x5ae2f0){const _0x31f306=_0x587477;return _0x42cb12[_0x31f306(0x249)](_0x24ebe4=>{const _0x1a12fc=_0x31f306,_0x5e75ae=_0x24ebe4[_0x1a12fc(0x16e)]||(_0x24ebe4[_0x1a12fc(0x290)]?DataUtil[_0x1a12fc(0x1dd)][_0x1a12fc(0x183)](_0x24ebe4[_0x1a12fc(0x290)])[_0x1a12fc(0x16e)]:_0x24ebe4['subclassFeature']?DataUtil[_0x1a12fc(0x1dd)][_0x1a12fc(0x16a)](_0x24ebe4[_0x1a12fc(0x20f)]):null);if(!_0x21c77d['sourceFilter'][_0x1a12fc(0x1f7)](_0x5ae2f0,_0x5e75ae))return![];return _0x24ebe4[_0x1a12fc(0x132)]=_0x24ebe4[_0x1a12fc(0x132)][_0x1a12fc(0x249)](_0xc5481f=>_0x21c77d[_0x1a12fc(0x1e3)]['toDisplay'](_0x5ae2f0,_0xc5481f[_0x1a12fc(0x171)][_0x1a12fc(0x16e)])),_0x24ebe4[_0x1a12fc(0x132)][_0x1a12fc(0x14a)];});}static[_0x587477(0x158)](_0x54baf5){const _0x14f9bf=_0x587477;return _0x54baf5[_0x14f9bf(0x249)](_0x2356a5=>{const _0xe5fcd6=_0x14f9bf;if(_0x2356a5['gainSubclassFeature'])return![];const _0x5e87c1=_0x2356a5[_0xe5fcd6(0x16c)]['toLowerCase']();switch(_0x5e87c1){case _0xe5fcd6(0x22c):return![];default:return!![];}});}static[_0x587477(0x130)](_0x2e9acb,_0x14a974,_0x21ece0){const _0x30f76b=_0x587477;return _0x2e9acb[_0x30f76b(0x24d)](_0x40283a=>{const _0x4ccfde=_0x30f76b;_0x40283a[_0x4ccfde(0x132)]['forEach'](_0x1006eb=>{const _0x32e99a=_0x4ccfde;switch(_0x1006eb[_0x32e99a(0x192)]){case _0x32e99a(0x290):case _0x32e99a(0x20f):{if(_0x1006eb['entity']['entries'])_0x1006eb[_0x32e99a(0x171)]['entries']=this['getFilteredEntries'](_0x1006eb[_0x32e99a(0x171)][_0x32e99a(0x11e)],_0x14a974,_0x21ece0);break;}}});}),_0x2e9acb;}static[_0x587477(0x174)](_0x42c74f,_0x4870a1,_0x1a511a){const _0x1b7545=_0x587477,_0x157ccd=_0x3419c1=>{const _0x4fcf52=_0x2761;if(!_0x3419c1[_0x4fcf52(0x16e)])return!![];return _0x4870a1[_0x4fcf52(0x1e3)][_0x4fcf52(0x1f7)](_0x1a511a,_0x3419c1[_0x4fcf52(0x16e)]);},_0x22e251=_0x2829ca=>{const _0x1d4483=_0x2761;if(_0x2829ca==null)return _0x2829ca;if(typeof _0x2829ca==='object')return _0x2829ca instanceof Array?(_0x2829ca=_0x2829ca[_0x1d4483(0x249)](_0x2643f5=>_0x157ccd(_0x2643f5)),_0x2829ca[_0x1d4483(0x1e6)](_0x230cd8=>_0x22e251(_0x230cd8))):(Object[_0x1d4483(0x2b1)](_0x2829ca)[_0x1d4483(0x24d)](_0x2b5f8c=>{const _0x5848a2=_0x1d4483;if(_0x2829ca[_0x2b5f8c]instanceof Array){_0x2829ca[_0x2b5f8c]=_0x22e251(_0x2829ca[_0x2b5f8c]);if(!_0x2829ca[_0x2b5f8c][_0x5848a2(0x14a)])delete _0x2829ca[_0x2b5f8c];}else _0x2829ca[_0x2b5f8c]=_0x22e251(_0x2829ca[_0x2b5f8c]);}),_0x2829ca);else return _0x2829ca;};return _0x42c74f=MiscUtil[_0x1b7545(0x169)](_0x42c74f),_0x22e251(_0x42c74f);}static[_0x587477(0x29c)](_0x4c2824){const _0x1b229e=_0x587477;return _0x4c2824[_0x1b229e(0x1e6)](_0x52a78e=>{const _0x41148f=_0x1b229e,_0x31e7ee=[];let _0x408d6a=[],_0x303c79=null;_0x52a78e[_0x41148f(0x132)][_0x41148f(0x24d)](_0x491418=>{const _0x1e921c=_0x41148f,_0x20eabd=MiscUtil[_0x1e921c(0x22f)](_0x491418,'optionsMeta',_0x1e921c(0x166))||null;if(_0x303c79!==_0x20eabd){if(_0x408d6a[_0x1e921c(0x14a)])_0x31e7ee['push'](_0x408d6a);_0x408d6a=[_0x491418],_0x303c79=_0x20eabd;}else _0x408d6a[_0x1e921c(0x233)](_0x491418);});if(_0x408d6a[_0x41148f(0x14a)])_0x31e7ee[_0x41148f(0x233)](_0x408d6a);return{'topLevelFeature':_0x52a78e,'optionsSets':_0x31e7ee};});}static[_0x587477(0x11c)](_0x33f88a,_0x3fc888,_0x2d71f1,_0x477bdb){const _0x22636b=_0x587477;return Renderer[_0x22636b(0x1ff)][_0x22636b(0x138)](BrewUtil['homebrew'],{'isForce':!![]}),_0x33f88a['filter'](_0x154f45=>{const _0x42a2da=_0x22636b;if(!(_0x154f45['level']>0x0&&_0x154f45[_0x42a2da(0x182)]>=_0x2d71f1&&_0x154f45['level']<=_0x477bdb))return![];Renderer['spell'][_0x42a2da(0x1ad)](_0x154f45);const _0x4eb1d8=Renderer[_0x42a2da(0x1ff)][_0x42a2da(0x29e)](_0x154f45,_0x42a2da(0x167));return _0x4eb1d8[_0x42a2da(0x129)](_0x5a6295=>(_0x5a6295[_0x42a2da(0x16c)]||'')['toLowerCase']()===_0x3fc888['name']['toLowerCase']()&&(_0x5a6295[_0x42a2da(0x16e)]||SRC_PHB)['toLowerCase']()===_0x3fc888['source'][_0x42a2da(0x12e)]());});}static[_0x587477(0x176)](_0xbc7cfd,_0x3d1a5e,{targetLevel:_0x573df7,otherExistingClassItems:_0x252cd4}){const _0x46e6fe=_0x587477;let _0x7d3dc0,_0x56f79f,_0x4ed988=0x0,_0x32236e=0x0,_0x58d245=_0x573df7;_0x252cd4&&_0x252cd4[_0x46e6fe(0x14a)]&&_0x252cd4[_0x46e6fe(0x249)](_0x571508=>_0x571508[_0x46e6fe(0x1fa)]&&_0x571508['data'][_0x46e6fe(0x1e1)])[_0x46e6fe(0x24d)](_0x156e7b=>{const _0x4fd22d=_0x46e6fe;_0x32236e++;const _0xbbbf44=_0x156e7b[_0x4fd22d(0x1fa)][_0x4fd22d(0x1fa)]['levels']||0x0;switch(_0x156e7b[_0x4fd22d(0x1fa)]['spellcasting']){case _0x4fd22d(0x107):_0x4ed988+=_0xbbbf44;break;case _0x4fd22d(0x26b):_0x4ed988+=Math[_0x4fd22d(0x224)](_0xbbbf44/0x2);break;case _0x4fd22d(0x13b):_0x4ed988+=Math[_0x4fd22d(0x224)](_0xbbbf44/0x3);break;case _0x4fd22d(0x142):Math[_0x4fd22d(0x230)](_0x58d245,_0xbbbf44);break;}});const _0x223866=_0x3e510d=>{const _0x1a2448=_0x46e6fe;if(_0x1efc95===_0x3e510d&&_0x19917c===_0x3e510d)return _0x7d3dc0=_0x3e510d,!![];else{if(_0x1efc95===_0x3e510d)return _0x7d3dc0=_0x3e510d,_0x56f79f=_0xbc7cfd[_0x1a2448(0x240)],!![];else{if(_0x19917c===_0x3e510d)return _0x7d3dc0=_0x3e510d,_0x56f79f=_0x3d1a5e[_0x1a2448(0x240)],!![];}}return![];},_0x1efc95=_0xbc7cfd[_0x46e6fe(0x177)],_0x19917c=_0x3d1a5e?_0x3d1a5e['casterProgression']:null;if(_0x1efc95&&_0x19917c)_0x223866(_0x46e6fe(0x107))||_0x223866(_0x46e6fe(0x213))||_0x223866(_0x46e6fe(0x1f1));else{if(_0x1efc95&&!_0x19917c)_0x7d3dc0=_0x1efc95,_0x56f79f=_0xbc7cfd['spellcastingAbility'];else!_0x1efc95&&_0x19917c&&(_0x7d3dc0=_0x19917c,_0x56f79f=_0x3d1a5e[_0x46e6fe(0x240)]);}if(!_0x56f79f)_0x56f79f=(_0x3d1a5e?_0x3d1a5e['spellcastingAbility']:null)||_0xbc7cfd[_0x46e6fe(0x240)];if(_0x7d3dc0){const _0x2260f2=_0x32236e?Math[_0x46e6fe(0x224)]:Math[_0x46e6fe(0x202)];switch(_0x7d3dc0){case _0x46e6fe(0x107):_0x4ed988+=_0x573df7;break;case _0x46e6fe(0x213):_0x4ed988+=_0x2260f2(_0x573df7/0x2);break;case _0x46e6fe(0x1f1):_0x4ed988+=_0x2260f2(_0x573df7/0x3);break;}}return{'casterProgression':_0x7d3dc0,'spellAbility':_0x56f79f,'totalSpellcastingLevels':_0x4ed988,'maxPactCasterLevel':_0x58d245};}static[_0x587477(0x102)](_0x5107dd,_0x148150){const _0x1e80d4=_0x587477;for(const _0x480cde of _0x5107dd){if(!_0x480cde[_0x1e80d4(0x13d)]||!_0x480cde['optionalfeatureProgression']?.['length'])continue;for(const _0x7bca12 of _0x480cde[_0x1e80d4(0x241)]){this[_0x1e80d4(0x10c)](_0x148150,_0x480cde,_0x7bca12);}}}static[_0x587477(0x10c)](_0x1d052f,_0x1d02d5,_0x32a669){const _0x49bf10=_0x587477,_0x65d447=this['_addFauxOptionalFeatureFeatures_getLoadeds'](_0x1d052f,_0x1d02d5,_0x32a669);let _0x2e0e51=0x0;_0x32a669['progression'][_0x49bf10(0x24d)]((_0x5a2818,_0x3e19f7)=>{const _0x3fb73a=_0x49bf10;if(_0x5a2818===_0x2e0e51)return;const _0x5ee1ad=_0x5a2818-_0x2e0e51;if(!~_0x5ee1ad)return;const _0x4f7b81=_0x3e19f7+0x1,_0x19691b=this[_0x3fb73a(0x22b)](_0x1d02d5,_0x32a669,_0x4f7b81,_0x65d447,_0x5ee1ad),_0x1f448b=_0x1d02d5[_0x3fb73a(0x13d)][_0x3fb73a(0x1cb)](_0x4decee=>{const _0x12cf4d=_0x3fb73a;return(_0x4decee['level']||DataUtil[_0x12cf4d(0x1dd)]['unpackUidClassFeature'](_0x4decee[_0x12cf4d(0x290)]||_0x4decee)[_0x12cf4d(0x182)])>_0x4f7b81;});if(~_0x1f448b)_0x1d02d5[_0x3fb73a(0x13d)][_0x3fb73a(0x143)](_0x1f448b,0x0,_0x19691b);else _0x1d02d5['classFeatures'][_0x3fb73a(0x233)](_0x19691b);_0x2e0e51=_0x5a2818;});}static[_0x587477(0x1be)](_0x40b81b,_0x260433,_0x3d2685){const _0x403614=_0x587477,_0x55f08f=_0x40b81b[_0x403614(0x249)](_0x4490f0=>_0x4490f0[_0x403614(0x2a9)][_0x403614(0x1fb)](_0x3d2685[_0x403614(0x2a9)])),_0x480c4a={'setId':CryptUtil[_0x403614(0x28e)](),'name':_0x3d2685['name']};return _0x55f08f[_0x403614(0x1e6)](_0x2ac9a1=>{const _0x2d9f21=_0x403614;return{'type':_0x2d9f21(0x20c),'entry':'{@optfeature\x20'+_0x2ac9a1[_0x2d9f21(0x16c)]+'|'+_0x2ac9a1['source']+'}','entity':MiscUtil[_0x2d9f21(0x169)](_0x2ac9a1),'optionsMeta':_0x480c4a,'page':UrlUtil[_0x2d9f21(0x168)],'source':_0x2ac9a1[_0x2d9f21(0x16e)],'hash':UrlUtil[_0x2d9f21(0x1bb)][UrlUtil['PG_OPT_FEATURES']](_0x2ac9a1),'isRequiredOption':![]};});}static['_addFauxOptionalFeatureFeatures_getFauxFeature'](_0x1d9d80,_0x2f246d,_0x2cd8af,_0x269636,_0x504884){const _0x3373ed=_0x587477,_0xe292a7=MiscUtil[_0x3373ed(0x169)](_0x269636);return _0xe292a7[_0x3373ed(0x24d)](_0x55a50e=>{const _0x527947=_0x3373ed;_0x55a50e['optionsMeta'][_0x527947(0x275)]=_0x504884,PageFilterClassesRaw[_0x527947(0x24c)]({'entity':_0x55a50e['entity'],'ancestorClassName':_0x1d9d80['name'],'ancestorType':'optionalfeature','displayName':_0x2f246d[_0x527947(0x16c)]+':\x20'+_0x55a50e[_0x527947(0x171)][_0x527947(0x16c)],'foundryData':{'requirements':_0x1d9d80[_0x527947(0x16c)]+'\x20'+_0x2cd8af[_0x527947(0x182)]}});}),{'name':_0x2f246d[_0x3373ed(0x16c)],'source':_0x1d9d80[_0x3373ed(0x16e)],'classFeature':_0x2f246d['name']+'|'+_0x1d9d80['name']+'|'+_0x1d9d80[_0x3373ed(0x16e)]+'|'+_0x2cd8af+'|'+SRC_5ETOOLS_TMP,'hash':UrlUtil[_0x3373ed(0x1bb)][_0x3373ed(0x290)]({'name':_0x2f246d['name'],'className':_0x1d9d80[_0x3373ed(0x16c)],'classSource':_0x1d9d80[_0x3373ed(0x16e)],'level':_0x2cd8af,'source':SRC_5ETOOLS_TMP}),'level':_0x2cd8af,'loadeds':_0xe292a7};}static[_0x587477(0x1c1)](_0x1bf849,_0x197a38){const _0x5d7791=_0x587477;if(!_0x197a38)return[];return _0x1bf849['items'][_0x5d7791(0x249)](_0x3389fc=>_0x3389fc[_0x5d7791(0x192)]===_0x5d7791(0x1dd)&&(_0x3389fc[_0x5d7791(0x16c)]||'')[_0x5d7791(0x12e)]()[_0x5d7791(0x1c2)]()===_0x197a38[_0x5d7791(0x16c)][_0x5d7791(0x12e)]()[_0x5d7791(0x1c2)]()&&(!Config[_0x5d7791(0x22f)](_0x5d7791(0x12a),_0x5d7791(0x244))||(DataConverter['getItemSource'](_0x3389fc)||'')[_0x5d7791(0x12e)]()===Parser[_0x5d7791(0x28f)](_0x197a38[_0x5d7791(0x16e)])[_0x5d7791(0x12e)]()));}static[_0x587477(0x21c)](_0x385059,_0x4ded6e){const _0x3189d5=_0x587477;if(!_0x385059||_0x385059[_0x3189d5(0x192)]!=='class'||!_0x4ded6e?.['length'])return null;return _0x4ded6e[_0x3189d5(0x259)](_0x1b7d85=>_0x1b7d85[_0x3189d5(0x16c)][_0x3189d5(0x12e)]()[_0x3189d5(0x1c2)]()===_0x385059[_0x3189d5(0x16c)][_0x3189d5(0x12e)]()['trim']()&&(!Config['get'](_0x3189d5(0x12a),'isStrictMatching')||(DataConverter[_0x3189d5(0x25e)](_0x385059)||'')[_0x3189d5(0x12e)]()===Parser[_0x3189d5(0x28f)](_0x1b7d85['source'])[_0x3189d5(0x12e)]()));}static[_0x587477(0x15e)](_0x3c56fb,_0x503cee,_0x3b3b3c){const _0x316a60=_0x587477;if(!_0x3c56fb||_0x3c56fb[_0x316a60(0x192)]!=='class'||!_0x3b3b3c?.[_0x316a60(0x14a)])return null;return _0x3b3b3c=_0x3b3b3c[_0x316a60(0x249)](_0x466f1c=>_0x466f1c['className']===_0x503cee[_0x316a60(0x16c)]&&_0x466f1c[_0x316a60(0x144)]===_0x503cee[_0x316a60(0x16e)]),_0x3b3b3c[_0x316a60(0x259)](_0x5d4177=>_0x5d4177[_0x316a60(0x16c)][_0x316a60(0x12e)]()['trim']()===_0x3c56fb[_0x316a60(0x1fa)][_0x316a60(0x1fa)][_0x316a60(0x109)]['toLowerCase']()['trim']()||_0x5d4177[_0x316a60(0x211)][_0x316a60(0x12e)]()[_0x316a60(0x1c2)]()===_0x3c56fb[_0x316a60(0x1fa)]['data'][_0x316a60(0x109)][_0x316a60(0x12e)]()[_0x316a60(0x1c2)]());}}Charactermancer_Class_Util[_0x587477(0x285)]=class{constructor(_0x392f1d){const _0x836a2e=_0x587477;this[_0x836a2e(0x111)]=_0x392f1d,this['_existingSheetFeatures']={},this[_0x836a2e(0x2ac)]={},_0x392f1d[_0x836a2e(0x2b3)][_0x836a2e(0x249)](_0x357319=>_0x357319[_0x836a2e(0x192)]===_0x836a2e(0x246))[_0x836a2e(0x24d)](_0x344f8d=>{const _0x5939a4=_0x836a2e,_0x20dce7=(DataConverter[_0x5939a4(0x25e)](_0x344f8d)||'')[_0x5939a4(0x1c2)]()[_0x5939a4(0x12e)]();Charactermancer_Class_Util[_0x5939a4(0x285)][_0x5939a4(0x117)](_0x344f8d['name'])['forEach'](_0xa07839=>this[_0x5939a4(0x20e)][_0xa07839]=_0x20dce7);const {page:_0x34c411,source:_0xfa807,hash:_0x2ef69a}=_0x344f8d['data']['flags']?.[SharedConsts[_0x5939a4(0x14c)]]||{};if(_0x34c411&&_0xfa807&&_0x2ef69a)this['addImportFeature'](_0x34c411,_0xfa807,_0x2ef69a);});}static[_0x587477(0x117)](_0x4179e7){const _0x2067fb=_0x587477,_0x2c3ae9=_0x4179e7[_0x2067fb(0x1c2)]()['toLowerCase'](),_0x4da8f1=[_0x2c3ae9],_0x12d0f6=/^(.*?)\(.*\)$/[_0x2067fb(0x23a)](_0x2c3ae9);if(_0x12d0f6)_0x4da8f1[_0x2067fb(0x233)](_0x12d0f6[0x1]['trim']());if(_0x2c3ae9[_0x2067fb(0x1fb)](':\x20')){const _0x28e61c=_0x2c3ae9[_0x2067fb(0x209)](':')[_0x2067fb(0x1a8)](0x1)[_0x2067fb(0x27c)](':')[_0x2067fb(0x1c2)]();_0x4da8f1[_0x2067fb(0x233)](_0x28e61c);const _0x503b5a=/^(.*?)\(.*\)$/['exec'](_0x28e61c);if(_0x503b5a)_0x4da8f1[_0x2067fb(0x233)](_0x503b5a[0x1]['trim']());}return _0x4da8f1;}[_0x587477(0x188)](_0x49e40b,_0x16b19a,_0x4f9e8c,_0x2c1780){const _0x28340b=_0x587477;if(MiscUtil['get'](this[_0x28340b(0x2ac)],_0x16b19a,_0x4f9e8c,_0x2c1780))return!![];const _0x5a2cb2=Charactermancer_Class_Util['ExistingFeatureChecker']['_getNameAliases'](_0x49e40b);if(!_0x5a2cb2[_0x28340b(0x129)](_0x338dbe=>this[_0x28340b(0x20e)][_0x338dbe]))return![];if(!Config['get'](_0x28340b(0x12a),_0x28340b(0x244)))return!![];const _0x2728a8=Parser[_0x28340b(0x28f)](_0x4f9e8c)[_0x28340b(0x1c2)]()[_0x28340b(0x12e)]();return _0x5a2cb2[_0x28340b(0x129)](_0x3b552a=>this['_existingSheetFeatures'][_0x3b552a]===_0x2728a8);}[_0x587477(0x1dc)](_0x2503dc,_0x52037b,_0x593183){const _0x5c351b=_0x587477;MiscUtil[_0x5c351b(0x23b)](this[_0x5c351b(0x2ac)],_0x2503dc,_0x52037b,_0x593183,!![]);}};class Charactermancer_Class_LevelSelect extends BaseComponent{static async[_0x587477(0x237)](_0x47a570){const _0x28240c=_0x587477;return UtilApplications[_0x28240c(0x1da)]({'comp':new this(_0x47a570),'isUnskippable':!![],'fnGetInvalidMeta':_0x1b67c6=>{const _0x343348=_0x28240c;if(_0x1b67c6['data'][_0x343348(0x14a)]===0x0)return{'type':_0x343348(0x151),'message':'Please\x20select\x20some\x20levels\x20first!'};}});}constructor(_0x5de809){const _0xd5c6a4=_0x587477;super(),this[_0xd5c6a4(0x136)]=!!_0x5de809[_0xd5c6a4(0x17a)],this[_0xd5c6a4(0x272)]=!!_0x5de809[_0xd5c6a4(0x118)],this['_isForceSelect']=!!_0x5de809[_0xd5c6a4(0x1ed)],this[_0xd5c6a4(0x20b)]=this[_0xd5c6a4(0x1bc)][_0xd5c6a4(0x19d)](_0x5de809[_0xd5c6a4(0x1b8)],this[_0xd5c6a4(0x136)]),this['_maxPreviousLevel']=_0x5de809[_0xd5c6a4(0x216)]||0x0,this['_list']=null,this[_0xd5c6a4(0x199)]=[];}get[_0x587477(0x297)](){const _0x30af17=_0x587477;return _0x30af17(0x18a)+(this[_0x30af17(0x136)]?_0x30af17(0x172):_0x30af17(0x1c8))+'\x20Levels';}[_0x587477(0x1a0)](_0x2a233){const _0x4c220a=_0x587477;this['_fnsOnChange'][_0x4c220a(0x233)](_0x2a233);}[_0x587477(0x208)](){const _0x22d767=_0x587477;this[_0x22d767(0x199)][_0x22d767(0x24d)](_0x521f29=>_0x521f29());}['setFeatures'](_0x4bb790){const _0xec452a=_0x587477;this[_0xec452a(0x20b)]=this['constructor'][_0xec452a(0x19d)](_0x4bb790,this[_0xec452a(0x136)]),this['_list']['items']['forEach'](_0x2d47bc=>_0x2d47bc[_0xec452a(0x1fa)]['fnUpdateRowText']());}[_0x587477(0x1c5)](_0x47e6dc){const _0x1c8efd=_0x587477,_0x24ef25=this['_isRadio']?null:$(_0x1c8efd(0x122)),_0x496ee1=$('<div\x20class=\x22veapp__list\x20mb-1\x22></div>');this[_0x1c8efd(0x1eb)]=new List({'$wrpList':_0x496ee1,'fnSort':null,'isUseJquery':!![]});for(let _0x54278d=0x0;_0x54278d<this[_0x1c8efd(0x20b)][_0x1c8efd(0x14a)];++_0x54278d){const _0x182562=this[_0x1c8efd(0x184)](_0x54278d),_0x5b68f4=$(_0x1c8efd(0x104)),_0x28abda=()=>_0x5b68f4[_0x1c8efd(0x16b)](this['constructor'][_0x1c8efd(0x134)](this['_featureArr'][_0x54278d]));_0x28abda();const _0x2c73f6=$$`<label class="w-100 flex veapp__list-row veapp__list-row-hoverable ${this[_0x1c8efd(0x272)]&&this['_isForceSelect']&&_0x54278d<=this[_0x1c8efd(0x218)]?_0x1c8efd(0x14d):''} ${_0x54278d<this['_maxPreviousLevel']?_0x1c8efd(0x1d8):''}">
-				<span class="col-1 flex-vh-center">${_0x182562}</span>
-				<span class="col-1-5 text-center">${_0x54278d+0x1}</span>
-				${_0x5b68f4}
-			</label>`[_0x1c8efd(0x1ba)](_0x2017a9=>{const _0x18e804=_0x1c8efd;this[_0x18e804(0x205)](_0x51c9ce,_0x2017a9);}),_0x51c9ce=new ListItem(_0x54278d,_0x2c73f6,'',{},{'cbSel':_0x182562[0x0],'fnUpdateRowText':_0x28abda});this['_list']['addItem'](_0x51c9ce);}if(!this[_0x1c8efd(0x272)])ListUiUtil[_0x1c8efd(0x281)](_0x24ef25,this[_0x1c8efd(0x1eb)]);this[_0x1c8efd(0x1eb)][_0x1c8efd(0x131)](),$$`<div class="flex-col min-h-0">
+import {Config} from "./Config.js";
+import {DataConverterClass} from "./DataConverterClass.js";
+import {DataConverterClassSubclassFeature} from "./DataConverterClassSubclassFeature.js";
+import {DataConverterOptionalfeature} from "./DataConverterOptionalfeature.js";
+import {Vetools} from "./Vetools.js";
+import {LGT} from "./Util.js";
+import {UtilActors} from "./UtilActors.js";
+import {Consts} from "./Consts.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {DataConverterFeat} from "./DataConverterFeat.js";
+import {DataConverterReward} from "./DataConverterReward.js";
+import {DataConverterCharCreationOption} from "./DataConverterCharCreationOption.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+// TODO factor this out when `PageFilterClassesRaw` is factored out to e.g. features
+class PageFilterClassesFoundry extends PageFilterClassesRaw {
+	static async _pPreloadSideData () {
+		return Promise.all([
+			DataConverterClass.pPreloadSideData(),
+			DataConverterClassSubclassFeature.pPreloadSideData(),
+			DataConverterOptionalfeature.pPreloadSideData(),
+			DataConverterFeat.pPreloadSideData(),
+			DataConverterReward.pPreloadSideData(),
+		]);
+	}
+
+	static async _pGetSideData (entity, type) {
+		switch (type) {
+			case "class":
+			case "subclass": return DataConverterClass.pGetSideData(entity, type);
+
+			case "classFeature":
+			case "subclassFeature": return DataConverterClassSubclassFeature.pGetSideData(entity, type);
+
+			case "optionalfeature": return DataConverterOptionalfeature.pGetSideData(entity);
+
+			case "feat": return DataConverterFeat.pGetSideData(entity);
+
+			case "reward": return DataConverterReward.pGetSideData(entity);
+
+			case "charoption": return DataConverterCharCreationOption.pGetSideData(entity);
+
+			default: throw new Error(`Unhandled type "${type}"`);
+		}
+	}
+
+	static _handleReferenceError (msg) { console.error(...LGT, msg); ui.notifications.error(msg); }
+}
+
+class Charactermancer_Class_Util {
+	static getAllFeatures (cls) {
+		let allFeatures = [];
+		const seenSubclassFeatureHashes = new Set();
+
+		const gainSubclassFeatureLevels = cls.classFeatures
+			.filter(it => it.gainSubclassFeature)
+			.map(cf => cf.level ?? DataUtil.class.unpackUidClassFeature(cf.classFeature || cf).level);
+
+		// Fill array with class features; add subclass features as appropriate
+		cls.classFeatures.forEach(cf => {
+			allFeatures.push(cf);
+
+			if (cf.gainSubclassFeature) {
+				const cfLevel = cf.level ?? DataUtil.class.unpackUidClassFeature(cf.classFeature || cf).level;
+				const nxtCfLevel = gainSubclassFeatureLevels.includes(cfLevel) ? gainSubclassFeatureLevels[gainSubclassFeatureLevels.indexOf(cfLevel) + 1] : null;
+
+				cls.subclasses.forEach(sc => {
+					sc.subclassFeatures
+						.filter(scf => {
+							const scfHash = scf.hash ?? DataUtil.class.unpackUidSubclassFeature(scf.subclassFeature || scf).hash;
+							const scfLevel = scf.level ?? DataUtil.class.unpackUidSubclassFeature(scf.subclassFeature || scf).level;
+
+							if (seenSubclassFeatureHashes.has(scfHash)) return false;
+
+							if (scf.isGainAtNextFeatureLevel) {
+								// On first gaining a subclass feature, include anything that we gained access to at earlier levels
+								if (cfLevel === gainSubclassFeatureLevels[0] && scfLevel <= cfLevel) {
+									return true;
+								}
+
+								// Thereafter, only include subclass levels in the range of <this class feature> - <next class feature>
+								//   (and that have not already been added)
+								if (scfLevel <= cfLevel && (nxtCfLevel == null || scfLevel < nxtCfLevel)) {
+									return true;
+								}
+
+								return false;
+							}
+
+							return scfLevel === cfLevel;
+						})
+						.forEach(scf => {
+							const scfHash = scf.hash ?? DataUtil.class.unpackUidSubclassFeature(scf.subclassFeature || scf).hash;
+							seenSubclassFeatureHashes.add(scfHash);
+
+							// Fake e.g. Strixhaven subclass levels as being of the appropriate level
+							scf.level = cfLevel;
+
+							allFeatures.push(scf);
+						});
+				});
+			}
+		});
+
+		return MiscUtil.copy(allFeatures);
+	}
+
+	static getFilteredEntries (entries, pageFilter, filterValues) {
+		const isDisplayableEntry = (ent) => {
+			if (!ent.source) return true;
+			return pageFilter.sourceFilter.toDisplay(filterValues, ent.source);
+		};
+
+		const recursiveFilter = (entry) => {
+			if (entry == null) return entry;
+			if (typeof entry === "object") {
+				if (entry instanceof Array) {
+					entry = entry.filter(it => isDisplayableEntry(it));
+					return entry.map(it => recursiveFilter(it));
+				} else {
+					Object.keys(entry).forEach(k => {
+						if (entry[k] instanceof Array) {
+							entry[k] = recursiveFilter(entry[k]);
+							if (!entry[k].length) delete entry[k];
+						} else entry[k] = recursiveFilter(entry[k]);
+					});
+					return entry;
+				}
+			} else return entry;
+		};
+
+		entries = MiscUtil.copy(entries);
+		return recursiveFilter(entries);
+	}
+
+	// region Spells
+	static getPreparableSpells (spells, cls, spellLevelLow, spellLevelHigh) {
+		Renderer.spell.populateHomebrewLookup(BrewUtil.homebrew, {isForce: true});
+
+		return spells.filter(it => {
+			if (!(it.level > 0 // Avoid importing cantrips
+				&& it.level >= spellLevelLow && it.level <= spellLevelHigh)) return false;
+
+			Renderer.spell.initClasses(it);
+
+			const fromClassList = Renderer.spell.getCombinedClasses(it, "fromClassList");
+			return fromClassList.some(c => (c.name || "").toLowerCase() === cls.name.toLowerCase() && (c.source || SRC_PHB).toLowerCase() === cls.source.toLowerCase());
+		});
+	}
+	// endregion
+
+	static getCasterProgression (cls, sc, {targetLevel, otherExistingClassItems = null}) {
+		otherExistingClassItems = otherExistingClassItems || [];
+
+		const clsSpellProgression = cls.casterProgression;
+		const scSpellProgression = sc?.casterProgression;
+
+		const isSpellcastingMulticlass = [
+			...otherExistingClassItems.filter(it => it.data?.data?.spellcasting && it.data?.data?.spellcasting !== "none"),
+			clsSpellProgression != null,
+			scSpellProgression != null,
+		]
+			.filter(Boolean)
+			.length > 1;
+
+		let {
+			totalSpellcastingLevels,
+			casterClassCount,
+			maxPactCasterLevel,
+		} = UtilActors.getActorSpellcastingInfo({
+			sheetItems: otherExistingClassItems,
+			isForceSpellcastingMulticlass: isSpellcastingMulticlass,
+		});
+
+		maxPactCasterLevel = Math.max(maxPactCasterLevel, targetLevel);
+
+		let casterProgression;
+		let spellAbility;
+
+		const setCasterVars = (type) => {
+			if (clsSpellProgression === type && scSpellProgression === type) {
+				casterProgression = type;
+				return true;
+			} else if (clsSpellProgression === type) {
+				casterProgression = type;
+				spellAbility = cls.spellcastingAbility;
+				return true;
+			} else if (scSpellProgression === type) {
+				casterProgression = type;
+				spellAbility = sc.spellcastingAbility;
+				return true;
+			}
+			return false;
+		};
+
+		if (clsSpellProgression && scSpellProgression) setCasterVars("full") || setCasterVars("1/2") || setCasterVars("1/3");
+		else if (clsSpellProgression && !scSpellProgression) {
+			casterProgression = clsSpellProgression;
+			spellAbility = cls.spellcastingAbility;
+		} else if (!clsSpellProgression && scSpellProgression) {
+			casterProgression = scSpellProgression;
+			spellAbility = sc.spellcastingAbility;
+		}
+
+		if (!spellAbility) spellAbility = (sc ? sc.spellcastingAbility : null) || cls.spellcastingAbility;
+
+		if (casterProgression) {
+			// Multiclassing rules say use floor, but single-class half/third casters use ceil.
+			//   Therefore, if this is our only caster class, use ceil.
+			const fnRound = casterClassCount ? Math.floor : Math.ceil;
+			switch (casterProgression) {
+				case "full": totalSpellcastingLevels += targetLevel; break;
+				case "1/2": totalSpellcastingLevels += fnRound(targetLevel / 2); break;
+				case "1/3": totalSpellcastingLevels += fnRound(targetLevel / 3); break;
+				// (Do nothing if unrecognized, as this can be e.g. pact magic)
+			}
+		}
+
+		return {
+			casterProgression,
+			spellAbility,
+			totalSpellcastingLevels,
+			maxPactCasterLevel,
+		};
+	}
+
+	/**
+	 * For each class with an optional feature progression, add faux features which allow us to choose from a type of
+	 * optional features.
+	 * @param classList A list of all classes, which have been run through the feature post-loader.
+	 * @param optfeatList A list of all optionalfeature entities.
+	 */
+	static addFauxOptionalFeatureFeatures (classList, optfeatList) {
+		for (const cls of classList) {
+			if (!cls.classFeatures || !cls.optionalfeatureProgression?.length) continue;
+			for (const optFeatProgression of cls.optionalfeatureProgression) {
+				this._addFauxOptionalFeatureFeatures_handleClassProgression(optfeatList, cls, optFeatProgression);
+			}
+		}
+	}
+
+	static _addFauxOptionalFeatureFeatures_handleClassProgression (optfeatList, cls, optFeatProgression) {
+		const fauxLoadeds = this._addFauxOptionalFeatureFeatures_getLoadeds(optfeatList, cls, optFeatProgression);
+
+		let cntPrev = 0;
+		optFeatProgression.progression.forEach((cntOptFeats, ixLvl) => {
+			if (cntOptFeats === cntPrev) return;
+			const cntDelta = cntOptFeats - cntPrev;
+			if (!~cntDelta) return; // Should never occur
+
+			const lvl = ixLvl + 1;
+
+			const feature = this._addFauxOptionalFeatureFeatures_getFauxFeature(cls, optFeatProgression, lvl, fauxLoadeds, cntDelta);
+
+			// Insert the fake feature into the features array at the appropriate point
+			const ixInsertBefore = cls.classFeatures.findIndex(it => {
+				return (it.level || DataUtil.class.unpackUidClassFeature(it.classFeature || it).level) > lvl;
+			});
+			if (~ixInsertBefore) cls.classFeatures.splice(ixInsertBefore, 0, feature);
+			else cls.classFeatures.push(feature);
+
+			cntPrev = cntOptFeats;
+		});
+	}
+
+	static _addFauxOptionalFeatureFeatures_getLoadeds (optfeatList, cls, optFeatProgression) {
+		const availOptFeats = optfeatList.filter(it => optFeatProgression.featureType.some(ft => it.featureType.includes(ft)));
+		const optionsMeta = {setId: CryptUtil.uid(), name: optFeatProgression.name};
+		return availOptFeats.map(it => {
+			return {
+				type: "optionalfeature",
+				entry: `{@optfeature ${it.name}|${it.source}}`,
+				entity: MiscUtil.copy(it),
+				optionsMeta,
+				page: UrlUtil.PG_OPT_FEATURES,
+				source: it.source,
+				hash: UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPT_FEATURES](it),
+				isRequiredOption: false,
+			};
+		});
+	}
+
+	static _addFauxOptionalFeatureFeatures_getFauxFeature (cls, optFeatProgression, lvl, fauxLoadeds, cntOptions) {
+		const loadeds = MiscUtil.copy(fauxLoadeds);
+
+		loadeds.forEach(l => {
+			l.optionsMeta.count = cntOptions;
+			PageFilterClassesFoundry.populateEntityTempData({
+				entity: l.entity,
+				ancestorClassName: cls.name,
+				ancestorType: "optionalfeature",
+				displayName: `${optFeatProgression.name}: ${l.entity.name}`,
+				foundryData: {
+					requirements: `${cls.name} ${lvl.level}`,
+				},
+			});
+		});
+
+		return {
+			name: optFeatProgression.name,
+			source: cls.source,
+			classFeature: `${optFeatProgression.name}|${cls.name}|${cls.source}|${lvl}|${SRC_5ETOOLS_TMP}`,
+			hash: UrlUtil.URL_TO_HASH_BUILDER["classFeature"]({
+				name: optFeatProgression.name,
+				className: cls.name,
+				classSource: cls.source,
+				level: lvl,
+				source: SRC_5ETOOLS_TMP,
+			}),
+			level: lvl,
+			loadeds: loadeds,
+		};
+	}
+
+	static getExistingClassItems (actor, cls) {
+		if (!cls) return [];
+
+		return actor.items.filter(actItem =>
+			actItem.type === "class"
+			&& (actItem.name || "").toLowerCase().trim() === cls.name.toLowerCase().trim()
+			&& (
+				!Config.get("import", "isStrictMatching")
+				|| (UtilDataConverter.getItemSource(actItem) || "").toLowerCase() === Parser.sourceJsonToAbv(cls.source).toLowerCase()
+			),
+		);
+	}
+
+	static getClassFromExistingClassItem (existingClassItem, classes) {
+		if (!existingClassItem || existingClassItem.type !== "class" || !classes?.length) return null;
+
+		return classes.find(cls =>
+			cls.name.toLowerCase().trim() === existingClassItem.name.toLowerCase().trim()
+			&& (
+				!Config.get("import", "isStrictMatching")
+				|| (UtilDataConverter.getItemSource(existingClassItem) || "").toLowerCase() === Parser.sourceJsonToAbv(cls.source).toLowerCase()
+			),
+		);
+	}
+
+	static getSubclassFromExistingClassItem (existingClassItem, cls, subclasses) {
+		if (!existingClassItem || existingClassItem.type !== "class" || !subclasses?.length) return null;
+
+		subclasses = subclasses.filter(it => it.className === cls.name && it.classSource === cls.source);
+
+		return subclasses.find(sc =>
+			sc.name.toLowerCase().trim() === existingClassItem.data.data.subclass.toLowerCase().trim()
+			|| sc.shortName.toLowerCase().trim() === existingClassItem.data.data.subclass.toLowerCase().trim(),
+		);
+	}
+}
+
+Charactermancer_Class_Util.ExistingFeatureChecker = class {
+	constructor (actor) {
+		this._actor = actor;
+
+		this._existingSheetFeatures = {};
+		this._existingImportFeatures = {};
+
+		actor.items
+			.filter(it => it.type === "feat")
+			.forEach(it => {
+				const cleanSource = (UtilDataConverter.getItemSource(it) || "").trim().toLowerCase();
+				Charactermancer_Class_Util.ExistingFeatureChecker._getNameAliases(it.name)
+					.forEach(alias => this._existingSheetFeatures[alias] = cleanSource);
+
+				const {page, source, hash} = it.data.flags?.[SharedConsts.MODULE_NAME_FAKE] || {};
+				if (page && source && hash) this.addImportFeature(page, source, hash);
+			});
+	}
+
+	static _getNameAliases (name) {
+		const cleanName = name.trim().toLowerCase();
+		const out = [
+			cleanName,
+		];
+
+		const mTrailingParens = /^(.*?)\(.*\)$/.exec(cleanName);
+		if (mTrailingParens) out.push(mTrailingParens[1].trim());
+
+		// Optional features are imported as e.g. `Eldritch Invocations: Agonizing Blast` by the class importer, so
+		//   strip the leading feature type.
+		if (cleanName.includes(": ")) {
+			const cleanNamePostColon = cleanName.split(":").slice(1).join(":").trim();
+			out.push(cleanNamePostColon);
+			const mTrailingParensPostColon = /^(.*?)\(.*\)$/.exec(cleanNamePostColon);
+			if (mTrailingParensPostColon) out.push(mTrailingParensPostColon[1].trim());
+		}
+
+		return out;
+	}
+
+	isExistingFeature (name, page, source, hash) {
+		if (MiscUtil.get(this._existingImportFeatures, page, source, hash)) return true;
+
+		const searchNameAliases = Charactermancer_Class_Util.ExistingFeatureChecker._getNameAliases(name);
+		if (!searchNameAliases.some(it => this._existingSheetFeatures[it])) return false;
+
+		if (!Config.get("import", "isStrictMatching")) return true;
+
+		const searchSource = Parser.sourceJsonToAbv(source).trim().toLowerCase();
+		return searchNameAliases.some(it => this._existingSheetFeatures[it] === searchSource);
+	}
+
+	addImportFeature (page, source, hash) {
+		MiscUtil.set(this._existingImportFeatures, page, source, hash, true);
+	}
+};
+
+class Charactermancer_Class_LevelSelect extends BaseComponent {
+	// region External
+	/**
+	 * @param opts
+	 * @param opts.features
+	 * @param opts.isSubclass
+	 * @param opts.maxPreviousLevel
+	 */
+	static async pGetUserInput (opts) {
+		return UtilApplications.pGetImportCompModalFormData({
+			comp: new this(opts),
+			isUnskippable: true,
+			fnGetInvalidMeta: (formData) => {
+				if (formData.data.length === 0) return {type: "error", message: `Please select some levels first!`};
+			},
+		});
+	}
+	// endregion
+
+	/**
+	 * @param opts
+	 * @param opts.features
+	 * @param [opts.isRadio] Select all levels below the currently selected level.
+	 * @param [opts.isForceSelect] Force select the next level.
+	 * @param [opts.isSubclass]
+	 * @param [opts.maxPreviousLevel]
+	 */
+	constructor (opts) {
+		super();
+
+		this._isSubclass = !!opts.isSubclass;
+		this._isRadio = !!opts.isRadio;
+		this._isForceSelect = !!opts.isForceSelect;
+		this._featureArr = this.constructor._getLevelGroupedFeatures(opts.features, this._isSubclass);
+		this._maxPreviousLevel = opts.maxPreviousLevel || 0;
+
+		this._list = null;
+
+		this._fnsOnChange = [];
+	}
+
+	get modalTitle () { return `Select ${this._isSubclass ? "Subclass" : "Class"} Levels`; }
+
+	onchange (fn) {
+		this._fnsOnChange.push(fn);
+	}
+
+	_doRunFnsOnchange () {
+		this._fnsOnChange.forEach(fn => fn());
+	}
+
+	setFeatures (features) {
+		this._featureArr = this.constructor._getLevelGroupedFeatures(features, this._isSubclass);
+		this._list.items.forEach(it => it.data.fnUpdateRowText());
+	}
+
+	render ($wrp) {
+		const $cbAll = this._isRadio ? null : $(`<input type="checkbox" name="cb-select-all">`);
+		const $wrpList = $(`<div class="veapp__list mb-1"></div>`);
+
+		this._list = new List({
+			$wrpList: $wrpList,
+			fnSort: null,
+			isUseJquery: true,
+		});
+
+		for (let ix = 0; ix < this._featureArr.length; ++ix) {
+			const $cb = this._render_$getCbRow(ix);
+
+			const $dispFeatures = $(`<span class="col-9-5"></span>`);
+			const fnUpdateRowText = () => $dispFeatures.text(this.constructor._getRowText(this._featureArr[ix]));
+			fnUpdateRowText();
+
+			const $li = $$`<label class="w-100 flex veapp__list-row veapp__list-row-hoverable ${this._isRadio && this._isForceSelect && ix <= this._maxPreviousLevel ? `list-multi-selected` : ""} ${ix < this._maxPreviousLevel ? `ve-muted` : ""}">
+				<span class="col-1 flex-vh-center">${$cb}</span>
+				<span class="col-1-5 text-center">${ix + 1}</span>
+				${$dispFeatures}
+			</label>`
+				.click((evt) => {
+					this._handleSelectClick(listItem, evt);
+				});
+
+			const listItem = new ListItem(
+				ix,
+				$li,
+				"",
+				{},
+				{
+					cbSel: $cb[0],
+					fnUpdateRowText,
+				},
+			);
+			this._list.addItem(listItem);
+		}
+
+		if (!this._isRadio) ListUiUtil.bindSelectAllCheckbox($cbAll, this._list);
+
+		this._list.init();
+
+		$$`<div class="flex-col min-h-0">
 			<div class="flex-v-stretch input-group mb-1 no-shrink">
-				<label class="btn btn-5et col-1 px-1 flex-vh-center">${_0x24ef25}</label>
+				<label class="btn btn-5et col-1 px-1 flex-vh-center">${$cbAll}</label>
 				<button class="btn-5et col-1-5">Level</button>
 				<button class="btn-5et col-9-5">Features</button>
 			</div>
 
-			${_0x496ee1}
-		</div>`[_0x1c8efd(0x27b)](_0x47e6dc);}[_0x587477(0x184)](_0x54bad3){const _0x14aa16=_0x587477;if(!this[_0x14aa16(0x272)])return $(_0x14aa16(0x194));const _0x169003=$(_0x14aa16(0x16d));if(_0x54bad3===this[_0x14aa16(0x218)]&&this['_isForceSelect'])_0x169003[_0x14aa16(0x207)]('checked',!![]);else{if(_0x54bad3<this[_0x14aa16(0x218)])_0x169003[_0x14aa16(0x207)](_0x14aa16(0x10d),!![]);}return _0x169003;}[_0x587477(0x205)](_0x1f5917,_0x2c1038){const _0x37bf82=_0x587477;if(!this[_0x37bf82(0x272)])return ListUiUtil['handleSelectClick'](this[_0x37bf82(0x1eb)],_0x1f5917,_0x2c1038);const _0x7084b6=_0x1f5917[_0x37bf82(0x1fa)]['cbSel']['checked'],_0x8cfbac=this[_0x37bf82(0x181)](this['_list'],_0x1f5917,_0x2c1038);if(_0x8cfbac)return;const _0xf2ea45=_0x1f5917['data'][_0x37bf82(0x21a)]['checked'];if(_0x7084b6!==_0xf2ea45)this[_0x37bf82(0x208)]();}['_handleSelectClickRadio'](_0xa77beb,_0x394113,_0x1a5a13){const _0xc351e8=_0x587477;_0x1a5a13[_0xc351e8(0x128)](),_0x1a5a13[_0xc351e8(0x18c)]();if(_0x394113[_0xc351e8(0x1fa)]['cbSel'][_0xc351e8(0x10d)])return!![];_0xa77beb[_0xc351e8(0x2b3)][_0xc351e8(0x24d)](_0x385884=>{const _0x37a88b=_0xc351e8;if(_0x385884===_0x394113){if(_0x385884[_0x37a88b(0x1fa)][_0x37a88b(0x21a)][_0x37a88b(0x2a1)]&&!this[_0x37a88b(0x2b9)]){_0x385884[_0x37a88b(0x1fa)][_0x37a88b(0x21a)]['checked']=![],_0x385884[_0x37a88b(0x201)]['removeClass']('list-multi-selected');return;}_0x385884[_0x37a88b(0x1fa)]['cbSel']['checked']=!![],_0x385884[_0x37a88b(0x201)]['addClass'](_0x37a88b(0x14d));}else{_0x385884[_0x37a88b(0x1fa)][_0x37a88b(0x21a)][_0x37a88b(0x2a1)]=![];if(_0x385884['ix']<_0x394113['ix'])_0x385884[_0x37a88b(0x201)]['addClass'](_0x37a88b(0x14d));else _0x385884[_0x37a88b(0x201)][_0x37a88b(0x2a8)]('list-multi-selected');}});}['pGetFormData'](){const _0x7f2355=_0x587477;let _0x44689a=this[_0x7f2355(0x1eb)][_0x7f2355(0x2b3)][_0x7f2355(0x249)](_0x407e0d=>_0x407e0d[_0x7f2355(0x1fa)][_0x7f2355(0x21a)][_0x7f2355(0x2a1)])[_0x7f2355(0x1e6)](_0x30b747=>_0x30b747['ix']);if(this['_isRadio']&&_0x44689a[_0x7f2355(0x14a)]){const _0x3bd51e=_0x44689a[0x0]+0x1;_0x44689a=[];for(let _0x4e41aa=this[_0x7f2355(0x218)];_0x4e41aa<_0x3bd51e;++_0x4e41aa)_0x44689a[_0x7f2355(0x233)](_0x4e41aa);}return{'isFormComplete':!!_0x44689a[_0x7f2355(0x14a)],'data':_0x44689a};}[_0x587477(0x198)](){const _0x2e7012=_0x587477;if(this[_0x2e7012(0x218)])return this['_maxPreviousLevel'];return 0x0;}[_0x587477(0x242)](){const _0x18b81c=_0x587477,_0x5589f2=this[_0x18b81c(0x1eb)][_0x18b81c(0x2b3)]['filter'](_0x507185=>_0x507185[_0x18b81c(0x1fa)][_0x18b81c(0x21a)][_0x18b81c(0x2a1)])[_0x18b81c(0x1e6)](_0x573143=>_0x573143['ix']);if(!_0x5589f2[_0x18b81c(0x14a)])return null;return Math['max'](..._0x5589f2)+0x1;}static[_0x587477(0x134)](_0xa091a5){const _0x6afba1=_0x587477;return _0xa091a5[_0x6afba1(0x1e6)](_0x1fe622=>_0x1fe622[_0x6afba1(0x16c)])[_0x6afba1(0x27c)](',\x20')||'—';}static['_getLevelGroupedFeatures'](_0x45edda,_0x48dadc){const _0x54cad0=_0x587477;_0x45edda=MiscUtil['copy'](_0x45edda);if(!_0x48dadc)_0x45edda=_0x45edda[_0x54cad0(0x249)](_0x45e040=>_0x45e040[_0x54cad0(0x290)]);const _0x5b9f10=[];let _0x238ff8=0x1,_0x1a3bae=[];const _0x2e7038=()=>{const _0x214edd=_0x54cad0;_0x5b9f10[_0x214edd(0x233)](_0x1a3bae),_0x1a3bae=[];};_0x45edda[_0x54cad0(0x24d)](_0x1ab1dc=>{const _0x300f95=_0x54cad0;while(_0x238ff8<_0x1ab1dc[_0x300f95(0x182)]){_0x2e7038(),_0x238ff8++;}_0x1a3bae[_0x300f95(0x233)](_0x1ab1dc),_0x238ff8=_0x1ab1dc[_0x300f95(0x182)];}),_0x2e7038();while(_0x238ff8<Consts[_0x54cad0(0x164)]){_0x2e7038(),_0x238ff8++;}return _0x5b9f10;}}class Charactermancer_Class_HpIncreaseModeSelect extends BaseComponent{static async[_0x587477(0x237)](){return UtilApplications['pGetImportCompModalFormData']({'comp':new this()});}static[_0x587477(0x120)](_0x102b91){const _0x254ada=_0x587477;return _0x102b91['hd']&&_0x102b91['hd'][_0x254ada(0x106)]&&!isNaN(_0x102b91['hd'][_0x254ada(0x106)])&&_0x102b91['hd'][_0x254ada(0x170)]&&!isNaN(_0x102b91['hd'][_0x254ada(0x170)]);}[_0x587477(0x23e)](){const _0x56c4ad=_0x587477;return{'isFormComplete':!![],'data':this['_state'][_0x56c4ad(0x13f)]};}get[_0x587477(0x297)](){return'Select\x20Hit\x20Points\x20Increase\x20Mode';}[_0x587477(0x1c5)](_0x3ec116){const _0x515848=_0x587477,_0xdbc590=ComponentUiUtil[_0x515848(0x114)](this,_0x515848(0x13f),{'values':[Charactermancer_Class_HpIncreaseModeSelect[_0x515848(0x295)],Charactermancer_Class_HpIncreaseModeSelect[_0x515848(0x21e)],Charactermancer_Class_HpIncreaseModeSelect['MODE_DO_NOT_INCREASE']],'fnDisplay':_0x590680=>Charactermancer_Class_HpIncreaseModeSelect[_0x515848(0x1ec)][_0x590680]});$$`<div class="flex-col min-h-0">
-			${_0xdbc590}
-		</div>`[_0x515848(0x27b)](_0x3ec116);}[_0x587477(0x1ef)](){const _0x263086=_0x587477;return{'mode':Charactermancer_Class_HpIncreaseModeSelect[_0x263086(0x295)]};}}Charactermancer_Class_HpIncreaseModeSelect[_0x587477(0x295)]=0x0,Charactermancer_Class_HpIncreaseModeSelect[_0x587477(0x21e)]=0x1,Charactermancer_Class_HpIncreaseModeSelect[_0x587477(0x24e)]=0x2,Charactermancer_Class_HpIncreaseModeSelect['DISPLAY_MODES']={[Charactermancer_Class_HpIncreaseModeSelect['MODE_TAKE_AVERAGE']]:_0x587477(0x2ab),[Charactermancer_Class_HpIncreaseModeSelect[_0x587477(0x21e)]]:'Roll',[Charactermancer_Class_HpIncreaseModeSelect[_0x587477(0x24e)]]:_0x587477(0x2ae)};class Charactermancer_Class_HpInfo extends BaseComponent{constructor({className:_0x284a85,hitDice:_0x3fadc6}){const _0x19b2cf=_0x587477;super(),this[_0x19b2cf(0x186)]=_0x284a85,this['_hitDice']=_0x3fadc6;}['render'](_0x2498b7){const _0x338bc5=_0x587477,_0x17d980=Renderer[_0x338bc5(0x1dd)][_0x338bc5(0x27a)](this[_0x338bc5(0x10a)]);$$`<div class="flex-col min-h-0 ve-small">
-			<div class="block"><div class="inline-block bold mr-1">Hit Dice:</div>${Vetools['withUnpatchedDiceRendering'](()=>Renderer['getEntryDice'](_0x17d980,_0x338bc5(0x11b)))}</div>
-			<div class="block"><div class="inline-block bold mr-1">Hit Points:</div>${Renderer[_0x338bc5(0x1dd)][_0x338bc5(0x261)](this[_0x338bc5(0x10a)])}</div>
-			<div class="block"><div class="inline-block bold mr-1">Hit Points at Higher Levels:</div>${Vetools[_0x338bc5(0x28a)](()=>Renderer[_0x338bc5(0x1dd)]['getHitPointsAtHigherLevels'](this[_0x338bc5(0x186)],this['_hitDice'],_0x17d980))}</div>
-		</div>`[_0x338bc5(0x27b)](_0x2498b7);}}class Charactermancer_Class_ProficiencyImportModeSelect extends BaseComponent{static async[_0x587477(0x237)](){const _0x206041=_0x587477;return UtilApplications[_0x206041(0x1da)]({'comp':new this(),'isUnskippable':!![]});}[_0x587477(0x23e)](){const _0xeb9990=_0x587477;return{'isFormComplete':!![],'data':this[_0xeb9990(0x210)][_0xeb9990(0x13f)]};}get[_0x587477(0x297)](){return'Select\x20Class\x20Proficiency\x20Import\x20Mode';}['render'](_0x53c21a){const _0x3b9694=_0x587477,_0x433455=ComponentUiUtil[_0x3b9694(0x114)](this,_0x3b9694(0x13f),{'values':[Charactermancer_Class_ProficiencyImportModeSelect[_0x3b9694(0x1a2)],Charactermancer_Class_ProficiencyImportModeSelect['MODE_PRIMARY'],Charactermancer_Class_ProficiencyImportModeSelect[_0x3b9694(0x18d)]],'fnDisplay':_0x2dfbe6=>Charactermancer_Class_ProficiencyImportModeSelect['DISPLAY_MODES'][_0x2dfbe6]});$$`<div class="flex-col min-h-0">
-			${_0x433455}
-		</div>`[_0x3b9694(0x27b)](_0x53c21a);}[_0x587477(0x1ef)](){const _0x28b1f9=_0x587477;return{'mode':Charactermancer_Class_ProficiencyImportModeSelect[_0x28b1f9(0x1a2)]};}}Charactermancer_Class_ProficiencyImportModeSelect['MODE_MULTICLASS']=0x0,Charactermancer_Class_ProficiencyImportModeSelect[_0x587477(0x257)]=0x1,Charactermancer_Class_ProficiencyImportModeSelect['MODE_NONE']=0x2,Charactermancer_Class_ProficiencyImportModeSelect[_0x587477(0x1ec)]={[Charactermancer_Class_HpIncreaseModeSelect[_0x587477(0x295)]]:_0x587477(0x1e9),[Charactermancer_Class_HpIncreaseModeSelect['MODE_ROLL']]:_0x587477(0x1f4),[Charactermancer_Class_HpIncreaseModeSelect['MODE_DO_NOT_INCREASE']]:'Do\x20not\x20add\x20proficiencies\x20or\x20equipment'};class Charactermancer_Class_FeatureOptionsSelect extends BaseComponent{static async[_0x587477(0x237)](_0x4959b5){const _0x500ec3=_0x587477,_0x2cf534=new this({..._0x4959b5,'isModal':!![]});if(await _0x2cf534['pIsNoChoice']())return _0x2cf534['render']($(document['createElement'](_0x500ec3(0x236)))),_0x2cf534[_0x500ec3(0x23e)]();return UtilApplications[_0x500ec3(0x141)]({'comp':_0x2cf534,'width':0x280,'height':Util['getMaxWindowHeight'](),'isAutoResize':!![]});}static[_0x587477(0x154)](_0x468d5c,_0x15a245,_0x3b4ffa){const _0x409dfa=_0x587477,_0x174f6a=_0x3b4ffa[_0x409dfa(0x1fa)];if(!_0x174f6a)return;_0x15a245[_0x409dfa(0x1fa)]=_0x15a245['data']||{};for(const _0x2b3eeb of _0x174f6a[_0x409dfa(0x1df)]||[]){DataConverter[_0x409dfa(0x225)]({'existingProfs':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,_0x409dfa(0x1fa),_0x409dfa(0x1fa),_0x409dfa(0x1a9)),'formData':_0x2b3eeb,'actorData':_0x15a245[_0x409dfa(0x1fa)]});}for(const _0x33f8ad of _0x174f6a[_0x409dfa(0x2a6)]||[]){DataConverter[_0x409dfa(0x1b7)]({'existingProfs':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,'data','data',_0x409dfa(0x148),'languages'),'formData':_0x33f8ad,'actorData':_0x15a245[_0x409dfa(0x1fa)]});}for(const _0x48038a of _0x174f6a[_0x409dfa(0x21f)]||[]){DataConverter[_0x409dfa(0x1ca)]({'existingProfs':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,_0x409dfa(0x1fa),_0x409dfa(0x1fa),'traits',_0x409dfa(0x193)),'formData':_0x48038a,'actorData':_0x15a245[_0x409dfa(0x1fa)]});}for(const _0x45a718 of _0x174f6a[_0x409dfa(0x1fe)]||[]){DataConverter[_0x409dfa(0x29d)]({'existingProfs':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,'data',_0x409dfa(0x1fa),'traits',_0x409dfa(0x1ab)),'formData':_0x45a718,'actorData':_0x15a245[_0x409dfa(0x1fa)]});}for(const _0x228937 of _0x174f6a[_0x409dfa(0x105)]||[]){DataConverter['doApplyArmorProficienciesFormDataToActorUpdate']({'existingProfs':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,_0x409dfa(0x1fa),_0x409dfa(0x1fa),_0x409dfa(0x148),_0x409dfa(0x22e)),'formData':_0x228937,'actorData':_0x15a245[_0x409dfa(0x1fa)]});}for(const _0x93c10c of _0x174f6a[_0x409dfa(0x19a)]||[]){DataConverter[_0x409dfa(0x13a)]({'existingProfs':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,_0x409dfa(0x1fa),'data','abilities'),'formData':_0x93c10c,'actorData':_0x15a245['data']});}for(const _0x1e714e of _0x174f6a['formDatasDamageImmunities']||[]){DataConverter[_0x409dfa(0x126)]({'existingProfs':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,_0x409dfa(0x1fa),'data',_0x409dfa(0x148),'di'),'formData':_0x1e714e,'actorData':_0x15a245[_0x409dfa(0x1fa)]});}for(const _0x4368bb of _0x174f6a[_0x409dfa(0x1d3)]||[]){DataConverter['doApplyDamageResistanceFormDataToActorUpdate']({'existingProfs':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,_0x409dfa(0x1fa),_0x409dfa(0x1fa),'traits','dr'),'formData':_0x4368bb,'actorData':_0x15a245[_0x409dfa(0x1fa)]});}for(const _0xd50f99 of _0x174f6a[_0x409dfa(0x1d2)]||[]){DataConverter['doApplyDamageVulnerabilityFormDataToActorUpdate']({'existingProfs':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,_0x409dfa(0x1fa),_0x409dfa(0x1fa),_0x409dfa(0x148),'dv'),'formData':_0xd50f99,'actorData':_0x15a245['data']});}for(const _0xc5164e of _0x174f6a[_0x409dfa(0x217)]||[]){DataConverter[_0x409dfa(0x1c3)]({'existingProfs':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,_0x409dfa(0x1fa),_0x409dfa(0x1fa),_0x409dfa(0x148),'ci'),'formData':_0xc5164e,'actorData':_0x15a245[_0x409dfa(0x1fa)]});}for(const _0x1d2b20 of _0x174f6a[_0x409dfa(0x1f8)]||[]){DataConverter['doApplyExpertiseFormDataToActorUpdate']({'existingProfs':{'skillProficiencies':MiscUtil[_0x409dfa(0x22f)](_0x468d5c,_0x409dfa(0x1fa),_0x409dfa(0x1fa),_0x409dfa(0x1a9)),'toolProficiencies':MiscUtil['get'](_0x468d5c,'data',_0x409dfa(0x1fa),_0x409dfa(0x148),_0x409dfa(0x193))},'formData':_0x1d2b20,'actorData':_0x15a245[_0x409dfa(0x1fa)]});}}static async[_0x587477(0x103)]({actor:_0x28d2a7,formData:_0x57dde3,abilityAbv:_0x4a4834,parentAbilityAbv:parentAbilityAbv=null}){const _0x4ac0a0=_0x587477,_0x5a6b79=_0x57dde3[_0x4ac0a0(0x1fa)];if(!_0x5a6b79||!_0x5a6b79['formDatasAdditionalSpells']?.[_0x4ac0a0(0x14a)])return;for(const _0x5188be of _0x5a6b79['formDatasAdditionalSpells']){await Charactermancer_AdditionalSpellsSelect[_0x4ac0a0(0x2a3)](_0x28d2a7,_0x5188be,{'abilityAbv':_0x4a4834,'parentAbilityAbv':parentAbilityAbv});}}constructor(_0x5aa40d){const _0x45eb6a=_0x587477;super(),this[_0x45eb6a(0x191)]=_0x5aa40d[_0x45eb6a(0x293)],this['_actor']=_0x5aa40d[_0x45eb6a(0x26d)],this[_0x45eb6a(0x2b0)]=_0x5aa40d[_0x45eb6a(0x182)],this[_0x45eb6a(0x156)]=_0x5aa40d[_0x45eb6a(0x206)],this[_0x45eb6a(0x256)]=_0x5aa40d[_0x45eb6a(0x23d)],this[_0x45eb6a(0x254)]=!!_0x5aa40d[_0x45eb6a(0x160)],this[_0x45eb6a(0x215)]=_0x5aa40d[_0x45eb6a(0x1c7)],this[_0x45eb6a(0x1e2)]()&&this[_0x45eb6a(0x191)]['sort']((_0x643ec3,_0x231845)=>SortUtil[_0x45eb6a(0x1a5)](_0x643ec3['entity']['name'],_0x231845[_0x45eb6a(0x171)][_0x45eb6a(0x16c)])||SortUtil[_0x45eb6a(0x1a5)](Parser['sourceJsonToAbv'](_0x643ec3[_0x45eb6a(0x171)]['source']),Parser[_0x45eb6a(0x28f)](_0x231845[_0x45eb6a(0x171)][_0x45eb6a(0x16e)]))),this['_lastMeta']=null,this[_0x45eb6a(0x135)]=[],this['_subCompsSkillProficiencies']=[],this[_0x45eb6a(0x1b0)]=[],this[_0x45eb6a(0x2a5)]=[],this['_subCompsWeaponProficiencies']=[],this['_subCompsArmorProficiencies']=[],this[_0x45eb6a(0x145)]=[],this['_subCompsDamageImmunities']=[],this[_0x45eb6a(0x1fc)]=[],this[_0x45eb6a(0x22a)]=[],this[_0x45eb6a(0x212)]=[],this[_0x45eb6a(0x1b1)]=[],this[_0x45eb6a(0x12b)]=[],this['_prevSubCompsSkillProficiencies']=null,this[_0x45eb6a(0x17f)]=null,this['_prevSubCompsToolProficiencies']=null,this[_0x45eb6a(0x147)]=null,this[_0x45eb6a(0x15d)]=null,this[_0x45eb6a(0x204)]=null,this[_0x45eb6a(0x1f3)]=[],this[_0x45eb6a(0x197)]=[],this['_prevSubCompsDamageVulnerabilities']=[],this[_0x45eb6a(0x1a7)]=[],this[_0x45eb6a(0x152)]=[],this[_0x45eb6a(0x162)]=null;}get['optionSet_'](){const _0x5bc674=_0x587477;return this[_0x5bc674(0x191)];}['_isOptions'](){const _0x20b836=_0x587477;return!!(this[_0x20b836(0x191)][0x0]&&this[_0x20b836(0x191)][0x0]['optionsMeta']);}[_0x587477(0x10b)](){const _0x5aed25=_0x587477;if(this['_featureSourceTracker'])this[_0x5aed25(0x256)]['unregister'](this);this[_0x5aed25(0x219)]();}async[_0x587477(0x1c6)](_0x3abba2){const _0x1e328b=_0x587477,_0x331e10=await this[_0x1e328b(0x1a1)](_0x3abba2),_0x3a273b=await this[_0x1e328b(0x2a7)](_0x3abba2),_0x278426=await this[_0x1e328b(0x195)](_0x3abba2),_0x4d2f4c=await this[_0x1e328b(0x119)](_0x3abba2),_0x57550a=await this['_pIsForceDisplay_weaponProficiencies'](_0x3abba2),_0x3e6922=await this[_0x1e328b(0x220)](_0x3abba2),_0x1454be=await this[_0x1e328b(0x137)](_0x3abba2),_0x2e79d8=await this[_0x1e328b(0x155)](_0x3abba2),_0x797d67=await this[_0x1e328b(0x27d)](_0x3abba2),_0x29f262=await this[_0x1e328b(0x273)](_0x3abba2),_0xe0f9d6=await this['_pIsForceDisplay_conditionImmunities'](_0x3abba2),_0x54b229=await this[_0x1e328b(0x110)](_0x3abba2),_0x47f1ea=await this[_0x1e328b(0x150)](_0x3abba2);return[_0x331e10,_0x3a273b,_0x278426,_0x4d2f4c,_0x57550a,_0x3e6922,_0x1454be,_0x2e79d8,_0x797d67,_0x29f262,_0xe0f9d6,_0x54b229,_0x47f1ea]['some'](Boolean);}async[_0x587477(0x1a1)](_0x17c125){const _0x303148=_0x587477;_0x17c125=_0x17c125||this[_0x303148(0x191)];for(const _0x3fa90f of _0x17c125){const {entity:_0x47fde9,type:_0x156115}=_0x3fa90f;if(_0x156115==='classFeature'||_0x156115===_0x303148(0x20f)){const _0x5e248c=await DataConverterClassSubclassFeature[_0x303148(0x26f)](_0x47fde9,_0x156115);if(_0x5e248c&&_0x5e248c['chooseData'])return!![];}}return![];}async[_0x587477(0x2ad)](_0x143549){return this['_pHasEntryData_otherProficiencies']({'optionsSet':_0x143549,'CompClass':Charactermancer_SkillProficiencySelect,'propProficiencies':'skillProficiencies','isRequireChoice':!![]});}async['_pHasSubChoice_entryData_languageProficiencies'](_0x182e7d){const _0x31cff8=_0x587477;return this[_0x31cff8(0x18f)]({'optionsSet':_0x182e7d,'CompClass':Charactermancer_LanguageProficiencySelect,'propProficiencies':_0x31cff8(0x10e),'isRequireChoice':!![]});}async[_0x587477(0x163)](_0x97fd9a){const _0x172d15=_0x587477;return this['_pHasEntryData_otherProficiencies']({'optionsSet':_0x97fd9a,'CompClass':Charactermancer_ToolProficiencySelect,'propProficiencies':_0x172d15(0x251),'isRequireChoice':!![]});}async[_0x587477(0x14b)](_0x363bd9){const _0x5248e4=_0x587477;return this[_0x5248e4(0x18f)]({'optionsSet':_0x363bd9,'CompClass':Charactermancer_WeaponProficiencySelect,'propProficiencies':'weaponProficiencies','isRequireChoice':!![]});}async[_0x587477(0x25a)](_0x10f357){const _0x490a2b=_0x587477;return this[_0x490a2b(0x18f)]({'optionsSet':_0x10f357,'CompClass':Charactermancer_ArmorProficiencySelect,'propProficiencies':_0x490a2b(0x180),'isRequireChoice':!![]});}async[_0x587477(0x1d5)](_0x8c2574){const _0x5ed552=_0x587477;return this[_0x5ed552(0x18f)]({'optionsSet':_0x8c2574,'CompClass':Charactermancer_SavingThrowProficiencySelect,'propProficiencies':_0x5ed552(0x25c),'isRequireChoice':!![]});}async[_0x587477(0x29a)](_0x573c8a){const _0x4b8ef5=_0x587477;return this[_0x4b8ef5(0x18f)]({'optionsSet':_0x573c8a,'CompClass':Charactermancer_DamageImmunitySelect,'propProficiencies':_0x4b8ef5(0x265),'isRequireChoice':!![]});}async[_0x587477(0x278)](_0x59b786){const _0x4f1547=_0x587477;return this['_pHasEntryData_otherProficiencies']({'optionsSet':_0x59b786,'CompClass':Charactermancer_DamageResistanceSelect,'propProficiencies':_0x4f1547(0x21b),'isRequireChoice':!![]});}async[_0x587477(0x20d)](_0x209aaf){const _0x3f4881=_0x587477;return this[_0x3f4881(0x18f)]({'optionsSet':_0x209aaf,'CompClass':Charactermancer_DamageVulnerabilitySelect,'propProficiencies':'vulnerable','isRequireChoice':!![]});}async[_0x587477(0x284)](_0x4a1bbb){const _0x38b468=_0x587477;return this['_pHasEntryData_otherProficiencies']({'optionsSet':_0x4a1bbb,'CompClass':Charactermancer_ConditionImmunitySelect,'propProficiencies':_0x38b468(0x286),'isRequireChoice':!![]});}async['_pHasSubChoice_expertise'](_0x22041c){const _0x434875=_0x587477;return this[_0x434875(0x18f)]({'optionsSet':_0x22041c,'CompClass':Charactermancer_ExpertiseSelect,'propProficiencies':_0x434875(0x161),'isRequireChoice':!![]});}async['_pHasSubChoice_entryData_additionalSpells'](_0x3fb392){const _0x20c843=_0x587477;return this[_0x20c843(0x18f)]({'optionsSet':_0x3fb392,'CompClass':Charactermancer_AdditionalSpellsSelect,'propProficiencies':'additionalSpells','isRequireChoice':!![]});}async[_0x587477(0x18f)]({optionsSet:_0x97e2cf,CompClass:_0x4cf971,propProficiencies:_0x1860c5,isRequireChoice:_0x5c49e1}){const _0x5e3d74=_0x587477;_0x97e2cf=_0x97e2cf||this[_0x5e3d74(0x191)];for(const _0x38caf6 of _0x97e2cf){const {entity:_0x173777}=_0x38caf6,_0xaee3e5=_0x173777?.[_0x1860c5]||_0x173777?.[_0x5e3d74(0x2bb)]?.[_0x1860c5];if(_0xaee3e5){if(!_0x5c49e1)return!![];else{const _0x4bc6b9=_0x4cf971[_0x5e3d74(0x234)](_0xaee3e5);if(!_0x4bc6b9)return!![];}}}return![];}async[_0x587477(0x2a7)](_0x119cc0){const _0xddb0fe=_0x587477;return this[_0xddb0fe(0x18f)]({'optionsSet':_0x119cc0,'CompClass':Charactermancer_SkillProficiencySelect,'propProficiencies':_0xddb0fe(0x2bd)});}async[_0x587477(0x195)](_0x4931cd){const _0x35bbcd=_0x587477;return this[_0x35bbcd(0x18f)]({'optionsSet':_0x4931cd,'CompClass':Charactermancer_LanguageProficiencySelect,'propProficiencies':_0x35bbcd(0x10e)});}async[_0x587477(0x119)](_0x109c73){const _0x1fe0c4=_0x587477;return this[_0x1fe0c4(0x18f)]({'optionsSet':_0x109c73,'CompClass':Charactermancer_ToolProficiencySelect,'propProficiencies':_0x1fe0c4(0x251)});}async[_0x587477(0x239)](_0x1f42a4){const _0x1af645=_0x587477;return this[_0x1af645(0x18f)]({'optionsSet':_0x1f42a4,'CompClass':Charactermancer_WeaponProficiencySelect,'propProficiencies':_0x1af645(0x248)});}async['_pIsForceDisplay_armorProficiencies'](_0x31d751){const _0x533f84=_0x587477;return this['_pHasEntryData_otherProficiencies']({'optionsSet':_0x31d751,'CompClass':Charactermancer_ArmorProficiencySelect,'propProficiencies':_0x533f84(0x180)});}async['_pIsForceDisplay_savingThrowProficiencies'](_0x10b531){const _0x21a65a=_0x587477;return this[_0x21a65a(0x18f)]({'optionsSet':_0x10b531,'CompClass':Charactermancer_SavingThrowProficiencySelect,'propProficiencies':'savingThrowProficiencies'});}async[_0x587477(0x155)](_0x39cbe8){return this['_pHasEntryData_otherProficiencies']({'optionsSet':_0x39cbe8,'CompClass':Charactermancer_ConditionImmunitySelect,'propProficiencies':'immune'});}async[_0x587477(0x27d)](_0x4e1a5f){const _0x22edf0=_0x587477;return this[_0x22edf0(0x18f)]({'optionsSet':_0x4e1a5f,'CompClass':Charactermancer_DamageResistanceSelect,'propProficiencies':'resist'});}async['_pIsForceDisplay_damageVulnerabilities'](_0x1ff4a0){const _0x25ed89=_0x587477;return this[_0x25ed89(0x18f)]({'optionsSet':_0x1ff4a0,'CompClass':Charactermancer_DamageVulnerabilitySelect,'propProficiencies':_0x25ed89(0x28c)});}async['_pIsForceDisplay_conditionImmunities'](_0x194774){const _0x2a5084=_0x587477;return this[_0x2a5084(0x18f)]({'optionsSet':_0x194774,'CompClass':Charactermancer_ConditionImmunitySelect,'propProficiencies':_0x2a5084(0x286)});}async[_0x587477(0x110)](_0x34b744){const _0x5cd088=_0x587477;return this[_0x5cd088(0x18f)]({'optionsSet':_0x34b744,'CompClass':Charactermancer_ExpertiseSelect,'propProficiencies':_0x5cd088(0x161)});}['_pIsForceDisplay_additionalSpells'](_0x3b7bf9){const _0x11a134=_0x587477;return this[_0x11a134(0x18f)]({'optionsSet':_0x3b7bf9,'CompClass':Charactermancer_AdditionalSpellsSelect,'propProficiencies':_0x11a134(0x13e)});}async[_0x587477(0x292)](_0x992c75){const _0x52a96e=_0x587477;_0x992c75=_0x992c75||this[_0x52a96e(0x191)];const _0x490ab9=[];for(const _0x305445 of _0x992c75){const {entity:_0x24dd9a,type:_0x437e20}=_0x305445;if(_0x437e20===_0x52a96e(0x290)||_0x437e20===_0x52a96e(0x20f)){const _0x548c26=await DataConverterClassSubclassFeature['pGetSideData'](_0x24dd9a,_0x437e20);_0x490ab9[_0x52a96e(0x233)](_0x548c26);}else _0x490ab9['push'](null);}return _0x490ab9;}async['pIsNoChoice'](){const _0x57e93d=_0x587477;if(this[_0x57e93d(0x1e2)]())return![];if(await this['_pHasChoiceInSideData_chooseData']())return![];if(await this[_0x57e93d(0x2ad)]())return![];if(await this[_0x57e93d(0x113)]())return![];if(await this[_0x57e93d(0x163)]())return![];if(await this[_0x57e93d(0x14b)]())return![];if(await this[_0x57e93d(0x25a)]())return![];if(await this[_0x57e93d(0x1d5)]())return![];if(await this['_pHasSubChoice_damageImmunities']())return![];if(await this[_0x57e93d(0x278)]())return![];if(await this['_pHasSubChoice_damageVulnerabilities']())return![];if(await this[_0x57e93d(0x284)]())return![];if(await this[_0x57e93d(0x17e)]())return![];if(await this['_pHasSubChoice_entryData_additionalSpells']())return![];return!![];}async[_0x587477(0x1ac)](){const _0x5c254a=_0x587477;if(await this[_0x5c254a(0x2a7)]())return!![];if(await this['_pIsForceDisplay_languageProficiencies']())return!![];if(await this[_0x5c254a(0x119)]())return!![];if(await this[_0x5c254a(0x239)]())return!![];if(await this[_0x5c254a(0x220)]())return!![];if(await this[_0x5c254a(0x137)]())return!![];if(await this[_0x5c254a(0x155)]())return!![];if(await this[_0x5c254a(0x27d)]())return!![];if(await this[_0x5c254a(0x273)]())return!![];if(await this[_0x5c254a(0x268)]())return!![];if(await this[_0x5c254a(0x110)]())return!![];if(await this[_0x5c254a(0x150)]())return!![];return![];}[_0x587477(0x276)](){const _0x289526=_0x587477,_0x17294d=ComponentUiUtil[_0x289526(0x127)](this,_0x289526(0x264)),_0x58d106=_0x17294d['map'](_0x47796b=>this[_0x289526(0x191)][_0x47796b]);return _0x58d106[_0x289526(0x1e6)](({page:_0x4254df,hash:_0x343ac4})=>({'page':_0x4254df,'hash':_0x343ac4}));}['findAndCopyStateFrom'](_0x4690fb){const _0x541fef=_0x587477;if(!_0x4690fb?.[_0x541fef(0x14a)])return;const _0x2aa8af=_0x4690fb['find'](_0x384401=>CollectionUtil[_0x541fef(0x1d9)](_0x384401[_0x541fef(0x280)],this[_0x541fef(0x280)]));_0x2aa8af&&(this[_0x541fef(0x247)](_0x541fef(0x178),MiscUtil[_0x541fef(0x169)](_0x2aa8af[_0x541fef(0x19b)])),this[_0x541fef(0x262)]=_0x2aa8af['_subCompsSkillProficiencies'],this[_0x541fef(0x17f)]=_0x2aa8af['_subCompsLanguageProficiencies'],this[_0x541fef(0x29b)]=_0x2aa8af['_subCompsToolProficiencies'],this[_0x541fef(0x147)]=_0x2aa8af['_subCompsWeaponProficiencies'],this[_0x541fef(0x15d)]=_0x2aa8af['_subCompsArmorProficiencies'],this[_0x541fef(0x204)]=_0x2aa8af[_0x541fef(0x145)],this[_0x541fef(0x1f3)]=_0x2aa8af['_prevSubCompsDamageImmunities'],this[_0x541fef(0x197)]=_0x2aa8af[_0x541fef(0x197)],this[_0x541fef(0x2b5)]=_0x2aa8af[_0x541fef(0x2b5)],this['_prevSubCompsConditionImmunities']=_0x2aa8af[_0x541fef(0x1a7)],this[_0x541fef(0x152)]=_0x2aa8af[_0x541fef(0x152)],this['_prevSubCompsAdditionalSpells']=_0x2aa8af[_0x541fef(0x12b)]);}async[_0x587477(0x23e)](){const _0x13d135=_0x587477;if(await this[_0x13d135(0x2b2)]()&&!await this[_0x13d135(0x1ac)]()){const _0x3423e9=await this[_0x13d135(0x292)](),_0x169fd9=MiscUtil[_0x13d135(0x169)](this[_0x13d135(0x191)]);return _0x169fd9[_0x13d135(0x24d)]((_0x404fa4,_0x498d01)=>{const _0x30ea0b=_0x13d135,_0x83b2fa=_0x3423e9[_0x498d01];if(!_0x83b2fa||!_0x83b2fa[_0x30ea0b(0x1fa)])return;const {entity:_0x3fe696}=_0x404fa4;_0x3fe696[_0x30ea0b(0x243)]=MiscUtil['copy'](_0x83b2fa[_0x30ea0b(0x1fa)]);}),{'isFormComplete':!![],'data':{'features':_0x169fd9}};}await this[_0x13d135(0x28d)](_0x13d135(0x264));const _0x120ba4=this[_0x13d135(0x153)](),_0x40a42d=await this[_0x13d135(0x292)](_0x120ba4),_0x447bb9=MiscUtil[_0x13d135(0x169)](_0x120ba4),_0x4f023e=[],_0x126222=[],_0x49ca26=[],_0x447066=[],_0x18fac7=[],_0x157f6a=[],_0x619e82=[],_0x150419=[],_0x3d7f17=[],_0x2dba94=[],_0x4063e8=[],_0x584167=[];for(let _0x2613d2=0x0;_0x2613d2<_0x447bb9[_0x13d135(0x14a)];++_0x2613d2){const _0x18a903=_0x447bb9[_0x2613d2],_0x3f985f=_0x40a42d[_0x2613d2],{entity:_0x56cd74}=_0x18a903;if(_0x3f985f){if(_0x3f985f[_0x13d135(0x1fa)])_0x56cd74['foundryAdditionalData']=MiscUtil[_0x13d135(0x169)](_0x3f985f[_0x13d135(0x1fa)]);if(_0x3f985f['chooseData']){const {propChooseData:_0x2656d7}=this[_0x13d135(0x1b3)](_0x2613d2),_0x22dde9=ComponentUiUtil['getMetaWrpMultipleChoice_getSelectedIxs'](this,_0x2656d7),_0x3c189=_0x22dde9[_0x13d135(0x1e6)](_0x3b433c=>_0x3f985f[_0x13d135(0x1af)][_0x3b433c]);if(_0x3c189['length']){const _0x5f12a9=_0x3c189[0x0];Object[_0x13d135(0x1f0)](_0x56cd74[_0x13d135(0x243)],MiscUtil['copy'](_0x5f12a9[_0x13d135(0x1fa)]));}}}if((_0x56cd74?.[_0x13d135(0x2bd)]||_0x56cd74?.['entryData']?.[_0x13d135(0x2bd)])&&this[_0x13d135(0x1b5)][_0x2613d2]){const _0xfdd578=await this[_0x13d135(0x1b5)][_0x2613d2]['pGetFormData']();_0x4f023e[_0x13d135(0x233)](_0xfdd578);}if((_0x56cd74?.['languageProficiencies']||_0x56cd74?.[_0x13d135(0x2bb)]?.['languageProficiencies'])&&this['_subCompsLanguageProficiencies'][_0x2613d2]){const _0x4bf52b=await this[_0x13d135(0x1b0)][_0x2613d2][_0x13d135(0x23e)]();_0x126222[_0x13d135(0x233)](_0x4bf52b);}if((_0x56cd74?.[_0x13d135(0x251)]||_0x56cd74?.[_0x13d135(0x2bb)]?.[_0x13d135(0x251)])&&this[_0x13d135(0x2a5)][_0x2613d2]){const _0xd8f6fd=await this[_0x13d135(0x2a5)][_0x2613d2][_0x13d135(0x23e)]();_0x49ca26['push'](_0xd8f6fd);}if((_0x56cd74?.['weaponProficiencies']||_0x56cd74?.[_0x13d135(0x2bb)]?.[_0x13d135(0x248)])&&this['_subCompsWeaponProficiencies'][_0x2613d2]){const _0x394954=await this['_subCompsWeaponProficiencies'][_0x2613d2]['pGetFormData']();_0x447066[_0x13d135(0x233)](_0x394954);}if((_0x56cd74?.['armorProficiencies']||_0x56cd74?.[_0x13d135(0x2bb)]?.[_0x13d135(0x180)])&&this['_subCompsArmorProficiencies'][_0x2613d2]){const _0xffb1d2=await this['_subCompsArmorProficiencies'][_0x2613d2][_0x13d135(0x23e)]();_0x18fac7[_0x13d135(0x233)](_0xffb1d2);}if((_0x56cd74?.[_0x13d135(0x25c)]||_0x56cd74?.[_0x13d135(0x2bb)]?.[_0x13d135(0x25c)])&&this[_0x13d135(0x145)][_0x2613d2]){const _0x5b8416=await this[_0x13d135(0x145)][_0x2613d2][_0x13d135(0x23e)]();_0x157f6a['push'](_0x5b8416);}if((_0x56cd74?.[_0x13d135(0x265)]||_0x56cd74?.[_0x13d135(0x2bb)]?.[_0x13d135(0x265)])&&this[_0x13d135(0x258)][_0x2613d2]){const _0x347c93=await this[_0x13d135(0x258)][_0x2613d2][_0x13d135(0x23e)]();_0x619e82[_0x13d135(0x233)](_0x347c93);}if((_0x56cd74?.[_0x13d135(0x21b)]||_0x56cd74?.[_0x13d135(0x2bb)]?.[_0x13d135(0x21b)])&&this[_0x13d135(0x1fc)][_0x2613d2]){const _0x201aa3=await this[_0x13d135(0x1fc)][_0x2613d2][_0x13d135(0x23e)]();_0x150419[_0x13d135(0x233)](_0x201aa3);}if((_0x56cd74?.[_0x13d135(0x28c)]||_0x56cd74?.['entryData']?.['vulnerable'])&&this[_0x13d135(0x22a)][_0x2613d2]){const _0x228876=await this[_0x13d135(0x22a)][_0x2613d2][_0x13d135(0x23e)]();_0x3d7f17[_0x13d135(0x233)](_0x228876);}if((_0x56cd74?.[_0x13d135(0x286)]||_0x56cd74?.['entryData']?.[_0x13d135(0x286)])&&this['_subCompsConditionImmunities'][_0x2613d2]){const _0x1d223=await this['_subCompsConditionImmunities'][_0x2613d2][_0x13d135(0x23e)]();_0x2dba94[_0x13d135(0x233)](_0x1d223);}if((_0x56cd74?.[_0x13d135(0x161)]||_0x56cd74?.[_0x13d135(0x2bb)]?.['expertise'])&&this['_subCompsExpertise'][_0x2613d2]){const _0x5ed68b=await this[_0x13d135(0x1b1)][_0x2613d2][_0x13d135(0x23e)]();_0x4063e8[_0x13d135(0x233)](_0x5ed68b);}if((_0x56cd74?.[_0x13d135(0x13e)]||_0x56cd74?.[_0x13d135(0x2bb)]?.[_0x13d135(0x13e)])&&this[_0x13d135(0x12b)][_0x2613d2]){const _0x16f77f=await this[_0x13d135(0x12b)][_0x2613d2]['pGetFormData']();_0x584167[_0x13d135(0x233)](_0x16f77f);}}return{'isFormComplete':!![],'data':{'features':_0x447bb9,'formDatasSkillProficiencies':_0x4f023e,'formDatasLanguageProficiencies':_0x126222,'formDatasToolProficiencies':_0x49ca26,'formDatasWeaponProficiencies':_0x447066,'formDatasArmorProficiencies':_0x18fac7,'formDatasSavingThrowProficiencies':_0x157f6a,'formDatasDamageImmunities':_0x619e82,'formDatasDamageResistances':_0x150419,'formDatasDamageVulnerabilities':_0x3d7f17,'formDatasConditionImmunities':_0x2dba94,'formDatasExpertise':_0x4063e8,'formDatasAdditionalSpells':_0x584167}};}[_0x587477(0x17b)](){const _0xc0dd30=_0x587477,{name:_0x2b7076,count:_0x5882d5}=this[_0xc0dd30(0x191)][0x0][_0xc0dd30(0x1f2)],_0x4bcdf2=this[_0xc0dd30(0x191)][_0xc0dd30(0x1e6)]((_0x392d3e,_0x376f32)=>({'it':_0x392d3e,'ix':_0x376f32}))[_0xc0dd30(0x249)](({it:_0x5c7bcc})=>_0x5c7bcc[_0xc0dd30(0x269)])[_0xc0dd30(0x1e6)](({ix:_0x6ff3ce})=>_0x6ff3ce),_0x2b0802=_0x5882d5-_0x4bcdf2[_0xc0dd30(0x14a)];return{'name':_0x2b7076,'count':_0x5882d5,'dispCount':_0x2b0802,'required':_0x4bcdf2};}get[_0x587477(0x297)](){const _0x1d80b6=_0x587477;if(!this[_0x1d80b6(0x1e2)]())return null;const {dispCount:_0xee0ef8,name:_0x43d2b5}=this[_0x1d80b6(0x17b)]();return _0x1d80b6(0x2b6)+(_0xee0ef8===0x1?'':_0xee0ef8+'\x20')+'Option'+(_0xee0ef8===0x1?'':'s')+':\x20'+_0x43d2b5+'\x20(Level\x20'+this[_0x1d80b6(0x2b0)]+')';}static['_getLoadedTmpUid'](_0x240dcb){const _0x28180d=_0x587477;return _0x240dcb[_0x28180d(0x15c)]+'__'+_0x240dcb['hash'];}[_0x587477(0x153)](){const _0x50da7d=_0x587477;if(this[_0x50da7d(0x1e2)]()){const _0x18034d=ComponentUiUtil[_0x50da7d(0x127)](this,_0x50da7d(0x264)),{required:_0x4d921a}=this[_0x50da7d(0x17b)]();return[..._0x18034d,..._0x4d921a]['map'](_0xc4c0f8=>this['_optionsSet'][_0xc4c0f8]);}else return this[_0x50da7d(0x191)];}['render'](_0x5dad6e){const _0x31f1c2=_0x587477,_0x11cf77=$$`<div class="w-100 flex-col mt-2"></div>`[_0x31f1c2(0x296)]();return this[_0x31f1c2(0x16f)](),$$`<div class="flex-col min-h-0">
-			${this[_0x31f1c2(0x12f)]?.[_0x31f1c2(0x149)]}
-			${_0x11cf77}
-		</div>`[_0x31f1c2(0x27b)](_0x5dad6e),this[_0x31f1c2(0x121)](ComponentUiUtil[_0x31f1c2(0x108)](_0x31f1c2(0x264)),()=>this['_render_pHkIxsChosen']({'$stgSubChoiceData':_0x11cf77})),this['_render_pHkIxsChosen']({'$stgSubChoiceData':_0x11cf77});}async[_0x587477(0x14e)](_0x221bc9){return this['render'](_0x221bc9);}async['_render_pHkIxsChosen']({$stgSubChoiceData:_0x1fb89c}){const _0x4c0150=_0x587477;try{await this[_0x4c0150(0x13c)]('ixsChosen'),await this['_render_pHkIxsChosen_']({'$stgSubChoiceData':_0x1fb89c});}finally{this[_0x4c0150(0x14f)](_0x4c0150(0x264));}}async[_0x587477(0x28b)]({$stgSubChoiceData:_0x901b69}){const _0x139e08=_0x587477,{prefixSubComps:_0x4207ff}=this[_0x139e08(0x1b3)]();Object['keys'](this[_0x139e08(0x210)])[_0x139e08(0x249)](_0x289c26=>_0x289c26[_0x139e08(0x1aa)](_0x4207ff))[_0x139e08(0x24d)](_0x2a6a0d=>delete this[_0x139e08(0x210)][_0x2a6a0d]);const _0x10c34b=this[_0x139e08(0x153)]();if(!_0x10c34b['length'])return this[_0x139e08(0x1f5)]({'$stgSubChoiceData':_0x901b69});if(!await this[_0x139e08(0x1c6)](_0x10c34b))return this[_0x139e08(0x1f5)]({'$stgSubChoiceData':_0x901b69});_0x901b69['empty'](),this[_0x139e08(0x219)]();const _0x424b40=await this[_0x139e08(0x292)](_0x10c34b),_0x177287={'_':!![]};for(let _0x42db0c=0x0;_0x42db0c<_0x10c34b[_0x139e08(0x14a)];++_0x42db0c){const _0x259e35=_0x10c34b[_0x42db0c];if(!await this[_0x139e08(0x1c6)]([_0x10c34b[_0x42db0c]]))continue;const _0x2e787c=await this[_0x139e08(0x1a1)]([_0x10c34b[_0x42db0c]]),_0x1cd672=await this['_pIsForceDisplay_skillProficiencies']([_0x10c34b[_0x42db0c]]),_0x36f37a=await this[_0x139e08(0x195)]([_0x10c34b[_0x42db0c]]),_0x25d3dd=await this[_0x139e08(0x119)]([_0x10c34b[_0x42db0c]]),_0x4b4d36=await this[_0x139e08(0x239)]([_0x10c34b[_0x42db0c]]),_0x2a4ef9=await this[_0x139e08(0x220)]([_0x10c34b[_0x42db0c]]),_0x382096=await this[_0x139e08(0x137)]([_0x10c34b[_0x42db0c]]),_0x2c6445=await this[_0x139e08(0x155)]([_0x10c34b[_0x42db0c]]),_0x284fef=await this[_0x139e08(0x27d)]([_0x10c34b[_0x42db0c]]),_0x3845a0=await this[_0x139e08(0x273)]([_0x10c34b[_0x42db0c]]),_0x4438b9=await this[_0x139e08(0x268)]([_0x10c34b[_0x42db0c]]),_0x5074cc=await this[_0x139e08(0x110)]([_0x10c34b[_0x42db0c]]),_0x567107=await this[_0x139e08(0x150)]([_0x10c34b[_0x42db0c]]),{entity:_0x350347,type:_0x33a924}=_0x259e35;_0x901b69['append'](this[_0x139e08(0x1ee)](_0x350347));if(_0x2e787c){const _0x4c2a8a=_0x424b40[_0x42db0c];_0x4c2a8a?.[_0x139e08(0x1af)]&&(_0x177287['_']=![],this[_0x139e08(0x25b)](_0x42db0c,_0x901b69,_0x350347,_0x33a924,_0x4c2a8a));}this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x1b5),'propPrevSubComps':_0x139e08(0x262),'isAvailable':_0x1cd672,'propProficiencies':'skillProficiencies','title':_0x139e08(0x223),'ptrIsFirstSection':_0x177287,'CompClass':Charactermancer_SkillProficiencySelect,'propPathActorExistingProficiencies':[_0x139e08(0x1fa),'data',_0x139e08(0x1a9)],'fnSetComp':this[_0x139e08(0x2bc)][_0x139e08(0x2a4)](this)}),this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x1b0),'propPrevSubComps':_0x139e08(0x17f),'isAvailable':_0x36f37a,'propProficiencies':_0x139e08(0x10e),'title':_0x139e08(0x1d6),'ptrIsFirstSection':_0x177287,'CompClass':Charactermancer_LanguageProficiencySelect,'propPathActorExistingProficiencies':[_0x139e08(0x1fa),_0x139e08(0x1fa),'traits',_0x139e08(0x125)],'fnSetComp':this[_0x139e08(0x2bc)]['bind'](this)}),this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x2a5),'propPrevSubComps':_0x139e08(0x29b),'isAvailable':_0x25d3dd,'propProficiencies':_0x139e08(0x251),'title':_0x139e08(0x271),'ptrIsFirstSection':_0x177287,'CompClass':Charactermancer_ToolProficiencySelect,'propPathActorExistingProficiencies':['data','data',_0x139e08(0x148),_0x139e08(0x193)],'fnSetComp':this[_0x139e08(0x2bc)]['bind'](this)}),this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x1d7),'propPrevSubComps':_0x139e08(0x147),'isAvailable':_0x4b4d36,'propProficiencies':_0x139e08(0x248),'title':_0x139e08(0x214),'ptrIsFirstSection':_0x177287,'CompClass':Charactermancer_WeaponProficiencySelect,'propPathActorExistingProficiencies':[_0x139e08(0x1fa),_0x139e08(0x1fa),_0x139e08(0x148),_0x139e08(0x1ab)],'fnSetComp':this['_render_pHkIxsChosen_setCompOtherProficiencies']['bind'](this)}),this['_render_pHkIxsChosen_comp']({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x15f),'propPrevSubComps':'_prevSubCompsArmorProficiencies','isAvailable':_0x2a4ef9,'propProficiencies':'armorProficiencies','title':'Armor\x20Proficiencies','ptrIsFirstSection':_0x177287,'CompClass':Charactermancer_ArmorProficiencySelect,'propPathActorExistingProficiencies':['data',_0x139e08(0x1fa),_0x139e08(0x148),_0x139e08(0x22e)],'fnSetComp':this[_0x139e08(0x2bc)][_0x139e08(0x2a4)](this)}),this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x145),'propPrevSubComps':'_prevSubCompsSavingThrowProficiencies','isAvailable':_0x382096,'propProficiencies':'savingThrowProficiencies','title':_0x139e08(0x10f),'ptrIsFirstSection':_0x177287,'CompClass':Charactermancer_SavingThrowProficiencySelect,'propPathActorExistingProficiencies':[_0x139e08(0x1fa),_0x139e08(0x1fa),'abilities'],'fnSetComp':this['_render_pHkIxsChosen_setCompOtherProficiencies']['bind'](this)}),this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x258),'propPrevSubComps':_0x139e08(0x1f3),'isAvailable':_0x2c6445,'propProficiencies':_0x139e08(0x265),'title':'Damage\x20Immunities','ptrIsFirstSection':_0x177287,'CompClass':Charactermancer_DamageImmunitySelect,'propPathActorExistingProficiencies':[_0x139e08(0x1fa),_0x139e08(0x1fa),_0x139e08(0x148),'di'],'fnSetComp':this['_render_pHkIxsChosen_setCompOtherProficiencies'][_0x139e08(0x2a4)](this)}),this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x1fc),'propPrevSubComps':'_prevSubCompsDamageResistances','isAvailable':_0x284fef,'propProficiencies':_0x139e08(0x21b),'title':_0x139e08(0x299),'ptrIsFirstSection':_0x177287,'CompClass':Charactermancer_DamageResistanceSelect,'propPathActorExistingProficiencies':['data','data',_0x139e08(0x148),'dr'],'fnSetComp':this['_render_pHkIxsChosen_setCompOtherProficiencies'][_0x139e08(0x2a4)](this)}),this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x22a),'propPrevSubComps':_0x139e08(0x2b5),'isAvailable':_0x3845a0,'propProficiencies':'vulnerable','title':_0x139e08(0x283),'ptrIsFirstSection':_0x177287,'CompClass':Charactermancer_DamageVulnerabilitySelect,'propPathActorExistingProficiencies':[_0x139e08(0x1fa),_0x139e08(0x1fa),_0x139e08(0x148),'dv'],'fnSetComp':this[_0x139e08(0x2bc)][_0x139e08(0x2a4)](this)}),this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x212),'propPrevSubComps':_0x139e08(0x1a7),'isAvailable':_0x4438b9,'propProficiencies':'conditionImmune','title':_0x139e08(0x175),'CompClass':Charactermancer_ConditionImmunitySelect,'propPathActorExistingProficiencies':['data',_0x139e08(0x1fa),_0x139e08(0x148),'ci'],'ptrIsFirstSection':_0x177287,'fnSetComp':this[_0x139e08(0x2bc)][_0x139e08(0x2a4)](this)}),this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':'_subCompsExpertise','propPrevSubComps':_0x139e08(0x152),'isAvailable':_0x5074cc,'propProficiencies':_0x139e08(0x161),'title':_0x139e08(0x1a6),'ptrIsFirstSection':_0x177287,'fnSetComp':this[_0x139e08(0x1cf)][_0x139e08(0x2a4)](this)}),this[_0x139e08(0x288)]({'ix':_0x42db0c,'$stgSubChoiceData':_0x901b69,'selectedLoadeds':_0x10c34b,'propSubComps':_0x139e08(0x12b),'propPrevSubComps':_0x139e08(0x162),'isAvailable':_0x567107,'propProficiencies':'additionalSpells','ptrIsFirstSection':_0x177287,'fnSetComp':this['_render_pHkIxsChosen_setCompAdditionalSpells'][_0x139e08(0x2a4)](this)});}this[_0x139e08(0x262)]=null,this[_0x139e08(0x17f)]=null,this[_0x139e08(0x29b)]=null,this[_0x139e08(0x147)]=null,this['_prevSubCompsArmorProficiencies']=null,this[_0x139e08(0x204)]=null,this['_prevSubCompsDamageImmunities']=null,this['_prevSubCompsDamageResistances']=null,this[_0x139e08(0x2b5)]=null,this['_prevSubCompsConditionImmunities']=null,this[_0x139e08(0x152)]=null,this['_prevSubCompsAdditionalSpells']=null,_0x901b69[_0x139e08(0x2b4)]();}[_0x587477(0x288)]({ix:_0xb917c9,$stgSubChoiceData:_0x5039e8,propSubComps:_0x3a928d,propPrevSubComps:_0x306bb8,isAvailable:_0x112619,selectedLoadeds:_0x394894,propProficiencies:_0x41c8d2,title:_0x308328,CompClass:_0x42ec6d,propPathActorExistingProficiencies:_0x589064,ptrIsFirstSection:_0x2d708e,fnSetComp:_0x2d3d0c}){const _0x1085b2=_0x587477;this[_0x3a928d][_0xb917c9]=null;if(!_0x112619)return;const {entity:_0x40c526}=_0x394894[_0xb917c9];if(!_0x40c526?.[_0x41c8d2]&&!_0x40c526?.['entryData']?.[_0x41c8d2])return;_0x2d3d0c({'ix':_0xb917c9,'propSubComps':_0x3a928d,'propProficiencies':_0x41c8d2,'CompClass':_0x42ec6d,'propPathActorExistingProficiencies':_0x589064,'entity':_0x40c526});this[_0x306bb8]&&this[_0x306bb8][_0xb917c9]&&this[_0x3a928d][_0xb917c9][_0x1085b2(0x247)](_0x1085b2(0x178),MiscUtil[_0x1085b2(0x169)](this[_0x306bb8][_0xb917c9][_0x1085b2(0x19b)]));if(_0x308328)_0x5039e8['append']((_0x2d708e['_']?'':_0x1085b2(0x1bd))+_0x1085b2(0x20a)+_0x308328+'</div>');this[_0x3a928d][_0xb917c9][_0x1085b2(0x1c5)](_0x5039e8),_0x2d708e['_']=![];}[_0x587477(0x2bc)]({ix:_0x5646f2,propSubComps:_0x13b50f,propProficiencies:_0x45d4f7,CompClass:_0xf89003,propPathActorExistingProficiencies:_0x577711,entity:_0x334f69}){const _0x50a8b0=_0x587477;this[_0x13b50f][_0x5646f2]=new _0xf89003({'featureSourceTracker':this['_featureSourceTracker'],'existing':_0xf89003[_0x50a8b0(0x1ce)]({[_0x45d4f7]:MiscUtil[_0x50a8b0(0x22f)](this[_0x50a8b0(0x111)],..._0x577711)}),'available':_0x334f69[_0x45d4f7]||_0x334f69[_0x50a8b0(0x2bb)][_0x45d4f7]});}[_0x587477(0x1cf)]({ix:_0x4bf350,propSubComps:_0x4116c4,propProficiencies:_0x43b859,entity:_0x272f1e}){const _0x561d11=_0x587477;this[_0x4116c4][_0x4bf350]=new Charactermancer_ExpertiseSelect({'featureSourceTracker':this[_0x561d11(0x256)],'existing':Charactermancer_ExpertiseSelect['getExisting']({'skillProficiencies':MiscUtil[_0x561d11(0x22f)](this[_0x561d11(0x111)],_0x561d11(0x1fa),_0x561d11(0x1fa),_0x561d11(0x1a9)),'toolProficiencies':MiscUtil[_0x561d11(0x22f)](this['_actor'],_0x561d11(0x1fa),_0x561d11(0x1fa),_0x561d11(0x148),_0x561d11(0x193))}),'otherData':Charactermancer_ExpertiseSelect['getOtherData']({'actor':this['_actor']}),'available':_0x272f1e[_0x43b859]||_0x272f1e[_0x561d11(0x2bb)][_0x43b859]});}[_0x587477(0x279)]({ix:_0x269898,propSubComps:_0x26b1b0,propProficiencies:_0x247179,entity:_0x2ce5c7}){const _0x5e2da5=_0x587477;this[_0x26b1b0][_0x269898]=Charactermancer_AdditionalSpellsSelect[_0x5e2da5(0x19c)]({'additionalSpells':_0x2ce5c7[_0x247179]||_0x2ce5c7[_0x5e2da5(0x2bb)][_0x247179],'modalFilterSpells':this[_0x5e2da5(0x215)],'curLevel':0x0,'targetLevel':Consts[_0x5e2da5(0x164)],'spellLevelLow':0x0,'spellLevelHigh':0x9});}[_0x587477(0x1b3)](_0x6deac7){const _0x4a84bf=_0x587477;return{'prefixSubComps':'subComp_','propChooseData':_0x4a84bf(0x1f6)+_0x6deac7+_0x4a84bf(0x267)};}[_0x587477(0x219)](){const _0x1946b4=_0x587477;if(!this[_0x1946b4(0x256)])return;this['_subCompsSkillProficiencies'][_0x1946b4(0x249)](Boolean)['forEach'](_0x7a6d21=>this[_0x1946b4(0x256)][_0x1946b4(0x274)](_0x7a6d21)),this[_0x1946b4(0x1b0)]['filter'](Boolean)[_0x1946b4(0x24d)](_0x78ba2a=>this[_0x1946b4(0x256)]['unregister'](_0x78ba2a)),this[_0x1946b4(0x2a5)][_0x1946b4(0x249)](Boolean)[_0x1946b4(0x24d)](_0x4bcd0a=>this[_0x1946b4(0x256)][_0x1946b4(0x274)](_0x4bcd0a)),this[_0x1946b4(0x1d7)][_0x1946b4(0x249)](Boolean)[_0x1946b4(0x24d)](_0x358290=>this[_0x1946b4(0x256)][_0x1946b4(0x274)](_0x358290)),this[_0x1946b4(0x15f)][_0x1946b4(0x249)](Boolean)[_0x1946b4(0x24d)](_0x226845=>this['_featureSourceTracker'][_0x1946b4(0x274)](_0x226845)),this[_0x1946b4(0x258)][_0x1946b4(0x249)](Boolean)[_0x1946b4(0x24d)](_0x404999=>this['_featureSourceTracker'][_0x1946b4(0x274)](_0x404999)),this[_0x1946b4(0x1fc)]['filter'](Boolean)[_0x1946b4(0x24d)](_0x14f349=>this[_0x1946b4(0x256)]['unregister'](_0x14f349)),this['_subCompsDamageVulnerabilities'][_0x1946b4(0x249)](Boolean)['forEach'](_0x16dd65=>this[_0x1946b4(0x256)]['unregister'](_0x16dd65)),this['_subCompsConditionImmunities'][_0x1946b4(0x249)](Boolean)[_0x1946b4(0x24d)](_0x2b96b3=>this[_0x1946b4(0x256)][_0x1946b4(0x274)](_0x2b96b3)),this[_0x1946b4(0x1b1)][_0x1946b4(0x249)](Boolean)[_0x1946b4(0x24d)](_0x28fbce=>this[_0x1946b4(0x256)][_0x1946b4(0x274)](_0x28fbce)),this[_0x1946b4(0x145)]['filter'](Boolean)[_0x1946b4(0x24d)](_0x1d776b=>this[_0x1946b4(0x256)][_0x1946b4(0x274)](_0x1d776b));}[_0x587477(0x1f5)]({$stgSubChoiceData:_0x305f1c}){const _0x513784=_0x587477;this[_0x513784(0x135)][_0x513784(0x24d)](_0x20cf2c=>_0x20cf2c['unhook']()),this[_0x513784(0x135)]=[],this['_unregisterSubComps'](),this[_0x513784(0x1b5)]=[],this['_subCompsLanguageProficiencies']=[],this[_0x513784(0x2a5)]=[],this['_subCompsWeaponProficiencies']=[],this[_0x513784(0x15f)]=[],this[_0x513784(0x145)]=[],this[_0x513784(0x258)]=[],this['_subCompsDamageResistances']=[],this['_subCompsDamageVulnerabilities']=[],this[_0x513784(0x212)]=[],this[_0x513784(0x1b1)]=[],this[_0x513784(0x12b)]=[],_0x305f1c[_0x513784(0x187)]()[_0x513784(0x296)]();}[_0x587477(0x16f)](){const _0x1dc3d9=_0x587477;if(!this[_0x1dc3d9(0x1e2)]())return;const {count:_0x57feb9,required:_0x4d5635}=this['_getOptionsNameAndCount'](),_0x141721={};this[_0x1dc3d9(0x12f)]=ComponentUiUtil[_0x1dc3d9(0x227)](this,_0x1dc3d9(0x264),{'values':this[_0x1dc3d9(0x191)],'ixsRequired':_0x4d5635,'count':_0x57feb9,'fnDisplay':_0x242f88=>{const _0x2c0be8=_0x1dc3d9,_0x2c6cb1=Renderer[_0x2c0be8(0x22f)]()[_0x2c0be8(0x1c5)](_0x242f88['entry']),_0x113442=$(_0x2c0be8(0x12c));return _0x141721[this[_0x2c0be8(0x1bc)]['_getLoadedTmpUid'](_0x242f88)]=_0x113442,$$`<div class="w-100 split-v-center">
-						<div class="mr-2 flex-v-center">${_0x2c6cb1}${_0x113442}</div>
-						<div class="${Parser[_0x2c0be8(0x179)](_0x242f88[_0x2c0be8(0x171)][_0x2c0be8(0x16e)])} pr-1" title="${Parser['sourceJsonToFull'](_0x242f88[_0x2c0be8(0x171)][_0x2c0be8(0x16e)])}">${Parser[_0x2c0be8(0x28f)](_0x242f88[_0x2c0be8(0x171)][_0x2c0be8(0x16e)])}</div>
-					</div>`;}});const _0xec3f0a=()=>{const _0x5cc9cf=_0x1dc3d9,_0x4e8d99=this[_0x5cc9cf(0x256)]?this['_featureSourceTracker'][_0x5cc9cf(0x287)](_0x5cc9cf(0x1b8),{'ignore':this}):null;this[_0x5cc9cf(0x191)][_0x5cc9cf(0x24d)](_0x4f813b=>{const _0xfc1932=_0x5cc9cf,_0x261f1c=this['constructor'][_0xfc1932(0x22d)](_0x4f813b);if(!_0x141721[_0x261f1c])return;let _0x4d4af9=this['_existingFeatureChecker']&&this[_0xfc1932(0x156)]['isExistingFeature'](_0x4f813b[_0xfc1932(0x171)][_0xfc1932(0x18b)]||_0x4f813b[_0xfc1932(0x171)]['name'],_0x4f813b[_0xfc1932(0x15c)],_0x4f813b[_0xfc1932(0x16e)],_0x4f813b[_0xfc1932(0x185)]);if(_0x4e8d99)_0x4d4af9=_0x4d4af9||_0x4e8d99[_0xfc1932(0x129)](_0x3ddb01=>_0x3ddb01['some'](_0x137428=>_0x137428['page']===_0x4f813b['page']&&_0x137428['hash']===_0x4f813b[_0xfc1932(0x185)]));_0x141721[_0x261f1c][_0xfc1932(0x11a)](_0x4d4af9?'Gained\x20from\x20Another\x20Source':'')['html'](_0x4d4af9?_0xfc1932(0x190):'')[_0xfc1932(0x221)]('ml-1',_0x4d4af9);});};if(this['_featureSourceTracker'])this[_0x1dc3d9(0x256)][_0x1dc3d9(0x289)](this,_0x1dc3d9(0x1de),_0xec3f0a);_0xec3f0a();if(this[_0x1dc3d9(0x256)]){const _0xd590b7=()=>this[_0x1dc3d9(0x256)][_0x1dc3d9(0x12d)](this,{'features':this[_0x1dc3d9(0x276)]()});this[_0x1dc3d9(0x121)](this[_0x1dc3d9(0x12f)][_0x1dc3d9(0x228)],_0xd590b7),_0xd590b7();}}[_0x587477(0x1ee)](_0xe5da95){const _0x4c0b15=_0x587477,_0x453dde=[_0xe5da95[_0x4c0b15(0x253)],_0xe5da95[_0x4c0b15(0x26a)]?'('+_0xe5da95['subclassShortName']+')':'',_0xe5da95[_0x4c0b15(0x182)]?_0x4c0b15(0x282)+_0xe5da95['level']:''][_0x4c0b15(0x249)](Boolean)[_0x4c0b15(0x27c)]('\x20'),_0x330953=''+_0x453dde+(_0x453dde?':\x20':'')+_0xe5da95['name'];return(this[_0x4c0b15(0x254)]?'':_0x4c0b15(0x173))+_0x4c0b15(0x203)+_0x330953+_0x4c0b15(0x27e);}[_0x587477(0x25b)](_0x2d4955,_0x2180e8,_0x54ea15,_0x288bbf,_0x1b11ed){const _0x562304=_0x587477,{propChooseData:_0x2e32fb}=this[_0x562304(0x1b3)](_0x2d4955),_0x12a855=_0x1b11ed[_0x562304(0x165)]?Vetools[_0x562304(0x28a)](()=>''+(_0x54ea15[_0x562304(0x11e)]||[])[_0x562304(0x1e6)](_0xf4be4f=>'<div>'+Renderer[_0x562304(0x22f)]()[_0x562304(0x1c5)](_0xf4be4f)+'</div>')['join']('')):null,_0xfa0629=ComponentUiUtil[_0x562304(0x227)](this,_0x2e32fb,{'count':0x1,'fnDisplay':_0x369eed=>_0x369eed[_0x562304(0x16c)],'values':_0x1b11ed[_0x562304(0x1af)]});this['_lastSubMetas']['push'](_0xfa0629),$$`<div class="flex-col w-100">
-			${_0x12a855}
-			${_0xfa0629[_0x562304(0x149)]}
-		</div>`['appendTo'](_0x2180e8);}[_0x587477(0x1ef)](){return{'ixsChosen':[]};}}class Charactermancer_Class_StartingProficiencies extends BaseComponent{static['get']({featureSourceTracker:_0x31714c,primaryProficiencies:_0x21fef6,multiclassProficiencies:_0x111bb4,savingThrowsProficiencies:_0x331be4,mode:_0x5db0f3,existingProficienciesFvttArmor:_0x5ed59f,existingProficienciesFvttWeapons:_0x1c9e5c,existingProficienciesFvttTools:_0xaff30a,existingProficienciesFvttSavingThrows:_0x560fe9}={}){const _0x1fc173=_0x587477,{existingProficienciesVetArmor:_0x5b2678,existingProficienciesCustomArmor:_0x246320,existingProficienciesVetWeapons:_0x555435,existingProficienciesCustomWeapons:_0x5acac1,existingProficienciesVetTools:_0x56cf02,existingProficienciesCustomTools:_0x112f74,existingProficienciesVetSavingThrows:_0x1fddb1}=this[_0x1fc173(0x2a0)]({'existingProficienciesFvttArmor':_0x5ed59f,'existingProficienciesFvttWeapons':_0x1c9e5c,'existingProficienciesFvttTools':_0xaff30a,'existingProficienciesFvttSavingThrows':_0x560fe9}),_0x68ea27=new this({'featureSourceTracker':_0x31714c,'primaryProficiencies':_0x21fef6,'multiclassProficiencies':_0x111bb4,'savingThrowsProficiencies':_0x331be4,'existingProficienciesArmor':_0x5b2678,'existingProficienciesWeapons':_0x555435,'existingProficienciesTools':_0x56cf02,'existingProficienciesSavingThrows':_0x1fddb1,'existingProficienciesCustomArmor':_0x246320,'existingProficienciesCustomWeapons':_0x5acac1,'existingProficienciesCustomTools':_0x112f74});if(_0x5db0f3!=null)_0x68ea27['mode']=_0x5db0f3;return _0x68ea27;}static async[_0x587477(0x237)]({featureSourceTracker:_0x5844fb,primaryProficiencies:_0x41a344,multiclassProficiencies:_0x2cc460,savingThrowsProficiencies:_0x1f8db1,mode:_0x7b3234,existingProficienciesFvttArmor:_0x43fabf,existingProficienciesFvttWeapons:_0x14fde0,existingProficienciesFvttTools:_0x5afde0,existingProficienciesFvttSavingThrows:_0x2376ec}={}){const _0x376647=_0x587477;return this[_0x376647(0x22f)]({'featureSourceTracker':_0x5844fb,'primaryProficiencies':_0x41a344,'multiclassProficiencies':_0x2cc460,'savingThrowsProficiencies':_0x1f8db1,'mode':_0x7b3234,'existingProficienciesFvttArmor':_0x43fabf,'existingProficienciesFvttWeapons':_0x14fde0,'existingProficienciesFvttTools':_0x5afde0,'existingProficienciesFvttSavingThrows':_0x2376ec})[_0x376647(0x23e)]();}static['applyFormDataToActorUpdate'](_0x1149b9,_0x57f75e){const _0x54692c=_0x587477;MiscUtil[_0x54692c(0x196)](_0x1149b9,'data',_0x54692c(0x148),{}),this[_0x54692c(0x21d)]({'actUpdate':_0x1149b9,'profList':[..._0x57f75e[_0x54692c(0x1fa)]?.[_0x54692c(0x139)]||[],..._0x57f75e['existingData']?.[_0x54692c(0x139)]||[]],'propTrait':_0x54692c(0x22e),'fnGetMapped':UtilActors['getMappedArmorProficiency']['bind'](UtilActors)}),this[_0x54692c(0x21d)]({'actUpdate':_0x1149b9,'profList':[..._0x57f75e['data']?.['weapons']||[],..._0x57f75e['existingData']?.[_0x54692c(0x1e5)]||[]],'propTrait':_0x54692c(0x1ab),'fnGetMapped':UtilActors[_0x54692c(0x157)][_0x54692c(0x2a4)](UtilActors)}),this['_applyFormDataToActorUpdate_applyProfList']({'actUpdate':_0x1149b9,'profList':[..._0x57f75e['data']?.[_0x54692c(0x1e4)]||[],..._0x57f75e[_0x54692c(0x18e)]?.[_0x54692c(0x1e4)]||[]],'propTrait':'toolProf','fnGetMapped':UtilActors[_0x54692c(0x19e)]['bind'](UtilActors)});const _0x21c3aa=MiscUtil[_0x54692c(0x196)](_0x1149b9,_0x54692c(0x1fa),_0x54692c(0x1d4),{});[..._0x57f75e[_0x54692c(0x1fa)]?.['savingThrows']||[],..._0x57f75e[_0x54692c(0x18e)]?.[_0x54692c(0x1c9)]||[]][_0x54692c(0x24d)](_0x1acc47=>(_0x21c3aa[_0x1acc47]=_0x21c3aa[_0x1acc47]||{})[_0x54692c(0x25f)]=0x1);}static['_applyFormDataToActorUpdate_addIfNotExists'](_0x1ac564,_0x3839a8){const _0x988d7f=_0x587477;if(!_0x1ac564[_0x988d7f(0x129)](_0x10ea9e=>_0x10ea9e['toLowerCase']()[_0x988d7f(0x1c2)]()===_0x3839a8['toLowerCase']()[_0x988d7f(0x1c2)]()))_0x1ac564['push'](_0x3839a8);}static[_0x587477(0x21d)]({actUpdate:_0x3afee3,profList:_0x358e55,propTrait:_0x59463d,fnGetMapped:_0x180545}){const _0x16a7b9=_0x587477;if(!_0x358e55?.['length'])return;const _0x246a5e=MiscUtil[_0x16a7b9(0x196)](_0x3afee3,_0x16a7b9(0x1fa),_0x16a7b9(0x148),_0x59463d,{});_0x246a5e[_0x16a7b9(0x1b2)]=_0x246a5e['value']||[],_0x246a5e['custom']=_0x246a5e[_0x16a7b9(0x260)]||'';const _0x24183d=_0x246a5e['custom'][_0x16a7b9(0x209)](';')[_0x16a7b9(0x1e6)](_0x38e343=>_0x38e343[_0x16a7b9(0x1c2)]())['filter'](Boolean);_0x358e55[_0x16a7b9(0x24d)](_0x429988=>{const _0x2fdf66=_0x16a7b9,_0x3c46e2=Renderer['stripTags'](_0x429988)[_0x2fdf66(0x12e)](),_0xacbbb0=_0x180545(_0x3c46e2);if(_0xacbbb0)return this[_0x2fdf66(0x2b8)](_0x246a5e[_0x2fdf66(0x1b2)],_0xacbbb0);const [_0x52511c]=/{@item [^}]+}/i[_0x2fdf66(0x23a)](_0x429988)||[];if(_0x52511c){const _0x2c4251=_0x180545(Renderer['stripTags'](_0x52511c));if(_0x2c4251)return this[_0x2fdf66(0x2b8)](_0x246a5e[_0x2fdf66(0x1b2)],_0x2c4251);}this['_applyFormDataToActorUpdate_addIfNotExists'](_0x24183d,Renderer['stripTags'](_0x429988));}),_0x246a5e[_0x16a7b9(0x260)]=_0x24183d[_0x16a7b9(0x27c)](';\x20');}static[_0x587477(0x1e8)](_0x3363a6){const _0x196466=_0x587477;return Object[_0x196466(0x11e)](MiscUtil[_0x196466(0x22f)](_0x3363a6,_0x196466(0x1fa),_0x196466(0x1fa),_0x196466(0x1d4))||{})[_0x196466(0x249)](([,_0x554960])=>_0x554960['proficient'])['map'](([_0x49a78a])=>_0x49a78a);}static['_getExistingProficienciesVet']({existingProficienciesFvttArmor:_0x1f2c17,existingProficienciesFvttWeapons:_0x4344e5,existingProficienciesFvttTools:_0x2192d9,existingProficienciesFvttSavingThrows:_0x4737cb}){const _0x2de96c=_0x587477,_0x5c34b0=new Set(),_0x464a03=new Set(),_0x4eca66=new Set(),_0x4118ba=new Set(),_0x3e1efc=new Set(),_0x25b4d9=new Set();return this[_0x2de96c(0x1c4)]({'existingFvtt':_0x4344e5,'fnGetUnmapped':UtilActors[_0x2de96c(0x270)][_0x2de96c(0x2a4)](UtilActors),'fnCheckUnmappedAlt':UtilActors[_0x2de96c(0x27f)][_0x2de96c(0x2a4)](UtilActors),'vetValidSet':_0x5c34b0,'customSet':_0x464a03}),this[_0x2de96c(0x1c4)]({'existingFvtt':_0x1f2c17,'fnGetUnmapped':UtilActors['getUnmappedArmorProficiency']['bind'](UtilActors),'vetValidSet':_0x4eca66,'customSet':_0x4118ba}),this[_0x2de96c(0x1c4)]({'existingFvtt':_0x2192d9,'fnGetUnmapped':UtilActors[_0x2de96c(0x2aa)]['bind'](UtilActors),'vetValidSet':_0x3e1efc,'customSet':_0x25b4d9}),{'existingProficienciesVetWeapons':[..._0x5c34b0],'existingProficienciesCustomWeapons':[..._0x464a03],'existingProficienciesVetArmor':[..._0x4eca66],'existingProficienciesCustomArmor':[..._0x4118ba],'existingProficienciesVetTools':[..._0x3e1efc],'existingProficienciesCustomTools':[..._0x25b4d9],'existingProficienciesVetSavingThrows':_0x4737cb};}static[_0x587477(0x1c4)]({existingFvtt:_0x2365e6,vetValidSet:_0x3ad081,customSet:_0x1ce42e,fnGetUnmapped:_0x56419b,fnCheckUnmappedAlt:_0x47e591}){const _0x35ca2a=_0x587477;(_0x2365e6?.[_0x35ca2a(0x1b2)]||[])['forEach'](_0x5e98c3=>{const _0x40e89a=_0x35ca2a,_0x28fb1c=_0x56419b(_0x5e98c3);if(_0x28fb1c)_0x3ad081[_0x40e89a(0x291)](_0x28fb1c);else{if(_0x47e591){const _0x2ebb6c=_0x47e591(_0x5e98c3);if(_0x2ebb6c)_0x3ad081[_0x40e89a(0x291)](_0x5e98c3);else _0x1ce42e[_0x40e89a(0x291)](_0x5e98c3);}else _0x1ce42e['add'](_0x5e98c3);}}),(_0x2365e6?.['custom']||'')['trim']()[_0x35ca2a(0x209)](';')['map'](_0x3aa5e7=>_0x3aa5e7['trim']())['filter'](Boolean)[_0x35ca2a(0x24d)](_0x35ae9e=>{const _0x57ff1c=_0x35ca2a,_0x2150d6=_0x35ae9e[_0x57ff1c(0x12e)](),_0x1206ec=_0x56419b(_0x2150d6);if(_0x1206ec)_0x3ad081[_0x57ff1c(0x291)](_0x1206ec);else{if(_0x47e591){const _0x4b54ba=_0x47e591(_0x2150d6);if(_0x4b54ba)_0x3ad081['add'](_0x2150d6);else _0x1ce42e[_0x57ff1c(0x291)](_0x35ae9e);}else _0x1ce42e[_0x57ff1c(0x291)](_0x35ae9e);}});}static[_0x587477(0x1ea)](_0x4cb26e){const _0x5915d5=_0x587477;if(!_0x4cb26e)return{};const _0x38b49d={};if(_0x4cb26e[_0x5915d5(0x139)])_0x38b49d[_0x5915d5(0x139)]=_0x4cb26e[_0x5915d5(0x139)][_0x5915d5(0x1e6)](_0x35f09e=>_0x35f09e[_0x5915d5(0x26c)]||_0x35f09e);if(_0x4cb26e[_0x5915d5(0x1e5)])_0x38b49d['weapons']=_0x4cb26e[_0x5915d5(0x1e5)]['map'](_0x4df28c=>(_0x4df28c[_0x5915d5(0x26c)]||_0x4df28c)[_0x5915d5(0x12e)]()['trim']());if(_0x4cb26e['tools'])_0x38b49d['tools']=_0x4cb26e['tools'][_0x5915d5(0x1e6)](_0x436d2d=>(_0x436d2d[_0x5915d5(0x26c)]||_0x436d2d)[_0x5915d5(0x12e)]()[_0x5915d5(0x1c2)]());return _0x38b49d;}constructor({featureSourceTracker:_0x3da0ad,primaryProficiencies:_0x5e0512,multiclassProficiencies:_0x590b59,savingThrowsProficiencies:_0x3ac524,existingProficienciesArmor:_0x8cb5ee,existingProficienciesWeapons:_0x9fa001,existingProficienciesTools:_0x245460,existingProficienciesSavingThrows:_0xae8fcc,existingProficienciesCustomArmor:_0x1bc67f,existingProficienciesCustomWeapons:_0x450e01,existingProficienciesCustomTools:_0x4a78ea}={}){const _0x120414=_0x587477;super(),this[_0x120414(0x256)]=_0x3da0ad,this[_0x120414(0x26e)]=Charactermancer_Class_StartingProficiencies[_0x120414(0x1ea)](_0x5e0512),this[_0x120414(0x29f)]=Charactermancer_Class_StartingProficiencies['_getCleanVetProfs'](_0x590b59),this[_0x120414(0x1a3)]=_0x3ac524,this[_0x120414(0x1b4)]=_0x8cb5ee,this[_0x120414(0x1b6)]=_0x9fa001,this[_0x120414(0x23c)]=_0x245460,this[_0x120414(0x1cc)]=_0xae8fcc,this[_0x120414(0x19f)]=_0x1bc67f,this['_existingProficienciesCustomWeapons']=_0x450e01,this['_existingProficienciesCustomTools']=_0x4a78ea;}set['mode'](_0x1cd2b7){const _0x26c2df=_0x587477;this['_state'][_0x26c2df(0x13f)]=_0x1cd2b7;}['_getFormData'](){const _0x52ab8f=_0x587477,_0x222f13=this['_state'][_0x52ab8f(0x13f)]===Charactermancer_Class_ProficiencyImportModeSelect['MODE_PRIMARY'],_0x4bce7f=_0x222f13?this[_0x52ab8f(0x26e)]:this[_0x52ab8f(0x29f)];if(!_0x4bce7f)return{'isFormComplete':!![],'data':{},'existingData':{}};return{'isFormComplete':!![],'data':{'armor':_0x4bce7f[_0x52ab8f(0x139)]||[],'weapons':_0x4bce7f['weapons']||[],'tools':_0x4bce7f[_0x52ab8f(0x1e4)]||[],'savingThrows':_0x222f13?this[_0x52ab8f(0x1a3)]||[]:[]},'existingData':{'armor':[...this[_0x52ab8f(0x1b4)]||[],...this[_0x52ab8f(0x19f)]||[]],'weapons':[...this[_0x52ab8f(0x1b6)]||[],...this[_0x52ab8f(0x232)]||[]],'tools':[...this[_0x52ab8f(0x23c)]||[],...this[_0x52ab8f(0x1d0)]||[]],'savingThrows':this[_0x52ab8f(0x1cc)]||[]}};}[_0x587477(0x23e)](){const _0xd6ccce=_0x587477;return this[_0xd6ccce(0x133)]();}[_0x587477(0x1c5)](_0x5b1481){const _0x4268e5=_0x587477,_0x2d69bb=$(_0x4268e5(0x226))['appendTo'](_0x5b1481),_0x4ef8ac=[],_0x234eb0=()=>{const _0x2f273d=_0x4268e5;_0x4ef8ac[_0x2f273d(0x24d)](_0x16e945=>_0x16e945()),_0x4ef8ac[_0x2f273d(0x143)](0x0,_0x4ef8ac[_0x2f273d(0x14a)]),_0x2d69bb[_0x2f273d(0x187)]();const _0x18d9b5=this['_state'][_0x2f273d(0x13f)]===Charactermancer_Class_ProficiencyImportModeSelect['MODE_PRIMARY'],_0xb2223b=_0x18d9b5?this[_0x2f273d(0x26e)]:this[_0x2f273d(0x29f)];_0xb2223b&&(this[_0x2f273d(0x294)]({'profList':_0xb2223b[_0x2f273d(0x139)],'title':_0x2f273d(0x2b7),'$wrpDisplay':_0x2d69bb,'propTracker':_0x2f273d(0x139),'propTrackerPulse':_0x2f273d(0x1f9),'fnsCleanup':_0x4ef8ac,'existing':this['_existingProficienciesArmor'],'existingProficienciesCustom':this['_existingProficienciesCustomArmor'],'fnDisplay':_0x1e622e=>[_0x2f273d(0x24f),_0x2f273d(0x266),'heavy']['includes'](_0x1e622e)?_0x1e622e+_0x2f273d(0x1db):_0x1e622e}),this[_0x2f273d(0x294)]({'profList':_0xb2223b[_0x2f273d(0x1e5)],'title':_0x2f273d(0x238),'$wrpDisplay':_0x2d69bb,'propTracker':_0x2f273d(0x1e5),'propTrackerPulse':_0x2f273d(0x24b),'fnsCleanup':_0x4ef8ac,'existing':this[_0x2f273d(0x1b6)],'existingProficienciesCustom':this['_existingProficienciesCustomWeapons'],'fnDisplay':_0x47b11f=>[_0x2f273d(0x123),'martial'][_0x2f273d(0x1fb)](_0x47b11f)?_0x47b11f+'\x20weapons':_0x47b11f}),this[_0x2f273d(0x294)]({'profList':_0xb2223b[_0x2f273d(0x1e4)],'title':_0x2f273d(0x277),'$wrpDisplay':_0x2d69bb,'propTracker':_0x2f273d(0x1e4),'propTrackerPulse':_0x2f273d(0x146),'fnsCleanup':_0x4ef8ac,'existing':this['_existingProficienciesTools'],'existingProficienciesCustom':this[_0x2f273d(0x1d0)]}));_0x18d9b5&&this[_0x2f273d(0x1a3)]&&this[_0x2f273d(0x294)]({'profList':this[_0x2f273d(0x1a3)],'title':_0x2f273d(0x1cd),'$wrpDisplay':_0x2d69bb,'propTracker':_0x2f273d(0x1c9),'propTrackerPulse':_0x2f273d(0x15a),'fnsCleanup':_0x4ef8ac,'existing':this[_0x2f273d(0x1cc)],'fnDisplay':_0x35dafa=>Parser[_0x2f273d(0x115)](_0x35dafa)});if(this[_0x2f273d(0x256)])this[_0x2f273d(0x256)][_0x2f273d(0x12d)](this,this['_getStateTrackerData']());};this[_0x4268e5(0x121)](_0x4268e5(0x13f),_0x234eb0),_0x234eb0();}[_0x587477(0x222)](){const _0x402bb5=_0x587477,_0x1a875c=this[_0x402bb5(0x133)](),_0x1df307=_0x40cb7d=>_0x40cb7d[_0x402bb5(0x1e6)](_0x53f5f4=>this[_0x402bb5(0x1bc)][_0x402bb5(0x1ae)](_0x53f5f4))['filter'](Boolean);return{'armor':_0x1df307(_0x1a875c['data']?.['armor']||[])['mergeMap'](_0x166c75=>({[_0x166c75]:!![]})),'weapons':_0x1df307(_0x1a875c[_0x402bb5(0x1fa)]?.[_0x402bb5(0x1e5)]||[])[_0x402bb5(0x11f)](_0x1b97f9=>({[_0x1b97f9]:!![]})),'tools':_0x1df307(_0x1a875c[_0x402bb5(0x1fa)]?.['tools']||[])['mergeMap'](_0x15983b=>({[_0x15983b]:!![]}))};}static[_0x587477(0x1ae)](_0x132519){const _0x36691e=_0x587477;if(!_0x132519[_0x36691e(0x1aa)](_0x36691e(0x1bf)))return _0x132519;let [_0x413a2a,_0x63076d]=Renderer[_0x36691e(0x245)]((Renderer[_0x36691e(0x116)](_0x132519[_0x36691e(0x1a8)](0x1,-0x1))[0x1]||'')[_0x36691e(0x12e)]());_0x63076d=_0x63076d||SRC_DMG[_0x36691e(0x12e)]();if(!_0x413a2a)return null;return _0x413a2a+'|'+_0x63076d;}['_render_profType']({profList:_0x4ed7e9,title:_0x1b98be,$wrpDisplay:_0x561495,propTracker:_0x12d332,propTrackerPulse:_0x278d39,fnsCleanup:_0x58fc97,existing:_0x5716d1,existingProficienciesCustom:_0xda51de,fnDisplay:_0x40201f}){const _0xe0ca93=_0x587477;if(!_0x4ed7e9?.[_0xe0ca93(0x14a)])return;const _0x29e2d1=_0x4ed7e9[_0xe0ca93(0x1e6)](_0xc1118=>this[_0xe0ca93(0x1bc)][_0xe0ca93(0x1ae)](_0xc1118)),_0x30df0a={},_0x3e0e3e=_0x4ed7e9['map']((_0x18451b,_0x3acb1d)=>{const _0x3f694b=_0xe0ca93,_0xc47a45=$('<div\x20class=\x22ve-small\x20veapp__msg-warning\x20inline-block\x22></div>'),_0x7e94a5=_0x29e2d1[_0x3acb1d];_0x30df0a[_0x7e94a5]=_0xc47a45;const _0x1a9ec9=_0x3acb1d<_0x4ed7e9[_0x3f694b(0x14a)]-0x1;return $$`<div class="inline-block ${_0x1a9ec9?_0x3f694b(0x263):''}">${Renderer[_0x3f694b(0x22f)]()[_0x3f694b(0x1c5)](_0x40201f?_0x40201f(_0x18451b):_0x18451b)}${_0xc47a45}${_0x1a9ec9?',':''}</div>`;});$$`<div class="block">
-			<div class="mr-1 bold inline-block">${_0x1b98be}:</div>${_0x3e0e3e}
-		</div>`['appendTo'](_0x561495);const _0x1e1d75=async()=>{const _0x477f2a=_0xe0ca93;try{await this['_pLock'](_0x477f2a(0x298)),await _0x37a562();}finally{this['_unlock'](_0x477f2a(0x298));}},_0x37a562=async()=>{const _0x46ebf5=_0xe0ca93,_0x40346e=this['_featureSourceTracker']?this['_featureSourceTracker'][_0x46ebf5(0x287)](_0x12d332,{'ignore':this}):null;for(const _0xdf945f of _0x29e2d1){if(!_0x30df0a[_0xdf945f])return;const _0x5ba877=await DataConverter[_0x46ebf5(0x1e0)](_0xdf945f);let _0x1790e6=(_0x5716d1||[])['includes'](_0xdf945f)||_0x5ba877&&(_0x5716d1||[])[_0x46ebf5(0x1fb)](_0x5ba877)||(_0xda51de||[])['includes'](_0xdf945f)||_0x5ba877&&(_0xda51de||[])[_0x46ebf5(0x1fb)](_0x5ba877);_0x1790e6=_0x1790e6||(_0x40346e||[])[_0x46ebf5(0x129)](_0x31ea13=>!!_0x31ea13[_0xdf945f]||_0x5ba877&&!!_0x31ea13[_0x5ba877]),_0x30df0a[_0xdf945f][_0x46ebf5(0x11a)](_0x1790e6?'Proficient\x20from\x20Another\x20Source':'')[_0x46ebf5(0x221)](_0x46ebf5(0x17c),_0x1790e6)[_0x46ebf5(0x15b)](_0x1790e6?_0x46ebf5(0x252)+UtilActors['PROF_TO_ICON_CLASS'][0x1]+_0x46ebf5(0x200):'');}};this[_0xe0ca93(0x256)]&&(this[_0xe0ca93(0x256)][_0xe0ca93(0x289)](this,_0x278d39,_0x1e1d75),_0x58fc97[_0xe0ca93(0x233)](()=>this[_0xe0ca93(0x256)][_0xe0ca93(0x2a2)](this,_0x278d39,_0x1e1d75))),_0x1e1d75();}['_getDefaultState'](){return{'mode':Charactermancer_Class_ProficiencyImportModeSelect['MODE_PRIMARY']};}}export{PageFilterClassesFoundry,Charactermancer_Class_Util,Charactermancer_Class_LevelSelect,Charactermancer_Class_HpIncreaseModeSelect,Charactermancer_Class_HpInfo,Charactermancer_Class_ProficiencyImportModeSelect,Charactermancer_Class_FeatureOptionsSelect,Charactermancer_Class_StartingProficiencies};
+			${$wrpList}
+		</div>`.appendTo($wrp);
+	}
+
+	_render_$getCbRow (ix) {
+		if (!this._isRadio) return $(`<input type="checkbox" class="no-events">`);
+
+		const $cb = $(`<input type="radio" class="no-events">`);
+		if (ix === this._maxPreviousLevel && this._isForceSelect) $cb.prop("checked", true);
+		else if (ix < this._maxPreviousLevel) $cb.prop("disabled", true);
+
+		return $cb;
+	}
+
+	_handleSelectClick (listItem, evt) {
+		if (!this._isRadio) return ListUiUtil.handleSelectClick(this._list, listItem, evt);
+
+		const isCheckedOld = listItem.data.cbSel.checked;
+
+		const isDisabled = this._handleSelectClickRadio(this._list, listItem, evt);
+		if (isDisabled) return;
+
+		const isCheckedNu = listItem.data.cbSel.checked;
+		if (isCheckedOld !== isCheckedNu) this._doRunFnsOnchange();
+	}
+
+	/** Displays all levels less than the one selected as also being selected. */
+	_handleSelectClickRadio (list, item, evt) {
+		evt.preventDefault();
+		evt.stopPropagation();
+
+		if (item.data.cbSel.disabled) return true;
+
+		list.items.forEach(it => {
+			if (it === item) {
+				// If we're allowed to toggle, toggle it
+				if (it.data.cbSel.checked && !this._isForceSelect) {
+					it.data.cbSel.checked = false;
+					it.ele.removeClass("list-multi-selected");
+					return;
+				}
+
+				it.data.cbSel.checked = true;
+				it.ele.addClass("list-multi-selected");
+			} else {
+				it.data.cbSel.checked = false;
+				if (it.ix < item.ix) it.ele.addClass("list-multi-selected");
+				else it.ele.removeClass("list-multi-selected");
+			}
+		});
+	}
+
+	pGetFormData () {
+		let out = this._list.items
+			.filter(it => it.data.cbSel.checked)
+			.map(it => it.ix);
+
+		// If in radio mode, back-fill all previous levels
+		if (this._isRadio && out.length) {
+			const max = out[0] + 1;
+			out = [];
+			for (let i = this._maxPreviousLevel; i < max; ++i) out.push(i);
+		}
+
+		return {
+			isFormComplete: !!out.length,
+			data: out,
+		};
+	}
+
+	/** Get the current level. */
+	getCurLevel () {
+		if (this._maxPreviousLevel) return this._maxPreviousLevel;
+		return 0;
+	}
+
+	/** Get the max selected level. */
+	getTargetLevel () {
+		const ixs = this._list.items
+			.filter(it => it.data.cbSel.checked)
+			.map(it => it.ix);
+		if (!ixs.length) return null;
+		return Math.max(...ixs) + 1;
+	}
+
+	static _getRowText (lvl) { return lvl.map(f => f.name).join(", ") || "\u2014"; }
+
+	/**
+	 * Convert an array of the form:
+	 * [{classFeature: "...", level: 1}, {classFeature: "...", level: 1}, {classFeature: "...", level: 2}]
+	 * To an array of arrays of the form:
+	 * [
+	 *   [{classFeature: "...", level: 1}, {classFeature: "...", level: 1}],
+	 *   [{classFeature: "...", level: 2}]
+	 * ]
+	 * @param allFeatures
+	 * @param isSubclass
+	 */
+	static _getLevelGroupedFeatures (allFeatures, isSubclass) {
+		allFeatures = MiscUtil.copy(allFeatures);
+		if (!isSubclass) allFeatures = allFeatures.filter(it => it.classFeature); // Only show class feature names
+		const allFeaturesByLevel = [];
+
+		let level = 1;
+		let stack = [];
+		const output = () => {
+			allFeaturesByLevel.push(stack);
+			stack = [];
+		};
+		allFeatures.forEach(f => {
+			// Ensure all levels are filled, even if it's with an empty array
+			while (level < f.level) {
+				output();
+				level++;
+			}
+			stack.push(f);
+			level = f.level;
+		});
+		output();
+
+		// Fill out higher levels, to show a complete table
+		while (level < Consts.CHAR_MAX_LEVEL) {
+			output();
+			level++;
+		}
+
+		return allFeaturesByLevel;
+	}
+}
+
+class Charactermancer_Class_HpIncreaseModeSelect extends BaseComponent {
+	// region External
+	static async pGetUserInput () {
+		return UtilApplications.pGetImportCompModalFormData({
+			comp: new this(),
+		});
+	}
+
+	static isHpAvailable (cls) {
+		return cls.hd && cls.hd.number && !isNaN(cls.hd.number) && cls.hd.faces && !isNaN(cls.hd.faces);
+	}
+	// endregion
+
+	pGetFormData () {
+		return {
+			isFormComplete: true,
+			data: this._state.mode,
+		};
+	}
+
+	get modalTitle () { return `Select Hit Points Increase Mode`; }
+
+	render ($wrp) {
+		const $sel = ComponentUiUtil.$getSelEnum(
+			this,
+			"mode",
+			{
+				values: [
+					Charactermancer_Class_HpIncreaseModeSelect.MODE_TAKE_AVERAGE,
+					Charactermancer_Class_HpIncreaseModeSelect.MODE_ROLL,
+					Charactermancer_Class_HpIncreaseModeSelect.MODE_DO_NOT_INCREASE,
+				],
+				fnDisplay: mode => Charactermancer_Class_HpIncreaseModeSelect.DISPLAY_MODES[mode],
+			},
+		);
+
+		$$`<div class="flex-col min-h-0">
+			${$sel}
+		</div>`.appendTo($wrp);
+	}
+
+	_getDefaultState () {
+		return {
+			mode: Charactermancer_Class_HpIncreaseModeSelect.MODE_TAKE_AVERAGE,
+		};
+	}
+}
+Charactermancer_Class_HpIncreaseModeSelect.MODE_TAKE_AVERAGE = 0;
+Charactermancer_Class_HpIncreaseModeSelect.MODE_ROLL = 1;
+Charactermancer_Class_HpIncreaseModeSelect.MODE_DO_NOT_INCREASE = 2;
+
+Charactermancer_Class_HpIncreaseModeSelect.DISPLAY_MODES = {
+	[Charactermancer_Class_HpIncreaseModeSelect.MODE_TAKE_AVERAGE]: "Take Average",
+	[Charactermancer_Class_HpIncreaseModeSelect.MODE_ROLL]: "Roll",
+	[Charactermancer_Class_HpIncreaseModeSelect.MODE_DO_NOT_INCREASE]: "Do Not Increase HP",
+};
+
+class Charactermancer_Class_HpInfo extends BaseComponent {
+	constructor ({className, hitDice}) {
+		super();
+		this._className = className;
+		this._hitDice = hitDice;
+	}
+
+	render ($wrp) {
+		const hdEntry = Renderer.class.getHitDiceEntry(this._hitDice);
+
+		$$`<div class="flex-col min-h-0 ve-small">
+			<div class="block"><div class="inline-block bold mr-1">Hit Dice:</div>${Vetools.withUnpatchedDiceRendering(() => Renderer.getEntryDice(hdEntry, "Hit die"))}</div>
+			<div class="block"><div class="inline-block bold mr-1">Hit Points:</div>${Renderer.class.getHitPointsAtFirstLevel(this._hitDice)}</div>
+			<div class="block"><div class="inline-block bold mr-1">Hit Points at Higher Levels:</div>${Vetools.withUnpatchedDiceRendering(() => Renderer.class.getHitPointsAtHigherLevels(this._className, this._hitDice, hdEntry))}</div>
+		</div>`.appendTo($wrp);
+	}
+}
+
+class Charactermancer_Class_ProficiencyImportModeSelect extends BaseComponent {
+	// region External
+	static async pGetUserInput () {
+		return UtilApplications.pGetImportCompModalFormData({
+			comp: new this(),
+			isUnskippable: true,
+		});
+	}
+	// endregion
+
+	pGetFormData () {
+		return {
+			isFormComplete: true,
+			data: this._state.mode,
+		};
+	}
+
+	get modalTitle () { return `Select Class Proficiency Import Mode`; }
+
+	render ($wrp) {
+		const $sel = ComponentUiUtil.$getSelEnum(
+			this,
+			"mode",
+			{
+				values: [
+					Charactermancer_Class_ProficiencyImportModeSelect.MODE_MULTICLASS,
+					Charactermancer_Class_ProficiencyImportModeSelect.MODE_PRIMARY,
+					Charactermancer_Class_ProficiencyImportModeSelect.MODE_NONE,
+				],
+				fnDisplay: mode => Charactermancer_Class_ProficiencyImportModeSelect.DISPLAY_MODES[mode],
+			},
+		);
+
+		$$`<div class="flex-col min-h-0">
+			${$sel}
+		</div>`.appendTo($wrp);
+	}
+
+	_getDefaultState () {
+		return {
+			mode: Charactermancer_Class_ProficiencyImportModeSelect.MODE_MULTICLASS,
+		};
+	}
+}
+Charactermancer_Class_ProficiencyImportModeSelect.MODE_MULTICLASS = 0;
+Charactermancer_Class_ProficiencyImportModeSelect.MODE_PRIMARY = 1;
+Charactermancer_Class_ProficiencyImportModeSelect.MODE_NONE = 2;
+
+Charactermancer_Class_ProficiencyImportModeSelect.DISPLAY_MODES = {
+	[Charactermancer_Class_HpIncreaseModeSelect.MODE_TAKE_AVERAGE]: "Add multiclass proficiencies (this is my second+ class)",
+	[Charactermancer_Class_HpIncreaseModeSelect.MODE_ROLL]: "Add base class proficiencies and equipment (this is my first class)",
+	[Charactermancer_Class_HpIncreaseModeSelect.MODE_DO_NOT_INCREASE]: "Do not add proficiencies or equipment",
+};
+
+/** Deals with weapon, armor, and tool proficiencies, which are (generally) static on classes. */
+class Charactermancer_Class_StartingProficiencies extends BaseComponent {
+	// region External
+	static get (
+		{
+			featureSourceTracker,
+			primaryProficiencies,
+			multiclassProficiencies,
+			savingThrowsProficiencies,
+			mode,
+			existingProficienciesFvttArmor,
+			existingProficienciesFvttWeapons,
+			existingProficienciesFvttTools,
+			existingProficienciesFvttSavingThrows,
+		} = {},
+	) {
+		const {
+			existingProficienciesVetArmor,
+			existingProficienciesCustomArmor,
+
+			existingProficienciesVetWeapons,
+			existingProficienciesCustomWeapons,
+
+			existingProficienciesVetTools,
+			existingProficienciesCustomTools,
+
+			existingProficienciesVetSavingThrows,
+		} = this._getExistingProficienciesVet({
+			existingProficienciesFvttArmor,
+			existingProficienciesFvttWeapons,
+			existingProficienciesFvttTools,
+			existingProficienciesFvttSavingThrows,
+		});
+
+		const comp = new this({
+			featureSourceTracker,
+			primaryProficiencies,
+			multiclassProficiencies,
+			savingThrowsProficiencies,
+			existingProficienciesVetArmor,
+			existingProficienciesVetWeapons,
+			existingProficienciesVetTools,
+			existingProficienciesVetSavingThrows,
+
+			existingProficienciesCustomArmor,
+			existingProficienciesCustomWeapons,
+			existingProficienciesCustomTools,
+
+			// These are passed through and returned in the form data
+			existingProficienciesFvttArmor,
+			existingProficienciesFvttWeapons,
+			existingProficienciesFvttTools,
+			existingProficienciesFvttSavingThrows,
+		});
+
+		if (mode != null) comp.mode = mode;
+
+		return comp;
+	}
+
+	static async pGetUserInput (
+		{
+			featureSourceTracker,
+			primaryProficiencies,
+			multiclassProficiencies,
+			savingThrowsProficiencies,
+			mode,
+			existingProficienciesFvttArmor,
+			existingProficienciesFvttWeapons,
+			existingProficienciesFvttTools,
+			existingProficienciesFvttSavingThrows,
+		} = {},
+	) {
+		return this.get({
+			featureSourceTracker,
+			primaryProficiencies,
+			multiclassProficiencies,
+			savingThrowsProficiencies,
+			mode,
+			existingProficienciesFvttArmor,
+			existingProficienciesFvttWeapons,
+			existingProficienciesFvttTools,
+			existingProficienciesFvttSavingThrows,
+		}).pGetFormData();
+	}
+
+	/** Form data is a list of clean strings per proficiency type. */
+	static applyFormDataToActorUpdate (actUpdate, formData) {
+		MiscUtil.getOrSet(actUpdate, "data", "traits", {});
+
+		this._applyFormDataToActorUpdate_applyProfList({
+			actUpdate,
+			profList: formData?.data?.armor || [],
+			profsExisting: formData?.existingDataFvtt?.existingProficienciesArmor || {},
+			propTrait: "armorProf",
+			fnGetMapped: UtilActors.getMappedArmorProficiency.bind(UtilActors),
+		});
+
+		this._applyFormDataToActorUpdate_applyProfList({
+			actUpdate,
+			profList: formData.data?.weapons || [],
+			profsExisting: formData?.existingDataFvtt?.existingProficienciesWeapons || {},
+			propTrait: "weaponProf",
+			fnGetMapped: UtilActors.getMappedWeaponProficiency.bind(UtilActors),
+			fnGetPreMapped: UtilActors.getItemUIdFromWeaponProficiency.bind(UtilActors),
+		});
+
+		this._applyFormDataToActorUpdate_applyProfList({
+			actUpdate,
+			profList: formData.data?.tools || [],
+			profsExisting: formData?.existingDataFvtt?.existingProficienciesTools || {},
+			propTrait: "toolProf",
+			fnGetMapped: UtilActors.getMappedTool.bind(UtilActors),
+			fnGetPreMapped: UtilActors.getItemUIdFromToolProficiency.bind(UtilActors),
+		});
+
+		const tgtAbils = MiscUtil.getOrSet(actUpdate, "data", "abilities", {});
+		[...(formData.data?.savingThrows || []), ...(formData.existingDataFvtt?.savingThrows || [])]
+			.forEach(abv => (tgtAbils[abv] = tgtAbils[abv] || {}).proficient = 1);
+	}
+
+	static _applyFormDataToActorUpdate_addIfNotExists (arr, itm) {
+		if (!arr.some(it => it.toLowerCase().trim() === itm.toLowerCase().trim())) arr.push(itm);
+	}
+
+	static _applyFormDataToActorUpdate_applyProfList (
+		{
+			actUpdate,
+			profList,
+			profsExisting,
+			propTrait,
+			fnGetMapped,
+			fnGetPreMapped,
+		},
+	) {
+		if (!profList?.length) return;
+
+		const tgt = MiscUtil.getOrSet(actUpdate, "data", "traits", propTrait, {});
+		tgt.value = tgt.value || [];
+		tgt.custom = tgt.custom || "";
+
+		const customArr = tgt.custom.split(";").map(it => it.trim()).filter(Boolean);
+
+		// region Add existing proficiencies
+		(profsExisting.value || [])
+			.forEach(it => this._applyFormDataToActorUpdate_addIfNotExists(tgt.value, it));
+
+		(profsExisting.custom || "")
+			.split(";")
+			.map(it => it.trim())
+			.filter(Boolean)
+			.forEach(it => this._applyFormDataToActorUpdate_addIfNotExists(customArr, it));
+		// endregion
+
+		profList.forEach(it => {
+			// Try to match as a generic string
+			const clean = (fnGetPreMapped ? fnGetPreMapped(it) : null) ?? Renderer.stripTags(it).toLowerCase();
+			const mapped = fnGetMapped(clean);
+			if (mapped) return this._applyFormDataToActorUpdate_addIfNotExists(tgt.value, mapped);
+
+			// Try to match an item within the string, if one exists
+			const [itemTag] = /{@item [^}]+}/i.exec(it) || [];
+			if (itemTag) {
+				const mappedAlt = fnGetMapped(Renderer.stripTags(itemTag));
+				if (mappedAlt) return this._applyFormDataToActorUpdate_addIfNotExists(tgt.value, mappedAlt);
+			}
+
+			// Otherwise, add it as a custom proficiency
+			this._applyFormDataToActorUpdate_addIfNotExists(customArr, Renderer.stripTags(it));
+		});
+
+		tgt.custom = customArr.join("; ");
+	}
+
+	static getExistingProficienciesFvttSavingThrows (actor) {
+		// While these are _technically_ a list of proficiency types (i.e. proficient/expert/...), treat them as boolean
+		//   flags, since nothing in the game gives "saving throw expertise."
+		return Object.entries(MiscUtil.get(actor, "data", "data", "abilities") || {})
+			.filter(([, abMeta]) => abMeta.proficient)
+			.map(([ab]) => ab);
+	}
+	// endregion
+
+	static _getExistingProficienciesVet ({existingProficienciesFvttArmor, existingProficienciesFvttWeapons, existingProficienciesFvttTools, existingProficienciesFvttSavingThrows}) {
+		const vetValidWeapons = new Set();
+		const customWeapons = new Set();
+		const vetValidArmors = new Set();
+		const customArmors = new Set();
+		const vetValidTools = new Set();
+		const customTools = new Set();
+
+		this._getExistingProficienciesVet_({
+			existingFvtt: existingProficienciesFvttWeapons,
+			fnGetUnmapped: UtilActors.getUnmappedWeaponProficiency.bind(UtilActors),
+			fnCheckUnmappedAlt: UtilActors.getItemUIdFromWeaponProficiency.bind(UtilActors),
+			vetValidSet: vetValidWeapons,
+			customSet: customWeapons,
+		});
+
+		this._getExistingProficienciesVet_({
+			existingFvtt: existingProficienciesFvttArmor,
+			fnGetUnmapped: UtilActors.getUnmappedArmorProficiency.bind(UtilActors),
+			vetValidSet: vetValidArmors,
+			customSet: customArmors,
+		});
+
+		this._getExistingProficienciesVet_({
+			existingFvtt: existingProficienciesFvttTools,
+			fnGetUnmapped: UtilActors.getUnmappedTool.bind(UtilActors),
+			fnCheckUnmappedAlt: UtilActors.getItemUIdFromToolProficiency.bind(UtilActors),
+			vetValidSet: vetValidTools,
+			customSet: customTools,
+		});
+
+		return {
+			existingProficienciesVetWeapons: [...vetValidWeapons],
+			existingProficienciesCustomWeapons: [...customWeapons],
+			existingProficienciesVetArmor: [...vetValidArmors],
+			existingProficienciesCustomArmor: [...customArmors],
+			existingProficienciesVetTools: [...vetValidTools],
+			existingProficienciesCustomTools: [...customTools],
+			existingProficienciesVetSavingThrows: existingProficienciesFvttSavingThrows, // Pass-through
+		};
+	}
+
+	static _getExistingProficienciesVet_ ({
+		existingFvtt,
+		vetValidSet,
+		customSet,
+		fnGetUnmapped,
+		fnCheckUnmappedAlt,
+	}) {
+		(existingFvtt?.value || []).forEach(it => {
+			const unmapped = fnGetUnmapped(it);
+			if (unmapped) vetValidSet.add(unmapped);
+			else {
+				if (fnCheckUnmappedAlt) {
+					const unmappedVet = fnCheckUnmappedAlt(it);
+					// If it was in the set, we can map it again later, but keep it as plain text for now
+					if (unmappedVet) vetValidSet.add(it);
+					else customSet.add(it);
+				} else {
+					customSet.add(it);
+				}
+			}
+		});
+
+		(existingFvtt?.custom || "").trim().split(";").map(it => it.trim()).filter(Boolean).forEach(it => {
+			const low = it.toLowerCase();
+			const unmapped = fnGetUnmapped(low);
+			if (unmapped) vetValidSet.add(unmapped);
+			else {
+				if (fnCheckUnmappedAlt) {
+					const unmappedVet = fnCheckUnmappedAlt(low);
+					// If it was in the set, we can map it again later, but keep it as plain text for now
+					if (unmappedVet) vetValidSet.add(low);
+					else customSet.add(it);
+				} else {
+					customSet.add(it);
+				}
+			}
+		});
+	}
+
+	/** Convert the 5etools data to arrays of strings. */
+	static _getCleanVetProfs (vetProfs) {
+		if (!vetProfs) return {};
+
+		const out = {};
+
+		if (vetProfs.armor) out.armor = this._getCleanVetProfs_getMappedItemTags(vetProfs.armor.map(it => it.proficiency || it));
+		if (vetProfs.weapons) out.weapons = this._getCleanVetProfs_getMappedItemTags(vetProfs.weapons.map(it => (it.proficiency || it).toLowerCase().trim()));
+		if (vetProfs.tools) out.tools = this._getCleanVetProfs_getMappedItemTags(vetProfs.tools.map(it => (it.proficiency || it).toLowerCase().trim()));
+
+		return out;
+	}
+
+	static _getCleanVetProfs_getMappedItemTags (arr) {
+		return arr.map(it => it.replace(/^{@item ([^}]+)}$/g, (...m) => {
+			const [name, source] = Renderer.splitTagByPipe(m[1]);
+			return `${name}|${source || SRC_DMG}`.toLowerCase();
+		}));
+	}
+
+	constructor (
+		{
+			featureSourceTracker,
+			primaryProficiencies,
+			multiclassProficiencies,
+			savingThrowsProficiencies,
+			existingProficienciesVetArmor,
+			existingProficienciesVetWeapons,
+			existingProficienciesVetTools,
+			existingProficienciesVetSavingThrows,
+			existingProficienciesFvttArmor,
+			existingProficienciesFvttWeapons,
+			existingProficienciesFvttTools,
+			existingProficienciesFvttSavingThrows,
+			existingProficienciesCustomArmor,
+			existingProficienciesCustomWeapons,
+			existingProficienciesCustomTools,
+		} = {},
+	) {
+		super();
+		this._featureSourceTracker = featureSourceTracker;
+		this._primaryProficiencies = Charactermancer_Class_StartingProficiencies._getCleanVetProfs(primaryProficiencies);
+		this._multiclassProficiencies = Charactermancer_Class_StartingProficiencies._getCleanVetProfs(multiclassProficiencies);
+		this._savingThrowsProficiencies = savingThrowsProficiencies;
+
+		this._existingProficienciesVetArmor = existingProficienciesVetArmor;
+		this._existingProficienciesVetWeapons = existingProficienciesVetWeapons;
+		this._existingProficienciesVetTools = existingProficienciesVetTools;
+		this._existingProficienciesVetSavingThrows = existingProficienciesVetSavingThrows;
+
+		this._existingProficienciesCustomArmor = existingProficienciesCustomArmor;
+		this._existingProficienciesCustomWeapons = existingProficienciesCustomWeapons;
+		this._existingProficienciesCustomTools = existingProficienciesCustomTools;
+		// region Pass-throughs to form data
+		// NPCs don't have data here, so, support null
+		this._existingProficienciesFvttArmor = existingProficienciesFvttArmor ? MiscUtil.copy(existingProficienciesFvttArmor) : null;
+		this._existingProficienciesFvttWeapons = existingProficienciesFvttWeapons ? MiscUtil.copy(existingProficienciesFvttWeapons) : null;
+		this._existingProficienciesFvttTools = existingProficienciesFvttTools ? MiscUtil.copy(existingProficienciesFvttTools) : null;
+		this._existingProficienciesFvttSavingThrows = existingProficienciesFvttSavingThrows ? MiscUtil.copy(existingProficienciesFvttSavingThrows) : null;
+		// endregion
+	}
+
+	set mode (mode) { this._state.mode = mode; }
+
+	_getFormData () {
+		const isPrimary = this._state.mode === Charactermancer_Class_ProficiencyImportModeSelect.MODE_PRIMARY;
+		const profs = isPrimary ? this._primaryProficiencies : this._multiclassProficiencies;
+
+		if (!profs) return {isFormComplete: true, data: {}, existingData: {}};
+
+		return {
+			isFormComplete: true,
+			data: {
+				armor: profs.armor || [],
+				weapons: profs.weapons || [],
+				tools: profs.tools || [],
+				savingThrows: isPrimary ? (this._savingThrowsProficiencies || []) : [],
+			},
+			existingDataFvtt: {
+				existingProficienciesArmor: this._existingProficienciesFvttArmor,
+				existingProficienciesWeapons: this._existingProficienciesFvttWeapons,
+				existingProficienciesTools: this._existingProficienciesFvttTools,
+				// N.b. this is mapped, and is actually a list of abbreviations
+				existingProficienciesSavingThrows: this._existingProficienciesFvttSavingThrows,
+			},
+		};
+	}
+
+	pGetFormData () { return this._getFormData(); }
+
+	render ($wrp) {
+		const $wrpDisplay = $(`<div class="flex-col min-h-0 ve-small"></div>`).appendTo($wrp);
+
+		const fnsCleanup = [];
+
+		const hkMode = () => {
+			fnsCleanup.forEach(fn => fn());
+			fnsCleanup.splice(0, fnsCleanup.length);
+
+			$wrpDisplay.empty();
+			const isPrimary = this._state.mode === Charactermancer_Class_ProficiencyImportModeSelect.MODE_PRIMARY;
+
+			const profs = isPrimary ? this._primaryProficiencies : this._multiclassProficiencies;
+			if (profs) {
+				this._render_profType({
+					profList: profs.armor,
+					title: "Armor",
+					$wrpDisplay,
+					propTracker: "armorProficiencies",
+					propTrackerPulse: "pulseArmorProficiencies",
+					fnsCleanup,
+					existing: this._existingProficienciesVetArmor,
+					existingProficienciesCustom: this._existingProficienciesCustomArmor,
+					fnDisplay: str => ["light", "medium", "heavy"].includes(str) ? `${str} armor` : str.includes("|") ? `{@item ${str}}` : str,
+				});
+
+				this._render_profType({
+					profList: profs.weapons,
+					title: "Weapons",
+					$wrpDisplay,
+					propTracker: "weaponProficiencies",
+					propTrackerPulse: "pulseWeaponProficiencies",
+					fnsCleanup,
+					existing: this._existingProficienciesVetWeapons,
+					existingProficienciesCustom: this._existingProficienciesCustomWeapons,
+					fnDisplay: str => ["simple", "martial"].includes(str) ? `${str} weapons` : str.includes("|") ? `{@item ${str}}` : str,
+				});
+
+				this._render_profType({
+					profList: profs.tools,
+					title: "Tools",
+					$wrpDisplay,
+					propTracker: "toolProficiencies",
+					propTrackerPulse: "pulseToolProficiencies",
+					fnsCleanup,
+					existing: this._existingProficienciesVetTools,
+					existingProficienciesCustom: this._existingProficienciesCustomTools,
+				});
+			}
+
+			if (isPrimary && this._savingThrowsProficiencies) {
+				this._render_profType({
+					profList: this._savingThrowsProficiencies,
+					title: "Saving Throws",
+					$wrpDisplay,
+					propTracker: "savingThrowProficiencies",
+					propTrackerPulse: "pulseSavingThrowProficiencies",
+					fnsCleanup,
+					existing: this._existingProficienciesVetSavingThrows,
+					fnDisplay: str => Parser.attAbvToFull(str),
+				});
+			}
+
+			// region Networking with other armor proficiency components
+			if (this._featureSourceTracker) this._featureSourceTracker.setState(this, this._getStateTrackerData());
+			// endregion
+		};
+		this._addHookBase("mode", hkMode);
+		hkMode();
+	}
+
+	_getStateTrackerData () {
+		const formData = this._getFormData();
+
+		const getNoTags = (arr) => arr.map(it => this.constructor._getUid(it)).filter(Boolean);
+
+		return {
+			armorProficiencies: getNoTags(formData.data?.armor || []).mergeMap(it => ({[it]: true})),
+			weaponProficiencies: getNoTags(formData.data?.weapons || []).mergeMap(it => ({[it]: true})),
+			toolProficiencies: getNoTags(formData.data?.tools || []).mergeMap(it => ({[it]: true})),
+		};
+	}
+
+	static _getUid (str) {
+		if (!str.startsWith("{@item")) return str;
+
+		let [name, source] = Renderer.splitTagByPipe((Renderer.splitFirstSpace(str.slice(1, -1))[1] || "").toLowerCase());
+		source = source || SRC_DMG.toLowerCase();
+		if (!name) return null;
+
+		return `${name}|${source}`;
+	}
+
+	_render_profType ({profList, title, $wrpDisplay, propTracker, propTrackerPulse, fnsCleanup, existing, existingProficienciesCustom, fnDisplay}) {
+		if (!profList?.length) return;
+
+		const profListUids = profList.map(prof => this.constructor._getUid(prof));
+
+		const $ptsExisting = {};
+
+		const $wrps = profList.map((it, i) => {
+			const $ptExisting = $(`<div class="ve-small veapp__msg-warning inline-block"></div>`);
+			const uid = profListUids[i];
+			$ptsExisting[uid] = $ptExisting;
+			const isNotLast = i < profList.length - 1;
+			return $$`<div class="inline-block ${isNotLast ? "mr-1" : ""}">${Renderer.get().render(fnDisplay ? fnDisplay(it) : it)}${$ptExisting}${isNotLast ? `,` : ""}</div>`;
+		});
+
+		$$`<div class="block">
+			<div class="mr-1 bold inline-block">${title}:</div>${$wrps}
+		</div>`.appendTo($wrpDisplay);
+
+		const pHkUpdatePtsExisting = async () => {
+			try {
+				await this._pLock("updateExisting");
+				await pHkUpdatePtsExisting_();
+			} finally {
+				this._unlock("updateExisting");
+			}
+		};
+
+		const pHkUpdatePtsExisting_ = async () => {
+			const otherStates = this._featureSourceTracker ? this._featureSourceTracker.getStatesForKey(propTracker, {ignore: this}) : null;
+
+			for (const v of profListUids) {
+				if (!$ptsExisting[v]) return;
+
+				const parentGroup = await UtilDataConverter.pGetItemWeaponType(v);
+
+				// Value from sheet
+				let isExisting = (existing || []).includes(v)
+					|| (parentGroup && (existing || []).includes(parentGroup))
+					|| (existingProficienciesCustom || []).includes(v)
+					|| (parentGroup && (existingProficienciesCustom || []).includes(parentGroup));
+
+				// Value from other networked components
+				isExisting = isExisting
+					|| (otherStates || []).some(otherState => !!otherState[v] || (parentGroup && !!otherState[parentGroup]));
+
+				$ptsExisting[v]
+					.title(isExisting ? "Proficient from Another Source" : "")
+					.toggleClass("ml-1", isExisting)
+					.html(isExisting ? `(<i class="fas fa-fw ${UtilActors.PROF_TO_ICON_CLASS[1]}"></i>)` : "");
+			}
+		};
+		if (this._featureSourceTracker) {
+			this._featureSourceTracker.addHook(this, propTrackerPulse, pHkUpdatePtsExisting);
+			fnsCleanup.push(() => this._featureSourceTracker.removeHook(this, propTrackerPulse, pHkUpdatePtsExisting));
+		}
+		pHkUpdatePtsExisting();
+	}
+
+	_getDefaultState () {
+		return {
+			mode: Charactermancer_Class_ProficiencyImportModeSelect.MODE_PRIMARY,
+		};
+	}
+}
+
+export {
+	PageFilterClassesFoundry,
+	Charactermancer_Class_Util,
+	Charactermancer_Class_LevelSelect,
+	Charactermancer_Class_HpIncreaseModeSelect,
+	Charactermancer_Class_HpInfo,
+	Charactermancer_Class_ProficiencyImportModeSelect,
+	Charactermancer_Class_StartingProficiencies,
+};

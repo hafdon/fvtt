@@ -1,1 +1,27 @@
-var _0x18e8=['_titleLog','194313eBsDiw','Cannot\x20import\x20journal\x20content\x20to\x20actor!','sourceJsonToAbv','log','source','1309705TOwJHX','name','107716gYWsFH','210870xxGCSg','pImportEntry','989268SHpDjn','179597yUzgRA','titleLog','560039DujOcK','\x22\x20(from\x20\x22','Importing\x20'];var _0x35d0=function(_0x4c9cd7,_0x1ac6e6){_0x4c9cd7=_0x4c9cd7-0x126;var _0x18e84b=_0x18e8[_0x4c9cd7];return _0x18e84b;};var _0x22f4c5=_0x35d0;(function(_0x88bf30,_0x498eab){var _0x8312b5=_0x35d0;while(!![]){try{var _0x47eb21=-parseInt(_0x8312b5(0x126))+parseInt(_0x8312b5(0x12f))+parseInt(_0x8312b5(0x128))+parseInt(_0x8312b5(0x12b))+parseInt(_0x8312b5(0x129))+parseInt(_0x8312b5(0x136))+-parseInt(_0x8312b5(0x134));if(_0x47eb21===_0x498eab)break;else _0x88bf30['push'](_0x88bf30['shift']());}catch(_0x1ad87b){_0x88bf30['push'](_0x88bf30['shift']());}}}(_0x18e8,0x7c996));import{ImportList}from'./ImportList.js';import{LGT}from'./Util.js';class ImportListJournal extends ImportList{constructor(_0x1d0737,_0x100665,_0x426823,_0x1ab797){var _0x129c7f=_0x35d0;super(_0x1d0737,_0x100665,_0x426823),this[_0x129c7f(0x12e)]=_0x1ab797[_0x129c7f(0x12a)];}async[_0x22f4c5(0x127)](_0x51c33c,_0xd14bbc){var _0x4c569b=_0x22f4c5;_0xd14bbc=_0xd14bbc||{},console[_0x4c569b(0x132)](...LGT,_0x4c569b(0x12d)+this['_titleLog']+'\x20\x22'+_0x51c33c[_0x4c569b(0x135)]+_0x4c569b(0x12c)+Parser[_0x4c569b(0x131)](_0x51c33c[_0x4c569b(0x133)])+'\x22)');if(this['_actor'])throw new Error(_0x4c569b(0x130));return this['_pImportEntry_pImportToDirectoryGeneric'](_0x51c33c,_0xd14bbc);}}export{ImportListJournal};
+import {ImportList} from "./ImportList.js";
+import {LGT} from "./Util.js";
+
+class ImportListJournal extends ImportList {
+	constructor (applicationOpts, externalData, subclassOpts, featureImporterOpts) {
+		super(applicationOpts, externalData, subclassOpts);
+
+		this._titleLog = featureImporterOpts.titleLog;
+	}
+
+	/**
+	 * @param entity
+	 * @param importOpts Options object.
+	 * @param [importOpts.isTemp] if the item should be temporary, and displayed.
+	 */
+	async _pImportEntry (entity, importOpts) {
+		importOpts = importOpts || {};
+
+		console.log(...LGT, `Importing ${this._titleLog} "${entity.name}" (from "${Parser.sourceJsonToAbv(entity.source)}")`);
+
+		if (this._actor) throw new Error(`Cannot import journal content to actor!`);
+
+		return this._pImportEntry_pImportToDirectoryGeneric(entity, importOpts);
+	}
+}
+
+export {ImportListJournal};

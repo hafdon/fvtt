@@ -1,1 +1,8 @@
-var _0x438b=['89rmjvUl','143176LPgdgN','487153mjTone','plutonium-roll-table-directory-title-menu','1FpaXQd','8yueEdv','_TOOL_LIST','1837XGkhjs','20912dWulhT','333551GoNgzh','_HOOK_NAME','165536yEetig','397hJQakB','pop__mnu-btn-open','2XdybgD','fa-external-link-alt','6322WNfWBe'];var _0x96d1=function(_0x484ea2,_0x526428){_0x484ea2=_0x484ea2-0x1a4;var _0x438b7f=_0x438b[_0x484ea2];return _0x438b7f;};var _0x1c04f4=_0x96d1;(function(_0x490318,_0x5b3717){var _0x2eecb3=_0x96d1;while(!![]){try{var _0x47ee2f=parseInt(_0x2eecb3(0x1aa))*-parseInt(_0x2eecb3(0x1ae))+parseInt(_0x2eecb3(0x1a5))+parseInt(_0x2eecb3(0x1ad))*parseInt(_0x2eecb3(0x1ac))+parseInt(_0x2eecb3(0x1a8))*-parseInt(_0x2eecb3(0x1b4))+parseInt(_0x2eecb3(0x1a4))*-parseInt(_0x2eecb3(0x1b2))+parseInt(_0x2eecb3(0x1a7))+-parseInt(_0x2eecb3(0x1b1))*-parseInt(_0x2eecb3(0x1af));if(_0x47ee2f===_0x5b3717)break;else _0x490318['push'](_0x490318['shift']());}catch(_0x2ab38b){_0x490318['push'](_0x490318['shift']());}}}(_0x438b,0x59589));import{MenuTitle}from'./MenuTitle.js';import{PopoutSheet}from'./PopoutSheet.js';class MenuTitleRollTableDirectory extends MenuTitle{}MenuTitleRollTableDirectory[_0x1c04f4(0x1a6)]='renderRollTableDirectory',MenuTitleRollTableDirectory['_EVT_NAMESPACE']=_0x1c04f4(0x1b0),MenuTitleRollTableDirectory[_0x1c04f4(0x1b3)]=[{'name':'Pop\x20Out','Class':PopoutSheet,'iconClass':_0x1c04f4(0x1ab),'additionalClassesButton':_0x1c04f4(0x1a9),'additionalClassesPreSpacer':_0x1c04f4(0x1a9)}];export{MenuTitleRollTableDirectory};
+import {MenuTitle} from "./MenuTitle.js";
+
+class MenuTitleRollTableDirectory extends MenuTitle {}
+MenuTitleRollTableDirectory._HOOK_NAME = "renderRollTableDirectory";
+MenuTitleRollTableDirectory._EVT_NAMESPACE = "plutonium-roll-table-directory-title-menu";
+MenuTitleRollTableDirectory._TOOL_LIST = [];
+
+export {MenuTitleRollTableDirectory};

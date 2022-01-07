@@ -1,6 +1,629 @@
-const _0x545b=['src','scale','dataset','34ptAWtf','pct','Could\x20not\x20directly\x20load\x20image\x20from\x20','_pDoLoadAndPlaceImage','socket','open','get','_doCancelPackDownload','NotesLayer','_pLoadImage','Unhandled\x20drop\x20mode\x20\x22','isDisplaySheetCreatedScene','\x20--\x20falling\x20back\x20on\x20alternate\x20loader\x20(backend\x20mod).','.window-content','appendTo','closest','artDirectoryPath','currentTarget','error','getMaxWindowHeight','_preInit_addSubmenuButton','setApplicationTitle','token','naturalHeight','Failed\x20to\x20download\x20image!\x20','_jsonDownloadMode','progress','C_ART_IMAGE_MODE_NOTE','artBrowserDownloadPack','_onClickLayer','_handleConfigUpdate_toggleButton','ve-Art','json','onerror','Art\x20Browser—Backend\x20Mod\x20Required','Image\x20downloaded\x20to\x20your\x20Art\x20Directory\x20(\x22','getData','_parent','_ID_HIDE_TOKEN_BUTTON','_ART_SCENE_CONTROLS_NAME','replace','text','240731xvRPtm','stopPropagation','notes','_handleConfigUpdate','<span\x20class=\x22fas\x20fa-user\x22></span>','MODULE_LOCATION','application/json','host','artBrowser','activateListeners','_handleConfigUpdate_toggleMainButton','<style\x20id=\x22','_preInit_addTokenButton','_pCopyImageToLocalViaBackend','isGM','Failed\x20to\x20load\x20image!','name','render','_preInit_addMainButton','draw','preventDefault','create','plutoniumDownloadPackImage','STR_SEE_CONSOLE','title','some','preInit','_pPingImage','find','140217nEBMBb','buttonDisplay','_ID_HIDE_NOTES_BUTTON','_preInit_getInnerToolMeta','Drag-Drop\x20Images\x20as\x20Scenes','type','uri','getMaxWindowWidth','P_GET_BACKEND_VERSION','tools','max','importImagesAs','push','off','\x0a\x09\x09\x09\x09#controls\x20.scene-control[data-control=\x22tiles\x22]\x20.control-tool[data-tool=\x22ve-art__btn-scene\x22]\x20{\x0a\x09\x09\x09\x09\x09display:\x20none\x20!important;\x0a\x09\x09\x09\x09}\x0a\x09\x09\x09','116301OpkdBE','_handleConfigUpdate_toggleTokenButton','44095TWsdcb','fas\x20fa-palette','<button\x20class=\x22artr__btn-lg\x20artr__btn-lg--search-controls\x20mr-1\x22><span\x20class=\x22fas\x20fa-spinner\x22></span></button>','8wjxPqu','__bound__handleInstanceConfigUpdate','plutonium__art__hide-tile-button','<i\x20class=\x22fas\x20fa-times\x22></i>','last','_activateListeners_pHandleDownloadAssets','_pLoadImageViaBackend','_handleInstanceConfigUpdate_cycleImportModeButton','\x20backend\x20mod.\x20See\x20the\x20&quot;How\x20to\x20Modify\x20the\x20Backend&quot;\x20section\x20on\x20the\x20<a\x20href=\x22https://wiki.5e.tools/index.php/FoundryTool_Install\x22\x20target=\x22_blank\x22\x20rel=\x22noopener\x20noreferrer\x22>wiki</a>\x20for\x20more\x20information.</p>\x0a\x09\x09\x09\x09\x09<p><b>Note\x20that\x20this\x20is\x20not\x20possible\x20on\x20managed\x20Foundry\x20hosting\x20services,\x20such\x20as\x20The\x20Forge.</b></p>\x0a\x09\x09\x09\x09</div>','_preInit_handleOpenClick','_handleConfigUpdate_toggleNotesButton','html','_isDownloadingPack','_onLoadProgress','BackgroundLayer','<button\x20class=\x22artr__btn-lg\x20artr__btn-lg--search-controls\x22\x20title=\x22Open\x20','_$btnCycleImportMode','Drag-Drop\x20Images\x20as\x20Tiles','\x0a\x09\x09</style>','Foundry\x20Assets','2045oudeXZ','post','getPosCanvasSpace','\x0a\x09\x09\x09\x09#controls\x20.scene-control[data-control=\x22ve-art__btn-scene\x22]\x20{\x0a\x09\x09\x09\x09\x09display:\x20none\x20!important;\x0a\x09\x09\x09\x09}\x0a\x09\x09\x09','\x20-\x20Notes','Config\x20window\x22><span\x20class=\x22fas\x20fa-cogs\x22></span></button>','<button\x20class=\x22artr__btn-lg\x20artr__btn-lg--search-controls\x20mr-1\x22\x20title=\x22Cancel\x20running\x20downloads\x22><span\x20class=\x22fas\x20fa-stop\x22></span></button>','\x20-\x20Scenes','pHandleButtonClick','naturalWidth','catch','\x22>\x0a\x09\x09\x09','artBrowserCancelDownloadPack','_handleConfigUpdate_toggleTileButton','Plutonium\x20','_handleCustomDrop','6918zcXOlp','_ID_HIDE_TILE_BUTTON','<div>\x0a\x09\x09\x09\x09\x09<p>The\x20image\x20you\x20dropped\x20could\x20not\x20be\x20loaded,\x20likely\x20due\x20to\x20CORS\x20blocking.\x20CORS\x20blocking\x20is\x20a\x20browser\x20security\x20feature\x20which\x20prevents\x20potentially\x20harmful\x20content\x20from\x20being\x20loaded\x20from\x20other\x20websites.</p>\x0a\x09\x09\x09\x09\x09<p>Unfortunately,\x20this\x20security\x20feature\x20also\x20blocks\x20images.\x20In\x20order\x20to\x20work\x20around\x20this,\x20you\x20can\x20install\x20the\x20','plutonium__art__hide-main-button','_preInit_addTileButton','info','controls','isStreamerMode','then','pInit','Close','C_ART_IMAGE_MODE_TILE','Hi!\x20You\x20shouldn\x27t\x20be\x20able\x20to\x20click\x20this,\x20something\x20has\x20gone\x20wrong.','constructor','getSceneControlButtons','plutonium.configUpdate','click','C_ART_IMAGE_MODE_TOKEN','_ID_HIDE_MAIN_BUTTON','doDownloadSingleImage_','13Turrgp','notifications','plutonium__art__hide-notes-button','parse','_BLOCKED_HOSTS','_textDownloadMode','Drag-Drop\x20Images\x20as\x20Tokens','bringToFront','_BASE_TITLE','<span\x20class=\x22fas\x20fa-bookmark\x22></span>','tiles','p-0','ve-art__btn-scene','Failed\x20to\x20load\x20image!\x20','\x20-\x20Tokens','stringify','tokenSize','addClass','73AEfPSY','split','C_ART_IMAGE_MODE_SCENE','_pDownloadPack','#board','_p$getBtnsItemThumbnail','set','plutonium__art__hide-token-button','artb__window-outer','backendEndpoint','_INSTANCE','2122LvkjRN','addEventListener','round','/template/ArtBrowserApp.hbs','blob','_preInit_addNotesButton','Art\x20Browser'];const _0xf53f=function(_0x46fc5c,_0x521c87){_0x46fc5c=_0x46fc5c-0x197;let _0x545b70=_0x545b[_0x46fc5c];return _0x545b70;};const _0x5a2cb2=_0xf53f;(function(_0x19e7b0,_0x35a4d2){const _0x246f89=_0xf53f;while(!![]){try{const _0x43b7e5=-parseInt(_0x246f89(0x1ce))*parseInt(_0x246f89(0x1eb))+-parseInt(_0x246f89(0x1ba))*parseInt(_0x246f89(0x1e0))+parseInt(_0x246f89(0x24d))+-parseInt(_0x246f89(0x21f))+parseInt(_0x246f89(0x23c))+parseInt(_0x246f89(0x1f5))*-parseInt(_0x246f89(0x1aa))+-parseInt(_0x246f89(0x250))*-parseInt(_0x246f89(0x24b));if(_0x43b7e5===_0x35a4d2)break;else _0x19e7b0['push'](_0x19e7b0['shift']());}catch(_0x1fc14e){_0x19e7b0['push'](_0x19e7b0['shift']());}}}(_0x545b,0x425f3));import{SharedConsts}from'../shared/SharedConsts.js';import{Util,LGT}from'./Util.js';import{Config}from'./Config.js';import{UtilCanvas}from'./UtilCanvas.js';import{ArtBrowser}from'../art-js/ArtBrowser.js';import{UtilApplications}from'./UtilApplications.js';import{UtilCompat}from'./UtilCompat.js';import{ConfigConsts}from'./ConfigConsts.js';class ArtBrowserFvtt extends ArtBrowser{constructor(_0x150ea1,{app:_0x552eb0}){const _0x12ff9b=_0xf53f;super(_0x150ea1),this[_0x12ff9b(0x21a)]=_0x552eb0;}async['_pGetDownloadModes'](){const _0xf3581a=_0xf53f,_0x2925d7=[this[_0xf3581a(0x1d3)],this[_0xf3581a(0x20e)]];return await Config[_0xf3581a(0x244)]&&_0x2925d7['unshift']({'name':_0xf3581a(0x1a9),'isMultipleFilesOnly':!![],'pDownloadAsMultipleFiles':(_0x363c29,_0x276293,_0x239168)=>this['_parent']['_activateListeners_pHandleDownloadAssets'](_0x363c29,_0x276293,_0x239168)}),_0x2925d7;}async[_0x5a2cb2(0x1e5)](_0x2966cc){const _0x2b8d92=_0x5a2cb2,_0x17699a=await super[_0x2b8d92(0x1e5)](_0x2966cc);if(!await Config[_0x2b8d92(0x244)])return _0x17699a;const _0x4f43f4=$('<div\x20class=\x22artr__item__menu_item\x22\x20title=\x22Download\x20Image\x22><span\x20class=\x22fas\x20fa-download\x22></span></div>')[_0x2b8d92(0x1ca)](async _0x3f1792=>{const _0x5e37ab=_0x2b8d92;_0x3f1792[_0x5e37ab(0x220)](),_0x3f1792[_0x5e37ab(0x233)](),await this[_0x5e37ab(0x21a)]['doDownloadSingleImage_'](_0x2966cc);});return[..._0x17699a,_0x4f43f4];}}class ArtBrowserApp extends Application{static[_0x5a2cb2(0x239)](){const _0x16112a=_0x5a2cb2;Hooks['on'](_0x16112a(0x1c8),_0x5648a5=>{const _0x3c1613=_0x16112a;if(!game['user'][_0x3c1613(0x22d)])return;this[_0x3c1613(0x231)](_0x5648a5),this[_0x3c1613(0x1be)](_0x5648a5),this[_0x3c1613(0x22b)](_0x5648a5),this[_0x3c1613(0x1f0)](_0x5648a5);});}static[_0x5a2cb2(0x19f)](){const _0x25cbac=_0x5a2cb2;if(ArtBrowserApp[_0x25cbac(0x1ea)]){ArtBrowserApp[_0x25cbac(0x1ea)][_0x25cbac(0x230)](!![]),ArtBrowserApp[_0x25cbac(0x1ea)]['maximize'](),UtilApplications[_0x25cbac(0x1d5)](ArtBrowserApp['_INSTANCE']);return;}ArtBrowserApp['_INSTANCE']=new ArtBrowserApp(),ArtBrowserApp[_0x25cbac(0x1ea)][_0x25cbac(0x230)](!![]);}static[_0x5a2cb2(0x231)](_0x2f83d3){const _0x4dcde7=_0x5a2cb2,_0x1d73e1=_0x2f83d3['find'](_0x395055=>_0x395055['name']===ArtBrowserApp['_ART_SCENE_CONTROLS_NAME']);if(_0x1d73e1)return;_0x2f83d3[_0x4dcde7(0x248)]({'name':ArtBrowserApp['_ART_SCENE_CONTROLS_NAME'],'title':_0x4dcde7(0x1f1),'icon':_0x4dcde7(0x24e),'tools':[{'name':ArtBrowserApp['_ART_SCENE_CONTROLS_NAME'],'title':_0x4dcde7(0x1f1),'icon':'fas\x20fa-palette','onClick':()=>ui[_0x4dcde7(0x1cf)]['info'](_0x4dcde7(0x1c6)),'button':!![]}],'activeTool':_0x4dcde7(0x1fa)});}static[_0x5a2cb2(0x23f)](_0x1a5534){const _0x4437f5=_0x5a2cb2;return{'name':ArtBrowserApp[_0x4437f5(0x21c)],'title':'Art\x20Browser','icon':'fas\x20fa-palette','onClick':()=>{const _0x5e21da=_0x4437f5;Config['set'](_0x5e21da(0x227),'importImagesAs',_0x1a5534),ArtBrowserApp[_0x5e21da(0x19f)]();},'button':!![]};}static['_preInit_addTileButton'](_0x33c3f9){const _0x16a9c3=_0x5a2cb2;this[_0x16a9c3(0x209)](_0x33c3f9,_0x16a9c3(0x1d8),ConfigConsts[_0x16a9c3(0x1c5)]);}static[_0x5a2cb2(0x22b)](_0x3100c6){const _0x278ff9=_0x5a2cb2;this['_preInit_addSubmenuButton'](_0x3100c6,_0x278ff9(0x20b),ConfigConsts['C_ART_IMAGE_MODE_TOKEN']);}static['_preInit_addNotesButton'](_0x2fa83c){const _0x4e608d=_0x5a2cb2;this[_0x4e608d(0x209)](_0x2fa83c,_0x4e608d(0x221),ConfigConsts['C_ART_IMAGE_MODE_NOTE']);}static[_0x5a2cb2(0x209)](_0x3b12c2,_0x4fc71b,_0x84b96a){const _0x1655b9=_0x5a2cb2,_0x248a32=_0x3b12c2[_0x1655b9(0x23b)](_0x4871fd=>_0x4871fd[_0x1655b9(0x22f)]===_0x4fc71b),_0x4131f5=_0x248a32['tools'][_0x1655b9(0x238)](_0x4baabb=>_0x4baabb['name']===ArtBrowserApp[_0x1655b9(0x21c)]);if(_0x4131f5)return;_0x248a32[_0x1655b9(0x245)][_0x1655b9(0x248)](this[_0x1655b9(0x23f)](_0x84b96a));}static async['_pDownloadPack'](_0x32e1b7){const _0x5ea054=_0x5a2cb2;await fetch(Config[_0x5ea054(0x1e9)],{'method':_0x5ea054(0x1ab),'headers':{'Content-Type':'application/json'},'body':JSON[_0x5ea054(0x1dd)]({'type':_0x5ea054(0x211),'json':_0x32e1b7,'directoryPath':Config[_0x5ea054(0x1fb)]('artBrowser','artDirectoryPath')})});}static['init'](){const _0x3d143d=_0x5a2cb2,_0x3c2b09=ui['controls'][_0x3d143d(0x212)]['bind'](ui['controls']);ui[_0x3d143d(0x1c0)]['_onClickLayer']=function(_0x4e9e65){const _0x4e7b9a=_0x3d143d;if(_0x4e9e65[_0x4e7b9a(0x206)][_0x4e7b9a(0x1f4)]['control']===ArtBrowserApp[_0x4e7b9a(0x21c)]){ArtBrowserApp[_0x4e7b9a(0x19f)]();return;}_0x3c2b09(_0x4e9e65);},ui['controls']['initialize'](),$(document['body'])['on']('dragstart','.artr__item__lnk-fullsize',_0x57afaa=>{const _0x4eda76=_0x3d143d;_0x57afaa[_0x4eda76(0x220)]();}),$(_0x3d143d(0x1e4))[0x0][_0x3d143d(0x1ec)]('drop',this[_0x3d143d(0x1b9)]['bind'](this)),game[_0x3d143d(0x1f9)]['on'](_0x3d143d(0x20f),_0x15df09=>{const _0x3a3641=_0x3d143d;if(_0x15df09[_0x3a3641(0x241)]!==_0x3a3641(0x235))return;if(!ArtBrowserApp[_0x3a3641(0x1ea)])return;if(!ArtBrowserApp['_INSTANCE'][_0x3a3641(0x1a2)])return;SceneNavigation[_0x3a3641(0x1a3)](_0x15df09[_0x3a3641(0x21e)],_0x15df09[_0x3a3641(0x1f6)]);}),Hooks['on'](_0x3d143d(0x1c9),()=>this[_0x3d143d(0x222)]()),this[_0x3d143d(0x222)]();}constructor(){const _0x2b6869=_0x5a2cb2;super({'title':ArtBrowserApp[_0x2b6869(0x1d6)],'template':SharedConsts[_0x2b6869(0x224)]+_0x2b6869(0x1ee),'height':Util[_0x2b6869(0x208)](),'width':Math[_0x2b6869(0x246)](0x30c,Util[_0x2b6869(0x243)]()/0x2),'resizable':!![]}),this[_0x2b6869(0x1a2)]=![],this[_0x2b6869(0x1a6)]=null,this[_0x2b6869(0x197)]=null;}static[_0x5a2cb2(0x222)](){const _0x39224c=_0x5a2cb2;this[_0x39224c(0x24c)](),this[_0x39224c(0x1b7)](),this[_0x39224c(0x1a0)](),this[_0x39224c(0x229)]();}static[_0x5a2cb2(0x213)]({mode:_0x2f5d01,id:_0x2139f9,css:_0x30fa9f}){const _0x399775=_0x5a2cb2,_0x476ba8=Config[_0x399775(0x1fb)]('artBrowser',_0x399775(0x23d)),_0x4f2c67=$('#'+_0x2139f9);if(_0x476ba8[_0x2f5d01])return _0x4f2c67['remove']();if(_0x4f2c67['length'])return;$(_0x399775(0x22a)+_0x2139f9+_0x399775(0x1b5)+_0x30fa9f+_0x399775(0x1a8))[_0x399775(0x203)](document['body']);}static['_handleConfigUpdate_toggleTokenButton'](){const _0x11caca=_0x5a2cb2;this[_0x11caca(0x213)]({'mode':ConfigConsts['C_ART_IMAGE_MODE_TOKEN'],'id':ConfigConsts['C_ART_IMAGE_MODE_TOKEN'],'css':'\x0a\x09\x09\x09\x09#controls\x20.scene-control[data-control=\x22token\x22]\x20.control-tool[data-tool=\x22ve-art__btn-scene\x22]\x20{\x0a\x09\x09\x09\x09\x09display:\x20none\x20!important;\x0a\x09\x09\x09\x09}\x0a\x09\x09\x09'});}static[_0x5a2cb2(0x1b7)](){const _0x350ed3=_0x5a2cb2;this[_0x350ed3(0x213)]({'mode':ConfigConsts['C_ART_IMAGE_MODE_TILE'],'id':ArtBrowserApp[_0x350ed3(0x1bb)],'css':_0x350ed3(0x24a)});}static[_0x5a2cb2(0x1a0)](){const _0x368d06=_0x5a2cb2;this[_0x368d06(0x213)]({'mode':ConfigConsts['C_ART_IMAGE_MODE_NOTE'],'id':ArtBrowserApp[_0x368d06(0x23e)],'css':'\x0a\x09\x09\x09\x09#controls\x20.scene-control[data-control=\x22notes\x22]\x20.control-tool[data-tool=\x22ve-art__btn-scene\x22]\x20{\x0a\x09\x09\x09\x09\x09display:\x20none\x20!important;\x0a\x09\x09\x09\x09}\x0a\x09\x09\x09'});}static[_0x5a2cb2(0x229)](){const _0x1f7947=_0x5a2cb2;this['_handleConfigUpdate_toggleButton']({'mode':ConfigConsts['C_ART_IMAGE_MODE_SCENE'],'id':ArtBrowserApp['_ID_HIDE_MAIN_BUTTON'],'css':_0x1f7947(0x1ad)});}['_handleInstanceConfigUpdate'](){const _0x3cd9b4=_0x5a2cb2;this[_0x3cd9b4(0x19d)]();}['_handleInstanceConfigUpdate_cycleImportModeButton'](){const _0x26b865=_0x5a2cb2,_0x5f59f6=Config[_0x26b865(0x1fb)](_0x26b865(0x227),_0x26b865(0x247))??0x0;switch(_0x5f59f6){case ConfigConsts[_0x26b865(0x1cb)]:this[_0x26b865(0x1a6)]['html'](_0x26b865(0x223))['title'](_0x26b865(0x1d4)),UtilApplications[_0x26b865(0x20a)](this,ArtBrowserApp[_0x26b865(0x1d6)]+_0x26b865(0x1dc));break;case ConfigConsts[_0x26b865(0x1c5)]:this[_0x26b865(0x1a6)][_0x26b865(0x1a1)]('<span\x20class=\x22fas\x20fa-cubes\x22></span>')['title'](_0x26b865(0x1a7)),UtilApplications[_0x26b865(0x20a)](this,ArtBrowserApp[_0x26b865(0x1d6)]+'\x20-\x20Tiles');break;case ConfigConsts[_0x26b865(0x210)]:this[_0x26b865(0x1a6)][_0x26b865(0x1a1)](_0x26b865(0x1d7))[_0x26b865(0x237)]('Drag-Drop\x20Images\x20as\x20Notes'),UtilApplications[_0x26b865(0x20a)](this,ArtBrowserApp[_0x26b865(0x1d6)]+_0x26b865(0x1ae));break;case ConfigConsts[_0x26b865(0x1e2)]:this[_0x26b865(0x1a6)][_0x26b865(0x1a1)]('<span\x20class=\x22fas\x20fa-map\x22></span>')[_0x26b865(0x237)](_0x26b865(0x240)),UtilApplications[_0x26b865(0x20a)](this,ArtBrowserApp[_0x26b865(0x1d6)]+_0x26b865(0x1b1));break;default:throw new Error(_0x26b865(0x1ff)+_0x5f59f6+'\x22');}}['getData'](){const _0x25bc25=_0x5a2cb2;return{'owner':!![],'entity':{'name':_0x25bc25(0x1f1)}};}[_0x5a2cb2(0x228)](_0x4d8c59){const _0x1495c3=_0x5a2cb2;this[_0x1495c3(0x197)]=this['_handleInstanceConfigUpdate']['bind'](this),Hooks['on'](_0x1495c3(0x1c9),this[_0x1495c3(0x197)]),_0x4d8c59[_0x1495c3(0x204)](_0x1495c3(0x202))[_0x1495c3(0x1df)](_0x1495c3(0x1d9))['addClass'](_0x1495c3(0x1e8));const _0x277593=new ArtBrowserFvtt(_0x4d8c59,{'app':this});_0x277593[_0x1495c3(0x1c3)]()[_0x1495c3(0x1c2)](()=>{const _0x560973=_0x1495c3,_0x15e1da=_0x4d8c59['find']('.artr__search'),_0x2c6b66=$(_0x560973(0x1b0))[_0x560973(0x1ca)](()=>ArtBrowserApp[_0x560973(0x1fc)]());this[_0x560973(0x1a6)]=$(_0x560973(0x24f))[_0x560973(0x1ca)](()=>{const _0x435221=_0x560973,_0x5d935f=Config[_0x435221(0x1fb)]('artBrowser',_0x435221(0x247))||0x0,_0x40acaf=_0x5d935f===ConfigConsts[_0x435221(0x1e2)]?ConfigConsts[_0x435221(0x1cb)]:_0x5d935f+0x1;Config[_0x435221(0x1e6)](_0x435221(0x227),_0x435221(0x247),_0x40acaf);});const _0x19984b=$(_0x560973(0x1a5)+(Config[_0x560973(0x1fb)]('ui',_0x560973(0x1c1))?'':_0x560973(0x1b8))+_0x560973(0x1af))['click'](_0x221e5b=>Config[_0x560973(0x1b2)](_0x221e5b,_0x560973(0x227)));$$`<div class="flex-v-center h-100">
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Util, LGT} from "./Util.js";
+import {Config} from "./Config.js";
+import {UtilCanvas} from "./UtilCanvas.js";
+import {ArtBrowser} from "../art-js/ArtBrowser.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {ConfigConsts} from "./ConfigConsts.js";
+import {UtilEvents} from "./UtilEvents.js";
+import {UtilHooks} from "./UtilHooks.js";
+import {UtilImage} from "./UtilImage.js";
+
+class ArtBrowserFvtt extends ArtBrowser {
+	constructor ($parent, {app}) {
+		super($parent);
+
+		this._parent = app;
+	}
+
+	async _pGetDownloadModes () {
+		const out = [
+			this._textDownloadMode,
+			this._jsonDownloadMode,
+		];
+
+		if (await Config.P_GET_BACKEND_VERSION) {
+			out.unshift({
+				name: "Foundry Assets",
+				isMultipleFilesOnly: true,
+				pDownloadAsMultipleFiles: (json, ix, len) => this._parent._activateListeners_pHandleDownloadAssets(json, ix, len),
+			});
+		}
+
+		return out;
+	}
+
+	async _p$getBtnsItemThumbnail (meta) {
+		const $out = await super._p$getBtnsItemThumbnail(meta);
+
+		if (!await Config.P_GET_BACKEND_VERSION) return $out;
+
+		const $btnDownloadSingle = $(`<div class="artr__item__menu_item" title="Download Image"><span class="fas fa-fw fa-download"></span></div>`)
+			.click(async (evt) => {
+				evt.stopPropagation();
+				evt.preventDefault();
+
+				await this._parent.doDownloadSingleImage_(meta);
+			});
+
+		return [...$out, $btnDownloadSingle];
+	}
+}
+
+class ArtBrowserApp extends Application {
+	// region external
+	static preInit () {
+		Hooks.on("getSceneControlButtons", (buttonMetas) => {
+			if (!game.user.isGM) return;
+			this._preInit_addMainButton(buttonMetas);
+			this._preInit_addTileButton(buttonMetas);
+			this._preInit_addTokenButton(buttonMetas);
+			this._preInit_addNotesButton(buttonMetas);
+		});
+	}
+
+	static _preInit_handleOpenClick () {
+		if (ArtBrowserApp._INSTANCE) {
+			ArtBrowserApp._INSTANCE.render(true);
+			ArtBrowserApp._INSTANCE.maximize();
+			UtilApplications.bringToFront(ArtBrowserApp._INSTANCE);
+			return;
+		}
+
+		ArtBrowserApp._INSTANCE = new ArtBrowserApp();
+		ArtBrowserApp._INSTANCE.render(true);
+	}
+
+	static _preInit_addMainButton (buttonMetas) {
+		const existingOuter = buttonMetas.find(it => it.name === ArtBrowserApp._ART_SCENE_CONTROLS_NAME);
+		if (existingOuter) return;
+
+		// Create a fake layer button, with no tools
+		buttonMetas.push({
+			name: ArtBrowserApp._ART_SCENE_CONTROLS_NAME,
+			title: "Art Browser",
+			icon: "fas fa-fw fa-palette",
+			// We have to have a dummy tool to ensure our menu item gets rendered
+			tools: [
+				{
+					name: ArtBrowserApp._ART_SCENE_CONTROLS_NAME,
+					title: "Art Browser",
+					icon: "fas fa-fw fa-palette",
+					onClick: () => ui.notifications.info(`Hi! You shouldn't be able to click this, something has gone wrong.`),
+					button: true,
+				},
+			],
+			activeTool: "open",
+		});
+	}
+
+	static _preInit_getInnerToolMeta (mode) {
+		return {
+			name: ArtBrowserApp._ART_SCENE_CONTROLS_NAME,
+			title: "Art Browser",
+			icon: "fas fa-fw fa-palette",
+			onClick: () => {
+				Config.set("artBrowser", "importImagesAs", mode);
+				ArtBrowserApp._preInit_handleOpenClick();
+			},
+			button: true,
+		};
+	}
+
+	static _preInit_addTileButton (buttonMetas) {
+		this._preInit_addSubmenuButton(buttonMetas, "tiles", ConfigConsts.C_ART_IMAGE_MODE_TILE);
+	}
+
+	static _preInit_addTokenButton (buttonMetas) {
+		this._preInit_addSubmenuButton(buttonMetas, "token", ConfigConsts.C_ART_IMAGE_MODE_TOKEN);
+	}
+
+	static _preInit_addNotesButton (buttonMetas) {
+		this._preInit_addSubmenuButton(buttonMetas, "notes", ConfigConsts.C_ART_IMAGE_MODE_NOTE);
+	}
+
+	static _preInit_addSubmenuButton (buttonMetas, parentButtonName, modeId) {
+		const buttonMeta = buttonMetas.find(it => it.name === parentButtonName);
+		const isExists = buttonMeta.tools.some(it => it.name === ArtBrowserApp._ART_SCENE_CONTROLS_NAME);
+		if (isExists) return;
+		buttonMeta.tools.push(this._preInit_getInnerToolMeta(modeId));
+	}
+
+	static async _pDownloadPack (json) {
+		await fetch(
+			Config.backendEndpoint,
+			{
+				method: "post",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					type: "artBrowserDownloadPack",
+					json,
+					directoryPath: Config.get("artBrowser", "artDirectoryPath"),
+				}),
+			},
+		);
+	}
+
+	static init () {
+		// Subvert clicks on our fake layer button
+		const cachedOnClickLayer = ui.controls._onClickLayer.bind(ui.controls);
+		ui.controls._onClickLayer = function (event) {
+			if (event.currentTarget.dataset.control === ArtBrowserApp._ART_SCENE_CONTROLS_NAME) {
+				ArtBrowserApp._preInit_handleOpenClick();
+				return;
+			}
+			cachedOnClickLayer(event);
+		};
+		ui.controls.initialize();
+
+		// Prevent Foundry's anti-drag-drop mechanism from working
+		$(document.body).on("dragstart", ".artr__item__lnk-fullsize", evt => {
+			evt.stopPropagation();
+		});
+
+		document.getElementById("board").addEventListener("drop", this._handleCustomDrop.bind(this));
+
+		game.socket.on("progress", data => {
+			if (data.type !== "plutoniumDownloadPackImage") return;
+			if (!ArtBrowserApp._INSTANCE) return;
+			if (!ArtBrowserApp._INSTANCE._isDownloadingPack) return;
+
+			SceneNavigation._onLoadProgress(data.text, data.pct);
+		});
+
+		UtilHooks.on(UtilHooks.HK_CONFIG_UPDATE, () => this._handleConfigUpdate());
+		this._handleConfigUpdate();
+	}
+	// endregion
+
+	constructor () {
+		super({
+			title: ArtBrowserApp._BASE_TITLE,
+			template: `${SharedConsts.MODULE_LOCATION}/template/ArtBrowserApp.hbs`,
+			height: Util.getMaxWindowHeight(),
+			width: Math.max(780, Util.getMaxWindowWidth() / 2),
+			resizable: true,
+		});
+		this._isDownloadingPack = false;
+		this._$btnCycleImportMode = null;
+		this.__bound__handleInstanceConfigUpdate = null;
+	}
+
+	static _handleConfigUpdate () {
+		this._handleConfigUpdate_toggleTokenButton();
+		this._handleConfigUpdate_toggleTileButton();
+		this._handleConfigUpdate_toggleNotesButton();
+		this._handleConfigUpdate_toggleMainButton();
+	}
+
+	static _handleConfigUpdate_toggleButton ({mode, id, css}) {
+		const displayState = Config.get("artBrowser", "buttonDisplay");
+		const $style = $(`#${id}`);
+		if (displayState[mode]) return $style.remove();
+		if ($style.length) return;
+		$(`<style id="${id}">
+			${css}
+		</style>`).appendTo(document.body);
+	}
+
+	static _handleConfigUpdate_toggleTokenButton () {
+		this._handleConfigUpdate_toggleButton({
+			mode: ConfigConsts.C_ART_IMAGE_MODE_TOKEN,
+			id: ConfigConsts.C_ART_IMAGE_MODE_TOKEN,
+			css: `
+				#controls .scene-control[data-control="token"] .control-tool[data-tool="ve-art__btn-scene"] {
+					display: none !important;
+				}
+			`,
+		});
+	}
+
+	static _handleConfigUpdate_toggleTileButton () {
+		this._handleConfigUpdate_toggleButton({
+			mode: ConfigConsts.C_ART_IMAGE_MODE_TILE,
+			id: ArtBrowserApp._ID_HIDE_TILE_BUTTON,
+			css: `
+				#controls .scene-control[data-control="tiles"] .control-tool[data-tool="ve-art__btn-scene"] {
+					display: none !important;
+				}
+			`,
+		});
+	}
+
+	static _handleConfigUpdate_toggleNotesButton () {
+		this._handleConfigUpdate_toggleButton({
+			mode: ConfigConsts.C_ART_IMAGE_MODE_NOTE,
+			id: ArtBrowserApp._ID_HIDE_NOTES_BUTTON,
+			css: `
+				#controls .scene-control[data-control="notes"] .control-tool[data-tool="ve-art__btn-scene"] {
+					display: none !important;
+				}
+			`,
+		});
+	}
+
+	static _handleConfigUpdate_toggleMainButton () {
+		this._handleConfigUpdate_toggleButton({
+			mode: ConfigConsts.C_ART_IMAGE_MODE_SCENE,
+			id: ArtBrowserApp._ID_HIDE_MAIN_BUTTON,
+			css: `
+				#controls .scene-control[data-control="ve-art__btn-scene"] {
+					display: none !important;
+				}
+			`,
+		});
+	}
+
+	_handleInstanceConfigUpdate () {
+		this._handleInstanceConfigUpdate_cycleImportModeButton();
+	}
+
+	_handleInstanceConfigUpdate_cycleImportModeButton () {
+		const dropMode = Config.get("artBrowser", "importImagesAs") ?? 0;
+		switch (dropMode) {
+			case ConfigConsts.C_ART_IMAGE_MODE_TOKEN:
+				this._$btnCycleImportMode.html(`<span class="fas fa-fw fa-user"></span>`).title("Drag-Drop Images as Tokens");
+				UtilApplications.setApplicationTitle(this, `${ArtBrowserApp._BASE_TITLE} - Tokens`);
+				break;
+			case ConfigConsts.C_ART_IMAGE_MODE_TILE:
+				this._$btnCycleImportMode.html(`<span class="fas fa-fw fa-cubes"></span>`).title("Drag-Drop Images as Tiles");
+				UtilApplications.setApplicationTitle(this, `${ArtBrowserApp._BASE_TITLE} - Tiles`);
+				break;
+			case ConfigConsts.C_ART_IMAGE_MODE_NOTE:
+				this._$btnCycleImportMode.html(`<span class="fas fa-fw fa-bookmark"></span>`).title("Drag-Drop Images as Notes");
+				UtilApplications.setApplicationTitle(this, `${ArtBrowserApp._BASE_TITLE} - Notes`);
+				break;
+			case ConfigConsts.C_ART_IMAGE_MODE_SCENE:
+				this._$btnCycleImportMode.html(`<span class="fas fa-fw fa-map"></span>`).title("Drag-Drop Images as Scenes");
+				UtilApplications.setApplicationTitle(this, `${ArtBrowserApp._BASE_TITLE} - Scenes`);
+				break;
+			default: throw new Error(`Unhandled drop mode "${dropMode}"`);
+		}
+	}
+
+	getData () {
+		return {
+			owner: true, // Required for title menu to work
+			entity: {
+				name: "Art Browser", // Displayed in popout menu title
+			},
+		};
+	}
+
+	activateListeners ($html) {
+		this.__bound__handleInstanceConfigUpdate = this._handleInstanceConfigUpdate.bind(this);
+		UtilHooks.on(UtilHooks.HK_CONFIG_UPDATE, () => this.__bound__handleInstanceConfigUpdate);
+
+		$html.closest(`.window-content`)
+			.addClass("p-0")
+			.addClass("artb__window-outer");
+
+		const artBrowser = new ArtBrowserFvtt($html, {app: this});
+
+		artBrowser.pInit()
+			.then(() => {
+				// Add an additional button to quickly access the Plutonium config
+				const $wrpSearch = $html.find(`.artr__search`);
+
+				const $btnCancelPackDownload = $(`<button class="artr__btn-lg artr__btn-lg--search-controls mr-1" title="Cancel running downloads"><span class="fas fa-fw fa-stop"></span></button>`)
+					.click(() => ArtBrowserApp._doCancelPackDownload());
+
+				this._$btnCycleImportMode = $(`<button class="artr__btn-lg artr__btn-lg--search-controls mr-1"><span class="fas fa-fw fa-spinner"></span></button>`)
+					.click(() => {
+						const prevMode = Config.get("artBrowser", "importImagesAs") || 0;
+						const nxtMode = prevMode === ConfigConsts.C_ART_IMAGE_MODE_SCENE
+							? ConfigConsts.C_ART_IMAGE_MODE_TOKEN
+							: prevMode + 1;
+						Config.set("artBrowser", "importImagesAs", nxtMode);
+					});
+
+				const $btnOpenConfig = $(`<button class="artr__btn-lg artr__btn-lg--search-controls" title="Open ${Config.get("ui", "isStreamerMode") ? "" : "Plutonium "}Config window"><span class="fas fa-fw fa-cogs"></span></button>`)
+					.click(evt => Config.pHandleButtonClick(evt, "artBrowser"));
+
+				$$`<div class="flex-v-center h-100">
 					<div class="artr__search__divider mx-2"></div>
-					<div class="flex-v-center">${_0x2c6b66}</div>
-					<div class="flex-v-center">${this[_0x560973(0x1a6)]}</div>
-					<div class="flex-v-center">${_0x19984b}</div>
-				</div>`[_0x560973(0x203)](_0x15e1da),this['__bound__handleInstanceConfigUpdate']();});}static async[_0x5a2cb2(0x1fc)](){const _0x8dd423=_0x5a2cb2;await fetch(Config['backendEndpoint'],{'method':'post','headers':{'Content-Type':_0x8dd423(0x225)},'body':JSON['stringify']({'type':_0x8dd423(0x1b6)})});}async[_0x5a2cb2(0x19b)](_0x2e1f8e,_0x552cf8,_0x55f39f){const _0x14ddc4=_0x5a2cb2;try{ArtBrowserApp[_0x14ddc4(0x1ea)][_0x14ddc4(0x1a2)]=!![],await ArtBrowserApp[_0x14ddc4(0x1e3)](_0x2e1f8e);}catch(_0x3de6b1){ArtBrowserApp['_INSTANCE'][_0x14ddc4(0x1a2)]=![];}_0x552cf8+0x1===_0x55f39f&&(ArtBrowserApp[_0x14ddc4(0x1ea)][_0x14ddc4(0x1a2)]=![],ui['notifications'][_0x14ddc4(0x1bf)]('Download\x20complete!\x20Images\x20will\x20be\x20available\x20in\x20your\x20\x22User\x20Data\x22\x20directory.'));}async[_0x5a2cb2(0x1cd)](_0x5e3219){const _0x433ca1=_0x5a2cb2;try{await this[_0x433ca1(0x1c7)][_0x433ca1(0x19c)](_0x5e3219[_0x433ca1(0x242)]),ui['notifications'][_0x433ca1(0x1bf)](_0x433ca1(0x218)+Config[_0x433ca1(0x1fb)]('artBrowser',_0x433ca1(0x205))+'\x22)');}catch(_0x3c99d7){ui[_0x433ca1(0x1cf)][_0x433ca1(0x207)](_0x433ca1(0x20d)+VeCt[_0x433ca1(0x236)]);}}static[_0x5a2cb2(0x1b9)](_0x3653d2){const _0x23365b=_0x5a2cb2;let _0x414f5b;try{const _0x2e7215=_0x3653d2['dataTransfer'][_0x23365b(0x219)](_0x23365b(0x225));if(!_0x2e7215)return;_0x414f5b=JSON[_0x23365b(0x1d1)](_0x2e7215);}catch(_0x22d228){if(UtilCompat['isDragUploadActive']())return;ui[_0x23365b(0x1cf)]['error'](_0x23365b(0x1db)+VeCt[_0x23365b(0x236)]),setTimeout(()=>{throw _0x22d228;});}if(!_0x414f5b||_0x414f5b[_0x23365b(0x241)]!==_0x23365b(0x214))return;return this['_pDoLoadAndPlaceImage'](_0x3653d2,_0x414f5b)[_0x23365b(0x1b4)](_0x589be9=>{const _0x360e41=_0x23365b;ui[_0x360e41(0x1cf)][_0x360e41(0x207)](_0x360e41(0x1db)+VeCt[_0x360e41(0x236)]),setTimeout(()=>{throw _0x589be9;});}),![];}static async[_0x5a2cb2(0x1f8)](_0x40d6b0,_0xb83860){const _0x1d3671=_0x5a2cb2,_0x13c61d=Config[_0x1d3671(0x1fb)](_0x1d3671(0x227),_0x1d3671(0x247))??0x0;let _0x368c0a=_0xb83860[_0x1d3671(0x242)],_0x21f60e,_0x57fbbe,_0x391ea2;if(await this[_0x1d3671(0x23a)](_0x368c0a))_0x21f60e=await this[_0x1d3671(0x1fe)](_0x368c0a);else{if(await Config[_0x1d3671(0x244)]){console['warn'](...LGT,_0x1d3671(0x1f7)+_0x368c0a+_0x1d3671(0x201));try{const {url:_0x38aa71,image:_0x200933}=await this['_pLoadImageViaBackend'](_0x368c0a);_0x368c0a=_0x38aa71,_0x21f60e=_0x200933;}catch(_0x447c36){console[_0x1d3671(0x207)](...LGT,_0x1d3671(0x22e),_0x447c36),ui[_0x1d3671(0x1cf)][_0x1d3671(0x207)]('Failed\x20to\x20load\x20image!\x20'+VeCt['STR_SEE_CONSOLE']);return;}}else{new Dialog({'title':_0x1d3671(0x217),'content':_0x1d3671(0x1bc)+(Config[_0x1d3671(0x1fb)]('ui',_0x1d3671(0x1c1))?SharedConsts['MODULE_TITLE_FAKE']:SharedConsts['MODULE_TITLE'])+_0x1d3671(0x19e),'buttons':{'one':{'icon':_0x1d3671(0x199),'label':_0x1d3671(0x1c4)}}})[_0x1d3671(0x230)](!![]);return;}}const _0x32638a=()=>{const _0x16e5d8=_0x1d3671;let _0x24bc26=_0x368c0a[_0x16e5d8(0x1e1)]('/')[_0x16e5d8(0x19a)]();try{_0x24bc26=decodeURIComponent(_0x24bc26),_0x24bc26=_0x24bc26[_0x16e5d8(0x1e1)]('.')[0x0],_0x24bc26=_0x24bc26['replace'](/_/g,'\x20')['replace'](/\s+/g,'\x20')[_0x16e5d8(0x21d)](/\d+\s*[xX*]\s*\d+/g,'');}catch(_0x250bab){}return _0x24bc26;};_0x57fbbe=_0x21f60e[_0x1d3671(0x1b3)],_0x391ea2=_0x21f60e[_0x1d3671(0x20c)];let _0xb4765a=Config[_0x1d3671(0x1fb)](_0x1d3671(0x227),_0x1d3671(0x1f3));switch(_0x13c61d){case ConfigConsts[_0x1d3671(0x1cb)]:{const _0x5f4f1a=UtilCanvas['getPosCanvasSpace'](_0x40d6b0,'TokenLayer'),_0x5065d2=Config['get']('artBrowser',_0x1d3671(0x1de))||0x1;Token[_0x1d3671(0x234)]({'name':'-','x':_0x5f4f1a['x'],'y':_0x5f4f1a['y'],'img':encodeURL(_0x368c0a),'width':_0x5065d2,'height':_0x5065d2,'scale':0x1});break;}case ConfigConsts[_0x1d3671(0x1c5)]:{const _0x13c4d7=UtilCanvas[_0x1d3671(0x1ac)](_0x40d6b0,_0x1d3671(0x1a4));Tile[_0x1d3671(0x234)]({'img':encodeURL(_0x368c0a),'width':Math['round'](_0x57fbbe*_0xb4765a),'height':Math[_0x1d3671(0x1ed)](_0x391ea2*_0xb4765a),'hidden':![],'scale':_0xb4765a,'x':_0x13c4d7['x'],'y':_0x13c4d7['y'],'overhead':canvas['foreground']?.['_active']??![]});break;}case ConfigConsts[_0x1d3671(0x210)]:{const _0x50cc7d=UtilCanvas[_0x1d3671(0x1ac)](_0x40d6b0,_0x1d3671(0x1fd)),_0x26e33b=await JournalEntry[_0x1d3671(0x234)]({'name':_0x32638a(),'img':encodeURL(_0x368c0a)});Note[_0x1d3671(0x234)]({'entryId':_0x26e33b['id'],'icon':'icons/svg/book.svg','iconSize':0x28,'text':'','x':_0x50cc7d['x'],'y':_0x50cc7d['y']});break;}case ConfigConsts[_0x1d3671(0x1e2)]:{const _0x2454bc=Config[_0x1d3671(0x1fb)](_0x1d3671(0x227),'isSwitchToCreatedScene'),_0x3122ed={'name':_0x32638a(),'active':_0x2454bc,'navigation':!![],'img':encodeURL(_0x368c0a),'width':Math[_0x1d3671(0x1ed)](_0x57fbbe*_0xb4765a),'height':Math[_0x1d3671(0x1ed)](_0x391ea2*_0xb4765a)},_0x1afe16=await Scene[_0x1d3671(0x234)](_0x3122ed,{'renderSheet':Config[_0x1d3671(0x1fb)](_0x1d3671(0x227),_0x1d3671(0x200))});if(_0x2454bc)canvas[_0x1d3671(0x232)]();break;}}}static async[_0x5a2cb2(0x23a)](_0x9f91e6){const _0x1865f5=_0x5a2cb2;let _0x3f6035;try{_0x3f6035=new URL(_0x9f91e6);}catch(_0x6af1e){}if(_0x3f6035&&ArtBrowserApp['_BLOCKED_HOSTS'][_0x3f6035['host']])return![];try{const _0x70d11d=await fetch(_0x9f91e6);return await _0x70d11d[_0x1865f5(0x1ef)](),!![];}catch(_0x6bfbe4){if(_0x3f6035)ArtBrowserApp[_0x1865f5(0x1d2)][_0x3f6035[_0x1865f5(0x226)]]=!![];return![];}}static[_0x5a2cb2(0x1fe)](_0x180b9d){return new Promise((_0x4c75dc,_0x2d3c0a)=>{const _0x50c7c9=_0xf53f,_0x30bcd2=new Image();_0x30bcd2[_0x50c7c9(0x216)]=_0x2747f6=>_0x2d3c0a(_0x2747f6),_0x30bcd2['onload']=()=>_0x4c75dc(_0x30bcd2),_0x30bcd2[_0x50c7c9(0x1f2)]=_0x180b9d;});}static async['_pCopyImageToLocalViaBackend'](_0x281d9c){const _0x585762=_0x5a2cb2,_0x51e645=await fetch(Config['backendEndpoint'],{'method':'post','headers':{'Content-Type':_0x585762(0x225)},'body':JSON['stringify']({'type':'artBrowserCopyToLocal','url':_0x281d9c,'directoryPath':Config[_0x585762(0x1fb)](_0x585762(0x227),'artDirectoryPath')})}),_0x53e851=await _0x51e645[_0x585762(0x215)]();return _0x53e851['path'];}static async[_0x5a2cb2(0x19c)](_0xb2113f){const _0x3a1c4f=_0x5a2cb2,_0x23b13d=await this[_0x3a1c4f(0x22c)](_0xb2113f),_0x5f2125=await this[_0x3a1c4f(0x1fe)](_0x23b13d);return{'url':_0x23b13d,'image':_0x5f2125};}async['close'](..._0x437ada){const _0x14b217=_0x5a2cb2;await super['close'](..._0x437ada),Hooks[_0x14b217(0x249)]('plutonium.configUpdate',this[_0x14b217(0x197)]),ArtBrowserApp[_0x14b217(0x1ea)]=null;}}ArtBrowserApp['_BLOCKED_HOSTS']={},ArtBrowserApp[_0x5a2cb2(0x1ea)]=null,ArtBrowserApp[_0x5a2cb2(0x21b)]=_0x5a2cb2(0x1e7),ArtBrowserApp[_0x5a2cb2(0x1bb)]=_0x5a2cb2(0x198),ArtBrowserApp[_0x5a2cb2(0x23e)]=_0x5a2cb2(0x1d0),ArtBrowserApp[_0x5a2cb2(0x1cc)]=_0x5a2cb2(0x1bd),ArtBrowserApp['_ART_SCENE_CONTROLS_NAME']=_0x5a2cb2(0x1da),ArtBrowserApp[_0x5a2cb2(0x1d6)]=_0x5a2cb2(0x1f1);export{ArtBrowserApp};
+					<div class="flex-v-center">${$btnCancelPackDownload}</div>
+					<div class="flex-v-center">${this._$btnCycleImportMode}</div>
+					<div class="flex-v-center">${$btnOpenConfig}</div>
+				</div>`.appendTo($wrpSearch);
+
+				this.__bound__handleInstanceConfigUpdate();
+			});
+	}
+
+	static async _doCancelPackDownload () {
+		await fetch(
+			Config.backendEndpoint,
+			{
+				method: "post",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					type: "artBrowserCancelDownloadPack",
+				}),
+			},
+		);
+	}
+
+	async _activateListeners_pHandleDownloadAssets (json, ix, len) {
+		try {
+			ArtBrowserApp._INSTANCE._isDownloadingPack = true;
+			await ArtBrowserApp._pDownloadPack(json);
+		} catch (e) {
+			ArtBrowserApp._INSTANCE._isDownloadingPack = false;
+		}
+
+		if (ix + 1 === len) {
+			ArtBrowserApp._INSTANCE._isDownloadingPack = false;
+			ui.notifications.info(`Download complete! Images will be available in your "User Data" directory.`);
+		}
+	}
+
+	async doDownloadSingleImage_ (meta) {
+		try {
+			await this.constructor._pLoadImageViaBackend(meta.uri);
+			ui.notifications.info(`Image downloaded to your Art Directory ("${Config.get("artBrowser", "artDirectoryPath")}")`);
+		} catch (e) {
+			ui.notifications.error(`Failed to download image! ${VeCt.STR_SEE_CONSOLE}`);
+		}
+	}
+
+	static _handleCustomDrop (evt) {
+		const data = UtilEvents.getDropJson(evt);
+
+		if (data?.type !== "ve-Art") return;
+
+		this._pDoLoadAndPlaceImage(evt, data)
+			.catch(err => {
+				ui.notifications.error(`Failed to load image! ${VeCt.STR_SEE_CONSOLE}`);
+				setTimeout(() => { throw err; });
+			});
+
+		// prevent propagation/event bubbling
+		return false;
+	}
+
+	static async _pDoLoadAndPlaceImage (evt, data) {
+		// 0 = Tile; 1 = Token; 2 = Scene
+		const dropMode = Config.get("artBrowser", "importImagesAs") ?? 0;
+
+		const imageMeta = await this._pDoLoadAndPlaceImage_pGetImageMeta({url: data.uri});
+		if (!imageMeta) return;
+		const {url, image} = imageMeta;
+
+		const getPrettyName = () => {
+			let prettyName = url.split("/").last();
+			try {
+				prettyName = decodeURIComponent(prettyName);
+				prettyName = prettyName.split(".")[0];
+				prettyName = prettyName
+					.replace(/_/g, " ")
+					.replace(/\s+/g, " ")
+					.replace(/\d+\s*[xX*]\s*\d+/g, "")
+				;
+			} catch (ignored) {
+				// Do nothing
+			}
+			return prettyName;
+		};
+
+		const width = image.naturalWidth;
+		const height = image.naturalHeight;
+		const scale = Config.get("artBrowser", "scale");
+
+		switch (dropMode) {
+			case ConfigConsts.C_ART_IMAGE_MODE_TOKEN: {
+				const canvasPos = UtilCanvas.getPosCanvasSpace(evt, "TokenLayer");
+				const tokenSize = Config.get("artBrowser", "tokenSize") || 1;
+
+				TokenDocument.create(
+					{
+						name: "-",
+						x: canvasPos.x,
+						y: canvasPos.y,
+						img: encodeURL(url),
+						width: tokenSize,
+						height: tokenSize,
+						scale: 1,
+					},
+					{
+						parent: canvas.scene,
+					},
+				);
+
+				break;
+			}
+
+			case ConfigConsts.C_ART_IMAGE_MODE_TILE: {
+				const canvasPos = UtilCanvas.getPosCanvasSpace(evt, "BackgroundLayer");
+
+				Tile.create({
+					img: encodeURL(url),
+					width: Math.round(width * scale),
+					height: Math.round(height * scale),
+					hidden: false,
+					scale,
+					x: canvasPos.x,
+					y: canvasPos.y,
+					overhead: canvas.foreground?._active ?? false,
+				});
+
+				break;
+			}
+
+			case ConfigConsts.C_ART_IMAGE_MODE_NOTE: {
+				const canvasPos = UtilCanvas.getPosCanvasSpace(evt, "NotesLayer");
+
+				const journalEntry = await JournalEntry.create({
+					name: getPrettyName(),
+					img: encodeURL(url),
+				});
+
+				await canvas.scene.createEmbeddedDocuments(
+					"Note",
+					[
+						{
+							entryId: journalEntry.id,
+							icon: "icons/svg/book.svg",
+							iconSize: 40,
+							text: "",
+							x: canvasPos.x,
+							y: canvasPos.y,
+						},
+					],
+				);
+
+				break;
+			}
+
+			case ConfigConsts.C_ART_IMAGE_MODE_SCENE: {
+				const isActivate = Config.get("artBrowser", "isSwitchToCreatedScene");
+
+				// Based on `SceneDirectory._onCreate`
+				const createData = {
+					name: getPrettyName(),
+					active: isActivate,
+					navigation: Config.get("artBrowser", "isSceneAddToNavigation"),
+					img: encodeURL(url),
+					width: Math.round(width * scale),
+					height: Math.round(height * scale),
+
+					padding: Config.get("artBrowser", "scenePadding"),
+					backgroundColor: Config.get("artBrowser", "sceneBackgroundColor"),
+					tokenVision: Config.get("artBrowser", "isSceneTokenVision"),
+					fogExploration: Config.get("artBrowser", "isSceneFogExploration"),
+
+					gridDistance: Config.getMetricNumber({configGroup: "artBrowser", originalValue: 5, originalUnit: "ft", configKey: "isSceneGridMetric"}),
+					gridUnits: Config.getMetricUnit({configGroup: "artBrowser", originalUnit: "ft", configKey: "isSceneGridMetric"}),
+				};
+				const scene = await Scene.create(createData, {renderSheet: Config.get("artBrowser", "isDisplaySheetCreatedScene")});
+
+				if (isActivate) canvas.draw();
+
+				break;
+			}
+		}
+	}
+
+	static async _pDoLoadAndPlaceImage_pGetImageMeta ({url}) {
+		switch (Config.get("artBrowser", "imageSaveMode")) {
+			case ConfigConsts.C_ART_IMAGE_SAVE_MODE__DEFAULT: {
+				if (await this._pPingImage(url)) {
+					const image = await UtilImage.pLoadImage(url);
+					return {image, url};
+				}
+
+				return this._pDoLoadAndPlaceImage_pDoLoadViaBackend({url});
+			}
+
+			case ConfigConsts.C_ART_IMAGE_SAVE_MODE__ALWAYS: {
+				return this._pDoLoadAndPlaceImage_pDoLoadViaBackend({url});
+			}
+
+			case ConfigConsts.C_ART_IMAGE_SAVE_MODE__NEVER: {
+				if (await this._pPingImage(url)) {
+					const image = await UtilImage.pLoadImage(url);
+					return {image, url};
+				}
+
+				return null;
+			}
+		}
+	}
+
+	static async _pDoLoadAndPlaceImage_pDoLoadViaBackend ({url}) {
+		if (await Config.P_GET_BACKEND_VERSION) {
+			if (Config.get("artBrowser", "imageSaveMode") !== ConfigConsts.C_ART_IMAGE_SAVE_MODE__ALWAYS) console.warn(...LGT, `Could not directly load image from ${url}\u2014falling back on alternate loader (backend mod).`);
+
+			try {
+				const out = await this._pLoadImageViaBackend(url);
+				void out;
+				return out;
+			} catch (e) {
+				console.error(...LGT, "Failed to load image!", e);
+				ui.notifications.error(`Failed to load image! ${VeCt.STR_SEE_CONSOLE}`);
+				return;
+			}
+		}
+
+		new Dialog({
+			title: "Art Browser\u2014Backend Mod Required",
+			content: `<div>
+					<p>The image you dropped could not be loaded, likely due to CORS blocking. CORS blocking is a browser security feature which prevents potentially harmful content from being loaded from other websites.</p>
+					<p>Unfortunately, this security feature also blocks images. In order to work around this, you can install the ${Config.get("ui", "isStreamerMode") ? SharedConsts.MODULE_TITLE_FAKE : SharedConsts.MODULE_TITLE} backend mod. See the &quot;How to Modify the Backend&quot; section on the <a href="https://wiki.5e.tools/index.php/FoundryTool_Install" target="_blank" rel="noopener noreferrer">wiki</a> for more information.</p>
+					<p><b>Note that this is not possible on managed Foundry hosting services, such as The Forge.</b></p>
+				</div>`,
+			buttons: {
+				one: {
+					icon: `<i class="fas fa-fw fa-times"></i>`,
+					label: "Close",
+				},
+			},
+		}).render(true);
+	}
+
+	static async _pPingImage (uri) {
+		let url;
+		try {
+			url = new URL(uri);
+		} catch (ignored) {
+			// Do nothing
+		}
+
+		// Immediately return a failure for any previously-failed hosts
+		if (url && ArtBrowserApp._BLOCKED_HOSTS[url.host]) return false;
+
+		try {
+			const result = await fetch(uri);
+			await result.blob();
+			return true;
+		} catch (e) {
+			if (url) ArtBrowserApp._BLOCKED_HOSTS[url.host] = true;
+			return false;
+		}
+	}
+
+	static async _pCopyImageToLocalViaBackend (url) {
+		const fetched = await fetch(
+			Config.backendEndpoint,
+			{
+				method: "post",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					type: "artBrowserCopyToLocal",
+					url: url,
+					directoryPath: Config.get("artBrowser", "artDirectoryPath"),
+				}),
+			},
+		);
+		const json = await fetched.json();
+		return json.path;
+	}
+
+	static async _pLoadImageViaBackend (uri) {
+		const url = await this._pCopyImageToLocalViaBackend(uri);
+		const image = await UtilImage.pLoadImage(url);
+		return {url, image};
+	}
+
+	async close (...args) {
+		await super.close(...args);
+		UtilHooks.off(UtilHooks.HK_CONFIG_UPDATE, () => this.__bound__handleInstanceConfigUpdate);
+		ArtBrowserApp._INSTANCE = null;
+	}
+}
+ArtBrowserApp._BLOCKED_HOSTS = {};
+ArtBrowserApp._INSTANCE = null;
+ArtBrowserApp._ID_HIDE_TOKEN_BUTTON = "plutonium__art__hide-token-button";
+ArtBrowserApp._ID_HIDE_TILE_BUTTON = "plutonium__art__hide-tile-button";
+ArtBrowserApp._ID_HIDE_NOTES_BUTTON = "plutonium__art__hide-notes-button";
+ArtBrowserApp._ID_HIDE_MAIN_BUTTON = "plutonium__art__hide-main-button";
+ArtBrowserApp._ART_SCENE_CONTROLS_NAME = "ve-art__btn-scene";
+ArtBrowserApp._BASE_TITLE = "Art Browser";
+
+export {ArtBrowserApp};

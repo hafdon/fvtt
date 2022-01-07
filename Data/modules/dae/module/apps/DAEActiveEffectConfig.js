@@ -1,4 +1,4 @@
-import { ValidSpec, aboutTimeInstalled, confirmDelete, cubActive, conditionalVisibilityActive } from "../dae.js";
+import { ValidSpec, aboutTimeInstalled, confirmDelete, cubActive, conditionalVisibilityActive, ceActive, atlActive } from "../dae.js";
 import { i18n, confirmAction, daeSpecialDurations, daeMacroRepeats, log } from "../../dae.js";
 export var otherFields = [];
 export function addAutoFields(fields) {
@@ -30,7 +30,8 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         if (game.system.id === "dnd5e") {
             this.fieldsList = this.fieldsList.join(", ");
             this.traitList = duplicate(CONFIG.DND5E.damageResistanceTypes);
-            Object.keys(CONFIG.DND5E.damageResistanceTypes).forEach(type => {
+            this.traitList = mergeObject(this.traitList, CONFIG.DND5E.healingTypes);
+            Object.keys(this.traitList).forEach(type => {
                 this.traitList[`-${type}`] = `-${CONFIG.DND5E.damageResistanceTypes[type]}`;
             });
             this.languageList = duplicate(CONFIG.DND5E.languages);
@@ -54,7 +55,7 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
                 this.weaponProfList[`-${type}`] = `-${CONFIG.DND5E.weaponProficiencies[type]}`;
             });
         }
-        else {
+        else if (game.system.id === "sw5e") {
             this.fieldsList = this.fieldsList.join(", ");
             this.traitList = duplicate(CONFIG.SW5E.damageResistanceTypes);
             Object.keys(CONFIG.SW5E.damageResistanceTypes).forEach(type => {
@@ -87,6 +88,25 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
                 this.cubConditionList[cubc.name] = cubc.name;
             });
         }
+        this.statusEffectList = {};
+        let efl = CONFIG.statusEffects
+            .map(se => {
+            if (se.id.startsWith("combat-utility-belt."))
+                return { id: se.id, label: `${se.label} (CUB)` };
+            if (se.id.startsWith("Convenient Effect:"))
+                return { id: se.id, label: `${se.label} (CE)` };
+            return { id: se.id, label: i18n(se.label) };
+        })
+            .sort((a, b) => a.label < b.label ? -1 : 1);
+        efl.forEach(se => {
+            this.statusEffectList[se.id] = se.label;
+        });
+        if (ceActive) {
+            this.ceEffectList = {};
+            game.dfreds.effects?.all.forEach(ceEffect => {
+                this.ceEffectList[ceEffect.name] = ceEffect.name;
+            });
+        }
         const ConditionalVisibilityNames = ["invisible", "hidden", "obscured", "indarkness"];
         const ConditionalVisibilityVisionNames = ["blindsight", "devilssight", "seeinvisible", "tremorsense", "truesight"];
         if (conditionalVisibilityActive && false) {
@@ -99,12 +119,50 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
                 this.ConditionalVisibilityVisionList[cvc] = i18n(`CONVIS.${cvc}`);
             });
         }
+        if (atlActive) {
+            this.ATLPresets = {};
+            game.settings.get("ATL", "presets").forEach(preset => this.ATLPresets[preset.name] = preset.name);
+        }
+        this.validFields = { "__": "" };
         this.validFields = ValidSpec.allSpecs
             .filter(e => e._fieldSpec.includes(""))
             .reduce((mods, em) => {
             mods[em._fieldSpec] = em._label;
             return mods;
-        }, {});
+        }, this.validFields);
+        for (let field of otherFields) {
+            this.validFields[field] = field;
+        }
+    }
+    get toolProfList() { return DAEActiveEffectConfig.toolProfList; }
+    set toolProfList(list) { DAEActiveEffectConfig.toolProfList = list; }
+    get armorProfList() { return DAEActiveEffectConfig.armorProfList; }
+    set armorProfList(list) { DAEActiveEffectConfig.armorProfList = list; }
+    get weaponProfList() { return DAEActiveEffectConfig.weaponProfList; }
+    set weaponProfList(list) { DAEActiveEffectConfig.weaponProfList = list; }
+    static async setupProficiencies() {
+        if (game.system.id === "dnd5e") {
+            if (DAEActiveEffectConfig.profInit)
+                return;
+            this.profInit = true;
+            const pack = game.packs.get(CONFIG.DND5E.sourcePacks.ITEMS);
+            const profs = [
+                { type: "tool", list: DAEActiveEffectConfig.toolProfList },
+                { type: "armor", list: DAEActiveEffectConfig.armorProfList },
+                { type: "weapon", list: DAEActiveEffectConfig.weaponProfList }
+            ];
+            for (let { type, list } of profs) {
+                let choices = CONFIG.DND5E[`${type}Proficiencies`];
+                const ids = CONFIG.DND5E[`${type}Ids`];
+                if (ids !== undefined) {
+                    const typeProperty = (type !== "armor") ? `${type}Type` : `armor.type`;
+                    for (const [key, id] of Object.entries(ids)) {
+                        const item = await pack.getDocument(id);
+                        list[key] = item.name;
+                    }
+                }
+            }
+        }
     }
     /** @override */
     static get defaultOptions() {
@@ -157,10 +215,16 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
             return this.tokenMagicEffects;
         if (spec === "macro.CUB")
             return this.cubConditionList;
+        if (spec === "macro.CE")
+            return this.ceEffectList;
+        if (spec === "StatusEffect")
+            return this.statusEffectList;
         if (spec === "macro.ConditionalVisibility")
             return this.ConditionalVisibilityList;
         if (spec === "macro.ConditionalVisibilityVision")
             return this.ConditionalVisibilityVisionList;
+        if (spec === "ATL.preset")
+            return this.ATLPresets;
         /*
             blindsight: false
         devilssight: false
@@ -177,8 +241,9 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         return false;
     }
     /** @override */
-    getData(options) {
+    async getData(options) {
         const data = super.getData(options);
+        await DAEActiveEffectConfig.setupProficiencies();
         //@ts-ignore
         const allModes = Object.entries(CONST.ACTIVE_EFFECT_MODES)
             .reduce((obj, e) => {
@@ -189,6 +254,8 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         //@ts-ignore
         data.specialDuration = daeSpecialDurations;
         data.macroRepeats = daeMacroRepeats;
+        const translations = geti18nTranslations();
+        data.stackableOptions = translations.stackableOptions ?? { "none": "Effects do not stack", "multi": "Stacking effects apply the effect multiple times", "count": "each stack increase stack count by 1" };
         if (this.object.parent) {
             //@ts-ignore documentClass
             data.isItem = this.object.parent instanceof CONFIG.Item.documentClass;
@@ -225,11 +292,8 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
                 data.durationString = endTime.date + " " + endTime.time;
             }
         }
-        if (!data.effect.flags.dae?.specialDuration)
+        if (!data.effect.flags.dae?.specialDuration || !(data.effect.flags.dae.specialDuration instanceof Array))
             setProperty(data.effect.flags, "dae.specialDuration", []);
-        if (typeof data.effect.flags.dae?.specialDuration === "string") {
-            data.effect.flags.dae.specialDuration = [data.effect.flags.dae.specialDuration];
-        }
         data.sourceName = this.object.sourceName;
         data.fieldsList = this.fieldsList;
         return data;
@@ -237,7 +301,16 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
     _keySelected(event) {
         const target = event.target;
         // $(target.parentElement.parentElement.children[1]).find(".keylist").val(ValidSpec.allSpecs[target.selectedIndex].fieldSpec)
-        $(target.parentElement.parentElement.parentElement.children[0]).find(".awesomplete").val(ValidSpec.allSpecs[target.selectedIndex].fieldSpec);
+        if (target.selectedIndex === 0)
+            return; // Account for dummy element 0
+        $(target.parentElement.parentElement.parentElement.children[0]).find(".awesomplete").val(target.value);
+        /*
+            if (!ValidSpec.allSpecs[selected]) { // otherfields
+              $(target.parentElement.parentElement.parentElement.children[0]).find(".awesomplete").val(selected)
+            } else {
+              $(target.parentElement.parentElement.parentElement.children[0]).find(".awesomplete").val(ValidSpec.allSpecs[target.selectedIndex-1].fieldSpec)
+            }
+            */
         return this.submit({ preventClose: true }).then(() => this.render());
     }
     /* ----------------------------------------- */
@@ -313,7 +386,7 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         if (!formData.changes)
             formData.changes = [];
         formData.changes = Object.values(formData.changes);
-        if (formData.flags?.dae?.specialDuration) {
+        if (formData.flags?.dae?.specialDuration && typeof formData.flags.dae.specialDuration !== "string") {
             const newSpecDur = [];
             Object.values(formData.flags?.dae?.specialDuration).forEach(value => newSpecDur.push(value));
             formData.flags.dae.specialDuration = newSpecDur;
@@ -335,7 +408,7 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
         if (this.object.parent.isOwned) { // we are editing an owned item
             let itemData = this.object.parent.data.toObject();
             itemData.effects.forEach(efData => {
-                if (efData._id == this.object.id)
+                if (efData._id === this.object.id)
                     mergeObject(efData, formData, { overwrite: true, inplace: true });
             });
             return this.object.parent.actor.updateEmbeddedDocuments("Item", [itemData], { diff: true });
@@ -344,4 +417,11 @@ export class DAEActiveEffectConfig extends ActiveEffectConfig {
             await this.object.update(formData);
         }
     }
+}
+export function geti18nTranslations() {
+    let translations = game.i18n.translations["dae"];
+    //@ts-ignore _fallback not accessible
+    if (!translations)
+        translations = game.i18n._fallback["dae"];
+    return translations ?? {};
 }

@@ -1,1 +1,175 @@
-var _0x6d79=['DataSourceFile','name','SOURCE_TYP_CUSTOM','sourceLong','3HEjiiY','Name','5etools','Source','2909DTIZfr','2521nboxMC','absorbFnBindListenersRadio','type','DataSourceUrl','29OaMwRe','getFolderPathMeta','sourceClassName','Upload\x20File','absorbFnBindListeners','445878ziFFoo','sourceJsonToColor','doAbsorbItems','_pageFilter','text-center','condition','SRD','get','pGetHomebrewSources','isTemp','_pImportEntry_pImportToDirectoryGeneric_pGetImportableData','Importing\x20condition/disease\x20\x22','_isRadio','_pImportEntry_pImportToDirectoryGeneric','render','_actor','_list','URL_TO_HASH_BUILDER','mutateForFilters','getData','_isPreviewable','condition\x20or\x20disease','toTitleCase','DATA_URL_CONDITIONSDISEASES','items','Custom\x20URL','_activateListeners_absorbListItems','map','_pImportEntry_pImportToActor','_titleButtonRun','source','Conditions\x20&\x20Diseases','log','PG_CONDITIONS_DISEASES','disease','absorbFnGetData','sheet','sourceJsonToAbv','SOURCE_TYP_BREW','42IJciPH','\x22\x20(from\x20\x22','constructor','Item','299640FQybIZ','172475DfyPJG','Type','2975CDgZLM','_content','__prop','pGetConditionDiseaseItem','_page','TASK_EXIT_COMPLETE','isToken','132186MkPQln','_titleSearch','SOURCE_TYP_OFFICIAL_ALL','createEmbeddedDocuments'];var _0x27cf=function(_0x14643e,_0x1ce5c3){_0x14643e=_0x14643e-0xf9;var _0x6d796=_0x6d79[_0x14643e];return _0x6d796;};var _0x1939c2=_0x27cf;(function(_0x2df9ba,_0x437513){var _0x45b47f=_0x27cf;while(!![]){try{var _0x300efa=-parseInt(_0x45b47f(0x125))+-parseInt(_0x45b47f(0x12f))+-parseInt(_0x45b47f(0x121))*-parseInt(_0x45b47f(0x119))+-parseInt(_0x45b47f(0x126))*parseInt(_0x45b47f(0x10b))+parseInt(_0x45b47f(0x110))+parseInt(_0x45b47f(0x112))*-parseInt(_0x45b47f(0x12a))+parseInt(_0x45b47f(0x10f));if(_0x300efa===_0x437513)break;else _0x2df9ba['push'](_0x2df9ba['shift']());}catch(_0x2d251f){_0x2df9ba['push'](_0x2df9ba['shift']());}}}(_0x6d79,0x37991));import{ImportList}from'./ImportList.js';import{Vetools}from'./Vetools.js';import{LGT}from'./Util.js';import{Config}from'./Config.js';import{UtilList2}from'./UtilList2.js';import{UtilApplications}from'./UtilApplications.js';import{DataConverterConditionDisease}from'./DataConverterConditionDisease.js';import{UtilDataSource}from'./UtilDataSource.js';class ImportListConditionDisease extends ImportList{constructor(_0x210c56){var _0x13c3e3=_0x27cf;_0x210c56=_0x210c56||{},super({'title':'Import\x20Conditions\x20&\x20Diseases'},_0x210c56,{'props':[_0x13c3e3(0x134),_0x13c3e3(0x106)],'titleSearch':_0x13c3e3(0xf9),'sidebarTab':_0x13c3e3(0xfc),'gameProp':'items','defaultFolderPath':[_0x13c3e3(0x103)],'folderType':_0x13c3e3(0x10e),'pageFilter':new PageFilterConditionsDiseases(),'page':UrlUtil[_0x13c3e3(0x105)],'isPreviewable':!![],'isDedupable':!![]});}async['pGetSources'](){var _0x1d1f85=_0x27cf;return[new UtilDataSource[(_0x1d1f85(0x129))](Config[_0x1d1f85(0x136)]('ui','isStreamerMode')?_0x1d1f85(0x135):_0x1d1f85(0x123),Vetools[_0x1d1f85(0xfb)],{'filterTypes':[UtilDataSource[_0x1d1f85(0x11b)]],'isDefault':!![]}),new UtilDataSource['DataSourceUrl'](_0x1d1f85(0xfd),'',{'filterTypes':[UtilDataSource[_0x1d1f85(0x11f)]]}),new UtilDataSource[(_0x1d1f85(0x11d))](_0x1d1f85(0x12d),{'filterTypes':[UtilDataSource['SOURCE_TYP_CUSTOM']]}),...(await Vetools[_0x1d1f85(0x137)](_0x1d1f85(0x134),_0x1d1f85(0x106)))[_0x1d1f85(0xff)](({name:_0x5f53f5,url:_0x2543de})=>new UtilDataSource[(_0x1d1f85(0x129))](_0x5f53f5,_0x2543de,{'filterTypes':[UtilDataSource[_0x1d1f85(0x10a)]]}))];}[_0x1939c2(0x142)](){var _0x53e836=_0x1939c2;return{'isPreviewable':this[_0x53e836(0x143)],'titleButtonRun':this[_0x53e836(0x101)],'titleSearch':this[_0x53e836(0x11a)],'cols':[{'name':_0x53e836(0x111),'width':0x2,'field':_0x53e836(0x128),'rowClassName':_0x53e836(0x133)},{'name':_0x53e836(0x122),'width':0x7,'field':_0x53e836(0x11e)},{'name':_0x53e836(0x124),'width':0x2,'field':'source','titleProp':_0x53e836(0x120),'displayProp':'sourceShort','classNameProp':_0x53e836(0x12c),'rowClassName':'text-center'}],'rows':this[_0x53e836(0x113)][_0x53e836(0xff)]((_0x3dc1ee,_0x43f7e0)=>{var _0x227e33=_0x53e836;return this[_0x227e33(0x132)][_0x227e33(0x10d)][_0x227e33(0x141)](_0x3dc1ee),{'name':_0x3dc1ee[_0x227e33(0x11e)],'type':_0x3dc1ee[_0x227e33(0x114)][_0x227e33(0xfa)](),'source':_0x3dc1ee[_0x227e33(0x102)],'sourceShort':Parser[_0x227e33(0x109)](_0x3dc1ee[_0x227e33(0x102)]),'sourceLong':Parser['sourceJsonToFull'](_0x3dc1ee['source']),'sourceClassName':Parser[_0x227e33(0x130)](_0x3dc1ee['source']),'ix':_0x43f7e0};})};}[_0x1939c2(0xfe)](){var _0x560d75=_0x1939c2;this[_0x560d75(0x13f)][_0x560d75(0x131)](this['_content'],{'fnGetName':_0x59a91c=>_0x59a91c['name'],'fnGetValues':_0x4e58e4=>({'source':_0x4e58e4[_0x560d75(0x102)],'type':_0x4e58e4['__prop'],'hash':UrlUtil[_0x560d75(0x140)][this[_0x560d75(0x116)]](_0x4e58e4)}),'fnGetData':UtilList2[_0x560d75(0x107)],'fnBindListeners':_0x1b7d67=>this[_0x560d75(0x13b)]?UtilList2[_0x560d75(0x127)](this['_list'],_0x1b7d67):UtilList2[_0x560d75(0x12e)](this[_0x560d75(0x13f)],_0x1b7d67)});}[_0x1939c2(0x12b)](){var _0x475aef=_0x1939c2;return{...super[_0x475aef(0x12b)](),'type':{'label':_0x475aef(0x111),'getter':_0x6ef459=>_0x6ef459[_0x475aef(0x114)][_0x475aef(0xfa)]()}};}async['pImportEntry'](_0x354f5b,_0x308f6b){var _0x473bc4=_0x1939c2;_0x308f6b=_0x308f6b||{},console[_0x473bc4(0x104)](...LGT,_0x473bc4(0x13a)+_0x354f5b[_0x473bc4(0x11e)]+_0x473bc4(0x10c)+Parser[_0x473bc4(0x109)](_0x354f5b[_0x473bc4(0x102)])+'\x22)');if(_0x308f6b[_0x473bc4(0x138)])return this[_0x473bc4(0x13c)](_0x354f5b,_0x308f6b);else{if(this[_0x473bc4(0x13e)])return this[_0x473bc4(0x100)](_0x354f5b,_0x308f6b);else return this[_0x473bc4(0x13c)](_0x354f5b,_0x308f6b);}}async[_0x1939c2(0x100)](_0x285376,_0xa1d0ee){var _0x3e64bb=_0x1939c2;await this[_0x3e64bb(0x13e)][_0x3e64bb(0x11c)]('Item',[await DataConverterConditionDisease[_0x3e64bb(0x115)](_0x285376,{'isActorItem':!![]})],{});if(this[_0x3e64bb(0x13e)][_0x3e64bb(0x118)])this[_0x3e64bb(0x13e)][_0x3e64bb(0x108)][_0x3e64bb(0x13d)]();return{'imported':[{'name':_0x285376[_0x3e64bb(0x11e)],'actor':this[_0x3e64bb(0x13e)]}],'status':UtilApplications[_0x3e64bb(0x117)]};}[_0x1939c2(0x139)](_0x28d4bd,_0x2c5c4e){return DataConverterConditionDisease['pGetConditionDiseaseItem'](_0x28d4bd,_0x2c5c4e);}}export{ImportListConditionDisease};
+import {ImportedDocument, ImportList, ImportSummary} from "./ImportList.js";
+import {Vetools} from "./Vetools.js";
+import {LGT} from "./Util.js";
+import {Config} from "./Config.js";
+import {UtilList2} from "./UtilList2.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {DataConverterConditionDisease} from "./DataConverterConditionDisease.js";
+import {UtilDataSource} from "./UtilDataSource.js";
+import {UtilActors} from "./UtilActors.js";
+
+class ImportListConditionDisease extends ImportList {
+	constructor (externalData) {
+		externalData = externalData || {};
+		super(
+			{title: "Import Conditions & Diseases"},
+			externalData,
+			{
+				props: ["condition", "disease"],
+				dirsHomebrew: ["condition", "disease"],
+				titleSearch: "condition or disease",
+				sidebarTab: "items",
+				gameProp: "items",
+				defaultFolderPath: ["Conditions & Diseases"],
+				pageFilter: new PageFilterConditionsDiseases(),
+				page: UrlUtil.PG_CONDITIONS_DISEASES,
+				isPreviewable: true,
+				isDedupable: true,
+				configGroup: "importConditionDisease",
+			},
+		);
+	}
+
+	async pGetSources () {
+		return [
+			new UtilDataSource.DataSourceUrl(
+				Config.get("ui", "isStreamerMode") ? "SRD" : "5etools",
+				Vetools.DATA_URL_CONDITIONSDISEASES,
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_OFFICIAL_ALL],
+					isDefault: true,
+				},
+			),
+			new UtilDataSource.DataSourceUrl(
+				"Custom URL",
+				"",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			new UtilDataSource.DataSourceFile(
+				"Upload File",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			...(await this._pGetSourcesHomebrew()),
+		];
+	}
+
+	getData () {
+		return {
+			isPreviewable: this._isPreviewable,
+			titleButtonRun: this._titleButtonRun,
+			titleSearch: this._titleSearch,
+			cols: [
+				{
+					name: "Type",
+					width: 2,
+					field: "type",
+					rowClassName: "text-center",
+				},
+				{
+					name: "Name",
+					width: 7,
+					field: "name",
+				},
+				{
+					name: "Source",
+					width: 2,
+					field: "source",
+					titleProp: "sourceLong",
+					displayProp: "sourceShort",
+					classNameProp: "sourceClassName",
+					styleProp: "sourceStyle",
+					rowClassName: "text-center",
+				},
+			],
+			rows: this._content.map((it, ix) => {
+				this._pageFilter.constructor.mutateForFilters(it);
+
+				it._lType = it.__prop.toTitleCase();
+
+				return {
+					name: it.name,
+					type: it._lType,
+					source: it.source,
+					sourceShort: Parser.sourceJsonToAbv(it.source),
+					sourceLong: Parser.sourceJsonToFull(it.source),
+					sourceClassName: Parser.sourceJsonToColor(it.source),
+					sourceStyle: BrewUtil.sourceJsonToStylePart(it.source),
+					ix,
+				};
+			}),
+		};
+	}
+
+	_activateListeners_absorbListItems () {
+		this._list.doAbsorbItems(
+			this._content,
+			{
+				fnGetName: it => it.name,
+				// values used for sorting/search
+				fnGetValues: it => ({
+					source: it.source,
+					type: it.__prop,
+					hash: UrlUtil.URL_TO_HASH_BUILDER[this._page](it),
+				}),
+				fnGetData: UtilList2.absorbFnGetData,
+				fnBindListeners: it => this._isRadio
+					? UtilList2.absorbFnBindListenersRadio(this._list, it)
+					: UtilList2.absorbFnBindListeners(this._list, it),
+			},
+		);
+	}
+
+	getFolderPathMeta () {
+		return {
+			...super.getFolderPathMeta(),
+			type: {
+				label: "Type",
+				getter: it => it._lType,
+			},
+		};
+	}
+
+	/**
+	 * @param conDis
+	 * @param importOpts Options object.
+	 * @param [importOpts.isTemp] if the item should be temporary, and displayed.
+	 */
+	async _pImportEntry (conDis, importOpts) {
+		importOpts = importOpts || {};
+
+		console.log(...LGT, `Importing condition/disease "${conDis.name}" (from "${Parser.sourceJsonToAbv(conDis.source)}")`);
+
+		if (importOpts.isTemp) return this._pImportEntry_pImportToDirectoryGeneric(conDis, importOpts);
+		if (this._actor) return this._pImportEntry_pImportToActor(conDis, importOpts);
+		return this._pImportEntry_pImportToDirectoryGeneric(conDis, importOpts);
+	}
+
+	async _pImportEntry_pImportToActor (conDis, importOpts) {
+		await UtilActors.pAddActorItems(
+			this._actor,
+			[await DataConverterConditionDisease.pGetConditionDiseaseItem(conDis, {isActorItem: true})],
+		);
+
+		if (this._actor.isToken) this._actor.sheet.render();
+
+		return new ImportSummary({
+			status: UtilApplications.TASK_EXIT_COMPLETE,
+			imported: [
+				new ImportedDocument({
+					name: conDis.name,
+					actor: this._actor,
+				}),
+			],
+		});
+	}
+
+	_pImportEntry_pImportToDirectoryGeneric_pGetImportableData (it, getItemOpts) {
+		return DataConverterConditionDisease.pGetConditionDiseaseItem(it, getItemOpts);
+	}
+}
+
+export {ImportListConditionDisease};

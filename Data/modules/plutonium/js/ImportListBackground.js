@@ -1,1 +1,367 @@
-const _0x45ff=['443zTVSTE','get','BG_SKILL_PROFS_CUSTOMIZE','309139bxUJAs','push','absorbFnGetData','_titleSearch','skills','ImportListBackground.customFeatures','doAbsorbItems','traits','pAddActorItems','sourceShort','pFillActorSkillData','toolProf','sourceJsonToFull','source','SOURCE_TYP_BREW','currency','log','sourceClassName','_pImportEntry_pImportToDirectoryGeneric','_activateListeners_absorbListItems','toolProficiencies','5etools','URL_TO_HASH_BUILDER','SYM_UI_SKIP','_pImportEntry_pFillProficiencies','ImportEntryOpts','Skills','_normalisedTime','_pImportEntry_pImportToActor','_skillDisplay','49366yJYgVv','Backgrounds','pFillActorLanguageData','_pImportEntry_pImportToActor_pImportStartingEquipment','isCustomize','map','Would\x20you\x20like\x20to\x20{@book\x20customize\x20your\x20skill\x20selection|phb|4|backgrounds|customizing\x20a\x20background}?<br>This\x20allows\x20you\x20to\x20choose\x20any\x20two\x20skills\x20to\x20gain\x20from\x20your\x20background,\x20rather\x20than\x20gaining\x20the\x20defaults.','Customize','pPreloadHidden','607737ZTGKKj','data','<div\x20class=\x22w-640p\x22>','_initCreateSheetItemHook','Background','length','Importing\x20background\x20\x22','pFillActorToolProfData','page','1upgkHL','isStreamerMode','_content','949677vBPiNj','_list','Customize\x20Background:\x20Languages\x20&\x20Tools','sourceJsonToAbv','pInit','update','12awVaqp','DATA_URL_BACKGROUNDS','render','_actor','isToken','_pImportEntry_pFillDetails','text-center','_page','pFillActorLanguageOrToolData','applyFormDataToActorUpdate','_foundryIsSkipImportCharacteristics','pFillActorCharacteristicsData','set','SOURCE_TYP_OFFICIAL_ALL','SOURCE_TYP_CUSTOM','TASK_EXIT_COMPLETE','_foundryIsSkipCustomizeLanguagesTools','_foundryFormDataFeatures','_pageFilter','DataSourceFile','getBackgroundItem','DataSourceUrl','Would\x20you\x20like\x20to\x20{@book\x20customize\x20your\x20language\x20and\x20tool\x20selection|phb|4|backgrounds|customizing\x20a\x20background}?<br>This\x20allows\x20you\x20to\x20choose\x20a\x20total\x20of\x20any\x20two\x20languages\x20and/or\x20tool\x20proficiencies\x20to\x20gain\x20from\x20your\x20background,\x20rather\x20than\x20gaining\x20the\x20defaults.','startingEquipment','languages','pGetUserBoolean','sourceJsonToColor','Custom\x20URL','entries','constructor','items','isCancelled','absorbFnBindListenersRadio','Customize\x20Background:\x20Skills','pGetHomebrewSources','absorbFnBindListeners','skillProficiencies','isTemp','name','pImportEntry','TASK_EXIT_CANCELLED','</div>','pImportEquipmentItemEntries','_modalFilterBackgrounds','mutateForFilters','_titleButtonRun','pGetBackgroundFeatureItem','pGetSources','Item','416595spbahw','2243jsuBlK','backgrounds','background','\x22\x20(from\x20\x22','LANG_TOOL_PROFS_CUSTOMIZE','languageProficiencies','Use\x20Default','113740tdHWMG','22AzpgRB','_pImportEntry_pFillItems','getData','Name','init'];const _0x11ba=function(_0x3cc4ad,_0x485490){_0x3cc4ad=_0x3cc4ad-0x11a;let _0x45ff8c=_0x45ff[_0x3cc4ad];return _0x45ff8c;};const _0x416fce=_0x11ba;(function(_0x4ebf67,_0x4b769b){const _0x15a6bd=_0x11ba;while(!![]){try{const _0x3f2f60=parseInt(_0x15a6bd(0x159))+parseInt(_0x15a6bd(0x151))+-parseInt(_0x15a6bd(0x152))*parseInt(_0x15a6bd(0x15f))+parseInt(_0x15a6bd(0x15a))*-parseInt(_0x15a6bd(0x180))+parseInt(_0x15a6bd(0x189))*-parseInt(_0x15a6bd(0x192))+-parseInt(_0x15a6bd(0x11a))+parseInt(_0x15a6bd(0x162))*parseInt(_0x15a6bd(0x120));if(_0x3f2f60===_0x4b769b)break;else _0x4ebf67['push'](_0x4ebf67['shift']());}catch(_0x15d46d){_0x4ebf67['push'](_0x4ebf67['shift']());}}}(_0x45ff,0x93308));import{Vetools}from'./Vetools.js';import{LGT}from'./Util.js';import{UtilActors}from'./UtilActors.js';import{DataConverter}from'./DataConverter.js';import{Config}from'./Config.js';import{UtilList2}from'./UtilList2.js';import{UtilApplications}from'./UtilApplications.js';import{ImportListCharacter}from'./ImportListCharacter.js';import{DataConverterBackground}from'./DataConverterBackground.js';import{Charactermancer_StartingEquipment}from'./UtilCharactermancerEquipment.js';import{Charactermancer_Background_Characteristics,Charactermancer_Background_Features}from'./UtilCharactermancerBackground.js';import{UtilDataSource}from'./UtilDataSource.js';import{ModalFilterBackgroundsFvtt}from'./UtilModalFilter.js';class ImportListBackground extends ImportListCharacter{static[_0x416fce(0x15e)](){const _0x3eab6=_0x416fce;this[_0x3eab6(0x18c)]({'prop':'background','importerName':_0x3eab6(0x18d)});}constructor(_0x50644a){const _0x9b5601=_0x416fce;_0x50644a=_0x50644a||{},super({'title':'Import\x20Backgrounds'},_0x50644a,{'props':[_0x9b5601(0x154)],'titleSearch':_0x9b5601(0x153),'sidebarTab':_0x9b5601(0x13e),'gameProp':_0x9b5601(0x13e),'defaultFolderPath':[_0x9b5601(0x181)],'folderType':_0x9b5601(0x150),'pageFilter':new PageFilterBackgrounds(),'isActorRadio':!![],'page':UrlUtil['PG_BACKGROUNDS'],'isPreviewable':!![],'isDedupable':!![]}),this[_0x9b5601(0x14b)]=null;}async[_0x416fce(0x14f)](){const _0x242b14=_0x416fce;return[new UtilDataSource[(_0x242b14(0x135))](Config['get']('ui',_0x242b14(0x193))?'SRD':_0x242b14(0x177),Vetools[_0x242b14(0x121)],{'filterTypes':[UtilDataSource[_0x242b14(0x12d)]],'isDefault':!![]}),new UtilDataSource[(_0x242b14(0x135))](_0x242b14(0x13b),'',{'filterTypes':[UtilDataSource[_0x242b14(0x12e)]]}),new UtilDataSource[(_0x242b14(0x133))]('Upload\x20File',{'filterTypes':[UtilDataSource['SOURCE_TYP_CUSTOM']]}),...(await Vetools[_0x242b14(0x142)](_0x242b14(0x154)))[_0x242b14(0x185)](({name:_0x3c6533,url:_0x24c36a})=>new UtilDataSource[(_0x242b14(0x135))](_0x3c6533,_0x24c36a,{'filterTypes':[UtilDataSource[_0x242b14(0x170)]]}))];}[_0x416fce(0x15c)](){const _0x157ced=_0x416fce,_0x3b9ddd={'isPreviewable':this['_isPreviewable'],'titleButtonRun':this[_0x157ced(0x14d)],'titleSearch':this[_0x157ced(0x165)],'cols':[{'name':_0x157ced(0x15d),'width':0x4,'field':_0x157ced(0x146)},{'name':_0x157ced(0x17c),'width':0x6,'field':_0x157ced(0x166)},{'name':'Source','width':0x1,'field':_0x157ced(0x16f),'titleProp':'sourceLong','displayProp':_0x157ced(0x16b),'classNameProp':_0x157ced(0x173),'rowClassName':_0x157ced(0x126)}],'rows':this[_0x157ced(0x194)][_0x157ced(0x185)]((_0x584591,_0x39895b)=>{const _0x103690=_0x157ced;return this[_0x103690(0x132)][_0x103690(0x13d)][_0x103690(0x14c)](_0x584591),{'name':_0x584591[_0x103690(0x146)],'skills':_0x584591[_0x103690(0x17f)],'source':_0x584591[_0x103690(0x16f)],'sourceShort':Parser['sourceJsonToAbv'](_0x584591['source']),'sourceLong':Parser[_0x103690(0x16e)](_0x584591[_0x103690(0x16f)]),'sourceClassName':Parser[_0x103690(0x13a)](_0x584591[_0x103690(0x16f)]),'ix':_0x39895b};})};return this[_0x157ced(0x123)]&&(_0x3b9ddd['isRadio']=!![]),_0x3b9ddd;}[_0x416fce(0x175)](){const _0xdf3a32=_0x416fce;this[_0xdf3a32(0x11b)][_0xdf3a32(0x168)](this[_0xdf3a32(0x194)],{'fnGetName':_0x167912=>_0x167912[_0xdf3a32(0x146)],'fnGetValues':_0x4d63a3=>({'source':_0x4d63a3[_0xdf3a32(0x16f)],'skills':_0x4d63a3['_skillDisplay'],'normalisedTime':_0x4d63a3[_0xdf3a32(0x17d)],'normalisedRange':_0x4d63a3['_normalisedRange'],'hash':UrlUtil[_0xdf3a32(0x178)][this[_0xdf3a32(0x127)]](_0x4d63a3)}),'fnGetData':UtilList2[_0xdf3a32(0x164)],'fnBindListeners':_0x19b388=>this[_0xdf3a32(0x123)]?UtilList2[_0xdf3a32(0x140)](this[_0xdf3a32(0x11b)],_0x19b388):UtilList2[_0xdf3a32(0x143)](this['_list'],_0x19b388)});}async[_0x416fce(0x11e)](){const _0x49c265=_0x416fce;await super['pInit'](),this[_0x49c265(0x14b)]=new ModalFilterBackgroundsFvtt({'namespace':_0x49c265(0x167),'isRadio':!![],'allData':this[_0x49c265(0x194)]}),await this[_0x49c265(0x14b)][_0x49c265(0x188)]();}async[_0x416fce(0x147)](_0x25cb27,_0x204016){const _0xa5dedf=_0x416fce;_0x204016=_0x204016||{},console[_0xa5dedf(0x172)](...LGT,_0xa5dedf(0x18f)+_0x25cb27[_0xa5dedf(0x146)]+_0xa5dedf(0x155)+Parser[_0xa5dedf(0x11d)](_0x25cb27['source'])+'\x22)');if(_0x204016[_0xa5dedf(0x145)])return this[_0xa5dedf(0x174)](_0x25cb27,_0x204016);else{if(this[_0xa5dedf(0x123)])return this[_0xa5dedf(0x17e)](_0x25cb27,_0x204016);else return this[_0xa5dedf(0x174)](_0x25cb27,_0x204016);}}async[_0x416fce(0x17e)](_0x140dfd,_0x46a0a9){const _0xe304a7=_0x416fce,_0x87e5fc={'data':{'details':{'background':_0x140dfd[_0xe304a7(0x146)]}}},_0x29b9ce=new ImportListBackground['ImportEntryOpts']();await this[_0xe304a7(0x17a)](_0x140dfd,_0x87e5fc[_0xe304a7(0x18a)],_0x29b9ce);if(_0x29b9ce[_0xe304a7(0x13f)])return{'status':UtilApplications[_0xe304a7(0x148)]};await this[_0xe304a7(0x125)](_0x140dfd,_0x87e5fc,_0x29b9ce);if(_0x29b9ce[_0xe304a7(0x13f)])return{'status':UtilApplications[_0xe304a7(0x148)]};await this[_0xe304a7(0x15b)](_0x140dfd,_0x87e5fc,_0x29b9ce);const _0x449ace=await this[_0xe304a7(0x183)](_0x140dfd,_0x29b9ce);if(_0x29b9ce[_0xe304a7(0x13f)])return{'status':UtilApplications[_0xe304a7(0x148)]};if(_0x449ace?.[_0xe304a7(0x18a)]?.[_0xe304a7(0x171)])MiscUtil[_0xe304a7(0x12c)](_0x87e5fc,'data',_0xe304a7(0x171),_0x449ace[_0xe304a7(0x18a)][_0xe304a7(0x171)]);this[_0xe304a7(0x123)][_0xe304a7(0x11f)](_0x87e5fc),await Charactermancer_StartingEquipment[_0xe304a7(0x14a)](this['_actor'],_0x449ace);if(this['_actor'][_0xe304a7(0x124)])this[_0xe304a7(0x123)]['sheet']['render']();return{'imported':[{'name':_0x140dfd[_0xe304a7(0x146)],'actor':this['_actor']}],'status':UtilApplications[_0xe304a7(0x12f)]};}async['_pImportEntry_pImportToActor_pImportStartingEquipment'](_0x5e902c,_0x595a0b){const _0x141e43=_0x416fce;if(!_0x5e902c[_0x141e43(0x137)])return;const _0x74b308={'defaultData':_0x5e902c[_0x141e43(0x137)]},_0x77144b=new Charactermancer_StartingEquipment({'actor':this[_0x141e43(0x123)],'startingEquipment':_0x74b308,'appSubTitle':_0x5e902c[_0x141e43(0x146)],'equiSpecialSource':_0x5e902c[_0x141e43(0x16f)],'equiSpecialPage':_0x5e902c[_0x141e43(0x191)]}),_0x41cd29=await _0x77144b['pWaitForUserInput']();if(_0x41cd29==null)return _0x595a0b[_0x141e43(0x13f)]=!![],null;return _0x41cd29;}['_pImportEntry_pImportToDirectoryGeneric_pGetImportableData'](_0x489492,_0x291824){const _0x5f763a=_0x416fce;return DataConverterBackground[_0x5f763a(0x134)](_0x489492,_0x291824);}async[_0x416fce(0x17a)](_0x2e8b72,_0x146793,_0xdca60f){const _0x598699=_0x416fce,_0x16927a=!_0x2e8b72['_foundryIsSkipCustomizeSkills']&&await InputUiUtil[_0x598699(0x139)]({'title':_0x598699(0x141),'htmlDescription':_0x598699(0x18b)+Renderer[_0x598699(0x160)]()[_0x598699(0x122)](_0x598699(0x186))+_0x598699(0x149),'textNo':_0x598699(0x158),'textYes':_0x598699(0x187)});_0xdca60f['isCustomize']=_0xdca60f[_0x598699(0x184)]||!!_0x16927a;_0x16927a?await DataConverter[_0x598699(0x16c)](MiscUtil['get'](this['_actor'],_0x598699(0x18a),_0x598699(0x18a),'skills'),UtilActors[_0x598699(0x161)],_0x146793,_0xdca60f):await DataConverter[_0x598699(0x16c)](MiscUtil[_0x598699(0x160)](this[_0x598699(0x123)],_0x598699(0x18a),'data',_0x598699(0x166)),_0x2e8b72[_0x598699(0x144)],_0x146793,_0xdca60f);if(_0xdca60f[_0x598699(0x13f)])return;const _0x3b434d=!_0x2e8b72[_0x598699(0x130)]&&await InputUiUtil['pGetUserBoolean']({'title':_0x598699(0x11c),'htmlDescription':_0x598699(0x18b)+Renderer['get']()[_0x598699(0x122)](_0x598699(0x136))+'</div>','textNo':_0x598699(0x158),'textYes':_0x598699(0x187)});_0xdca60f[_0x598699(0x184)]=_0xdca60f[_0x598699(0x184)]||!!_0x3b434d;if(_0x3b434d)await DataConverter[_0x598699(0x128)](MiscUtil[_0x598699(0x160)](this[_0x598699(0x123)],_0x598699(0x18a),_0x598699(0x18a),_0x598699(0x169),_0x598699(0x138)),MiscUtil[_0x598699(0x160)](this[_0x598699(0x123)],_0x598699(0x18a),'data',_0x598699(0x169),_0x598699(0x16d)),UtilActors[_0x598699(0x156)],_0x146793,_0xdca60f);else{await DataConverter[_0x598699(0x182)](MiscUtil[_0x598699(0x160)](this[_0x598699(0x123)],_0x598699(0x18a),_0x598699(0x18a),_0x598699(0x169),_0x598699(0x138)),_0x2e8b72[_0x598699(0x157)],_0x146793,_0xdca60f);if(_0xdca60f[_0x598699(0x13f)])return;_0xdca60f[_0x598699(0x13f)]=await DataConverter[_0x598699(0x190)](MiscUtil['get'](this[_0x598699(0x123)],_0x598699(0x18a),_0x598699(0x18a),_0x598699(0x169),_0x598699(0x16d)),_0x2e8b72[_0x598699(0x176)],_0x146793);}}async[_0x416fce(0x125)](_0x22a480,_0x49e888,_0xb840fd){const _0x17ba31=_0x416fce;if(_0x22a480[_0x17ba31(0x12a)])return;if(_0x22a480['_foundryFormDataCharacteristics'])return Charactermancer_Background_Characteristics[_0x17ba31(0x129)](_0x49e888,_0x22a480['_foundryFormDataCharacteristics']);await Charactermancer_Background_Characteristics[_0x17ba31(0x12b)](_0x22a480[_0x17ba31(0x13c)],_0x49e888,_0xb840fd);}async[_0x416fce(0x15b)](_0x30ad94,_0x94b937,_0x4dcde8){const _0x15588d=_0x416fce,_0x39843d=_0x30ad94[_0x15588d(0x131)]??await Charactermancer_Background_Features['pGetUserInput']({'entries':_0x30ad94[_0x15588d(0x13c)],'modalFilter':this[_0x15588d(0x14b)]});if(!_0x39843d)return _0x4dcde8[_0x15588d(0x13f)]=!![];if(_0x39843d!==VeCt[_0x15588d(0x179)]){_0x4dcde8[_0x15588d(0x184)]=_0x4dcde8[_0x15588d(0x184)]||_0x39843d[_0x15588d(0x18a)]?.['isCustomize'];for(const _0x4408f2 of _0x39843d?.[_0x15588d(0x18a)]?.[_0x15588d(0x13c)]){_0x4dcde8[_0x15588d(0x13e)][_0x15588d(0x163)](await DataConverterBackground[_0x15588d(0x14e)](_0x30ad94,_0x4408f2,this[_0x15588d(0x123)],_0x4dcde8));}}if(_0x4dcde8[_0x15588d(0x13e)][_0x15588d(0x18e)])await UtilActors[_0x15588d(0x16a)](this[_0x15588d(0x123)],_0x4dcde8['items']);}}ImportListBackground[_0x416fce(0x17b)]=class extends ImportListCharacter['ImportEntryOpts']{constructor(_0x49ba1f){const _0x291cbb=_0x416fce;_0x49ba1f=_0x49ba1f||{},super(_0x49ba1f),this[_0x291cbb(0x184)]=![];}};export{ImportListBackground};
+import {Vetools} from "./Vetools.js";
+import {LGT} from "./Util.js";
+import {UtilActors} from "./UtilActors.js";
+import {DataConverter} from "./DataConverter.js";
+import {Config} from "./Config.js";
+import {UtilList2} from "./UtilList2.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {ImportListCharacter} from "./ImportListCharacter.js";
+import {DataConverterBackground} from "./DataConverterBackground.js";
+import {Charactermancer_StartingEquipment} from "./UtilCharactermancerEquipment.js";
+import {
+	Charactermancer_Background_Characteristics,
+	Charactermancer_Background_Features,
+} from "./UtilCharactermancerBackground.js";
+import {UtilDataSource} from "./UtilDataSource.js";
+import {ModalFilterBackgroundsFvtt} from "./UtilModalFilter.js";
+import {ImportedDocument, ImportSummary} from "./ImportList.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+import {UtilDocuments} from "./UtilDocuments.js";
+
+class ImportListBackground extends ImportListCharacter {
+	// region External
+	static init () {
+		this._initCreateSheetItemHook({
+			prop: "background",
+			importerName: "Background",
+		});
+	}
+	// endregion
+
+	constructor (externalData) {
+		externalData = externalData || {};
+		super(
+			{title: "Import Backgrounds"},
+			externalData,
+			{
+				props: ["background"],
+				dirsHomebrew: ["background"],
+				titleSearch: "backgrounds",
+				sidebarTab: "items",
+				gameProp: "items",
+				defaultFolderPath: ["Backgrounds"],
+				pageFilter: new PageFilterBackgrounds(),
+				isActorRadio: true,
+				page: UrlUtil.PG_BACKGROUNDS,
+				isPreviewable: true,
+				isDedupable: true,
+				configGroup: "importBackground",
+			},
+		);
+
+		this._modalFilterBackgrounds = null;
+	}
+
+	async pGetSources () {
+		return [
+			new UtilDataSource.DataSourceUrl(
+				Config.get("ui", "isStreamerMode") ? "SRD" : "5etools",
+				Vetools.DATA_URL_BACKGROUNDS,
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_OFFICIAL_ALL],
+					isDefault: true,
+				},
+			),
+			new UtilDataSource.DataSourceUrl(
+				"Custom URL",
+				"",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			new UtilDataSource.DataSourceFile(
+				"Upload File",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			...(await this._pGetSourcesHomebrew()),
+		];
+	}
+
+	getData () {
+		const out = {
+			isPreviewable: this._isPreviewable,
+			titleButtonRun: this._titleButtonRun,
+			titleSearch: this._titleSearch,
+			cols: [
+				{
+					name: "Name",
+					width: 4,
+					field: "name",
+				},
+				{
+					name: "Skills",
+					width: 6,
+					field: "skills",
+				},
+				{
+					name: "Source",
+					width: 1,
+					field: "source",
+					titleProp: "sourceLong",
+					displayProp: "sourceShort",
+					classNameProp: "sourceClassName",
+					styleProp: "sourceStyle",
+					rowClassName: "text-center",
+				},
+			],
+			rows: this._content.map((it, ix) => {
+				this._pageFilter.constructor.mutateForFilters(it);
+
+				return {
+					name: it.name,
+					skills: it._skillDisplay,
+					source: it.source,
+					sourceShort: Parser.sourceJsonToAbv(it.source),
+					sourceLong: Parser.sourceJsonToFull(it.source),
+					sourceClassName: Parser.sourceJsonToColor(it.source),
+					sourceStyle: BrewUtil.sourceJsonToStylePart(it.source),
+					ix,
+				};
+			}),
+		};
+
+		if (this._actor) {
+			out.isRadio = true;
+		}
+
+		return out;
+	}
+
+	_activateListeners_absorbListItems () {
+		this._list.doAbsorbItems(
+			this._content,
+			{
+				fnGetName: it => it.name,
+				// values used for sorting/search
+				fnGetValues: it => ({
+					source: it.source,
+					skills: it._skillDisplay,
+					normalisedTime: it._normalisedTime,
+					normalisedRange: it._normalisedRange,
+					hash: UrlUtil.URL_TO_HASH_BUILDER[this._page](it),
+				}),
+				fnGetData: UtilList2.absorbFnGetData,
+				fnBindListeners: it => this._actor
+					? UtilList2.absorbFnBindListenersRadio(this._list, it)
+					: UtilList2.absorbFnBindListeners(this._list, it),
+			},
+		);
+	}
+
+	async pSetContent (val) {
+		await super.pSetContent(val);
+
+		// Create a modal background filter such that we can handle swapping in features from other backgrounds
+		this._modalFilterBackgrounds = new ModalFilterBackgroundsFvtt({
+			namespace: "ImportListBackground.customFeatures",
+			isRadio: true,
+			allData: this._content,
+		});
+		await this._modalFilterBackgrounds.pPreloadHidden();
+	}
+
+	/**
+	 * @param bg
+	 * @param importOpts Options object.
+	 * @param [importOpts.isTemp] if the item should be temporary, and displayed.
+	 * @param [importOpts.filterValues] Saved filter values to be used instead of our own.
+	 */
+	async _pImportEntry (bg, importOpts) {
+		importOpts = importOpts || {};
+
+		console.log(...LGT, `Importing background "${bg.name}" (from "${Parser.sourceJsonToAbv(bg.source)}")`);
+
+		if (importOpts.isTemp) return this._pImportEntry_pImportToDirectoryGeneric(bg, importOpts);
+		if (this._actor) return this._pImportEntry_pImportToActor(bg, importOpts);
+		return this._pImportEntry_pImportToDirectoryGeneric(bg, importOpts);
+	}
+
+	async _pImportEntry_pImportToActor (bg, importOpts) {
+		// Build actor update
+		const actUpdate = {
+			data: {
+				details: {
+					background: bg.name,
+				},
+			},
+		};
+
+		const dataBuilderOpts = new ImportListBackground.ImportEntryOpts({
+			fluff: await Renderer.background.pGetFluff(bg),
+		});
+
+		await this._pImportEntry_pFillProficiencies(bg, actUpdate.data, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return ImportSummary.cancelled();
+		await this._pImportEntry_pFillDetails(bg, actUpdate, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return ImportSummary.cancelled();
+		await this._pImportEntry_pFillItems(bg, actUpdate, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return ImportSummary.cancelled();
+
+		// Handle starting equipment, if present
+		const formDataEquipment = await this._pImportEntry_pImportToActor_pImportStartingEquipment(bg, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return ImportSummary.cancelled();
+
+		// Copy over equipment's actor currency update, as required
+		if (formDataEquipment?.data?.currency) MiscUtil.set(actUpdate, "data", "currency", formDataEquipment.data.currency);
+
+		// Update actor
+		await UtilDocuments.pUpdateDocument(this._actor, actUpdate);
+
+		// Import equipment
+		await Charactermancer_StartingEquipment.pImportEquipmentItemEntries(this._actor, formDataEquipment);
+
+		// Handle feats
+		await this._pImportActorAdditionalFeats(bg, importOpts, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return ImportSummary.cancelled();
+
+		if (this._actor.isToken) this._actor.sheet.render();
+
+		return new ImportSummary({
+			status: UtilApplications.TASK_EXIT_COMPLETE,
+			imported: [
+				new ImportedDocument({
+					name: bg.name,
+					actor: this._actor,
+				}),
+			],
+		});
+	}
+
+	async _pImportEntry_pImportToActor_pImportStartingEquipment (bg, opts) {
+		if (!bg.startingEquipment) return;
+
+		const clsStyleData = {
+			defaultData: bg.startingEquipment,
+		};
+		const startingEquipment = new Charactermancer_StartingEquipment({
+			actor: this._actor,
+			startingEquipment: clsStyleData,
+			appSubTitle: bg.name,
+			equiSpecialSource: bg.source,
+			equiSpecialPage: bg.page,
+		});
+		const formData = await startingEquipment.pWaitForUserInput();
+		if (formData == null) {
+			opts.isCancelled = true;
+			return null;
+		}
+		return formData;
+	}
+
+	_pImportEntry_pImportToDirectoryGeneric_pGetImportableData (it, getItemOpts) {
+		return DataConverterBackground.pGetBackgroundItem(it, getItemOpts);
+	}
+
+	async _pImportEntry_pFillProficiencies (bg, data, dataBuilderOpts) {
+		const isCustomizeSkills = !bg._foundryIsSkipCustomizeSkills && await InputUiUtil.pGetUserBoolean({
+			title: `Customize Background: Skills`,
+			htmlDescription: `<div class="w-640p">${Renderer.get().render(`Would you like to {@book customize your skill selection|phb|4|backgrounds|customizing a background}?<br>This allows you to choose any two skills to gain from your background, rather than gaining the defaults.`)}</div>`,
+			textNo: "Use Default",
+			textYes: "Customize",
+		});
+		dataBuilderOpts.isCustomize = dataBuilderOpts.isCustomize || !!isCustomizeSkills;
+
+		if (isCustomizeSkills) {
+			await DataConverter.pFillActorSkillData(
+				MiscUtil.get(this._actor, "data", "data", "skills"),
+				UtilActors.BG_SKILL_PROFS_CUSTOMIZE,
+				data,
+				dataBuilderOpts,
+			);
+		} else {
+			await DataConverter.pFillActorSkillData(
+				MiscUtil.get(this._actor, "data", "data", "skills"),
+				bg.skillProficiencies,
+				data,
+				dataBuilderOpts,
+			);
+		}
+		if (dataBuilderOpts.isCancelled) return;
+
+		const isCustomizeLangsTools = !bg._foundryIsSkipCustomizeLanguagesTools && await InputUiUtil.pGetUserBoolean({
+			title: `Customize Background: Languages & Tools`,
+			htmlDescription: `<div class="w-640p">${Renderer.get().render(`Would you like to {@book customize your language and tool selection|phb|4|backgrounds|customizing a background}?<br>This allows you to choose a total of any two languages and/or tool proficiencies to gain from your background, rather than gaining the defaults.`)}</div>`,
+			textNo: "Use Default",
+			textYes: "Customize",
+		});
+		dataBuilderOpts.isCustomize = dataBuilderOpts.isCustomize || !!isCustomizeLangsTools;
+
+		if (isCustomizeLangsTools) {
+			await DataConverter.pFillActorLanguageOrToolData(
+				MiscUtil.get(this._actor, "data", "data", "traits", "languages"),
+				MiscUtil.get(this._actor, "data", "data", "traits", "toolProf"),
+				UtilActors.LANG_TOOL_PROFS_CUSTOMIZE,
+				data,
+				dataBuilderOpts,
+			);
+		} else {
+			await DataConverter.pFillActorLanguageData(
+				MiscUtil.get(this._actor, "data", "data", "traits", "languages"),
+				bg.languageProficiencies,
+				data,
+				dataBuilderOpts,
+			);
+			if (dataBuilderOpts.isCancelled) return;
+
+			dataBuilderOpts.isCancelled = await DataConverter.pFillActorToolProfData(
+				MiscUtil.get(this._actor, "data", "data", "traits", "toolProf"),
+				bg.toolProficiencies,
+				data,
+			);
+		}
+	}
+
+	async _pImportEntry_pFillDetails (bg, actUpdate, opts) {
+		if (bg._foundryIsSkipImportCharacteristics) return;
+		if (bg._foundryFormDataCharacteristics) return Charactermancer_Background_Characteristics.applyFormDataToActorUpdate(actUpdate, bg._foundryFormDataCharacteristics);
+		await Charactermancer_Background_Characteristics.pFillActorCharacteristicsData(bg.entries, actUpdate, opts);
+	}
+
+	async _pImportEntry_pFillItems (bg, data, dataBuilderOpts) {
+		const spellHashToItemPosMap = {};
+
+		await this._pApplyAllAdditionalSpellsToActor({entity: bg, dataBuilderOpts, spellHashToItemPosMap});
+		if (dataBuilderOpts.isCancelled) return;
+
+		// region Background feature
+		const tagHashItemIdMap = {};
+		Object.entries(spellHashToItemPosMap)
+			.forEach(([hash, id]) => MiscUtil.set(tagHashItemIdMap, "spell", hash, id));
+
+		const formDataFeatures = bg._foundryFormDataFeatures ?? await Charactermancer_Background_Features.pGetUserInput({entries: bg.entries, modalFilter: this._modalFilterBackgrounds});
+		if (!formDataFeatures) return dataBuilderOpts.isCancelled = true;
+		if (formDataFeatures !== VeCt.SYM_UI_SKIP) {
+			await UtilDataConverter.pGetWithDescriptionPlugins(
+				async () => {
+					dataBuilderOpts.isCustomize = dataBuilderOpts.isCustomize || formDataFeatures.data?.isCustomize;
+
+					for (const entry of formDataFeatures?.data?.entries) {
+						dataBuilderOpts.items.push(await DataConverterBackground.pGetBackgroundFeatureItem(bg, entry, this._actor, dataBuilderOpts));
+					}
+				},
+				{
+					actorId: this._actor.id,
+					tagHashItemIdMap,
+				},
+			);
+		}
+		// endregion
+
+		if (dataBuilderOpts.isCancelled) return;
+		await UtilActors.pAddActorItems(this._actor, dataBuilderOpts.items);
+	}
+}
+
+ImportListBackground.ImportEntryOpts = class extends ImportListCharacter.ImportEntryOpts {
+	constructor (opts) {
+		opts = opts || {};
+		super(opts);
+
+		this.fluff = opts.fluff;
+		this.isCustomize = false;
+	}
+};
+
+export {ImportListBackground};

@@ -1,1 +1,11 @@
-var _0x6987=['5233husqGv','64177EYWkbC','get','730804EHEQnT','127LatmRo','getSafe','359132ZVMTaA','1uynQHH','11KCEmey','1LWsKDK','792892FwoOEK','135674CRhaRB','102049iDJqce'];var _0x1e10=function(_0x41418f,_0x57c6db){_0x41418f=_0x41418f-0x7b;var _0x698768=_0x6987[_0x41418f];return _0x698768;};var _0x516254=_0x1e10;(function(_0x249e3f,_0x389d06){var _0x573f01=_0x1e10;while(!![]){try{var _0x1740df=-parseInt(_0x573f01(0x82))*-parseInt(_0x573f01(0x7b))+parseInt(_0x573f01(0x80))+-parseInt(_0x573f01(0x83))*parseInt(_0x573f01(0x84))+-parseInt(_0x573f01(0x87))*-parseInt(_0x573f01(0x7e))+-parseInt(_0x573f01(0x81))*-parseInt(_0x573f01(0x86))+-parseInt(_0x573f01(0x7d))+parseInt(_0x573f01(0x85));if(_0x1740df===_0x389d06)break;else _0x249e3f['push'](_0x249e3f['shift']());}catch(_0x50e064){_0x249e3f['push'](_0x249e3f['shift']());}}}(_0x6987,0x6c531));class UtilGameSettings{static[_0x516254(0x7f)](_0x27177b,_0x592a84){var _0x5ca6aa=_0x516254;try{return game['settings'][_0x5ca6aa(0x7c)](_0x27177b,_0x592a84);}catch(_0x33b6a9){return null;}}}export{UtilGameSettings};
+class UtilGameSettings {
+	static getSafe (module, key) {
+		try {
+			return game.settings.get(module, key);
+		} catch (e) {
+			return null;
+		}
+	}
+}
+
+export {UtilGameSettings};

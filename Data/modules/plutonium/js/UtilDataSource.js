@@ -1,1 +1,193 @@
-const _0x30f3=['\x20(All)','271441osLUmP','cacheKey','1WiQyGT','SOURCE_TYP_UNKNOWN','329969OYYnET','uploadedFiles','4pgflMm','348896csPgfS','Official','Failed\x20to\x20load\x20pre-defined\x20source\x20\x22','\x20(Single\x20Source)','source','getContent','pGetWithCache','identifier','filterTypes','345073voRhIz','No\x20cache\x20key\x20specified!','DataSourceFile','pGetSpecialOutput','SOURCE_TYP_OFFICIAL_SINGLE','filter','UA/Etc.','SOURCE_TYP_BREW','Custom/User','all','SOURCE_TYP_OFFICIAL_ALL','isDefault','17261YUIwNZ','DataSourceBase','Unknown','DataSourceSpecial','SOURCE_TYP_CUSTOM','SOURCE_TYPE_ORDER__FILTER','SOURCE_TYPE_ORDER','SOURCE_TYP_OFFICIAL_BASE','Unimplemented!','url','VE_SOURCE_CUSTOM_FILE','Homebrew','STR_SEE_CONSOLE','227989pWtvMh','error','SOURCE_TYP_ARCANA','userData','\x22!\x20','notifications','154370HAqxqF','isFile','pGetUrlOutputs','isUseProps','map','pPostLoad','DataSourceUrl','6oHeQFe'];const _0x3a2d=function(_0x460ab4,_0x434141){_0x460ab4=_0x460ab4-0xf0;let _0x30f305=_0x30f3[_0x460ab4];return _0x30f305;};const _0x2d62ec=_0x3a2d;(function(_0x456d31,_0x486918){const _0x431fa6=_0x3a2d;while(!![]){try{const _0x2cf80d=-parseInt(_0x431fa6(0x119))+-parseInt(_0x431fa6(0x109))+parseInt(_0x431fa6(0x100))+parseInt(_0x431fa6(0x125))*-parseInt(_0x431fa6(0x107))+-parseInt(_0x431fa6(0x110))+-parseInt(_0x431fa6(0xfa))*parseInt(_0x431fa6(0x10b))+parseInt(_0x431fa6(0x10d))*parseInt(_0x431fa6(0x10f));if(_0x2cf80d===_0x486918)break;else _0x456d31['push'](_0x456d31['shift']());}catch(_0x1ea247){_0x456d31['push'](_0x456d31['shift']());}}}(_0x30f3,0x2b481));import{Vetools}from'./Vetools.js';class UtilDataSource{static async['pGetFileOutputs'](_0x43cd5f,_0x5bac09,_0x3a97d1){const _0x483bde=_0x3a2d,_0x2d3b17=await Promise[_0x483bde(0x122)](_0x43cd5f[_0x483bde(0x10e)][_0x483bde(0x104)](_0x189502=>{const _0x3a8a9b=_0x483bde,_0x1aaedd=Vetools['getContent'](_0x189502,_0x3a97d1);return _0x5bac09[_0x3a8a9b(0x105)]?_0x5bac09[_0x3a8a9b(0x105)](_0x1aaedd,_0x189502,_0x5bac09[_0x3a8a9b(0xfd)]):_0x1aaedd;}));return{'contents':_0x2d3b17[_0x483bde(0x11e)](_0x306d59=>_0x306d59!=null)};}static async[_0x2d62ec(0x102)](_0x44662d,_0x4a03d1,_0x3999d8){const _0x49bf28=_0x2d62ec;if(_0x4a03d1[_0x49bf28(0xf6)]===''){const _0x36eb23=_0x44662d['getCustomUrls']();let _0x5752af;try{_0x5752af=await Promise['all'](_0x36eb23[_0x49bf28(0x104)](async _0x13061e=>{const _0x177fe4=_0x49bf28,_0x3c4ea5=await Vetools['pGetWithCache'](_0x13061e);return _0x4a03d1['pPostLoad']?_0x4a03d1[_0x177fe4(0x105)](Vetools[_0x177fe4(0x115)](_0x3c4ea5,_0x3999d8),_0x3c4ea5,_0x4a03d1['userData']):Vetools['getContent'](_0x3c4ea5,_0x3999d8);}));}catch(_0x4ae985){ui[_0x49bf28(0xff)]['error']('Failed\x20to\x20load\x20one\x20or\x20more\x20URLs!\x20'+VeCt[_0x49bf28(0xf9)]);throw _0x4ae985;}return{'cacheKeys':_0x36eb23,'contents':_0x5752af};}let _0x1e8f81;try{const _0x21a1de=await Vetools[_0x49bf28(0x116)](_0x4a03d1[_0x49bf28(0xf6)]);_0x1e8f81=Vetools[_0x49bf28(0x115)](_0x21a1de,_0x3999d8);if(_0x4a03d1[_0x49bf28(0x105)])_0x1e8f81=await _0x4a03d1['pPostLoad'](_0x1e8f81,_0x21a1de,_0x4a03d1[_0x49bf28(0xfd)]);}catch(_0x402213){ui[_0x49bf28(0xff)]['error']('Failed\x20to\x20load\x20URL!\x20'+VeCt[_0x49bf28(0xf9)]);throw _0x402213;}return{'cacheKeys':[_0x4a03d1[_0x49bf28(0xf6)]],'contents':[_0x1e8f81]};}static async[_0x2d62ec(0x11c)](_0x42b0c3,_0xe898f8){const _0x27e1a6=_0x2d62ec;let _0x488016;try{const _0x416cad=await Vetools['pLoadImporterSourceSpecial'](_0x42b0c3);_0x488016=_0x416cad;if(_0x42b0c3[_0x27e1a6(0x103)])_0x488016=Vetools[_0x27e1a6(0x115)](_0x488016,_0xe898f8);if(_0x42b0c3['pPostLoad'])_0x488016=await _0x42b0c3[_0x27e1a6(0x105)](_0x488016,_0x416cad,_0x42b0c3[_0x27e1a6(0xfd)]);}catch(_0x3ad3b1){ui[_0x27e1a6(0xff)][_0x27e1a6(0xfb)](_0x27e1a6(0x112)+_0x42b0c3[_0x27e1a6(0x10a)]+_0x27e1a6(0xfe)+VeCt['STR_SEE_CONSOLE']);throw _0x3ad3b1;}return{'cacheKeys':[_0x42b0c3[_0x27e1a6(0x10a)]],'contents':[_0x488016]};}}UtilDataSource[_0x2d62ec(0xf4)]=_0x2d62ec(0x111),UtilDataSource[_0x2d62ec(0x123)]=UtilDataSource[_0x2d62ec(0xf4)]+_0x2d62ec(0x108),UtilDataSource[_0x2d62ec(0x11d)]=UtilDataSource['SOURCE_TYP_OFFICIAL_BASE']+_0x2d62ec(0x113),UtilDataSource['SOURCE_TYP_CUSTOM']=_0x2d62ec(0x121),UtilDataSource[_0x2d62ec(0xfc)]=_0x2d62ec(0x11f),UtilDataSource['SOURCE_TYP_BREW']=_0x2d62ec(0xf8),UtilDataSource[_0x2d62ec(0x10c)]=_0x2d62ec(0x127),UtilDataSource[_0x2d62ec(0xf3)]=[UtilDataSource[_0x2d62ec(0x123)],UtilDataSource[_0x2d62ec(0xf1)],UtilDataSource[_0x2d62ec(0x11d)],UtilDataSource[_0x2d62ec(0xfc)],UtilDataSource['SOURCE_TYP_BREW'],UtilDataSource[_0x2d62ec(0x10c)]],UtilDataSource[_0x2d62ec(0xf2)]=[UtilDataSource[_0x2d62ec(0x123)],UtilDataSource[_0x2d62ec(0x11d)],UtilDataSource[_0x2d62ec(0xfc)],UtilDataSource[_0x2d62ec(0x120)],UtilDataSource[_0x2d62ec(0xf1)],UtilDataSource[_0x2d62ec(0x10c)]],UtilDataSource[_0x2d62ec(0x126)]=class{constructor(_0x48ba30,_0x4c80aa){const _0x49d903=_0x2d62ec;this['name']=_0x48ba30,this[_0x49d903(0x105)]=_0x4c80aa[_0x49d903(0x105)],this[_0x49d903(0x118)]=_0x4c80aa[_0x49d903(0x118)]||[UtilDataSource[_0x49d903(0x10c)]],this[_0x49d903(0x124)]=!!_0x4c80aa['isDefault'];}get[_0x2d62ec(0x117)](){const _0x134be6=_0x2d62ec;throw new Error(_0x134be6(0xf5));}},UtilDataSource[_0x2d62ec(0x106)]=class extends UtilDataSource[_0x2d62ec(0x126)]{constructor(_0x2449aa,_0x523a05,_0x13ed5d){const _0x15da41=_0x2d62ec;_0x13ed5d=_0x13ed5d||{},super(_0x2449aa,_0x13ed5d),this[_0x15da41(0xf6)]=_0x523a05,this[_0x15da41(0x114)]=_0x13ed5d[_0x15da41(0x114)],this[_0x15da41(0xfd)]=_0x13ed5d[_0x15da41(0xfd)];}get[_0x2d62ec(0x117)](){const _0x56a4f1=_0x2d62ec;return this[_0x56a4f1(0xf6)]===''?'VE_SOURCE_CUSTOM_URL':this['url'];}},UtilDataSource[_0x2d62ec(0x11b)]=class extends UtilDataSource['DataSourceBase']{constructor(_0x307df4,_0x2140f4){const _0x5f66bb=_0x2d62ec;_0x2140f4=_0x2140f4||{},super(_0x307df4,_0x2140f4),this[_0x5f66bb(0x101)]=!![],this[_0x5f66bb(0x114)]=_0x2140f4[_0x5f66bb(0x114)];}get[_0x2d62ec(0x117)](){const _0x4c5e1c=_0x2d62ec;return _0x4c5e1c(0xf7);}},UtilDataSource[_0x2d62ec(0xf0)]=class extends UtilDataSource[_0x2d62ec(0x126)]{constructor(_0x204cff,_0x597cc3,_0x1ff1a1){const _0xc13d72=_0x2d62ec;_0x1ff1a1=_0x1ff1a1||{},super(_0x204cff,_0x1ff1a1),this['special']={'pGet':_0x597cc3};if(!_0x1ff1a1[_0xc13d72(0x10a)])throw new Error(_0xc13d72(0x11a));this[_0xc13d72(0x10a)]=_0x1ff1a1[_0xc13d72(0x10a)],this[_0xc13d72(0x103)]=_0x1ff1a1['isUseProps'];}get[_0x2d62ec(0x117)](){const _0x5851b2=_0x2d62ec;return this[_0x5851b2(0x10a)];}};export{UtilDataSource};
+import {Vetools} from "./Vetools.js";
+
+class UtilDataSource {
+	static async pGetFileOutputs (appSourceSelector, source, props) {
+		const allContent = await Promise.all(appSourceSelector.uploadedFiles.map(f => {
+			const data = Vetools.getContent(f, props);
+			return source.pPostLoad ? source.pPostLoad(data, f, source.userData) : data;
+		}));
+
+		return {
+			contents: allContent.filter(it => it != null),
+		};
+	}
+
+	static async pGetUrlOutputs (appSourceSelector, source, props) {
+		if (source.url === "") {
+			const customUrls = appSourceSelector.getCustomUrls();
+
+			let loadedDatas;
+			try {
+				loadedDatas = await Promise.all(customUrls.map(async url => {
+					const data = await Vetools.pGetWithCache(url);
+					return source.pPostLoad ? source.pPostLoad(Vetools.getContent(data, props), data, source.userData) : Vetools.getContent(data, props);
+				}));
+			} catch (e) {
+				ui.notifications.error(`Failed to load one or more URLs! ${VeCt.STR_SEE_CONSOLE}`);
+				throw e;
+			}
+
+			return {
+				cacheKeys: customUrls,
+				contents: loadedDatas,
+			};
+		}
+
+		let loadedData;
+		try {
+			const data = await Vetools.pGetWithCache(source.url);
+			loadedData = Vetools.getContent(data, props);
+			if (source.pPostLoad) loadedData = await source.pPostLoad(loadedData, data, source.userData);
+		} catch (e) {
+			ui.notifications.error(`Failed to load URL! ${VeCt.STR_SEE_CONSOLE}`);
+			throw e;
+		}
+		return {
+			cacheKeys: [source.url],
+			contents: [loadedData],
+		};
+	}
+
+	static async pGetSpecialOutput (source, props) {
+		let loadedData;
+		try {
+			const json = await Vetools.pLoadImporterSourceSpecial(source);
+			loadedData = json;
+			if (source.isUseProps) loadedData = Vetools.getContent(loadedData, props);
+			if (source.pPostLoad) loadedData = await source.pPostLoad(loadedData, json, source.userData);
+		} catch (e) {
+			ui.notifications.error(`Failed to load pre-defined source "${source.cacheKey}"! ${VeCt.STR_SEE_CONSOLE}`);
+			throw e;
+		}
+		return {
+			cacheKeys: [source.cacheKey],
+			contents: [loadedData],
+		};
+	}
+}
+
+UtilDataSource.SOURCE_TYP_OFFICIAL_BASE = "Official";
+UtilDataSource.SOURCE_TYP_OFFICIAL_ALL = `${UtilDataSource.SOURCE_TYP_OFFICIAL_BASE} (All)`;
+UtilDataSource.SOURCE_TYP_OFFICIAL_SINGLE = `${UtilDataSource.SOURCE_TYP_OFFICIAL_BASE} (Single Source)`;
+UtilDataSource.SOURCE_TYP_CUSTOM = "Custom/User";
+UtilDataSource.SOURCE_TYP_ARCANA = "UA/Etc.";
+UtilDataSource.SOURCE_TYP_BREW = "Homebrew";
+UtilDataSource.SOURCE_TYP_BREW_LOCAL = "Local Homebrew";
+UtilDataSource.SOURCE_TYP_UNKNOWN = "Unknown";
+
+UtilDataSource.SOURCE_TYPE_ORDER = [
+	UtilDataSource.SOURCE_TYP_OFFICIAL_ALL,
+	UtilDataSource.SOURCE_TYP_CUSTOM,
+	UtilDataSource.SOURCE_TYP_OFFICIAL_SINGLE,
+	UtilDataSource.SOURCE_TYP_ARCANA,
+	UtilDataSource.SOURCE_TYP_BREW_LOCAL,
+	UtilDataSource.SOURCE_TYP_BREW,
+	UtilDataSource.SOURCE_TYP_UNKNOWN,
+];
+
+UtilDataSource.SOURCE_TYPE_ORDER__FILTER = [ // Order used in filter sorting
+	UtilDataSource.SOURCE_TYP_OFFICIAL_ALL,
+	UtilDataSource.SOURCE_TYP_OFFICIAL_SINGLE,
+	UtilDataSource.SOURCE_TYP_ARCANA,
+	UtilDataSource.SOURCE_TYP_BREW_LOCAL,
+	UtilDataSource.SOURCE_TYP_BREW,
+	UtilDataSource.SOURCE_TYP_CUSTOM,
+	UtilDataSource.SOURCE_TYP_UNKNOWN,
+];
+
+UtilDataSource.DataSourceBase = class {
+	/**
+	 * @param name Source name.
+	 * @param [opts] Options object.
+	 * @param [opts.pPostLoad] Data modifier.
+	 * @param [opts.filterTypes]
+	 * @param [opts.isDefault]
+	 * @param [opts.abbreviations]
+	 */
+	constructor (name, opts) {
+		this.name = name;
+
+		this.pPostLoad = opts.pPostLoad;
+		this.filterTypes = opts.filterTypes || [UtilDataSource.SOURCE_TYP_UNKNOWN];
+		this.isDefault = !!opts.isDefault;
+		this.abbreviations = opts.abbreviations;
+	}
+
+	get identifier () { throw new Error(`Unimplemented!`); }
+};
+
+UtilDataSource.DataSourceUrl = class extends UtilDataSource.DataSourceBase {
+	/**
+	 * @param name Source name.
+	 * @param url Source URL.
+	 * @param [opts] Options object.
+	 * @param [opts.source] Source JSON.
+	 * @param [opts.pPostLoad] Data modifier.
+	 * @param [opts.userData] Additional data to pass through to the loadee.
+	 * @param [opts.filterTypes]
+	 * @param [opts.icon]
+	 * @param [opts.isDefault]
+	 * @param [opts.abbreviations]
+	 */
+	constructor (name, url, opts) {
+		opts = opts || {};
+
+		super(name, opts);
+
+		this.url = url;
+		this.source = opts.source;
+		this.userData = opts.userData;
+	}
+
+	get identifier () { return this.url === "" ? `VE_SOURCE_CUSTOM_URL` : this.url; }
+};
+
+UtilDataSource.DataSourceFile = class extends UtilDataSource.DataSourceBase {
+	/**
+	 * @param name Source name.
+	 * @param [opts] Options object.
+	 * @param [opts.source] Source JSON.
+	 * @param [opts.pPostLoad] Data modifier.
+	 * @param [opts.filterTypes]
+	 * @param [opts.isDefault]
+	 * @param [opts.abbreviations]
+	 */
+	constructor (name, opts) {
+		opts = opts || {};
+
+		super(name, opts);
+
+		this.isFile = true;
+		this.source = opts.source;
+	}
+
+	get identifier () { return `VE_SOURCE_CUSTOM_FILE`; }
+};
+
+UtilDataSource.DataSourceSpecial = class extends UtilDataSource.DataSourceBase {
+	/**
+	 * @param name Source name.
+	 * @param pGet Data getter.
+	 * @param opts Options object.
+	 * @param opts.cacheKey Cache key to store the pGet data under.
+	 * @param [opts.pPostLoad] Data modifier.
+	 * @param [opts.isUseProps] If the prop info should be applied to the loaded data.
+	 * @param [opts.filterTypes]
+	 * @param [opts.isDefault]
+	 * @param [opts.abbreviations]
+	 */
+	constructor (name, pGet, opts) {
+		opts = opts || {};
+
+		super(name, opts);
+
+		this.special = {pGet};
+		if (!opts.cacheKey) throw new Error(`No cache key specified!`);
+		this.cacheKey = opts.cacheKey;
+		this.isUseProps = opts.isUseProps;
+	}
+
+	get identifier () { return this.cacheKey; }
+};
+
+export {UtilDataSource};

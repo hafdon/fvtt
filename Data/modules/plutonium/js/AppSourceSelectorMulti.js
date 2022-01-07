@@ -1,49 +1,712 @@
-const _0x44e5=['pGetSpecialOutput','_$getStageUrl','_sortListItems','Continue','AppSourceSelectorAppFilter','pWaitForUserInput','<button\x20class=\x22btn\x20btn-5et\x20btn-xs\x20mr-1\x22>Upload\x20File</button>','SOURCE_TYPE_ORDER','_handleAccept_pGetSpecialOutput','7349hcwyoF','_pageFilter','pGetSelectedSources','$btnUpload','447227ribaDK','isRadio','row\x20imp-wiz__row\x20veapp__list-row-hoverable\x20flex-v-center\x20','AppSourceSelectorMulti__massSelectionWarning','contents','cacheKey','isShowCustomUrlForm','<i\x20class=\x22fab\x20fa-d-and-d\x20mr-1\x20sourceAL\x22\x20title=\x22','233022rYOQei','parent','_sortTypeFilterItems','Select\x20file...','map','checked','isFile','_$getStageSpecial','118HsWKWp','_triggerCollectionUpdate','result','_getRenderedCollection','<button\x20class=\x22btn\x20btn-5et\x20btn-default\x20btn-xs\x22>Add\x20Custom</button>','_state','167VtCscr','forEach','<div\x20class=\x22flex-col\x20w-100\x20h-100\x20min-h-0\x22></div>','isCustom','_$getStageUpload','append','_$stgSpecial','htmlToNode','SOURCE_TYP_OFFICIAL_BASE','SOURCE_TYP_CUSTOM','has','<button\x20class=\x22btn\x20btn-5et\x20btn-xs\x20btn-danger\x22\x20title=\x22Delete\x22><span\x20class=\x22glyphicon\x20glyphicon-trash\x22></span></button>','toObject','<button\x20class=\x22btn-5et\x20veapp__btn-list-reset\x22>Reset</button>','_detachCollection','_pGetOutputEntities','constructor','includes','close','error','201mRQDtI','_pGetInitialSources','_addHookAll','_list','addItem','510220jgxvnO','Type','_handleAccept_pGetUrlOutputs','ascSort','<div\x20class=\x22imp__disp-filename\x20mr-1\x20ve-muted\x20w-100\x22></div>','list-multi-selected','toggleVe','savedSelectionKey','You\x20have\x20many\x20sources\x20selected,\x20which\x20may\x20negatively\x20impact\x20performance.\x20Do\x20you\x20want\x20to\x20continue?','<input\x20type=\x22file\x22\x20accept=\x22.json\x22\x20class=\x22ve-hidden\x22>','<input\x20type=\x22search\x22\x20class=\x22search\x20w-100\x20form-control\x22\x20placeholder=\x22Find\x20source...\x22>','<div\x20class=\x22veapp__list\x20mb-1\x20h-100\x20min-h-0\x22></div>','pGetUrlOutputs','_filterBox','key','label','<button\x20class=\x22btn-5et\x20veapp__btn-filter\x22>Filter</button>','\x22></i>','toDisplay','pInitFilterBox','pSet','flat','<button\x20class=\x22mt-auto\x20btn\x20btn-5et\x22>Confirm</button>','_handleAccept_pGetFileOutputs','hideVe','_sourcesToDisplay','_pPopulateBoxOptions','target','change','min','$iptUrl','notifications','<input\x20type=\x22radio\x22\x20name=\x22radio\x22\x20class=\x22no-events\x20mx-1\x22>','isDefault','Enter\x20JSON\x20URL','<div\x20class=\x22flex-col\x20mb-1\x20w-100\x22>\x0a\x09\x09\x09<div\x20class=\x22flex-v-center\x22><i>Select\x20a\x20source\x20to\x20view\x20import\x20options</i></div>\x0a\x09\x09\x09<hr\x20class=\x22hr-1\x22>\x0a\x09\x09</div>','filterBox','initBtnSortHandlers','fromObject','SOURCE_TYP_OFFICIAL_SINGLE','<div\x20class=\x22flex-col\x20w-100\x22></div>','filters','SOURCE_TYP_UNKNOWN','className','parse','specialMetas','_isRadio','length','_resolve','onload','values','_renderCollection','trim','url','addToFilters','displayName','STR_SEE_CONSOLE','placeholder','<button\x20class=\x22btn\x20btn-5et\x20btn-xs\x20btn-danger\x20ml-2\x22\x20title=\x22Delete\x22><span\x20class=\x22glyphicon\x20glyphicon-trash\x22></span></button>','getValues','pLoadInitialSelection','filter','_$getStageNone','item','text','MODULE_LOCATION','appendTo','JSON\x20URL','text-sneaky','_handleFilterChange','<div\x20class=\x22w-100\x20italic\x20','warn','<i\x20class=\x22fas\x20fa-vial\x20mr-1\x20sourceSpicy\x22\x20title=\x22','No\x20sources\x20selected!','files','uploadedFiles','_proxyAssignSimple','createElement','_comp','some','bind','_getFilterTypesIcon','_reject','_$stgNone','state','_typeFilter','81VgoExu','Failed\x20to\x20read\x20file!\x20','indexOf','push','_props','SOURCE_TYP_BREW','_pGetElements_pGetListElements','filterTypes','get','_$stgUrl','<div\x20class=\x22veapp-loading__wrp-outer\x22><i>Loading...</i></div>','pGetElements','Enter','disable','uid','pageFilter','pGetUserBoolean','click','Custom\x20Url','_pUserInput','pAddToHomebrew','EVNT_VALCHANGE','data','_savedSelectionKey','focus','<input\x20type=\x22checkbox\x22\x20class=\x22no-events\x20mx-1\x22>','compareListNames','identifier','_$stgUpload','teardown','isStreamerMode','2415ENNsgF','_filterNamespace','$getIptStr','uploadedFileMetas','pDoMetaMerge','3063qeboqG','val','SOURCE_TYPE_ORDER__FILTER','filterNamespace','pGetFileOutputs','urlMetas','title','$wrpRow','_addHookBase','cbSel','<span\x20class=\x22col-11-5\x22>','No\x20sources\x20to\x20be\x20loaded!\x20Please\x20finish\x20entering\x20source\x20details\x20first.','readAsText','items','handlePostClose','name','handlePreClose','2449IbeEoB','Continue\x20and\x20Remember','SOURCE_TYP_ARCANA'];const _0x9f20=function(_0x230e6e,_0x161fc3){_0x230e6e=_0x230e6e-0xb3;let _0x44e5dd=_0x44e5[_0x230e6e];return _0x44e5dd;};const _0x55cce1=_0x9f20;(function(_0x14b3c8,_0x5aa6f8){const _0xb19b0a=_0x9f20;while(!![]){try{const _0x10b9cf=-parseInt(_0xb19b0a(0x155))*-parseInt(_0xb19b0a(0x114))+-parseInt(_0xb19b0a(0x159))+parseInt(_0xb19b0a(0x169))*-parseInt(_0xb19b0a(0x149))+parseInt(_0xb19b0a(0x161))+-parseInt(_0xb19b0a(0x138))*parseInt(_0xb19b0a(0xb9))+parseInt(_0xb19b0a(0xbe))+-parseInt(_0xb19b0a(0x133))*-parseInt(_0xb19b0a(0x16f));if(_0x10b9cf===_0x5aa6f8)break;else _0x14b3c8['push'](_0x14b3c8['shift']());}catch(_0x364b7f){_0x14b3c8['push'](_0x14b3c8['shift']());}}}(_0x44e5,0x5f338));import{SharedConsts}from'../shared/SharedConsts.js';import{Util}from'./Util.js';import{Config}from'./Config.js';import{Vetools}from'./Vetools.js';import{AppFilter}from'./FilterApplications.js';import{UtilDataSource}from'./UtilDataSource.js';class AppSourceSelectorMulti extends Application{constructor(_0x3b6750){const _0x49dfff=_0x9f20;super({'title':_0x3b6750[_0x49dfff(0x13e)]||'Select\x20Sources','width':0x320,'template':SharedConsts[_0x49dfff(0xff)]+'/template/AppSourceSelectorMulti.hbs','height':Util['getMaxWindowHeight'](),'resizable':!![]}),this[_0x49dfff(0xd7)]=_0x3b6750['sourcesToDisplay'],this[_0x49dfff(0x12b)]=_0x3b6750[_0x49dfff(0xc5)],this['_filterNamespace']=_0x3b6750[_0x49dfff(0x13b)],this[_0x49dfff(0x118)]=_0x3b6750['props'],this[_0x49dfff(0xec)]=!!_0x3b6750[_0x49dfff(0x15a)],this[_0x49dfff(0xbc)]=null,this[_0x49dfff(0x156)]=null,this[_0x49dfff(0x111)]=null,this[_0x49dfff(0x130)]=null,this['_$stgUrl']=null,this[_0x49dfff(0x175)]=null,this['_comp']=BaseComponent[_0x49dfff(0xe4)]({'uploadedFileMetas':[],'isShowCustomUrlForm':![],'urlMetas':[],'specialMetas':[]}),this[_0x49dfff(0xee)]=null,this[_0x49dfff(0x110)]=null,this[_0x49dfff(0x127)]=null;}get[_0x55cce1(0x123)](){const _0x2761e3=_0x55cce1;return this[_0x2761e3(0x156)];}get[_0x55cce1(0x109)](){const _0x3e08e8=_0x55cce1;return this[_0x3e08e8(0x10c)][_0x3e08e8(0x16e)]['uploadedFileMetas'][_0x3e08e8(0x165)](_0xd4ad1=>_0xd4ad1[_0x3e08e8(0x12a)]['contents']);}['pGetSelectedSources'](){const _0x151055=_0x55cce1;if(!this[_0x151055(0xbc)])return this['_pGetInitialSources']();return this[_0x151055(0xbc)][_0x151055(0x145)][_0x151055(0xfb)](_0x31d532=>_0x31d532[_0x151055(0x12a)][_0x151055(0x141)][_0x151055(0x166)])['map'](_0xf738f8=>this[_0x151055(0xd7)][_0xf738f8['ix']]);}async['pGetElements'](_0x1635de,_0x2d7281){return this['_pGetElements_pGetListElements'](_0x1635de,_0x2d7281);}[_0x55cce1(0xfc)](){const _0x255ca4=_0x55cce1;return $(_0x255ca4(0xe1));}[_0x55cce1(0x173)](){const _0x4faec8=_0x55cce1,_0x108bc4=$('<button\x20class=\x22btn\x20btn-5et\x20btn-default\x20btn-xs\x22>Add\x20File</button>')[_0x4faec8(0x125)](()=>{const _0x127c9b=_0x4faec8,_0x38f022={'id':CryptUtil['uid'](),'data':{'name':null,'contents':null}};this[_0x127c9b(0x10c)][_0x127c9b(0x16e)][_0x127c9b(0x136)]=[...this[_0x127c9b(0x10c)][_0x127c9b(0x16e)]['uploadedFileMetas'],_0x38f022];const _0x261361=this[_0x127c9b(0x10c)][_0x127c9b(0x16c)]({'prop':_0x127c9b(0x136)}),_0x156a59=_0x261361[_0x38f022['id']];_0x156a59[_0x127c9b(0x158)][_0x127c9b(0x125)]();}),_0x11b8e9=$('<div\x20class=\x22flex-col\x20w-100\x22></div>'),_0x2f9844=$$`<div class="flex-col w-100 py-1">
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Util} from "./Util.js";
+import {Config} from "./Config.js";
+import {Vetools} from "./Vetools.js";
+import {AppFilter} from "./FilterApplications.js";
+import {UtilDataSource} from "./UtilDataSource.js";
+
+/**
+ * Can either be used as a standalone application, or used to generate pre-wired elements to insert into other UI.
+ */
+class AppSourceSelectorMulti extends Application {
+	/**
+	 * @param opts
+	 * @param opts.title
+	 * @param opts.sourcesToDisplay
+	 * @param opts.savedSelectionKey
+	 * @param opts.filterNamespace
+	 * @param [opts.props] Props to map the loaded data to.
+	 * @param [opts.isRadio] If the source list should use radio boxes rather than checkboxes.
+	 */
+	constructor (opts) {
+		super({
+			title: opts.title || "Select Sources",
+			width: 800,
+			template: `${SharedConsts.MODULE_LOCATION}/template/AppSourceSelectorMulti.hbs`,
+			height: Util.getMaxWindowHeight(),
+			resizable: true,
+		});
+
+		this._sourcesToDisplay = opts.sourcesToDisplay;
+		this._savedSelectionKey = opts.savedSelectionKey;
+		this._filterNamespace = opts.filterNamespace;
+		this._props = opts.props;
+		this._isRadio = !!opts.isRadio;
+
+		this._list = null;
+		this._pageFilter = null;
+
+		this._$stgNone = null;
+		this._$stgUpload = null;
+		this._$stgUrl = null;
+		this._$stgSpecial = null;
+
+		this._comp = BaseComponent.fromObject({
+			uploadedFileMetas: [],
+
+			isShowCustomUrlForm: false,
+			urlMetas: [],
+
+			specialMetas: [],
+		});
+
+		// region Used in standalone app mode
+		this._resolve = null;
+		this._reject = null;
+		this._pUserInput = null;
+		// endregion
+	}
+
+	get pageFilter () { return this._pageFilter; }
+	get uploadedFiles () { return this._comp._state.uploadedFileMetas.map(it => it.data.contents); }
+	pGetSelectedSources () {
+		if (!this._list) return this._pGetInitialSources();
+		return this._list.items.filter(it => it.data.cbSel.checked).map(li => this._sourcesToDisplay[li.ix]);
+	}
+
+	async pGetElements ($wrpList, cbSourceChange) {
+		return this._pGetElements_pGetListElements($wrpList, cbSourceChange);
+	}
+
+	_$getStageNone () {
+		return $(`<div class="flex-col mb-1 w-100">
+			<div class="flex-v-center"><i>Select a source to view import options</i></div>
+			<hr class="hr-1">
+		</div>`);
+	}
+
+	/**
+	 * This assumes that, at most, a single "file upload" source is present in the list.
+	 */
+	_$getStageUpload () {
+		const $btnAddUpload = $(`<button class="btn btn-5et btn-default btn-xs">Add File</button>`)
+			.click(() => {
+				const nxt = {
+					id: CryptUtil.uid(),
+					data: {
+						name: null,
+						contents: null,
+					},
+				};
+				this._comp._state.uploadedFileMetas = [...this._comp._state.uploadedFileMetas, nxt];
+
+				// Click the upload button on the newest one, to immediately allow a file to be loaded
+				const renderedCollection = this._comp._getRenderedCollection({prop: "uploadedFileMetas"});
+				const renderedMeta = renderedCollection[nxt.id];
+				renderedMeta.$btnUpload.click();
+			});
+
+		const $wrpUploadRows = $(`<div class="flex-col w-100"></div>`);
+
+		const $stgUpload = $$`<div class="flex-col w-100 py-1">
 			<div class="mb-1 split-v-center">
 				<div>File Sources:</div>
-				${_0x108bc4}
+				${$btnAddUpload}
 			</div>
-			${_0x11b8e9}
+			${$wrpUploadRows}
 			<hr class="hr-1">
-		</div>`,_0x42747b=()=>{const _0x3bcac1=_0x4faec8;this[_0x3bcac1(0x10c)][_0x3bcac1(0xf1)]({'prop':_0x3bcac1(0x136),'fnUpdateExisting':(_0x459d98,_0x2c6bed)=>{const _0x21edfe=_0x3bcac1;_0x459d98['comp'][_0x21edfe(0x10a)]('state',_0x2c6bed[_0x21edfe(0x12a)],!![]);if(!_0x459d98[_0x21edfe(0x13f)][_0x21edfe(0x162)]()['is'](_0x11b8e9))_0x459d98[_0x21edfe(0x13f)][_0x21edfe(0x100)](_0x11b8e9);},'fnGetNew':_0x26bc22=>{const _0x466c9c=_0x3bcac1,_0xc82639=BaseComponent[_0x466c9c(0xe4)](_0x26bc22[_0x466c9c(0x12a)],'*');_0xc82639[_0x466c9c(0xbb)](_0x466c9c(0x112),()=>{const _0x32bc5e=_0x466c9c;_0x26bc22['data']=_0xc82639['toObject']('*'),this[_0x32bc5e(0x10c)]['_triggerCollectionUpdate']('uploadedFileMetas');});const _0x4bc6ba=$(_0x466c9c(0xc2))['click'](()=>_0x3c232b['click']()),_0x3c7fe4=()=>_0x4bc6ba['text'](_0xc82639[_0x466c9c(0x16e)][_0x466c9c(0x147)]||_0x466c9c(0x164))[_0x466c9c(0x13e)](_0xc82639[_0x466c9c(0x16e)][_0x466c9c(0x147)]||'');_0xc82639[_0x466c9c(0x140)](_0x466c9c(0x147),_0x3c7fe4),_0x3c7fe4();const _0x3c232b=$(_0x466c9c(0x152))[_0x466c9c(0x125)](()=>{const _0x5b1e14=_0x466c9c,_0x12ddeb=$(_0x5b1e14(0xc7))[_0x5b1e14(0xda)](_0x53976b=>{const _0x37efeb=_0x5b1e14,_0x143f2d=_0x53976b[_0x37efeb(0xd9)],_0x12ff6b=_0x12ddeb[0x0][_0x37efeb(0x108)],_0x3f46aa=new FileReader();_0x3f46aa[_0x37efeb(0xef)]=async()=>{const _0x173b70=_0x37efeb,_0x548ef9=_0x12ff6b[0x0]||{};try{const _0x1c5f28=JSON[_0x173b70(0xea)](_0x3f46aa[_0x173b70(0x16b)]);Vetools['addToHomebrewSourceLookup'](_0x1c5f28),await Vetools[_0x173b70(0x128)](_0x1c5f28);const _0x5594e5=await DataUtil[_0x173b70(0x137)](CryptUtil['uid'](),_0x1c5f28);_0xc82639[_0x173b70(0x10a)](_0x173b70(0x112),{'name':_0x548ef9[_0x173b70(0x147)],'contents':_0x5594e5});}catch(_0x2e1912){ui['notifications'][_0x173b70(0xb8)](_0x173b70(0x115)+VeCt['STR_SEE_CONSOLE']);throw _0x2e1912;}},_0x3f46aa[_0x37efeb(0x144)](_0x143f2d[_0x37efeb(0x108)][0x0]);})['click']();}),_0x4f5d98=$(_0x466c9c(0x17a))[_0x466c9c(0x125)](()=>this['_comp'][_0x466c9c(0x16e)][_0x466c9c(0x136)]=this[_0x466c9c(0x10c)][_0x466c9c(0x16e)][_0x466c9c(0x136)][_0x466c9c(0xfb)](_0x5f3c9b=>_0x5f3c9b!==_0x26bc22)),_0x3637db=$$`<div class="flex-v-center my-1 w-100">
-						${_0x3c232b}${_0x4bc6ba}${_0x4f5d98}
-					</div>`[_0x466c9c(0x100)](_0x11b8e9);return{'comp':_0xc82639,'$wrpRow':_0x3637db,'$btnUpload':_0x3c232b};}});};return _0x42747b(),this['_comp'][_0x4faec8(0x140)](_0x4faec8(0x136),_0x42747b),_0x2f9844;}[_0x55cce1(0x14d)](){const _0x450adc=_0x55cce1,_0x425ca3=$(_0x450adc(0x16d))['click'](()=>{const _0x422f96=_0x450adc,_0x43d959={'id':CryptUtil[_0x422f96(0x122)](),'data':{'displayName':_0x422f96(0x126),'isCustom':!![],'url':null}};this['_comp'][_0x422f96(0x16e)][_0x422f96(0x13d)]=[...this['_comp'][_0x422f96(0x16e)][_0x422f96(0x13d)],_0x43d959];const _0x30e7e7=this[_0x422f96(0x10c)][_0x422f96(0x16c)]({'prop':_0x422f96(0x13d)}),_0x5e9090=_0x30e7e7[_0x43d959['id']];_0x5e9090[_0x422f96(0xdc)]['focus']();}),_0xd46983=()=>_0x425ca3['toggleVe'](this[_0x450adc(0x10c)][_0x450adc(0x16e)]['isShowCustomUrlForm']);this[_0x450adc(0x10c)]['_addHookBase'](_0x450adc(0x15f),_0xd46983),_0xd46983();const _0x3efebe=$('<div\x20class=\x22flex-col\x20w-100\x22></div>'),_0x56cb51=$$`<div class="flex-col w-100 py-1">
+		</div>`;
+
+		const hkUploadFileMetas = () => {
+			this._comp._renderCollection({
+				prop: "uploadedFileMetas",
+				fnUpdateExisting: (renderedMeta, uploadFileMeta) => {
+					renderedMeta.comp._proxyAssignSimple("state", uploadFileMeta.data, true);
+					if (!renderedMeta.$wrpRow.parent().is($wrpUploadRows)) renderedMeta.$wrpRow.appendTo($wrpUploadRows);
+				},
+				fnGetNew: uploadFileMeta => {
+					const comp = BaseComponent.fromObject(uploadFileMeta.data, "*");
+					comp._addHookAll("state", () => {
+						uploadFileMeta.data = comp.toObject("*");
+						this._comp._triggerCollectionUpdate("uploadedFileMetas");
+					});
+
+					const $dispName = $(`<div class="imp__disp-filename mr-1 ve-muted w-100"></div>`)
+						.click(() => $btnUpload.click());
+					const hkName = () => $dispName.text(comp._state.name || "Select file...").title(comp._state.name || "");
+					comp._addHookBase("name", hkName);
+					hkName();
+
+					const $btnUpload = $(`<button class="btn btn-5et btn-xs mr-1">Upload File</button>`)
+						.click(() => {
+							const $ipt = $(`<input type="file" accept=".json" class="ve-hidden">`)
+								.change(evt => {
+									const input = evt.target;
+									const files = $ipt[0].files;
+
+									const reader = new FileReader();
+									reader.onload = async () => {
+										const file = (files[0] || {});
+
+										try {
+											const json = JSON.parse(reader.result);
+											Vetools.addToHomebrewSourceLookup(json);
+											await Vetools.pAddToHomebrew(json);
+											const fileData = await DataUtil.pDoMetaMerge(CryptUtil.uid(), json);
+											comp._proxyAssignSimple("state", {name: file.name, contents: fileData});
+										} catch (e) {
+											ui.notifications.error(`Failed to read file! ${VeCt.STR_SEE_CONSOLE}`);
+											throw e;
+										}
+									};
+									reader.readAsText(input.files[0]);
+								})
+								.click();
+						});
+
+					const $btnDelete = $(`<button class="btn btn-5et btn-xs btn-danger" title="Delete"><span class="glyphicon glyphicon-trash"></span></button>`)
+						.click(() => this._comp._state.uploadedFileMetas = this._comp._state.uploadedFileMetas.filter(it => it !== uploadFileMeta));
+
+					const $wrpRow = $$`<div class="flex-v-center my-1 w-100">
+						${$btnUpload}${$dispName}${$btnDelete}
+					</div>`.appendTo($wrpUploadRows);
+
+					return {
+						comp,
+						$wrpRow,
+						$btnUpload,
+					};
+				},
+			});
+		};
+		hkUploadFileMetas();
+		this._comp._addHookBase("uploadedFileMetas", hkUploadFileMetas);
+
+		return $stgUpload;
+	}
+
+	_$getStageUrl () {
+		const $btnAddUrl = $(`<button class="btn btn-5et btn-default btn-xs">Add Custom</button>`)
+			.click(() => {
+				const nxt = {
+					id: CryptUtil.uid(),
+					data: {
+						displayName: "Custom Url",
+						isCustom: true,
+						url: null,
+					},
+				};
+
+				this._comp._state.urlMetas = [
+					...this._comp._state.urlMetas,
+					nxt,
+				];
+
+				// Focus the new URL input
+				const renderedCollection = this._comp._getRenderedCollection({prop: "urlMetas"});
+				const renderedMeta = renderedCollection[nxt.id];
+				renderedMeta.$iptUrl.focus();
+			});
+		const hkIsCustomUrls = () => $btnAddUrl.toggleVe(this._comp._state.isShowCustomUrlForm);
+		this._comp._addHookBase("isShowCustomUrlForm", hkIsCustomUrls);
+		hkIsCustomUrls();
+
+		const $wrpUrlRows = $(`<div class="flex-col w-100"></div>`);
+
+		const $stgUrl = $$`<div class="flex-col w-100 py-1">
 			<div class="mb-1 split-v-center">
 				<div>URL Sources:</div>
-				${_0x425ca3}
+				${$btnAddUrl}
 			</div>
-			${_0x3efebe}
+			${$wrpUrlRows}
 			<hr class="hr-1">
-		</div>`,_0x18b96c=()=>{const _0x5ef880=_0x450adc;this[_0x5ef880(0x10c)][_0x5ef880(0xf1)]({'prop':'urlMetas','fnUpdateExisting':(_0x2fd704,_0x17a36e)=>{const _0xf8ba07=_0x5ef880;_0x2fd704['comp']['_proxyAssignSimple']('state',_0x17a36e[_0xf8ba07(0x12a)],!![]);if(!_0x2fd704[_0xf8ba07(0x13f)][_0xf8ba07(0x162)]()['is'](_0x3efebe))_0x2fd704[_0xf8ba07(0x13f)]['appendTo'](_0x3efebe);},'fnGetNew':_0x263900=>{const _0x47855d=_0x5ef880,_0xec4532=BaseComponent[_0x47855d(0xe4)](_0x263900[_0x47855d(0x12a)],'*');_0xec4532[_0x47855d(0xbb)](_0x47855d(0x112),()=>{const _0x32f2d2=_0x47855d;_0x263900[_0x32f2d2(0x12a)]=_0xec4532[_0x32f2d2(0x17b)]('*'),this[_0x32f2d2(0x10c)][_0x32f2d2(0x16a)](_0x32f2d2(0x13d));});const _0x3f3bf5=ComponentUiUtil[_0x47855d(0x135)](_0xec4532,_0x47855d(0xf3));if(Config[_0x47855d(0x11c)]('ui',_0x47855d(0x132)))_0x3f3bf5['addClass'](_0x47855d(0x102));const _0x27cc5f=()=>{const _0x10ec73=_0x47855d;_0xec4532[_0x10ec73(0x16e)][_0x10ec73(0x172)]?_0x3f3bf5['title']('Enter\x20JSON\x20URL')[_0x10ec73(0xf7)](_0x10ec73(0xe0))[_0x10ec73(0x139)](_0xec4532[_0x10ec73(0x16e)]['url']):_0x3f3bf5[_0x10ec73(0x13e)](_0x10ec73(0x101))[_0x10ec73(0x139)](_0xec4532[_0x10ec73(0x16e)][_0x10ec73(0xf5)])[_0x10ec73(0x121)]();};this[_0x47855d(0x10c)][_0x47855d(0x140)](_0x47855d(0xf3),_0x27cc5f),this['_comp'][_0x47855d(0x140)](_0x47855d(0xf5),_0x27cc5f),_0x27cc5f();const _0x1372da=!_0xec4532[_0x47855d(0x16e)]['isCustom']?null:$(_0x47855d(0xf8))[_0x47855d(0x125)](()=>this['_comp'][_0x47855d(0x16e)]['urlMetas']=this[_0x47855d(0x10c)]['_state']['urlMetas'][_0x47855d(0xfb)](_0xb8e216=>_0xb8e216!==_0x263900)),_0x158bc5=$$`<div class="flex-v-center my-1 w-100">
-						${_0x3f3bf5}${_0x1372da}
-					</div>`['appendTo'](_0x3efebe);return{'comp':_0xec4532,'$wrpRow':_0x158bc5,'$iptUrl':_0x3f3bf5};}});};return _0x18b96c(),this[_0x450adc(0x10c)][_0x450adc(0x140)]('urlMetas',_0x18b96c),_0x56cb51;}[_0x55cce1(0x168)](){const _0x3fa702=_0x55cce1,_0xd47e07=$(_0x3fa702(0xe6)),_0x21d273=$$`<div class="flex-col w-100 py-1">
+		</div>`;
+
+		const hkUrlMetas = () => {
+			this._comp._renderCollection({
+				prop: "urlMetas",
+				fnUpdateExisting: (renderedMeta, urlMeta) => {
+					renderedMeta.comp._proxyAssignSimple("state", urlMeta.data, true);
+					if (!renderedMeta.$wrpRow.parent().is($wrpUrlRows)) renderedMeta.$wrpRow.appendTo($wrpUrlRows);
+				},
+				fnGetNew: urlMeta => {
+					const comp = BaseComponent.fromObject(urlMeta.data, "*");
+					comp._addHookAll("state", () => {
+						urlMeta.data = comp.toObject("*");
+						this._comp._triggerCollectionUpdate("urlMetas");
+					});
+
+					const $iptUrl = ComponentUiUtil.$getIptStr(comp, "url");
+					if (Config.get("ui", "isStreamerMode")) $iptUrl.addClass("text-sneaky");
+					const hkDisplayNameUrl = () => {
+						if (comp._state.isCustom) {
+							$iptUrl.title("Enter JSON URL").placeholder("Enter JSON URL").val(comp._state.url);
+						} else {
+							$iptUrl.title("JSON URL").val(comp._state.displayName).disable();
+						}
+					};
+					this._comp._addHookBase("url", hkDisplayNameUrl);
+					this._comp._addHookBase("displayName", hkDisplayNameUrl);
+					hkDisplayNameUrl();
+
+					const $btnDelete = !comp._state.isCustom ? null : $(`<button class="btn btn-5et btn-xs btn-danger ml-2" title="Delete"><span class="glyphicon glyphicon-trash"></span></button>`)
+						.click(() => this._comp._state.urlMetas = this._comp._state.urlMetas.filter(it => it !== urlMeta));
+
+					const $wrpRow = $$`<div class="flex-v-center my-1 w-100">
+						${$iptUrl}${$btnDelete}
+					</div>`.appendTo($wrpUrlRows);
+
+					return {
+						comp,
+						$wrpRow,
+						$iptUrl,
+					};
+				},
+			});
+		};
+		hkUrlMetas();
+		this._comp._addHookBase("urlMetas", hkUrlMetas);
+
+		return $stgUrl;
+	}
+
+	_$getStageSpecial () {
+		const $wrpSpecialRows = $(`<div class="flex-col w-100"></div>`);
+
+		const $stgSpecial = $$`<div class="flex-col w-100 py-1">
 			<div class="mb-1 flex-v-center">
 				<div>Pre-Compiled Sources:</div>
 			</div>
-			${_0xd47e07}
+			${$wrpSpecialRows}
 			<hr class="hr-1">
-		</div>`,_0x4c6387=()=>{const _0x50006c=_0x3fa702;this[_0x50006c(0x10c)]['_renderCollection']({'prop':_0x50006c(0xeb),'fnUpdateExisting':(_0x1c348e,_0x572ebd)=>{const _0x321ee9=_0x50006c;_0x1c348e['comp'][_0x321ee9(0x10a)]('state',_0x572ebd[_0x321ee9(0x12a)],!![]);if(!_0x1c348e[_0x321ee9(0x13f)][_0x321ee9(0x162)]()['is'](_0xd47e07))_0x1c348e[_0x321ee9(0x13f)][_0x321ee9(0x100)](_0xd47e07);},'fnGetNew':_0x6e01e7=>{const _0x44ad66=_0x50006c,_0x1446d9=BaseComponent[_0x44ad66(0xe4)](_0x6e01e7[_0x44ad66(0x12a)],'*');_0x1446d9[_0x44ad66(0xbb)](_0x44ad66(0x112),()=>{const _0x31248a=_0x44ad66;_0x6e01e7[_0x31248a(0x12a)]=_0x1446d9[_0x31248a(0x17b)]('*'),this[_0x31248a(0x10c)][_0x31248a(0x16a)]('urlMetas');});const _0xb42b6e=$(_0x44ad66(0x104)+(Config['get']('ui','isStreamerMode')?_0x44ad66(0x102):'')+'\x22></div>'),_0x4dfe46=()=>_0xb42b6e[_0x44ad66(0xfe)](_0x1446d9[_0x44ad66(0x16e)][_0x44ad66(0xf5)]);this[_0x44ad66(0x10c)][_0x44ad66(0x140)](_0x44ad66(0xf5),_0x4dfe46),_0x4dfe46();const _0x4853ff=$$`<div class="flex-v-center my-1 w-100">${_0xb42b6e}</div>`['appendTo'](_0xd47e07);return{'comp':_0x1446d9,'$wrpRow':_0x4853ff};}});};return _0x4c6387(),this[_0x3fa702(0x10c)][_0x3fa702(0x140)](_0x3fa702(0xeb),_0x4c6387),_0x21d273;}async[_0x55cce1(0xba)](){const _0x5a744=_0x55cce1,_0x471add=new Set(await StorageUtil['pGet'](this[_0x5a744(0x12b)])||[]),_0x575210=this[_0x5a744(0xd7)][_0x5a744(0xfb)](_0xbb9125=>_0x471add[_0x5a744(0x179)](_0xbb9125[_0x5a744(0x12f)]));if(!_0x575210[_0x5a744(0xed)])_0x575210[_0x5a744(0x117)](...this[_0x5a744(0xd7)][_0x5a744(0xfb)](_0x2d3a43=>_0x2d3a43[_0x5a744(0xdf)]));return _0x575210;}async[_0x55cce1(0x11a)](_0x18c03b,_0x467a7d=null){const _0x442407=_0x55cce1;this[_0x442407(0x111)]=this['_$getStageNone'](),this['_$stgUpload']=this[_0x442407(0x173)](),this[_0x442407(0x11d)]=this[_0x442407(0x14d)](),this[_0x442407(0x175)]=this[_0x442407(0x168)]();const _0x463ba9=await this[_0x442407(0xba)](),_0x2c9032=({isSkipSave:_0x1521d7}={})=>{const _0x1798a6=_0x442407,_0x34b4a4=this['_list']['items']['filter'](_0x1e4988=>_0x1e4988[_0x1798a6(0x12a)]['cbSel'][_0x1798a6(0x166)])[_0x1798a6(0x165)](_0x3268de=>this[_0x1798a6(0xd7)][_0x3268de['ix']]),_0x27561a=_0x34b4a4['map'](_0x3031a1=>_0x3031a1[_0x1798a6(0x12f)]);if(!_0x1521d7)StorageUtil[_0x1798a6(0xd2)](this['_savedSelectionKey'],_0x27561a);const _0x56079a=_0x34b4a4[_0x1798a6(0x10d)](_0x509e2a=>_0x509e2a[_0x1798a6(0x167)]),_0x2f0009=_0x34b4a4[_0x1798a6(0x10d)](_0x40dd6d=>_0x40dd6d[_0x1798a6(0xf3)]!=null),_0x351902=_0x34b4a4[_0x1798a6(0x10d)](_0x1183f9=>_0x1183f9[_0x1798a6(0xf3)]==null&&!_0x1183f9[_0x1798a6(0x167)]);this['_$stgNone']['toggleVe'](!_0x56079a&&!_0x2f0009&&!_0x351902),this[_0x1798a6(0x130)][_0x1798a6(0xc4)](_0x56079a),this[_0x1798a6(0x11d)][_0x1798a6(0xc4)](_0x2f0009),this[_0x1798a6(0x175)]['toggleVe'](_0x351902);if(_0x2f0009){this[_0x1798a6(0x10c)]['_state'][_0x1798a6(0x15f)]=_0x34b4a4[_0x1798a6(0x10d)](_0x139b49=>_0x139b49['url']==='');const _0x5a4d3a=this['_comp'][_0x1798a6(0x16e)][_0x1798a6(0x15f)]?this[_0x1798a6(0x10c)][_0x1798a6(0x16e)][_0x1798a6(0x13d)][_0x1798a6(0xfb)](_0xbd5253=>_0xbd5253[_0x1798a6(0x12a)]['isCustom']):[];this[_0x1798a6(0x10c)][_0x1798a6(0x16e)][_0x1798a6(0x13d)]=[..._0x34b4a4[_0x1798a6(0xfb)](_0x1bda81=>_0x1bda81[_0x1798a6(0xf3)])[_0x1798a6(0x165)](_0x10a165=>({'id':_0x10a165[_0x1798a6(0xf3)],'data':{'isCustom':![],'displayName':_0x10a165[_0x1798a6(0xf3)]}})),..._0x5a4d3a];}else this[_0x1798a6(0x10c)]['_state']['urlMetas']=[];_0x351902?this[_0x1798a6(0x10c)][_0x1798a6(0x16e)][_0x1798a6(0xeb)]=[..._0x34b4a4[_0x1798a6(0xfb)](_0xdff6f5=>_0xdff6f5['url']==null&&!_0xdff6f5[_0x1798a6(0x167)])[_0x1798a6(0x165)](_0x15fbf1=>({'id':_0x15fbf1[_0x1798a6(0x15e)],'data':{'displayName':_0x15fbf1[_0x1798a6(0x147)]}}))]:this[_0x1798a6(0x10c)][_0x1798a6(0x16e)][_0x1798a6(0xeb)]=[];if(_0x467a7d)_0x467a7d(_0x34b4a4);};if(this[_0x442407(0x156)])this['_pageFilter'][_0x442407(0x131)]();this[_0x442407(0x156)]=new AppSourceSelectorMulti[(_0x442407(0x150))]();const _0x5b6117=$(_0x442407(0xce)),_0x5b71c4=$('<button\x20class=\x22btn\x20btn-5et\x22\x20title=\x22Toggle\x20Filter\x20Summary\x20Display\x22><span\x20class=\x22glyphicon\x20glyphicon-resize-small\x22></span></button>'),_0x23494e=$(_0x442407(0xc8)),_0x3014b3=$(_0x442407(0x17c))[_0x442407(0x125)](()=>_0x23494e[_0x442407(0x139)]('')),_0x4a1cc2=$('<div\x20class=\x22fltr__mini-view\x20btn-group\x22></div>'),_0x53882c=this[_0x442407(0xec)]?null:$('<input\x20type=\x22checkbox\x22\x20class=\x22no-events\x22>'),_0x28976e=$$`<label class="btn btn-5et btn-xs col-0-5 flex-vh-center" ${this[_0x442407(0xec)]?'disabled':''}>${_0x53882c}</label>`,_0x1db027=$$`<div class="flex-v-stretch input-group input-group--bottom mb-1 no-shrink">
-			${_0x28976e}
+		</div>`;
+
+		const hkSpecialMetas = () => {
+			this._comp._renderCollection({
+				prop: "specialMetas",
+				fnUpdateExisting: (renderedMeta, specialMeta) => {
+					renderedMeta.comp._proxyAssignSimple("state", specialMeta.data, true);
+					if (!renderedMeta.$wrpRow.parent().is($wrpSpecialRows)) renderedMeta.$wrpRow.appendTo($wrpSpecialRows);
+				},
+				fnGetNew: specialMetas => {
+					const comp = BaseComponent.fromObject(specialMetas.data, "*");
+					comp._addHookAll("state", () => {
+						specialMetas.data = comp.toObject("*");
+						this._comp._triggerCollectionUpdate("urlMetas");
+					});
+
+					const $dispName = $(`<div class="w-100 italic ${Config.get("ui", "isStreamerMode") ? "text-sneaky" : ""}"></div>`);
+					const hkDisplayName = () => $dispName.text(comp._state.displayName);
+					this._comp._addHookBase("displayName", hkDisplayName);
+					hkDisplayName();
+
+					const $wrpRow = $$`<div class="flex-v-center my-1 w-100">${$dispName}</div>`
+						.appendTo($wrpSpecialRows);
+
+					return {
+						comp,
+						$wrpRow,
+					};
+				},
+			});
+		};
+		hkSpecialMetas();
+		this._comp._addHookBase("specialMetas", hkSpecialMetas);
+
+		return $stgSpecial;
+	}
+
+	async _pGetInitialSources () {
+		const initialSourceIds = new Set((await StorageUtil.pGet(this._savedSelectionKey)) || []);
+		const initialSources = this._sourcesToDisplay.filter(it => initialSourceIds.has(it.identifier));
+		if (!initialSources.length) initialSources.push(...this._sourcesToDisplay.filter(it => it.isDefault));
+		return initialSources;
+	}
+
+	async _pGetElements_pGetListElements ($wrpList, cbSourceChange = null) {
+		this._$stgNone = this._$getStageNone();
+		this._$stgUpload = this._$getStageUpload();
+		this._$stgUrl = this._$getStageUrl();
+		this._$stgSpecial = this._$getStageSpecial();
+
+		const initialSources = await this._pGetInitialSources();
+
+		const setSources = ({isSkipSave} = {}) => {
+			const selSources = this._list.items.filter(it => it.data.cbSel.checked).map(li => this._sourcesToDisplay[li.ix]);
+
+			const selSourceIdentifiers = selSources.map(source => source.identifier);
+			if (!isSkipSave) StorageUtil.pSet(this._savedSelectionKey, selSourceIdentifiers);
+
+			const isShowStageUpload = selSources.some(it => it.isFile);
+			const isShowStageUrl = selSources.some(it => it.url != null);
+			const isShowStageSpecial = selSources.some(it => it.url == null && !it.isFile);
+
+			this._$stgNone.toggleVe(!isShowStageUpload && !isShowStageUrl && !isShowStageSpecial);
+			this._$stgUpload.toggleVe(isShowStageUpload);
+			this._$stgUrl.toggleVe(isShowStageUrl);
+			this._$stgSpecial.toggleVe(isShowStageSpecial);
+
+			// region Convert list state to component state
+			if (isShowStageUrl) {
+				this._comp._state.isShowCustomUrlForm = selSources.some(it => it.url === "");
+
+				const customUrlMetas = this._comp._state.isShowCustomUrlForm
+					? this._comp._state.urlMetas.filter(it => it.data.isCustom)
+					: [];
+
+				this._comp._state.urlMetas = [
+					...selSources.filter(it => it.url).map(it => ({id: it.url, data: {isCustom: false, displayName: it.url}})),
+					...customUrlMetas,
+				];
+			} else {
+				this._comp._state.urlMetas = [];
+			}
+
+			if (isShowStageSpecial) {
+				this._comp._state.specialMetas = [
+					...selSources.filter(it => it.url == null && !it.isFile).map(it => ({id: it.cacheKey, data: {displayName: it.name}})),
+				];
+			} else {
+				this._comp._state.specialMetas = [];
+			}
+			// endregion
+
+			// Run any source-change callbacks
+			if (cbSourceChange) cbSourceChange(selSources);
+		};
+
+		if (this._pageFilter) this._pageFilter.teardown();
+		this._pageFilter = new AppSourceSelectorMulti.AppSourceSelectorAppFilter();
+
+		const $btnOpenFilter = $(`<button class="btn-5et veapp__btn-filter">Filter</button>`);
+		const $btnToggleSummaryHidden = $(`<button class="btn btn-5et" title="Toggle Filter Summary Display"><span class="glyphicon glyphicon-resize-small"></span></button>`);
+		const $iptSearch = $(`<input type="search" class="search w-100 form-control" placeholder="Find source...">`);
+		const $btnReset = $(`<button class="btn-5et veapp__btn-list-reset">Reset</button>`)
+			.click(() => $iptSearch.val(""));
+		const $wrpMiniPills = $(`<div class="fltr__mini-view btn-group"></div>`);
+
+		const $cbAll = this._isRadio ? null : $(`<input type="checkbox" class="no-events">`);
+		const $lblCbAll = $$`<label class="btn btn-5et btn-xs col-0-5 flex-vh-center" ${this._isRadio ? "disabled" : ""}>${$cbAll}</label>`;
+
+		const $wrpBtnsSort = $$`<div class="flex-v-stretch input-group input-group--bottom mb-1 no-shrink">
+			${$lblCbAll}
 			<button class="btn-5et btn-xs col-11-5 sort" data-sort="name">Name</button>
-		</div>`,_0x111ba3=$(_0x442407(0xc9));return $$(_0x18c03b)`
+		</div>`;
+		const $list = $(`<div class="veapp__list mb-1 h-100 min-h-0"></div>`);
+		$$($wrpList)`
 			<div class="flex-v-stretch input-group input-group--top no-shrink">
-				${_0x5b6117}
-				${_0x5b71c4}
-				${_0x23494e}
-				${_0x3014b3}
+				${$btnOpenFilter}
+				${$btnToggleSummaryHidden}
+				${$iptSearch}
+				${$btnReset}
 			</div>
-			${_0x4a1cc2}
-			${_0x1db027}
-			${_0x111ba3}
-		`,this['_list']=new List({'$iptSearch':_0x23494e,'$wrpList':_0x111ba3,'fnSort':this[_0x442407(0xb5)]['_sortListItems']}),SortUtil[_0x442407(0xe3)](_0x1db027,this['_list']),!this[_0x442407(0xec)]&&(ListUiUtil['bindSelectAllCheckbox'](_0x53882c,this[_0x442407(0xbc)]),_0x53882c[_0x442407(0xda)](()=>_0x2c9032())),await this['_pageFilter'][_0x442407(0xd1)]({'$iptSearch':_0x23494e,'$btnReset':_0x3014b3,'$btnOpen':_0x5b6117,'$btnToggleSummaryHidden':_0x5b71c4,'$wrpMiniPills':_0x4a1cc2,'namespace':this[_0x442407(0x134)]}),this[_0x442407(0xd7)][_0x442407(0x170)]((_0x390895,_0x45b913)=>{const _0x36ebcf=_0x442407,_0x4062b2=_0x463ba9[_0x36ebcf(0xb6)](_0x390895);this[_0x36ebcf(0x156)]['mutateAndAddToFilters'](_0x390895);const _0x279bd9=document[_0x36ebcf(0x10b)](_0x36ebcf(0xcd));_0x279bd9[_0x36ebcf(0xe9)]=_0x36ebcf(0x15b)+(_0x4062b2?_0x36ebcf(0xc3):'');const _0xba5152=this['_isRadio']?Util[_0x36ebcf(0x176)](_0x36ebcf(0xde)):Util[_0x36ebcf(0x176)](_0x36ebcf(0x12d));if(_0x4062b2)_0xba5152[_0x36ebcf(0x166)]=!![];const _0x427a79=Util[_0x36ebcf(0x176)]('<span\x20class=\x22col-0-5\x20flex-vh-center\x22></span>');_0x427a79[_0x36ebcf(0x174)](_0xba5152),_0x279bd9[_0x36ebcf(0x174)](_0x427a79),_0x279bd9[_0x36ebcf(0x174)](Util[_0x36ebcf(0x176)](_0x36ebcf(0x142)+this[_0x36ebcf(0xb5)][_0x36ebcf(0x10f)](_0x390895[_0x36ebcf(0x11b)])+_0x390895[_0x36ebcf(0x147)]+'</span>'));const _0x182fec=new ListItem(_0x45b913,_0x279bd9,_0x390895[_0x36ebcf(0x147)],{'filterTypes':_0x390895['filterTypes']},{'cbSel':_0xba5152});_0x279bd9['addEventListener'](_0x36ebcf(0x125),_0x5c4b1f=>{const _0x5c1d60=_0x36ebcf;if(this[_0x5c1d60(0xec)])ListUiUtil['handleSelectClickRadio'](this[_0x5c1d60(0xbc)],_0x182fec,_0x5c4b1f);else ListUiUtil['handleSelectClick'](this['_list'],_0x182fec,_0x5c4b1f);_0x2c9032();}),this[_0x36ebcf(0xbc)]['addItem'](_0x182fec);}),_0x2c9032({'isSkipSave':!![]}),this[_0x442407(0xbc)]['init'](),this[_0x442407(0x156)]['filterBox']['render'](),this[_0x442407(0x156)][_0x442407(0xe2)]['on'](FilterBox[_0x442407(0x129)],this[_0x442407(0x103)][_0x442407(0x10e)](this)),this[_0x442407(0x103)](),{'$stgNone':this[_0x442407(0x111)],'$stgUpload':this[_0x442407(0x130)],'$stgUrl':this[_0x442407(0x11d)],'$stgSpecial':this['_$stgSpecial'],'$iptSearch':_0x23494e};}[_0x55cce1(0x103)](){const _0x46692b=_0x55cce1,_0xa6c660=this['_pageFilter'][_0x46692b(0xe2)][_0x46692b(0xf9)]();this['_list'][_0x46692b(0xfb)](_0x5cddb3=>this[_0x46692b(0x156)][_0x46692b(0xd0)](_0xa6c660,this[_0x46692b(0xd7)][_0x5cddb3['ix']]));}static[_0x55cce1(0x14e)](_0x24941c,_0x1c18d2,_0x45e2f4){const _0x305221=_0x55cce1,_0x4bfcdf=Math['min'](..._0x24941c[_0x305221(0xf0)][_0x305221(0x11b)][_0x305221(0x165)](_0x132dd1=>UtilDataSource['SOURCE_TYPE_ORDER'][_0x305221(0x116)](_0x132dd1))),_0x50ce50=Math[_0x305221(0xdb)](..._0x1c18d2[_0x305221(0xf0)][_0x305221(0x11b)]['map'](_0x458609=>UtilDataSource[_0x305221(0x153)][_0x305221(0x116)](_0x458609)));return SortUtil[_0x305221(0xc1)](_0x4bfcdf,_0x50ce50)||SortUtil[_0x305221(0x12e)](_0x24941c,_0x1c18d2);}static[_0x55cce1(0x10f)](_0x4ca0d4){const _0x4b7443=_0x55cce1;if(_0x4ca0d4[_0x4b7443(0xb6)](UtilDataSource['SOURCE_TYP_OFFICIAL_ALL'])||_0x4ca0d4[_0x4b7443(0xb6)](UtilDataSource[_0x4b7443(0xe5)]))return _0x4b7443(0x160)+UtilDataSource[_0x4b7443(0x177)]+_0x4b7443(0xcf);if(_0x4ca0d4['includes'](UtilDataSource[_0x4b7443(0x14b)]))return _0x4b7443(0x106)+UtilDataSource[_0x4b7443(0x14b)]+_0x4b7443(0xcf);if(_0x4ca0d4[_0x4b7443(0xb6)](UtilDataSource[_0x4b7443(0x119)]))return'<i\x20class=\x22fas\x20fa-beer\x20mr-1\x20sourceHomebrew\x22\x20title=\x22'+UtilDataSource[_0x4b7443(0x119)]+'\x22></i>';if(_0x4ca0d4[_0x4b7443(0xb6)](UtilDataSource['SOURCE_TYP_CUSTOM']))return'<i\x20class=\x22fas\x20fa-user\x20ve-muted\x20mr-1\x22\x20title=\x22'+UtilDataSource[_0x4b7443(0x178)]+_0x4b7443(0xcf);if(_0x4ca0d4[_0x4b7443(0xb6)](UtilDataSource[_0x4b7443(0xe8)]))return'<i\x20class=\x22fas\x20fa-question-circle\x20ve-muted\x20mr-1\x22\x20title=\x22'+UtilDataSource['SOURCE_TYP_CUSTOM']+_0x4b7443(0xcf);return'';}['activateListeners'](_0x5cf610){(async()=>{const _0x4e577b=_0x9f20,_0x109630=$(_0x4e577b(0x11e))[_0x4e577b(0x100)](_0x5cf610['empty']()),_0x211c9c=$(_0x4e577b(0x171)),{$iptSearch:_0x2d3d4d}=await this[_0x4e577b(0x11f)](_0x211c9c);_0x2d3d4d['keydown'](_0x39d524=>{const _0x41347a=_0x4e577b;if(_0x39d524[_0x41347a(0xcc)]===_0x41347a(0x120))_0x279e1b[_0x41347a(0x125)]();});const _0x279e1b=$(_0x4e577b(0xd4))['click'](async()=>{const _0x495582=_0x4e577b;try{_0x109630['showVe']();const _0xa00225=await this[_0x495582(0x157)]();if(!_0xa00225[_0x495582(0xed)])return _0x109630[_0x495582(0xd6)](),ui[_0x495582(0xdd)][_0x495582(0xb8)](_0x495582(0x107));if(_0xa00225[_0x495582(0xed)]>0xa){const _0x3837f6=await InputUiUtil[_0x495582(0x124)]({'title':_0x495582(0xc6),'storageKey':_0x495582(0x15c),'textYesRemember':_0x495582(0x14a),'textYes':_0x495582(0x14f),'textNo':'Cancel'});if(!_0x3837f6){_0x109630[_0x495582(0xd6)]();return;}}const _0x197de3=await this[_0x495582(0xb4)](_0xa00225);if(!_0x197de3[_0x495582(0xed)])return _0x109630[_0x495582(0xd6)](),ui[_0x495582(0xdd)][_0x495582(0x105)](_0x495582(0x143));this[_0x495582(0xee)](_0x197de3),this['close']();}catch(_0xc564f5){_0x109630[_0x495582(0xd6)](),ui[_0x495582(0xdd)][_0x495582(0xb8)]('Failed\x20to\x20load\x20sources!\x20'+VeCt[_0x495582(0xf6)]);throw _0xc564f5;}});$$(_0x5cf610)`
-			${_0x211c9c}
+			${$wrpMiniPills}
+			${$wrpBtnsSort}
+			${$list}
+		`;
+
+		this._list = new List({
+			$iptSearch,
+			$wrpList: $list,
+			fnSort: this.constructor._sortListItems,
+		});
+		SortUtil.initBtnSortHandlers($wrpBtnsSort, this._list);
+		if (!this._isRadio) {
+			ListUiUtil.bindSelectAllCheckbox($cbAll, this._list);
+			$cbAll.change(() => setSources());
+		}
+
+		await this._pageFilter.pInitFilterBox({
+			$iptSearch,
+			$btnReset,
+			$btnOpen: $btnOpenFilter,
+			$btnToggleSummaryHidden,
+			$wrpMiniPills,
+			namespace: this._filterNamespace,
+		});
+
+		this._sourcesToDisplay.forEach((src, srcI) => {
+			const isSelected = initialSources.includes(src);
+
+			this._pageFilter.mutateAndAddToFilters(src);
+
+			const eleLi = document.createElement("label");
+			eleLi.className = `row imp-wiz__row veapp__list-row-hoverable flex-v-center ${isSelected ? "list-multi-selected" : ""}`;
+
+			const eleCb = this._isRadio
+				? Util.htmlToNode(`<input type="radio" name="radio" class="no-events mx-1">`)
+				: Util.htmlToNode(`<input type="checkbox" class="no-events mx-1">`);
+			if (isSelected) eleCb.checked = true;
+
+			const eleWrpCb = Util.htmlToNode(`<span class="col-0-5 flex-vh-center"></span>`);
+			eleWrpCb.append(eleCb);
+
+			eleLi.append(eleWrpCb);
+			eleLi.append(Util.htmlToNode(`<span class="col-11-5">${this.constructor._getFilterTypesIcon(src.filterTypes)}${src.name}</span>`));
+
+			const listItem = new ListItem(
+				srcI,
+				eleLi,
+				src.name,
+				{
+					filterTypes: src.filterTypes,
+					abbreviations: src.abbreviations || [],
+				},
+				{
+					cbSel: eleCb,
+				},
+			);
+
+			eleLi.addEventListener("click", evt => {
+				if (this._isRadio) ListUiUtil.handleSelectClickRadio(this._list, listItem, evt);
+				else ListUiUtil.handleSelectClick(this._list, listItem, evt);
+				setSources();
+			});
+
+			this._list.addItem(listItem);
+		});
+
+		setSources({isSkipSave: true});
+
+		this._list.init();
+
+		this._pageFilter.filterBox.render();
+
+		this._pageFilter.filterBox.on(
+			FilterBox.EVNT_VALCHANGE,
+			this._handleFilterChange.bind(this),
+		);
+
+		this._handleFilterChange();
+
+		return {
+			$stgNone: this._$stgNone,
+			$stgUpload: this._$stgUpload,
+			$stgUrl: this._$stgUrl,
+			$stgSpecial: this._$stgSpecial,
+
+			$iptSearch,
+		};
+	}
+
+	_handleFilterChange () {
+		const f = this._pageFilter.filterBox.getValues();
+		this._list.filter(li => this._pageFilter.toDisplay(f, this._sourcesToDisplay[li.ix]));
+	}
+
+	static _sortListItems (a, b, o) {
+		const ixTypeA = Math.min(...a.values.filterTypes.map(it => UtilDataSource.SOURCE_TYPE_ORDER.indexOf(it)));
+		const ixTypeB = Math.min(...b.values.filterTypes.map(it => UtilDataSource.SOURCE_TYPE_ORDER.indexOf(it)));
+
+		return SortUtil.ascSort(ixTypeA, ixTypeB) || SortUtil.compareListNames(a, b);
+	}
+
+	static _getFilterTypesIcon (filterTypes) {
+		if (filterTypes.includes(UtilDataSource.SOURCE_TYP_OFFICIAL_ALL) || filterTypes.includes(UtilDataSource.SOURCE_TYP_OFFICIAL_SINGLE)) {
+			return `<i class="fab fa-d-and-d mr-1 sourceAL" title="${UtilDataSource.SOURCE_TYP_OFFICIAL_BASE}"></i>`;
+		}
+
+		if (filterTypes.includes(UtilDataSource.SOURCE_TYP_ARCANA)) {
+			return `<i class="fas fa-fw fa-vial mr-1 sourceSpicy" title="${UtilDataSource.SOURCE_TYP_ARCANA}"></i>`;
+		}
+
+		if (filterTypes.includes(UtilDataSource.SOURCE_TYP_BREW_LOCAL)) {
+			return `<i class="fas fa-fw fa-beer mr-1 sourceHomebrew sourceHomebrew--local" title="${UtilDataSource.SOURCE_TYP_BREW_LOCAL}"></i>`;
+		}
+
+		if (filterTypes.includes(UtilDataSource.SOURCE_TYP_BREW)) {
+			return `<i class="fas fa-fw fa-beer mr-1 sourceHomebrew" title="${UtilDataSource.SOURCE_TYP_BREW}"></i>`;
+		}
+
+		if (filterTypes.includes(UtilDataSource.SOURCE_TYP_CUSTOM)) {
+			return `<i class="fas fa-fw fa-user ve-muted mr-1" title="${UtilDataSource.SOURCE_TYP_CUSTOM}"></i>`;
+		}
+
+		if (filterTypes.includes(UtilDataSource.SOURCE_TYP_UNKNOWN)) {
+			return `<i class="fas fa-fw fa-question-circle ve-muted mr-1" title="${UtilDataSource.SOURCE_TYP_CUSTOM}"></i>`;
+		}
+
+		return "";
+	}
+
+	// region Standalone app
+	activateListeners ($html) {
+		(async () => {
+			const $ovrLoading = $(`<div class="veapp-loading__wrp-outer"><i>Loading...</i></div>`)
+				.appendTo($html.empty());
+
+			const $wrpList = $(`<div class="flex-col w-100 h-100 min-h-0"></div>`);
+
+			const {$iptSearch} = await this.pGetElements($wrpList);
+
+			$iptSearch.keydown(evt => {
+				if (evt.key === "Enter") $btnAccept.click();
+			});
+
+			const $btnAccept = $(`<button class="mt-auto btn btn-5et">Confirm</button>`)
+				.click(async () => {
+					try {
+						$ovrLoading.showVe();
+
+						const sources = await this.pGetSelectedSources();
+						if (!sources.length) {
+							$ovrLoading.hideVe();
+							return ui.notifications.error(`No sources selected!`);
+						}
+
+						if (sources.length > 10) {
+							const isContinue = await InputUiUtil.pGetUserBoolean({
+								title: `You have many sources selected, which may negatively impact performance. Do you want to continue?`,
+								storageKey: "AppSourceSelectorMulti__massSelectionWarning",
+								textYesRemember: "Continue and Remember",
+								textYes: "Continue",
+								textNo: "Cancel",
+							});
+
+							if (!isContinue) {
+								$ovrLoading.hideVe();
+								return;
+							}
+						}
+
+						const out = await this._pGetOutputEntities(sources);
+
+						if (!out.length) {
+							$ovrLoading.hideVe();
+							return ui.notifications.warn(`No sources to be loaded! Please finish entering source details first.`);
+						}
+
+						this._resolve(out);
+						this.close();
+					} catch (e) {
+						$ovrLoading.hideVe();
+						ui.notifications.error(`Failed to load sources! ${VeCt.STR_SEE_CONSOLE}`);
+						throw e;
+					}
+				});
+
+			$$($html)`
+			${$wrpList}
 			<hr class="hr-1">
 			<div class="flex-col w-100 overflow-y-auto pr-1 max-h-40 imp__disp-import-from no-shrink">
 				<h3 class="mb-1">Import From</h3>
-				${this[_0x4e577b(0x111)]}
-				${this[_0x4e577b(0x130)]}
-				${this['_$stgUrl']}
-				${this['_$stgSpecial']}
+				${this._$stgNone}
+				${this._$stgUpload}
+				${this._$stgUrl}
+				${this._$stgSpecial}
 			</div>
-			${_0x279e1b}
-			${_0x109630[_0x4e577b(0xd6)]()}`,_0x2d3d4d[_0x4e577b(0x12c)]();})();}async['_pGetOutputEntities'](_0x1eb1e1){const _0x385471=_0x55cce1;let _0x259cc1=[];for(const _0x2c444c of _0x1eb1e1){if(_0x2c444c[_0x385471(0x167)])_0x259cc1['push'](...await this[_0x385471(0xd5)](_0x2c444c));else{if(_0x2c444c['url']!=null)_0x259cc1[_0x385471(0x117)](...await this[_0x385471(0xc0)](_0x2c444c));else _0x259cc1[_0x385471(0x117)](await this[_0x385471(0x154)](_0x2c444c));}}_0x259cc1=_0x259cc1[_0x385471(0xd3)]();if(_0x259cc1[_0x385471(0xed)]===0x1&&_0x259cc1[0x0]instanceof Array)_0x259cc1=_0x259cc1[0x0];return _0x259cc1;}['getCustomUrls'](){const _0x1c0ab6=_0x55cce1;return this[_0x1c0ab6(0x10c)][_0x1c0ab6(0x16e)][_0x1c0ab6(0x13d)]['filter'](_0x50b8e4=>_0x50b8e4['data'][_0x1c0ab6(0x172)]&&_0x50b8e4[_0x1c0ab6(0x12a)][_0x1c0ab6(0xf3)]&&_0x50b8e4[_0x1c0ab6(0x12a)][_0x1c0ab6(0xf3)][_0x1c0ab6(0xf2)]())[_0x1c0ab6(0x165)](_0x1dcc66=>_0x1dcc66[_0x1c0ab6(0x12a)][_0x1c0ab6(0xf3)][_0x1c0ab6(0xf2)]());}async[_0x55cce1(0xd5)](_0x5bc132){const _0x4f24f1=_0x55cce1,_0x52efe4=await UtilDataSource[_0x4f24f1(0x13c)](this,_0x5bc132,this['_props']);return _0x52efe4[_0x4f24f1(0x15d)];}async[_0x55cce1(0xc0)](_0x37ec5f){const _0x2da837=_0x55cce1,_0x1bcb80=await UtilDataSource[_0x2da837(0xca)](this,_0x37ec5f,this[_0x2da837(0x118)]);return _0x1bcb80[_0x2da837(0x15d)];}async[_0x55cce1(0x154)](_0xd3744a){const _0x3bb428=_0x55cce1,_0x5e1d3b=await UtilDataSource[_0x3bb428(0x14c)](_0xd3744a,this[_0x3bb428(0x118)]);return _0x5e1d3b[_0x3bb428(0x15d)];}[_0x55cce1(0x148)](){const _0x4aa454=_0x55cce1;this[_0x4aa454(0x10c)][_0x4aa454(0xb3)](_0x4aa454(0x13d)),this[_0x4aa454(0x10c)][_0x4aa454(0xb3)](_0x4aa454(0x136)),this['_comp'][_0x4aa454(0xb3)](_0x4aa454(0xeb));}[_0x55cce1(0x146)](){const _0x525e3f=_0x55cce1;if(this[_0x525e3f(0x156)])this[_0x525e3f(0x156)][_0x525e3f(0x131)]();}async[_0x55cce1(0xb7)](..._0x330954){const _0x80d189=_0x55cce1;this['handlePreClose'](),await super['close'](..._0x330954),this[_0x80d189(0x146)]();}[_0x55cce1(0x151)](){const _0xc94ce3=_0x55cce1;return this[_0xc94ce3(0x127)]=new Promise((_0x8ca043,_0x509d89)=>{const _0x426bec=_0xc94ce3;this[_0x426bec(0xee)]=_0x8ca043,this[_0x426bec(0x110)]=_0x509d89;}),this[_0xc94ce3(0x127)];}async[_0x55cce1(0xfa)](){const _0x529233=_0x55cce1,_0x2e4eac=await this[_0x529233(0xba)]();return this[_0x529233(0xb4)](_0x2e4eac);}}AppSourceSelectorMulti['AppSourceSelectorAppFilter']=class extends AppFilter{static[_0x55cce1(0x163)](_0x150614,_0x154d39){const _0x417f84=_0x55cce1;_0x150614=_0x150614[_0x417f84(0xfd)],_0x154d39=_0x154d39[_0x417f84(0xfd)];const _0x4be65d=UtilDataSource[_0x417f84(0x13a)][_0x417f84(0x116)](_0x150614),_0x475e3f=UtilDataSource[_0x417f84(0x13a)][_0x417f84(0x116)](_0x154d39);return SortUtil[_0x417f84(0xc1)](_0x4be65d,_0x475e3f);}constructor(){const _0x40f837=_0x55cce1;super(),this['_typeFilter']=new Filter({'header':_0x40f837(0xbf),'itemSortFn':AppSourceSelectorMulti[_0x40f837(0x150)][_0x40f837(0x163)]});}static['mutateForFilters'](){}[_0x55cce1(0xf4)](_0x3d5414,_0x1d4dff){const _0x38a995=_0x55cce1;if(_0x1d4dff)return;this[_0x38a995(0x113)][_0x38a995(0xbd)](_0x3d5414['filterTypes']);}async[_0x55cce1(0xd8)](_0x3ed1c9){const _0x53203e=_0x55cce1;_0x3ed1c9[_0x53203e(0xe7)]=[this['_typeFilter']];}[_0x55cce1(0xd0)](_0x3bf3b8,_0x3bef03){const _0x201ed0=_0x55cce1;return this[_0x201ed0(0xcb)][_0x201ed0(0xd0)](_0x3bf3b8,_0x3bef03[_0x201ed0(0x11b)]);}};export{AppSourceSelectorMulti};
+			${$btnAccept}
+			${$ovrLoading.hideVe()}`;
+
+			$iptSearch.focus();
+		})();
+	}
+
+	async _pGetOutputEntities (sources) {
+		let out = [];
+		for (const source of sources) {
+			// Returns an array, as multiple files may be loaded
+			if (source.isFile) out.push(...(await this._handleAccept_pGetFileOutputs(source)));
+			// Returns an array, as multiple URLs may be specified for a "custom URL" source
+			else if (source.url != null) out.push(...(await this._handleAccept_pGetUrlOutputs(source)));
+			// Returns a single item
+			else out.push(await this._handleAccept_pGetSpecialOutput(source));
+		}
+
+		// Flatten all the items into one continual array
+		out = out.flat(2);
+
+		return out;
+	}
+
+	getCustomUrls () {
+		return this._comp._state.urlMetas
+			.filter(it => it.data.isCustom && it.data.url && it.data.url.trim())
+			.map(it => it.data.url.trim());
+	}
+
+	async _handleAccept_pGetFileOutputs (source) {
+		const loadedMeta = await UtilDataSource.pGetFileOutputs(this, source, this._props);
+		return loadedMeta.contents;
+	}
+
+	async _handleAccept_pGetUrlOutputs (source) {
+		const loadedMeta = await UtilDataSource.pGetUrlOutputs(this, source, this._props);
+		return loadedMeta.contents;
+	}
+
+	async _handleAccept_pGetSpecialOutput (source) {
+		const loadedMeta = await UtilDataSource.pGetSpecialOutput(source, this._props);
+		return loadedMeta.contents;
+	}
+
+	handlePreClose () {
+		this._comp._detachCollection("urlMetas");
+		this._comp._detachCollection("uploadedFileMetas");
+		this._comp._detachCollection("specialMetas");
+	}
+
+	handlePostClose () {
+		if (this._pageFilter) this._pageFilter.teardown();
+	}
+
+	async close (...args) {
+		this.handlePreClose();
+		await super.close(...args);
+		this.handlePostClose();
+	}
+
+	pWaitForUserInput () {
+		this._pUserInput = new Promise((resolve, reject) => {
+			this._resolve = resolve;
+			this._reject = reject;
+		});
+		return this._pUserInput;
+	}
+	// endregion
+
+	/**
+	 * Get an initial selection. If the user has used this UI before, load up the sources they selected last. Otherwise,
+	 * load a default set.
+	 */
+	async pLoadInitialSelection () {
+		const initialSources = await this._pGetInitialSources();
+		return this._pGetOutputEntities(initialSources);
+	}
+}
+
+AppSourceSelectorMulti.AppSourceSelectorAppFilter = class extends AppFilter {
+	static _sortTypeFilterItems (a, b) {
+		a = a.item;
+		b = b.item;
+
+		const ixA = UtilDataSource.SOURCE_TYPE_ORDER__FILTER.indexOf(a);
+		const ixB = UtilDataSource.SOURCE_TYPE_ORDER__FILTER.indexOf(b);
+
+		return SortUtil.ascSort(ixA, ixB);
+	}
+
+	constructor () {
+		super();
+
+		this._typeFilter = new Filter({
+			header: "Type",
+			itemSortFn: AppSourceSelectorMulti.AppSourceSelectorAppFilter._sortTypeFilterItems,
+		});
+	}
+
+	static mutateForFilters () {
+		// (Do nothing)
+	}
+
+	addToFilters (entity, isExcluded) {
+		if (isExcluded) return;
+
+		this._typeFilter.addItem(entity.filterTypes);
+	}
+
+	async _pPopulateBoxOptions (opts) {
+		opts.filters = [
+			this._typeFilter,
+		];
+	}
+
+	toDisplay (values, ent) {
+		return this._filterBox.toDisplay(
+			values,
+			ent.filterTypes,
+		);
+	}
+};
+
+export {AppSourceSelectorMulti};

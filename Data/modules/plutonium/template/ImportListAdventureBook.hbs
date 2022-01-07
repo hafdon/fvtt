@@ -24,7 +24,7 @@
 			</label>
 			<div class="no-shrink">
 				<button class="btn btn-xs" title="Set folder path for {{toLowerCase displayName}} import" data-type="configure" data-tag="{{tag}}">
-					<span class="fas fa-sitemap"></span>
+					<span class="fas fa-fw fa-sitemap"></span>
 				</button>
 			</div>
 		</div>
@@ -32,8 +32,29 @@
 		<div class="w-100 flex-wrap">
 			{{#each sources}}
 				<label class="flex-v-center my-1 mr-1 imp-advbk__wrp-cb-source">
-					<span class="mr-1 {{sourceClassName}}" title="{{sourceLong}}">{{sourceShort}}</span>
+					<span class="mr-1 {{sourceClassName}}" title="{{sourceLong}}" {{#if sourceStyle}}style="{{sourceStyle}}"{{/if}}>{{sourceShort}}</span>
 					<input type="checkbox" class="mr-1" data-tag="{{../tag}}" data-source="{{source}}" checked>
+					<span class="ve-muted">({{count}})</span>
+				</label>
+			{{/each}}
+		</div>
+	{{/each}}
+
+	{{#each imageGroupSections}}
+		<hr class="hr-1">
+
+		<div class="flex-v-center 100 mt-1">
+			<label class="w-100 imp-advbk__sect-header split-v-center">
+				<span class="mr-2 bold">{{groupNamePlural}}</span>
+				<input type="checkbox" data-image-group="{{group}}" data-type="all" checked title="Select All">
+			</label>
+		</div>
+
+		<div class="w-100 flex-wrap">
+			{{#each imageTypeMetas}}
+				<label class="flex-v-center my-1 mr-1 imp-advbk__wrp-cb-source">
+					<span class="mr-1">{{displayName}}</span>
+					<input type="checkbox" class="mr-1" data-image-group="{{../group}}" data-image-type="{{imageType}}" checked>
 					<span class="ve-muted">({{count}})</span>
 				</label>
 			{{/each}}

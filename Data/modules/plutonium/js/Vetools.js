@@ -1,1 +1,822 @@
-const _0x1e66=['pGetCreatureFluffIndex','isNoLocalData','pGetCreatureIndex','_pubDate','DATA_URL_OPTIONALFEATURES','pGetClasses','join','url','isUseLocalImages','getInternalImageUrl','rollerClick','Unhandled\x20entity\x20type\x20\x22','source','pGetItems','_meta','bind','sources','data/foundry-objects.json','$getHoverContent_stats','baseSiteUrl','_pGetHomebrewIndices','getBookUrl','last','_CACHED_MONSTER_DO_BIND_COMPACT_CONTENT_HANDLERS','startsWith','pSet','foundryClassFeature','CACHED_REQUESTS','_getAdventureBookUrl','baseBrewUrl','getJsonSources','getCleanDiceString','add','$getHoverContent_miscCode','link','BESTIARY_FLUFF_INDEX','data/changelog.json','data/foundry-conditionsdiseases.json','pGetWithCache','DATA_URL_DEITIES','dice','data/objects.json','spell','$getHoverContent_fluff','See\x20the\x20console\x20(F12\x20or\x20CTRL+SHIFT+J)\x20for\x20details.','data','NO_PAGE','BASE_SITE_URL','replace','monster','min','has','prop','init','copy','pLoadPropIndex','hasToken','indexUrl','sourceJsonToStyle','https://5e.tools/','style=\x22color:\x20#','pGetClassSubclassFeatures','split','pPreloadMeta','brew','SOURCE_JSON_TO_ABV','baseMediaUrls','pLoadBrewBySource','$getHoverContent_statsCode','internal','race','sort','HOMEBREW_INDEX__PROP','pGeBackgroundSideData','loadJSON','_PATCHED_GET_ROLLABLE_ENTRY_DICE','danger','getCreatureUrl','pGetAdventureIndex','getImageUrlFromFluff','STR_SEE_CONSOLE','__prop','filter','sourceJsonToFull','adventures.json','foundrySubclassFeature','getValidColor','warn','data/foundry-backgrounds.json','DATA_URL_RECIPES','pBuildList','plutonium.configUpdate','pGetAllSpells','baseUrl','icon-','data/','data/feats.json','pGetCreatureSideData','pDoMetaMerge','_MAX_Z_INDEX','1693ykyYVu','pAddToHomebrew','1128780UxiwTa','toMessage','RUN_TIME','import','DATA_URL_OBJECTS','info','data/foundry-vehicles.json','pGetClassSubclassSideData','data/backgrounds.json','data/spells/','282659ZaqqPy','pGetObjectSideData','table','modules/','pGet','path','pGetFeatSideData','pGetClient','all','_pGetAdventureBookIndex','data/spells/index.json','HOMEBREW_COLLECTION_INDEX','prompt','adventure','pGetSpellSideData','Failed\x20to\x20load\x20homebrew\x20index!\x20','DATA_URL_BACKGROUNDS','notifications','trim','withCustomDiceRenderingPatch','23mEffwg','getAdventureUrl','img','addToHomebrewSourceLookup','data/recipes.json','data/conditionsdiseases.json','content','toRoll','item','catch','json','withUnpatchedDiceRendering','vehicle','hasTokenUrl','loadRawJSON','get','27YsDUIm','data/psionics.json','img/blank.png','_CACHED_GET_ROLLABLE_ENTRY_DICE','MODULE_NAME','dirToProp','images','type','data/foundry-races.json','tokenUrl','special','_BASE_SITE_URL','isNonstandardSource','entries','229MlXeYQ','getSpellUrl','1970-01-01','DATA_URL_CONDITIONSDISEASES','181aavRJF','ascSortLower','then','flat','BESTIARY_TOKEN_LOOKUP','external','sourceJsonToSource','data/foundry-rewards.json','img/','CACHE_REQUESTS_IN_FLIGHT','HOMEBREW_META_SOURCES','map','pGetIconLookup','forEach','slice','Z_INDEX_MAX_FOUNDRY','data/variantrules.json','published','PG_MANAGE_BREW','1ikOGjD','data/vehicles.json','data/bestiary/index.json','MIN_Z_INDEX','pGetHomebrewSources','pGetItemFluff','class','pGetConditionDiseaseSideData','hover','26263lmCvHp','getTokenUrl','HOMEBREW_INDEX__SOURCE','?t=','warning','homebrewMeta','abbreviation','226464sUpGUN','6571wbIxnm','pGetItemSideData','_STORABLE','fnRender','cacheKey','13011tBKgLp','href','push','getContent','setBaseMediaUrl','options','pGetBookIndex','values','getRollableEntryDice','color','foundrySpell','error','data/bestiary/fluff-index.json','pGetVehicleSideData','doToast','DATA_URL_VEHICLES','DATA_URL_PSIONICS','DATA_URL_FEATS','toLowerCase','pGetPackageIndex','hasSourceJson','pGetSpellIndex','parse','doBindCompactContentHandlers','DATA_URL_REWARDS','name','includes','pDoPreload','length','data/foundry-feats.json','keys'];const _0x10c7=function(_0x434dd4,_0x4e8cf7){_0x434dd4=_0x434dd4-0x91;let _0x1e66b6=_0x1e66[_0x434dd4];return _0x1e66b6;};const _0x219388=_0x10c7;(function(_0x5ac4f6,_0x6de371){const _0x47dc0a=_0x10c7;while(!![]){try{const _0x5e0d00=-parseInt(_0x47dc0a(0x124))*-parseInt(_0x47dc0a(0x14c))+parseInt(_0x47dc0a(0x106))*-parseInt(_0x47dc0a(0x151))+parseInt(_0x47dc0a(0xe8))+-parseInt(_0x47dc0a(0x13b))*parseInt(_0x47dc0a(0xf2))+parseInt(_0x47dc0a(0x128))*-parseInt(_0x47dc0a(0xe6))+parseInt(_0x47dc0a(0x144))*-parseInt(_0x47dc0a(0x116))+-parseInt(_0x47dc0a(0x14b));if(_0x5e0d00===_0x6de371)break;else _0x5ac4f6['push'](_0x5ac4f6['shift']());}catch(_0x4feaca){_0x5ac4f6['push'](_0x5ac4f6['shift']());}}}(_0x1e66,0xc5a9d));import{SharedConsts}from'../shared/SharedConsts.js';import{Consts}from'./Consts.js';import{JqueryExtension}from'./JqueryExtension.js';import{Config}from'./Config.js';import{GameStorage}from'./GameStorage.js';import{LGT}from'./Util.js';class NotAxios{static async[_0x219388(0x115)](_0xcb1263){const _0x5ca23=_0x219388;return{'data':await(await fetch(_0xcb1263))[_0x5ca23(0x110)]()};}}class Vetools{static async[_0x219388(0x16c)](){const _0x1a4fc4=_0x219388;await Promise[_0x1a4fc4(0xfa)]([Vetools[_0x1a4fc4(0xa5)]=await Vetools['pGetCreatureFluffIndex'](),DataUtil[_0x1a4fc4(0xb3)][_0x1a4fc4(0xc1)]()]),Vetools[_0x1a4fc4(0x96)]()[_0x1a4fc4(0x12a)](({source:_0x2d3ee9,prop:_0x2e38a7})=>{const _0x3da81f=_0x1a4fc4;Vetools[_0x3da81f(0xca)]=_0x2e38a7,Vetools[_0x3da81f(0x146)]=_0x2d3ee9,console['log'](...LGT,'Loaded\x20homebrew\x20index.');})[_0x1a4fc4(0x10f)](_0x407a84=>{const _0x1a680c=_0x1a4fc4;Vetools[_0x1a680c(0xca)]={},Vetools['HOMEBREW_INDEX__SOURCE']={},ui['notifications'][_0x1a680c(0x15c)](_0x1a680c(0x101)+VeCt[_0x1a680c(0xd2)]),setTimeout(()=>{throw _0x407a84;});});}static[_0x219388(0x111)](_0x3c4d8b){const _0x19e740=_0x219388;Renderer['getRollableEntryDice']=Vetools[_0x19e740(0x119)];const _0x558904=_0x3c4d8b();return Renderer[_0x19e740(0x159)]=Vetools['_PATCHED_GET_ROLLABLE_ENTRY_DICE'],_0x558904;}static[_0x219388(0x105)](_0x14bdb7,_0x2c6f58){const _0x5fb66f=_0x219388;Renderer['getRollableEntryDice']=_0x2c6f58;const _0x3e6e97=_0x14bdb7();return Renderer[_0x5fb66f(0x159)]=Vetools[_0x5fb66f(0xcd)],_0x3e6e97;}static[_0x219388(0xa1)](_0xe036c3){const _0x316a14=_0x219388;return _0xe036c3[_0x316a14(0xb2)](/×/g,'*')[_0x316a14(0xb2)](/÷/g,'/')[_0x316a14(0xb2)](/#\$.*?\$#/g,'0');}static['doMonkeyPatch'](){const _0x1112d3=_0x219388;JqueryExtension[_0x1112d3(0xb7)](),VeCt[_0x1112d3(0xd2)]=_0x1112d3(0xae),StorageUtil[_0x1112d3(0x9b)]=GameStorage['pSetClient'][_0x1112d3(0x91)](GameStorage),StorageUtil[_0x1112d3(0xf6)]=GameStorage[_0x1112d3(0xf9)][_0x1112d3(0x91)](GameStorage),Renderer['get']()['setBaseUrl'](Vetools['BASE_SITE_URL']);if(Config[_0x1112d3(0x115)](_0x1112d3(0xeb),_0x1112d3(0x178)))Renderer[_0x1112d3(0x115)]()[_0x1112d3(0x155)](_0x1112d3(0x108),_0x1112d3(0xf5)+SharedConsts[_0x1112d3(0x11a)]+'/');Hooks['on'](_0x1112d3(0xdd),()=>Renderer[_0x1112d3(0x115)]()['setBaseUrl'](Vetools[_0x1112d3(0xb1)])),Renderer[_0x1112d3(0x143)][_0x1112d3(0x13e)]=Consts[_0x1112d3(0x137)]+0x1,Renderer['hover'][_0x1112d3(0xe5)]=Renderer[_0x1112d3(0x143)][_0x1112d3(0x13e)]+0xa,BrewUtil['homebrew']={},BrewUtil[_0x1112d3(0x149)]={'sources':[]},Vetools[_0x1112d3(0x119)]=Renderer[_0x1112d3(0x159)],Vetools[_0x1112d3(0xcd)]=(_0xc382c6,_0x4ad765,_0x4fab6b,{isAddHandlers:isAddHandlers=!![],additionalData:additionalData=null}={})=>{const _0x2ebb4d=_0x1112d3,_0x4a3318=MiscUtil[_0x2ebb4d(0xb8)](_0xc382c6);typeof _0x4a3318[_0x2ebb4d(0x10d)]!=='string'&&(_0x4a3318[_0x2ebb4d(0x10d)]=Renderer['legacyDiceToString'](_0x4a3318[_0x2ebb4d(0x10d)]));if(_0x4a3318[_0x2ebb4d(0xfe)]){const _0x1f452f=Math[_0x2ebb4d(0xb4)](...Object[_0x2ebb4d(0x16f)](_0x4a3318[_0x2ebb4d(0xfe)][_0x2ebb4d(0x156)])[_0x2ebb4d(0x133)](_0x39d6f1=>Number(_0x39d6f1))['filter'](_0x30e369=>_0x4a3318['prompt'][_0x2ebb4d(0x156)][_0x30e369]));_0x4a3318[_0x2ebb4d(0x10d)]=_0x4a3318[_0x2ebb4d(0xfe)][_0x2ebb4d(0x156)][_0x1f452f];}const _0x24a74e=this[_0x2ebb4d(0xa1)](_0x4a3318[_0x2ebb4d(0x10d)]);return'[[/r\x20'+_0x24a74e+']]'+(_0x24a74e[_0x2ebb4d(0x163)]()['trim']()!==_0x4fab6b['toLowerCase']()[_0x2ebb4d(0x104)]()?'\x20('+_0x4fab6b+')':'');},Renderer[_0x1112d3(0x159)]=Vetools['_PATCHED_GET_ROLLABLE_ENTRY_DICE'];const _0x194faa={},_0xd79e0f=[_0x1112d3(0x94),_0x1112d3(0xad),_0x1112d3(0xc6),_0x1112d3(0xa3),'$getHoverContent_generic'];_0xd79e0f['forEach'](_0x57e855=>{const _0x16eba2=_0x1112d3;_0x194faa[_0x57e855]=Renderer[_0x16eba2(0x143)][_0x57e855],Renderer['hover'][_0x57e855]=(..._0x5948d5)=>{const _0xa89b43=_0x16eba2;Renderer[_0xa89b43(0x159)]=Vetools[_0xa89b43(0x119)];const _0x47c6d2=_0x194faa[_0x57e855](..._0x5948d5);return Renderer[_0xa89b43(0x159)]=Vetools['_PATCHED_GET_ROLLABLE_ENTRY_DICE'],_0x47c6d2;};}),Renderer[_0x1112d3(0xaa)][_0x1112d3(0x17a)]=(_0x16bfcf,_0x1e94d7,_0x51b584,_0x452b7e)=>{const _0x251b9e=_0x1112d3,_0x22f5ad=JSON[_0x251b9e(0x167)](_0x51b584);if(_0x22f5ad[_0x251b9e(0x10d)])new Roll(_0x22f5ad[_0x251b9e(0x10d)])[_0x251b9e(0xe9)]();},Renderer[_0x1112d3(0xaa)]['pRollEntry']=(_0x4152e8,_0x3f25a7,_0x5e9a42)=>{const _0x28b30a=_0x1112d3;if(_0x4152e8[_0x28b30a(0x10d)])new Roll(_0x4152e8[_0x28b30a(0x10d)])[_0x28b30a(0xe9)]();},Vetools['_CACHED_MONSTER_DO_BIND_COMPACT_CONTENT_HANDLERS']=Renderer[_0x1112d3(0xb3)][_0x1112d3(0x168)],Renderer['monster']['doBindCompactContentHandlers']=_0x47c988=>{const _0x17b1da=_0x1112d3,_0xba1485={..._0x47c988};return _0xba1485['fnRender']=(..._0x198f36)=>Vetools[_0x17b1da(0x111)](()=>_0x47c988[_0x17b1da(0x14f)](..._0x198f36)),Vetools['_CACHED_MONSTER_DO_BIND_COMPACT_CONTENT_HANDLERS'](_0xba1485);},JqueryUtil[_0x1112d3(0x15f)]=_0x25cc38=>{const _0x44025e=_0x1112d3;typeof _0x25cc38==='string'&&(_0x25cc38={'content':_0x25cc38,'type':_0x44025e(0xed)});_0x25cc38[_0x44025e(0x11d)]=_0x25cc38[_0x44025e(0x11d)]||_0x44025e(0xed);switch(_0x25cc38[_0x44025e(0x11d)]){case _0x44025e(0x148):return ui['notifications'][_0x44025e(0xd9)](_0x25cc38[_0x44025e(0x10c)]);case _0x44025e(0xce):return ui[_0x44025e(0x103)][_0x44025e(0x15c)](_0x25cc38[_0x44025e(0x10c)]);default:return ui[_0x44025e(0x103)][_0x44025e(0xed)](_0x25cc38[_0x44025e(0x10c)]);}},DataUtil[_0x1112d3(0xcc)]=async _0x131ff7=>Vetools[_0x1112d3(0xa8)](_0x131ff7),BrewUtil[_0x1112d3(0x165)]=_0xf92b75=>!!Vetools[_0x1112d3(0x132)][(_0xf92b75||'')[_0x1112d3(0x163)]()],BrewUtil['sourceJsonToAbv']=_0x51e9ad=>(Vetools[_0x1112d3(0x132)][(_0x51e9ad||'')['toLowerCase']()]||{})[_0x1112d3(0x14a)]||_0x51e9ad,BrewUtil[_0x1112d3(0xd5)]=_0x28e628=>(Vetools['HOMEBREW_META_SOURCES'][(_0x28e628||'')[_0x1112d3(0x163)]()]||{})['full']||_0x28e628,BrewUtil[_0x1112d3(0x12e)]=_0x544be2=>Vetools[_0x1112d3(0x132)][(_0x544be2||'')[_0x1112d3(0x163)]()],BrewUtil[_0x1112d3(0xbc)]=_0x3bd0ff=>{const _0xe86aac=_0x1112d3,_0x5d3687=(_0x3bd0ff||'')[_0xe86aac(0x163)]();if(Vetools[_0xe86aac(0x132)][_0x5d3687]&&Vetools[_0xe86aac(0x132)][_0x5d3687]['color']){const _0x34bb5e=BrewUtil[_0xe86aac(0xd8)](Vetools[_0xe86aac(0x132)][_0x5d3687][_0xe86aac(0x15a)]);if(_0x34bb5e[_0xe86aac(0x16d)])return _0xe86aac(0xbe)+_0x34bb5e+';\x22';return'';}else return'';},BrewUtil[_0x1112d3(0xa0)]=()=>Object[_0x1112d3(0x158)](Vetools[_0x1112d3(0x132)]),BrewUtil[_0x1112d3(0x14e)]=[...BrewUtil[_0x1112d3(0x14e)],_0x1112d3(0x15b),_0x1112d3(0x9c),_0x1112d3(0xd7),'foundryOptionalfeature'],BrewUtil['_PAGE']=UrlUtil[_0x1112d3(0x13a)],BrewUtil['_pCleanSaveBrew']=()=>{};}static[_0x219388(0x109)](_0x4cf850){const _0xbb79e=_0x219388;_0x4cf850[_0xbb79e(0x17e)]&&_0x4cf850['_meta']['sources']&&_0x4cf850['_meta'][_0xbb79e(0x92)][_0xbb79e(0x135)](_0x64809e=>Vetools[_0xbb79e(0x132)][(_0x64809e[_0xbb79e(0x110)]||'')[_0xbb79e(0x163)]()]=MiscUtil[_0xbb79e(0xb8)](_0x64809e));}static async[_0x219388(0xe7)](_0x34f002){const _0x22afcb=_0x219388,_0x40eab9=MiscUtil[_0x22afcb(0x115)](_0x34f002,'_meta',_0x22afcb(0x92));if(!_0x40eab9||!(_0x40eab9 instanceof Array)||!_0x40eab9['every'](_0x256697=>!Parser[_0x22afcb(0xc3)][_0x256697[_0x22afcb(0x110)]]))return;await BrewUtil['pDoHandleBrewJson'](_0x34f002,_0x22afcb(0xb0));}static async[_0x219388(0xa8)](_0x328260){const _0xbbad2c=_0x219388;if(!_0x328260[_0xbbad2c(0x16b)]('?'))_0x328260=_0x328260+_0xbbad2c(0x147)+Consts[_0xbbad2c(0xea)];const _0x1633dd=_0x328260[_0xbbad2c(0xc0)](/(^https?:\/\/)/)[_0xbbad2c(0xd4)](Boolean);_0x1633dd[_0x1633dd['length']-0x1]=_0x1633dd[_0xbbad2c(0x98)]()[_0xbbad2c(0xb2)](/\/+/g,'/'),_0x328260=_0x1633dd[_0xbbad2c(0x176)]('');const _0x589a99=_0x328260[_0xbbad2c(0xc0)]('?')[0x0];if(Vetools[_0xbbad2c(0x131)][_0x589a99])return await Vetools[_0xbbad2c(0x131)][_0x589a99],Vetools[_0xbbad2c(0x9d)][_0x589a99];return Vetools[_0xbbad2c(0x131)][_0x589a99]=(async()=>{const _0x591af4=_0xbbad2c;let _0x4bbfc2;if(!Config['get'](_0x591af4(0xeb),_0x591af4(0x171))&&_0x328260[_0x591af4(0x9a)](Vetools[_0x591af4(0xb1)]+_0x591af4(0xe1))){const _0x2a4c8b=_0x328260[_0x591af4(0xc0)](Vetools[_0x591af4(0xb1)])[_0x591af4(0x136)](0x1)['join'](Vetools[_0x591af4(0xb1)]),_0xd86e0f=_0x591af4(0xf5)+SharedConsts['MODULE_NAME']+'/'+_0x2a4c8b;_0x4bbfc2=(await NotAxios[_0x591af4(0x115)](_0xd86e0f))[_0x591af4(0xaf)];}else _0x4bbfc2=(await NotAxios[_0x591af4(0x115)](_0x328260))[_0x591af4(0xaf)];return Vetools[_0x591af4(0x109)](_0x4bbfc2),await Vetools['pAddToHomebrew'](_0x4bbfc2),await DataUtil[_0x591af4(0xe4)](_0x589a99,_0x4bbfc2),Vetools[_0x591af4(0x9d)][_0x589a99]=_0x4bbfc2;})(),await Vetools[_0xbbad2c(0x131)][_0x589a99],Vetools[_0xbbad2c(0x9d)][_0x589a99];}static async['pLoadImporterSourceSpecial'](_0x266532){const _0x2ca789=_0x219388;let _0x4badb9;if(_0x266532['special']['cacheKey'])_0x4badb9=Vetools[_0x2ca789(0x9d)][_0x266532[_0x2ca789(0x120)]['cacheKey']]||(Vetools['CACHED_REQUESTS'][_0x266532[_0x2ca789(0x120)][_0x2ca789(0x150)]]=await _0x266532[_0x2ca789(0x120)][_0x2ca789(0xf6)]());else _0x4badb9=await _0x266532[_0x2ca789(0x120)][_0x2ca789(0xf6)]();return _0x4badb9;}static async['pGetChangelog'](){const _0x4494d3=_0x219388;return Vetools[_0x4494d3(0xa8)](Vetools['BASE_SITE_URL']+_0x4494d3(0xa6));}static async[_0x219388(0x164)](){const _0x2fea5d=_0x219388;return Vetools[_0x2fea5d(0xa8)](Config[_0x2fea5d(0x115)]('importAdventure',_0x2fea5d(0xbb)));}static async[_0x219388(0x166)](){const _0x409768=_0x219388;return Vetools[_0x409768(0xa8)](Vetools['BASE_SITE_URL']+_0x409768(0xfc));}static[_0x219388(0x125)](_0x1adf9d){const _0x439a6e=_0x219388;return Vetools['BASE_SITE_URL']+_0x439a6e(0xf1)+_0x1adf9d;}static async[_0x219388(0x172)](){const _0x1b6e6a=_0x219388;return Vetools[_0x1b6e6a(0xa8)](Vetools[_0x1b6e6a(0xb1)]+_0x1b6e6a(0x13d));}static['getCreatureUrl'](_0x3dfc77){const _0x58c941=_0x219388;return Vetools[_0x58c941(0xb1)]+'data/bestiary/'+_0x3dfc77;}static async[_0x219388(0x170)](){const _0x3f52b1=_0x219388;return Vetools['pGetWithCache'](Vetools[_0x3f52b1(0xb1)]+_0x3f52b1(0x15d));}static async[_0x219388(0x17d)](_0x1a7bc2){const _0x2980d4=_0x219388;return{'item':await Renderer[_0x2980d4(0x10e)][_0x2980d4(0xdc)]({'isAddGroups':!!_0x1a7bc2})};}static async[_0x219388(0x140)](){const _0x13c151=_0x219388,_0x2074ce=Vetools[_0x13c151(0xb1)]+'data/fluff-items.json';return Vetools[_0x13c151(0xa8)](_0x2074ce);}static async['pGetRaces'](_0x5aa3c1){const _0x38d0c2=_0x219388;return DataUtil[_0x38d0c2(0xc8)][_0x38d0c2(0xcc)](_0x5aa3c1);}static async[_0x219388(0x175)](){const _0x4a0007=_0x219388;return DataUtil[_0x4a0007(0x141)][_0x4a0007(0x114)]();}static async[_0x219388(0xbf)](){const _0x13b167=_0x219388;return DataUtil[_0x13b167(0x141)][_0x13b167(0x114)]();}static async['pGetRollableTables'](){const _0x1b693f=_0x219388;return DataUtil[_0x1b693f(0xf4)]['loadJSON']();}static async[_0x219388(0xfb)](_0x24eef7,_0x2f26b4){const _0x22f286=_0x219388,_0x558c49=Vetools[_0x22f286(0xb1)]+_0x22f286(0xe1)+_0x24eef7,_0x17bf42=await Vetools['pGetWithCache'](_0x558c49);return _0x17bf42[_0x2f26b4][_0x22f286(0x135)](_0x4c5757=>_0x4c5757[_0x22f286(0x173)]=new Date(_0x4c5757[_0x22f286(0x139)]||_0x22f286(0x126))),_0x17bf42;}static async[_0x219388(0xd0)](){const _0x3a3718=_0x219388;return this[_0x3a3718(0xfb)](_0x3a3718(0xd6),_0x3a3718(0xff));}static async[_0x219388(0x157)](){const _0x4e0d4a=_0x219388;return this[_0x4e0d4a(0xfb)]('books.json','book');}static['_getAdventureBookUrl'](_0x5cd6d6,_0x32dd46){const _0x19941f=_0x219388;return Vetools[_0x19941f(0xb1)]+_0x19941f(0xe1)+_0x5cd6d6+'/'+_0x5cd6d6+'-'+_0x32dd46['toLowerCase']()+'.json';}static[_0x219388(0x107)](_0x1f0c90){const _0x18ba9a=_0x219388;return this[_0x18ba9a(0x9e)](_0x18ba9a(0xff),_0x1f0c90);}static[_0x219388(0x97)](_0x28ead0){return this['_getAdventureBookUrl']('book',_0x28ead0);}static[_0x219388(0xd1)](_0x3a921a){const _0x5542b9=_0x219388;if(_0x3a921a&&_0x3a921a[_0x5542b9(0x11c)]&&_0x3a921a[_0x5542b9(0x11c)][0x0]){const _0x46203e=_0x3a921a['images'][0x0];if(_0x46203e[_0x5542b9(0x152)]){if(_0x46203e[_0x5542b9(0x152)][_0x5542b9(0x11d)]===_0x5542b9(0xc7))return _0x46203e[_0x5542b9(0x152)][_0x5542b9(0xf7)]?''+Vetools[_0x5542b9(0x179)](_0x46203e['href'][_0x5542b9(0xf7)]):'';else{if(_0x46203e[_0x5542b9(0x152)]['type']===_0x5542b9(0x12d))return _0x46203e[_0x5542b9(0x152)]['url']||'';}}}}static[_0x219388(0x113)](_0x107abd,_0x211a52){const _0x21192e=_0x219388;return Vetools['_getTokenUrl'](_0x107abd,_0x211a52)[_0x21192e(0xba)];}static[_0x219388(0x145)](_0x5f1c6b,_0x4a530b){const _0xcb0af=_0x219388;return Vetools['_getTokenUrl'](_0x5f1c6b,_0x4a530b)[_0xcb0af(0x177)];}static['_getTokenUrl'](_0x2212cb,_0x589349){const _0xc57c31=_0x219388;if(_0x589349[_0xc57c31(0x11f)])return{'url':_0x589349[_0xc57c31(0x11f)],'hasToken':!![]};const _0x53afb8={'url':UrlUtil[_0xc57c31(0xa4)]((Renderer[_0xc57c31(0x115)]()[_0xc57c31(0xc4)][_0xc57c31(0x108)]||Renderer['get']()['baseUrl'])+_0xc57c31(0x118)),'hasToken':![]};switch(_0x2212cb){case'monster':{if(_0x589349['hasToken'])return{'url':Renderer['monster'][_0xc57c31(0x145)](_0x589349),'hasToken':!![]};return _0x53afb8;}case _0xc57c31(0x112):{if(_0x589349[_0xc57c31(0xba)])return{'url':Renderer[_0xc57c31(0x112)][_0xc57c31(0x145)](_0x589349),'hasToken':!![]};return _0x53afb8;}case'object':{if(_0x589349[_0xc57c31(0xba)])return{'url':Renderer['object']['getTokenUrl'](_0x589349),'hasToken':!![]};return _0x53afb8;}default:throw new Error(_0xc57c31(0x17b)+_0x2212cb+'\x22');}}static['getInternalImageUrl'](_0x42134d){const _0x50978a=_0x219388;return((Renderer['get']()[_0x50978a(0xc4)]['img']||Renderer[_0x50978a(0x115)]()[_0x50978a(0xdf)])+_0x50978a(0x130)+encodeURIComponent(_0x42134d))[_0x50978a(0xb2)](/'/g,'%27');}static async[_0x219388(0xde)]({isFilterNonStandard:isFilterNonStandard=![],additionalSourcesBrew:additionalSourcesBrew=[]}={}){const _0x4aee0c=_0x219388,_0x53761b=await Vetools['pGetSpellIndex'](),_0x20e3e6=await Promise[_0x4aee0c(0xfa)](Object['entries'](_0x53761b)['filter'](([_0xec5ada])=>!isFilterNonStandard||!SourceUtil['isNonstandardSource'](_0xec5ada))[_0x4aee0c(0x133)](([_0x4079be,_0x44040c])=>Vetools[_0x4aee0c(0xa8)](Vetools[_0x4aee0c(0x125)](_0x44040c))));if(additionalSourcesBrew?.['length'])for(const _0x4f819f of additionalSourcesBrew){const _0x332a17=await DataUtil[_0x4aee0c(0xc5)](_0x4f819f);if(!_0x332a17)continue;_0x20e3e6[_0x4aee0c(0x153)](_0x332a17);}return{'spell':_0x20e3e6[_0x4aee0c(0x133)](_0xb3f061=>MiscUtil['copy'](_0xb3f061[_0x4aee0c(0xac)]))[_0x4aee0c(0x12b)]()};}static async['pGetAllCreatures'](_0x4f624d=![]){const _0x378928=_0x219388,_0x398341=await Vetools[_0x378928(0x172)](),_0x324a90=await Promise[_0x378928(0xfa)](Object[_0x378928(0x123)](_0x398341)[_0x378928(0xd4)](([_0x548be4])=>!_0x4f624d||!SourceUtil[_0x378928(0x122)](_0x548be4))[_0x378928(0x133)](async([_0x5ab8c2,_0x1370a1])=>({'source':_0x5ab8c2,'json':await Vetools[_0x378928(0xa8)](Vetools[_0x378928(0xcf)](_0x1370a1))})));return{'monster':_0x324a90[_0x378928(0x133)](_0xff0b64=>MiscUtil[_0x378928(0xb8)](_0xff0b64[_0x378928(0x110)]['monster'][_0x378928(0xd4)](_0x1cb63e=>_0x1cb63e[_0x378928(0x17c)]===_0xff0b64['source'])))[_0x378928(0x12b)]()};}static async['_pGetHomebrewIndices'](){const _0x5206d6=_0x219388,_0x3f6227={'source':{},'prop':{}};try{const [_0x5c4669,_0x537f17]=await Promise[_0x5206d6(0xfa)]([DataUtil['brew']['pLoadSourceIndex'](Config[_0x5206d6(0x115)](_0x5206d6(0xeb),_0x5206d6(0x9f))),DataUtil[_0x5206d6(0xc2)][_0x5206d6(0xb9)](Config[_0x5206d6(0x115)](_0x5206d6(0xeb),_0x5206d6(0x9f)))]);_0x3f6227[_0x5206d6(0x17c)]=_0x5c4669,_0x3f6227[_0x5206d6(0xb6)]=_0x537f17;}catch(_0x32e980){ui[_0x5206d6(0x103)]['error'](_0x5206d6(0x101)+VeCt[_0x5206d6(0xd2)]),setTimeout(()=>{throw _0x32e980;});}return _0x3f6227;}static async[_0x219388(0x13f)](..._0x516b8d){const _0x2032a3=_0x219388,_0x18083a=Config['get'](_0x2032a3(0xeb),_0x2032a3(0x9f)),_0x12475c=new Set();return _0x516b8d['map'](_0x1c26d7=>{const _0x5591b=_0x2032a3;return Object[_0x5591b(0x16f)](Vetools['HOMEBREW_INDEX__PROP'][BrewUtil[_0x5591b(0x11b)](_0x1c26d7)]||{})[_0x5591b(0x133)](_0x2c7604=>{const _0x17a177=_0x5591b;if(_0x12475c[_0x17a177(0xb5)](_0x2c7604))return null;return _0x12475c[_0x17a177(0xa2)](_0x2c7604),{'url':DataUtil[_0x17a177(0xc2)]['getFileUrl'](_0x2c7604,_0x18083a),'name':_0x2c7604[_0x17a177(0xc0)]('/')['slice'](0x1)['join']('/')['replace'](/\.json$/i,'')};});})[_0x2032a3(0x12b)]()[_0x2032a3(0xd4)](Boolean)[_0x2032a3(0xc9)]((_0x2d7f2c,_0x28dd41)=>SortUtil[_0x2032a3(0x129)](_0x2d7f2c[_0x2032a3(0x16a)],_0x28dd41[_0x2032a3(0x16a)]));}static[_0x219388(0x154)](_0x4dbc8b,_0x8e25c5){if(!_0x8e25c5)return _0x4dbc8b;return _0x8e25c5['map'](_0x40a849=>{const _0x2f127f=_0x10c7;return _0x4dbc8b[_0x40a849]=_0x4dbc8b[_0x40a849]||[],_0x4dbc8b[_0x40a849][_0x2f127f(0x135)](_0x2bea7c=>_0x2bea7c[_0x2f127f(0xd3)]=_0x40a849),_0x4dbc8b[_0x40a849];})['flat']();}static async[_0x219388(0x100)](){const _0x294c39=_0x219388;return Vetools[_0x294c39(0xa8)](Vetools[_0x294c39(0xb1)]+'data/spells/foundry.json');}static async['pGetOptionalFeatureSideData'](){const _0x4f47b9=_0x219388;return Vetools[_0x4f47b9(0xa8)](Vetools[_0x4f47b9(0xb1)]+'data/foundry-optionalfeatures.json');}static async[_0x219388(0xef)](){const _0x29b5f0=_0x219388;return Vetools['pGetWithCache'](Vetools[_0x29b5f0(0xb1)]+'data/class/foundry.json');}static async['pGetRaceSideData'](){const _0x2ce060=_0x219388;return Vetools[_0x2ce060(0xa8)](Vetools[_0x2ce060(0xb1)]+_0x2ce060(0x11e));}static async[_0x219388(0x14d)](){const _0x5c7ec1=_0x219388;return Vetools[_0x5c7ec1(0xa8)](Vetools[_0x5c7ec1(0xb1)]+'data/foundry-items.json');}static async[_0x219388(0xf8)](){const _0x543942=_0x219388;return Vetools[_0x543942(0xa8)](Vetools['BASE_SITE_URL']+_0x543942(0x16e));}static async['pGetRewardSideData'](){const _0x485a01=_0x219388;return Vetools[_0x485a01(0xa8)](Vetools[_0x485a01(0xb1)]+_0x485a01(0x12f));}static async[_0x219388(0xcb)](){const _0x4350f5=_0x219388;return{}||Vetools[_0x4350f5(0xa8)](Vetools[_0x4350f5(0xb1)]+_0x4350f5(0xda));}static async[_0x219388(0x142)](){const _0x4f4e41=_0x219388;return{}||Vetools[_0x4f4e41(0xa8)](Vetools[_0x4f4e41(0xb1)]+_0x4f4e41(0xa7));}static async['pGetPsionicsSideData'](){const _0x4303d9=_0x219388;return{}||Vetools['pGetWithCache'](Vetools[_0x4303d9(0xb1)]+'data/foundry-psionics.json');}static async['pGetVehicleUpgradeSideData'](){const _0x258a43=_0x219388;return{}||Vetools[_0x258a43(0xa8)](Vetools['BASE_SITE_URL']+_0x258a43(0xee));}static async[_0x219388(0xe3)](){return{}||Vetools['pGetWithCache'](Vetools['BASE_SITE_URL']+'data/bestiary/foundry.json');}static async[_0x219388(0xf3)](){const _0x500bda=_0x219388;return{}||Vetools[_0x500bda(0xa8)](Vetools[_0x500bda(0xb1)]+_0x500bda(0x93));}static async[_0x219388(0x15e)](){const _0x3093ed=_0x219388;return{}||Vetools[_0x3093ed(0xa8)](Vetools['BASE_SITE_URL']+_0x3093ed(0xee));}static async[_0x219388(0x134)](_0x1e52b7){const _0x5a33cd=_0x219388,_0x423f49=_0x5a33cd(0xe0)+_0x1e52b7+'s.json',_0xe0990=_0x5a33cd(0xf5)+SharedConsts[_0x5a33cd(0x11a)]+'/data/'+_0x423f49;return Vetools[_0x5a33cd(0xa8)](_0xe0990);}static get[_0x219388(0xb1)](){const _0x5f0cbc=_0x219388;let _0x470228=Config[_0x5f0cbc(0x115)](_0x5f0cbc(0xeb),_0x5f0cbc(0x95));if(_0x470228&&_0x470228[_0x5f0cbc(0x104)]())return _0x470228=_0x470228[_0x5f0cbc(0xb2)](/^(.*?)([\\/]+)$/,'$1/'),_0x470228;return Vetools[_0x5f0cbc(0x121)];}static get[_0x219388(0x162)](){const _0x5c7219=_0x219388;return Vetools[_0x5c7219(0xb1)]+_0x5c7219(0xe2);}static get[_0x219388(0x102)](){const _0x167eff=_0x219388;return Vetools[_0x167eff(0xb1)]+_0x167eff(0xf0);}static get['DATA_URL_VARIANTRULES'](){const _0x2a4c06=_0x219388;return Vetools[_0x2a4c06(0xb1)]+_0x2a4c06(0x138);}static get[_0x219388(0x161)](){const _0x3403ed=_0x219388;return Vetools[_0x3403ed(0xb1)]+_0x3403ed(0x117);}static get[_0x219388(0x174)](){const _0xa94ebf=_0x219388;return Vetools[_0xa94ebf(0xb1)]+'data/optionalfeatures.json';}static get[_0x219388(0x127)](){const _0x570b42=_0x219388;return Vetools['BASE_SITE_URL']+_0x570b42(0x10b);}static get[_0x219388(0x160)](){const _0x438a3c=_0x219388;return Vetools[_0x438a3c(0xb1)]+_0x438a3c(0x13c);}static get[_0x219388(0x169)](){const _0x53b4b1=_0x219388;return Vetools[_0x53b4b1(0xb1)]+'data/rewards.json';}static get[_0x219388(0xec)](){const _0x1adc73=_0x219388;return Vetools[_0x1adc73(0xb1)]+_0x1adc73(0xab);}static get[_0x219388(0xa9)](){return Vetools['BASE_SITE_URL']+'data/deities.json';}static get[_0x219388(0xdb)](){const _0x3813b8=_0x219388;return Vetools[_0x3813b8(0xb1)]+_0x3813b8(0x10a);}}Vetools[_0x219388(0x9d)]={},Vetools[_0x219388(0x131)]={},Vetools[_0x219388(0x121)]=_0x219388(0xbd),Vetools[_0x219388(0xa5)]=null,Vetools[_0x219388(0x12c)]=null,Vetools[_0x219388(0xfd)]={},Vetools[_0x219388(0x132)]={},Vetools[_0x219388(0x119)]=null,Vetools[_0x219388(0xcd)]=null,Vetools[_0x219388(0x99)]=null,Vetools[_0x219388(0x146)]={},Vetools[_0x219388(0xca)]={};export{Vetools};
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Consts} from "./Consts.js";
+import {JqueryExtension} from "./JqueryExtension.js";
+import {Config} from "./Config.js";
+import {GameStorage} from "./GameStorage.js";
+import {LGT} from "./Util.js";
+import {UtilNotifications} from "./UtilNotifications.js";
+import {UtilHooks} from "./UtilHooks.js";
+
+class NotAxios {
+	static async get (url) { return {data: (await (await fetch(url)).json())}; }
+}
+
+class Vetools {
+	// region Meta
+	static async pDoPreload () {
+		if (Config.get("import", "isNoHomebrewIndexes")) return;
+
+		// Load this asynchronously, to avoid killing the load if it doesn't exist
+		Vetools._pGetHomebrewIndices()
+			.then(({source, prop, abbreviation}) => {
+				Vetools.HOMEBREW_INDEX__PROP = prop;
+				Vetools.HOMEBREW_INDEX__SOURCE = source;
+				Vetools.HOMEBREW_INDEX__ABBREVIATION = abbreviation;
+				console.log(...LGT, "Loaded homebrew index.");
+			})
+			.catch(e => {
+				Vetools.HOMEBREW_INDEX__PROP = {};
+				Vetools.HOMEBREW_INDEX__SOURCE = {};
+				Vetools.HOMEBREW_INDEX__ABBREVIATION = {};
+				ui.notifications.error(`Failed to load homebrew index! ${VeCt.STR_SEE_CONSOLE}`);
+				setTimeout(() => { throw e; });
+			});
+	}
+
+	static withUnpatchedDiceRendering (fn) {
+		Renderer.getRollableEntryDice = Vetools._CACHED_GET_ROLLABLE_ENTRY_DICE;
+		const out = fn();
+		Renderer.getRollableEntryDice = Vetools._PATCHED_GET_ROLLABLE_ENTRY_DICE;
+		return out;
+	}
+
+	static withCustomDiceRenderingPatch (fn, fnRender) {
+		Renderer.getRollableEntryDice = fnRender;
+		const out = fn();
+		Renderer.getRollableEntryDice = Vetools._PATCHED_GET_ROLLABLE_ENTRY_DICE;
+		return out;
+	}
+
+	static getCleanDiceString (diceString) {
+		return diceString
+			// Use symbols Foundry can understand
+			.replace(/×/g, "*")
+			.replace(/÷/g, "/")
+			// Foundry (as of 2020-11-15) doesn't support prompting for user variables in rolls
+			.replace(/#\$.*?\$#/g, "0")
+		;
+	}
+
+	static doMonkeyPatch () {
+		JqueryExtension.init();
+		this._initSourceLookup();
+
+		VeCt.STR_SEE_CONSOLE = "See the console (F12 or CTRL+SHIFT+J) for details.";
+
+		StorageUtil.pSet = GameStorage.pSetClient.bind(GameStorage);
+		StorageUtil.pGet = GameStorage.pGetClient.bind(GameStorage);
+
+		Renderer.get().setBaseUrl(Vetools.BASE_SITE_URL);
+		UtilHooks.on(UtilHooks.HK_CONFIG_UPDATE, () => {
+			if (Config.get("import", "isUseLocalImages")) {
+				const localImageDirPath = `${Config.get("import", "localImageDirectoryPath")}/`.replace(/\/+$/, "/");
+				Renderer.get().setBaseMediaUrl("img", localImageDirPath);
+				return;
+			}
+			Renderer.get().setBaseMediaUrl("img", null);
+		});
+
+		Renderer.hover.MIN_Z_INDEX = Consts.Z_INDEX_MAX_FOUNDRY + 1;
+		Renderer.hover._MAX_Z_INDEX = Renderer.hover.MIN_Z_INDEX + 10;
+
+		BrewUtil.homebrew = {};
+		BrewUtil.homebrewMeta = {sources: []};
+
+		// region Rolls
+		Vetools._CACHED_GET_ROLLABLE_ENTRY_DICE = Renderer.getRollableEntryDice;
+		Vetools._PATCHED_GET_ROLLABLE_ENTRY_DICE = (
+			entry,
+			name,
+			toDisplay,
+			{
+				isAddHandlers = true,
+				pluginResults = null,
+			} = {},
+		) => {
+			const cpy = MiscUtil.copy(entry);
+
+			if (typeof cpy.toRoll !== "string") {
+				// handle legacy format
+				cpy.toRoll = Renderer.legacyDiceToString(cpy.toRoll);
+			}
+
+			// If there's a prompt, find the lowest level at which there is additional text (e.g. level 4 for fireball)
+			//   and use that text
+			if (cpy.prompt) {
+				const minAdditionalDiceLevel = Math.min(...Object.keys(cpy.prompt.options)
+					.map(it => Number(it))
+					.filter(it => cpy.prompt.options[it]));
+				cpy.toRoll = cpy.prompt.options[minAdditionalDiceLevel];
+			}
+
+			const toRollClean = this.getCleanDiceString(cpy.toRoll);
+
+			if (Config.get("import", "isRendererDiceDisabled")) return toDisplay || toRollClean;
+
+			return `[[/r ${toRollClean}]]${toRollClean.toLowerCase().trim() !== toDisplay.toLowerCase().trim() ? ` (${toDisplay})` : ""}`;
+		};
+
+		Renderer.getRollableEntryDice = Vetools._PATCHED_GET_ROLLABLE_ENTRY_DICE;
+
+		// Swap the original `getRollableEntryDice` back in when we're about to render a window.
+		//   This prevents e.g. "[[/r 1d20]]" from appearing in the rendered content.
+		const cachedRenderHoverMethods = {};
+		const renderHoverMethods = [
+			"$getHoverContent_stats",
+			"$getHoverContent_fluff",
+			"$getHoverContent_statsCode",
+			"$getHoverContent_miscCode",
+			"$getHoverContent_generic",
+		];
+		renderHoverMethods.forEach(methodName => {
+			cachedRenderHoverMethods[methodName] = Renderer.hover[methodName];
+			Renderer.hover[methodName] = (...args) => {
+				Renderer.getRollableEntryDice = Vetools._CACHED_GET_ROLLABLE_ENTRY_DICE;
+				const out = cachedRenderHoverMethods[methodName](...args);
+				Renderer.getRollableEntryDice = Vetools._PATCHED_GET_ROLLABLE_ENTRY_DICE;
+				return out;
+			};
+		});
+
+		// region Express predefined hovers as `data-`
+		const cachedGetMakePredefinedHover = Renderer.hover.getMakePredefinedHover.bind(Renderer.hover);
+		Renderer.hover.getMakePredefinedHover = (entry, opts) => {
+			const out = cachedGetMakePredefinedHover(entry, opts);
+			out.html = `data-plut-hover="${true}" data-plut-hover-preload="${true}" data-plut-hover-preload-id="${out.id}" ${opts ? `data-plut-hover-preload-options="${JSON.stringify(opts).qq()}"` : ""}`;
+			return out;
+		};
+		// endregion
+
+		Renderer.dice.rollerClick = (evtMock, ele, packed, name) => {
+			const entry = JSON.parse(packed);
+			if (entry.toRoll) (new Roll(entry.toRoll)).toMessage();
+		};
+
+		Renderer.dice.pRollEntry = (entry, rolledBy, opts) => {
+			if (entry.toRoll) (new Roll(entry.toRoll)).toMessage();
+		};
+		// endregion
+
+		// region Patch over content handler bindings--these should only ever be used in hover windows
+		Vetools._CACHED_MONSTER_DO_BIND_COMPACT_CONTENT_HANDLERS = Renderer.monster.doBindCompactContentHandlers;
+		Renderer.monster.doBindCompactContentHandlers = (opts) => {
+			const nxtOpts = {...opts};
+			nxtOpts.fnRender = (...args) => Vetools.withUnpatchedDiceRendering(() => opts.fnRender(...args));
+			return Vetools._CACHED_MONSTER_DO_BIND_COMPACT_CONTENT_HANDLERS(nxtOpts);
+		};
+		// endregion
+
+		JqueryUtil.doToast = (options) => {
+			if (typeof options === "string") {
+				options = {
+					content: options,
+					type: "info",
+				};
+			}
+			options.type = options.type || "info";
+
+			switch (options.type) {
+				case "warning": return ui.notifications.warn(options.content);
+				case "danger": return ui.notifications.error(options.content);
+				default: return ui.notifications.info(options.content);
+			}
+		};
+
+		DataUtil.loadJSON = async (url) => Vetools.pGetWithCache(url);
+
+		Vetools._CACHED_RENDERER_HOVER_CACHE_AND_GET = Renderer.hover.pCacheAndGet.bind(Renderer.hover);
+		Renderer.hover.pCacheAndGet = async function (page, source, ...others) {
+			// region Local brew preload
+			// If it's a homebrew source, pre-load our local homebrew. This allows us to cope with the case where local
+			//   brew--which the 5et loader expects to be ready in `BrewUtil`--is still "cold" on disk.
+			const sourceLower = `${source}`.toLowerCase();
+			if (!Vetools._VET_SOURCE_LOOKUP[sourceLower]) await Vetools._pDoCacheLocalBrew();
+			// endregion
+
+			return Vetools._CACHED_RENDERER_HOVER_CACHE_AND_GET(page, source, ...others);
+		};
+
+		BrewUtil.hasSourceJson = (source) => !!Vetools.HOMEBREW_META_SOURCES[(source || "").toLowerCase()];
+		BrewUtil.sourceJsonToAbv = (source) => (Vetools.HOMEBREW_META_SOURCES[(source || "").toLowerCase()] || {}).abbreviation || source;
+		BrewUtil.sourceJsonToFull = (source) => (Vetools.HOMEBREW_META_SOURCES[(source || "").toLowerCase()] || {}).full || source;
+		BrewUtil.sourceJsonToSource = (source) => Vetools.HOMEBREW_META_SOURCES[(source || "").toLowerCase()];
+		BrewUtil.sourceJsonToStyle = (source) => {
+			const lowSource = (source || "").toLowerCase();
+			if (Vetools.HOMEBREW_META_SOURCES[lowSource] && Vetools.HOMEBREW_META_SOURCES[lowSource].color) {
+				const validColor = BrewUtil.getValidColor(Vetools.HOMEBREW_META_SOURCES[lowSource].color);
+				if (validColor.length) return `style="color: #${validColor};"`;
+				return "";
+			} else return "";
+		};
+		BrewUtil.getJsonSources = () => Object.values(Vetools.HOMEBREW_META_SOURCES);
+		BrewUtil._STORABLE = [...BrewUtil._STORABLE, "foundrySpell", "foundryClassFeature", "foundrySubclassFeature", "foundryOptionalfeature"];
+		BrewUtil._PAGE = UrlUtil.PG_MANAGE_BREW;
+		BrewUtil._pCleanSaveBrew = () => { /* No-op */ };
+	}
+
+	static _initSourceLookup () { Object.keys(Parser.SOURCE_JSON_TO_FULL).forEach(source => Vetools._VET_SOURCE_LOOKUP[source.toLowerCase()] = true); }
+
+	static async _pDoCacheLocalBrew () { await this.pGetLocalHomebrewSources(); }
+
+	static addToHomebrewSourceLookup (data) {
+		if (data._meta && data._meta.sources) {
+			data._meta.sources.forEach(metaSource => Vetools.HOMEBREW_META_SOURCES[(metaSource.json || "").toLowerCase()] = MiscUtil.copy(metaSource));
+		}
+	}
+
+	/**
+	 * Add loaded content to homebrew, so that it can be referenced later in the session.
+	 * As the content is not copied during 5etools' homebrew loading, we can get away with doing this without much
+	 * memory cost.
+	 * @param data The full JSON data.
+	 */
+	static async pAddToHomebrew (data) {
+		// Homebrew files should always have a source header
+		const sources = MiscUtil.get(data, "_meta", "sources");
+		if (!sources || !(sources instanceof Array) || !sources.every(it => !Parser.SOURCE_JSON_TO_ABV[it.json])) return;
+		await BrewUtil.pDoHandleBrewJson(data, "NO_PAGE");
+	}
+	// endregion
+
+	// region Requests
+	static async pGetWithCache (url) {
+		if (!url.includes("?")) url = `${url}?t=${Consts.RUN_TIME}`;
+
+		// Strip any excess slashes
+		const parts = url.split(Vetools._RE_HTTP_URL).filter(Boolean);
+		parts[parts.length - 1] = parts.last().replace(/\/+/g, "/");
+		url = parts.join("");
+
+		const urlBase = url.split("?")[0];
+
+		if (Vetools.CACHE_REQUESTS_IN_FLIGHT[urlBase]) {
+			await Vetools.CACHE_REQUESTS_IN_FLIGHT[urlBase];
+			return Vetools.CACHED_REQUESTS[urlBase];
+		}
+
+		Vetools.CACHE_REQUESTS_IN_FLIGHT[urlBase] = (async () => {
+			// Use local data where possible
+			let data;
+			if (!Config.get("import", "isNoLocalData") && url.startsWith(`${Vetools.BASE_SITE_URL}data/`)) {
+				const urlPart = url.split(Vetools.BASE_SITE_URL).slice(1).join(Vetools.BASE_SITE_URL);
+				const localUrl = `modules/${SharedConsts.MODULE_NAME}/${urlPart}`;
+
+				data = (await NotAxios.get(localUrl)).data;
+			} else {
+				data = (await NotAxios.get(url)).data;
+			}
+
+			Vetools.addToHomebrewSourceLookup(data);
+			await Vetools.pAddToHomebrew(data);
+
+			await DataUtil.pDoMetaMerge(urlBase, data);
+			return (Vetools.CACHED_REQUESTS[urlBase] = data);
+		})();
+
+		await Vetools.CACHE_REQUESTS_IN_FLIGHT[urlBase];
+		return Vetools.CACHED_REQUESTS[urlBase];
+	}
+
+	static async pLoadImporterSourceSpecial (source) {
+		let content;
+		if (source.special.cacheKey) content = Vetools.CACHED_REQUESTS[source.special.cacheKey] || (Vetools.CACHED_REQUESTS[source.special.cacheKey] = await source.special.pGet());
+		else content = await source.special.pGet();
+		return content;
+	}
+
+	static async pGetChangelog () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/changelog.json`); }
+
+	static async pGetPackageIndex () { return Vetools.pGetWithCache(Config.get("importAdventure", "indexUrl")); }
+
+	static async pGetSpellIndex () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/spells/index.json`); }
+	static getSpellUrl (filename) { return `${Vetools.BASE_SITE_URL}data/spells/${filename}`; }
+
+	static async pGetCreatureIndex () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/bestiary/index.json`); }
+	static getCreatureUrl (filename) { return `${Vetools.BASE_SITE_URL}data/bestiary/${filename}`; }
+
+	static async pGetItems (addGroups) {
+		return {item: await Renderer.item.pBuildList({isAddGroups: !!addGroups})}; // This has built-in caching
+	}
+
+	static async pGetItemFluff () {
+		const url = `${Vetools.BASE_SITE_URL}data/fluff-items.json`;
+		return Vetools.pGetWithCache(url);
+	}
+
+	/**
+	 * @param [opts] Options object.
+	 * @param [opts.isAddBaseRaces] If an entity should be created for each base race.
+	 */
+	static async pGetRaces (opts) {
+		return DataUtil.race.loadJSON(opts);
+	}
+
+	static async pGetClasses () {
+		return DataUtil.class.loadRawJSON();
+	}
+
+	static async pGetClassSubclassFeatures () {
+		return DataUtil.class.loadRawJSON();
+	}
+
+	static async pGetRollableTables () {
+		return DataUtil.table.loadJSON();
+	}
+
+	static async _pGetAdventureBookIndex (filename, {prop, fnGetUrl}) {
+		const url = `${Vetools.BASE_SITE_URL}data/${filename}`;
+		const index = await Vetools.pGetWithCache(url);
+		index[prop].forEach(it => {
+			it._pubDate = new Date(it.published || "1970-01-01");
+			it._url = fnGetUrl(it.id);
+		});
+		return index;
+	}
+
+	static async pGetAdventureIndex () {
+		return this._pGetAdventureBookIndex("adventures.json", {prop: "adventure", fnGetUrl: Vetools.getAdventureUrl.bind(Vetools)});
+	}
+
+	static async pGetBookIndex () {
+		return this._pGetAdventureBookIndex("books.json", {prop: "book", fnGetUrl: Vetools.getBookUrl.bind(Vetools)});
+	}
+
+	static _getAdventureBookUrl (type, id) {
+		return `${Vetools.BASE_SITE_URL}data/${type}/${type}-${id.toLowerCase()}.json`;
+	}
+
+	static getAdventureUrl (id) {
+		return this._getAdventureBookUrl("adventure", id);
+	}
+
+	static getBookUrl (id) {
+		return this._getAdventureBookUrl("book", id);
+	}
+
+	static pGetImageUrlFromFluff (fluff) {
+		if (!fluff?.images?.length) return;
+
+		const imgEntry = fluff.images[0];
+		if (!imgEntry?.href) return;
+
+		if (imgEntry.href.type === "internal") {
+			return imgEntry.href.path ? `${Vetools.getInternalImageUrl(imgEntry.href.path)}` : null;
+		}
+
+		if (imgEntry.href.type === "external") {
+			return imgEntry.href.url ? imgEntry.href.url : null;
+		}
+	}
+
+	static async pHasTokenUrl (entityType, it) {
+		return (await Vetools._pGetTokenUrl(entityType, it)).hasToken;
+	}
+
+	static async pGetTokenUrl (entityType, it) {
+		return (await Vetools._pGetTokenUrl(entityType, it)).url;
+	}
+
+	static _isSaveableToServerUrl (originalUrl) { return originalUrl && typeof originalUrl === "string" && Vetools._RE_HTTP_URL.test(originalUrl); }
+	static _isSaveTypedImagesToServer ({imageType = "image"} = {}) {
+		switch (imageType) {
+			case "image": return Config.get("import", "isSaveImagesToServer");
+			case "token": return Config.get("import", "isSaveTokensToServer");
+			default: throw new Error(`Unhandled type "${imageType}"!`);
+		}
+	}
+
+	static async _pGetTokenUrl (entityType, it) {
+		if (it.tokenUrl) return {url: it.tokenUrl, hasToken: true};
+
+		const fallbackMeta = {
+			url: this.getBlankTokenUrl(),
+			hasToken: false,
+		};
+
+		switch (entityType) {
+			case "monster":
+			case "vehicle":
+			case "object": {
+				const fnGets = {
+					"monster": Renderer.monster.getTokenUrl,
+					"vehicle": Renderer.vehicle.getTokenUrl,
+					"object": Renderer.object.getTokenUrl,
+				};
+				const fnGet = fnGets[entityType];
+				if (!fnGet) throw new Error(`Missing getter!`);
+
+				if (it.hasToken) return {url: fnGet(it), hasToken: true};
+				if (it._versionBase_hasToken) return {url: fnGet({name: it._versionBase_name, source: it._versionBase_source}), hasToken: true};
+
+				return fallbackMeta;
+			}
+			case "trap": return fallbackMeta;
+			default: throw new Error(`Unhandled entity type "${entityType}"`);
+		}
+	}
+
+	static getBlankTokenUrl () { return UrlUtil.link(`${Renderer.get().baseMediaUrls["img"] || Renderer.get().baseUrl}img/blank.png`); }
+
+	static getImageUrl (entry) {
+		if (entry?.href.type === "internal") return Vetools.getInternalImageUrl(entry.href.path, {isSkipEncode: true});
+		return entry.href?.url;
+	}
+
+	static getInternalImageUrl (path, {isSkipEncode = false} = {}) {
+		if (!path) return null;
+		const fnEncode = isSkipEncode ? it => it : encodeURI;
+
+		const out = `${fnEncode(Renderer.get().baseMediaUrls["img"] || Renderer.get().baseUrl)}img/${fnEncode(path)}`;
+
+		if (isSkipEncode) return out;
+		return out.replace(/'/g, "%27"); // URL encode, as Foundry uses these in single-quoted CSS `background-image` strings
+	}
+
+	static async pOptionallySaveImageToServerAndGetUrl (originalUrl, {imageType = "image"} = {}) {
+		if (!this._isSaveTypedImagesToServer({imageType})) return originalUrl;
+		return this.pSaveImageToServerAndGetUrl({originalUrl});
+	}
+
+	static getImageSavedToServerUrl ({originalUrl, path} = {}) {
+		if (!path && !this._isSaveableToServerUrl(originalUrl)) return originalUrl;
+
+		const pathPart = (new URL(path ? `https://example.com/${path}` : originalUrl)).pathname;
+		return `${Config.get("import", "localImageDirectoryPath")}/${decodeURI(pathPart)}`.replace(/\/+/g, "/");
+	}
+
+	static async pSaveImageToServerAndGetUrl ({originalUrl, blob, force = false, path = null} = {}) {
+		if (blob && originalUrl) throw new Error(`"blob" and "originalUrl" arguments are mutually exclusive!`);
+
+		if (!blob && !this._isSaveableToServerUrl(originalUrl)) return originalUrl;
+
+		let out;
+		try {
+			await Vetools._LOCK_DOWNLOAD_IMAGE.pLock();
+			out = await this._pSaveImageToServerAndGetUrl_({originalUrl, blob, force, path});
+		} finally {
+			Vetools._LOCK_DOWNLOAD_IMAGE.unlock();
+		}
+		return out;
+	}
+
+	static async _pSaveImageToServerAndGetUrl_ ({originalUrl, blob, force = false, path = null} = {}) {
+		if (blob && originalUrl) throw new Error(`"blob" and "originalUrl" arguments are mutually exclusive!`);
+
+		const cleanOutPath = this.getImageSavedToServerUrl({originalUrl, path});
+		const pathParts = cleanOutPath.split("/");
+		const cleanOutDir = pathParts.slice(0, -1).join("/");
+
+		let existingFiles = null;
+		let isDirExists = false;
+		try {
+			existingFiles = await FilePicker.browse("data", cleanOutDir);
+			if (existingFiles?.target) isDirExists = true; // If we could browse for it, it exists
+		} catch (e) {
+			if (!/^Directory .*? does not exist/.test(`${e}`)) {
+				const msgStart = `Could not check for existing files when saving imported images to server!`;
+				if (!force && blob) throw new Error(msgStart);
+
+				const msg = `${msgStart}${force ? "" : ` The original image URL will be used instead.`}`;
+				UtilNotifications.notifyOnce({type: "warn", message: msg});
+				return force ? cleanOutPath : originalUrl;
+			}
+		}
+
+		// If the file already exists, use it
+		if (existingFiles?.files && existingFiles?.files.map(it => decodeURI(it)).includes(cleanOutPath)) return cleanOutPath;
+
+		if (!this._canUploadFiles()) {
+			if (!force && blob) throw new Error(`Your permission levels do not allow you to upload files!`);
+
+			const msg = `You have the "Save Imported Images to Server" config option enabled, but your permission levels do not allow you to upload files!${force ? "" : ` The original image URL will be used instead.`}`;
+			UtilNotifications.notifyOnce({type: "warn", message: msg});
+			return force ? cleanOutPath : originalUrl;
+		}
+
+		if (!isDirExists) {
+			try {
+				await this._pSaveImageToServerAndGetUrl_pCreateDirectories(cleanOutPath);
+			} catch (e) {
+				const msgStart = `Could not create required directories when saving imported images to server!`;
+				if (!force && blob) throw new Error(msgStart);
+
+				const msg = `${msgStart}${force ? "" : ` The original image URL will be used instead.`}`;
+				UtilNotifications.notifyOnce({type: "warn", message: msg});
+				return force ? cleanOutPath : originalUrl;
+			}
+		}
+
+		try {
+			blob = blob || await this._pSaveImageToServerAndGetUrl_pGetBlob(originalUrl);
+		} catch (e) {
+			const msg = `Failed to download image "${originalUrl}" when saving imported images to server!${force ? "" : ` The original image URL will be used instead.`} ${VeCt.STR_SEE_CONSOLE}`;
+			UtilNotifications.notifyOnce({type: "warn", message: msg});
+			console.error(...LGT, e);
+			return force ? cleanOutPath : originalUrl;
+		}
+
+		const name = pathParts.last();
+		let mimeType = `image/${(name.split(".").last() || "").trim().toLowerCase()}`;
+		// The shortened version isn't valid (see https://www.w3.org/Graphics/JPEG/)
+		if (mimeType === "image/jpg") mimeType = "image/jpeg";
+
+		const resp = await FilePicker.upload(
+			"data",
+			cleanOutDir,
+			new File(
+				[blob],
+				name,
+				{
+					lastModified: Date.now(),
+					type: mimeType,
+				},
+			),
+		);
+		if (resp?.path) return decodeURI(resp.path);
+
+		return force ? cleanOutPath : originalUrl;
+	}
+
+	static async _pSaveImageToServerAndGetUrl_pGetBlob (originalUrl) {
+		const blobResp = await fetch(originalUrl);
+		return blobResp.blob();
+	}
+
+	static async _pSaveImageToServerAndGetUrl_pCreateDirectories (cleanOutPath) {
+		const dirParts = cleanOutPath.split("/").slice(0, -1);
+		if (!dirParts.length) return;
+		for (let i = 0; i < dirParts.length; ++i) {
+			const dirPartSlice = dirParts.slice(0, i + 1);
+			try {
+				await FilePicker.createDirectory("data", dirPartSlice.join("/"));
+			} catch (e) {
+				if (`${e}`.startsWith(`EEXIST`)) continue;
+				throw new Error(e);
+			}
+		}
+	}
+
+	static _canUploadFiles () {
+		return game.isAdmin || (game.user && game.user.can("FILES_UPLOAD"));
+	}
+
+	static async pGetAllSpells ({isFilterNonStandard = false, additionalSourcesBrew = [], isIncludeLoadedBrew = false} = {}) {
+		const index = await Vetools.pGetSpellIndex();
+		const fileData = await Promise.all(
+			Object.entries(index)
+				.filter(([source]) => !isFilterNonStandard || !SourceUtil.isNonstandardSource(source))
+				.map(([_, filename]) => Vetools.pGetWithCache(Vetools.getSpellUrl(filename))),
+		);
+
+		if (additionalSourcesBrew?.length) {
+			for (const src of additionalSourcesBrew) {
+				const brewJson = await DataUtil.pLoadBrewBySource(src);
+				if (!brewJson) continue;
+				fileData.push(brewJson);
+			}
+		}
+
+		if (isIncludeLoadedBrew) fileData.push({spell: (BrewUtil.homebrew?.spell || [])});
+
+		const spells = fileData.map(it => MiscUtil.copy(it.spell || [])).flat();
+		spells.forEach(sp => {
+			sp.__prop = "spell";
+			Renderer.spell.initClasses(sp);
+		});
+		return {spell: spells};
+	}
+
+	static async pGetAllCreatures (isFilterNonStandard = false) {
+		const index = await Vetools.pGetCreatureIndex();
+		const fileData = await Promise.all(
+			Object.entries(index)
+				.filter(([source]) => !isFilterNonStandard || !SourceUtil.isNonstandardSource(source))
+				.map(async ([source, filename]) => ({source: source, json: await Vetools.pGetWithCache(Vetools.getCreatureUrl(filename))})),
+		);
+		// Filter to prevent duplicates from "otherSources" copies
+		return {
+			monster: fileData.map(it => {
+				const out = MiscUtil.copy(it.json.monster.filter(mon => mon.source === it.source));
+				out.forEach(it => it.__prop = "monster");
+				return out;
+			}).flat(),
+		};
+	}
+
+	static async _pGetHomebrewIndices () {
+		const out = {source: {}, prop: {}, abbreviations: {}};
+
+		try {
+			const [sourceIndex, propIndex, abbreviationIndex] = await Promise.all([
+				DataUtil.brew.pLoadSourceIndex(Config.get("import", "baseBrewUrl")),
+				DataUtil.brew.pLoadPropIndex(Config.get("import", "baseBrewUrl")),
+				DataUtil.brew.pLoadAbbreviationIndex(Config.get("import", "baseBrewUrl")),
+			]);
+			out.source = sourceIndex;
+			out.prop = propIndex;
+			out.abbreviation = abbreviationIndex;
+		} catch (e) {
+			ui.notifications.error(`Failed to load homebrew index! ${VeCt.STR_SEE_CONSOLE}`);
+			setTimeout(() => { throw e; });
+		}
+
+		return out;
+	}
+
+	static async pGetHomebrewSources (...dirs) {
+		const urlRoot = Config.get("import", "baseBrewUrl");
+		const seenPaths = new Set();
+
+		return dirs
+			.map(dir => {
+				return Object.keys(Vetools.HOMEBREW_INDEX__PROP[BrewUtil.dirToProp(dir)] || {})
+					.map((path) => {
+						if (seenPaths.has(path)) return null;
+						seenPaths.add(path);
+						return {
+							url: DataUtil.brew.getFileUrl(path, urlRoot),
+							name: this._getHomebrewName(path),
+							abbreviations: Vetools.HOMEBREW_INDEX__ABBREVIATION[path] || [],
+						};
+					});
+			})
+			.flat()
+			.filter(Boolean)
+			.sort((a, b) => SortUtil.ascSortLower(a.name, b.name));
+	}
+
+	static _getHomebrewName (brewPath) { return brewPath.split("/").slice(-1).join("").replace(/\.json$/i, ""); }
+
+	static async pGetLocalHomebrewSources (...dirs) {
+		try {
+			const listLocal = await Vetools._pGetLocalHomebrewList();
+
+			const allFilenames = [
+				...(listLocal || []),
+				...Config.get("import", "localHomebrew"),
+			];
+
+			if (!allFilenames.length) return [];
+
+			const brews = await allFilenames.pSerialAwaitMap(async name => ({
+				url: name,
+				data: await Vetools.pGetWithCache(name),
+				name: this._getHomebrewName(name),
+			}));
+
+			const desiredProps = new Set(dirs.map(dir => BrewUtil.dirToProp(dir)));
+
+			return brews
+				.filter(({data}) => {
+					const propsInBrew = new Set([
+						// Index props
+						...Object.keys(data || {})
+							.filter(it => !it.startsWith("_")),
+						// Index includes
+						...Object.keys(data?._meta?.includes || {}),
+					]);
+
+					return [...desiredProps].some(it => propsInBrew.has(it));
+				})
+				.map(it => {
+					it.abbreviations = (it.data?._meta?.sources || []).map(it => it.abbreviation).filter(Boolean);
+					return it;
+				})
+				.map(({name, url, abbreviations}) => ({name, url, abbreviations}));
+		} catch (e) {
+			const msg = `Failed to load local homebrew index!`;
+			console.error(...LGT, msg, e);
+			ui.notifications.error(`${msg} ${VeCt.STR_SEE_CONSOLE}`);
+		}
+		return [];
+	}
+
+	static async _pGetLocalHomebrewList () {
+		if (!Config.get("import", "isLoadLocalHomebrewIndex")) return null;
+
+		const isUseIndexJson = Config.get("import", "isUseLocalHomebrewIndexJson");
+
+		if (isUseIndexJson) {
+			const indexUrl = `${Config.get("import", "localHomebrewDirectoryPath")}/index.json`.replace(/\/+/g, "/");
+			const index = await Vetools.pGetWithCache(indexUrl);
+			if (!index?.toImport) return [];
+			return index.toImport.map(it => {
+				// For remote files, return as-is
+				if (Vetools._RE_HTTP_URL.test(it)) return it;
+
+				// For filenames, construct a path
+				return [...indexUrl.split("/").slice(0, -1), it].join("/");
+			});
+		}
+
+		try {
+			const existingFiles = await FilePicker.browse("data", Config.get("import", "localHomebrewDirectoryPath"));
+			if (!existingFiles?.files?.length) return null;
+
+			return existingFiles.files.map(it => decodeURIComponent(it));
+		} catch (e) {
+			const msg = `Failed to load local homebrew${isUseIndexJson ? " index" : ""}! Does the ${isUseIndexJson ? "file" : "directory"} "<data_dir>/${Config.get("import", "localHomebrewDirectoryPath")}${isUseIndexJson ? "/index.json" : ""}" exist?`;
+			console.error(...LGT, msg, e);
+			ui.notifications.error(`${msg} ${VeCt.STR_SEE_CONSOLE}`);
+			return null;
+		}
+	}
+
+	static getContent (data, props) {
+		if (!props) return data;
+
+		return props.map(prop => {
+			data[prop] = data[prop] || [];
+			data[prop].forEach(it => it.__prop = prop);
+			return data[prop];
+		}).flat();
+	}
+	// endregion
+
+	// region Additional data
+	static async pGetSpellSideData () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/spells/foundry.json`); }
+	static async pGetOptionalFeatureSideData () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-optionalfeatures.json`); }
+	static async pGetClassSubclassSideData () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/class/foundry.json`); }
+	static async pGetRaceSideData () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-races.json`); }
+	static async pGetItemSideData () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-items.json`); }
+	static async pGetFeatSideData () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-feats.json`); }
+	static async pGetRewardSideData () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-rewards.json`); }
+	static async pGetActionSideData () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-actions.json`); }
+	static async pGetVehicleUpgradeSideData () { return Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-vehicles.json`); }
+
+	// region TODO(Future) enable these when data is available
+	static async pGeBackgroundSideData () { return {} || Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-backgrounds.json`); }
+	static async pGetConditionDiseaseSideData () { return {} || Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-conditionsdiseases.json`); }
+	static async pGetPsionicsSideData () { return {} || Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-psionics.json`); }
+	static async pGetCreatureSideData () { return {} || Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/bestiary/foundry.json`); }
+	static async pGetObjectSideData () { return {} || Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-objects.json`); }
+	static async pGetVehicleSideData () { return {} || Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-vehicles.json`); }
+	static async pGetCharCreationOptionSideData () { return {} || Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-charcreationoptions.json`); }
+	static async pGetCultBoonSideData () { return {} || Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-cultsboons.json`); }
+	static async pGetTrapHazardSideData () { return {} || Vetools.pGetWithCache(`${Vetools.BASE_SITE_URL}data/foundry-trapshazards.json`); }
+	// endregion
+
+	// endregion
+
+	// region Icons
+	static async pGetIconLookup (entityType) {
+		const filename = `icon-${entityType}s.json`;
+		const url = `modules/${SharedConsts.MODULE_NAME}/data/${filename}`;
+		return Vetools.pGetWithCache(url);
+	}
+	// endregion
+
+	static get BASE_SITE_URL () {
+		let userOverride = Config.get("import", "baseSiteUrl");
+		if (userOverride && userOverride.trim()) {
+			// ensure trailing slash
+			userOverride = userOverride.replace(/^(.*?)\/*$/, "$1/");
+			return userOverride;
+		}
+		return Vetools._BASE_SITE_URL;
+	}
+
+	static get DATA_URL_FEATS () { return `${Vetools.BASE_SITE_URL}data/feats.json`; }
+	static get DATA_URL_BACKGROUNDS () { return `${Vetools.BASE_SITE_URL}data/backgrounds.json`; }
+	static get DATA_URL_VARIANTRULES () { return `${Vetools.BASE_SITE_URL}data/variantrules.json`; }
+	static get DATA_URL_PSIONICS () { return `${Vetools.BASE_SITE_URL}data/psionics.json`; }
+	static get DATA_URL_OPTIONALFEATURES () { return `${Vetools.BASE_SITE_URL}data/optionalfeatures.json`; }
+	static get DATA_URL_CONDITIONSDISEASES () { return `${Vetools.BASE_SITE_URL}data/conditionsdiseases.json`; }
+	static get DATA_URL_VEHICLES () { return `${Vetools.BASE_SITE_URL}data/vehicles.json`; }
+	static get DATA_URL_REWARDS () { return `${Vetools.BASE_SITE_URL}data/rewards.json`; }
+	static get DATA_URL_OBJECTS () { return `${Vetools.BASE_SITE_URL}data/objects.json`; }
+	static get DATA_URL_DEITIES () { return `${Vetools.BASE_SITE_URL}data/deities.json`; }
+	static get DATA_URL_RECIPES () { return `${Vetools.BASE_SITE_URL}data/recipes.json`; }
+	static get DATA_URL_CHAR_CREATION_OPTIONS () { return `${Vetools.BASE_SITE_URL}data/charcreationoptions.json`; }
+	static get DATA_URL_CULTSBOONS () { return `${Vetools.BASE_SITE_URL}data/cultsboons.json`; }
+	static get DATA_URL_ACTIONS () { return `${Vetools.BASE_SITE_URL}data/actions.json`; }
+	static get DATA_URL_LANGUAGES () { return `${Vetools.BASE_SITE_URL}data/languages.json`; }
+	static get DATA_URL_TRAPS_HAZARDS () { return `${Vetools.BASE_SITE_URL}data/trapshazards.json`; }
+}
+// Global data cache
+Vetools.CACHED_REQUESTS = {};
+Vetools.CACHE_REQUESTS_IN_FLIGHT = {};
+// URLs
+Vetools._RE_HTTP_URL = /(^https?:\/\/)/;
+// Vetools._BASE_SITE_URL = "https://5e.tools/"; // FIXME(Future) restore?
+Vetools._BASE_SITE_URL = "https://5etools-mirror-1.github.io/";
+// Preload content
+Vetools.BESTIARY_FLUFF_INDEX = null;
+Vetools.BESTIARY_TOKEN_LOOKUP = null;
+Vetools.HOMEBREW_COLLECTION_INDEX = {};
+// Homebrew meta caching
+Vetools.HOMEBREW_META_SOURCES = {};
+// Patches
+Vetools._CACHED_GET_ROLLABLE_ENTRY_DICE = null;
+Vetools._PATCHED_GET_ROLLABLE_ENTRY_DICE = null;
+Vetools._CACHED_MONSTER_DO_BIND_COMPACT_CONTENT_HANDLERS = null;
+Vetools._CACHED_RENDERER_HOVER_CACHE_AND_GET = null;
+// Homebrew
+Vetools.HOMEBREW_INDEX__SOURCE = {};
+Vetools.HOMEBREW_INDEX__PROP = {};
+Vetools.HOMEBREW_INDEX__ABBREVIATION = {};
+// Other
+Vetools._LOCK_DOWNLOAD_IMAGE = new VeLock();
+Vetools._VET_SOURCE_LOOKUP = {};
+
+export {Vetools};

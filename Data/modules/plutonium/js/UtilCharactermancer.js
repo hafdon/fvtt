@@ -1,51 +1,4191 @@
-const _0x96a6=['_modalTitle','_otherTitle','light','<div\x20class=\x22italic\x20ve-muted\x22>(select\x20a\x20','_propGroup','propGroups','includes','items','_getFormData','getMetaWrpMultipleChoice_getPropIsAcceptable',')</div>','<div\x20class=\x22ml-1\x20ve-small\x20ve-muted\x22\x20title=\x22','state','Damage\x20Resistances','2XRRqhv','properties','SKILL_ABV_TO_FULL','anyOptions','_unlock','\x0a\x09\x09\x09\x09\x09<div\x20class=\x22py-1\x22>Choose\x20','size','valueGroups','Do\x20you\x20wish\x20to\x20apply\x20ability\x20score\x20modifications?','\x20existing\x20skill\x20','<button\x20class=\x22btn\x20btn-default\x20btn-xxs\x20mr-1\x22\x20title=\x22Choose\x20a\x20','_render_renderPtChooseFrom','asText','findIndex','Tool\x20Proficiencies','removeHook','<div\x20class=\x22flex-v-center\x22></div>','<div\x20class=\x22mb-1\x22>','<div\x20class=\x22ve-small\x20veapp__msg-warning\x22></div>','_getSortedProfSet','string','append','_pFnGetChoice','static','\x20to\x20increase\x20by\x20','some','<div\x20class=\x22ve-small\x20veapp__msg-warning\x20inline-block\x20no-wrap\x22></div>','proficient','\x20existing\x20tool\x20','<div\x20class=\x22flex-col\x20my-1\x22></div>','render','LANGUAGES_EXOTIC','numberToText','getExisting','Damage\x20Immunities','tools','_doSetTrackerState','$sel','_getChooseFromDisplay','_title','isNoChoice','min','change','_getExistingFvttProficiencySetsMeta','abilities','startsWith','\x20ability\x20score','anyProficientSkill','getAbilityData','languages','otherData','@skill','_chooseFilter_','allValuesMaybeInUse','{@item\x20','toolProf',':</div>','propPulse','prop','$ele','_validateProp','Charactermancer_WeaponProficiencySelect.items','\x20Set','_anyOptions','bind','ranged','checked','children','flat','isCancelled','PROF_TO_ICON_CLASS','Languages','addHook','PROP_GROUP_','_pLock','pulseImmune','_hk_pUpdatePtsExisting','tool','languageProficiencies','LANGUAGES_STANDARD','length','fin','conditionImmune','_render_renderPtChooseAnyProficient','Unhandled\x20immune/resist/vulnerability\x20properties\x20\x22','splice','Saving\x20Throw\x20Proficiency','hookMetas','Saving\x20Throw\x20Proficiencies','split','Language\x20Proficiencies','_removeHookBase','pulseLanguages','<hr\x20class=\x22hr-2\x20hr--dotted\x22>','titleSingle','_render_renderPtChooseFromFilter','_getSortedWeightedFrom','_getNonStaticDisplay','_titlePrefix','pulseTools','toTitleCase','_hk_ixSet','Proficient\x20from\x20Another\x20Source','skillProficiencies','trim','PropGroup','377984SLeyeB','Condition\x20Immunities','html','_getStaticDisplay','titlePlural','readonly_selectedValues','anyProficientTool','amount','weight_ability_','proficiencies','titlePrefix','With\x20your\x20DM\x27s\x20permission,\x20you\x20can\x20choose\x20a\x20secret\x20language.','_featureSourceTracker','immune','resist','value','Skill\x20Proficiencies','isActive','melee','_hk_pUpdatePtsExisting_','getCurrentLevel','_state','_hk_ixSet_renderPts','_convertAnyToChoose','pGetUserBoolean','propTrackerPulse','_VALID_HOOK_PROPS','SKILL_TO_ATB_ABV','LANGUAGES_ALL','constructor','WEAPON_PROFICIENCIES','\x22\x20(value\x20was\x20','pFnGetParentGroup','WALKER_READONLY_GENERIC','Ability\x20Scores?','Did\x20you\x20change\x20your\x20source\x20selection\x20since\x20using\x20the\x20Charactermancer\x20initially?','_getOutputSet_recurse','name','$getSelEnum','values','object','shield|phb','savingThrows','_render_$getStgSelGroup','lastChecked','ascSortLower','_tag','167889qTznEp','_$stgGroup','Unhandled\x20pulse\x20prop\x20\x22','Unhandled\x20non-static\x20key\x20\x22','forEach','pGetUserInput','pGetFormData','_fnsCleanup','_ability','Secret\x20Languages','<div>','_getOutputObject','getMetaWrpMultipleChoice_getSelectedIxs','_isChooseFromFilter','<div\x20class=\x22mb-1\x22>Choose\x20','VALID_WEAPON_PROFICIENCIES','last','_available','stringify','propTracker','561008RPelhT','Damage\x20Immunity','358989FodUVV','_prop','race_asiChoice','isChoosable','_getAvailableByType','pulseResist','proficiency','isGrouped','Ability\x20Score\x20Increase','_lastMetas','max','pulseVulnerable','mergeMap','</div>','title','VALID_LANGUAGES','TOOL_PROFICIENCIES','appendTo','(Other\x20weapon\x20proficiency)','featureSourceTracker','getMetaWrpMultipleChoice_getSelectedValues','_getAvailableSkills','_getWeightedProps','deepEquals','(Other\x20language)','pulseSavingThrows','toggleClass','sort','1776125VdsglQ','unhook','skills','weighted','_otherData','_render_recurse','_render_renderPtStatic','VALID_ARMOR_PROFICIENCIES','pulseFeatures','Unhandled\x20mode\x20\x22','cleanup','LANGUAGES_SECRET','pulseSkills','Damage\x20Vulnerabilities','levels','ix_skill_','_propGroups','_render_renderPtChooseWeighted','dex','Exotic\x20Languages','ixSet','Damage\x20Vulnerability','choose','CASTER_TYPE_TO_PROGRESSION','_hkUpdateExisting','_lastChoiceMeta','_fnRenderKey','add','{@skill\x20','int','weapons','<div\x20class=\x22ve-small\x20veapp__msg-warning\x20inline-block\x22></div>','pulseWeapons','Unimplemented!','toLowerCase','data','{@item\x20shield|phb|Shields}','Unhandled\x20normalized\x20key\x20\x22','\x20from\x20','propAnyProficientSkill','pGetItemWeaponType','(Other\x20language\x20or\x20tool\x20proficiency)','copy','ABIL_ABVS','delete','Weapon\x20Proficiencies','ml-1','_getJoinedProp','attributes','\x22>(','Select\x20','getStatesForKey','<div\x20class=\x22flex-col\x20py-1\x20pt-0\x22>\x0a\x09\x09\x09\x09\x09','toolProficiencies','Armor\x20Proficiencies','getOtherData','VALID_TOOL_PROFICIENCIES','ANY_OPT_ANY_STANDARD__VALUE_GROUPS','armorProficiencies','get','find','from','sum','<button\x20class=\x22btn\x20btn-primary\x20btn-5et\x20btn-xs\x22>Set\x20Group\x20Active</button>','join','getBaseAbilityScores','_getNormalizedAvailableProficiencies','(Other\x20armor\x20proficiency)','disease','_isSkillKey','entries','_ANY_OPTIONS','Weapon\x20Proficiency','class','existing','number','features','_isStaticKey','_render_renderPtChooseAnyProficientSkill','heavy','$getCbBool','Language\x20and\x20Tool\x20Proficiencies','hook','_getAvailableTools','_titleSingle','getCurrentAbilityScores','pFnGetChoice','map','str','_addHookBase','STR_WARN_SOURCE_SELECTION','intToBonus','_allValuesMaybeInUse','available','_existing','_getMultiChoiceTitle','ix_tool_','Expertise','_pFnGetParentGroup','keys','_hk_updatePtsExisting','custom','con','(<i\x20class=\x22fas\x20','set','_getProps','pulseArmor','cha','setState','_getSortedWeights','_proxyAssignSimple','_getDefaultState','<input\x20type=\x22checkbox\x22\x20class=\x22ml-1\x20mr-2\x22>','indexOf','1543BNiqSG','\x22><span\x20class=\x22fas\x20fa-search\x22></span></button>','/Tool','_choose','other','empty','pulseExpertise','prof','pGetImportCompModalFormData','updateExisting','setValues','existingToolProficiencies','walk','getMetaWrpMultipleChoice','_getExistingProficiencies','proficiencyChoice','click','mr-1','armor','thr','modalTitle','traits','filter','has','_valueGroupSplitControlsLookup','_getMultiChoiceDisplay','getCasterProgressionMeta','_registered','_hkExisting','Yes','tag','valueGroupSplitControlsLookup','165265KHecIX','count','_lastMeta','_source','Unhandled\x20tracked\x20state\x20key\x20','ascSortAtts','_titlePlural','<div\x20class=\x22flex-col\x22></div>','_doPulseForProp','slice','Expertise\x20from\x20Another\x20Source','getAttackAbilityScore','239plhdjB','setActive','_getStaticKeys','savingThrowProficiencies','pulseConditionImmune','_getOutputSet','addClass','push','Tool\x20Proficiency','Choose\x20','_getHp','register','_getAbilityScores','weaponProficiencies','otherTitle','_renderKey','expertise','attAbvToFull','Existing\x20Skill','skillToAbilityAbv',':</div>\x0a\x09\x09\x09\x09</div>','\x22></i>)','vulnerable','existingFvtt','any'];const _0x2042=function(_0x25e947,_0xe7b191){_0x25e947=_0x25e947-0x87;let _0x96a6e6=_0x96a6[_0x25e947];return _0x96a6e6;};const _0x21aa2f=_0x2042;(function(_0x3257bc,_0x661eff){const _0x3e16b7=_0x2042;while(!![]){try{const _0x50987a=-parseInt(_0x3e16b7(0x212))+-parseInt(_0x3e16b7(0x1cf))+parseInt(_0x3e16b7(0x112))*parseInt(_0x3e16b7(0x13e))+-parseInt(_0x3e16b7(0x1fe))+-parseInt(_0x3e16b7(0x214))+parseInt(_0x3e16b7(0x165))*-parseInt(_0x3e16b7(0x132))+parseInt(_0x3e16b7(0xa0));if(_0x50987a===_0x661eff)break;else _0x3257bc['push'](_0x3257bc['shift']());}catch(_0x496ba4){_0x3257bc['push'](_0x3257bc['shift']());}}}(_0x96a6,0x55156));import{UtilActors}from'./UtilActors.js';import{DataConverter}from'./DataConverter.js';import{ModalFilterItemsFvtt}from'./UtilModalFilter.js';import{UtilApplications}from'./UtilApplications.js';class Charactermancer_Util{static[_0x21aa2f(0x1e3)](_0x3dbd59){const _0xa818be=_0x21aa2f;return _0x3dbd59[_0xa818be(0x15e)]['filter'](_0x4c8918=>_0x4c8918['type']===_0xa818be(0xe9))[_0xa818be(0xf7)](_0x156280=>Number(_0x156280[_0xa818be(0xc3)][_0xa818be(0xc3)][_0xa818be(0xae)]||0x0))[_0xa818be(0xde)]();}static[_0x21aa2f(0xe1)](_0x1e47e2){const _0x3e57a1=_0x21aa2f;return this[_0x3e57a1(0x14a)](_0x1e47e2,!![]);}static[_0x21aa2f(0xf5)](_0x4466c6){return this['_getAbilityScores'](_0x4466c6,![]);}static['_getAbilityScores'](_0x5633a7,_0x1a20f4){const _0xa646ef=_0x21aa2f,_0x31ce1c=_0x1a20f4?_0x5633a7[_0xa646ef(0xc3)][_0xa646ef(0x135)]||_0x5633a7[_0xa646ef(0xc3)]:_0x5633a7['data'],_0x142cb3={'str':Number(MiscUtil[_0xa646ef(0xdb)](_0x31ce1c,_0xa646ef(0xc3),'abilities',_0xa646ef(0xf8),'value')||0x0),'dex':Number(MiscUtil[_0xa646ef(0xdb)](_0x31ce1c,_0xa646ef(0xc3),_0xa646ef(0x191),_0xa646ef(0xb2),_0xa646ef(0x1de))||0x0),'con':Number(MiscUtil[_0xa646ef(0xdb)](_0x31ce1c,_0xa646ef(0xc3),'abilities',_0xa646ef(0x106),'value')||0x0),'int':Number(MiscUtil[_0xa646ef(0xdb)](_0x31ce1c,_0xa646ef(0xc3),_0xa646ef(0x191),_0xa646ef(0xbd),_0xa646ef(0x1de))||0x0),'wis':Number(MiscUtil[_0xa646ef(0xdb)](_0x31ce1c,_0xa646ef(0xc3),_0xa646ef(0x191),'wis','value')||0x0),'cha':Number(MiscUtil[_0xa646ef(0xdb)](_0x31ce1c,_0xa646ef(0xc3),_0xa646ef(0x191),_0xa646ef(0x10b),_0xa646ef(0x1de))||0x0)};return Object[_0xa646ef(0xe6)](_0x142cb3)['forEach'](([_0x299848,_0x2da451])=>{if(isNaN(_0x2da451))_0x142cb3[_0x299848]=0x0;}),_0x142cb3;}static['getBaseHp'](_0x56a770){return this['_getHp'](_0x56a770,!![]);}static[_0x21aa2f(0x148)](_0x103bef,_0x4f12c8){const _0x142e2f=_0x21aa2f,_0x1402bf=_0x4f12c8?_0x103bef[_0x142e2f(0xc3)][_0x142e2f(0x135)]||_0x103bef[_0x142e2f(0xc3)]:_0x103bef[_0x142e2f(0xc3)];return{'value':_0x1402bf?.['data']?.[_0x142e2f(0xd0)]?.['hp']?.[_0x142e2f(0x1de)]||0x0,'max':_0x1402bf?.[_0x142e2f(0xc3)]?.[_0x142e2f(0xd0)]?.['hp']?.['max']||0x0};}static[_0x21aa2f(0x13d)](_0x3967a7,_0x463089,_0x2f683e){const _0x118ccb=_0x21aa2f;if(!_0x3967a7||!_0x463089)return null;switch(_0x2f683e){case _0x118ccb(0x1e1):{const _0x5d8614=!!MiscUtil[_0x118ccb(0xdb)](_0x3967a7,_0x118ccb(0xc3),_0x118ccb(0xc3),_0x118ccb(0x166),_0x118ccb(0x1b6));if(!_0x5d8614)return _0x463089[_0x118ccb(0xf8)];return _0x463089[_0x118ccb(0xf8)]>_0x463089[_0x118ccb(0xb2)]?_0x463089['str']:_0x463089[_0x118ccb(0xb2)];}case _0x118ccb(0x1a6):{const _0x5a0084=!!MiscUtil[_0x118ccb(0xdb)](_0x3967a7,_0x118ccb(0xc3),_0x118ccb(0xc3),'properties',_0x118ccb(0x125));if(!_0x5a0084)return _0x463089['dex'];return _0x463089[_0x118ccb(0xf8)]>_0x463089[_0x118ccb(0xb2)]?_0x463089[_0x118ccb(0xf8)]:_0x463089[_0x118ccb(0xb2)];}default:throw new Error(_0x118ccb(0xa9)+_0x2f683e+'\x22');}}static[_0x21aa2f(0x12c)]({casterProgression:_0x42cea4,curLevel:_0xb394d1,targetLevel:_0x2572a7,isBreakpointsOnly:isBreakpointsOnly=![]}){const _0x485dcf=_0x21aa2f;if(_0x42cea4==null||_0xb394d1==null||_0x2572a7==null)return null;const _0x2506d8=UtilActors[_0x485dcf(0xb7)][_0x42cea4];if(!_0x2506d8)return null;const _0x542bef=[];let _0x5e331e=0x0;_0x2506d8[_0x485dcf(0x202)](_0x2e333c=>{const _0x34c7c7=_0x485dcf;let _0x54309c=![];for(let _0x504981=0x0;_0x504981<_0x2e333c['length'];++_0x504981){const _0x33e1f9=_0x504981+0x1;if(_0x2e333c[_0x504981]&&_0x33e1f9>_0x5e331e){_0x542bef[_0x34c7c7(0x145)](_0x33e1f9),_0x5e331e=_0x33e1f9,_0x54309c=!![];break;}}if(!_0x54309c){if(isBreakpointsOnly)_0x542bef['push'](null);else _0x542bef[_0x34c7c7(0x145)](_0x542bef['length']?_0x542bef[_0x34c7c7(0x20e)]():null);}});const _0x4f6030=_0x542bef[_0x485dcf(0x13b)](_0xb394d1,_0x2572a7)[_0x485dcf(0x128)](Boolean);if(!_0x4f6030[_0x485dcf(0x1b5)])return null;const _0x273335=Math[_0x485dcf(0x18e)](..._0x4f6030),_0x397183=Math['max'](..._0x4f6030),_0x25bc5d=Math[_0x485dcf(0x8e)](0x0,_0x2572a7-_0xb394d1),_0x340fdb=_0x397183-_0x273335;return{'spellLevelLow':_0x273335,'spellLevelHigh':_0x397183,'deltaLevels':_0x25bc5d,'deltaSpellLevels':_0x340fdb};}}Charactermancer_Util[_0x21aa2f(0xfa)]=_0x21aa2f(0x1f2);class Charactermancer_FeatureSourceTracker extends BaseComponent{constructor(){super(),this['_registered']=new Map();}[_0x21aa2f(0x149)](_0x876ff2){this['_registered']['set'](_0x876ff2,{'state':null,'hookMetas':[]});}[_0x21aa2f(0x1a1)](_0x46cac8){const _0x4dde2b=_0x21aa2f;if(!Charactermancer_FeatureSourceTracker[_0x4dde2b(0x1e9)][_0x4dde2b(0x129)](_0x46cac8))throw new Error(_0x4dde2b(0x200)+_0x46cac8+'\x22');}[_0x21aa2f(0x1ad)](_0x1b1e9c,_0x29a851,_0x51f8c7){const _0x121754=_0x21aa2f;this[_0x121754(0x1a1)](_0x29a851);if(!this[_0x121754(0x12d)]['has'](_0x1b1e9c))this[_0x121754(0x149)](_0x1b1e9c);this[_0x121754(0x12d)][_0x121754(0xdb)](_0x1b1e9c)[_0x121754(0x1bc)][_0x121754(0x145)]({'propPulse':_0x29a851,'hook':_0x51f8c7}),this[_0x121754(0xf9)](_0x29a851,_0x51f8c7);}[_0x21aa2f(0x174)](_0x362afd,_0x9149bc,_0x21115f){const _0x81259b=_0x21aa2f;this[_0x81259b(0x1a1)](_0x9149bc);if(!this[_0x81259b(0x12d)][_0x81259b(0x129)](_0x362afd))return;const _0x245e22=this[_0x81259b(0x12d)]['get'](_0x362afd),_0x19ce4d=_0x245e22[_0x81259b(0x1bc)][_0x81259b(0x172)](_0xd7ac37=>_0xd7ac37[_0x81259b(0xf2)]===_0x21115f);if(~_0x19ce4d)_0x245e22[_0x81259b(0x1bc)][_0x81259b(0x1ba)](_0x19ce4d,0x1);this['_removeHookBase'](_0x9149bc,_0x21115f);}[_0x21aa2f(0x10c)](_0x24a666,_0x3c56fb){const _0xcba1c9=_0x21aa2f;if(!this[_0xcba1c9(0x12d)][_0xcba1c9(0x129)](_0x24a666))this[_0xcba1c9(0x149)](_0x24a666);const _0x1c591b=this[_0xcba1c9(0x12d)][_0xcba1c9(0xdb)](_0x24a666),_0xe422e4=_0x1c591b['state']?MiscUtil['copy'](_0x1c591b[_0xcba1c9(0x163)]):_0x1c591b['state'];_0x1c591b[_0xcba1c9(0x163)]=_0x3c56fb;const _0x455ac5=new Set([...Object[_0xcba1c9(0x103)](_0xe422e4||{}),...Object['keys'](_0x3c56fb||{})]);_0x455ac5['forEach'](_0x582415=>{const _0x3075df=_0xcba1c9,_0x1fe9bc=_0xe422e4?.[_0x582415],_0x3441f9=_0x3c56fb?.[_0x582415];if(CollectionUtil[_0x3075df(0x9b)](_0x1fe9bc,_0x3441f9))return;this['_doPulseForProp'](_0x582415);});}[_0x21aa2f(0xd3)](_0xd370fc,{ignore:ignore=null}={}){const _0xc5f1be=_0x21aa2f,_0x4afeb2=[];for(const [_0x21acde,_0x1aa697]of this[_0xc5f1be(0x12d)][_0xc5f1be(0xe6)]()){if(ignore===_0x21acde)continue;if(_0x1aa697?.[_0xc5f1be(0x163)]?.[_0xd370fc])_0x4afeb2[_0xc5f1be(0x145)](_0x1aa697['state'][_0xd370fc]);}return _0x4afeb2;}['unregister'](_0x13b884){const _0x2b3f3c=_0x21aa2f;if(!_0x13b884)return;const _0xdf2c39=this[_0x2b3f3c(0x12d)][_0x2b3f3c(0xdb)](_0x13b884);if(!_0xdf2c39)return;this[_0x2b3f3c(0x12d)][_0x2b3f3c(0xcc)](_0x13b884),_0xdf2c39[_0x2b3f3c(0x1bc)]['forEach'](({propPulse:_0x375ee3,hook:_0x832a07})=>{const _0x454a75=_0x2b3f3c;this[_0x454a75(0x1c0)](_0x375ee3,_0x832a07);}),_0xdf2c39[_0x2b3f3c(0x163)]&&Object[_0x2b3f3c(0x103)](_0xdf2c39[_0x2b3f3c(0x163)])[_0x2b3f3c(0x202)](_0x75652b=>{const _0xe4b8c7=_0x2b3f3c;this[_0xe4b8c7(0x13a)](_0x75652b);});}[_0x21aa2f(0x13a)](_0x5b5245){const _0x37778c=_0x21aa2f;switch(_0x5b5245){case _0x37778c(0xa2):return this[_0x37778c(0x1e4)]['pulseSkills']=!this[_0x37778c(0x1e4)][_0x37778c(0xac)];case _0x37778c(0x196):return this[_0x37778c(0x1e4)][_0x37778c(0x1c1)]=!this[_0x37778c(0x1e4)][_0x37778c(0x1c1)];case'tools':return this[_0x37778c(0x1e4)]['pulseTools']=!this[_0x37778c(0x1e4)]['pulseTools'];case _0x37778c(0x124):return this[_0x37778c(0x1e4)]['pulseArmor']=!this['_state'][_0x37778c(0x10a)];case'weapons':return this[_0x37778c(0x1e4)][_0x37778c(0xc0)]=!this[_0x37778c(0x1e4)][_0x37778c(0xc0)];case _0x37778c(0xec):return this[_0x37778c(0x1e4)]['pulseFeatures']=!this[_0x37778c(0x1e4)][_0x37778c(0xa8)];case _0x37778c(0x1f9):return this[_0x37778c(0x1e4)][_0x37778c(0x9d)]=!this[_0x37778c(0x1e4)]['pulseSavingThrows'];case _0x37778c(0x1dc):return this[_0x37778c(0x1e4)][_0x37778c(0x1b0)]=!this['_state'][_0x37778c(0x1b0)];case _0x37778c(0x1dd):return this[_0x37778c(0x1e4)][_0x37778c(0x89)]=!this[_0x37778c(0x1e4)][_0x37778c(0x89)];case _0x37778c(0x154):return this[_0x37778c(0x1e4)][_0x37778c(0x8f)]=!this[_0x37778c(0x1e4)][_0x37778c(0x8f)];case _0x37778c(0x1b7):return this[_0x37778c(0x1e4)][_0x37778c(0x142)]=!this[_0x37778c(0x1e4)]['pulseConditionImmune'];case _0x37778c(0x14e):return this[_0x37778c(0x1e4)]['pulseExpertise']=!this[_0x37778c(0x1e4)]['pulseExpertise'];default:throw new Error(_0x37778c(0x136)+_0x5b5245);}}[_0x21aa2f(0x10f)](){const _0x14ef08=_0x21aa2f;return[...Charactermancer_FeatureSourceTracker[_0x14ef08(0x1e9)]][_0x14ef08(0x90)](_0x5eb5da=>({[_0x5eb5da]:![]}));}}Charactermancer_FeatureSourceTracker['_VALID_HOOK_PROPS']=new Set([_0x21aa2f(0xac),_0x21aa2f(0x1c1),_0x21aa2f(0x1c8),_0x21aa2f(0x10a),_0x21aa2f(0xc0),_0x21aa2f(0xa8),_0x21aa2f(0x9d),_0x21aa2f(0x1b0),_0x21aa2f(0x89),_0x21aa2f(0x8f),_0x21aa2f(0x142),'pulseExpertise']);class Charactermancer_AbilityScoreSelect extends BaseComponent{static async['pFillActorAbilityData'](_0x1baf31,_0x371c0f,_0x2f7030,_0x48c43d){const _0x31bd84=_0x21aa2f;if(!_0x371c0f||!_0x371c0f[_0x31bd84(0x1b5)])return;const _0x137614=await this[_0x31bd84(0x203)](_0x371c0f);if(!_0x137614)return _0x48c43d[_0x31bd84(0x1aa)]=!![];if(_0x137614===VeCt['SYM_UI_SKIP'])return;_0x2f7030[_0x31bd84(0xc3)]=_0x2f7030[_0x31bd84(0xc3)]||{},_0x2f7030[_0x31bd84(0xc3)][_0x31bd84(0x191)]=_0x2f7030['data'][_0x31bd84(0x191)]||{};const _0x23db73=Charactermancer_Util[_0x31bd84(0xe1)](_0x1baf31);return Parser[_0x31bd84(0xcb)][_0x31bd84(0x128)](_0x54604c=>_0x137614['data'][_0x54604c])[_0x31bd84(0x202)](_0x45e457=>_0x2f7030[_0x31bd84(0xc3)][_0x31bd84(0x191)][_0x45e457]={'value':_0x23db73[_0x45e457]+_0x137614[_0x31bd84(0xc3)][_0x45e457]}),_0x137614;}static async['pGetUserInput'](_0xfb0c5){const _0x493f7f=_0x21aa2f;if(!_0xfb0c5||!_0xfb0c5[_0x493f7f(0x1b5)])return{'isFormComplete':!![],'data':{}};const _0x205e1b=new Charactermancer_AbilityScoreSelect({'ability':_0xfb0c5});if(_0x205e1b[_0x493f7f(0x18d)]()){const _0x5c2938=await InputUiUtil[_0x493f7f(0x1e7)]({'title':_0x493f7f(0x1f1),'htmlDescription':_0x493f7f(0x16d),'textYes':_0x493f7f(0x12f),'textNo':'No'});if(_0x5c2938==null)return null;if(!_0x5c2938)return{'isFormComplete':!![],'data':{}};return _0x205e1b[_0x493f7f(0x204)]();}return UtilApplications[_0x493f7f(0x11a)]({'comp':_0x205e1b});}constructor(_0x88c3c9){const _0x2c26bc=_0x21aa2f;_0x88c3c9=_0x88c3c9||{},super(),this[_0x2c26bc(0x206)]=_0x88c3c9['ability'],this[_0x2c26bc(0x134)]=null;}get[_0x21aa2f(0x126)](){const _0x4db398=_0x21aa2f;return _0x4db398(0x8c);}[_0x21aa2f(0x183)](_0x577abf){const _0x1e3deb=_0x21aa2f;let _0x27f02d=null;if(this[_0x1e3deb(0x206)][_0x1e3deb(0x1b5)]>0x1){const _0x15aec8=ComponentUiUtil[_0x1e3deb(0x1f5)](this,'ixSet',{'values':this[_0x1e3deb(0x206)]['map']((_0x40ab5c,_0x5d798f)=>_0x5d798f),'fnDisplay':_0x2f5d53=>Renderer[_0x1e3deb(0x195)]([this[_0x1e3deb(0x206)][_0x2f5d53]])['asText']});_0x27f02d=$$`<div class="w-100 mb-2 flex-vh-center">
-				${_0x15aec8}
-			</div>`;}const _0x320ad1=$$`<div class="flex-col"></div>`,_0x5e4f36=()=>{const _0x47c9f2=_0x1e3deb;_0x320ad1[_0x47c9f2(0x117)]();if(this[_0x47c9f2(0x134)])this['_lastMeta'][_0x47c9f2(0xaa)]();const _0x21fc89=this[_0x47c9f2(0x206)][this[_0x47c9f2(0x1e4)][_0x47c9f2(0xb4)]],_0x59987f=Parser[_0x47c9f2(0xcb)][_0x47c9f2(0x128)](_0x190f81=>_0x21fc89[_0x190f81])[_0x47c9f2(0xf7)](_0x226e1f=>Parser[_0x47c9f2(0x14f)](_0x226e1f)+'\x20'+UiUtil[_0x47c9f2(0xfb)](_0x21fc89[_0x226e1f]));if(_0x59987f['length'])_0x320ad1[_0x47c9f2(0x17a)](_0x47c9f2(0x208)+_0x59987f['join'](',\x20')+_0x47c9f2(0x91)+(_0x21fc89[_0x47c9f2(0xb6)]?'<hr\x20class=\x22hr-2\x20hr--dotted\x22>':''));if(_0x21fc89[_0x47c9f2(0xb6)]){if(_0x21fc89[_0x47c9f2(0xb6)]['from'])this[_0x47c9f2(0x170)](_0x320ad1,_0x21fc89);else{if(_0x21fc89[_0x47c9f2(0xb6)][_0x47c9f2(0xa3)])this[_0x47c9f2(0xb1)](_0x320ad1,_0x21fc89);}}};this['_addHookBase'](_0x1e3deb(0xb4),_0x5e4f36),_0x5e4f36(),$$(_0x577abf)`
-			${_0x27f02d}
-			${_0x320ad1}
-		`;}['_render_renderPtChooseFrom'](_0x4c306d,_0x4c0174){const _0x2a4a1e=_0x21aa2f,_0x40e620=_0x4c0174[_0x2a4a1e(0xb6)][_0x2a4a1e(0x133)]||0x1,_0x2005bb=_0x4c0174['choose'][_0x2a4a1e(0x1d6)]||0x1;this['_lastMeta']=ComponentUiUtil['getMetaWrpMultipleChoice'](this,'race_asiChoice',{'values':_0x4c0174[_0x2a4a1e(0xb6)][_0x2a4a1e(0xdd)],'fnDisplay':_0x1be233=>Parser['attAbvToFull'](_0x1be233)+'\x20'+UiUtil[_0x2a4a1e(0xfb)](_0x2005bb),'count':_0x40e620}),_0x4c306d[_0x2a4a1e(0x17a)](_0x2a4a1e(0x20c)+Parser[_0x2a4a1e(0x185)](_0x40e620)+_0x2a4a1e(0x193)+(_0x40e620===0x1?'':'s')+_0x2a4a1e(0x17d)+_0x2005bb+_0x2a4a1e(0x19d)),this[_0x2a4a1e(0x134)][_0x2a4a1e(0x1a0)][_0x2a4a1e(0x95)](_0x4c306d);}['_getWeightedProps'](_0x216066,_0x1a7803){const _0x554b9a=_0x21aa2f;return{'propWeightAbility':_0x554b9a(0x1d7)+_0x216066+'_'+_0x1a7803};}[_0x21aa2f(0xb1)](_0x11d9ca,_0x56db27){const _0xa17fa1=_0x21aa2f,_0x9d711f=[],_0x52e0e4=this['constructor'][_0xa17fa1(0x1c5)](_0x56db27),_0x4de053=this[_0xa17fa1(0x1ec)][_0xa17fa1(0x10d)](_0x56db27),_0x577e91=$('<div\x20class=\x22flex-col\x22></div>');_0x52e0e4[_0xa17fa1(0x202)]((_0x28b0a5,_0x38d215)=>{const _0x3ee6f5=_0xa17fa1,_0x2b6eed=_0x4de053[_0x3ee6f5(0xf7)]((_0x389302,_0x2223a0)=>{const _0x2c4c7=_0x3ee6f5,{propWeightAbility:_0x873960}=this['_getWeightedProps'](_0x38d215,_0x2223a0),_0x56df7b=ComponentUiUtil[_0x2c4c7(0xf0)](this,_0x873960,{'asMeta':!![]});_0x9d711f[_0x2c4c7(0x145)](_0x56df7b[_0x2c4c7(0xa1)]);const _0x5d901d=()=>{const _0x1575d8=_0x2c4c7;if(!this[_0x1575d8(0x1e4)][_0x873960])return;const _0x2b7e99={};_0x52e0e4[_0x1575d8(0x202)]((_0x2df70b,_0x2c501a)=>{const _0x4e6323=_0x1575d8,{propWeightAbility:_0x117cca}=this[_0x4e6323(0x9a)](_0x2c501a,_0x2223a0);if(_0x117cca===_0x873960)return;_0x2b7e99[_0x117cca]=![];}),_0x4de053[_0x1575d8(0x202)]((_0x2e682d,_0x3788a2)=>{const {propWeightAbility:_0x348a70}=this['_getWeightedProps'](_0x38d215,_0x3788a2);if(_0x348a70===_0x873960)return;_0x2b7e99[_0x348a70]=![];}),this[_0x1575d8(0x10e)](_0x1575d8(0x163),_0x2b7e99);};return this[_0x2c4c7(0xf9)](_0x873960,_0x5d901d),_0x9d711f[_0x2c4c7(0x145)](()=>this[_0x2c4c7(0x1c0)](_0x873960,_0x873960)),_0x5d901d(),$$`<label class="flex-vh-center w-40p py-1">${_0x56df7b['$cb']}</label>`;}),_0x3e2b6d=$$`<div class="flex-v-center">
-				<div class="w-100p text-right pr-2">${Parser[_0x3ee6f5(0x14f)](_0x28b0a5)}</div>
-				${_0x2b6eed}
-			</div>`[_0x3ee6f5(0x95)](_0x577e91);}),$$(_0x11d9ca)`<div class="flex-col">
-			<div class="mb-1">${Renderer[_0xa17fa1(0x195)]([{'choose':_0x56db27[_0xa17fa1(0xb6)]}])[_0xa17fa1(0x171)]}:</div>
+import {UtilActors} from "./UtilActors.js";
+import {ModalFilterItemsFvtt} from "./UtilModalFilter.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {LGT, Util} from "./Util.js";
+import {Charactermancer_AdditionalSpellsSelect} from "./UtilCharactermancerAdditionalSpells.js";
+import {Consts} from "./Consts.js";
+import {Vetools} from "./Vetools.js";
+import {Charactermancer_Class_Util} from "./UtilCharactermancerClass.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class Charactermancer_Util {
+	static getCurrentLevel (actor) {
+		return actor.items.filter(it => it.type === "class").map(it => Number(it.data.data.levels || 0)).sum();
+	}
+
+	static getBaseAbilityScores (actor) { return this._getAbilityScores(actor, true); }
+
+	static getCurrentAbilityScores (actor) { return this._getAbilityScores(actor, false); }
+
+	static _getAbilityScores (actor, isBase) {
+		const actorData = isBase ? (actor.data._source || actor.data) : actor.data;
+		const out = {
+			str: Number(MiscUtil.get(actorData, "data", "abilities", "str", "value") || 0),
+			dex: Number(MiscUtil.get(actorData, "data", "abilities", "dex", "value") || 0),
+			con: Number(MiscUtil.get(actorData, "data", "abilities", "con", "value") || 0),
+			int: Number(MiscUtil.get(actorData, "data", "abilities", "int", "value") || 0),
+			wis: Number(MiscUtil.get(actorData, "data", "abilities", "wis", "value") || 0),
+			cha: Number(MiscUtil.get(actorData, "data", "abilities", "cha", "value") || 0),
+		};
+		Object.entries(out)
+			.forEach(([abv, val]) => {
+				if (isNaN(val)) out[abv] = 0;
+			});
+		return out;
+	}
+
+	static getBaseHp (actor) {
+		return this._getHp(actor, true);
+	}
+
+	static _getHp (actor, isBase) {
+		const actorData = isBase ? (actor.data._source || actor.data) : actor.data;
+		return {
+			value: (actorData?.data?.attributes?.hp?.value || 0),
+			max: (actorData?.data?.attributes?.hp?.max || 0),
+		};
+	}
+
+	static getAttackAbilityScore (itemAttack, abilityScores, mode) {
+		if (!itemAttack || !abilityScores) return null;
+		switch (mode) {
+			case "melee": {
+				const isFinesse = !!MiscUtil.get(itemAttack, "data", "data", "properties", "fin");
+				if (!isFinesse) return abilityScores.str;
+				return abilityScores.str > abilityScores.dex ? abilityScores.str : abilityScores.dex;
+			}
+			case "ranged": {
+				const isThrown = !!MiscUtil.get(itemAttack, "data", "data", "properties", "thr");
+				if (!isThrown) return abilityScores.dex;
+				return abilityScores.str > abilityScores.dex ? abilityScores.str : abilityScores.dex;
+			}
+			default: throw new Error(`Unhandled mode "${mode}"`);
+		}
+	}
+
+	// region Referenced features
+	static getFilteredFeatures (allFeatures, pageFilter, filterValues) {
+		return allFeatures.filter(f => {
+			const source = f.source
+				|| (f.classFeature
+					? DataUtil.class.unpackUidClassFeature(f.classFeature).source : f.subclassFeature ? DataUtil.class.unpackUidSubclassFeature(f.subclassFeature) : null);
+
+			// If the source of the parent feature is unwanted, remove it
+			if (!pageFilter.sourceFilter.toDisplay(filterValues, source)) return false;
+
+			// If all the sub-features are not to be displayed, remove the parent
+			//   This should never occur, as the "loadeds" array contains the loaded parent feature
+			f.loadeds = f.loadeds.filter(meta => pageFilter.sourceFilter.toDisplay(filterValues, meta.entity.source));
+			return f.loadeds.length;
+		});
+	}
+
+	static getImportableFeatures (allFeatures) {
+		// Avoid features with special meaning; we shouldn't add these as sheet items
+		return allFeatures.filter(f => {
+			// These should never contain interesting text--homebrew may disagree, but this is counter to the intent
+			if (f.gainSubclassFeature) return false;
+
+			const lowName = f.name.toLowerCase();
+			switch (lowName) {
+				case "proficiency versatility": return false;
+				default: return true;
+			}
+		});
+	}
+
+	static doApplyFilterToFeatureEntries (allFeatures, pageFilter, filterValues) {
+		// Apply the source filter to loaded class/subclass features entries
+		allFeatures.forEach(f => {
+			f.loadeds.forEach(loaded => {
+				switch (loaded.type) {
+					case "classFeature":
+					case "subclassFeature": {
+						if (loaded.entity.entries) loaded.entity.entries = Charactermancer_Class_Util.getFilteredEntries(loaded.entity.entries, pageFilter, filterValues);
+						break;
+					}
+				}
+			});
+		});
+
+		return allFeatures;
+	}
+
+	static getFeaturesGroupedByOptionsSet (allFeatures) {
+		return allFeatures.map(topLevelFeature => {
+			// Collect the features into individual arrays, grouped by which options set they belong to (if any)
+			const optionsSets = [];
+
+			let optionsStack = [];
+			let lastOptionsSetId = null;
+			topLevelFeature.loadeds.forEach(l => {
+				const optionsSetId = MiscUtil.get(l, "optionsMeta", "setId") || null;
+				if (lastOptionsSetId !== optionsSetId) {
+					if (optionsStack.length) optionsSets.push(optionsStack);
+					optionsStack = [l];
+					lastOptionsSetId = optionsSetId;
+				} else {
+					optionsStack.push(l);
+				}
+			});
+			if (optionsStack.length) optionsSets.push(optionsStack);
+
+			return {topLevelFeature, optionsSets};
+		});
+	}
+	// endregion
+
+	// region Entity selection
+	static getFilterSearchMeta ({comp, prop, propVersion = null, data, modalFilter, title}) {
+		const {$wrp: $sel, fnUpdateHidden: fnUpdateSelHidden, unhook} = ComponentUiUtil.$getSelSearchable(
+			comp,
+			prop,
+			{
+				values: data.map((_, i) => i),
+				isAllowNull: true,
+				fnDisplay: ix => {
+					const it = data[ix];
+
+					if (!it) { // Should never occur
+						console.warn(...LGT, `Could not find ${prop} with index ${ix} (${data.length} ${prop} entries were available)`);
+						return "(Unknown)";
+					}
+
+					return `${it.name} ${it.source !== SRC_PHB ? `[${Parser.sourceJsonToAbv(it.source)}]` : ""}`;
+				},
+				asMeta: true,
+			},
+		);
+
+		const doApplyFilterToSel = () => {
+			const f = modalFilter.pageFilter.filterBox.getValues();
+			const isHiddenPer = data.map(it => !modalFilter.pageFilter.toDisplay(f, it));
+			fnUpdateSelHidden(isHiddenPer, false);
+		};
+
+		modalFilter.pageFilter.filterBox.on(
+			FilterBox.EVNT_VALCHANGE,
+			doApplyFilterToSel,
+		);
+		doApplyFilterToSel();
+
+		const $btnFilter = $(`<button class="btn btn-xs btn-5et br-0 pr-2" title="Filter for a ${title}"><span class="glyphicon glyphicon-filter"></span> Filter</button>`)
+			.click(async () => {
+				const selecteds = await modalFilter.pGetUserSelection();
+				if (selecteds == null || !selecteds.length) return;
+
+				const selected = selecteds[0];
+				const ix = data.findIndex(it => it.name === selected.name && it.source === selected.values.sourceJson);
+				if (!~ix) throw new Error(`Could not find selected entity: ${JSON.stringify(selected)}`); // Should never occur
+				comp._state[prop] = ix;
+			});
+
+		const {$stg: $stgSelVersion = null, unhook: unhookVersion = null} = this._getFilterSearchMeta_getVersionMeta({comp, prop, propVersion, data}) || {};
+
+		return {
+			$sel,
+			$btnFilter,
+			$stgSelVersion,
+			unhook: () => {
+				unhook();
+				modalFilter.pageFilter.filterBox.off(FilterBox.EVNT_VALCHANGE, doApplyFilterToSel);
+				if (unhookVersion) unhookVersion();
+			},
+		};
+	}
+
+	static _getFilterSearchMeta_getVersionMeta ({comp, prop, propVersion, data}) {
+		if (!propVersion) return;
+
+		const {$sel, setValues, unhook} = ComponentUiUtil.$getSelEnum(
+			comp,
+			propVersion,
+			{
+				values: [],
+				isAllowNull: true,
+				displayNullAs: "(Base version)",
+				fnDisplay: it => `${it.name}${it.source !== data[comp._state[prop]]?.source ? ` (${Parser.sourceJsonToAbv(it.source)})` : ""}`,
+				asMeta: true,
+				isSetIndexes: true,
+			},
+		);
+
+		const hkProp = () => {
+			const ent = data[comp._state[prop]];
+			if (ent == null) {
+				setValues([]);
+				return $stg.hideVe();
+			}
+
+			const versions = DataUtil.generic.getVersions(ent);
+			setValues(versions);
+			$stg.toggleVe(versions.length);
+		};
+		comp._addHookBase(prop, hkProp);
+
+		const $stg = $$`<div class="flex-col mt-2">
+			<label class="split-v-center btn-group w-100">
+				<div class="mr-2">Version:</div>
+				${$sel}
+			</label>
+		</div>`;
+
+		hkProp();
+
+		return {
+			$stg,
+			unhook: () => {
+				unhook();
+				comp._removeHookBase(prop, hkProp);
+			},
+		};
+	}
+	// endregion
+}
+Charactermancer_Util.STR_WARN_SOURCE_SELECTION = `Did you change your source selection since using the Charactermancer initially?`;
+
+class Charactermancer_FeatureSourceTracker extends BaseComponent {
+	constructor () {
+		super();
+		this._registered = new Map();
+	}
+
+	register (comp) {
+		this._registered.set(comp, {state: null, hookMetas: []});
+	}
+
+	_validateProp (propPulse) {
+		if (!Charactermancer_FeatureSourceTracker._VALID_HOOK_PROPS.has(propPulse)) throw new Error(`Unhandled pulse prop "${propPulse}"`);
+	}
+
+	addHook (comp, propPulse, hk) {
+		this._validateProp(propPulse);
+
+		if (!this._registered.has(comp)) this.register(comp);
+
+		this._registered.get(comp).hookMetas.push({propPulse, hook: hk});
+		this._addHookBase(propPulse, hk);
+	}
+
+	removeHook (comp, propPulse, hk) {
+		this._validateProp(propPulse);
+
+		if (!this._registered.has(comp)) return;
+
+		const compMeta = this._registered.get(comp);
+		const ixHook = compMeta.hookMetas.findIndex(it => it.hook === hk);
+		if (~ixHook) compMeta.hookMetas.splice(ixHook, 1);
+		this._removeHookBase(propPulse, hk);
+	}
+
+	/** A component can call this, passing in a generalised form of its state, to have the tracker track it. */
+	setState (comp, state) {
+		if (!this._registered.has(comp)) this.register(comp);
+
+		const compMeta = this._registered.get(comp);
+
+		const prevState = compMeta.state ? MiscUtil.copy(compMeta.state) : compMeta.state;
+		compMeta.state = state;
+
+		const allKeys = new Set([
+			...Object.keys(prevState || {}),
+			...Object.keys(state || {}),
+		]);
+
+		// For each piece of state, pulse if it changed
+		allKeys
+			.forEach(k => {
+				const oldVal = prevState?.[k];
+				const nuVal = state?.[k];
+
+				if (CollectionUtil.deepEquals(oldVal, nuVal)) return;
+
+				this._doPulseForProp(k);
+			});
+	}
+
+	/**
+	 * @param key
+	 * @param ignore A component who's state should be ignored (usually the component calling this method)
+	 */
+	getStatesForKey (key, {ignore = null} = {}) {
+		const out = [];
+		for (const [comp, compMeta] of this._registered.entries()) {
+			if (ignore === comp) continue;
+			if (compMeta?.state?.[key]) out.push(compMeta.state[key]);
+		}
+		return out;
+	}
+
+	/** When a component is e.g. removed from the UI, it should call this to ensure its state is no longer tracked. */
+	unregister (comp) {
+		if (!comp) return;
+
+		const registered = this._registered.get(comp);
+		if (!registered) return;
+
+		// Clean up state
+		this._registered.delete(comp);
+
+		// Clean up hooks
+		registered.hookMetas.forEach(({propPulse, hook}) => {
+			this._removeHookBase(propPulse, hook);
+		});
+
+		// Notify other components that state has changed
+		if (registered.state) {
+			Object.keys(registered.state)
+				.forEach(k => { // a key is e.g. "skills"
+					this._doPulseForProp(k);
+				});
+		}
+	}
+
+	_doPulseForProp (k) {
+		switch (k) {
+			case "skillProficiencies": return this._state.pulseSkillProficiencies = !this._state.pulseSkillProficiencies;
+			case "languageProficiencies": return this._state.pulseLanguageProficiencies = !this._state.pulseLanguageProficiencies;
+			case "toolProficiencies": return this._state.pulseToolProficiencies = !this._state.pulseToolProficiencies;
+			case "armorProficiencies": return this._state.pulseArmorProficiencies = !this._state.pulseArmorProficiencies;
+			case "weaponProficiencies": return this._state.pulseWeaponProficiencies = !this._state.pulseWeaponProficiencies;
+			case "features": return this._state.pulseFeatures = !this._state.pulseFeatures;
+			case "savingThrowProficiencies": return this._state.pulseSavingThrowProficiencies = !this._state.pulseSavingThrowProficiencies;
+			case "immune": return this._state.pulseImmune = !this._state.pulseImmune;
+			case "resist": return this._state.pulseResist = !this._state.pulseResist;
+			case "vulnerable": return this._state.pulseVulnerable = !this._state.pulseVulnerable;
+			case "conditionImmune": return this._state.pulseConditionImmune = !this._state.pulseConditionImmune;
+			case "expertise": return this._state.pulseExpertise = !this._state.pulseExpertise;
+			default: throw new Error(`Unhandled tracked state key ${k}`);
+		}
+	}
+
+	_getDefaultState () {
+		return [...Charactermancer_FeatureSourceTracker._VALID_HOOK_PROPS].mergeMap(it => ({[it]: false}));
+	}
+}
+Charactermancer_FeatureSourceTracker._VALID_HOOK_PROPS = new Set([
+	"pulseSkillProficiencies",
+	"pulseLanguageProficiencies",
+	"pulseToolProficiencies",
+	"pulseArmorProficiencies",
+	"pulseWeaponProficiencies",
+	"pulseFeatures",
+	"pulseSavingThrowProficiencies",
+	"pulseImmune",
+	"pulseResist",
+	"pulseVulnerable",
+	"pulseConditionImmune",
+	"pulseExpertise",
+]);
+
+class Charactermancer_AbilityScoreSelect extends BaseComponent {
+	// region External
+	static async pFillActorAbilityData (actor, ability, actUpdate, opts) {
+		if (!ability || !ability.length) return;
+
+		const formData = await this.pGetUserInput(ability);
+		if (!formData) return opts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		actUpdate.data = actUpdate.data || {};
+		actUpdate.data.abilities = actUpdate.data.abilities || {};
+		const abilityScores = Charactermancer_Util.getBaseAbilityScores(actor);
+		Parser.ABIL_ABVS.filter(ab => formData.data[ab]).forEach(ab => actUpdate.data.abilities[ab] = {value: abilityScores[ab] + formData.data[ab]});
+
+		return formData;
+	}
+
+	static async pGetUserInput (ability) {
+		if (!ability || !ability.length) return {isFormComplete: true, data: {}};
+
+		const comp = new Charactermancer_AbilityScoreSelect({ability});
+		if (comp.isNoChoice()) {
+			const isFill = await InputUiUtil.pGetUserBoolean({
+				title: `Ability Scores?`,
+				htmlDescription: `Do you wish to apply ability score modifications?`,
+				textYes: "Yes",
+				textNo: "No",
+			});
+			if (isFill == null) return null;
+			if (!isFill) return {isFormComplete: true, data: {}};
+			return comp.pGetFormData();
+		}
+
+		return UtilApplications.pGetImportCompModalFormData({comp});
+	}
+	// endregion
+
+	/**
+	 * @param opts
+	 * @param opts.ability
+	 */
+	constructor (opts) {
+		opts = opts || {};
+		super();
+
+		this._ability = opts.ability;
+
+		this._lastMeta = null;
+	}
+
+	get modalTitle () { return "Ability Score Increase"; }
+
+	render ($wrp) {
+		let $stgSelGroup = null;
+		if (this._ability.length > 1) {
+			const $selIxSet = ComponentUiUtil.$getSelEnum(
+				this,
+				"ixSet",
+				{
+					values: this._ability.map((_, i) => i),
+					fnDisplay: ix => Renderer.getAbilityData([this._ability[ix]]).asText,
+				},
+			);
+
+			$stgSelGroup = $$`<div class="w-100 mb-2 flex-vh-center">
+				${$selIxSet}
+			</div>`;
+		}
+
+		const $stgGroup = $$`<div class="flex-col"></div>`;
+
+		const hkIxSet = () => {
+			$stgGroup.empty();
+
+			if (this._lastMeta) this._lastMeta.cleanup();
+
+			const abilitySet = this._ability[this._state.ixSet];
+
+			const ptsNoChoose = Parser.ABIL_ABVS.filter(ab => abilitySet[ab]).map(ab => `${Parser.attAbvToFull(ab)} ${UiUtil.intToBonus(abilitySet[ab])}`);
+			if (ptsNoChoose.length) $stgGroup.append(`<div>${ptsNoChoose.join(", ")}</div>${abilitySet.choose ? `<hr class="hr-2 hr--dotted">` : ""}`);
+
+			if (abilitySet.choose) {
+				if (abilitySet.choose.from) this._render_renderPtChooseFrom($stgGroup, abilitySet);
+				else if (abilitySet.choose.weighted) this._render_renderPtChooseWeighted($stgGroup, abilitySet);
+			}
+		};
+		this._addHookBase("ixSet", hkIxSet);
+		hkIxSet();
+
+		$$($wrp)`
+			${$stgSelGroup}
+			${$stgGroup}
+		`;
+	}
+
+	_render_renderPtChooseFrom ($stgGroup, abilitySet) {
+		const count = abilitySet.choose.count || 1;
+		const amount = abilitySet.choose.amount || 1;
+
+		this._lastMeta = ComponentUiUtil.getMetaWrpMultipleChoice(
+			this,
+			"race_asiChoice",
+			{
+				values: abilitySet.choose.from,
+				fnDisplay: v => `${Parser.attAbvToFull(v)} ${UiUtil.intToBonus(amount)}`,
+				count,
+			},
+		);
+
+		$stgGroup.append(`<div class="mb-1">Choose ${Parser.numberToText(count)} ability score${count === 1 ? "" : "s"} to increase by ${amount}:</div>`);
+		this._lastMeta.$ele.appendTo($stgGroup);
+	}
+
+	_getWeightedProps (ixAb, ixWeight) {
+		return {
+			propWeightAbility: `weight_ability_${ixAb}_${ixWeight}`,
+		};
+	}
+
+	_render_renderPtChooseWeighted ($stgGroup, abilitySet) {
+		const fnsCleanup = [];
+
+		const from = this.constructor._getSortedWeightedFrom(abilitySet);
+		const weights = this.constructor._getSortedWeights(abilitySet);
+
+		const $wrpRows = $(`<div class="flex-col"></div>`);
+
+		from.forEach((ab, ixAb) => {
+			const $wrpsCbs = weights
+				.map((bon, ixBon) => {
+					const {propWeightAbility} = this._getWeightedProps(ixAb, ixBon);
+
+					const metaCb = ComponentUiUtil.$getCbBool(
+						this,
+						propWeightAbility,
+						{asMeta: true},
+					);
+					fnsCleanup.push(metaCb.unhook);
+
+					const hkResetOthers = () => {
+						if (!this._state[propWeightAbility]) return;
+
+						const nxtState = {};
+
+						// Unset any other checkboxes in this column (i.e. same ixBon)
+						from.forEach((_, ixAbSub) => {
+							const {propWeightAbility: propWeightAbilitySub} = this._getWeightedProps(ixAbSub, ixBon);
+							if (propWeightAbilitySub === propWeightAbility) return;
+							nxtState[propWeightAbilitySub] = false;
+						});
+
+						// Unset any other checkboxes in this row (i.e. same ixAb)
+						weights.forEach((_, ixBonSub) => {
+							const {propWeightAbility: propWeightAbilitySub} = this._getWeightedProps(ixAb, ixBonSub);
+							if (propWeightAbilitySub === propWeightAbility) return;
+							nxtState[propWeightAbilitySub] = false;
+						});
+
+						this._proxyAssignSimple("state", nxtState);
+					};
+					this._addHookBase(propWeightAbility, hkResetOthers);
+					fnsCleanup.push(() => this._removeHookBase(propWeightAbility, propWeightAbility));
+					hkResetOthers();
+
+					return $$`<label class="flex-vh-center w-40p py-1">${metaCb.$cb}</label>`;
+				});
+
+			const $row = $$`<div class="flex-v-center">
+				<div class="w-100p text-right pr-2">${Parser.attAbvToFull(ab)}</div>
+				${$wrpsCbs}
+			</div>`.appendTo($wrpRows);
+		});
+
+		$$($stgGroup)`<div class="flex-col">
+			<div class="mb-1">${Renderer.getAbilityData([{choose: abilitySet.choose}]).asText}:</div>
 
 			<div class="flex-v-center py=1">
 				<div class="w-100p"></div>
-				${_0x4de053[_0xa17fa1(0xf7)](_0x52078b=>'<div\x20class=\x22w-40p\x20flex-vh-center\x22>'+UiUtil[_0xa17fa1(0xfb)](_0x52078b)+_0xa17fa1(0x91))[_0xa17fa1(0xe0)]('')}
+				${weights.map(it => `<div class="w-40p flex-vh-center">${UiUtil.intToBonus(it)}</div>`).join("")}
 			</div>
 
-			${_0x577e91}
-		</div>`,this[_0xa17fa1(0x134)]={'cleanup':()=>{const _0x42fd6f=_0xa17fa1;_0x9d711f[_0x42fd6f(0x202)](_0x3e1eff=>_0x3e1eff());}};}[_0x21aa2f(0x18d)](){const _0x4210a3=_0x21aa2f;return this[_0x4210a3(0x206)][_0x4210a3(0x1b5)]===0x1&&!this[_0x4210a3(0x206)][0x0][_0x4210a3(0xb6)];}static[_0x21aa2f(0x10d)](_0x7b1b62){const _0x3adb8b=_0x21aa2f;return MiscUtil[_0x3adb8b(0xca)](_0x7b1b62[_0x3adb8b(0xb6)][_0x3adb8b(0xa3)]['weights'])[_0x3adb8b(0x9f)]((_0x2ef8af,_0x1a2fa5)=>SortUtil['ascSort'](_0x1a2fa5,_0x2ef8af));}static[_0x21aa2f(0x1c5)](_0x378381){const _0x4f83b6=_0x21aa2f;return MiscUtil[_0x4f83b6(0xca)](_0x378381[_0x4f83b6(0xb6)][_0x4f83b6(0xa3)][_0x4f83b6(0xdd)])[_0x4f83b6(0x9f)](SortUtil[_0x4f83b6(0x137)]);}[_0x21aa2f(0x204)](){const _0x101427=_0x21aa2f,_0x317099={},_0x33c156=this[_0x101427(0x206)][this['_state'][_0x101427(0xb4)]];Parser[_0x101427(0xcb)]['forEach'](_0x215678=>{if(_0x33c156[_0x215678])_0x317099[_0x215678]=_0x33c156[_0x215678];});if(_0x33c156[_0x101427(0xb6)]){if(_0x33c156[_0x101427(0xb6)][_0x101427(0xdd)]){const _0x3d3a01=ComponentUiUtil[_0x101427(0x20a)](this,_0x101427(0x216));_0x3d3a01[_0x101427(0xf7)](_0x318445=>_0x33c156[_0x101427(0xb6)]['from'][_0x318445])['forEach'](_0x5db71c=>_0x317099[_0x5db71c]=(_0x317099[_0x5db71c]||0x0)+(_0x33c156[_0x101427(0xb6)]['amount']||0x1));}else{if(_0x33c156[_0x101427(0xb6)][_0x101427(0xa3)]){const _0x1320d9=this[_0x101427(0x1ec)]['_getSortedWeightedFrom'](_0x33c156),_0x348a20=this['constructor'][_0x101427(0x10d)](_0x33c156);_0x1320d9[_0x101427(0x202)]((_0xa78bc2,_0x5b764e)=>{const _0x2b703b=_0x101427;_0x348a20[_0x2b703b(0xf7)]((_0x2b1caf,_0x5772a5)=>{const _0x50bb7e=_0x2b703b,{propWeightAbility:_0x1e0053}=this[_0x50bb7e(0x9a)](_0x5b764e,_0x5772a5);if(this[_0x50bb7e(0x1e4)][_0x1e0053])_0x317099[_0xa78bc2]=(_0x317099[_0xa78bc2]||0x0)+_0x2b1caf;});});}}}return{'isFormComplete':!!this[_0x101427(0x1e4)][ComponentUiUtil[_0x101427(0x160)](_0x101427(0x216))],'data':_0x317099};}['_getDefaultState'](){return{'ixSet':0x0};}}class Charactermancer_ProficiencySelect extends BaseComponent{}Charactermancer_ProficiencySelect[_0x21aa2f(0x1ce)]=class{constructor({prop:_0x25c0ac,propTrackerPulse:_0x4d48ea,propTracker:_0x58c973}){const _0x19dbea=_0x21aa2f;this[_0x19dbea(0x19f)]=_0x25c0ac,this[_0x19dbea(0x1e8)]=_0x4d48ea,this[_0x19dbea(0x211)]=_0x58c973;}};class Charactermancer_SkillSaveProficiencySelect extends Charactermancer_ProficiencySelect{static async[_0x21aa2f(0x203)](_0x259b04){const _0x1e7f0e=_0x21aa2f;_0x259b04=_0x259b04||{};if(!_0x259b04['available'])return{'isFormComplete':!![],'data':{}};const _0xf88925=new this({..._0x259b04,'existing':this['getExisting'](_0x259b04['existingFvtt']),'otherData':_0x259b04[_0x1e7f0e(0x197)]});if(_0xf88925[_0x1e7f0e(0x18d)]())return _0xf88925[_0x1e7f0e(0x204)]();return UtilApplications['pGetImportCompModalFormData']({'comp':_0xf88925});}static['getExisting'](_0x543591){const _0x56cd05=_0x21aa2f;throw new Error(_0x56cd05(0xc1));}static[_0x21aa2f(0x18d)](_0x5b8ce9){const _0x516e8c=_0x21aa2f;if(!_0x5b8ce9?.[_0x516e8c(0x1b5)])return!![];return _0x5b8ce9['length']===0x1&&!_0x5b8ce9[0x0][_0x516e8c(0xb6)];}constructor(_0x17626b){const _0x37e213=_0x21aa2f;_0x17626b=_0x17626b||{},super(),this[_0x37e213(0x15b)]=_0x17626b['propGroup'],this[_0x37e213(0xfe)]=_0x17626b[_0x37e213(0xea)],this[_0x37e213(0x20f)]=_0x17626b[_0x37e213(0xfd)],this['_otherData']=_0x17626b[_0x37e213(0x197)],this[_0x37e213(0x1c7)]=_0x17626b[_0x37e213(0x1d9)],this[_0x37e213(0x1db)]=_0x17626b[_0x37e213(0x97)],this[_0x37e213(0x157)]=_0x17626b['modalTitle'],this['_title']=_0x17626b[_0x37e213(0x92)],this[_0x37e213(0x138)]=_0x17626b['titlePlural'],this[_0x37e213(0xfc)]=_0x17626b[_0x37e213(0x19a)],this[_0x37e213(0xb8)]=null,this[_0x37e213(0x1ff)]=null,this['_lastMeta']=null;}get[_0x21aa2f(0x126)](){const _0x2380b4=_0x21aa2f;return this[_0x2380b4(0x157)];}[_0x21aa2f(0x1d2)](_0x37b9b1){throw new Error('Unimplemented!');}['_getMultiChoiceDisplay'](_0x517225,_0x1cdeaf){const _0x14b0fb=_0x21aa2f;throw new Error(_0x14b0fb(0xc1));}[_0x21aa2f(0xff)](_0x522c96,_0x4c337b){const _0x4bc7dc=_0x21aa2f;throw new Error(_0x4bc7dc(0xc1));}[_0x21aa2f(0x1c6)](_0x44d12a,_0x143f43){const _0x12598b=_0x21aa2f;switch(_0x44d12a){case _0x12598b(0xb6):return this[_0x12598b(0x18b)](_0x44d12a,_0x143f43);default:throw new Error(_0x12598b(0x201)+_0x44d12a+_0x12598b(0x1ee)+JSON[_0x12598b(0x210)](_0x143f43)+')');}}[_0x21aa2f(0x18b)](_0x54db8e,_0x31f2f6){const _0x580d88=_0x21aa2f;return _0x580d88(0x147)+(_0x31f2f6[_0x580d88(0x133)]||0x1)+_0x580d88(0xc6)+_0x31f2f6[_0x580d88(0xdd)][_0x580d88(0xf7)](_0xfac086=>this[_0x580d88(0x1d2)](_0xfac086))[_0x580d88(0xe0)](',\x20');}[_0x21aa2f(0x183)](_0x391a02){const _0xf628af=_0x21aa2f,_0x51c4b6=this['_render_$getStgSelGroup']();this[_0xf628af(0x1ff)]=$$`<div class="flex-col"></div>`,this[_0xf628af(0xf9)](_0xf628af(0xb4),this[_0xf628af(0x1ca)][_0xf628af(0x1a5)](this)),this[_0xf628af(0x1ca)](),$$(_0x391a02)`
-			${_0x51c4b6}
-			${this[_0xf628af(0x1ff)]}
-		`;}[_0x21aa2f(0x1fa)](){const _0x47aba7=_0x21aa2f;if(this[_0x47aba7(0x20f)][_0x47aba7(0x1b5)]<=0x1)return null;const _0x3b6ddc=ComponentUiUtil[_0x47aba7(0x1f5)](this,'ixSet',{'values':this[_0x47aba7(0x20f)][_0x47aba7(0xf7)]((_0x141137,_0x3f70c7)=>_0x3f70c7),'fnDisplay':_0xae061e=>{const _0x46b4d2=_0x47aba7,_0x371ee8=this[_0x46b4d2(0x20f)][_0xae061e],_0x5623c9=[];return _0x5623c9[_0x46b4d2(0x145)](Object[_0x46b4d2(0x103)](_0x371ee8)[_0x46b4d2(0x9f)](SortUtil['ascSortLower'])[_0x46b4d2(0x128)](_0x3c8ed3=>this[_0x46b4d2(0xed)](_0x3c8ed3))['map'](_0x123bc2=>this['_getStaticDisplay'](_0x123bc2))['join'](',\x20')),Object[_0x46b4d2(0x103)](_0x371ee8)['filter'](_0x3fbe49=>!this[_0x46b4d2(0xed)](_0x3fbe49))[_0x46b4d2(0x202)](_0x55ee8f=>_0x5623c9[_0x46b4d2(0x145)](this['_getNonStaticDisplay'](_0x55ee8f,_0x371ee8[_0x55ee8f]))),_0x5623c9['filter'](Boolean)['join'](';\x20');}});if(this[_0x47aba7(0x1db)])this[_0x47aba7(0xf9)](_0x47aba7(0xb4),()=>this[_0x47aba7(0x189)]());return $$`<div class="w-100 mb-2 flex-vh-center">
-			${_0x3b6ddc}
-		</div>`;}[_0x21aa2f(0x189)](){const _0xbdfac2=_0x21aa2f;this['_featureSourceTracker']['setState'](this,{[this[_0xbdfac2(0x15b)][_0xbdfac2(0x211)]]:this[_0xbdfac2(0x15f)]()[_0xbdfac2(0xc3)]?.[this['_propGroup'][_0xbdfac2(0x19f)]]});}static[_0x21aa2f(0x178)](_0x505ada){const _0x4c8650=_0x21aa2f;if(!_0x505ada)return _0x505ada;return _0x505ada=MiscUtil[_0x4c8650(0xca)](_0x505ada),_0x505ada['choose']?.[_0x4c8650(0xdd)]&&_0x505ada['choose']['from'][_0x4c8650(0x9f)]((_0x2a8cf3,_0x25cb0b)=>{const _0x12574f=_0x4c8650;if(typeof _0x2a8cf3===_0x12574f(0x1f7)&&typeof _0x25cb0b===_0x12574f(0x1f7))return 0x0;if(typeof _0x2a8cf3==='object')return 0x1;if(typeof _0x25cb0b===_0x12574f(0x1f7))return-0x1;return SortUtil['ascSortLower'](_0x2a8cf3,_0x25cb0b);}),_0x505ada;}[_0x21aa2f(0xa6)](_0x2fcb14,_0x42f787){const _0xce4cce=_0x21aa2f,_0x572b35={},_0x23087f=this['_getStaticKeys']()['filter'](_0x3eda5c=>_0x42f787[_0x3eda5c]),_0x428685=_0x23087f[_0xce4cce(0xf7)]((_0x4390e9,_0x381bfe)=>{const _0x2d6b1b=_0xce4cce,_0x522ebf=$(_0x2d6b1b(0xbf));(_0x572b35[_0x4390e9]=_0x572b35[_0x4390e9]||[])['push'](_0x522ebf);const _0x410299=_0x381bfe<_0x23087f[_0x2d6b1b(0x1b5)]-0x1;return $$`<div class="inline-block ${_0x410299?_0x2d6b1b(0x123):''}">${this[_0x2d6b1b(0x1d2)](_0x4390e9)}${_0x522ebf}${_0x410299?',':''}</div>`;});return $$`<div class="block">
-			${_0x428685}
-		</div>`[_0xce4cce(0x95)](_0x2fcb14),_0x572b35;}['_getStaticKeys'](){const _0x18186c=_0x21aa2f;return this[_0x18186c(0xfc)];}[_0x21aa2f(0x1ca)](){const _0x27eb22=_0x21aa2f;this[_0x27eb22(0x1ff)][_0x27eb22(0x117)]();if(this[_0x27eb22(0x1db)]&&this[_0x27eb22(0xb8)])this[_0x27eb22(0x1db)]['removeHook'](this,this[_0x27eb22(0x15b)][_0x27eb22(0x1e8)],this[_0x27eb22(0xb8)]);if(this[_0x27eb22(0x134)])this[_0x27eb22(0x134)]['cleanup']();const _0x58ad99=this[_0x27eb22(0x20f)][this[_0x27eb22(0x1e4)][_0x27eb22(0xb4)]];if(this[_0x27eb22(0x1db)])this[_0x27eb22(0x189)]();this[_0x27eb22(0x1e5)](_0x58ad99);if(this[_0x27eb22(0x1db)])this[_0x27eb22(0x1db)][_0x27eb22(0x1ad)](this,this[_0x27eb22(0x15b)]['propTrackerPulse'],this[_0x27eb22(0xb8)]);this['_hkUpdateExisting']();}[_0x21aa2f(0x1e5)](_0x22a51c){const _0x21e89e=_0x21aa2f,_0x2b7c34=Object[_0x21e89e(0x103)](_0x22a51c)['some'](_0x389614=>this[_0x21e89e(0xed)](_0x389614))?this['_render_renderPtStatic'](this[_0x21e89e(0x1ff)],_0x22a51c):null;if(_0x2b7c34&&_0x22a51c['choose'])this['_$stgGroup'][_0x21e89e(0x17a)](_0x21e89e(0x1c2));const _0x27a3db=_0x22a51c['choose']?this[_0x21e89e(0x170)](this['_$stgGroup'],_0x22a51c):null;this[_0x21e89e(0xb8)]=()=>this[_0x21e89e(0x104)](_0x2b7c34,_0x27a3db);}[_0x21aa2f(0xed)](_0x35e344){const _0x384de4=_0x21aa2f;return this[_0x384de4(0xfc)][_0x384de4(0x15d)](_0x35e344);}[_0x21aa2f(0x104)](_0x34b965,_0xa0112f){const _0x2704d4=_0x21aa2f,_0x49f0a4=this[_0x2704d4(0x1db)]?this[_0x2704d4(0x1db)]['getStatesForKey'](this['_propGroup'][_0x2704d4(0x211)],{'ignore':this}):null,_0x5dcd98=[_0x34b965,_0xa0112f][_0x2704d4(0x128)](Boolean);this[_0x2704d4(0xfc)]['forEach'](_0x5516f4=>{const _0x321880=_0x2704d4;_0x5dcd98[_0x321880(0x202)](_0x52116e=>{const _0x35bdb2=_0x321880;if(!_0x52116e[_0x5516f4])return;let _0x518be1=this['_existing']?.[_0x5516f4]||0x0;if(_0x49f0a4)_0x49f0a4[_0x35bdb2(0x202)](_0x418ac3=>_0x518be1=Math[_0x35bdb2(0x8e)](_0x518be1,_0x418ac3[_0x5516f4]||0x0));if(_0x518be1){const _0x4021ef=_0x518be1===0x1?'Proficient\x20from\x20Another\x20Source':_0x518be1===0x2?'Proficient\x20with\x20Expertise\x20from\x20Another\x20Source':'Half-Proficient\x20from\x20Another\x20Source';_0x52116e[_0x5516f4]['forEach'](_0x27d88b=>{const _0x47277b=_0x35bdb2;_0x27d88b['title'](_0x4021ef)[_0x47277b(0x144)](_0x47277b(0xce))['html'](_0x47277b(0x107)+UtilActors['PROF_TO_ICON_CLASS'][_0x518be1]+_0x47277b(0x153));});}else _0x52116e[_0x5516f4]['forEach'](_0x3635c5=>{const _0x5d2352=_0x35bdb2;_0x3635c5[_0x5d2352(0x92)]('')['removeClass']('ml-1')[_0x5d2352(0x1d1)]('');});});});}[_0x21aa2f(0x170)](_0x31a156,_0x37ff2f){const _0x212bef=_0x21aa2f,_0x5780d7=_0x37ff2f[_0x212bef(0xb6)][_0x212bef(0x133)]||0x1,_0x4e1a9c=this['constructor']['_getSortedProfSet'](_0x37ff2f),_0x6dcd15={},_0x4b193d=ComponentUiUtil[_0x212bef(0x11f)](this,_0x212bef(0x121),{'count':_0x5780d7,'values':_0x4e1a9c[_0x212bef(0xb6)][_0x212bef(0xdd)],'fnDisplay':_0x57e19c=>this[_0x212bef(0x12b)](_0x6dcd15,_0x57e19c)});let _0x44637e=null;return this['_featureSourceTracker']&&(_0x44637e=()=>this[_0x212bef(0x189)](),this[_0x212bef(0xf9)](_0x4b193d[_0x212bef(0x19e)],_0x44637e)),_0x31a156[_0x212bef(0x17a)](_0x212bef(0x176)+this[_0x212bef(0xff)](_0x4e1a9c,_0x5780d7)+':</div>'),_0x4b193d[_0x212bef(0x1a0)][_0x212bef(0x95)](_0x31a156),this[_0x212bef(0x134)]={'cleanup':()=>{const _0x4f8f52=_0x212bef;_0x4b193d['cleanup']();if(_0x44637e)this[_0x4f8f52(0x1c0)](_0x4b193d[_0x4f8f52(0x19e)],_0x44637e);}},_0x6dcd15;}[_0x21aa2f(0x18d)](){const _0x1ab439=_0x21aa2f;return this[_0x1ab439(0x1ec)]['isNoChoice'](this[_0x1ab439(0x20f)]);}[_0x21aa2f(0x15f)](){const _0x4d668d=_0x21aa2f,_0x52063a={},_0x57e5b1=this[_0x4d668d(0x20f)][this[_0x4d668d(0x1e4)][_0x4d668d(0xb4)]],_0x29ff5b=this['constructor'][_0x4d668d(0x178)](_0x57e5b1);this[_0x4d668d(0xfc)][_0x4d668d(0x128)](_0xc6263e=>_0x29ff5b[_0xc6263e])[_0x4d668d(0xf7)](_0x5a22e7=>_0x52063a[_0x5a22e7]=0x1);if(_0x29ff5b[_0x4d668d(0xb6)]){const _0x246703=ComponentUiUtil[_0x4d668d(0x20a)](this,_0x4d668d(0x121));_0x246703[_0x4d668d(0xf7)](_0x1e08a9=>_0x29ff5b['choose']['from'][_0x1e08a9])[_0x4d668d(0x202)](_0x414201=>_0x52063a[_0x414201]=0x1);}return{'isFormComplete':!!this['_state'][ComponentUiUtil[_0x4d668d(0x160)](_0x4d668d(0x121))],'data':{[this[_0x4d668d(0x15b)][_0x4d668d(0x19f)]]:_0x52063a}};}['pGetFormData'](){const _0x54ee5e=_0x21aa2f;return this[_0x54ee5e(0x15f)]();}['_getDefaultState'](){return{'ixSet':0x0};}}class Charactermancer_SkillProficiencySelect extends Charactermancer_SkillSaveProficiencySelect{static[_0x21aa2f(0x186)](_0x472259){const _0x15d3a2=_0x21aa2f,_0x5a498e={};return Object['entries'](_0x472259?.[_0x15d3a2(0x1cc)]||{})[_0x15d3a2(0x202)](([_0x24de97,_0x5bdd3c])=>{const _0x3812d7=_0x15d3a2;if(!_0x5bdd3c[_0x3812d7(0x1de)])return;_0x5a498e[UtilActors[_0x3812d7(0x167)][_0x24de97]]=_0x5bdd3c[_0x3812d7(0x1de)];}),_0x5a498e;}constructor(_0x1929c9){const _0x318f26=_0x21aa2f;super({..._0x1929c9,'allValuesMaybeInUse':Object[_0x318f26(0x103)](Parser[_0x318f26(0x1ea)]),'propGroup':new Charactermancer_ProficiencySelect[(_0x318f26(0x1ce))]({'prop':'skillProficiencies','propTrackerPulse':_0x318f26(0xac),'propTracker':'skills'}),'modalTitle':_0x318f26(0x1df),'title':'Skill\x20Proficiency','titlePlural':'Skill\x20Proficiencies','tag':_0x318f26(0x198)});}[_0x21aa2f(0x1d2)](_0x37ee05){const _0xeb7c96=_0x21aa2f;return Renderer['get']()['render'](_0xeb7c96(0xbc)+_0x37ee05['toTitleCase']()+'}');}['_getMultiChoiceDisplay'](_0x2964e2,_0xed06a0){const _0x32f2c8=_0x21aa2f;if(_0xed06a0['tool']===!![])return _0x32f2c8(0x146);if(_0xed06a0[_0x32f2c8(0x1b2)])return _0xed06a0['tool'][_0x32f2c8(0xf7)](_0x388c47=>_0x388c47['toTitleCase']());const _0x2b55cb=Parser[_0x32f2c8(0x151)](_0xed06a0),_0x42cadb=_0x32f2c8(0x162)+Parser['attAbvToFull'](_0x2b55cb)+_0x32f2c8(0xd1)+_0x2b55cb['toTitleCase']()+')</div>',_0x28f2e2=$(_0x32f2c8(0x177));return(_0x2964e2[_0xed06a0]=_0x2964e2[_0xed06a0]||[])[_0x32f2c8(0x145)](_0x28f2e2),$$`<div class="flex-v-center w-100">
-			<div class="flex-v-center">${Renderer['get']()[_0x32f2c8(0x183)](_0x32f2c8(0xbc)+_0xed06a0['toTitleCase']()+'}')}${_0x42cadb}</div>${_0x28f2e2}
-		</div>`;}[_0x21aa2f(0xff)](_0x369588,_0x4249e4){const _0x4e938a=_0x21aa2f,_0x314b39=_0x369588[_0x4e938a(0xb6)][_0x4e938a(0xdd)]['some'](_0x17fdbb=>typeof _0x17fdbb===_0x4e938a(0x1f7)&&_0x17fdbb['tool']);return(this['_titlePrefix']?this['_titlePrefix']+':\x20':'')+_0x4e938a(0x147)+Parser[_0x4e938a(0x185)](_0x4249e4)+'\x20Skill'+(_0x4249e4===0x1?'':'s')+(_0x314b39?_0x4e938a(0x114)+(_0x4249e4===0x1?'':'s'):'');}}class Charactermancer_SavingThrowProficiencySelect extends Charactermancer_SkillSaveProficiencySelect{static[_0x21aa2f(0x186)](_0x3b5857){const _0x28b436=_0x21aa2f,_0x3ebc28={};return Object[_0x28b436(0xe6)](_0x3b5857?.['savingThrowProficiencies']||{})[_0x28b436(0x202)](([_0x5cfb95,_0x4f14e4])=>{const _0x12cb2e=_0x28b436;if(!_0x4f14e4[_0x12cb2e(0x180)])return;_0x3ebc28[_0x5cfb95]=_0x4f14e4[_0x12cb2e(0x180)];}),_0x3ebc28;}constructor(_0x3c686f){const _0x163719=_0x21aa2f;super({..._0x3c686f,'allValuesMaybeInUse':[...Parser['ABIL_ABVS']],'propGroup':new Charactermancer_ProficiencySelect[(_0x163719(0x1ce))]({'prop':_0x163719(0x141),'propTrackerPulse':'pulseSavingThrows','propTracker':_0x163719(0x1f9)}),'modalTitle':_0x163719(0x1bd),'title':_0x163719(0x1bb),'titlePlural':_0x163719(0x1bd)});}[_0x21aa2f(0x1d2)](_0x114f62){const _0x157380=_0x21aa2f;return Parser['attAbvToFull'](_0x114f62)[_0x157380(0x1c9)]();}['_getMultiChoiceDisplay'](_0x3f2d31,_0xe2554){const _0x153d23=_0x21aa2f,_0x56e454=$(_0x153d23(0x177));return(_0x3f2d31[_0xe2554]=_0x3f2d31[_0xe2554]||[])[_0x153d23(0x145)](_0x56e454),$$`<div class="flex-v-center w-100">
-			<div class="flex-v-center">${Renderer[_0x153d23(0xdb)]()['render'](Parser['attAbvToFull'](_0xe2554)[_0x153d23(0x1c9)]())}</div>${_0x56e454}
-		</div>`;}['_getMultiChoiceTitle'](_0x25abb5,_0x1b558f){const _0x170f0c=_0x21aa2f;return(this['_titlePrefix']?this[_0x170f0c(0x1c7)]+':\x20':'')+_0x170f0c(0x147)+Parser[_0x170f0c(0x185)](_0x1b558f)+'\x20'+(_0x1b558f===0x1?this[_0x170f0c(0x18c)]:this[_0x170f0c(0x138)]);}}class Charactermancer_OtherProficiencySelect extends Charactermancer_ProficiencySelect{static async[_0x21aa2f(0x203)](_0x2e497d){const _0x3733a5=_0x21aa2f;_0x2e497d=_0x2e497d||{};if(!_0x2e497d[_0x3733a5(0xfd)])return{'isFormComplete':!![],'data':{}};const _0x167d6b=new this({..._0x2e497d,'existing':this[_0x3733a5(0x186)](_0x2e497d['existingFvtt'])});if(_0x167d6b[_0x3733a5(0x18d)]())return _0x167d6b['pGetFormData']();return UtilApplications[_0x3733a5(0x11a)]({'comp':_0x167d6b});}static['getExisting'](_0x10293c){const _0x51ea0a=_0x21aa2f;throw new Error(_0x51ea0a(0xc1));}static[_0x21aa2f(0x18d)](_0x327333){const _0xf6d035=_0x21aa2f;if(!_0x327333?.[_0xf6d035(0x1b5)])return!![];return _0x327333[_0xf6d035(0x1b5)]===0x1&&!_0x327333[0x0]['choose']&&!Object[_0xf6d035(0x103)](this['_ANY_OPTIONS'])[_0xf6d035(0x17e)](_0x45f98b=>_0x327333[0x0][_0x45f98b]);}static[_0x21aa2f(0x190)](_0xf28551){const _0x84868f=_0x21aa2f;return{'existingProficienciesFvttSet':new Set(_0xf28551?.[_0x84868f(0x1de)]||[]),'existingProficienciesFvttSetCustom':new Set((_0xf28551?.[_0x84868f(0x105)]||'')[_0x84868f(0x1be)](';')[_0x84868f(0xf7)](_0x24a92d=>_0x24a92d[_0x84868f(0x1cd)]()[_0x84868f(0xc2)]())['filter'](Boolean))};}constructor(_0x39b5af){const _0xab82a3=_0x21aa2f;_0x39b5af=_0x39b5af||{},super(),this[_0xab82a3(0xb0)]=_0x39b5af[_0xab82a3(0x15c)],this['_existing']=_0x39b5af['existing'],this['_available']=this[_0xab82a3(0xe2)](_0x39b5af[_0xab82a3(0x15c)],_0x39b5af[_0xab82a3(0xfd)],_0x39b5af['anyOptions']),this[_0xab82a3(0x157)]=_0x39b5af[_0xab82a3(0x126)],this['_title']=_0x39b5af[_0xab82a3(0x92)],this[_0xab82a3(0x138)]=_0x39b5af[_0xab82a3(0x1d3)],this[_0xab82a3(0x1c7)]=_0x39b5af[_0xab82a3(0x1d9)],this[_0xab82a3(0x1a4)]=_0x39b5af[_0xab82a3(0x168)],this[_0xab82a3(0x158)]=_0x39b5af[_0xab82a3(0x14c)],this[_0xab82a3(0x1db)]=_0x39b5af['featureSourceTracker'],this[_0xab82a3(0xba)]=_0x39b5af['fnRenderKey'],this[_0xab82a3(0x102)]=_0x39b5af[_0xab82a3(0x1ef)],this['_pFnGetChoice']=_0x39b5af[_0xab82a3(0xf6)],this[_0xab82a3(0x1fd)]=_0x39b5af[_0xab82a3(0x130)],this[_0xab82a3(0x12a)]=_0x39b5af[_0xab82a3(0x131)],this[_0xab82a3(0x8d)]=[],this['_hkExisting']=null;}[_0x21aa2f(0xe2)](_0x8e3a11,_0x1725e5,_0x4f4de6){const _0x51a706=_0x21aa2f,_0x3f3a49=this[_0x51a706(0xb0)][0x0][_0x51a706(0x19f)];return _0x1725e5[_0x51a706(0xf7)](_0x2375ba=>{const _0x4174d8=_0x51a706,_0x215cc6={};return Object[_0x4174d8(0xe6)](_0x2375ba)[_0x4174d8(0x202)](([_0xcf8596,_0x68880f])=>{const _0x5479eb=_0x4174d8;if(!_0x68880f)return;if(_0xcf8596===_0x5479eb(0xb6)){_0x215cc6[_0x5479eb(0xb6)]=MiscUtil[_0x5479eb(0xca)](_0x68880f);if(_0x215cc6['choose']['from']){if(_0x215cc6[_0x5479eb(0xb6)][_0x5479eb(0xdd)][_0x5479eb(0x19f)]||typeof _0x215cc6[_0x5479eb(0xb6)][_0x5479eb(0xdd)]===_0x5479eb(0x179)){if(typeof _0x215cc6[_0x5479eb(0xb6)][_0x5479eb(0xdd)]===_0x5479eb(0x179))_0x215cc6[_0x5479eb(0xb6)]['from']={'prop':_0x3f3a49,'prof':_0x215cc6[_0x5479eb(0xb6)]['from']};}else _0x215cc6[_0x5479eb(0xb6)][_0x5479eb(0xdd)]=_0x215cc6[_0x5479eb(0xb6)][_0x5479eb(0xdd)][_0x5479eb(0xf7)](_0x4f7d0b=>{const _0x1a27a6=_0x5479eb;if(_0x4f7d0b[_0x1a27a6(0x19f)])return _0x4f7d0b;return{'prop':_0x3f3a49,'prof':_0x4f7d0b};});}}else{if(_0x4f4de6?.[_0xcf8596])_0x215cc6[_0x5479eb(0x156)]=_0x215cc6[_0x5479eb(0x156)]||[],_0x215cc6[_0x5479eb(0x156)]['push']({'key':_0xcf8596,'value':_0x68880f});else{if(_0xcf8596===_0x5479eb(0x17c))_0x215cc6['static']=[..._0x215cc6[_0x5479eb(0x17c)],..._0x68880f[_0x5479eb(0xf7)](_0x4d9d96=>{if(_0x4d9d96['prop'])return _0x4d9d96;return{'prop':_0x3f3a49,'prof':_0x4d9d96};})];else{_0x215cc6[_0x5479eb(0x17c)]=_0x215cc6[_0x5479eb(0x17c)]||[];const _0x16cf48={'prop':_0x3f3a49,'prof':_0xcf8596};if(typeof _0x68880f===_0x5479eb(0xeb))_0x16cf48[_0x5479eb(0x133)]=_0x68880f;_0x215cc6[_0x5479eb(0x17c)]['push'](_0x16cf48);}}}}),_0x215cc6;});}get[_0x21aa2f(0x126)](){return this['_modalTitle'];}[_0x21aa2f(0x183)](_0x577954){const _0x47e099=_0x21aa2f,_0x2d13f3=this[_0x47e099(0x1fa)](),_0x405a35=$$`<div class="flex-col"></div>`,_0x3e7a73=()=>{const _0x4d45d9=_0x47e099;_0x405a35[_0x4d45d9(0x117)]();this[_0x4d45d9(0x1db)]&&this[_0x4d45d9(0x12e)]&&this[_0x4d45d9(0xb0)][_0x4d45d9(0x202)](({propTrackerPulse:_0x547acd})=>this[_0x4d45d9(0x1db)][_0x4d45d9(0x174)](this,_0x547acd,this[_0x4d45d9(0x12e)]));this['_lastMetas'][_0x4d45d9(0x202)](_0x2c7149=>_0x2c7149[_0x4d45d9(0xaa)]()),this[_0x4d45d9(0x8d)]=[];const _0x2249d8=this[_0x4d45d9(0x20f)][this[_0x4d45d9(0x1e4)][_0x4d45d9(0xb4)]];if(this[_0x4d45d9(0x1db)])this[_0x4d45d9(0x189)]();const _0x296d39=_0x2249d8[_0x4d45d9(0x17c)]?.['length']?this[_0x4d45d9(0xa6)](_0x405a35,_0x2249d8['static']):null;if(_0x296d39&&(_0x2249d8[_0x4d45d9(0xb6)]||_0x2249d8[_0x4d45d9(0x156)]))_0x405a35['append'](_0x4d45d9(0x1c2));const _0x32386f=_0x2249d8['choose']?this[_0x4d45d9(0x1ec)]['_isChooseFromFilter'](_0x2249d8[_0x4d45d9(0xb6)])?this['_render_renderPtChooseFromFilter'](_0x405a35,_0x2249d8[_0x4d45d9(0xb6)]):this[_0x4d45d9(0x170)](_0x405a35,_0x2249d8[_0x4d45d9(0xb6)],_0x4d45d9(0xb6)):null,_0x328283=[];_0x2249d8[_0x4d45d9(0x156)]&&_0x2249d8[_0x4d45d9(0x156)]['forEach'](({key:_0x4eb3d8,value:_0x25e3ee})=>{const _0x12ae11=_0x4d45d9;if(!this[_0x12ae11(0x1a4)][_0x4eb3d8])return;const _0x5a760c=this[_0x12ae11(0x1a4)][_0x4eb3d8],_0x31cd64=this[_0x12ae11(0x1ec)][_0x12ae11(0x1e6)](_0x25e3ee,_0x5a760c,_0x2249d8[_0x12ae11(0x17c)]);if(_0x31cd64){const _0x5726d4=this[_0x12ae11(0x170)](_0x405a35,_0x31cd64,_0x4eb3d8);_0x328283[_0x12ae11(0x145)](_0x5726d4);}}),this[_0x4d45d9(0x12e)]=()=>this[_0x4d45d9(0x1b1)](_0x296d39,_0x32386f,_0x328283),this[_0x4d45d9(0x1db)]&&this['_propGroups'][_0x4d45d9(0x202)](({propTrackerPulse:_0x32b704})=>this[_0x4d45d9(0x1db)][_0x4d45d9(0x1ad)](this,_0x32b704,this[_0x4d45d9(0x12e)])),this[_0x4d45d9(0x12e)]();};this[_0x47e099(0xf9)](_0x47e099(0xb4),_0x3e7a73),_0x3e7a73(),$$(_0x577954)`
-			${_0x2d13f3}
-			${_0x405a35}
-		`;}[_0x21aa2f(0x189)](){const _0xe8c052=_0x21aa2f;this[_0xe8c052(0xb0)]['forEach'](({prop:_0x202b2b,propTracker:_0x5c1a5b})=>this[_0xe8c052(0x1db)][_0xe8c052(0x10c)](this,{[_0x5c1a5b]:this[_0xe8c052(0x15f)]()[_0xe8c052(0xc3)]?.[_0x202b2b]}));}['_render_$getStgSelGroup'](){const _0x264799=_0x21aa2f;if(this['_available'][_0x264799(0x1b5)]<=0x1)return null;const _0x1fea80=ComponentUiUtil[_0x264799(0x1f5)](this,_0x264799(0xb4),{'placeholder':_0x264799(0xd2)+this[_0x264799(0x18c)]+_0x264799(0x1a3),'values':this[_0x264799(0x20f)]['map']((_0x454cf0,_0x215cbc)=>_0x215cbc),'fnDisplay':_0x524803=>{const _0x40ac0c=_0x264799,_0x30ad37=this[_0x40ac0c(0x20f)][_0x524803],_0x544cb3=[];if(_0x30ad37[_0x40ac0c(0x17c)]){const _0x540607=MiscUtil[_0x40ac0c(0xca)](_0x30ad37[_0x40ac0c(0x17c)])[_0x40ac0c(0x9f)]((_0x3c5822,_0x415abe)=>SortUtil['ascSortLower'](_0x3c5822['prof'],_0x415abe['prof']))[_0x40ac0c(0xf7)](({prof:_0x358052,count:_0x5bf4b0})=>{const _0x1778de=_0x40ac0c,_0x38f293=_0x358052===_0x1778de(0x116)?this[_0x1778de(0x158)]:this[_0x1778de(0xba)]?this[_0x1778de(0xba)](_0x358052):_0x358052[_0x1778de(0x1c9)]();if(_0x5bf4b0)return _0x38f293+'\x20'+_0x5bf4b0;return _0x38f293;})['join'](',\x20');_0x544cb3[_0x40ac0c(0x145)](_0x540607);}if(_0x30ad37['choose']){if(this[_0x40ac0c(0x1ec)][_0x40ac0c(0x20b)](_0x30ad37[_0x40ac0c(0xb6)]))_0x544cb3[_0x40ac0c(0x145)](_0x40ac0c(0x147)+Parser[_0x40ac0c(0x185)](_0x30ad37[_0x40ac0c(0xb6)]['count']||0x1)+'\x20from\x20filtered\x20selection');else _0x544cb3['push']('Choose\x20'+Parser[_0x40ac0c(0x185)](_0x30ad37[_0x40ac0c(0xb6)][_0x40ac0c(0x133)]||0x1)+'\x20from\x20'+_0x30ad37[_0x40ac0c(0xb6)][_0x40ac0c(0xdd)][_0x40ac0c(0xf7)](({prof:_0x17f27c})=>_0x17f27c['toTitleCase']())['join'](',\x20'));}return _0x544cb3[_0x40ac0c(0x128)](Boolean)[_0x40ac0c(0xe0)](';\x20');}});return this[_0x264799(0x1db)]&&this['_propGroups'][_0x264799(0x202)](({prop:_0xcfd38a,propTracker:_0x538d96})=>{const _0x42046e=_0x264799,_0x1dcd3f=()=>this['_featureSourceTracker'][_0x42046e(0x10c)](this,{[_0x538d96]:this['_getFormData']()['data']?.[_0xcfd38a]});this[_0x42046e(0xf9)](_0x42046e(0xb4),_0x1dcd3f);}),$$`<div class="w-100 mb-2 flex-vh-center">
-			${_0x1fea80}
-		</div>`;}static[_0x21aa2f(0x20b)](_0xd69dce){const _0x2f7f0e=_0x21aa2f;return typeof _0xd69dce['from']['prof']===_0x2f7f0e(0x179);}['_getAllValuesMaybeInUseLookup'](){const _0x55b1f1=_0x21aa2f,_0x93f01d={};return Object[_0x55b1f1(0xe6)](this[_0x55b1f1(0x20f)][this[_0x55b1f1(0x1e4)]['ixSet']]||{})['forEach'](([_0x55b28c,_0x532fed])=>{const _0x4e16f2=_0x55b1f1;if(_0x55b28c===_0x4e16f2(0xb6)&&this[_0x4e16f2(0x1ec)][_0x4e16f2(0x20b)](_0x532fed)){const _0x334b14=this[_0x4e16f2(0xcf)]()+'_chooseFilter_';Object[_0x4e16f2(0xe6)](this[_0x4e16f2(0x1e4)])['filter'](([_0x22f79e,_0x5b3d2a])=>_0x22f79e[_0x4e16f2(0x192)](_0x334b14)&&_0x5b3d2a)[_0x4e16f2(0x202)](([,{prop:_0x352009,prof:_0x3d0e90}])=>{const _0x21f604=_0x4e16f2;_0x93f01d[_0x352009]=_0x93f01d[_0x352009]||new Set(),_0x93f01d[_0x352009][_0x21f604(0xbb)](_0x3d0e90);});}else{if(_0x55b28c===_0x4e16f2(0xb6)){const _0x3db031=_0x532fed[_0x4e16f2(0x8b)]?_0x532fed['from'][_0x4e16f2(0xf7)](_0x2460c0=>_0x2460c0[_0x4e16f2(0x1f6)])[_0x4e16f2(0x1a9)]():_0x532fed[_0x4e16f2(0xdd)];_0x3db031[_0x4e16f2(0x202)](({prop:_0x10c229,prof:_0x5baa9c})=>{_0x93f01d[_0x10c229]=_0x93f01d[_0x10c229]||new Set(),_0x93f01d[_0x10c229]['add'](_0x5baa9c);});}else{if(_0x55b28c==='any')_0x532fed[_0x4e16f2(0x202)](({key:_0x40b919})=>{const _0x166021=_0x4e16f2,_0x5a0014=this[_0x166021(0x1a4)][_0x40b919];if(!_0x5a0014)return;const _0x2254b8=_0x5a0014[_0x166021(0x8b)]?_0x5a0014['valueGroups'][_0x166021(0xf7)](_0x56342c=>_0x56342c[_0x166021(0x1f6)])[_0x166021(0x1a9)]():_0x5a0014;_0x2254b8['forEach'](({prop:_0x156679,prof:_0x5cfa40})=>{const _0x5974e3=_0x166021;_0x93f01d[_0x156679]=_0x93f01d[_0x156679]||new Set(),_0x93f01d[_0x156679][_0x5974e3(0xbb)](_0x5cfa40);});});else{if(_0x55b28c==='static')_0x532fed[_0x4e16f2(0x202)](({prop:_0x153a11,prof:_0x5cb206})=>{const _0x326d72=_0x4e16f2;_0x93f01d[_0x153a11]=_0x93f01d[_0x153a11]||new Set(),_0x93f01d[_0x153a11][_0x326d72(0xbb)](_0x5cb206);});else throw new Error(_0x4e16f2(0xc5)+_0x55b28c+'\x22');}}}}),_0x93f01d;}['_getJoinedProp'](){const _0xccc2db=_0x21aa2f;return this['_propGroups'][_0xccc2db(0xf7)](({prop:_0x392a42})=>_0x392a42)[_0xccc2db(0xe0)]('-');}async['_hk_pUpdatePtsExisting'](_0x3ff3be,_0x225825,_0x45a716){const _0x30390e=_0x21aa2f;try{await this[_0x30390e(0x1af)]('updateExisting'),await this[_0x30390e(0x1e2)]({'$ptsExistingStatic':_0x3ff3be,'$ptsExistingChooseFrom':_0x225825,'$ptsExistingsChooseFromAny':_0x45a716});}finally{this[_0x30390e(0x169)](_0x30390e(0x11b));}}async[_0x21aa2f(0x1e2)]({$ptsExistingStatic:_0x4fd0cd,$ptsExistingChooseFrom:_0x1a76b4,$ptsExistingsChooseFromAny:_0x221e30}){const _0x1f3cdf=_0x21aa2f,_0x382430=[_0x4fd0cd,_0x1a76b4,..._0x221e30||[]][_0x1f3cdf(0x128)](Boolean),_0x211d85=this['_getAllValuesMaybeInUseLookup'](),_0x43dd9e=Object[_0x1f3cdf(0xe6)](_0x211d85);for(const [_0x3049a3,_0x320130]of _0x43dd9e){const _0x40cace=this[_0x1f3cdf(0xb0)][_0x1f3cdf(0xdc)](_0x32d472=>_0x32d472[_0x1f3cdf(0x19f)]===_0x3049a3);if(!_0x40cace)return;const _0x34dece=this[_0x1f3cdf(0x1db)]?this[_0x1f3cdf(0x1db)]['getStatesForKey'](_0x40cace[_0x1f3cdf(0x211)],{'ignore':this}):null;for(const _0x2017be of _0x320130){for(const _0x40c2e0 of _0x382430){if(!_0x40c2e0[_0x3049a3]?.[_0x2017be])continue;const _0x85e0f0=this['_pFnGetParentGroup']?await this[_0x1f3cdf(0x102)](_0x2017be):null;let _0x14612b=!!this['_existing']?.[_0x2017be]||_0x85e0f0&&!!this['_existing']?.[_0x85e0f0];_0x14612b=_0x14612b||(_0x34dece||[])[_0x1f3cdf(0x17e)](_0x58984f=>!!_0x58984f[_0x2017be]||_0x85e0f0&&!!_0x58984f[_0x85e0f0]),_0x40c2e0[_0x3049a3][_0x2017be][_0x1f3cdf(0x92)](_0x14612b?_0x1f3cdf(0x1cb):'')[_0x1f3cdf(0x9e)](_0x1f3cdf(0xce),_0x14612b)[_0x1f3cdf(0x1d1)](_0x14612b?_0x1f3cdf(0x107)+UtilActors[_0x1f3cdf(0x1ab)][0x1]+_0x1f3cdf(0x153):'');}}}}[_0x21aa2f(0xa6)](_0xa2f82c,_0x479889){const _0x47e2f2=_0x21aa2f,_0x45d88={},_0x49c5be={};_0x479889['forEach'](({prop:_0x9aa842,prof:_0x3f1acd,count:_0x3d0ee4})=>MiscUtil[_0x47e2f2(0x108)](_0x49c5be,_0x9aa842,_0x3f1acd,_0x3d0ee4||!![]));const _0xa8589c=Object['entries'](_0x49c5be)['map'](([_0x3d8c53,_0x449f90])=>{const _0x5a49fb=_0x47e2f2,_0x269f34=this[_0x5a49fb(0xb0)]['length']>0x1?'\x20('+this[_0x5a49fb(0xb0)][_0x5a49fb(0xdc)](_0x2f9cf8=>_0x2f9cf8[_0x5a49fb(0x19f)]===_0x3d8c53)[_0x5a49fb(0x1f4)]+')':'',_0x4d8be4=Object[_0x5a49fb(0x103)](_0x449f90);return _0x4d8be4[_0x5a49fb(0xf7)]((_0x46172b,_0x39a869)=>{const _0x3270b5=_0x5a49fb,_0x21a7a7=$('<div\x20class=\x22ve-small\x20veapp__msg-warning\x20inline-block\x22></div>');MiscUtil['set'](_0x45d88,_0x3d8c53,_0x46172b,_0x21a7a7);const _0x12dc28=_0x39a869<_0x4d8be4['length']-0x1;return $$`<div class="inline-block ${_0x12dc28?_0x3270b5(0x123):''}">${this['_fnRenderKey']?this[_0x3270b5(0xba)](_0x46172b):_0x46172b[_0x3270b5(0x1c9)]()}${_0x269f34}${_0x21a7a7}${_0x12dc28?',':''}</div>`;});})[_0x47e2f2(0x1a9)]();return $$`<div class="block">
-			${_0xa8589c}
-		</div>`['appendTo'](_0xa2f82c),_0x45d88;}[_0x21aa2f(0x170)](_0x849bf0,_0x39e755,_0x5c8084){const _0x2131b6=_0x21aa2f,_0x2cebf8=this[_0x2131b6(0xcf)]()+'_'+_0x5c8084,_0x24f258=_0x39e755[_0x2131b6(0x133)]||0x1,_0x133ea0={},_0x3fec28={'count':_0x24f258,'fnDisplay':({prop:_0x40165f,prof:_0x346d08})=>{const _0x83e0d2=_0x2131b6,_0x38535b=$(_0x83e0d2(0x177));return MiscUtil[_0x83e0d2(0x108)](_0x133ea0,_0x40165f,_0x346d08,_0x38535b),$$`<div class="flex-v-center w-100">
-					<div class="flex-v-center">${_0x346d08['toTitleCase']()}</div>
-					${_0x38535b}
-				</div>`;}};if(_0x39e755['isGrouped'])_0x3fec28['valueGroups']=_0x39e755[_0x2131b6(0xdd)],_0x3fec28[_0x2131b6(0x131)]=this[_0x2131b6(0x12a)];else _0x3fec28['values']=_0x39e755[_0x2131b6(0xdd)];const _0x1b5107=ComponentUiUtil[_0x2131b6(0x11f)](this,_0x2cebf8,_0x3fec28);let _0x54294f=null;return this['_featureSourceTracker']&&(_0x54294f=()=>this[_0x2131b6(0x189)](),this[_0x2131b6(0xf9)](_0x1b5107[_0x2131b6(0x19e)],_0x54294f)),this['_lastMetas']['push']({'cleanup':()=>{const _0x48e350=_0x2131b6;_0x1b5107[_0x48e350(0xaa)]();if(_0x54294f)this[_0x48e350(0x1c0)](_0x1b5107[_0x48e350(0x19e)],_0x54294f);}}),_0x849bf0['append'](_0x2131b6(0x176)+(this[_0x2131b6(0x1c7)]?this[_0x2131b6(0x1c7)]+':\x20':'')+_0x2131b6(0x147)+Parser[_0x2131b6(0x185)](_0x24f258)+'\x20'+(_0x24f258===0x1?this[_0x2131b6(0x18c)]:this[_0x2131b6(0x138)])+_0x2131b6(0x19d)),_0x1b5107['$ele'][_0x2131b6(0x95)](_0x849bf0),_0x133ea0;}static[_0x21aa2f(0x1e6)](_0x45f72e,_0x909c03,_0x3b5a73){const _0x55842b=_0x21aa2f,_0x2b5cad={};(_0x3b5a73||[])[_0x55842b(0x202)](({prop:_0x2e044b,prof:_0x578821})=>{const _0x2a8f62=_0x55842b;_0x2b5cad[_0x2e044b]=_0x2b5cad[_0x2e044b]||new Set(),_0x2b5cad[_0x2e044b][_0x2a8f62(0xbb)](_0x578821[_0x2a8f62(0xc2)]());});if(_0x909c03['isGrouped']){const _0x40d0a5=MiscUtil[_0x55842b(0xca)](_0x909c03['valueGroups']);return _0x40d0a5['forEach'](_0x648124=>{const _0x492b56=_0x55842b;_0x648124[_0x492b56(0x1f6)][_0x492b56(0x202)](_0x574a94=>_0x574a94[_0x492b56(0x119)]=_0x574a94[_0x492b56(0x119)][_0x492b56(0xc2)]()),_0x648124[_0x492b56(0x1f6)]=_0x648124[_0x492b56(0x1f6)][_0x492b56(0x128)](({prop:_0x327d3f,prof:_0x3c0eca})=>!_0x2b5cad[_0x327d3f]||!_0x2b5cad[_0x327d3f][_0x492b56(0x129)](_0x3c0eca));}),{'isGrouped':!![],'from':_0x40d0a5,'count':_0x45f72e};}else return{'from':MiscUtil['copy'](_0x909c03)['map'](_0x27f0cf=>{const _0x47ae47=_0x55842b;return _0x27f0cf[_0x47ae47(0x119)]=_0x27f0cf[_0x47ae47(0x119)]['toLowerCase'](),_0x27f0cf;})['filter'](({prop:_0x20dd5e,prof:_0x14a905})=>!_0x2b5cad[_0x20dd5e]||!_0x2b5cad[_0x20dd5e]['has'](_0x14a905)),'count':_0x45f72e};}[_0x21aa2f(0x1c4)](_0xfee4bb,_0x65cd9a){const _0x832ff5=_0x21aa2f,_0x4ef264={},_0x5e1d9a=$(_0x832ff5(0x175));return[...new Array(_0x65cd9a[_0x832ff5(0x133)]||0x1)]['forEach']((_0x8d3493,_0x452abe)=>{const _0x1bc5a8=_0x832ff5,_0x1c0585=this[_0x1bc5a8(0xcf)]()+_0x1bc5a8(0x199)+_0x452abe,_0x52521c=$(_0x1bc5a8(0x177)),_0x127531=$(_0x1bc5a8(0x175)),_0x98647c=(_0xb7fa21,_0x37c286,_0x41c55b)=>{const _0x2b0468=_0x1bc5a8,_0x4d4aa6=!_0xb7fa21;if(!_0x4d4aa6){const {prop:_0x58ed51,prof:_0x13dd03}=_0x41c55b||{},_0x3be274=(_0x13dd03||'')[_0x2b0468(0xc2)]();MiscUtil[_0x2b0468(0xcc)](_0x4ef264,_0x58ed51,_0x3be274);const {prop:_0x57360c,prof:_0x405677}=_0x37c286||{},_0x84ac30=(_0x405677||'')['toLowerCase']();MiscUtil['set'](_0x4ef264,_0x57360c,_0x84ac30);}_0x127531['html'](this[_0x2b0468(0x1e4)][_0x1c0585]!=null?_0x2b0468(0x208)+Renderer[_0x2b0468(0xdb)]()[_0x2b0468(0x183)]('{'+this['_tag']+'\x20'+this['_state'][_0x1c0585][_0x2b0468(0x119)][_0x2b0468(0xc2)]()+'}')+_0x2b0468(0x91):_0x2b0468(0x15a)+this[_0x2b0468(0x18c)][_0x2b0468(0xc2)]()+_0x2b0468(0x161));if(!_0x4d4aa6&&this['_featureSourceTracker'])this[_0x2b0468(0x189)]();};this['_addHookBase'](_0x1c0585,_0x98647c),this['_lastMetas'][_0x1bc5a8(0x145)]({'cleanup':()=>this[_0x1bc5a8(0x1c0)](_0x1c0585,_0x98647c)}),_0x98647c();const _0x256975=$(_0x1bc5a8(0x16f)+this['_title']+_0x1bc5a8(0x113))[_0x1bc5a8(0x122)](async()=>{const _0x5cf51b=_0x1bc5a8,_0x2bb0df=await this[_0x5cf51b(0x17b)]({'filterExpression':_0x65cd9a[_0x5cf51b(0xdd)][_0x5cf51b(0x119)]});if(_0x2bb0df==null||!_0x2bb0df['length'])return;const _0x21e299=_0x2bb0df[0x0],_0x26c39e=this[_0x5cf51b(0xb0)][0x0][_0x5cf51b(0x19f)];this[_0x5cf51b(0x1e4)][_0x1c0585]={'prop':_0x26c39e,'prof':(_0x21e299[_0x5cf51b(0x1f4)]+'|'+_0x21e299[_0x5cf51b(0x1f6)]['sourceJson'])['toLowerCase']()};});$$`<div class="flex-v-center mr-1">${_0x256975}${_0x127531}${_0x52521c}</div>`['appendTo'](_0x5e1d9a);}),$$`<div class="py-1 flex-v-center">
-			${_0x5e1d9a}
-		</div>`[_0x832ff5(0x95)](_0xfee4bb),_0x4ef264;}[_0x21aa2f(0x18d)](){const _0x36e96f=_0x21aa2f;return this[_0x36e96f(0x1ec)]['isNoChoice'](this['_available']);}[_0x21aa2f(0x15f)](){const _0x4a1c9f=_0x21aa2f;let _0x2252e2=!![];const _0x421f50={},_0x463688=this[_0x4a1c9f(0x20f)][this[_0x4a1c9f(0x1e4)][_0x4a1c9f(0xb4)]];(_0x463688[_0x4a1c9f(0x17c)]||[])['forEach'](({prop:_0x1f5ddf,prof:_0x58a95c})=>MiscUtil['set'](_0x421f50,_0x1f5ddf,_0x58a95c,!![]));if(_0x463688[_0x4a1c9f(0xb6)]&&this['constructor'][_0x4a1c9f(0x20b)](_0x463688[_0x4a1c9f(0xb6)]))[...new Array(_0x463688[_0x4a1c9f(0xb6)][_0x4a1c9f(0x133)]||0x1)][_0x4a1c9f(0x202)]((_0x4058fd,_0x133afb)=>{const _0x353733=_0x4a1c9f,_0x555519=this[_0x353733(0xcf)]()+_0x353733(0x199)+_0x133afb;if(!this[_0x353733(0x1e4)][_0x555519])_0x2252e2=![];else{const {prop:_0x676f1e,prof:_0x403d35}=this[_0x353733(0x1e4)][_0x555519];MiscUtil[_0x353733(0x108)](_0x421f50,_0x676f1e,_0x403d35,!![]);}});else{if(_0x463688[_0x4a1c9f(0xb6)]){const _0x198595=this['_getJoinedProp']()+_0x4a1c9f(0x115),_0x194337=ComponentUiUtil[_0x4a1c9f(0x20a)](this,_0x198595);_0x194337['map'](_0x405253=>_0x463688[_0x4a1c9f(0xb6)][_0x4a1c9f(0xdd)][_0x405253])['forEach'](({prop:_0x4f0108,prof:_0x3fac3b})=>MiscUtil['set'](_0x421f50,_0x4f0108,_0x3fac3b,!![]));if(!this['_state'][ComponentUiUtil[_0x4a1c9f(0x160)](_0x198595)])_0x2252e2=![];}}return _0x463688['any']&&_0x463688['any'][_0x4a1c9f(0x202)](({key:_0x4d417f,value:_0x41a85d})=>{const _0x2b4db8=_0x4a1c9f;if(!this[_0x2b4db8(0x1a4)][_0x4d417f])return;const _0x3cf5e8=this[_0x2b4db8(0xcf)]()+'_'+_0x4d417f,_0x51e0da=this['_anyOptions'][_0x4d417f],_0x2391a1=this[_0x2b4db8(0x1ec)][_0x2b4db8(0x1e6)](_0x41a85d,_0x51e0da,_0x463688[_0x2b4db8(0x17c)]);if(_0x2391a1){const _0x49d17d={};if(_0x2391a1[_0x2b4db8(0x8b)])_0x49d17d[_0x2b4db8(0x16c)]=_0x2391a1[_0x2b4db8(0xdd)];else _0x49d17d[_0x2b4db8(0x1f6)]=_0x2391a1['from'];ComponentUiUtil[_0x2b4db8(0x98)](this,_0x3cf5e8,_0x49d17d)[_0x2b4db8(0x202)](({prop:_0x48e03d,prof:_0x14a3b8})=>MiscUtil[_0x2b4db8(0x108)](_0x421f50,_0x48e03d,_0x14a3b8,!![]));}if(!this['_state'][ComponentUiUtil[_0x2b4db8(0x160)](_0x3cf5e8)])_0x2252e2=![];}),{'isFormComplete':_0x2252e2,'data':_0x421f50};}['pGetFormData'](){return this['_getFormData']();}[_0x21aa2f(0x10f)](){return{'ixSet':0x0};}static[_0x21aa2f(0x120)]({existingProficienciesSetFvtt:_0x15b09c,vetToFvttProfs:_0x34e87e,allProfsVet:_0x368b34}){const _0x266006=_0x21aa2f,{existingProficienciesFvttSet:_0x3046d3,existingProficienciesFvttSetCustom:_0x1bc3c4}=this['_getExistingFvttProficiencySetsMeta'](_0x15b09c),_0xa000d3={};return Object[_0x266006(0xe6)](_0x34e87e)['filter'](([_0x3fb15e,_0x26d77e])=>_0x3046d3[_0x266006(0x129)](_0x26d77e))['forEach'](([_0x589f0c,_0x387aeb])=>{_0xa000d3[_0x589f0c]=!![],_0x3046d3['delete'](_0x387aeb);}),_0x368b34[_0x266006(0x202)](_0x1da7e4=>{const _0x392ea5=_0x266006;if(_0x3046d3['has'](_0x1da7e4))_0xa000d3[_0x1da7e4]=!![],_0x3046d3[_0x392ea5(0xcc)](_0x1da7e4);else _0x1bc3c4[_0x392ea5(0x129)](_0x1da7e4)&&(_0xa000d3[_0x1da7e4]=!![],_0x1bc3c4[_0x392ea5(0xcc)](_0x1da7e4));}),(_0x3046d3['size']||_0x1bc3c4[_0x266006(0x16b)])&&(_0xa000d3[_0x266006(0x116)]=_0x3046d3['size']+_0x1bc3c4[_0x266006(0x16b)]),_0xa000d3;}static get[_0x21aa2f(0xe7)](){return{};}}class Charactermancer_LanguageProficiencySelect extends Charactermancer_OtherProficiencySelect{static['getExisting'](_0x375357){const _0x45b15d=_0x21aa2f;return this[_0x45b15d(0x120)]({'existingProficienciesSetFvtt':_0x375357?.[_0x45b15d(0x1b3)],'vetToFvttProfs':UtilActors[_0x45b15d(0x93)],'allProfsVet':Parser[_0x45b15d(0x1eb)]});}constructor(_0x31350c){const _0x504f72=_0x21aa2f;super({..._0x31350c,'propGroups':[Charactermancer_LanguageProficiencySelect['PROP_GROUP_']],'modalTitle':_0x504f72(0x1bf),'title':'Language','titlePlural':_0x504f72(0x1ac),'otherTitle':_0x504f72(0x9c),'anyOptions':Charactermancer_LanguageProficiencySelect[_0x504f72(0xe7)]});}static get[_0x21aa2f(0xe7)](){const _0x19adca=_0x21aa2f;return{'any':Parser[_0x19adca(0x1eb)]['map'](_0x399478=>({'prof':_0x399478[_0x19adca(0xc2)](),'prop':_0x19adca(0x1b3)})),'anyStandard':{'isGrouped':!![],'valueGroups':Charactermancer_LanguageProficiencySelect['ANY_OPT_ANY_STANDARD__VALUE_GROUPS']}};}}Charactermancer_LanguageProficiencySelect[_0x21aa2f(0x1ae)]=new Charactermancer_ProficiencySelect[(_0x21aa2f(0x1ce))]({'prop':_0x21aa2f(0x1b3),'propTrackerPulse':_0x21aa2f(0x1c1),'propTracker':_0x21aa2f(0x196)}),Charactermancer_LanguageProficiencySelect['ANY_OPT_ANY_STANDARD__VALUE_GROUPS']=[{'name':'Standard\x20Languages','values':Parser[_0x21aa2f(0x1b4)][_0x21aa2f(0xf7)](_0x43a36a=>({'prof':_0x43a36a[_0x21aa2f(0xc2)](),'prop':_0x21aa2f(0x1b3)}))},{'name':_0x21aa2f(0xb3),'text':'With\x20your\x20DM\x27s\x20permission,\x20you\x20can\x20choose\x20an\x20exotic\x20language.','values':Parser[_0x21aa2f(0x184)]['map'](_0x4137cc=>({'prof':_0x4137cc['toLowerCase'](),'prop':'languageProficiencies'}))},{'name':_0x21aa2f(0x207),'text':_0x21aa2f(0x1da),'values':Parser[_0x21aa2f(0xab)][_0x21aa2f(0xf7)](_0x5b9af1=>({'prof':_0x5b9af1[_0x21aa2f(0xc2)](),'prop':_0x21aa2f(0x1b3)}))}];class Charactermancer_ToolProficiencySelect extends Charactermancer_OtherProficiencySelect{static['getExisting'](_0x28ed70){const _0x34fce4=_0x21aa2f;return this[_0x34fce4(0x120)]({'existingProficienciesSetFvtt':_0x28ed70?.[_0x34fce4(0xd5)],'vetToFvttProfs':UtilActors[_0x34fce4(0xd8)],'allProfsVet':UtilActors[_0x34fce4(0x94)]});}constructor(_0x1b84b5){const _0x29484b=_0x21aa2f;super({..._0x1b84b5,'propGroups':[Charactermancer_ToolProficiencySelect[_0x29484b(0x1ae)]],'modalTitle':_0x29484b(0x173),'title':_0x29484b(0x146),'titlePlural':'Tool\x20Proficiencies','otherTitle':'(Other\x20tool\x20proficiency)'});}}Charactermancer_ToolProficiencySelect[_0x21aa2f(0x1ae)]=new Charactermancer_ProficiencySelect[(_0x21aa2f(0x1ce))]({'prop':_0x21aa2f(0xd5),'propTrackerPulse':_0x21aa2f(0x1c8),'propTracker':'tools'});class Charactermancer_LanguageToolProficiencySelect extends Charactermancer_OtherProficiencySelect{static[_0x21aa2f(0x186)](_0x14ad41){const _0x23eaba=_0x21aa2f,_0x174e6d=this['_getExistingProficiencies']({'existingProficienciesSetFvtt':_0x14ad41?.['languageProficiencies'],'vetToFvttProfs':UtilActors['VALID_LANGUAGES'],'allProfsVet':Parser['LANGUAGES_ALL']}),_0xc34954=this[_0x23eaba(0x120)]({'existingProficienciesSetFvtt':_0x14ad41?.[_0x23eaba(0xd5)],'vetToFvttProfs':UtilActors[_0x23eaba(0xd8)],'allProfsVet':UtilActors['TOOL_PROFICIENCIES']}),_0x331107=(_0x174e6d[_0x23eaba(0x116)]||0x0)+(_0xc34954[_0x23eaba(0x116)]||0x0),_0x413130=MiscUtil[_0x23eaba(0xca)](_0x174e6d);return Object[_0x23eaba(0xe6)](_0xc34954)['filter'](([,_0x2aa80b])=>_0x2aa80b)['forEach'](([_0x5cfa10,_0x5282dd])=>_0x413130[_0x5cfa10]=_0x5282dd),_0x413130[_0x23eaba(0x116)]=_0x331107,_0x413130;}constructor(_0x15eba4){const _0x1c6b1d=_0x21aa2f;super({..._0x15eba4,'propGroups':[Charactermancer_LanguageProficiencySelect[_0x1c6b1d(0x1ae)],Charactermancer_ToolProficiencySelect[_0x1c6b1d(0x1ae)]],'modalTitle':_0x1c6b1d(0xf1),'title':'Language\x20or\x20Tool\x20Proficiency','titlePlural':_0x1c6b1d(0xf1),'otherTitle':_0x1c6b1d(0xc9),'anyOptions':Charactermancer_LanguageToolProficiencySelect[_0x1c6b1d(0xe7)]});}static get[_0x21aa2f(0xe7)](){const _0x164606=_0x21aa2f;return{'any':[...Parser[_0x164606(0x1eb)]['map'](_0x30c4e3=>({'prop':_0x164606(0x1b3),'prof':_0x30c4e3})),...UtilActors[_0x164606(0x94)][_0x164606(0xf7)](_0x272dbd=>({'prop':_0x164606(0xd5),'prof':_0x272dbd}))],'anyStandard':{'isGrouped':!![],'valueGroups':[...Charactermancer_LanguageProficiencySelect[_0x164606(0xd9)],{'name':'Tools','values':UtilActors['TOOL_PROFICIENCIES']['map'](_0x1b3ac4=>({'prop':'toolProficiencies','prof':_0x1b3ac4[_0x164606(0xc2)]()}))}]}};}}class Charactermancer_ArmorProficiencySelect extends Charactermancer_OtherProficiencySelect{static[_0x21aa2f(0x186)](_0x593003){const _0x4fbe71=_0x21aa2f;return this['_getExistingProficiencies']({'existingProficienciesSetFvtt':_0x593003?.[_0x4fbe71(0xda)],'vetToFvttProfs':UtilActors[_0x4fbe71(0xa7)],'allProfsVet':UtilActors['ARMOR_PROFICIENCIES']});}constructor(_0x6ca427){const _0x16a049=_0x21aa2f;super({..._0x6ca427,'propGroups':[new Charactermancer_ProficiencySelect[(_0x16a049(0x1ce))]({'prop':_0x16a049(0xda),'propTrackerPulse':'pulseArmor','propTracker':_0x16a049(0x124)})],'modalTitle':_0x16a049(0xd6),'title':'Armor\x20Proficiency','titlePlural':_0x16a049(0xd6),'otherTitle':_0x16a049(0xe3),'fnRenderKey':Charactermancer_ArmorProficiencySelect[_0x16a049(0x14d)][_0x16a049(0x1a5)](Charactermancer_ArmorProficiencySelect)});}static[_0x21aa2f(0x14d)](_0x26f1d5){const _0x3ff23e=_0x21aa2f;if(_0x26f1d5===_0x3ff23e(0x159)||_0x26f1d5==='medium'||_0x26f1d5===_0x3ff23e(0xef))return _0x26f1d5[_0x3ff23e(0x1c9)]();if(_0x26f1d5===_0x3ff23e(0x1f8))return Renderer[_0x3ff23e(0xdb)]()['render'](_0x3ff23e(0xc4));return Renderer[_0x3ff23e(0xdb)]()[_0x3ff23e(0x183)](_0x3ff23e(0x19b)+_0x26f1d5[_0x3ff23e(0x1be)]('|')['map'](_0x1732df=>_0x1732df['toTitleCase']())[_0x3ff23e(0xe0)]('|')+'}');}}class Charactermancer_WeaponProficiencySelect extends Charactermancer_OtherProficiencySelect{static[_0x21aa2f(0x186)](_0x4658b0){const _0x596267=_0x21aa2f;return this['_getExistingProficiencies']({'existingProficienciesSetFvtt':_0x4658b0?.[_0x596267(0x14b)],'vetToFvttProfs':UtilActors[_0x596267(0x20d)],'allProfsVet':UtilActors[_0x596267(0x1ed)]});}constructor(_0x32d18a){const _0x1abaf6=_0x21aa2f;super({..._0x32d18a,'propGroups':[new Charactermancer_ProficiencySelect['PropGroup']({'prop':_0x1abaf6(0x14b),'propTrackerPulse':_0x1abaf6(0xc0),'propTracker':_0x1abaf6(0xbe)})],'modalTitle':'Weapon\x20Proficiencies','title':_0x1abaf6(0xe8),'titlePlural':_0x1abaf6(0xcd),'otherTitle':_0x1abaf6(0x96),'fnRenderKey':_0x5ce536=>Renderer[_0x1abaf6(0xdb)]()[_0x1abaf6(0x183)](_0x1abaf6(0x19b)+_0x5ce536['split']('|')['map'](_0x54365e=>_0x54365e['toTitleCase']())[_0x1abaf6(0xe0)]('|')+'}'),'pFnGetParentGroup':_0x4c1c39=>DataConverter[_0x1abaf6(0xc8)](_0x4c1c39),'pFnGetChoice':({filterExpression:filterExpression=null}={})=>{const _0xd66c14=_0x1abaf6,_0x34b776=new ModalFilterItemsFvtt({'filterExpression':filterExpression,'namespace':_0xd66c14(0x1a2),'isRadio':!![]});return _0x34b776['pGetUserSelection']({'filterExpression':filterExpression});},'tag':'@item'});}}class Charactermancer_ImmResVulnSelect extends BaseComponent{static async[_0x21aa2f(0x203)](_0x516d72){const _0x3bb252=_0x21aa2f;_0x516d72=_0x516d72||{};if(!_0x516d72['available'])return{'isFormComplete':!![],'data':{}};const _0x1011ec=new this({..._0x516d72,'existing':this[_0x3bb252(0x186)](_0x516d72[_0x3bb252(0x155)])});if(_0x1011ec[_0x3bb252(0x18d)]())return _0x1011ec['pGetFormData']();return UtilApplications[_0x3bb252(0x11a)]({'comp':_0x1011ec});}static['getExisting'](){const _0x523d78=_0x21aa2f;throw new TypeError(_0x523d78(0xc1));}static[_0x21aa2f(0x18d)](_0x417aef){const _0x350510=_0x21aa2f;let _0x1c5197=0x0;return DataConverter['WALKER_READONLY_GENERIC'][_0x350510(0x11e)](_0x417aef,{'object':_0xf6009e=>{const _0x5e6379=_0x350510;if(_0xf6009e[_0x5e6379(0xb6)])_0x1c5197++;}}),_0x1c5197===0x0;}constructor(_0x3daec3){const _0x38562c=_0x21aa2f;_0x3daec3=_0x3daec3||{},super(),this[_0x38562c(0xfe)]=_0x3daec3['existing'],this['_available']=_0x3daec3[_0x38562c(0xfd)],this[_0x38562c(0x215)]=_0x3daec3[_0x38562c(0x19f)],this[_0x38562c(0x157)]=_0x3daec3[_0x38562c(0x126)],this[_0x38562c(0x138)]=_0x3daec3['titlePlural'],this[_0x38562c(0xf4)]=_0x3daec3[_0x38562c(0x1c3)],this[_0x38562c(0xb9)]=null,Object['assign'](this['__state'][_0x38562c(0x1d4)],this[_0x38562c(0x209)]());}get[_0x21aa2f(0x126)](){const _0x57962c=_0x21aa2f;return this[_0x57962c(0x157)];}[_0x21aa2f(0x183)](_0x4c1fb6){const _0x131b57=_0x21aa2f;this['_lastChoiceMeta']={'isActive':!![],'children':[]},this[_0x131b57(0xa5)](_0x4c1fb6,MiscUtil[_0x131b57(0xca)](this['_available']),this[_0x131b57(0xb9)],![]);}[_0x21aa2f(0xa5)](_0x38be2d,_0x336e13,_0xfefd26,_0x3d3045){const _0x308fb9=_0x21aa2f,_0x272406=_0x336e13['filter'](_0x1a4d51=>typeof _0x1a4d51==='string')[_0x308fb9(0x9f)](SortUtil[_0x308fb9(0x1fc)]);if(!_0x3d3045){const _0x393677=_0x272406[_0x308fb9(0xf7)](_0x531bb2=>{const _0x5860f1=_0x308fb9;return _0xfefd26[_0x5860f1(0x1a8)][_0x5860f1(0x145)]({'isActive':!![],'value':_0x531bb2}),_0x531bb2[_0x5860f1(0x1c9)]();});_0x38be2d[_0x308fb9(0x17a)]('<div>'+_0x393677['join'](',\x20')+_0x308fb9(0x91));}else _0x272406['forEach'](_0x48bf73=>{const _0x5a90f1=_0x308fb9,_0x41cacc=$(_0x5a90f1(0x110))[_0x5a90f1(0x18f)](()=>{const _0x33db3a=_0x5a90f1;if(_0x41cacc['prop'](_0x33db3a(0x1a7))){const _0x1fbf87=_0xfefd26[_0x33db3a(0x1a8)]['filter'](_0x160fd1=>_0x160fd1[_0x33db3a(0x87)]&&_0x160fd1['isActive']())[_0x33db3a(0x1b5)];if(_0x1fbf87>_0xfefd26['count']){const _0x81292d=_0xfefd26[_0x33db3a(0x1fb)]||_0xfefd26[_0x33db3a(0x1a8)][_0x33db3a(0x128)](_0x58b1e7=>_0x58b1e7[_0x33db3a(0x87)])[_0x33db3a(0x20e)]();_0x81292d[_0x33db3a(0x13f)](![]);}_0xfefd26[_0x33db3a(0x1fb)]=_0x17a196;}else{if(_0xfefd26[_0x33db3a(0x1fb)]===_0x17a196)_0xfefd26[_0x33db3a(0x1fb)]=null;}this[_0x33db3a(0x1e4)][_0x33db3a(0x1d4)]=this['_getOutputObject']();}),_0x17a196={'isActive':()=>_0x41cacc['prop'](_0x5a90f1(0x1a7))?_0x48bf73:null,'value':_0x48bf73,'isChoosable':!![],'setActive':_0x4897d3=>_0x41cacc[_0x5a90f1(0x19f)](_0x5a90f1(0x1a7),_0x4897d3)};return _0xfefd26[_0x5a90f1(0x1a8)][_0x5a90f1(0x145)](_0x17a196),$$`<label class="py-1 stripe-even flex-v-center">
-						${_0x41cacc}
-						<span>${_0x48bf73[_0x5a90f1(0x1c9)]()}</span>
-					</label>`[_0x5a90f1(0x95)](_0x38be2d);});_0x336e13[_0x308fb9(0x128)](_0x2e63ea=>typeof _0x2e63ea!==_0x308fb9(0x179))[_0x308fb9(0x202)]((_0x5d15b9,_0x37460d)=>{const _0xccbbdc=_0x308fb9;if(!_0x5d15b9[_0xccbbdc(0xb6)])throw new Error(_0xccbbdc(0x1b9)+Object[_0xccbbdc(0x103)](_0x5d15b9)[_0xccbbdc(0xe0)](',\x20')+'\x22');if(_0x3d3045){const _0x56cdbd=$(_0xccbbdc(0xdf))[_0xccbbdc(0x122)](()=>{const _0x14fcac=_0xccbbdc;_0xfefd26[_0x14fcac(0x1a8)][_0x14fcac(0x202)](_0x95c7=>_0x95c7[_0x14fcac(0x1e0)]=![]),_0x3a70f0[_0x14fcac(0x1e0)]=!![],this[_0x14fcac(0x1e4)][_0x14fcac(0x1d4)]=this['_getOutputObject']();}),_0x3a70f0={'isActive':![],'children':[]},_0x53b19b=$(_0xccbbdc(0x182));this['_render_recurse'](_0x53b19b,_0x5d15b9['choose']['from'],_0x3a70f0,!![]),$$`<div class="flex-col pl-2 stripe-even">
-						<div class="flex-v-center my-1">${_0x56cdbd}</div>
-						${_0x53b19b}
-					</div>`;return;}const _0x4021a5=_0x5d15b9[_0xccbbdc(0xb6)][_0xccbbdc(0x133)]||0x1,_0x2ce35f={'isActive':!![],'children':[],'count':_0x4021a5,'lastChecked':null};_0xfefd26[_0xccbbdc(0x1a8)]['push'](_0x2ce35f);const _0x19c4f5=$(_0xccbbdc(0xd4)+(_0x272406[_0xccbbdc(0x1b5)]||_0x37460d>0x0?'<hr\x20class=\x22hr-2\x20hr--dotted\x22>':'')+_0xccbbdc(0x16a)+_0x4021a5+'\x20'+(_0x4021a5===0x1?this['_titleSingle']:this[_0xccbbdc(0x138)])+_0xccbbdc(0x152))[_0xccbbdc(0x95)](_0x38be2d);this[_0xccbbdc(0xa5)](_0x19c4f5,_0x5d15b9[_0xccbbdc(0xb6)][_0xccbbdc(0xdd)],_0x2ce35f,!![]);});}[_0x21aa2f(0x18d)](){const _0x1ca293=_0x21aa2f;return this[_0x1ca293(0x1ec)][_0x1ca293(0x18d)](this[_0x1ca293(0x20f)]);}['_getOutputSet'](){const _0xf501c4=_0x21aa2f,_0x36812b=new Set(this[_0xf501c4(0xfe)][this[_0xf501c4(0x215)]]||[]);if(this[_0xf501c4(0xb9)])this[_0xf501c4(0x1f3)](_0x36812b,this[_0xf501c4(0xb9)]);else DataConverter[_0xf501c4(0x1f0)][_0xf501c4(0x11e)](this['_available'],{'string':_0x487d46=>{const _0x190ad4=_0xf501c4;_0x36812b[_0x190ad4(0xbb)](_0x487d46);}});return _0x36812b;}[_0x21aa2f(0x1f3)](_0x50bafc,_0x28547a){const _0x5e7145=_0x21aa2f;if(!_0x28547a[_0x5e7145(0x1e0)])return;const _0x5e60bc=_0x28547a[_0x5e7145(0x1e0)]===!![]||_0x28547a[_0x5e7145(0x1e0)]();if(!_0x5e60bc)return;if(_0x28547a[_0x5e7145(0x1de)])_0x50bafc['add'](_0x28547a[_0x5e7145(0x1de)]);if(_0x28547a['children'])_0x28547a[_0x5e7145(0x1a8)][_0x5e7145(0x202)](_0x145689=>this[_0x5e7145(0x1f3)](_0x50bafc,_0x145689));}[_0x21aa2f(0x209)](){const _0x542e95=_0x21aa2f;return[...this[_0x542e95(0x143)]()][_0x542e95(0x9f)](SortUtil[_0x542e95(0x1fc)])[_0x542e95(0x90)](_0x578eaf=>({[_0x578eaf]:!![]}));}[_0x21aa2f(0x204)](){const _0x4353e8=_0x21aa2f;let _0x4a3728=!![];return{'isFormComplete':_0x4a3728,'data':{[this['_prop']]:MiscUtil[_0x4353e8(0xca)](this[_0x4353e8(0x1e4)]['readonly_selectedValues'])}};}[_0x21aa2f(0x10f)](){return{'readonly_selectedValues':{}};}}class Charactermancer_DamageImmunitySelect extends Charactermancer_ImmResVulnSelect{static['getExisting'](_0x4f4044){const _0x2b19d5=_0x21aa2f;return MiscUtil[_0x2b19d5(0xca)]([_0x4f4044?.[_0x2b19d5(0x1dc)]?.['value']||[]]);}constructor(_0x2a5643){const _0x48ceb6=_0x21aa2f;_0x2a5643=_0x2a5643||{},super({..._0x2a5643,'modalTitle':_0x48ceb6(0x187),'titlePlural':_0x48ceb6(0x187),'titleSingle':_0x48ceb6(0x213),'prop':'immune'});}}class Charactermancer_DamageResistanceSelect extends Charactermancer_ImmResVulnSelect{static['getExisting'](_0x22401f){const _0x2dfb19=_0x21aa2f;return MiscUtil[_0x2dfb19(0xca)]([_0x22401f?.['resist']?.['value']||[]]);}constructor(_0x407bac){const _0x3754c5=_0x21aa2f;_0x407bac=_0x407bac||{},super({..._0x407bac,'modalTitle':_0x3754c5(0x164),'titlePlural':_0x3754c5(0x164),'titleSingle':'Damage\x20Resistance','prop':_0x3754c5(0x1dd)});}}class Charactermancer_DamageVulnerabilitySelect extends Charactermancer_ImmResVulnSelect{static[_0x21aa2f(0x186)](_0x2a722a){const _0x45463c=_0x21aa2f;return MiscUtil['copy']([_0x2a722a?.[_0x45463c(0x154)]?.['value']||[]]);}constructor(_0x125ccc){const _0x26a7a6=_0x21aa2f;_0x125ccc=_0x125ccc||{},super({..._0x125ccc,'modalTitle':_0x26a7a6(0xad),'titlePlural':_0x26a7a6(0xad),'titleSingle':_0x26a7a6(0xb5),'prop':_0x26a7a6(0x154)});}}class Charactermancer_ConditionImmunitySelect extends Charactermancer_ImmResVulnSelect{static[_0x21aa2f(0x186)](_0x13a0b4){const _0x6a5b6a=_0x21aa2f;return[_0x13a0b4?.[_0x6a5b6a(0x1b7)]?.[_0x6a5b6a(0x1de)]||[]][_0x6a5b6a(0xf7)](_0x2fafd9=>_0x2fafd9==='diseased'?_0x6a5b6a(0xe4):_0x2fafd9);}constructor(_0x5f12c6){const _0x30864d=_0x21aa2f;_0x5f12c6=_0x5f12c6||{},super({..._0x5f12c6,'modalTitle':_0x30864d(0x1d0),'titlePlural':_0x30864d(0x1d0),'titleSingle':'Condition\x20Immunity','prop':_0x30864d(0x1b7)});}}class Charactermancer_ExpertiseSelect extends Charactermancer_SkillSaveProficiencySelect{static['getExisting'](_0x126d38){const _0x2d5eec=_0x21aa2f,_0x37bb71=Object['entries'](Charactermancer_SkillProficiencySelect[_0x2d5eec(0x186)]({'skillProficiencies':_0x126d38[_0x2d5eec(0x1cc)]}))[_0x2d5eec(0x128)](([,_0xdbde84])=>Number(_0xdbde84)===0x2)[_0x2d5eec(0x90)](([_0x263c6c,_0x5273c5])=>({[_0x263c6c]:_0x5273c5})),_0x388542={};return{..._0x37bb71,..._0x388542};}static[_0x21aa2f(0xd7)]({actor:actor=null}={}){const _0x10b2f3=_0x21aa2f;if(!actor)return;return{'existingSkillProficiencies':Charactermancer_SkillProficiencySelect['getExisting']({'skillProficiencies':MiscUtil[_0x10b2f3(0xdb)](actor,_0x10b2f3(0xc3),'data',_0x10b2f3(0xa2))}),'existingToolProficiencies':Charactermancer_ToolProficiencySelect[_0x10b2f3(0x186)]({'toolProficiencies':MiscUtil[_0x10b2f3(0xdb)](actor,'data',_0x10b2f3(0xc3),_0x10b2f3(0x127),_0x10b2f3(0x19c))})};}static[_0x21aa2f(0x18d)](_0x493be8){const _0x43be45=_0x21aa2f;if(!_0x493be8?.[_0x43be45(0x1b5)])return!![];return _0x493be8['length']===0x1&&!_0x493be8[0x0][_0x43be45(0xb6)]&&!_0x493be8[0x0][_0x43be45(0x194)]&&!_0x493be8[0x0]['anyProficientTool'];}constructor(_0x3e2cbb){const _0x330342=_0x21aa2f;super({..._0x3e2cbb,'propGroup':new Charactermancer_ProficiencySelect[(_0x330342(0x1ce))]({'prop':_0x330342(0x14e),'propTrackerPulse':_0x330342(0x118),'propTracker':_0x330342(0x14e)}),'modalTitle':_0x330342(0x101),'title':'Expertise','titlePlural':_0x330342(0x101)});}[_0x21aa2f(0x1d2)](_0x2bd381){const _0x36eff5=_0x21aa2f;if(Parser[_0x36eff5(0x1ea)][_0x2bd381])return Renderer[_0x36eff5(0xdb)]()[_0x36eff5(0x183)]('{@skill\x20'+_0x2bd381[_0x36eff5(0x1c9)]()+'}');return _0x2bd381[_0x36eff5(0x1c9)]();}[_0x21aa2f(0x1c6)](_0x72303c,_0x39df0a){const _0x475a66=_0x21aa2f;switch(_0x72303c){case _0x475a66(0x194):return _0x475a66(0x147)+(_0x39df0a||0x1)+_0x475a66(0x16e)+(_0x39df0a>0x1?_0x475a66(0x1d8):'proficiency');case _0x475a66(0x1d5):return _0x475a66(0x147)+(_0x39df0a||0x1)+_0x475a66(0x181)+(_0x39df0a>0x1?_0x475a66(0x1d8):_0x475a66(0x8a));default:return super[_0x475a66(0x1c6)](_0x72303c,_0x39df0a);}}[_0x21aa2f(0x140)](){const _0x5233de=_0x21aa2f;return this[_0x5233de(0x20f)]['map'](_0x140224=>Object[_0x5233de(0x103)](_0x140224)[_0x5233de(0x128)](_0xa6e070=>this[_0x5233de(0xed)](_0xa6e070)))[_0x5233de(0x1a9)]();}[_0x21aa2f(0xed)](_0x50fc1b){const _0x9727f6=_0x21aa2f;return _0x50fc1b!=='anyProficientSkill'&&_0x50fc1b!==_0x9727f6(0x1d5);}[_0x21aa2f(0xe5)](_0x18c3d1){const _0x2496e7=_0x21aa2f;return _0x18c3d1===_0x2496e7(0x194)||Object['keys'](Parser[_0x2496e7(0x1ea)])[_0x2496e7(0x15d)](_0x18c3d1);}[_0x21aa2f(0x1e5)](_0x3dc90e){const _0xb8cd0f=_0x21aa2f;this[_0xb8cd0f(0x134)]={'cleanup':()=>{const _0x1f95f0=_0xb8cd0f;this[_0x1f95f0(0x134)]['_fnsCleanup']['forEach'](_0xe12a44=>_0xe12a44());},'_fnsCleanup':[]};const _0x4ced95=Object['keys'](_0x3dc90e)[_0xb8cd0f(0x17e)](_0x57a332=>this[_0xb8cd0f(0xed)](_0x57a332))?this[_0xb8cd0f(0xa6)](this[_0xb8cd0f(0x1ff)],_0x3dc90e):null;let _0x5deff7=_0x4ced95!=null;if(_0x5deff7&&_0x3dc90e[_0xb8cd0f(0x194)])(_0x5deff7=![])||this[_0xb8cd0f(0x1ff)][_0xb8cd0f(0x17a)](_0xb8cd0f(0x1c2));const _0x2c47b0=_0x3dc90e[_0xb8cd0f(0x194)]?this['_render_renderPtChooseAnyProficientSkill'](this[_0xb8cd0f(0x1ff)],_0x3dc90e):null;_0x5deff7=_0x5deff7||_0x2c47b0!=null;if(_0x5deff7&&_0x3dc90e['anyProficientTool'])(_0x5deff7=![])||this[_0xb8cd0f(0x1ff)][_0xb8cd0f(0x17a)](_0xb8cd0f(0x1c2));const _0x6c848a=_0x3dc90e[_0xb8cd0f(0x1d5)]?this['_render_renderPtChooseAnyProficientTool'](this[_0xb8cd0f(0x1ff)],_0x3dc90e):null;this[_0xb8cd0f(0xb8)]=()=>this['_hk_updatePtsExisting'](_0x4ced95,_0x2c47b0,_0x6c848a);}[_0x21aa2f(0x109)](_0x58e7a3){const _0x4e6910=_0x21aa2f;return{'propAnyProficientSkill':_0x4e6910(0xaf)+_0x58e7a3,'propAnyProficientTool':_0x4e6910(0x100)+_0x58e7a3};}[_0x21aa2f(0xee)](_0x4104ca,_0x18a982){const _0x3b17ce=_0x21aa2f;return this[_0x3b17ce(0x1b8)]({'$stgGroup':_0x4104ca,'profSet':_0x18a982,'propProfSet':_0x3b17ce(0x194),'propIxProps':_0x3b17ce(0xc7),'fnGetValues':this[_0x3b17ce(0x99)][_0x3b17ce(0x1a5)](this),'propPulse':_0x3b17ce(0xac),'titleRow':_0x3b17ce(0x150)});}['_render_renderPtChooseAnyProficientTool'](_0x13be52,_0x25c770){const _0x5b3cd3=_0x21aa2f;return this[_0x5b3cd3(0x1b8)]({'$stgGroup':_0x13be52,'profSet':_0x25c770,'propProfSet':_0x5b3cd3(0x1d5),'propIxProps':'propAnyProficientTool','fnGetValues':this[_0x5b3cd3(0xf3)]['bind'](this),'propPulse':'pulseTools','titleRow':'Existing\x20Tool'});}[_0x21aa2f(0x1b8)]({$stgGroup:_0x26d2b8,profSet:_0x823f49,propProfSet:_0x3a54e6,propIxProps:_0x48918d,fnGetValues:_0x5d9b40,propPulse:_0x3c3941,titleRow:_0x378736}){const _0x582ba7=_0x21aa2f,_0x4d7897=Number(_0x823f49[_0x3a54e6]||0x1),_0x8616b=$(_0x582ba7(0x139))['appendTo'](_0x26d2b8),_0x1fc428=[];for(let _0x218cd3=0x0;_0x218cd3<_0x4d7897;++_0x218cd3){const _0x257893=this['_getProps'](_0x218cd3),_0x501829=ComponentUiUtil[_0x582ba7(0x1f5)](this,_0x257893[_0x48918d],{'values':_0x5d9b40(),'isAllowNull':!![],'asMeta':!![],'fnDisplay':_0x40385d=>_0x40385d[_0x582ba7(0x1c9)]()});this[_0x582ba7(0x134)][_0x582ba7(0x205)][_0x582ba7(0x145)](_0x501829[_0x582ba7(0xa1)]);const _0x214d4b=$(_0x582ba7(0x17f)),_0x5b74a2=()=>{const _0x50eb7f=_0x582ba7,_0x9c0a22=this[_0x50eb7f(0x1e4)][_0x257893[_0x48918d]],[_0x1d7e59,_0x1e3c62]=Object[_0x50eb7f(0xe6)](_0x1fc428)[_0x50eb7f(0xdc)](([,_0x1ffd20])=>_0x1ffd20['includes'](_0x214d4b))||[];if(_0x9c0a22!==_0x1d7e59){if(_0x1e3c62){const _0x2dcc80=_0x1e3c62[_0x50eb7f(0x111)](_0x214d4b);if(~_0x2dcc80)_0x1e3c62['splice'](_0x2dcc80,0x1);if(!_0x1e3c62[_0x50eb7f(0x1b5)])delete _0x1fc428[_0x1d7e59];}}(_0x1fc428[_0x9c0a22]=_0x1fc428[_0x9c0a22]||[])[_0x50eb7f(0x145)](_0x214d4b);};this[_0x582ba7(0xf9)](_0x257893[_0x48918d],_0x5b74a2),this[_0x582ba7(0x134)][_0x582ba7(0x205)][_0x582ba7(0x145)](()=>this[_0x582ba7(0x1c0)](_0x257893[_0x48918d],_0x5b74a2)),_0x5b74a2();const _0x87e51a=()=>_0x501829[_0x582ba7(0x11c)](_0x5d9b40(),{'isResetOnMissing':!![]});if(this[_0x582ba7(0x1db)]){this[_0x582ba7(0x1db)][_0x582ba7(0x1ad)](this,_0x3c3941,_0x87e51a),this['_lastMeta'][_0x582ba7(0x205)][_0x582ba7(0x145)](()=>this[_0x582ba7(0x1db)][_0x582ba7(0x174)](this,_0x3c3941,_0x87e51a));const _0x8eb350=()=>this['_doSetTrackerState']();this['_addHookBase'](_0x257893[_0x48918d],_0x8eb350),this[_0x582ba7(0x134)][_0x582ba7(0x205)]['push'](()=>this['_removeHookBase'](_0x257893[_0x48918d],_0x8eb350));}_0x87e51a(),this[_0x582ba7(0x134)][_0x582ba7(0x205)][_0x582ba7(0x145)](()=>delete this['_state'][_0x257893[_0x48918d]]),$$`<div class="flex-v-center ${_0x218cd3?'mt-2':''}">
-					<div class="mr-2 no-wrap">${_0x378736}:</div>
-					${_0x501829[_0x582ba7(0x18a)]}
-					${_0x214d4b}
-				</div>`['appendTo'](_0x8616b);}return _0x1fc428;}['_getAvailableSkills'](){return this['_getAvailableByType']({'propOtherData':'existingSkillProficiencies','propFeatureTracker':'skills'});}[_0x21aa2f(0xf3)](){const _0x4cfcee=_0x21aa2f;return this[_0x4cfcee(0x88)]({'propOtherData':_0x4cfcee(0x11d),'propFeatureTracker':_0x4cfcee(0x188)});}[_0x21aa2f(0x88)]({propOtherData:_0x408524,propFeatureTracker:_0x4671e5}){const _0x52f507=_0x21aa2f,_0x1887ef=new Set(Object['entries'](this[_0x52f507(0xa4)][_0x408524])[_0x52f507(0x128)](([,_0x1e6647])=>_0x1e6647>=0x1)[_0x52f507(0xf7)](([_0x10adcb])=>_0x10adcb));return this[_0x52f507(0x1db)]&&(this[_0x52f507(0x1db)][_0x52f507(0xd3)](_0x4671e5,{'ignore':this})||[])[_0x52f507(0x202)](_0x40a341=>{const _0x5d2ef8=_0x52f507;Object[_0x5d2ef8(0xe6)](_0x40a341)[_0x5d2ef8(0x128)](([,_0xeebfe6])=>_0xeebfe6)['forEach'](([_0x334644])=>_0x1887ef[_0x5d2ef8(0xbb)](_0x334644));}),[..._0x1887ef]['sort'](SortUtil[_0x52f507(0x1fc)]);}[_0x21aa2f(0x104)](_0x575669,_0x287108,_0x59d4dd){const _0x3145fb=_0x21aa2f,_0x1db364=this[_0x3145fb(0x1db)]?this[_0x3145fb(0x1db)][_0x3145fb(0xd3)](this[_0x3145fb(0x15b)][_0x3145fb(0x211)],{'ignore':this}):null,_0x308f4b=[_0x575669,_0x287108,_0x59d4dd][_0x3145fb(0x128)](Boolean);_0x308f4b['forEach'](_0x178ff6=>{const _0xf725a1=_0x3145fb;Object[_0xf725a1(0xe6)](_0x178ff6)[_0xf725a1(0x202)](([_0x56db4d,_0x28bc29])=>{const _0x40d1ab=_0xf725a1;let _0x5d614b=this[_0x40d1ab(0xfe)]?.[_0x56db4d]||0x0;if(_0x1db364)_0x1db364[_0x40d1ab(0x202)](_0x3f2924=>_0x5d614b=Math[_0x40d1ab(0x8e)](_0x5d614b,_0x3f2924[_0x56db4d]||0x0));_0x28bc29[_0x40d1ab(0x202)](_0xd831d3=>{const _0x1edd6c=_0x40d1ab;_0xd831d3[_0x1edd6c(0x92)](_0x5d614b===0x2?_0x1edd6c(0x13c):'')['toggleClass']('ml-1',_0x5d614b===0x2)[_0x1edd6c(0x1d1)](_0x5d614b===0x2?_0x1edd6c(0x107)+UtilActors[_0x1edd6c(0x1ab)][_0x5d614b]+'\x22></i>)':'');});});});}[_0x21aa2f(0x189)](){const _0x498ba0=_0x21aa2f,_0x389afe=this[_0x498ba0(0x15f)]();this[_0x498ba0(0x1db)][_0x498ba0(0x10c)](this,{[this[_0x498ba0(0x15b)][_0x498ba0(0x211)]]:_0x389afe['data']?.[this['_propGroup'][_0x498ba0(0x19f)]],'skills':_0x389afe[_0x498ba0(0xc3)]?.[_0x498ba0(0x1cc)],'tools':_0x389afe[_0x498ba0(0xc3)]?.['toolProficiencies']});}[_0x21aa2f(0x15f)](){const _0x9d8602=_0x21aa2f,_0x39ac52={},_0x3b99f4={},_0x38600={};let _0x5119f7=!![];const _0x2748ef=this['_available'][this[_0x9d8602(0x1e4)][_0x9d8602(0xb4)]];return Object['entries'](_0x2748ef)[_0x9d8602(0x202)](([_0x507215,_0x28e954])=>{const _0x400e66=_0x9d8602;if(_0x507215===_0x400e66(0x194)||_0x507215===_0x400e66(0x1d5)){const _0x445c53=Number(_0x28e954||0x1);for(let _0x9ae791=0x0;_0x9ae791<_0x445c53;++_0x9ae791){const {propAnyProficientSkill:_0x5684ef,propAnyProficientTool:_0x58c48a}=this[_0x400e66(0x109)](_0x9ae791),_0x248958=this[_0x400e66(0xe5)](_0x507215)?_0x5684ef:_0x58c48a,_0x50c865=this[_0x400e66(0x1e4)][_0x248958];if(_0x50c865==null)return _0x5119f7=![];(this[_0x400e66(0xe5)](_0x507215)?_0x39ac52:_0x3b99f4)[_0x50c865]=_0x38600[_0x50c865]=0x2;}return;}(this[_0x400e66(0xe5)](_0x507215)?_0x39ac52:_0x3b99f4)[_0x507215]=_0x38600[_0x507215]=0x2;}),{'isFormComplete':_0x5119f7,'data':{'skillProficiencies':_0x39ac52,'toolProficiencies':_0x3b99f4,'expertise':_0x38600}};}[_0x21aa2f(0x204)](){return this['_getFormData']();}['_getDefaultState'](){return{'ixSet':0x0};}}export{Charactermancer_FeatureSourceTracker,Charactermancer_AbilityScoreSelect,Charactermancer_Util,Charactermancer_SkillProficiencySelect,Charactermancer_LanguageProficiencySelect,Charactermancer_ToolProficiencySelect,Charactermancer_LanguageToolProficiencySelect,Charactermancer_ArmorProficiencySelect,Charactermancer_WeaponProficiencySelect,Charactermancer_SavingThrowProficiencySelect,Charactermancer_DamageImmunitySelect,Charactermancer_DamageResistanceSelect,Charactermancer_DamageVulnerabilitySelect,Charactermancer_ConditionImmunitySelect,Charactermancer_ExpertiseSelect};
+			${$wrpRows}
+		</div>`;
+
+		this._lastMeta = {
+			cleanup: () => {
+				fnsCleanup.forEach(it => it());
+			},
+		};
+	}
+
+	isNoChoice () { return this._ability.length === 1 && !this._ability[0].choose; }
+
+	static _getSortedWeights (abilitySet) { return MiscUtil.copy(abilitySet.choose.weighted.weights).sort((a, b) => SortUtil.ascSort(b, a)); }
+	static _getSortedWeightedFrom (abilitySet) { return MiscUtil.copy(abilitySet.choose.weighted.from).sort(SortUtil.ascSortAtts); }
+
+	pGetFormData () {
+		const out = {};
+
+		const abilitySet = this._ability[this._state.ixSet];
+
+		// Add static values
+		Parser.ABIL_ABVS.forEach(ab => { if (abilitySet[ab]) out[ab] = abilitySet[ab]; });
+
+		if (abilitySet.choose) {
+			if (abilitySet.choose.from) {
+				const ixs = ComponentUiUtil.getMetaWrpMultipleChoice_getSelectedIxs(this, "race_asiChoice");
+				ixs.map(it => abilitySet.choose.from[it]).forEach(ab => out[ab] = (out[ab] || 0) + (abilitySet.choose.amount || 1));
+			} else if (abilitySet.choose.weighted) {
+				const from = this.constructor._getSortedWeightedFrom(abilitySet);
+				const weights = this.constructor._getSortedWeights(abilitySet);
+
+				from.forEach((ab, ixAb) => {
+					weights
+						.map((bon, ixBon) => {
+							const {propWeightAbility} = this._getWeightedProps(ixAb, ixBon);
+							if (this._state[propWeightAbility]) out[ab] = (out[ab] || 0) + bon;
+						});
+				});
+			}
+		}
+
+		return {
+			isFormComplete: !!this._state[ComponentUiUtil.getMetaWrpMultipleChoice_getPropIsAcceptable("race_asiChoice")],
+			data: out,
+		};
+	}
+
+	_getDefaultState () {
+		return {
+			ixSet: 0,
+		};
+	}
+}
+
+class Charactermancer_ProficiencySelect extends BaseComponent {}
+
+Charactermancer_ProficiencySelect.PropGroup = class {
+	constructor ({prop, propTrackerPulse, propTracker}) {
+		this.prop = prop;
+		this.propTrackerPulse = propTrackerPulse;
+		this.propTracker = propTracker;
+	}
+};
+
+class Charactermancer_SkillSaveProficiencySelect extends Charactermancer_ProficiencySelect {
+	// region External
+	/**
+	 * @param opts
+	 * @param opts.existingFvtt
+	 * @param opts.available
+	 * @param [opts.titlePrefix]
+	 */
+	static async pGetUserInput (opts) {
+		opts = opts || {};
+
+		if (!opts.available) return {isFormComplete: true, data: {}};
+
+		const comp = new this({
+			...opts,
+			existing: this.getExisting(opts.existingFvtt),
+			existingFvtt: opts.existingFvtt,
+		});
+		if (comp.isNoChoice()) return comp.pGetFormData();
+
+		return UtilApplications.pGetImportCompModalFormData({comp});
+	}
+
+	/**
+	 * @param existingFvtt
+	 * @return {*}
+	 */
+	static getExisting (existingFvtt) { throw new Error(`Unimplemented!`); }
+
+	static isNoChoice (available) {
+		if (!available?.length) return true; // If there's no data, there's no choice
+		return available.length === 1 && !available[0].choose;
+	}
+	// endregion
+
+	/**
+	 * @param opts
+	 * @param opts.propGroup Object of the form `{prop, propTracker, propTrackerPulse}`
+	 * @param opts.existing Existing proficiencies, in 5etools format.
+	 * @param opts.existingFvtt Existing proficiencies, in a map of `prop` -> `Foundry sheet data` format.
+	 * @param opts.available
+	 * @param opts.allValuesMaybeInUse
+	 * @param [opts.titlePrefix]
+	 * @param [opts.featureSourceTracker]
+	 * @param [opts.modalTitle]
+	 * @param [opts.title]
+	 * @param [opts.titlePlural]
+	 */
+	constructor (opts) {
+		opts = opts || {};
+		super();
+
+		this._propGroup = opts.propGroup;
+		this._existing = opts.existing;
+		this._existingFvtt = opts.existingFvtt;
+		this._available = opts.available;
+		this._titlePrefix = opts.titlePrefix;
+		this._featureSourceTracker = opts.featureSourceTracker;
+		this._modalTitle = opts.modalTitle;
+		this._title = opts.title;
+		this._titlePlural = opts.titlePlural;
+		this._allValuesMaybeInUse = opts.allValuesMaybeInUse;
+
+		this._hkUpdateExisting = null;
+		this._$stgGroup = null;
+		this._lastMeta = null;
+	}
+
+	get modalTitle () { return this._modalTitle; }
+
+	/** @return {*} */
+	_getStaticDisplay (prof) { throw new Error(`Unimplemented!`); }
+	/** @return {*} */
+	_getMultiChoiceDisplay ($ptsExisting, profOrObj) { throw new Error(`Unimplemented!`); }
+	/** @return {*} */
+	_getMultiChoiceTitle (cpyProfSet, count) { throw new Error(`Unimplemented!`); }
+
+	_getNonStaticDisplay (key, value) {
+		switch (key) {
+			case "choose": return this._getChooseFromDisplay(key, value);
+			default: throw new Error(`Unhandled non-static key "${key}" (value was ${JSON.stringify(value)})`);
+		}
+	}
+
+	_getChooseFromDisplay (key, value) {
+		return `Choose ${value.count || 1} from ${value.from.map(it => this._getStaticDisplay(it)).join(", ")}`;
+	}
+
+	render ($wrp) {
+		const $stgSelGroup = this._render_$getStgSelGroup();
+		this._$stgGroup = $$`<div class="flex-col"></div>`;
+
+		this._addHookBase("ixSet", this._hk_ixSet.bind(this));
+		this._hk_ixSet();
+
+		$$($wrp)`
+			${$stgSelGroup}
+			${this._$stgGroup}
+		`;
+	}
+
+	_render_$getStgSelGroup () {
+		if (this._available.length <= 1) return null;
+
+		const $selIxSet = ComponentUiUtil.$getSelEnum(
+			this,
+			"ixSet",
+			{
+				values: this._available.map((_, i) => i),
+				fnDisplay: ix => {
+					const v = this._available[ix];
+
+					const out = [];
+
+					out.push(
+						Object.keys(v)
+							.sort(SortUtil.ascSortLower)
+							.filter(it => this._isStaticKey(it))
+							.map(k => this._getStaticDisplay(k))
+							.join(", "),
+					);
+
+					Object.keys(v)
+						.filter(it => !this._isStaticKey(it))
+						.forEach(k => out.push(this._getNonStaticDisplay(k, v[k])));
+
+					return out.filter(Boolean).join("; ");
+				},
+			},
+		);
+
+		if (this._featureSourceTracker) this._addHookBase("ixSet", () => this._doSetTrackerState());
+
+		return $$`<div class="w-100 mb-2 flex-vh-center">
+			${$selIxSet}
+		</div>`;
+	}
+
+	_doSetTrackerState () {
+		this._featureSourceTracker.setState(this, {[this._propGroup.propTracker]: this._getFormData().data?.[this._propGroup.prop]});
+	}
+
+	static _getSortedProfSet (profSet) {
+		if (!profSet) return profSet;
+
+		profSet = MiscUtil.copy(profSet);
+
+		if (profSet.choose?.from) {
+			profSet.choose.from.sort((a, b) => {
+				if (typeof a === "object" && typeof b === "object") return 0;
+				if (typeof a === "object") return 1;
+				if (typeof b === "object") return -1;
+				return SortUtil.ascSortLower(a, b);
+			});
+		}
+
+		return profSet;
+	}
+
+	_render_renderPtStatic ($stgGroup, profSet) {
+		const $ptsExisting = {};
+
+		const profList = this._getStaticKeys()
+			.filter(key => profSet[key]);
+
+		const $wrps = profList
+			.map((it, i) => {
+				const $ptExisting = $(`<div class="ve-small veapp__msg-warning inline-block"></div>`);
+				($ptsExisting[it] = $ptsExisting[it] || []).push($ptExisting);
+				const isNotLast = i < profList.length - 1;
+				return $$`<div class="inline-block ${isNotLast ? "mr-1" : ""}">${this._getStaticDisplay(it)}${$ptExisting}${isNotLast ? `,` : ""}</div>`;
+			});
+
+		$$`<div class="block">
+			${$wrps}
+		</div>`.appendTo($stgGroup);
+
+		return $ptsExisting;
+	}
+
+	_getStaticKeys () { return this._allValuesMaybeInUse; }
+
+	_hk_ixSet () {
+		this._$stgGroup.empty();
+
+		if (this._featureSourceTracker && this._hkUpdateExisting) this._featureSourceTracker.removeHook(this, this._propGroup.propTrackerPulse, this._hkUpdateExisting);
+		if (this._lastMeta) this._lastMeta.cleanup();
+
+		const profSet = this._available[this._state.ixSet];
+
+		if (this._featureSourceTracker) this._doSetTrackerState();
+
+		this._hk_ixSet_renderPts(profSet);
+
+		if (this._featureSourceTracker) this._featureSourceTracker.addHook(this, this._propGroup.propTrackerPulse, this._hkUpdateExisting);
+		this._hkUpdateExisting();
+	}
+
+	_hk_ixSet_renderPts (profSet) {
+		const $ptsExistingStatic = Object.keys(profSet).some(it => this._isStaticKey(it)) ? this._render_renderPtStatic(this._$stgGroup, profSet) : null;
+
+		if ($ptsExistingStatic && profSet.choose) this._$stgGroup.append(`<hr class="hr-2 hr--dotted">`);
+		const $ptsExistingChooseFrom = profSet.choose ? this._render_renderPtChooseFrom(this._$stgGroup, profSet) : null;
+
+		this._hkUpdateExisting = () => this._hk_updatePtsExisting($ptsExistingStatic, $ptsExistingChooseFrom);
+	}
+
+	_isStaticKey (key) { return this._allValuesMaybeInUse.includes(key); }
+
+	_hk_updatePtsExisting ($ptsExistingStatic, $ptsExistingChoose) {
+		const otherStates = this._featureSourceTracker ? this._featureSourceTracker.getStatesForKey(this._propGroup.propTracker, {ignore: this}) : null;
+
+		const $ptsExistings = [$ptsExistingStatic, $ptsExistingChoose].filter(Boolean);
+
+		this._allValuesMaybeInUse
+			.forEach(prof => {
+				$ptsExistings.forEach($ptsExisting => {
+					if (!$ptsExisting[prof]) return;
+
+					// Value from sheet
+					let maxExisting = this._existing?.[prof] || 0;
+
+					// Value from other networked components
+					if (otherStates) otherStates.forEach(otherState => maxExisting = Math.max(maxExisting, otherState[prof] || 0));
+
+					if (maxExisting) {
+						const helpText = maxExisting === 1
+							? `Proficient from Another Source`
+							: maxExisting === 2 ? `Proficient with Expertise from Another Source` : `Half-Proficient from Another Source`;
+
+						$ptsExisting[prof]
+							.forEach($ptExisting => {
+								$ptExisting
+									.title(helpText)
+									.addClass("ml-1")
+									.html(`(<i class="fas fa-fw ${UtilActors.PROF_TO_ICON_CLASS[maxExisting]}"></i>)`);
+							});
+					} else {
+						$ptsExisting[prof]
+							.forEach($ptExisting => {
+								$ptExisting
+									.title("")
+									.removeClass("ml-1")
+									.html("");
+							});
+					}
+				});
+			});
+	}
+
+	_render_renderPtChooseFrom ($stgGroup, profSet) {
+		const count = profSet.choose.count || 1;
+
+		const cpyProfSet = this.constructor._getSortedProfSet(profSet);
+
+		const $ptsExisting = {};
+		const multiChoiceMeta = ComponentUiUtil.getMetaWrpMultipleChoice(
+			this,
+			"proficiencyChoice",
+			{
+				count,
+				values: cpyProfSet.choose.from,
+				fnDisplay: profOrObj => this._getMultiChoiceDisplay($ptsExisting, profOrObj),
+			},
+		);
+
+		// region Networking with other proficiency select components
+		let hkSetTrackerInfo = null;
+		if (this._featureSourceTracker) {
+			hkSetTrackerInfo = () => this._doSetTrackerState();
+			this._addHookBase(multiChoiceMeta.propPulse, hkSetTrackerInfo);
+		}
+		// endregion
+
+		$stgGroup.append(`<div class="mb-1">${this._getMultiChoiceTitle(cpyProfSet, count)}:</div>`);
+		multiChoiceMeta.$ele.appendTo($stgGroup);
+
+		this._lastMeta = {
+			cleanup: () => {
+				multiChoiceMeta.cleanup();
+				if (hkSetTrackerInfo) this._removeHookBase(multiChoiceMeta.propPulse, hkSetTrackerInfo);
+			},
+		};
+
+		return $ptsExisting;
+	}
+
+	isNoChoice () { return this.constructor.isNoChoice(this._available); }
+
+	_getFormData () {
+		const out = {};
+
+		const profSet = this._available[this._state.ixSet];
+
+		const cpyProfSet = this.constructor._getSortedProfSet(profSet);
+
+		// Add static values
+		this._allValuesMaybeInUse.filter(name => cpyProfSet[name]).map(name => out[name] = 1);
+
+		if (cpyProfSet.choose) {
+			const ixs = ComponentUiUtil.getMetaWrpMultipleChoice_getSelectedIxs(this, "proficiencyChoice");
+			ixs.map(it => cpyProfSet.choose.from[it]).forEach(name => out[name] = 1);
+		}
+
+		return {
+			isFormComplete: !!this._state[ComponentUiUtil.getMetaWrpMultipleChoice_getPropIsAcceptable("proficiencyChoice")],
+			data: {
+				[this._propGroup.prop]: out,
+			},
+		};
+	}
+
+	pGetFormData () { return this._getFormData(); }
+
+	_getDefaultState () {
+		return {
+			ixSet: 0,
+		};
+	}
+}
+
+class Charactermancer_OtherProficiencySelect extends Charactermancer_ProficiencySelect {
+	// region External
+	/**
+	 * @param opts
+	 * @param opts.existingFvtt
+	 * @param opts.available
+	 * @param [opts.titlePrefix]
+	 */
+	static async pGetUserInput (opts) {
+		opts = opts || {};
+
+		if (!opts.available) return {isFormComplete: true, data: {}};
+
+		const comp = new this({
+			...opts,
+			existing: this.getExisting(opts.existingFvtt),
+			existingFvtt: opts.existingFvtt,
+		});
+		if (comp.isNoChoice()) return comp.pGetFormData();
+
+		return UtilApplications.pGetImportCompApplicationFormData({
+			comp,
+			width: 640,
+			isAutoResize: true,
+		});
+	}
+
+	static getExistingFvttFromActor (actor) {
+		return {
+			skillProficiencies: MiscUtil.get(actor, "data", "data", "skills"),
+			toolProficiencies: MiscUtil.get(actor, "data", "data", "traits", "toolProf"),
+			languageProficiencies: MiscUtil.get(actor, "data", "data", "traits", "languages"),
+			armorProficiencies: MiscUtil.get(this._actor, "data", "data", "traits", "armorProf"),
+			weaponProficiencies: MiscUtil.get(this._actor, "data", "data", "traits", "weaponProf"),
+			savingThrowProficiencies: MiscUtil.get(this._actor, "data", "data", "abilities"),
+		};
+	}
+
+	static getExisting (existingFvtt) {
+		return {
+			skillProficiencies: this._getExistingSkillProficiencies(existingFvtt),
+			toolProficiencies: this._getExistingProficiencies({
+				existingProficienciesSetFvtt: existingFvtt?.toolProficiencies,
+				vetToFvttProfs: UtilActors.VALID_TOOL_PROFICIENCIES,
+				allProfsVet: UtilActors.TOOL_PROFICIENCIES,
+			}),
+			languageProficiencies: this._getExistingProficiencies({
+				existingProficienciesSetFvtt: existingFvtt?.languageProficiencies,
+				vetToFvttProfs: UtilActors.VALID_LANGUAGES,
+				allProfsVet: Parser.LANGUAGES_ALL,
+			}),
+			armorProficiencies: this._getExistingProficiencies({
+				existingProficienciesSetFvtt: existingFvtt?.armorProficiencies,
+				vetToFvttProfs: UtilActors.VALID_ARMOR_PROFICIENCIES,
+				allProfsVet: UtilActors.ARMOR_PROFICIENCIES,
+			}),
+			weaponProficiencies: this._getExistingProficiencies({
+				existingProficienciesSetFvtt: existingFvtt?.weaponProficiencies,
+				vetToFvttProfs: UtilActors.VALID_WEAPON_PROFICIENCIES,
+				allProfsVet: UtilActors.WEAPON_PROFICIENCIES,
+			}),
+			savingThrowProficiencies: this._getExistingSavingThrowProficiencies(existingFvtt),
+		};
+	}
+
+	static isNoChoice (available) {
+		return this._isNoChoice({available});
+	}
+
+	static _isNoChoice ({available, isAlreadyMapped}) {
+		if (!available?.length) return true; // If there's no data, there's no choice
+
+		if (isAlreadyMapped && !this._isValidAvailableData(available)) throw new Error(`Proficiency data was not valid! Data was:\n${JSON.stringify(available)}`);
+
+		if (!isAlreadyMapped) available = Charactermancer_OtherProficiencySelect._getNormalizedAvailableProficiencies(available);
+
+		return available.length === 1 && !available[0].choose;
+	}
+
+	/** Ensure anything passed in to the "has choice?" checker has already been converted to the "expanded" available data form */
+	static _isValidAvailableData (available) {
+		if (!(available instanceof Array)) return false;
+
+		for (const profSet of available) {
+			const badKeys = Object.keys(profSet).filter(it => it !== "static" && it !== "choose");
+			if (badKeys.length) return false;
+
+			if ((profSet.static || []).filter(it => !it.prop).length) return false;
+			if ((profSet.choose || []).filter(it => it.from && it.from.some(from => !from.prop)).length) return false;
+			if ((profSet.choose || []).filter(it => it.fromFilter && !it.prop).length) return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Convert a `"skillProficiencies"` object to an `"otherProficiencies"` object.
+	 */
+	static getMappedSkillProficiencies (skillProficiencies) {
+		if (!skillProficiencies) return skillProficiencies;
+		return skillProficiencies.map(it => {
+			it = MiscUtil.copy(it);
+			if (it.any) { it.anySkill = it.any; delete it.any; }
+			if (it.choose?.from && CollectionUtil.setEq(new Set(it.choose.from), new Set(Charactermancer_OtherProficiencySelect._ALL_SKILLS))) {
+				it.anySkill = it.choose.count ?? 1;
+				delete it.choose;
+			}
+			this._getMappedProficiencies_expandChoose({proficienciesSet: it, prop: "skillProficiencies"});
+			return it;
+		});
+	}
+
+	/**
+	 * Convert a `"languageProficiencies"` object to an `"otherProficiencies"` object.
+	 */
+	static getMappedLanguageProficiencies (languageProficiencies) {
+		if (!languageProficiencies) return languageProficiencies;
+		return languageProficiencies.map(it => {
+			it = MiscUtil.copy(it);
+			if (it.any) { it.anyLanguage = it.any; delete it.any; }
+			if (it.anyStandard) { it.anyStandardLanguage = it.anyStandard; delete it.anyStandard; }
+			this._getMappedProficiencies_expandChoose({proficienciesSet: it, prop: "languageProficiencies"});
+			this._getMappedProficiencies_expandStatic({proficienciesSet: it, prop: "languageProficiencies"});
+			return it;
+		});
+	}
+
+	/**
+	 * Convert a `"toolProficiencies"` object to an `"otherProficiencies"` object.
+	 */
+	static getMappedToolProficiencies (toolProficiencies) {
+		if (!toolProficiencies) return toolProficiencies;
+		return toolProficiencies.map(it => {
+			it = MiscUtil.copy(it);
+			if (it.any) { it.anyTool = it.any; delete it.any; }
+			if (it.anyArtisans) { it.anyArtisansTool = it.anyArtisans; delete it.anyArtisans; }
+			this._getMappedProficiencies_expandChoose({proficienciesSet: it, prop: "toolProficiencies"});
+			this._getMappedProficiencies_expandStatic({proficienciesSet: it, prop: "toolProficiencies"});
+			return it;
+		});
+	}
+
+	/**
+	 * Convert an `"armorProficiencies"` object to an `"otherProficiencies"` object.
+	 */
+	static getMappedArmorProficiencies (armorProficiencies) {
+		if (!armorProficiencies) return armorProficiencies;
+		return armorProficiencies.map(it => {
+			it = MiscUtil.copy(it);
+			if (it.any) { it.anyArmor = it.any; delete it.any; }
+			this._getMappedProficiencies_expandChoose({proficienciesSet: it, prop: "armorProficiencies"});
+			this._getMappedProficiencies_expandStatic({proficienciesSet: it, prop: "armorProficiencies"});
+			return it;
+		});
+	}
+
+	/**
+	 * Convert a `"weaponProficiencies"` object to an `"otherProficiencies"` object.
+	 */
+	static getMappedWeaponProficiencies (weaponProficiencies) {
+		if (!weaponProficiencies) return weaponProficiencies;
+		return weaponProficiencies.map(it => {
+			it = MiscUtil.copy(it);
+			if (it.any) { it.anyWeapon = it.any; delete it.any; }
+			this._getMappedProficiencies_expandChoose({proficienciesSet: it, prop: "weaponProficiencies"});
+			this._getMappedProficiencies_expandStatic({proficienciesSet: it, prop: "weaponProficiencies"});
+			return it;
+		});
+	}
+
+	/**
+	 * Convert a `"savingThrowProficiencies"` object to an `"otherProficiencies"` object.
+	 */
+	static getMappedSavingThrowProficiencies (savingThrowProficiencies) {
+		if (!savingThrowProficiencies) return savingThrowProficiencies;
+		return savingThrowProficiencies.map(it => {
+			it = MiscUtil.copy(it);
+			if (it.any) { it.anySavingThrow = it.any; delete it.any; }
+			this._getMappedProficiencies_expandChoose({proficienciesSet: it, prop: "savingThrowProficiencies"});
+			this._getMappedProficiencies_expandStatic({proficienciesSet: it, prop: "savingThrowProficiencies"});
+			return it;
+		});
+	}
+
+	static _getMappedProficiencies_expandChoose ({proficienciesSet, prop}) {
+		// (The `proficienciesSet` arg should always be a copy, so we're free to modify it)
+		if (!proficienciesSet.choose) return;
+		if (proficienciesSet.choose.fromFilter) proficienciesSet.choose.prop = prop;
+		proficienciesSet.choose = [proficienciesSet.choose];
+	}
+
+	static _getMappedProficiencies_expandStatic ({proficienciesSet, prop, ignoredKeys}) {
+		Object.entries(proficienciesSet)
+			.forEach(([k, v]) => {
+				if ((ignoredKeys && ignoredKeys.has(k)) || Charactermancer_OtherProficiencySelect._MAPPED_IGNORE_KEYS.has(k)) return;
+
+				if (typeof v === "boolean") { proficienciesSet[k] = {prop}; return; }
+				if (typeof v === "number") { proficienciesSet[k] = {prop, count: v}; return; }
+
+				throw new Error(`Unhandled type "${typeof v}" for value of proficiency "${k}"`);
+			});
+	}
+	// endregion
+
+	static _getExistingFvttProficiencySetsMeta (existingFvtt) {
+		return {
+			existingProficienciesFvttSet: new Set(existingFvtt?.value || []),
+			existingProficienciesFvttSetCustom: new Set((existingFvtt?.custom || "").split(";").map(it => it.trim().toLowerCase()).filter(Boolean)),
+		};
+	}
+
+	/**
+	 * @param opts
+	 * @param opts.existing
+	 * @param opts.available
+	 * @param [opts.titlePrefix]
+	 * @param [opts.featureSourceTracker]
+	 * @param [opts.$elesPreFromGroups]
+	 * @param [opts.$elesPostFromGroups]
+	 */
+	constructor (opts) {
+		opts = opts || {};
+		super();
+
+		this._existing = opts.existing;
+		this._available = Charactermancer_OtherProficiencySelect._getNormalizedAvailableProficiencies(opts.available);
+		this._titlePrefix = opts.titlePrefix;
+		this._featureSourceTracker = opts.featureSourceTracker || new Charactermancer_FeatureSourceTracker();
+		this._$elesPreFromGroups = opts.$elesPreFromGroups;
+		this._$elesPostFromGroups = opts.$elesPostFromGroups;
+
+		this._lastMetas = [];
+		this._hkExisting = null;
+	}
+
+	static _getNormalizedAvailableProficiencies (availProfs) {
+		return availProfs
+			.map(availProfSet => {
+				const out = {};
+
+				Object.entries(availProfSet)
+					.forEach(([k, v]) => {
+						if (!v) return;
+
+						switch (k) {
+							case "choose": {
+								v
+									.forEach(choose => {
+										const mappedCount = choose.count != null && !isNaN(choose.count) ? Number(choose.count) : 1;
+										if (mappedCount <= 0) return;
+
+										const mappedFroms = (choose?.from || [])
+											.map(it => this._getMappedAny({keyAny: it, countRaw: mappedCount}) || this._getNormalizedProficiency(null, it))
+											.filter(Boolean);
+
+										// For e.g. VGM's Hobgoblin
+										const mappedFromFilter = (choose?.fromFilter || "").trim();
+
+										if (!mappedFroms.length && !mappedFromFilter) return;
+										if (mappedFroms.length && mappedFromFilter) throw new Error(`Invalid proficiencies! Only one of "from" and "fromFilter" may be provided. Data was:\n${JSON.stringify(choose)}`);
+
+										const tgt = (out.choose = out.choose || []);
+
+										if (mappedFromFilter) {
+											if (!choose.type && !choose.prop) throw new Error(`"fromFilter" did not have an associated "type"!`);
+											tgt.push({fromFilter: mappedFromFilter, count: mappedCount, prop: choose.prop || this._getNormalizedProficiencyPropFromType(choose.type)});
+											return;
+										}
+
+										if (!mappedFroms.length) return;
+
+										// Merge the results of expanding "any" keys with the results of expanding "standard" keys
+										const subOut = {from: [], count: mappedCount};
+										mappedFroms.forEach(it => {
+											// An expanded "any" key, with its own "from" array (and optional "group" object)
+											if (it.from) {
+												subOut.from = [...subOut.from, ...it.from];
+												if (it.groups) Object.assign((subOut.groups = subOut.groups || {}), it.groups);
+												return;
+											}
+
+											// A standard "name/prop" pair--add it to the array
+											subOut.from.push(it);
+										});
+										tgt.push(subOut);
+									});
+
+								break;
+							}
+
+							case "anySkill":
+							case "anyTool":
+							case "anyArtisansTool":
+							case "anyLanguage":
+							case "anyStandardLanguage":
+							case "anyWeapon":
+							case "anyArmor":
+							case "anySavingThrow": {
+								const mappedAny = this._getMappedAny({keyAny: k, countRaw: v});
+								if (!mappedAny) break;
+								(out.choose = out.choose || []).push(mappedAny);
+								break;
+							}
+
+							default: {
+								if (k === "static") throw new Error(`Property handling for "static" is unimplemented!`);
+
+								if (v?.prop) { (out.static = out.static || []).push({name: k, prop: v.prop}); break; }
+								if (v?.type) { (out.static = out.static || []).push({name: k, prop: this._getNormalizedProficiencyPropFromType(v.type)}); break; }
+
+								const normalized = this._getNormalizedProficiency(k, v);
+								if (normalized) (out.static = out.static || []).push(normalized);
+							}
+						}
+					});
+
+				// Filter any choose-from parts based on any static parts--remove e.g. "Common" as a language choice if
+				//   "Common" is already included as a static language.
+				if (out.static && out.choose) {
+					out.choose.forEach(choose => {
+						if (choose.fromFilter) return;
+
+						choose.from = choose.from.filter(({name, prop}) => !out.static.some(({name: nameStatic, prop: propStatic}) => nameStatic === name && propStatic === prop));
+					});
+				}
+
+				return out;
+			});
+	}
+
+	static _getMappedAny ({keyAny, countRaw}) {
+		const mappedCount = !isNaN(countRaw) ? Number(countRaw) : 1;
+		if (mappedCount <= 0) return null;
+
+		switch (keyAny) {
+			case "anySkill": return {
+				name: mappedCount === 1 ? `Any Skill` : `Any ${mappedCount} Skills`,
+				from: Charactermancer_OtherProficiencySelect._ALL_SKILLS
+					.map(it => ({name: it, prop: "skillProficiencies"})),
+				count: mappedCount,
+			};
+			case "anyTool": return {
+				name: mappedCount === 1 ? `Any Tool` : `Any ${mappedCount} Tools`,
+				from: Charactermancer_OtherProficiencySelect._ALL_TOOLS
+					.map(it => ({name: it, prop: "toolProficiencies"})),
+				count: mappedCount,
+			};
+			case "anyArtisansTool": return {
+				name: mappedCount === 1 ? `Any Artisan's Tool` : `Any ${mappedCount} Artisan's Tools`,
+				from: Charactermancer_OtherProficiencySelect._ALL_TOOLS_ARTISANS
+					.map(it => ({name: it, prop: "toolProficiencies"})),
+				count: mappedCount,
+			};
+			case "anyLanguage": return {
+				name: mappedCount === 1 ? `Any Language` : `Any ${mappedCount} Languages`,
+				from: Charactermancer_OtherProficiencySelect._ALL_LANGUAGES
+					.map(it => ({name: it, prop: "languageProficiencies"})),
+				count: mappedCount,
+			};
+			case "anyStandardLanguage": return {
+				name: mappedCount === 1 ? `Any Standard Language` : `Any ${mappedCount} Standard Languages`,
+				...MiscUtil.copy(Charactermancer_OtherProficiencySelect._ALL_LANGUAGES_STANDARD__CHOICE_OBJECT),
+				count: mappedCount,
+			};
+			case "anySavingThrow": return {
+				name: mappedCount === 1 ? `Any Saving Throw` : `Any ${mappedCount} Saving Throws`,
+				from: Charactermancer_OtherProficiencySelect._ALL_SAVING_THROWS
+					.map(it => ({name: it, prop: "savingThrowProficiencies"})),
+				count: mappedCount,
+			};
+
+			case "anyWeapon": throw new Error(`Property handling for "anyWeapon" is unimplemented!`);
+			case "anyArmor": throw new Error(`Property handling for "anyArmor" is unimplemented!`);
+
+			default: return null;
+		}
+	}
+
+	/**
+	 * Handles arguments of the form:
+	 * ---
+	 * When converting `{ "name": true }` values;
+	 * `"giant", true`
+	 * ---
+	 * When converting `"from": [ "giant", ... ]` values;
+	 * `null, "giant"`
+	 * ---
+	 * When converting `{ "homebrew name": { "type": "language" } }` values;
+	 * `"homebrew name", {"type": "language"}`
+	 * ---
+	 * When converting `"from": [ {"name": "homebrew name", "type": "language"}, ... ]` values;
+	 * `null, {"name": "homebrew name", "type": "language"}`
+	 */
+	static _getNormalizedProficiency (k, v) {
+		if (!v) return null;
+
+		let name = v?.name ?? k ?? v;
+		if (!name || typeof name !== "string") return null;
+		name = name.trim();
+
+		if (v?.type) {
+			const prop = this._getNormalizedProficiencyPropFromType(v.type);
+			return {name, prop};
+		}
+
+		if (Charactermancer_OtherProficiencySelect._VALID_SKILLS.has(name)) return {name, prop: "skillProficiencies"};
+		if (Charactermancer_OtherProficiencySelect._VALID_TOOLS.has(name)) return {name, prop: "toolProficiencies"};
+		if (Charactermancer_OtherProficiencySelect._VALID_LANGUAGES.has(name)) return {name, prop: "languageProficiencies"};
+		if (Charactermancer_OtherProficiencySelect._VALID_WEAPONS.has(name)) return {name, prop: "weaponProficiencies"};
+		if (Charactermancer_OtherProficiencySelect._VALID_ARMORS.has(name)) return {name, prop: "armorProficiencies"};
+		if (Charactermancer_OtherProficiencySelect._VALID_SAVING_THROWS.has(name)) return {name, prop: "savingThrowProficiencies"};
+
+		console.warn(...LGT, `Could not discern the type of proficiency "${name}"\u2014you may need to specify it directly with "type".`);
+
+		// Ignore any proficiencies that we don't understand
+		return null;
+	}
+
+	static _getNormalizedProficiencyPropFromType (type) {
+		type = type.trim().toLowerCase();
+		switch (type) {
+			case "skill": return "skillProficiencies";
+			case "tool": return "toolProficiencies";
+			case "language": return "languageProficiencies";
+			case "weapon": return "weaponProficiencies";
+			case "armor": return "armorProficiencies";
+			case "savingThrow": return "savingThrowProficiencies";
+			default: throw new Error(`Type "${type}" did not have an associated proficiency property!`);
+		}
+	}
+
+	static _getTagFromProp (prop) {
+		switch (prop) {
+			case "armorProficiencies": return "@item";
+			case "weaponProficiencies": return "@item";
+			default: throw new Error(`Cannot get @tag from prop "${prop}"`);
+		}
+	}
+
+	_getTitle () {
+		const props = this._getAllPossibleProps();
+		return `${props.map(prop => this.constructor._getPropDisplayName({prop})).join("/")} Proficiency`;
+	}
+
+	_getTitlePlural () {
+		const props = this._getAllPossibleProps();
+		return `${props.map(prop => this.constructor._getPropDisplayName({prop, isPlural: true})).join("/")} Proficiencies`;
+	}
+
+	_getAllPossibleProps () {
+		const propSet = new Set();
+
+		this._available.forEach(profSet => {
+			const subSet = this.constructor._getAllPossiblePropsForProfSet(profSet);
+			subSet.forEach(prop => propSet.add(prop));
+		});
+
+		return [...propSet];
+	}
+
+	static _getAllPossiblePropsForProfSet (profSet) {
+		const out = new Set();
+		(profSet.static || []).forEach(it => out.add(it.prop));
+		(profSet.choose || []).forEach(it => {
+			if (it.prop) return out.add(it.prop);
+			it.from.forEach(from => out.add(from.prop));
+		});
+		return out;
+	}
+
+	get modalTitle () { return this._getTitlePlural(); }
+
+	render ($wrp) {
+		const $stgSelGroup = this._render_$getStgSelGroup();
+
+		const $stgGroup = $$`<div class="flex-col"></div>`;
+
+		const hkIxSet = () => {
+			$stgGroup.empty();
+
+			if (this._featureSourceTracker && this._hkExisting) {
+				Object.values(Charactermancer_OtherProficiencySelect._PROP_GROUPS)
+					.forEach(({propTrackerPulse}) => this._featureSourceTracker.removeHook(this, propTrackerPulse, this._hkExisting));
+			}
+			this._lastMetas.forEach(it => it.cleanup());
+			this._lastMetas = [];
+
+			const selProfs = this._available[this._state.ixSet];
+
+			if (this._featureSourceTracker) this._doSetTrackerState();
+
+			// region Static
+			const $ptsExistingStatic = selProfs.static?.length ? this._render_renderPtStatic($stgGroup, selProfs.static) : null;
+			// endregion
+
+			if ($ptsExistingStatic && selProfs.choose?.length) $stgGroup.append(`<hr class="hr-2">`);
+
+			// region Choose
+			const $ptsExistingChoose = (selProfs.choose || [])
+				.map(({count, from, groups, fromFilter, prop}, i) => {
+					if (this._$elesPreFromGroups?.[i]) $stgGroup.append(this._$elesPreFromGroups?.[i]);
+
+					const $outPtsExisting = fromFilter
+						? this._render_renderPtChooseFromFilter($stgGroup, {ix: i, count, fromFilter, prop})
+						: this._render_renderPtChooseFrom($stgGroup, {ix: i, count, from, groups});
+
+					if (this._$elesPostFromGroups?.[i]) $stgGroup.append(this._$elesPostFromGroups?.[i]);
+
+					// Add a spacer if there are multiple
+					if (selProfs.choose.length > 1 && (i < selProfs.choose.length - 1)) {
+						$stgGroup.append(`<hr class="hr-2">`);
+					}
+
+					return $outPtsExisting;
+				});
+			// endregion
+
+			this._hkExisting = () => this._hk_pUpdatePtsExisting($ptsExistingStatic, $ptsExistingChoose);
+			if (this._featureSourceTracker) {
+				Object.values(Charactermancer_OtherProficiencySelect._PROP_GROUPS)
+					.forEach(({propTrackerPulse}) => this._featureSourceTracker.addHook(this, propTrackerPulse, this._hkExisting));
+			}
+			this._hkExisting();
+		};
+		this._addHookBase("ixSet", hkIxSet);
+		hkIxSet();
+
+		$$($wrp)`
+			${$stgSelGroup}
+			${$stgGroup}
+		`;
+	}
+
+	_doSetTrackerState () {
+		const formData = this._getFormData();
+		this._featureSourceTracker.setState(
+			this,
+			Object.keys(Charactermancer_OtherProficiencySelect._PROP_GROUPS)
+				.mergeMap(prop => ({[prop]: formData.data?.[prop]})),
+		);
+	}
+
+	static _render_getStaticKeyFullText ({name, prop}) {
+		switch (prop) {
+			case "weaponProficiencies": return name.split("|")[0].toTitleCase();
+
+			case "armorProficiencies": {
+				switch (name) {
+					case "light":
+					case "medium":
+					case "heavy": return name.toTitleCase();
+					case "shield|phb": return "Shields";
+					default: return name.split("|")[0].toTitleCase();
+				}
+			}
+
+			case "savingThrowProficiencies": return Parser.attAbvToFull(name).toTitleCase();
+
+			default: return name.toTitleCase();
+		}
+	}
+
+	static _render_getStaticKeyFullTextOther ({prop}) {
+		switch (prop) {
+			case "skillProficiencies": return "(Other skill proficiency)";
+			case "toolProficiencies": return "(Other tool proficiency)";
+			case "languageProficiencies": return "(Other language proficiency)";
+			case "weaponProficiencies": return "(Other weapon proficiency)";
+			case "armorProficiencies": return "(Other armor proficiency)";
+			case "savingThrowProficiencies": return "(Other saving throw proficiency)";
+			default: throw new Error(`Unhandled prop "${prop}"`);
+		}
+	}
+
+	static async _pGetParentGroup ({prop, name}) {
+		switch (prop) {
+			case "weaponProficiencies": return UtilDataConverter.pGetItemWeaponType(name);
+			default: return null;
+		}
+	}
+
+	static _getRenderedStatic ({prop, name}) {
+		switch (prop) {
+			case "skillProficiencies": return this._getRenderedStatic_skillProficiencies(name);
+			case "languageProficiencies": return this._getRenderedStatic_languageProficiencies(name);
+			case "toolProficiencies": return this._getRenderedStatic_toolProficiencies(name);
+			case "armorProficiencies": return this._getRenderedStatic_armorProficiencies(name);
+			case "weaponProficiencies": return Renderer.get().render(`{@item ${name.split("|").map(sub => sub.toTitleCase()).join("|")}}`);
+			case "savingThrowProficiencies": return Parser.attAbvToFull(name).toTitleCase();
+			default: return name.toTitleCase();
+		}
+	}
+
+	static _getRenderedStatic_skillProficiencies (name) {
+		const atb = Parser.skillToAbilityAbv(name);
+		const ptAbility = `<div class="ml-1 ve-small ve-muted" title="${Parser.attAbvToFull(atb)}">(${atb.toTitleCase()})</div>`;
+
+		return `<div class="inline-flex-v-center">${Renderer.get().render(`{@skill ${name.toTitleCase()}}`)}${ptAbility}</div>`;
+	}
+
+	static _getRenderedStatic_languageProficiencies (name) {
+		if (name === "other") return name.toTitleCase();
+		if (UtilActors.LANGUAGES_PRIMORDIAL.includes(name)) return Renderer.get().render(`{@language primordial||${name.toTitleCase()}}`);
+		return Renderer.get().render(`{@language ${name.toTitleCase()}}`);
+	}
+
+	static _getRenderedStatic_toolProficiencies (name) {
+		if (UtilActors.TOOL_PROFICIENCIES_TO_UID[name]) return Renderer.get().render(`{@item ${UtilActors.TOOL_PROFICIENCIES_TO_UID[name].toTitleCase()}}`);
+		return name.toTitleCase();
+	}
+
+	static _getRenderedStatic_armorProficiencies (key) {
+		if (key === "light" || key === "medium" || key === "heavy") return key.toTitleCase();
+		if (key === "shield|phb") return Renderer.get().render(`{@item shield|phb|Shields}`);
+		return Renderer.get().render(`{@item ${key.split("|").map(sub => sub.toTitleCase()).join("|")}}`);
+	}
+
+	static _getPropDisplayName ({prop}) {
+		switch (prop) {
+			case "skillProficiencies": return `Skill`;
+			case "toolProficiencies": return `Tool`;
+			case "languageProficiencies": return `Language`;
+			case "weaponProficiencies": return `Weapon`;
+			case "armorProficiencies": return `Armor`;
+			case "savingThrowProficiencies": return `Saving Throw`;
+			default: throw new Error(`Unhandled prop "${prop}"`);
+		}
+	}
+
+	/** Get a select which chooses between multiple outer groups. */
+	_render_$getStgSelGroup () {
+		if (this._available.length <= 1) return null;
+
+		const $selIxSet = ComponentUiUtil.$getSelEnum(
+			this,
+			"ixSet",
+			{
+				placeholder: `Select ${this._getTitle()} Set`,
+				values: this._available.map((_, i) => i),
+				fnDisplay: ix => {
+					const selProfs = this._available[ix];
+
+					const out = [];
+
+					if (selProfs.static) {
+						const pt = MiscUtil.copy(selProfs.static)
+							.sort((a, b) => SortUtil.ascSortLower(a.name, b.name))
+							.map(({name, prop}) => {
+								if (name === "other") return this.constructor._render_getStaticKeyFullTextOther({prop});
+								return this.constructor._render_getStaticKeyFullText({name, prop});
+							})
+							.join(", ");
+						out.push(pt);
+					}
+
+					if (selProfs.choose) {
+						selProfs.choose.forEach(fromBlock => {
+							if (fromBlock.name) {
+								out.push(`Choose ${fromBlock.name.toLowerCase()}`);
+								return;
+							}
+
+							if (fromBlock.fromFilter) {
+								out.push(`Choose ${Parser.numberToText(fromBlock.count)} from filtered selection`);
+								return;
+							}
+
+							if (fromBlock.groups) {
+								out.push(`Choose ${Parser.numberToText(fromBlock.count)} from ${Object.values(fromBlock.groups).map(({name}) => name).joinConjunct(", ", " or ")}`);
+								return;
+							}
+
+							out.push(`Choose ${Parser.numberToText(fromBlock.count || 1)} from ${fromBlock.from.map(({name}) => name.toTitleCase()).join(", ")}`);
+						});
+					}
+
+					return out.filter(Boolean).join("; ");
+				},
+			},
+		);
+
+		if (this._featureSourceTracker) {
+			const hk = () => {
+				const formData = this._getFormData().data;
+				const trackerState = Object.keys(formData.data || {})
+					.filter(k => Charactermancer_OtherProficiencySelect._PROP_GROUPS[k])
+					.mergeMap(it => it);
+				this._featureSourceTracker.setState(this, trackerState);
+			};
+			this._addHookBase("ixSet", hk);
+		}
+
+		return $$`<div class="w-100 mb-2 flex-vh-center">
+			${$selIxSet}
+		</div>`;
+	}
+
+	_getAllValuesMaybeInUseLookup () {
+		const out = {};
+
+		const activeSet = this._available[this._state.ixSet] || {};
+
+		if (activeSet.static) {
+			activeSet.static.forEach(({name, prop}) => {
+				out[prop] = out[prop] || new Set();
+				out[prop].add(name);
+			});
+		}
+
+		if (activeSet.choose) {
+			activeSet.choose.forEach(({from, fromFilter}) => {
+				if (fromFilter) {
+					const prefix = `${this._getStateKeyPrefix()}_chooseFilter_`;
+					// Collect the in-use UIDs from the state, since they could be anything we can filter for
+					Object.entries(this._state)
+						.filter(([k, v]) => k.startsWith(prefix) && v)
+						.forEach(([, {prop, name}]) => {
+							if (!name) throw new Error(`"fromFilter" choice had no "name"--this should never occur!`);
+							out[prop] = out[prop] || new Set();
+							out[prop].add(name);
+						});
+					return;
+				}
+
+				from.forEach(({name, prop}) => {
+					out[prop] = out[prop] || new Set();
+					out[prop].add(name);
+				});
+			});
+		}
+
+		return out;
+	}
+
+	_getStateKeyPrefix () { return "otherProfSelect"; }
+
+	_getPropsChooseFromFilter ({ixChoose, ixCount}) {
+		return {
+			propState: `${this._getStateKeyPrefix()}_chooseFilter_${ixChoose}_${ixCount}`,
+		};
+	}
+
+	_getPropsChooseFrom ({ixChoose}) {
+		return {
+			propState: `${this._getStateKeyPrefix()}_${ixChoose}`,
+		};
+	}
+
+	async _hk_pUpdatePtsExisting ($ptsExistingStatic, $ptsExistingChooseFrom) {
+		try {
+			await this._pLock("updateExisting");
+			await this._hk_pUpdatePtsExisting_({$ptsExistingStatic, $ptsExistingChooseFrom});
+		} finally {
+			this._unlock("updateExisting");
+		}
+	}
+
+	async _hk_pUpdatePtsExisting_ ({$ptsExistingStatic, $ptsExistingChooseFrom}) {
+		const allValueLookupEntries = Object.entries(this._getAllValuesMaybeInUseLookup());
+
+		if ($ptsExistingStatic) await this._hk_pUpdatePtsExisting_part({allValueLookupEntries, $ptsExisting: $ptsExistingStatic});
+		if (!$ptsExistingChooseFrom) return;
+		for (const $ptsExisting of $ptsExistingChooseFrom) await this._hk_pUpdatePtsExisting_part({allValueLookupEntries, $ptsExisting});
+	}
+
+	async _hk_pUpdatePtsExisting_part ({allValueLookupEntries, $ptsExisting}) {
+		for (const [prop, allProfs] of allValueLookupEntries) {
+			const otherStates = this._featureSourceTracker ? this._featureSourceTracker.getStatesForKey(prop, {ignore: this}) : null;
+
+			for (const v of allProfs) {
+				const parentGroup = await this.constructor._pGetParentGroup({prop, name: v});
+
+				if (!$ptsExisting[prop]?.[v] && !parentGroup) continue;
+
+				// Value from sheet
+				let maxExisting = this._existing?.[prop]?.[v]
+					|| (parentGroup && this._existing?.[prop]?.[parentGroup])
+					|| 0;
+
+				// Value from other networked components
+				if (otherStates) otherStates.forEach(otherState => maxExisting = Math.max(maxExisting, otherState[v] || 0, (parentGroup ? otherState[parentGroup] : 0) || 0));
+
+				const helpText = maxExisting === 0 ? "" : `${UtilActors.PROF_TO_TEXT[maxExisting]} from Another Source`;
+
+				$ptsExisting[prop][v]
+					.title(helpText)
+					.toggleClass("ml-1", !!maxExisting)
+					.html(maxExisting ? `(<i class="fas fa-fw ${UtilActors.PROF_TO_ICON_CLASS[maxExisting]}"></i>)` : "");
+			}
+		}
+	}
+
+	_render_renderPtStatic ($stgGroup, profsStatic) {
+		const $ptsExisting = {};
+
+		const byProp = {};
+		profsStatic.forEach(({prop, name}) => MiscUtil.set(byProp, prop, name, true));
+		const isMultiProp = this.constructor._getAllPossiblePropsForProfSet(this._available[this._state.ixSet]).size > 1;
+
+		const $wrps = Object.entries(byProp)
+			.map(([prop, profsStaticSet]) => {
+				const ptPropType = isMultiProp ? ` (${this.constructor._getPropDisplayName({prop})} Proficiency)` : "";
+				const profsStaticSetKeys = Object.keys(profsStaticSet);
+				return profsStaticSetKeys
+					.sort(SortUtil.ascSortLower)
+					.map((name, i) => {
+						const $ptExisting = $(`<div class="ve-small veapp__msg-warning inline-block"></div>`);
+						MiscUtil.set($ptsExisting, prop, name, $ptExisting);
+						const isNotLast = i < profsStaticSetKeys.length - 1;
+						return $$`<div class="inline-block ${isNotLast ? "mr-1" : ""}">${this.constructor._getRenderedStatic({prop, name})}${ptPropType}${$ptExisting}${isNotLast ? `,` : ""}</div>`;
+					});
+			})
+			.flat();
+
+		$$`<div class="block">
+			${$wrps}
+		</div>`.appendTo($stgGroup);
+
+		return $ptsExisting;
+	}
+
+	_render_renderPtChooseFrom ($stgGroup, {ix, count, from, groups}) {
+		const {propState} = this._getPropsChooseFrom({ixChoose: ix});
+
+		const $ptsExisting = {};
+		const compOpts = {
+			count,
+			fnDisplay: ({prop, name}) => {
+				const $ptExisting = $(`<div class="ve-small veapp__msg-warning"></div>`);
+				MiscUtil.set($ptsExisting, prop, name, $ptExisting);
+
+				return $$`<div class="flex-v-center w-100">
+					<div class="flex-v-center">${this.constructor._getRenderedStatic({prop, name})}</div>
+					${$ptExisting}
+				</div>`;
+			},
+		};
+
+		const fromProps = new Set(from.map(({prop}) => prop));
+
+		const byPropThenGroup = {};
+
+		from.forEach(({name, prop, group}) => {
+			group = group ?? "_";
+			MiscUtil.set(byPropThenGroup, prop, group, name, Charactermancer_OtherProficiencySelect._PROFICIENT);
+		});
+
+		const isMultiProp = Object.keys(byPropThenGroup).length > 1;
+		const isGrouped = Object.values(byPropThenGroup).some(groupMeta => Object.keys(groupMeta).some(group => group !== "_"));
+
+		// If either:
+		//  - we have multiple props in one `from` array, or
+		//  - we have specified groups (e.g. "languagesStandard"),
+		// then create a grouped multi-select around these partitions.
+		if (isMultiProp || isGrouped) {
+			// Transform our profs into well-formatted groups
+			const valueGroups = [];
+			Object.entries(byPropThenGroup)
+				.forEach(([prop, groupMeta]) => {
+					Object.entries(groupMeta)
+						.forEach(([groupId, names]) => {
+							const groupDetails = groups?.[groupId];
+
+							valueGroups.push({
+								name: [
+									(isMultiProp ? `${this.constructor._getPropDisplayName({prop})} Proficiencies` : ""),
+									groupDetails?.name,
+								]
+									.filter(Boolean)
+									.join(""),
+								text: groupDetails?.hint,
+								values: Object.keys(names).map(name => ({prop, name})),
+							});
+						});
+				});
+
+			compOpts.valueGroups = valueGroups;
+		} else {
+			compOpts.values = from;
+		}
+
+		const meta = ComponentUiUtil.getMetaWrpMultipleChoice(
+			this,
+			propState,
+			compOpts,
+		);
+
+		// region Networking with other proficiency select components
+		let hkSetTrackerInfo = null;
+		if (this._featureSourceTracker) {
+			hkSetTrackerInfo = () => this._doSetTrackerState();
+			this._addHookBase(meta.propPulse, hkSetTrackerInfo);
+		}
+		// endregion
+
+		this._lastMetas.push({
+			cleanup: () => {
+				meta.cleanup();
+				if (hkSetTrackerInfo) this._removeHookBase(meta.propPulse, hkSetTrackerInfo);
+			},
+		});
+
+		const header = fromProps.size === 1
+			? (`${this.constructor._getPropDisplayName({prop: [...fromProps][0]})} ${count === 1 ? "Proficiency" : "Proficiencies"}`)
+			: (count === 1 ? this._getTitle() : this._getTitlePlural());
+		$stgGroup.append(`<div class="mb-1">${this._titlePrefix ? `${this._titlePrefix}: ` : ""}Choose ${Parser.numberToText(count)} ${header}:</div>`);
+		meta.$ele.appendTo($stgGroup);
+
+		return $ptsExisting;
+	}
+
+	_render_renderPtChooseFromFilter ($stgGroup, {ix, fromFilter, count, prop}) {
+		const $ptsExisting = {};
+
+		const $row = $(`<div class="flex-v-center"></div>`);
+
+		[...new Array(count)].forEach((_, i) => {
+			const {propState} = this._getPropsChooseFromFilter({ixChoose: ix, ixCount: i});
+
+			const $ptExisting = $(`<div class="ve-small veapp__msg-warning"></div>`);
+
+			const $disp = $(`<div class="flex-v-center"></div>`);
+			const hkChosen = (propHk, valueHk, prevValueHk) => {
+				const isFirstRun = !propHk;
+				if (!isFirstRun) {
+					if (prevValueHk) {
+						const {prop: propPrev, name: namePrev} = prevValueHk;
+						const uidPrev = (namePrev || "").toLowerCase();
+						MiscUtil.delete($ptsExisting, propPrev, uidPrev, $ptExisting);
+					}
+
+					if (valueHk) {
+						const {prop, name} = valueHk || {};
+						const uid = (name || "").toLowerCase();
+						MiscUtil.set($ptsExisting, prop, uid, $ptExisting);
+					}
+				}
+
+				$disp.html(
+					this._state[propState] != null
+						? `<div>${Renderer.get().render(`{${this.constructor._getTagFromProp(prop)} ${this._state[propState].name.toLowerCase()}}`)}</div>`
+						: `<div class="italic ve-muted">(select a ${this.constructor._getPropDisplayName({prop}).toLowerCase()} proficiency)</div>`,
+				);
+
+				if (!isFirstRun && this._featureSourceTracker) this._doSetTrackerState();
+			};
+			this._addHookBase(propState, hkChosen);
+			this._lastMetas.push({cleanup: () => this._removeHookBase(propState, hkChosen)});
+			hkChosen();
+
+			const $btnFilter = $(`<button class="btn btn-default btn-xxs mr-1" title="Choose a ${this.constructor._getPropDisplayName({prop})} Proficiency"><span class="fas fa-fw fa-search"></span></button>`)
+				.click(async () => {
+					const selecteds = await this._pGetFilterChoice({prop, fromFilter});
+					if (selecteds == null || !selecteds.length) return;
+
+					const selected = selecteds[0];
+					this._state[propState] = {prop, name: `${selected.name}|${selected.values.sourceJson}`.toLowerCase()};
+				});
+
+			$$`<div class="flex-v-center mr-1">${$btnFilter}${$disp}${$ptExisting}</div>`.appendTo($row);
+		});
+
+		$$`<div class="py-1 flex-v-center">
+			${$row}
+		</div>`.appendTo($stgGroup);
+
+		return $ptsExisting;
+	}
+
+	_pGetFilterChoice ({prop, fromFilter}) {
+		switch (prop) {
+			case "armorProficiencies":
+			case "weaponProficiencies": {
+				const modalFilterItems = new ModalFilterItemsFvtt({
+					filterExpression: fromFilter,
+					namespace: "Charactermancer_OtherProficiencySelect.items",
+					isRadio: true,
+				});
+				return modalFilterItems.pGetUserSelection({filterExpression: fromFilter});
+			}
+
+			default: throw new Error(`Filter choices for "${prop}" are unimplemented!`);
+		}
+	}
+
+	isNoChoice () { return this.constructor._isNoChoice({available: this._available, isAlreadyMapped: true}); }
+
+	_getFormData () {
+		let isFormComplete = true;
+		const out = {};
+
+		const selProfs = this._available[this._state.ixSet];
+
+		// region Static
+		(selProfs.static || []).forEach(({prop, name}) => MiscUtil.set(out, prop, name, Charactermancer_OtherProficiencySelect._PROFICIENT));
+		// endregion
+
+		// region Choose
+		(selProfs.choose || []).forEach(({count, from, groups, fromFilter, prop}, ixChoose) => {
+			if (fromFilter) {
+				[...new Array(count)].forEach((_, ixCount) => {
+					const {propState} = this._getPropsChooseFromFilter({ixChoose, ixCount});
+
+					if (!this._state[propState]) return isFormComplete = false;
+
+					const {prop, name} = this._state[propState];
+					MiscUtil.set(out, prop, name, Charactermancer_OtherProficiencySelect._PROFICIENT);
+				});
+
+				return;
+			}
+
+			const {propState} = this._getPropsChooseFrom({ixChoose});
+
+			const ixs = ComponentUiUtil.getMetaWrpMultipleChoice_getSelectedIxs(this, propState);
+			ixs.map(ix => from[ix]).forEach(({prop, name}) => MiscUtil.set(out, prop, name, Charactermancer_OtherProficiencySelect._PROFICIENT));
+
+			if (!this._state[ComponentUiUtil.getMetaWrpMultipleChoice_getPropIsAcceptable(propState)]) isFormComplete = false;
+		});
+		// endregion
+
+		return {
+			isFormComplete,
+			data: out,
+		};
+	}
+
+	pGetFormData () { return this._getFormData(); }
+
+	_getDefaultState () {
+		return {
+			ixSet: 0,
+		};
+	}
+
+	static _getExistingProficiencies ({existingProficienciesSetFvtt, vetToFvttProfs, allProfsVet}) {
+		const {existingProficienciesFvttSet, existingProficienciesFvttSetCustom} = this._getExistingFvttProficiencySetsMeta(existingProficienciesSetFvtt);
+
+		const existing = {};
+
+		Object.entries(vetToFvttProfs)
+			.filter(([_, fvtt]) => existingProficienciesFvttSet.has(fvtt))
+			.forEach(([vet, fvtt]) => {
+				existing[vet] = Charactermancer_OtherProficiencySelect._PROFICIENT;
+				existingProficienciesFvttSet.delete(fvtt);
+			});
+
+		allProfsVet.forEach(vet => {
+			if (existingProficienciesFvttSet.has(vet)) {
+				existing[vet] = Charactermancer_OtherProficiencySelect._PROFICIENT;
+				existingProficienciesFvttSet.delete(vet);
+			} else if (existingProficienciesFvttSetCustom.has(vet)) {
+				existing[vet] = Charactermancer_OtherProficiencySelect._PROFICIENT;
+				existingProficienciesFvttSetCustom.delete(vet);
+			}
+		});
+
+		if (existingProficienciesFvttSet.size || existingProficienciesFvttSetCustom.size) {
+			existing.other = existingProficienciesFvttSet.size + existingProficienciesFvttSetCustom.size;
+		}
+
+		return existing;
+	}
+
+	static _getExistingSkillProficiencies (existingFvtt) {
+		// Convert Foundry existing proficiencies to 5etools names
+		const existing = {};
+
+		Object.entries(existingFvtt?.skillProficiencies || {})
+			.forEach(([abv, data]) => {
+				if (!data.value) return;
+				existing[UtilActors.SKILL_ABV_TO_FULL[abv]] = data.value;
+			});
+
+		return existing;
+	}
+
+	static _getExistingSavingThrowProficiencies (existingFvtt) {
+		// Convert Foundry existing proficiencies to 5etools names
+		const existing = {};
+
+		Object.entries(existingFvtt?.savingThrowProficiencies || {})
+			.forEach(([ab, data]) => {
+				if (!data.proficient) return;
+				existing[ab] = data.proficient;
+			});
+
+		return existing;
+	}
+}
+Charactermancer_OtherProficiencySelect._PROFICIENT = 1;
+Charactermancer_OtherProficiencySelect._PROP_GROUPS = {
+	"skillProficiencies": {
+		propTrackerPulse: "pulseSkillProficiencies",
+	},
+	"toolProficiencies": {
+		propTrackerPulse: "pulseToolProficiencies",
+	},
+	"languageProficiencies": {
+		propTrackerPulse: "pulseLanguageProficiencies",
+	},
+	"weaponProficiencies": {
+		propTrackerPulse: "pulseWeaponProficiencies",
+	},
+	"armorProficiencies": {
+		propTrackerPulse: "pulseArmorProficiencies",
+	},
+	"savingThrowProficiencies": {
+		propTrackerPulse: "pulseSavingThrowProficiencies",
+	},
+};
+
+Charactermancer_OtherProficiencySelect._MAPPED_IGNORE_KEYS = new Set([
+	"choose",
+	"any",
+	"anySkill",
+	"anyTool",
+	"anyArtisansTool",
+	"anyLanguage",
+	"anyStandardLanguage",
+	"anyWeapon",
+	"anyArmor",
+	"anySavingThrow",
+]);
+
+Charactermancer_OtherProficiencySelect._ALL_SKILLS = Object.keys(Parser.SKILL_TO_ATB_ABV).sort(SortUtil.ascSortLower);
+Charactermancer_OtherProficiencySelect._ALL_TOOLS = [...UtilActors.TOOL_PROFICIENCIES];
+Charactermancer_OtherProficiencySelect._ALL_TOOLS_ARTISANS = [...UtilActors.TOOL_PROFICIENCIES_ARTISANS];
+Charactermancer_OtherProficiencySelect._ALL_LANGUAGES = Parser.LANGUAGES_ALL.map(it => it.toLowerCase());
+Charactermancer_OtherProficiencySelect._ALL_SAVING_THROWS = [...Parser.ABIL_ABVS];
+
+Charactermancer_OtherProficiencySelect._VALID_SKILLS = new Set([
+	...Charactermancer_OtherProficiencySelect._ALL_SKILLS,
+	"anySkill",
+]);
+Charactermancer_OtherProficiencySelect._VALID_TOOLS = new Set([
+	...Charactermancer_OtherProficiencySelect._ALL_TOOLS,
+	"anyTool",
+	"anyArtisansTool",
+]);
+Charactermancer_OtherProficiencySelect._VALID_LANGUAGES = new Set([
+	...Charactermancer_OtherProficiencySelect._ALL_LANGUAGES,
+	"anyLanguage",
+	"anyStandardLanguage",
+]);
+Charactermancer_OtherProficiencySelect._VALID_WEAPONS = new Set([
+	...UtilActors.WEAPON_PROFICIENCIES,
+	"anyWeapon",
+]);
+Charactermancer_OtherProficiencySelect._VALID_ARMORS = new Set([
+	...UtilActors.ARMOR_PROFICIENCIES,
+	"anyArmor",
+]);
+Charactermancer_OtherProficiencySelect._VALID_SAVING_THROWS = new Set([
+	...Parser.ABIL_ABVS,
+	"anySavingThrow",
+]);
+
+Charactermancer_OtherProficiencySelect._ALL_LANGUAGES_STANDARD__CHOICE_OBJECT = {
+	from: [
+		...Parser.LANGUAGES_STANDARD
+			.map(it => ({
+				name: it.toLowerCase(),
+				prop: "languageProficiencies",
+				group: "languagesStandard",
+			})),
+		...Parser.LANGUAGES_EXOTIC
+			.map(it => ({
+				name: it.toLowerCase(),
+				prop: "languageProficiencies",
+				group: "languagesExotic",
+			})),
+		...Parser.LANGUAGES_SECRET
+			.map(it => ({
+				name: it.toLowerCase(),
+				prop: "languageProficiencies",
+				group: "languagesSecret",
+			})),
+	],
+	groups: {
+		languagesStandard: {
+			name: "Standard Languages",
+		},
+		languagesExotic: {
+			name: "Exotic Languages",
+			hint: "With your DM's permission, you can choose an exotic language.",
+		},
+		languagesSecret: {
+			name: "Secret Languages",
+			hint: "With your DM's permission, you can choose a secret language.",
+		},
+	},
+};
+
+class Charactermancer_ImmResVulnSelect extends BaseComponent {
+	// region External
+	/**
+	 * @param opts
+	 * @param opts.existingFvtt
+	 * @param opts.available
+	 */
+	static async pGetUserInput (opts) {
+		opts = opts || {};
+
+		if (!opts.available) return {isFormComplete: true, data: {}};
+
+		const comp = new this({
+			...opts,
+			existing: this.getExisting(opts.existingFvtt),
+			existingFvtt: opts.existingFvtt,
+		});
+		if (comp.isNoChoice()) return comp.pGetFormData();
+
+		return UtilApplications.pGetImportCompModalFormData({comp});
+	}
+
+	/**
+	 * @return {*}
+	 */
+	static getExisting () { throw new TypeError(`Unimplemented!`); }
+
+	static isNoChoice (available) {
+		let cntChoices = 0;
+		UtilDataConverter.WALKER_READONLY_GENERIC.walk(available, {object: (obj) => { if (obj.choose) cntChoices++; }});
+		return cntChoices === 0;
+	}
+	// endregion
+
+	/**
+	 * @param opts
+	 * @param opts.existing
+	 * @param opts.available
+	 * @param opts.prop
+	 * @param [opts.modalTitle]
+	 * @param [opts.titleSingle]
+	 * @param [opts.titlePlural]
+	 */
+	constructor (opts) {
+		opts = opts || {};
+		super();
+
+		this._existing = opts.existing;
+		this._available = opts.available;
+		this._prop = opts.prop;
+		this._modalTitle = opts.modalTitle;
+		this._titlePlural = opts.titlePlural;
+		this._titleSingle = opts.titleSingle;
+
+		this._lastChoiceMeta = null;
+
+		Object.assign(this.__state.readonly_selectedValues, this._getOutputObject());
+	}
+
+	get modalTitle () { return this._modalTitle; }
+
+	render ($wrp) {
+		this._lastChoiceMeta = {isActive: true, children: []};
+		this._render_recurse($wrp, MiscUtil.copy(this._available), this._lastChoiceMeta, false);
+	}
+
+	_render_recurse ($wrp, arr, outMeta, isChoices) {
+		const arrStrings = arr
+			.filter(it => typeof it === "string")
+			.sort(SortUtil.ascSortLower);
+
+		if (!isChoices) {
+			// Add one child per value, but only render one UI element for the lot.
+			const staticValues = arrStrings
+				.map(it => {
+					outMeta.children.push({isActive: true, value: it});
+					return it.toTitleCase();
+				});
+			$wrp.append(`<div>${staticValues.join(", ")}</div>`);
+		} else {
+			arrStrings
+				.forEach(it => {
+					const $cb = $(`<input type="checkbox" class="ml-1 mr-2">`)
+						.change(() => {
+							// On selecting, make sure we don't go over the selection limit
+							if ($cb.prop("checked")) {
+								const numChecked = outMeta.children.filter(it => it.isChoosable && it.isActive()).length;
+								if (numChecked > outMeta.count) {
+									const toDeActive = outMeta.lastChecked || outMeta.children.filter(it => it.isChoosable).last();
+									toDeActive.setActive(false);
+								}
+								outMeta.lastChecked = node;
+							} else {
+								if (outMeta.lastChecked === node) outMeta.lastChecked = null;
+							}
+
+							this._state.readonly_selectedValues = this._getOutputObject();
+						});
+
+					const node = {
+						isActive: () => $cb.prop("checked") ? it : null,
+						value: it,
+						isChoosable: true,
+						setActive: (val) => $cb.prop("checked", val),
+					};
+					outMeta.children.push(node);
+
+					return $$`<label class="py-1 stripe-even flex-v-center">
+						${$cb}
+						<span>${it.toTitleCase()}</span>
+					</label>`.appendTo($wrp);
+				});
+		}
+
+		arr
+			.filter(it => typeof it !== "string")
+			.forEach((it, i) => {
+				if (!it.choose) throw new Error(`Unhandled immune/resist/vulnerability properties "${Object.keys(it).join(", ")}"`);
+
+				if (isChoices) {
+					// TODO this branch is completely untested
+					// TODO this should be re-worked to use isChoosable/allow multiple choices as above
+
+					// To set this particular choose group as active, de-activate all its peers, and activate itself
+					const $btnSetActive = $(`<button class="btn btn-primary btn-5et btn-xs">Set Group Active</button>`)
+						.click(() => {
+							outMeta.children.forEach(it => it.isActive = false);
+							nxtMeta.isActive = true;
+							this._state.readonly_selectedValues = this._getOutputObject();
+						});
+
+					const nxtMeta = {isActive: false, children: []};
+
+					const $wrpChoice = $(`<div class="flex-col my-1"></div>`);
+					this._render_recurse($wrpChoice, it.choose.from, nxtMeta, true);
+
+					$$`<div class="flex-col pl-2 stripe-even">
+						<div class="flex-v-center my-1">${$btnSetActive}</div>
+						${$wrpChoice}
+					</div>`;
+
+					return;
+				}
+
+				const count = it.choose.count || 1;
+				const nxtMeta = {isActive: true, children: [], count, lastChecked: null};
+				outMeta.children.push(nxtMeta);
+
+				const $wrpChoice = $(`<div class="flex-col py-1 pt-0">
+					${arrStrings.length || i > 0 ? `<hr class="hr-2 hr--dotted">` : ""}
+					<div class="py-1">Choose ${count} ${count === 1 ? this._titleSingle : this._titlePlural}:</div>
+				</div>`).appendTo($wrp);
+				this._render_recurse($wrpChoice, it.choose.from, nxtMeta, true);
+			});
+	}
+
+	isNoChoice () { return this.constructor.isNoChoice(this._available); }
+
+	_getOutputSet () {
+		const outSet = new Set(this._existing[this._prop] || []); // Copy the existing set
+
+		if (this._lastChoiceMeta) this._getOutputSet_recurse(outSet, this._lastChoiceMeta);
+		else UtilDataConverter.WALKER_READONLY_GENERIC.walk(this._available, {string: (str) => { outSet.add(str); }});
+
+		return outSet;
+	}
+
+	_getOutputSet_recurse (outSet, node) {
+		if (!node.isActive) return;
+		const isNodeActive = node.isActive === true || node.isActive();
+		if (!isNodeActive) return;
+
+		if (node.value) outSet.add(node.value);
+		if (node.children) node.children.forEach(it => this._getOutputSet_recurse(outSet, it));
+	}
+
+	_getOutputObject () {
+		return [...this._getOutputSet()].sort(SortUtil.ascSortLower).mergeMap(it => ({[it]: true}));
+	}
+
+	pGetFormData () {
+		let isFormComplete = true;
+
+		return {
+			isFormComplete,
+			data: {
+				[this._prop]: MiscUtil.copy(this._state.readonly_selectedValues),
+			},
+		};
+	}
+
+	_getDefaultState () {
+		return {
+			readonly_selectedValues: {},
+		};
+	}
+}
+
+class Charactermancer_DamageImmunitySelect extends Charactermancer_ImmResVulnSelect {
+	// region External
+	static getExisting (existingFvtt) {
+		return MiscUtil.copy([existingFvtt?.immune?.value || []]);
+	}
+	// endregion
+
+	constructor (opts) {
+		opts = opts || {};
+		super({
+			...opts,
+			modalTitle: `Damage Immunities`,
+			titlePlural: `Damage Immunities`,
+			titleSingle: `Damage Immunity`,
+			prop: "immune",
+		});
+	}
+}
+
+class Charactermancer_DamageResistanceSelect extends Charactermancer_ImmResVulnSelect {
+	// region External
+	static getExisting (existingFvtt) {
+		return MiscUtil.copy([existingFvtt?.resist?.value || []]);
+	}
+	// endregion
+
+	constructor (opts) {
+		opts = opts || {};
+		super({
+			...opts,
+			modalTitle: `Damage Resistances`,
+			titlePlural: `Damage Resistances`,
+			titleSingle: `Damage Resistance`,
+			prop: "resist",
+		});
+	}
+}
+
+class Charactermancer_DamageVulnerabilitySelect extends Charactermancer_ImmResVulnSelect {
+	// region External
+	static getExisting (existingFvtt) {
+		return MiscUtil.copy([existingFvtt?.vulnerable?.value || []]);
+	}
+	// endregion
+
+	constructor (opts) {
+		opts = opts || {};
+		super({
+			...opts,
+			modalTitle: `Damage Vulnerabilities`,
+			titlePlural: `Damage Vulnerabilities`,
+			titleSingle: `Damage Vulnerability`,
+			prop: "vulnerable",
+		});
+	}
+}
+
+class Charactermancer_ConditionImmunitySelect extends Charactermancer_ImmResVulnSelect {
+	// region External
+	static getExisting (existingFvtt) {
+		return [existingFvtt?.conditionImmune?.value || []].map(it => it === "diseased" ? "disease" : it);
+	}
+	// endregion
+
+	constructor (opts) {
+		opts = opts || {};
+		super({
+			...opts,
+			modalTitle: `Condition Immunities`,
+			titlePlural: `Condition Immunities`,
+			titleSingle: `Condition Immunity`,
+			prop: "conditionImmune",
+		});
+	}
+}
+
+class Charactermancer_ExpertiseSelect extends Charactermancer_SkillSaveProficiencySelect {
+	// region External
+	static getExisting (existingFvtt) {
+		const existingSkills = Object.entries(Charactermancer_OtherProficiencySelect.getExisting({skillProficiencies: existingFvtt.skillProficiencies})?.skillProficiencies || {})
+			.filter(([, profLevel]) => Number(profLevel) === 2)
+			.mergeMap(([prof, profLevel]) => ({[prof]: profLevel}));
+
+		// TODO(Future) add support for existing tool expertise when dnd5e sensibly supports
+		const existingTools = {};
+
+		// (These two sets should never collide)
+		return {...existingSkills, ...existingTools};
+	}
+
+	static getExistingFvttFromActor (actor) {
+		return {
+			skillProficiencies: MiscUtil.get(actor, "data", "data", "skills"),
+			toolProficiencies: MiscUtil.get(actor, "data", "data", "traits", "toolProf"),
+		};
+	}
+
+	static isNoChoice (available) {
+		if (!available?.length) return true; // If there's no data, there's no choice
+		return available.length === 1
+			&& !available[0].choose
+			&& !available[0].anyProficientSkill
+			&& !available[0].anyProficientTool;
+	}
+	// endregion
+
+	/**
+	 * @param opts
+	 * @param opts.existing
+	 * @param opts.available
+	 * @param [opts.titlePrefix]
+	 * @param [opts.featureSourceTracker]
+	 * @param [opts.modalTitle]
+	 */
+	constructor (opts) {
+		super({
+			...opts,
+			propGroup: new Charactermancer_ProficiencySelect.PropGroup({
+				prop: "expertise",
+				propTrackerPulse: "pulseExpertise",
+				propTracker: "expertise",
+			}),
+			modalTitle: "Expertise",
+			title: "Expertise",
+			titlePlural: "Expertise",
+		});
+	}
+
+	_getStaticDisplay (key) {
+		if (Parser.SKILL_TO_ATB_ABV[key]) return Renderer.get().render(`{@skill ${key.toTitleCase()}}`);
+		// If it's not a skill, then it's a tool (which we render as plain strings)
+		return key.toTitleCase();
+	}
+
+	_getNonStaticDisplay (key, value) {
+		switch (key) {
+			case "anyProficientSkill": return `Choose ${value || 1} existing skill ${value > 1 ? "proficiencies" : "proficiency"}`;
+			case "anyProficientTool": return `Choose ${value || 1} existing tool ${value > 1 ? "proficiencies" : "proficiency"}`;
+			default: return super._getNonStaticDisplay(key, value);
+		}
+	}
+
+	_getStaticKeys () {
+		return this._available.map(profSet => Object.keys(profSet).filter(it => this._isStaticKey(it))).flat();
+	}
+
+	_isStaticKey (key) {
+		return key !== "anyProficientSkill" && key !== "anyProficientTool";
+	}
+
+	_isSkillKey (key) {
+		return key === "anyProficientSkill" || Object.keys(Parser.SKILL_TO_ATB_ABV).includes(key);
+	}
+
+	_hk_ixSet_renderPts (profSet) {
+		this._lastMeta = {
+			cleanup: () => {
+				this._lastMeta._fnsCleanup.forEach(fn => fn());
+			},
+			_fnsCleanup: [],
+		};
+
+		const $ptsExistingStatic = Object.keys(profSet).some(it => this._isStaticKey(it)) ? this._render_renderPtStatic(this._$stgGroup, profSet) : null;
+		let needsHr = $ptsExistingStatic != null;
+
+		if (needsHr && profSet.anyProficientSkill) (needsHr = false) || this._$stgGroup.append(`<hr class="hr-2 hr--dotted">`);
+		const $ptsExistingChooseAnyProficientSkill = profSet.anyProficientSkill ? this._render_renderPtChooseAnyProficientSkill(this._$stgGroup, profSet) : null;
+		needsHr = needsHr || $ptsExistingChooseAnyProficientSkill != null;
+
+		if (needsHr && profSet.anyProficientTool) (needsHr = false) || this._$stgGroup.append(`<hr class="hr-2 hr--dotted">`);
+		const $ptsExistingChooseAnyProficientTool = profSet.anyProficientTool ? this._render_renderPtChooseAnyProficientTool(this._$stgGroup, profSet) : null;
+
+		this._hkUpdateExisting = () => this._hk_updatePtsExisting($ptsExistingStatic, $ptsExistingChooseAnyProficientSkill, $ptsExistingChooseAnyProficientTool);
+	}
+
+	_getProps (ix) {
+		return {
+			propAnyProficientSkill: `ix_skill_${ix}`,
+			propAnyProficientTool: `ix_tool_${ix}`,
+		};
+	}
+
+	_render_renderPtChooseAnyProficientSkill ($stgGroup, profSet) {
+		return this._render_renderPtChooseAnyProficient({
+			$stgGroup,
+			profSet,
+			propProfSet: "anyProficientSkill",
+			propIxProps: "propAnyProficientSkill",
+			fnGetValues: this._getAvailableSkills.bind(this),
+			propPulse: "pulseSkillProficiencies",
+			titleRow: "Existing Skill",
+		});
+	}
+
+	_render_renderPtChooseAnyProficientTool ($stgGroup, profSet) {
+		return this._render_renderPtChooseAnyProficient({
+			$stgGroup,
+			profSet,
+			propProfSet: "anyProficientTool",
+			propIxProps: "propAnyProficientTool",
+			fnGetValues: this._getAvailableTools.bind(this),
+			propPulse: "pulseToolProficiencies",
+			titleRow: "Existing Tool",
+		});
+	}
+
+	_render_renderPtChooseAnyProficient (
+		{
+			$stgGroup,
+			profSet,
+			propProfSet,
+			propIxProps,
+			fnGetValues,
+			propPulse,
+			titleRow,
+		},
+	) {
+		const numChoices = Number(profSet[propProfSet] || 1);
+
+		const $wrp = $(`<div class="flex-col"></div>`).appendTo($stgGroup);
+
+		const $ptsExisting = [];
+
+		for (let i = 0; i < numChoices; ++i) {
+			const ixProps = this._getProps(i);
+
+			const selMeta = ComponentUiUtil.$getSelEnum(
+				this,
+				ixProps[propIxProps],
+				{
+					values: fnGetValues(),
+					isAllowNull: true,
+					asMeta: true,
+					fnDisplay: it => it.toTitleCase(),
+				},
+			);
+			this._lastMeta._fnsCleanup.push(selMeta.unhook);
+
+			// region Juggle the "existing" display between multiple props
+			const $ptExisting = $(`<div class="ve-small veapp__msg-warning inline-block no-wrap"></div>`);
+			const hkMoveExisting = () => {
+				const desiredLocationProf = this._state[ixProps[propIxProps]];
+				const [curLocationProf, $curLocationArr] = Object.entries($ptsExisting)
+					.find(([, $ptExistingArr]) => $ptExistingArr.includes($ptExisting)) || [];
+
+				if (desiredLocationProf !== curLocationProf) {
+					if ($curLocationArr) {
+						const ixCurLocationArray = $curLocationArr.indexOf($ptExisting);
+						if (~ixCurLocationArray) $curLocationArr.splice(ixCurLocationArray, 1);
+						if (!$curLocationArr.length) delete $ptsExisting[curLocationProf];
+					}
+				}
+
+				($ptsExisting[desiredLocationProf] = $ptsExisting[desiredLocationProf] || []).push($ptExisting);
+			};
+			this._addHookBase(ixProps[propIxProps], hkMoveExisting);
+			this._lastMeta._fnsCleanup.push(() => this._removeHookBase(ixProps[propIxProps], hkMoveExisting));
+			hkMoveExisting();
+			// endregion
+
+			const hk = () => selMeta.setValues(fnGetValues(), {isResetOnMissing: true});
+			if (this._featureSourceTracker) {
+				this._featureSourceTracker.addHook(this, propPulse, hk);
+				this._lastMeta._fnsCleanup.push(() => this._featureSourceTracker.removeHook(this, propPulse, hk));
+
+				// region Networking with other proficiency select components
+				const hkSetTrackerInfo = () => this._doSetTrackerState();
+				this._addHookBase(ixProps[propIxProps], hkSetTrackerInfo);
+				this._lastMeta._fnsCleanup.push(() => this._removeHookBase(ixProps[propIxProps], hkSetTrackerInfo));
+				// endregion
+			}
+			hk();
+
+			this._lastMeta._fnsCleanup.push(() => delete this._state[ixProps[propIxProps]]);
+
+			$$`<div class="flex-v-center ${i ? "mt-2" : ""}">
+					<div class="mr-2 no-wrap">${titleRow}:</div>
+					${selMeta.$sel}
+					${$ptExisting}
+				</div>`
+				.appendTo($wrp);
+		}
+
+		return $ptsExisting;
+	}
+
+	_getAvailableSkills () {
+		return this._getAvailableByType({
+			propExistingFvtt: "skillProficiencies",
+			propFeatureTracker: "skillProficiencies",
+		});
+	}
+
+	_getAvailableTools () {
+		return this._getAvailableByType({
+			propExistingFvtt: "toolProficiencies",
+			propFeatureTracker: "toolProficiencies",
+		});
+	}
+
+	_getAvailableByType (
+		{
+			propExistingFvtt,
+			propFeatureTracker,
+		},
+	) {
+		// Our `this._existing` is existing _expertise_, so we need to pull existing proficiencies from the original data.
+		const existingAnyProfLevel = Charactermancer_OtherProficiencySelect.getExisting({
+			[propExistingFvtt]: this._existingFvtt[propExistingFvtt],
+		});
+
+		// Available from sheet
+		const out = new Set(Object.entries(existingAnyProfLevel[propExistingFvtt])
+			.filter(([, profLevel]) => profLevel >= 1)
+			.map(([prof]) => prof));
+
+		// Available from other features
+		if (this._featureSourceTracker) {
+			(this._featureSourceTracker.getStatesForKey(propFeatureTracker, {ignore: this}) || [])
+				.forEach(otherState => {
+					Object.entries(otherState)
+						.filter(([, isAvailable]) => isAvailable)
+						.forEach(([prof]) => out.add(prof));
+				});
+		}
+
+		return [...out].sort(SortUtil.ascSortLower);
+	}
+
+	_hk_updatePtsExisting ($ptsExistingStatic, $ptsExistingChooseAnyProficientSkill, $ptsExistingChooseAnyProficientTool) {
+		const otherStates = this._featureSourceTracker ? this._featureSourceTracker.getStatesForKey(this._propGroup.propTracker, {ignore: this}) : null;
+
+		const $ptsExistings = [$ptsExistingStatic, $ptsExistingChooseAnyProficientSkill, $ptsExistingChooseAnyProficientTool].filter(Boolean);
+
+		$ptsExistings.forEach($ptsExisting => {
+			Object.entries($ptsExisting)
+				.forEach(([prof, $ptsExistingArr]) => {
+					// Value from sheet
+					let maxExisting = this._existing?.[prof] || 0;
+
+					// Value from other networked components
+					if (otherStates) otherStates.forEach(otherState => maxExisting = Math.max(maxExisting, otherState[prof] || 0));
+
+					$ptsExistingArr.forEach($ptExisting => {
+						$ptExisting
+							.title(maxExisting === 2 ? "Expertise from Another Source" : "")
+							.toggleClass("ml-1", maxExisting === 2)
+							.html(maxExisting === 2 ? `(<i class="fas fa-fw ${UtilActors.PROF_TO_ICON_CLASS[maxExisting]}"></i>)` : "");
+					});
+				});
+		});
+	}
+
+	_doSetTrackerState () {
+		const formData = this._getFormData();
+		this._featureSourceTracker.setState(this, {
+			[this._propGroup.propTracker]: formData.data?.[this._propGroup.prop],
+			"skillProficiencies": formData.data?.skillProficiencies,
+			"toolProficiencies": formData.data?.toolProficiencies,
+		});
+	}
+
+	_getFormData () {
+		const outSkills = {};
+		const outTools = {};
+		const outExpertise = {};
+
+		let isFormComplete = true;
+
+		const profSet = this._available[this._state.ixSet];
+
+		Object.entries(profSet)
+			.forEach(([k, v]) => {
+				if (k === "anyProficientSkill" || k === "anyProficientTool") {
+					const numChoices = Number(v || 1);
+					for (let i = 0; i < numChoices; ++i) {
+						const {propAnyProficientSkill, propAnyProficientTool} = this._getProps(i);
+						const prop = this._isSkillKey(k) ? propAnyProficientSkill : propAnyProficientTool;
+						const chosenProf = this._state[prop];
+						if (chosenProf == null) return isFormComplete = false;
+						(this._isSkillKey(k) ? outSkills : outTools)[chosenProf] = outExpertise[chosenProf] = 2;
+					}
+					return;
+				}
+
+				(this._isSkillKey(k) ? outSkills : outTools)[k] = outExpertise[k] = 2;
+			});
+
+		return {
+			isFormComplete,
+			data: {
+				skillProficiencies: outSkills,
+				toolProficiencies: outTools,
+				expertise: outExpertise,
+			},
+		};
+	}
+
+	pGetFormData () { return this._getFormData(); }
+
+	_getDefaultState () {
+		return {
+			ixSet: 0,
+		};
+	}
+}
+
+class Charactermancer_FeatureOptionsSelect extends BaseComponent {
+	// region External
+	/**
+	 * @param opts
+	 * @param opts.optionsSet
+	 * @param opts.actor
+	 * @param opts.level
+	 * @param [opts.existingFeatureChecker]
+	 * @param [opts.featureSourceTracker]
+	 */
+	static async pGetUserInput (opts) {
+		const comp = new this({...opts, isModal: true});
+		if (await comp.pIsNoChoice()) {
+			comp.render($(document.createElement("div"))); // Stub render, to init sub-components
+			return comp.pGetFormData();
+		}
+
+		return UtilApplications.pGetImportCompApplicationFormData({
+			comp,
+			width: 640,
+			height: Util.getMaxWindowHeight(),
+			isAutoResize: true,
+		});
+	}
+
+	static async pDoApplyProficiencyFormDataToActorUpdate (actor, actorUpdate, formData) {
+		const formDataData = formData.data;
+		if (!formDataData) return;
+
+		const {DataConverter} = await import("./DataConverter.js");
+
+		actorUpdate.data = actorUpdate.data || {};
+
+		// region Apply proficiencies found within features
+		for (const formData of formDataData.formDatasSkillToolLanguageProficiencies || []) {
+			DataConverter.doApplySkillFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "skills"),
+				formData: formData,
+				actorData: actorUpdate.data,
+			});
+
+			DataConverter.doApplyLanguageProficienciesFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "traits", "languages"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+
+			DataConverter.doApplyToolProficienciesFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "traits", "toolProf"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasSkillProficiencies || []) {
+			DataConverter.doApplySkillFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "skills"),
+				formData: formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasLanguageProficiencies || []) {
+			DataConverter.doApplyLanguageProficienciesFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "traits", "languages"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasToolProficiencies || []) {
+			DataConverter.doApplyToolProficienciesFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "traits", "toolProf"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasWeaponProficiencies || []) {
+			DataConverter.doApplyWeaponProficienciesFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "traits", "weaponProf"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasArmorProficiencies || []) {
+			DataConverter.doApplyArmorProficienciesFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "traits", "armorProf"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasSavingThrowProficiencies || []) {
+			DataConverter.doApplySavingThrowProficienciesFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "abilities"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasDamageImmunities || []) {
+			DataConverter.doApplyDamageImmunityFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "traits", "di"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasDamageResistances || []) {
+			DataConverter.doApplyDamageResistanceFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "traits", "dr"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasDamageVulnerabilities || []) {
+			DataConverter.doApplyDamageVulnerabilityFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "traits", "dv"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasConditionImmunities || []) {
+			DataConverter.doApplyConditionImmunityFormDataToActorUpdate({
+				existingProfsActor: MiscUtil.get(actor, "data", "data", "traits", "ci"),
+				formData,
+				actorData: actorUpdate.data,
+			});
+		}
+
+		for (const formData of formDataData.formDatasExpertise || []) {
+			DataConverter.doApplyExpertiseFormDataToActorUpdate({
+				existingProfsActor: {
+					skillProficiencies: MiscUtil.get(actor, "data", "data", "skills"),
+					toolProficiencies: MiscUtil.get(actor, "data", "data", "traits", "toolProf"),
+				},
+				formData: formData,
+				actorData: actorUpdate.data,
+			});
+		}
+		// endregion
+	}
+
+	static async pDoApplyAdditionalSpellsFormDataToActor ({actor, formData, abilityAbv, parentAbilityAbv = null}) {
+		const formDataData = formData.data;
+		if (!formDataData || !formDataData.formDatasAdditionalSpells?.length) return;
+
+		for (const formDataAdditionalSpells of formDataData.formDatasAdditionalSpells) {
+			await Charactermancer_AdditionalSpellsSelect.pApplyFormDataToActor(
+				actor,
+				formDataAdditionalSpells,
+				{
+					abilityAbv,
+					parentAbilityAbv,
+				},
+			);
+		}
+	}
+	// endregion
+
+	/**
+	 * @param opts
+	 * @param opts.optionsSet
+	 * @param opts.actor
+	 * @param opts.level
+	 * @param [opts.existingFeatureChecker]
+	 * @param [opts.featureSourceTracker]
+	 * @param [opts.isModal] If this instance is contained in a modal window.
+	 * @param [opts.modalFilterSpells]
+	 * @param [opts.isSkipCharactermancerHandled] If proficiencies/additional spells (which have their own handling in the
+	 * Charactermancer) should be skipped.
+	 * @param [opts.isSkipRenderingFirstFeatureTitle] If rendering the first sub-component/feature title should be skipped.
+	 */
+	constructor (opts) {
+		super();
+
+		this._optionsSet = opts.optionsSet;
+		this._actor = opts.actor;
+		this._level = opts.level;
+		this._existingFeatureChecker = opts.existingFeatureChecker;
+		this._featureSourceTracker = opts.featureSourceTracker;
+		this._isModal = !!opts.isModal;
+		this._modalFilterSpells = opts.modalFilterSpells;
+		this._isSkipCharactermancerHandled = !!opts.isSkipCharactermancerHandled;
+		this._isSkipRenderingFirstFeatureTitle = !!opts.isSkipRenderingFirstFeatureTitle;
+
+		// Sort the options, if they are part of an options set
+		if (this._isOptions()) {
+			this._optionsSet.sort((a, b) => SortUtil.ascSortLower(a.entity.name, b.entity.name) || SortUtil.ascSortLower(Parser.sourceJsonToAbv(a.entity.source), Parser.sourceJsonToAbv(b.entity.source)));
+		}
+
+		this._lastMeta = null;
+		this._lastSubMetas = [];
+
+		// region Sub-components for proficiencies/etc. derived from `entryData`
+		// Current sub-components
+		this._subCompsSkillToolLanguageProficiencies = [];
+		this._subCompsSkillProficiencies = [];
+		this._subCompsLanguageProficiencies = [];
+		this._subCompsToolProficiencies = [];
+		this._subCompsWeaponProficiencies = [];
+		this._subCompsArmorProficiencies = [];
+		this._subCompsSavingThrowProficiencies = [];
+		this._subCompsDamageImmunities = [];
+		this._subCompsDamageResistances = [];
+		this._subCompsDamageVulnerabilities = [];
+		this._subCompsConditionImmunities = [];
+		this._subCompsExpertise = [];
+		this._subCompsAdditionalSpells = [];
+
+		// Previous iterations of the sub-components
+		this._prevSubCompsSkillToolLanguageProficiencies = null;
+		this._prevSubCompsSkillProficiencies = null;
+		this._prevSubCompsLanguageProficiencies = null;
+		this._prevSubCompsToolProficiencies = null;
+		this._prevSubCompsWeaponProficiencies = null;
+		this._prevSubCompsArmorProficiencies = null;
+		this._prevSubCompsSavingThrowProficiencies = null;
+		this._prevSubCompsDamageImmunities = [];
+		this._prevSubCompsDamageResistances = [];
+		this._prevSubCompsDamageVulnerabilities = [];
+		this._prevSubCompsConditionImmunities = [];
+		this._prevSubCompsExpertise = [];
+		this._prevSubCompsAdditionalSpells = null;
+		// endregion
+	}
+
+	get optionSet_ () { return this._optionsSet; }
+
+	/** If the first feature is part of an options set, it's an options set. */
+	_isOptions () {
+		return !!(this._optionsSet[0] && this._optionsSet[0].optionsMeta);
+	}
+
+	unregisterFeatureSourceTracking () {
+		if (this._featureSourceTracker) this._featureSourceTracker.unregister(this);
+		this._unregisterSubComps();
+	}
+
+	async _pIsSubChoice (selectedLoadeds) {
+		const isSubChoice_sideDataChooseData = await this._pHasChoiceInSideData_chooseData(selectedLoadeds);
+		const isForceDisplay_entryDataSkillToolLanguageProficiencies = await this._pIsForceDisplay_skillToolLanguageProficiencies(selectedLoadeds);
+		const isForceDisplay_entryDataSkillProficiencies = await this._pIsForceDisplay_skillProficiencies(selectedLoadeds);
+		const isForceDisplay_entryDataLanguageProficiencies = await this._pIsForceDisplay_languageProficiencies(selectedLoadeds);
+		const isForceDisplay_entryDataToolProficiencies = await this._pIsForceDisplay_toolProficiencies(selectedLoadeds);
+		const isForceDisplay_entryDataWeaponProficiencies = await this._pIsForceDisplay_weaponProficiencies(selectedLoadeds);
+		const isForceDisplay_entryDataArmorProficiencies = await this._pIsForceDisplay_armorProficiencies(selectedLoadeds);
+		const isForceDisplay_entryDataSavingThrowProficiencies = await this._pIsForceDisplay_savingThrowProficiencies(selectedLoadeds);
+		const isForceDisplay_entryDataDamageImmunities = await this._pIsForceDisplay_damageImmunities(selectedLoadeds);
+		const isForceDisplay_entryDataDamageResistances = await this._pIsForceDisplay_damageResistances(selectedLoadeds);
+		const isForceDisplay_entryDataDamageVulnerabilities = await this._pIsForceDisplay_damageVulnerabilities(selectedLoadeds);
+		const isForceDisplay_entryDataConditionImmunities = await this._pIsForceDisplay_conditionImmunities(selectedLoadeds);
+		const isForceDisplay_entryDataExpertise = await this._pIsForceDisplay_expertise(selectedLoadeds);
+		const isForceDisplay_entryDataAdditionalSpells = await this._pIsForceDisplay_additionalSpells(selectedLoadeds);
+
+		return [
+			isSubChoice_sideDataChooseData,
+			isForceDisplay_entryDataSkillToolLanguageProficiencies,
+			isForceDisplay_entryDataSkillProficiencies,
+			isForceDisplay_entryDataLanguageProficiencies,
+			isForceDisplay_entryDataToolProficiencies,
+			isForceDisplay_entryDataWeaponProficiencies,
+			isForceDisplay_entryDataArmorProficiencies,
+			isForceDisplay_entryDataSavingThrowProficiencies,
+			isForceDisplay_entryDataDamageImmunities,
+			isForceDisplay_entryDataDamageResistances,
+			isForceDisplay_entryDataDamageVulnerabilities,
+			isForceDisplay_entryDataConditionImmunities,
+			isForceDisplay_entryDataExpertise,
+			isForceDisplay_entryDataAdditionalSpells,
+		].some(Boolean);
+	}
+
+	async _pHasChoiceInSideData_chooseData (optionsSet) {
+		optionsSet = optionsSet || this._optionsSet;
+
+		if (this._isSkipCharactermancerHandled) return false;
+
+		for (const loaded of optionsSet) {
+			const {entity, type} = loaded;
+
+			switch (type) {
+				case "classFeature":
+				case "subclassFeature": {
+					const {DataConverterClassSubclassFeature} = await import("./DataConverterClassSubclassFeature.js");
+					const sideData = await DataConverterClassSubclassFeature.pGetSideData(entity, type);
+					if (sideData && sideData.chooseData) return true;
+				}
+
+				// TODO support other types?
+			}
+		}
+		return false;
+	}
+
+	async _pHasSubChoice_entryData_skillToolLanguageProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "skillToolLanguageProficiencies",
+			isRequireChoice: true,
+		});
+	}
+
+	async _pHasSubChoice_entryData_skillProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "skillProficiencies",
+			isRequireChoice: true,
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedSkillProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pHasSubChoice_entryData_languageProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "languageProficiencies",
+			isRequireChoice: true,
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedLanguageProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pHasSubChoice_entryData_toolProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "toolProficiencies",
+			isRequireChoice: true,
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedToolProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pHasSubChoice_entryData_weaponProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "weaponProficiencies",
+			isRequireChoice: true,
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedWeaponProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pHasSubChoice_entryData_armorProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "armorProficiencies",
+			isRequireChoice: true,
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedArmorProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pHasSubChoice_entryData_savingThrowProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "savingThrowProficiencies",
+			isRequireChoice: true,
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedSavingThrowProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pHasSubChoice_damageImmunities (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_DamageImmunitySelect,
+			propProficiencies: "immune",
+			isRequireChoice: true,
+		});
+	}
+
+	async _pHasSubChoice_damageResistances (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_DamageResistanceSelect,
+			propProficiencies: "resist",
+			isRequireChoice: true,
+		});
+	}
+
+	async _pHasSubChoice_damageVulnerabilities (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_DamageVulnerabilitySelect,
+			propProficiencies: "vulnerable",
+			isRequireChoice: true,
+		});
+	}
+
+	async _pHasSubChoice_conditionImmunities (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_ConditionImmunitySelect,
+			propProficiencies: "conditionImmune",
+			isRequireChoice: true,
+		});
+	}
+
+	async _pHasSubChoice_expertise (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_ExpertiseSelect,
+			propProficiencies: "expertise",
+			isRequireChoice: true,
+		});
+	}
+
+	async _pHasSubChoice_entryData_additionalSpells (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_AdditionalSpellsSelect,
+			propProficiencies: "additionalSpells",
+			isRequireChoice: true,
+		});
+	}
+
+	async _pHasEntryData_otherProficiencies ({optionsSet, CompClass, propProficiencies, isRequireChoice, fnGetMappedProficiencies}) {
+		optionsSet = optionsSet || this._optionsSet;
+
+		if (this._isSkipCharactermancerHandled) return false;
+
+		for (const loaded of optionsSet) {
+			const {entity} = loaded;
+
+			let proficiencies = entity?.[propProficiencies] || entity?.entryData?.[propProficiencies];
+			if (proficiencies) {
+				if (fnGetMappedProficiencies) proficiencies = fnGetMappedProficiencies(proficiencies);
+
+				if (!isRequireChoice) return true;
+				else {
+					const isNoChoice = CompClass.isNoChoice(proficiencies);
+					if (!isNoChoice) return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	async _pIsForceDisplay_skillToolLanguageProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "skillToolLanguageProficiencies",
+		});
+	}
+
+	async _pIsForceDisplay_skillProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "skillProficiencies",
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedSkillProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pIsForceDisplay_languageProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "languageProficiencies",
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedLanguageProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pIsForceDisplay_toolProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "toolProficiencies",
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedToolProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pIsForceDisplay_weaponProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "weaponProficiencies",
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedWeaponProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pIsForceDisplay_armorProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "armorProficiencies",
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedArmorProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pIsForceDisplay_savingThrowProficiencies (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_OtherProficiencySelect,
+			propProficiencies: "savingThrowProficiencies",
+			fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedSavingThrowProficiencies.bind(Charactermancer_OtherProficiencySelect),
+		});
+	}
+
+	async _pIsForceDisplay_damageImmunities (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_ConditionImmunitySelect,
+			propProficiencies: "immune",
+		});
+	}
+
+	async _pIsForceDisplay_damageResistances (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_DamageResistanceSelect,
+			propProficiencies: "resist",
+		});
+	}
+
+	async _pIsForceDisplay_damageVulnerabilities (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_DamageVulnerabilitySelect,
+			propProficiencies: "vulnerable",
+		});
+	}
+
+	async _pIsForceDisplay_conditionImmunities (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_ConditionImmunitySelect,
+			propProficiencies: "conditionImmune",
+		});
+	}
+
+	async _pIsForceDisplay_expertise (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_ExpertiseSelect,
+			propProficiencies: "expertise",
+		});
+	}
+
+	_pIsForceDisplay_additionalSpells (optionsSet) {
+		return this._pHasEntryData_otherProficiencies({
+			optionsSet,
+			CompClass: Charactermancer_AdditionalSpellsSelect,
+			propProficiencies: "additionalSpells",
+		});
+	}
+
+	async _pGetLoadedsSideDataRaws (optionsSet) {
+		optionsSet = optionsSet || this._optionsSet;
+		const out = [];
+		for (const loaded of optionsSet) {
+			const {entity, type} = loaded;
+
+			switch (type) {
+				case "classFeature":
+				case "subclassFeature": {
+					const {DataConverterClassSubclassFeature} = await import("./DataConverterClassSubclassFeature.js");
+					const sideData = await DataConverterClassSubclassFeature.pGetSideData(entity, type);
+					out.push(sideData);
+					break;
+				}
+
+				// TODO
+
+				default: {
+					out.push(null);
+					break;
+				}
+			}
+		}
+		return out;
+	}
+
+	async pIsNoChoice () {
+		if (this._isOptions()) return false;
+		if (await this._pHasChoiceInSideData_chooseData()) return false;
+		if (await this._pHasSubChoice_entryData_skillToolLanguageProficiencies()) return false;
+		if (await this._pHasSubChoice_entryData_skillProficiencies()) return false;
+		if (await this._pHasSubChoice_entryData_languageProficiencies()) return false;
+		if (await this._pHasSubChoice_entryData_toolProficiencies()) return false;
+		if (await this._pHasSubChoice_entryData_weaponProficiencies()) return false;
+		if (await this._pHasSubChoice_entryData_armorProficiencies()) return false;
+		if (await this._pHasSubChoice_entryData_savingThrowProficiencies()) return false;
+		if (await this._pHasSubChoice_damageImmunities()) return false;
+		if (await this._pHasSubChoice_damageResistances()) return false;
+		if (await this._pHasSubChoice_damageVulnerabilities()) return false;
+		if (await this._pHasSubChoice_conditionImmunities()) return false;
+		if (await this._pHasSubChoice_expertise()) return false;
+		if (await this._pHasSubChoice_entryData_additionalSpells()) return false;
+		return true;
+	}
+
+	async pIsForceDisplay () {
+		if (await this._pIsForceDisplay_skillToolLanguageProficiencies()) return true;
+		if (await this._pIsForceDisplay_skillProficiencies()) return true;
+		if (await this._pIsForceDisplay_languageProficiencies()) return true;
+		if (await this._pIsForceDisplay_toolProficiencies()) return true;
+		if (await this._pIsForceDisplay_weaponProficiencies()) return true;
+		if (await this._pIsForceDisplay_armorProficiencies()) return true;
+		if (await this._pIsForceDisplay_savingThrowProficiencies()) return true;
+		if (await this._pIsForceDisplay_damageImmunities()) return true;
+		if (await this._pIsForceDisplay_damageResistances()) return true;
+		if (await this._pIsForceDisplay_damageVulnerabilities()) return true;
+		if (await this._pIsForceDisplay_conditionImmunities()) return true;
+		if (await this._pIsForceDisplay_expertise()) return true;
+		if (await this._pIsForceDisplay_additionalSpells()) return true;
+		return false;
+	}
+
+	_getTrackableFeatures () {
+		const ixs = ComponentUiUtil.getMetaWrpMultipleChoice_getSelectedIxs(this, "ixsChosen");
+		const selectedLoadeds = ixs.map(ix => this._optionsSet[ix]);
+
+		return selectedLoadeds.map(({page, hash}) => ({page, hash}));
+	}
+
+	/** Find a matching component in an array of (usually previously rendered) components, and copy it to ourselves. */
+	findAndCopyStateFrom (comps) {
+		if (!comps?.length) return;
+
+		const comp = comps.find(it => CollectionUtil.deepEquals(it.optionSet_, this.optionSet_));
+		if (comp) {
+			this._proxyAssignSimple("state", MiscUtil.copy(comp.__state));
+			this._prevSubCompsSkillToolLanguageProficiencies = comp._subCompsSkillToolLanguageProficiencies;
+			this._prevSubCompsSkillProficiencies = comp._subCompsSkillProficiencies;
+			this._prevSubCompsLanguageProficiencies = comp._subCompsLanguageProficiencies;
+			this._prevSubCompsToolProficiencies = comp._subCompsToolProficiencies;
+			this._prevSubCompsWeaponProficiencies = comp._subCompsWeaponProficiencies;
+			this._prevSubCompsArmorProficiencies = comp._subCompsArmorProficiencies;
+			this._prevSubCompsSavingThrowProficiencies = comp._subCompsSavingThrowProficiencies;
+			this._prevSubCompsDamageImmunities = comp._prevSubCompsDamageImmunities;
+			this._prevSubCompsDamageResistances = comp._prevSubCompsDamageResistances;
+			this._prevSubCompsDamageVulnerabilities = comp._prevSubCompsDamageVulnerabilities;
+			this._prevSubCompsConditionImmunities = comp._prevSubCompsConditionImmunities;
+			this._prevSubCompsExpertise = comp._prevSubCompsExpertise;
+			this._prevSubCompsAdditionalSpells = comp._subCompsAdditionalSpells;
+		}
+	}
+
+	async pGetFormData () {
+		// If there are no choices to be made, and no additional data, simply return the options as-is
+		if (await this.pIsNoChoice() && !await this.pIsForceDisplay()) {
+			// Bake in any side data beforehand
+			const sideDatas = await this._pGetLoadedsSideDataRaws();
+			const cpyOptionsSet = MiscUtil.copy(this._optionsSet);
+			cpyOptionsSet.forEach((loaded, i) => {
+				const sideData = sideDatas[i];
+				if (!sideData?.data && !sideData?.flags) return;
+
+				const {entity} = loaded;
+				if (sideData.data) entity.foundryAdditionalData = MiscUtil.copy(sideData.data);
+				if (sideData.flags) entity.foundryAdditionalFlags = MiscUtil.copy(sideData.flags);
+			});
+
+			return {
+				isFormComplete: true,
+				data: {
+					features: cpyOptionsSet,
+				},
+			};
+		}
+
+		await this._pGate("ixsChosen");
+
+		const selectedLoadeds = this._getSelectedLoadeds();
+
+		const sideDatas = await this._pGetLoadedsSideDataRaws(selectedLoadeds);
+		const cpySelectedLoadeds = MiscUtil.copy(selectedLoadeds);
+
+		const outSkillToolLanguageProficiencies = [];
+		const outSkillProficiencies = [];
+		const outLanguageProficiencies = [];
+		const outToolProficiencies = [];
+		const outWeaponProficiencies = [];
+		const outArmorProficiencies = [];
+		const outSavingThrowProficiencies = [];
+		const outDamageImmunities = [];
+		const outDamageResistances = [];
+		const outDamageVulnerabilities = [];
+		const outConditionImmunities = [];
+		const outExpertise = [];
+		const outAdditionalSpells = [];
+
+		for (let i = 0; i < cpySelectedLoadeds.length; ++i) {
+			const loaded = cpySelectedLoadeds[i];
+
+			const sideData = sideDatas[i];
+
+			const {entity} = loaded;
+
+			if (sideData) {
+				if (sideData.data) entity.foundryAdditionalData = MiscUtil.copy(sideData.data);
+				if (sideData.flags) entity.foundryAdditionalFlags = MiscUtil.copy(sideData.flags);
+
+				if (sideData.chooseData) {
+					const {propChooseData} = this._getProps(i);
+
+					const ixs = ComponentUiUtil.getMetaWrpMultipleChoice_getSelectedIxs(this, propChooseData);
+					const selectedChooseDatas = ixs.map(ix => sideData.chooseData[ix]);
+
+					// If there are sub-comps, each of them outputs exactly one item
+					if (selectedChooseDatas.length) {
+						const selectedChooseData = selectedChooseDatas[0];
+						Object.assign(entity.foundryAdditionalData, MiscUtil.copy(selectedChooseData.data));
+					}
+				}
+			}
+
+			if (!this._isSkipCharactermancerHandled) {
+				// region Combined Skill/Tool/Language proficiencies
+				if ((entity?.skillToolLanguageProficiencies || entity?.entryData?.skillToolLanguageProficiencies) && this._subCompsSkillToolLanguageProficiencies[i]) {
+					const formData = await this._subCompsSkillToolLanguageProficiencies[i].pGetFormData();
+					outSkillToolLanguageProficiencies.push(formData);
+				}
+				// endregion
+
+				// region Skill proficiencies
+				if ((entity?.skillProficiencies || entity?.entryData?.skillProficiencies) && this._subCompsSkillProficiencies[i]) {
+					const formData = await this._subCompsSkillProficiencies[i].pGetFormData();
+					outSkillProficiencies.push(formData);
+				}
+				// endregion
+
+				// region Language proficiencies
+				if ((entity?.languageProficiencies || entity?.entryData?.languageProficiencies) && this._subCompsLanguageProficiencies[i]) {
+					const formData = await this._subCompsLanguageProficiencies[i].pGetFormData();
+					outLanguageProficiencies.push(formData);
+				}
+				// endregion
+
+				// region Tool proficiencies
+				if ((entity?.toolProficiencies || entity?.entryData?.toolProficiencies) && this._subCompsToolProficiencies[i]) {
+					const formData = await this._subCompsToolProficiencies[i].pGetFormData();
+					outToolProficiencies.push(formData);
+				}
+				// endregion
+
+				// region Weapon proficiencies
+				if ((entity?.weaponProficiencies || entity?.entryData?.weaponProficiencies) && this._subCompsWeaponProficiencies[i]) {
+					const formData = await this._subCompsWeaponProficiencies[i].pGetFormData();
+					outWeaponProficiencies.push(formData);
+				}
+				// endregion
+
+				// region Armor proficiencies
+				if ((entity?.armorProficiencies || entity?.entryData?.armorProficiencies) && this._subCompsArmorProficiencies[i]) {
+					const formData = await this._subCompsArmorProficiencies[i].pGetFormData();
+					outArmorProficiencies.push(formData);
+				}
+				// endregion
+
+				// region Saving throw proficiencies
+				if ((entity?.savingThrowProficiencies || entity?.entryData?.savingThrowProficiencies) && this._subCompsSavingThrowProficiencies[i]) {
+					const formData = await this._subCompsSavingThrowProficiencies[i].pGetFormData();
+					outSavingThrowProficiencies.push(formData);
+				}
+				// endregion
+
+				// region Damage immunities
+				if ((entity?.immune || entity?.entryData?.immune) && this._subCompsDamageImmunities[i]) {
+					const formData = await this._subCompsDamageImmunities[i].pGetFormData();
+					outDamageImmunities.push(formData);
+				}
+				// endregion
+
+				// region Damage resistances
+				if ((entity?.resist || entity?.entryData?.resist) && this._subCompsDamageResistances[i]) {
+					const formData = await this._subCompsDamageResistances[i].pGetFormData();
+					outDamageResistances.push(formData);
+				}
+				// endregion
+
+				// region Damage vulnerabilities
+				if ((entity?.vulnerable || entity?.entryData?.vulnerable) && this._subCompsDamageVulnerabilities[i]) {
+					const formData = await this._subCompsDamageVulnerabilities[i].pGetFormData();
+					outDamageVulnerabilities.push(formData);
+				}
+				// endregion
+
+				// region Condition immunities
+				if ((entity?.conditionImmune || entity?.entryData?.conditionImmune) && this._subCompsConditionImmunities[i]) {
+					const formData = await this._subCompsConditionImmunities[i].pGetFormData();
+					outConditionImmunities.push(formData);
+				}
+				// endregion
+
+				// region Expertise
+				if ((entity?.expertise || entity?.entryData?.expertise) && this._subCompsExpertise[i]) {
+					const formData = await this._subCompsExpertise[i].pGetFormData();
+					outExpertise.push(formData);
+				}
+				// endregion
+
+				// region Additional spells
+				if ((entity?.additionalSpells || entity?.entryData?.additionalSpells) && this._subCompsAdditionalSpells[i]) {
+					const formData = await this._subCompsAdditionalSpells[i].pGetFormData();
+					outAdditionalSpells.push(formData);
+				}
+				// endregion
+			}
+		}
+
+		return {
+			isFormComplete: true,
+			data: {
+				features: cpySelectedLoadeds,
+				formDatasSkillToolLanguageProficiencies: outSkillToolLanguageProficiencies,
+				formDatasSkillProficiencies: outSkillProficiencies,
+				formDatasLanguageProficiencies: outLanguageProficiencies,
+				formDatasToolProficiencies: outToolProficiencies,
+				formDatasWeaponProficiencies: outWeaponProficiencies,
+				formDatasArmorProficiencies: outArmorProficiencies,
+				formDatasSavingThrowProficiencies: outSavingThrowProficiencies,
+				formDatasDamageImmunities: outDamageImmunities,
+				formDatasDamageResistances: outDamageResistances,
+				formDatasDamageVulnerabilities: outDamageVulnerabilities,
+				formDatasConditionImmunities: outConditionImmunities,
+				formDatasExpertise: outExpertise,
+				formDatasAdditionalSpells: outAdditionalSpells,
+			},
+		};
+	}
+
+	_getOptionsNameAndCount () {
+		const {name, count} = this._optionsSet[0].optionsMeta;
+		const required = this._optionsSet.map((it, ix) => ({it, ix})).filter(({it}) => it.isRequiredOption).map(({ix}) => ix);
+		const dispCount = count - required.length;
+
+		return {name, count, dispCount, required};
+	}
+
+	get modalTitle () {
+		if (!this._isOptions()) return null;
+
+		const {dispCount, name} = this._getOptionsNameAndCount();
+		return `Choose ${dispCount === 1 ? "" : `${dispCount} `}Option${dispCount === 1 ? "" : "s"}: ${name}${this._level != null ? ` (Level ${this._level})` : ""}`;
+	}
+
+	static _getLoadedTmpUid (loaded) { return `${loaded.page}__${loaded.hash}`; }
+
+	_getSelectedLoadeds () {
+		if (this._isOptions()) {
+			const ixs = ComponentUiUtil.getMetaWrpMultipleChoice_getSelectedIxs(this, "ixsChosen");
+			const {required} = this._getOptionsNameAndCount();
+			return [...ixs, ...required].map(ix => this._optionsSet[ix]);
+		} else {
+			return this._optionsSet;
+		}
+	}
+
+	render ($wrp) {
+		const $stgSubChoiceData = $$`<div class="w-100 flex-col mt-2"></div>`.hideVe();
+
+		this._render_options();
+
+		$$`<div class="flex-col min-h-0 overflow-y-auto">
+			${this._lastMeta?.$ele}
+			${$stgSubChoiceData}
+		</div>`.appendTo($wrp);
+
+		this._addHookBase(
+			ComponentUiUtil.getMetaWrpMultipleChoice_getPropPulse("ixsChosen"),
+			() => this._render_pHkIxsChosen({$stgSubChoiceData}),
+		);
+		return this._render_pHkIxsChosen({$stgSubChoiceData});
+	}
+
+	async pRender ($wrp) {
+		return this.render($wrp);
+	}
+
+	async _render_pHkIxsChosen ({$stgSubChoiceData}) {
+		try {
+			await this._pLock("ixsChosen");
+			await this._render_pHkIxsChosen_({$stgSubChoiceData});
+		} finally {
+			this._unlock("ixsChosen");
+		}
+	}
+
+	async _render_pHkIxsChosen_ ({$stgSubChoiceData}) {
+		// Reset the sub-state on changing chosen indexes
+		const {prefixSubComps} = this._getProps();
+		Object.keys(this._state).filter(k => k.startsWith(prefixSubComps)).forEach(k => delete this._state[k]);
+
+		const selectedLoadeds = this._getSelectedLoadeds();
+
+		if (!selectedLoadeds.length) return this._render_noSubChoices({$stgSubChoiceData});
+		if (!(await this._pIsSubChoice(selectedLoadeds))) return this._render_noSubChoices({$stgSubChoiceData});
+
+		$stgSubChoiceData.empty();
+		this._unregisterSubComps();
+
+		const sideDataRaws = await this._pGetLoadedsSideDataRaws(selectedLoadeds);
+		const ptrIsFirstSection = {_: true};
+
+		for (let i = 0; i < selectedLoadeds.length; ++i) {
+			const loaded = selectedLoadeds[i];
+
+			// region We run this again, per-entity, since we don't want to render a header for every sub-feature of the
+			//   main feature.
+			if (!(await this._pIsSubChoice([selectedLoadeds[i]]))) continue;
+			// endregion
+
+			const isSubChoice_sideDataChooseData = await this._pHasChoiceInSideData_chooseData([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataSkillToolLanguageProficiencies = await this._pIsForceDisplay_skillToolLanguageProficiencies([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataSkillProficiencies = await this._pIsForceDisplay_skillProficiencies([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataLanguageProficiencies = await this._pIsForceDisplay_languageProficiencies([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataToolProficiencies = await this._pIsForceDisplay_toolProficiencies([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataWeaponProficiencies = await this._pIsForceDisplay_weaponProficiencies([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataArmorProficiencies = await this._pIsForceDisplay_armorProficiencies([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataSavingThrowProficiencies = await this._pIsForceDisplay_savingThrowProficiencies([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataDamageImmunities = await this._pIsForceDisplay_damageImmunities([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataDamageResistances = await this._pIsForceDisplay_damageResistances([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataDamageVulnerabilities = await this._pIsForceDisplay_damageVulnerabilities([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataConditionImmunities = await this._pIsForceDisplay_conditionImmunities([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataExpertise = await this._pIsForceDisplay_expertise([selectedLoadeds[i]]);
+			const isForceDisplay_entryDataAdditionalSpells = await this._pIsForceDisplay_additionalSpells([selectedLoadeds[i]]);
+
+			const {entity, type} = loaded;
+
+			if (i !== 0 || !this._isSkipRenderingFirstFeatureTitle) $stgSubChoiceData.append(this._render_getSubCompTitle(entity));
+
+			if (isSubChoice_sideDataChooseData) {
+				const sideDataRaw = sideDataRaws[i];
+				if (sideDataRaw?.chooseData) {
+					ptrIsFirstSection._ = false;
+					this._render_renderSubComp_chooseData(i, $stgSubChoiceData, entity, type, sideDataRaw);
+				}
+			}
+
+			// region Combined Skill/Tool/Language proficiencies
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsSkillToolLanguageProficiencies",
+				propPrevSubComps: "_prevSubCompsSkillToolLanguageProficiencies",
+				isAvailable: isForceDisplay_entryDataSkillToolLanguageProficiencies,
+				propProficiencies: "skillToolLanguageProficiencies",
+				ptrIsFirstSection,
+				CompClass: Charactermancer_OtherProficiencySelect,
+				fnGetExistingFvtt: Charactermancer_OtherProficiencySelect.getExistingFvttFromActor.bind(Charactermancer_OtherProficiencySelect),
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+			});
+			// endregion
+
+			// region Skill proficiencies
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsSkillProficiencies",
+				propPrevSubComps: "_prevSubCompsSkillProficiencies",
+				isAvailable: isForceDisplay_entryDataSkillProficiencies,
+				propProficiencies: "skillProficiencies",
+				title: "Skill Proficiencies",
+				ptrIsFirstSection,
+				CompClass: Charactermancer_OtherProficiencySelect,
+				propPathActorExistingProficiencies: ["data", "data", "skills"],
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+				fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedSkillProficiencies.bind(Charactermancer_OtherProficiencySelect),
+			});
+			// endregion
+
+			// region Language proficiencies
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsLanguageProficiencies",
+				propPrevSubComps: "_prevSubCompsLanguageProficiencies",
+				isAvailable: isForceDisplay_entryDataLanguageProficiencies,
+				propProficiencies: "languageProficiencies",
+				title: "Language Proficiencies",
+				ptrIsFirstSection,
+				CompClass: Charactermancer_OtherProficiencySelect,
+				propPathActorExistingProficiencies: ["data", "data", "traits", "languages"],
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+				fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedLanguageProficiencies.bind(Charactermancer_OtherProficiencySelect),
+			});
+			// endregion
+
+			// region Tool proficiencies
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsToolProficiencies",
+				propPrevSubComps: "_prevSubCompsToolProficiencies",
+				isAvailable: isForceDisplay_entryDataToolProficiencies,
+				propProficiencies: "toolProficiencies",
+				title: "Tool Proficiencies",
+				ptrIsFirstSection,
+				CompClass: Charactermancer_OtherProficiencySelect,
+				propPathActorExistingProficiencies: ["data", "data", "traits", "toolProf"],
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+				fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedToolProficiencies.bind(Charactermancer_OtherProficiencySelect),
+			});
+			// endregion
+
+			// region Weapon proficiencies
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsWeaponProficiencies",
+				propPrevSubComps: "_prevSubCompsWeaponProficiencies",
+				isAvailable: isForceDisplay_entryDataWeaponProficiencies,
+				propProficiencies: "weaponProficiencies",
+				title: "Weapon Proficiencies",
+				ptrIsFirstSection,
+				CompClass: Charactermancer_OtherProficiencySelect,
+				propPathActorExistingProficiencies: ["data", "data", "traits", "weaponProf"],
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+				fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedWeaponProficiencies.bind(Charactermancer_OtherProficiencySelect),
+			});
+			// endregion
+
+			// region Armor proficiencies
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsArmorProficiencies",
+				propPrevSubComps: "_prevSubCompsArmorProficiencies",
+				isAvailable: isForceDisplay_entryDataArmorProficiencies,
+				propProficiencies: "armorProficiencies",
+				title: "Armor Proficiencies",
+				ptrIsFirstSection,
+				CompClass: Charactermancer_OtherProficiencySelect,
+				propPathActorExistingProficiencies: ["data", "data", "traits", "armorProf"],
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+				fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedArmorProficiencies.bind(Charactermancer_OtherProficiencySelect),
+			});
+			// endregion
+
+			// region Saving throw proficiencies
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsSavingThrowProficiencies",
+				propPrevSubComps: "_prevSubCompsSavingThrowProficiencies",
+				isAvailable: isForceDisplay_entryDataSavingThrowProficiencies,
+				propProficiencies: "savingThrowProficiencies",
+				title: "Saving Throw Proficiencies",
+				ptrIsFirstSection,
+				CompClass: Charactermancer_OtherProficiencySelect,
+				propPathActorExistingProficiencies: ["data", "data", "abilities"],
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+				fnGetMappedProficiencies: Charactermancer_OtherProficiencySelect.getMappedSavingThrowProficiencies.bind(Charactermancer_OtherProficiencySelect),
+			});
+			// endregion
+
+			// region Damage immunities
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsDamageImmunities",
+				propPrevSubComps: "_prevSubCompsDamageImmunities",
+				isAvailable: isForceDisplay_entryDataDamageImmunities,
+				propProficiencies: "immune",
+				title: "Damage Immunities",
+				ptrIsFirstSection,
+				CompClass: Charactermancer_DamageImmunitySelect,
+				propPathActorExistingProficiencies: ["data", "data", "traits", "di"],
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+			});
+			// endregion
+
+			// region Damage resistances
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsDamageResistances",
+				propPrevSubComps: "_prevSubCompsDamageResistances",
+				isAvailable: isForceDisplay_entryDataDamageResistances,
+				propProficiencies: "resist",
+				title: "Damage Resistances",
+				ptrIsFirstSection,
+				CompClass: Charactermancer_DamageResistanceSelect,
+				propPathActorExistingProficiencies: ["data", "data", "traits", "dr"],
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+			});
+			// endregion
+
+			// region Damage vulnerabilities
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsDamageVulnerabilities",
+				propPrevSubComps: "_prevSubCompsDamageVulnerabilities",
+				isAvailable: isForceDisplay_entryDataDamageVulnerabilities,
+				propProficiencies: "vulnerable",
+				title: "Damage Vulnerabilities",
+				ptrIsFirstSection,
+				CompClass: Charactermancer_DamageVulnerabilitySelect,
+				propPathActorExistingProficiencies: ["data", "data", "traits", "dv"],
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+			});
+			// endregion
+
+			// region Condition immunities
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsConditionImmunities",
+				propPrevSubComps: "_prevSubCompsConditionImmunities",
+				isAvailable: isForceDisplay_entryDataConditionImmunities,
+				propProficiencies: "conditionImmune",
+				title: "Condition Immunities",
+				CompClass: Charactermancer_ConditionImmunitySelect,
+				propPathActorExistingProficiencies: ["data", "data", "traits", "ci"],
+				ptrIsFirstSection,
+				fnSetComp: this._render_pHkIxsChosen_setCompOtherProficiencies.bind(this),
+			});
+			// endregion
+
+			// region Expertise
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsExpertise",
+				propPrevSubComps: "_prevSubCompsExpertise",
+				isAvailable: isForceDisplay_entryDataExpertise,
+				propProficiencies: "expertise",
+				title: "Expertise",
+				ptrIsFirstSection,
+				fnSetComp: this._render_pHkIxsChosen_setCompExpertise.bind(this),
+			});
+			// endregion
+
+			// region Additional Spells
+			this._render_pHkIxsChosen_comp({
+				ix: i,
+				$stgSubChoiceData,
+				selectedLoadeds,
+				propSubComps: "_subCompsAdditionalSpells",
+				propPrevSubComps: "_prevSubCompsAdditionalSpells",
+				isAvailable: isForceDisplay_entryDataAdditionalSpells,
+				propProficiencies: "additionalSpells",
+				ptrIsFirstSection,
+				fnSetComp: this._render_pHkIxsChosen_setCompAdditionalSpells.bind(this),
+			});
+			// endregion
+		}
+
+		this._prevSubCompsSkillToolLanguageProficiencies = null;
+		this._prevSubCompsSkillProficiencies = null;
+		this._prevSubCompsLanguageProficiencies = null;
+		this._prevSubCompsToolProficiencies = null;
+		this._prevSubCompsWeaponProficiencies = null;
+		this._prevSubCompsArmorProficiencies = null;
+		this._prevSubCompsSavingThrowProficiencies = null;
+		this._prevSubCompsDamageImmunities = null;
+		this._prevSubCompsDamageResistances = null;
+		this._prevSubCompsDamageVulnerabilities = null;
+		this._prevSubCompsConditionImmunities = null;
+		this._prevSubCompsExpertise = null;
+		this._prevSubCompsAdditionalSpells = null;
+
+		$stgSubChoiceData.showVe();
+	}
+
+	_render_pHkIxsChosen_comp (
+		{
+			ix,
+			$stgSubChoiceData,
+			propSubComps,
+			propPrevSubComps,
+			isAvailable,
+			selectedLoadeds,
+			propProficiencies,
+			title,
+			CompClass,
+			propPathActorExistingProficiencies,
+			ptrIsFirstSection,
+			fnSetComp,
+			fnGetMappedProficiencies,
+			fnGetExistingFvtt,
+		},
+	) {
+		this[propSubComps][ix] = null;
+		if (!isAvailable) return;
+
+		const {entity} = selectedLoadeds[ix];
+
+		if (!entity?.[propProficiencies] && !entity?.entryData?.[propProficiencies]) return;
+
+		fnSetComp({
+			ix,
+			propSubComps,
+			propProficiencies,
+			CompClass,
+			propPathActorExistingProficiencies,
+			entity,
+			fnGetMappedProficiencies,
+			fnGetExistingFvtt,
+		});
+
+		// On the first render, apply previous state, if it exists
+		if (this[propPrevSubComps] && this[propPrevSubComps][ix]) {
+			this[propSubComps][ix]._proxyAssignSimple("state", MiscUtil.copy(this[propPrevSubComps][ix].__state));
+		}
+
+		if (!title) title = this[propSubComps][ix]?.modalTitle;
+
+		if (title) $stgSubChoiceData.append(`${ptrIsFirstSection._ ? "" : `<div class="w-100 mt-1 mb-2"></div>`}<div class="bold mb-2">${title}</div>`);
+		this[propSubComps][ix].render($stgSubChoiceData);
+		ptrIsFirstSection._ = false;
+	}
+
+	_render_pHkIxsChosen_setCompOtherProficiencies (
+		{
+			ix,
+			propSubComps,
+			propProficiencies,
+			CompClass,
+			propPathActorExistingProficiencies,
+			entity,
+			fnGetMappedProficiencies,
+			fnGetExistingFvtt,
+		},
+	) {
+		const availableRaw = entity[propProficiencies] || entity.entryData[propProficiencies];
+		const existingFvtt = fnGetExistingFvtt
+			? fnGetExistingFvtt()
+			: {[propProficiencies]: MiscUtil.get(this._actor, ...propPathActorExistingProficiencies)};
+		this[propSubComps][ix] = new CompClass({
+			featureSourceTracker: this._featureSourceTracker,
+			existing: CompClass.getExisting(existingFvtt),
+			existingFvtt,
+			available: fnGetMappedProficiencies ? fnGetMappedProficiencies(availableRaw) : availableRaw,
+		});
+	}
+
+	_render_pHkIxsChosen_setCompExpertise (
+		{
+			ix,
+			propSubComps,
+			propProficiencies,
+			entity,
+		},
+	) {
+		const existingFvtt = Charactermancer_ExpertiseSelect.getExistingFvttFromActor(this._actor);
+		this[propSubComps][ix] = new Charactermancer_ExpertiseSelect({
+			featureSourceTracker: this._featureSourceTracker,
+			existing: Charactermancer_ExpertiseSelect.getExisting(existingFvtt),
+			existingFvtt,
+			available: entity[propProficiencies] || entity.entryData[propProficiencies],
+		});
+	}
+
+	_render_pHkIxsChosen_setCompAdditionalSpells (
+		{
+			ix,
+			propSubComps,
+			propProficiencies,
+			entity,
+		},
+	) {
+		this[propSubComps][ix] = Charactermancer_AdditionalSpellsSelect.getComp({
+			additionalSpells: entity[propProficiencies] || entity.entryData[propProficiencies],
+			modalFilterSpells: this._modalFilterSpells,
+
+			// Force all levels to be added
+			curLevel: 0,
+			targetLevel: Consts.CHAR_MAX_LEVEL,
+			spellLevelLow: 0,
+			spellLevelHigh: 9,
+		});
+	}
+
+	_getProps (ix) {
+		return {
+			prefixSubComps: "subComp_",
+			propChooseData: `subComp_${ix}_chooseData`,
+		};
+	}
+
+	_unregisterSubComps () {
+		if (!this._featureSourceTracker) return;
+
+		this._subCompsSkillToolLanguageProficiencies.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsSkillProficiencies.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsLanguageProficiencies.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsToolProficiencies.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsWeaponProficiencies.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsArmorProficiencies.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsDamageImmunities.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsDamageResistances.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsDamageVulnerabilities.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsConditionImmunities.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsExpertise.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+		this._subCompsSavingThrowProficiencies.filter(Boolean).forEach(comp => this._featureSourceTracker.unregister(comp));
+	}
+
+	_render_noSubChoices ({$stgSubChoiceData}) {
+		this._lastSubMetas.forEach(it => it.unhook());
+		this._lastSubMetas = [];
+
+		this._unregisterSubComps();
+
+		this._subCompsSkillToolLanguageProficiencies = [];
+		this._subCompsSkillProficiencies = [];
+		this._subCompsLanguageProficiencies = [];
+		this._subCompsToolProficiencies = [];
+		this._subCompsWeaponProficiencies = [];
+		this._subCompsArmorProficiencies = [];
+		this._subCompsSavingThrowProficiencies = [];
+		this._subCompsDamageImmunities = [];
+		this._subCompsDamageResistances = [];
+		this._subCompsDamageVulnerabilities = [];
+		this._subCompsConditionImmunities = [];
+		this._subCompsExpertise = [];
+		this._subCompsAdditionalSpells = [];
+
+		$stgSubChoiceData.empty().hideVe();
+	}
+
+	_render_options () {
+		if (!this._isOptions()) return;
+
+		const {count, required} = this._getOptionsNameAndCount();
+
+		const $ptsExisting = {};
+		this._lastMeta = ComponentUiUtil.getMetaWrpMultipleChoice(
+			this,
+			"ixsChosen",
+			{
+				values: this._optionsSet,
+				ixsRequired: required,
+				count,
+				fnDisplay: v => {
+					const ptName = Renderer.get().render(v.entry);
+
+					const $ptExisting = $(`<div class="ml-1 ve-small ve-muted"></div>`);
+					$ptsExisting[this.constructor._getLoadedTmpUid(v)] = $ptExisting;
+
+					return $$`<div class="w-100 split-v-center">
+						<div class="mr-2 flex-v-center">${ptName}${$ptExisting}</div>
+						<div class="${Parser.sourceJsonToColor(v.entity.source)} pr-1" title="${Parser.sourceJsonToFull(v.entity.source)}">${Parser.sourceJsonToAbv(v.entity.source)}</div>
+					</div>`;
+				},
+			},
+		);
+
+		const hkUpdatePtsExisting = () => {
+			const otherStates = this._featureSourceTracker ? this._featureSourceTracker.getStatesForKey("features", {ignore: this}) : null;
+
+			this._optionsSet
+				.forEach(v => {
+					const tmpUid = this.constructor._getLoadedTmpUid(v);
+
+					if (!$ptsExisting[tmpUid]) return;
+
+					// Value from sheet
+					let isExists = this._existingFeatureChecker && this._existingFeatureChecker.isExistingFeature(v.entity._displayName || v.entity.name, v.page, v.source, v.hash);
+
+					// Value from other networked components
+					if (otherStates) isExists = isExists || otherStates.some(arr => arr.some(it => it.page === v.page && it.hash === v.hash));
+
+					$ptsExisting[tmpUid]
+						.title(isExists ? `Gained from Another Source` : "")
+						.html(isExists ? `(<i class="fas fa-fw fa-check"></i>)` : "")
+						.toggleClass("ml-1", isExists);
+				});
+		};
+		if (this._featureSourceTracker) this._featureSourceTracker.addHook(this, "pulseFeatures", hkUpdatePtsExisting);
+		hkUpdatePtsExisting();
+
+		// region Networking with other feature select components
+		if (this._featureSourceTracker) {
+			const hkSetTrackerState = () => this._featureSourceTracker.setState(this, {features: this._getTrackableFeatures()});
+			this._addHookBase(this._lastMeta.propPulse, hkSetTrackerState);
+			hkSetTrackerState(); // Run this immediately, as we might have loaded state from a predecessor
+		}
+		// endregion
+	}
+
+	_render_getSubCompTitle (entity) {
+		const titleIntro = [
+			entity.className,
+			entity.subclassShortName ? `(${entity.subclassShortName})` : "",
+			entity.level ? `Level ${entity.level}` : "",
+		].filter(Boolean).join(" ");
+		const title = `${titleIntro}${titleIntro ? ": " : ""}${entity.name}`;
+		return `${this._isModal ? "" : `<hr class="hr-2">`}<div class="mb-2 bold w-100">${title}</div>`;
+	}
+
+	/** Used for e.g. Zealot Barbarian's "Divine Fury" (side-loaded options) */
+	_render_renderSubComp_chooseData (ix, $stgSubChoice, entity, type, sideData) {
+		const {propChooseData} = this._getProps(ix);
+
+		const htmlDescription = sideData.isChooseDataRenderEntries ? Vetools.withUnpatchedDiceRendering(() => `${(entity.entries || []).map(ent => `<div>${Renderer.get().render(ent)}</div>`).join("")}`) : null;
+
+		const choiceMeta = ComponentUiUtil.getMetaWrpMultipleChoice(
+			this,
+			propChooseData,
+			{
+				count: 1,
+				fnDisplay: val => val.name,
+				values: sideData.chooseData,
+			},
+		);
+
+		this._lastSubMetas.push(choiceMeta);
+
+		$$`<div class="flex-col w-100">
+			${htmlDescription}
+			${choiceMeta.$ele}
+		</div>`.appendTo($stgSubChoice);
+	}
+
+	_getDefaultState () {
+		return {
+			ixsChosen: [],
+		};
+	}
+}
+
+export {
+	Charactermancer_FeatureSourceTracker,
+	Charactermancer_AbilityScoreSelect,
+	Charactermancer_Util,
+	Charactermancer_OtherProficiencySelect,
+	Charactermancer_DamageImmunitySelect,
+	Charactermancer_DamageResistanceSelect,
+	Charactermancer_DamageVulnerabilitySelect,
+	Charactermancer_ConditionImmunitySelect,
+	Charactermancer_ExpertiseSelect,
+	Charactermancer_FeatureOptionsSelect,
+};

@@ -3,18 +3,18 @@
     "title": "Zoom/Pan Options",
     "description": "Adds cursor-based zoom, touchpad/scrollwheel zoom/pan support, and other options.",
     "author": "shem",
-    "version": "1.6.1",
+    "version": "1.6.7",
     "minimumCoreVersion": "0.6.0",
-    "compatibleCoreVersion": "0.8.5",
+    "compatibleCoreVersion": "9.235",
     "esmodules": [
         "scripts/zoom-pan-options.js"
     ],
     "url": "https://github.com/itamarcu/ZoomPanOptions",
     "manifest": "https://github.com/itamarcu/ZoomPanOptions/releases/latest/download/module.json",
-    "download": "https://github.com/itamarcu/ZoomPanOptions/releases/download/1.6.1/module.zip",
-    "readme": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/Readme.md",
-    "changelog": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/Changelog.md",
-    "license": "https://raw.githubusercontent.com/itamarcu/ZoomPanOptions/master/License.txt",
+    "download": "https://github.com/itamarcu/ZoomPanOptions/releases/download/1.6.7/module.zip",
+    "readme": "https://github.com/itamarcu/ZoomPanOptions/blob/master/Readme.md",
+    "changelog": "https://github.com/itamarcu/ZoomPanOptions/blob/master/Changelog.md",
+    "license": "https://github.com/itamarcu/ZoomPanOptions/blob/master/License.txt",
     "bugs": "https://github.com/itamarcu/ZoomPanOptions/issues",
     "authors": [
         {

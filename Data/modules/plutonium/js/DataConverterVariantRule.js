@@ -1,1 +1,36 @@
-const _0x32f5=['84ogqoDr','getWithDescriptionPlugins','1878FpCLGx','398071rzALUP','1038251hqhCHA','permissions','getNameWithSourcePart','7ldfTsF','page','copy','render','1QPloDj','648033UjHWPV','1cnIPHY','87831ZFaAHa','<div>','1ZlsUxy','get','getVariantRuleJournal','now','importRule','129740VjDaGm','565846YhiVcB','source'];const _0x2d38=function(_0x49734c,_0x12ebc6){_0x49734c=_0x49734c-0x1bb;let _0x32f51f=_0x32f5[_0x49734c];return _0x32f51f;};const _0x3ebffc=_0x2d38;(function(_0x4a8a3b,_0x4fe1a8){const _0x488510=_0x2d38;while(!![]){try{const _0x1d2b00=parseInt(_0x488510(0x1bf))*-parseInt(_0x488510(0x1d1))+-parseInt(_0x488510(0x1ce))*parseInt(_0x488510(0x1cd))+parseInt(_0x488510(0x1c8))*parseInt(_0x488510(0x1cf))+parseInt(_0x488510(0x1be))+-parseInt(_0x488510(0x1c1))*-parseInt(_0x488510(0x1c3))+-parseInt(_0x488510(0x1c4))+parseInt(_0x488510(0x1c5))*parseInt(_0x488510(0x1cc));if(_0x1d2b00===_0x4fe1a8)break;else _0x4a8a3b['push'](_0x4a8a3b['shift']());}catch(_0x37df71){_0x4a8a3b['push'](_0x4a8a3b['shift']());}}}(_0x32f5,0x503a2));import{UtilApplications}from'./UtilApplications.js';import{Config}from'./Config.js';import{DataConverter}from'./DataConverter.js';class DataConverterVariantRule{static[_0x3ebffc(0x1bb)](_0x22a468,_0x52a2b9){const _0x1d193a=_0x3ebffc;_0x52a2b9=_0x52a2b9||{};const _0x3214e0=MiscUtil[_0x1d193a(0x1ca)](_0x22a468);delete _0x3214e0['name'],delete _0x3214e0[_0x1d193a(0x1c9)],delete _0x3214e0[_0x1d193a(0x1c0)];const _0x5e5b2e=DataConverter[_0x1d193a(0x1c2)](()=>_0x1d193a(0x1d0)+Renderer['get']()['setFirstSection'](!![])[_0x1d193a(0x1cb)](_0x3214e0)+'</div>'),_0x837bcf={'name':UtilApplications['getCleanEntityName'](DataConverter[_0x1d193a(0x1c7)](_0x22a468)),'permission':{'default':0x0},'entryTime':Date[_0x1d193a(0x1bc)](),'content':_0x5e5b2e};if(_0x52a2b9['isAddPermission'])_0x837bcf['permission']={'default':Config[_0x1d193a(0x1d2)](_0x1d193a(0x1bd),_0x1d193a(0x1c6))};return _0x837bcf;}}export{DataConverterVariantRule};
+import {UtilApplications} from "./UtilApplications.js";
+import {Config} from "./Config.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class DataConverterVariantRule {
+	/**
+	 * @param rule
+	 * @param [opts] Options object.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 */
+	static async pGetVariantRuleJournal (rule, opts) {
+		opts = opts || {};
+
+		const cpy = MiscUtil.copy(rule);
+		delete cpy.name;
+		delete cpy.page;
+		delete cpy.source;
+
+		const content = await UtilDataConverter.pGetWithDescriptionPlugins(() => `<div>${Renderer.get().setFirstSection(true).render(cpy)}</div>`);
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(rule)),
+			permission: {default: 0},
+			entryTime: Date.now(),
+			content,
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importRule", "permissions")};
+
+		return out;
+	}
+}
+
+export {DataConverterVariantRule};

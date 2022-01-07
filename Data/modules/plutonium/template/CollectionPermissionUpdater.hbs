@@ -39,7 +39,7 @@
 				<input class="mr-1 no-events" type="checkbox" name="permu__cb-all-players-all-entities">
 				<select class="permu__sel-permission permu__sel-permission--mass input-xs" name="permu__sel-all-players-all-entities">
 					<option value="-2" selected disabled>Select...</option>
-					{{#each @root.permissions}}
+					{{#each @root.permissionsAll}}
 						<option value="{{value}}">{{name}}</option>
 					{{/each}}
 				</select>
@@ -81,9 +81,9 @@
 					<!-- "All Players" controls column -->
 					<label class="flex-vh-center permu__cell-player permu__cell-player--heavy-border no-shrink" data-permu-type="lbl-entity-all-players">
 						<input class="mr-1 no-events" type="checkbox" data-permu-type="cb-entity-all-players">
-						<select class="permu__sel-permission input-xs" data-permu-type="sel-entity-all-players">
+						<select class="permu__sel-permission input-xs" data-permu-value="{{allPlayerPermissions}}" data-permu-type="sel-entity-all-players">
 							<option value="-2" selected disabled>Select...</option>
-							{{#each @root.permissions}}
+							{{#each @root.permissionsAll}}
 								<option value="{{value}}" {{#compare value ../allPlayerPermissions operator="==="}}selected{{/compare}}>{{name}}</option>
 							{{/each}}
 						</select>

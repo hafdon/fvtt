@@ -1,1 +1,210 @@
-const _0x2b48=['getCachedMethod','fnGet','\x22\x20on\x20object','45737rQNICM','Could\x20not\x20find\x20getter\x20\x22','restoreCachedGetter','4FYaiAt','_getGetterMeta','131fzSMkh','restoreCachedMethod','8DeAEMu','isBind','1607fbZGRK','has','_plutoniumCache','defineProperty','set','get','43324KewEMk','getOwnPropertyDescriptor','3dyuWrM','bind','_CACHE_GETTERS','getPrototypeOf','cacheMethod','getCachedGetterMeta','2905ifjfQx','6dCGTVx','7542OSxmEs','59216AyVHie','2tNdPtF','37057ZTKJwV','obj','_CACHE_METHODS'];const _0x2ba1=function(_0x23943b,_0x4e36a8){_0x23943b=_0x23943b-0x172;let _0x2b486c=_0x2b48[_0x23943b];return _0x2b486c;};const _0x5a6acd=_0x2ba1;(function(_0x1db2d3,_0x3ca9ec){const _0x9e332c=_0x2ba1;while(!![]){try{const _0x5a9b52=parseInt(_0x9e332c(0x191))*-parseInt(_0x9e332c(0x17f))+-parseInt(_0x9e332c(0x172))*-parseInt(_0x9e332c(0x190))+parseInt(_0x9e332c(0x189))*parseInt(_0x9e332c(0x18f))+parseInt(_0x9e332c(0x17b))*parseInt(_0x9e332c(0x178))+parseInt(_0x9e332c(0x192))+-parseInt(_0x9e332c(0x17d))*parseInt(_0x9e332c(0x181))+-parseInt(_0x9e332c(0x187))*parseInt(_0x9e332c(0x193));if(_0x5a9b52===_0x3ca9ec)break;else _0x1db2d3['push'](_0x1db2d3['shift']());}catch(_0x75b10f){_0x1db2d3['push'](_0x1db2d3['shift']());}}}(_0x2b48,0x1c408));class UtilPatch{static[_0x5a6acd(0x18d)](_0x2d8592,_0xad5871,_0x37f62e){const _0x4749c5=_0x5a6acd;_0x37f62e=_0x37f62e||{};const _0x5440e0=UtilPatch[_0x4749c5(0x175)](_0x2d8592,_0xad5871);if(_0x5440e0!=null)return _0x5440e0;const _0x30d6c2=_0x37f62e[_0x4749c5(0x180)]?_0x2d8592[_0xad5871][_0x4749c5(0x18a)](_0x2d8592):_0x2d8592[_0xad5871];_0x2d8592[_0x4749c5(0x183)+_0xad5871]=_0x30d6c2;if(!UtilPatch[_0x4749c5(0x174)][_0x4749c5(0x182)](_0x2d8592))UtilPatch[_0x4749c5(0x174)][_0x4749c5(0x185)](_0x2d8592,{});const _0x35998b=UtilPatch[_0x4749c5(0x174)]['get'](_0x2d8592);return _0x35998b[_0xad5871]=_0x30d6c2,_0x30d6c2;}static[_0x5a6acd(0x175)](_0x22b308,_0x37af43){const _0x31e2a8=_0x5a6acd;if(!UtilPatch[_0x31e2a8(0x174)][_0x31e2a8(0x182)](_0x22b308))return null;const _0x1619d4=UtilPatch[_0x31e2a8(0x174)][_0x31e2a8(0x186)](_0x22b308);return _0x1619d4[_0x37af43]||null;}static[_0x5a6acd(0x17e)](_0x5af0d6,_0x52720c){const _0x56f245=UtilPatch['getCachedMethod'](_0x5af0d6,_0x52720c);if(!_0x56f245)return;_0x5af0d6[_0x52720c]=_0x56f245;}static['cacheGetter'](_0x2611a1,_0x54b5b5,_0x1f6216){const _0x3fa900=_0x5a6acd;_0x1f6216=_0x1f6216||{};const _0x5e87b7=UtilPatch[_0x3fa900(0x175)](_0x2611a1,_0x54b5b5);if(_0x5e87b7!=null)return;const _0x501a19=this[_0x3fa900(0x17c)](_0x2611a1,_0x54b5b5);_0x501a19[_0x3fa900(0x176)]=_0x1f6216[_0x3fa900(0x180)]?_0x501a19[_0x3fa900(0x176)]['bind'](_0x501a19[_0x3fa900(0x173)]):_0x501a19['fnGet'],Object[_0x3fa900(0x184)](_0x501a19[_0x3fa900(0x173)],_0x3fa900(0x183)+_0x54b5b5,{'configurable':!![],'get':_0x501a19[_0x3fa900(0x176)]});if(!UtilPatch[_0x3fa900(0x174)][_0x3fa900(0x182)](_0x2611a1))UtilPatch[_0x3fa900(0x174)]['set'](_0x2611a1,{});const _0x31eb60=UtilPatch['_CACHE_METHODS']['get'](_0x2611a1);_0x31eb60[_0x54b5b5]=_0x501a19;}static['_getGetterMeta'](_0x5da2c6,_0x1b1ca4){const _0x354e1a=_0x5a6acd,_0x51bf12=Object[_0x354e1a(0x188)](_0x5da2c6,_0x1b1ca4);if(_0x51bf12&&_0x51bf12[_0x354e1a(0x186)])return{'fnGet':_0x51bf12['get'],'obj':_0x5da2c6};while(Object[_0x354e1a(0x18c)](_0x5da2c6)!==null){_0x5da2c6=Object[_0x354e1a(0x18c)](_0x5da2c6);const _0x355270=Object[_0x354e1a(0x188)](_0x5da2c6,_0x1b1ca4);if(_0x355270&&_0x355270[_0x354e1a(0x186)])return{'fnGet':_0x355270[_0x354e1a(0x186)],'obj':_0x5da2c6};}throw new Error(_0x354e1a(0x179)+_0x1b1ca4+_0x354e1a(0x177));}static[_0x5a6acd(0x18e)](_0x1f692a,_0x24a6c5){const _0x3ed11a=_0x5a6acd,_0x3bcb6b=UtilPatch['getCachedMethod'](_0x1f692a,_0x24a6c5);if(_0x3bcb6b)return _0x3bcb6b;while(Object[_0x3ed11a(0x18c)](_0x1f692a)!==null){_0x1f692a=Object[_0x3ed11a(0x18c)](_0x1f692a);const _0x114471=UtilPatch[_0x3ed11a(0x175)](_0x1f692a,_0x24a6c5);if(_0x114471)return _0x114471;}}static[_0x5a6acd(0x17a)](_0x54b77f,_0x30073f){const _0x5f2545=_0x5a6acd,_0x441268=UtilPatch['getCachedGetterMeta'](_0x54b77f,_0x30073f);if(!_0x441268)return;Object['defineProperty'](_0x441268[_0x5f2545(0x173)],_0x30073f,{'configurable':!![],'get':_0x441268[_0x5f2545(0x176)]});}}UtilPatch[_0x5a6acd(0x174)]=new Map(),UtilPatch[_0x5a6acd(0x18b)]=new Map();export{UtilPatch};
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {LGT} from "./Util.js";
+
+/**
+ * @deprecated In favor of using `libWrapper`
+ */
+class UtilPatch {
+	// region methods
+	/**
+	 * @param obj
+	 * @param methodName
+	 * @param [opts]
+	 * @param [opts.isBind]
+	 */
+	static cacheMethod (obj, methodName, opts) {
+		opts = opts || {};
+
+		const existing = UtilPatch.getCachedMethod(obj, methodName);
+		if (existing != null) return existing;
+
+		const toCache = opts.isBind ? obj[methodName].bind(obj) : obj[methodName];
+
+		// Expose the original method
+		obj[`_plutoniumCache${methodName}`] = toCache;
+
+		if (!UtilPatch._CACHE_METHODS.has(obj)) UtilPatch._CACHE_METHODS.set(obj, {});
+
+		const store = UtilPatch._CACHE_METHODS.get(obj);
+		store[methodName] = toCache;
+
+		return toCache;
+	}
+
+	static getCachedMethod (obj, methodName) {
+		if (!UtilPatch._CACHE_METHODS.has(obj)) return null;
+		const store = UtilPatch._CACHE_METHODS.get(obj);
+		return store[methodName] || null;
+	}
+
+	static restoreCachedMethod (obj, methodName) {
+		const method = UtilPatch.getCachedMethod(obj, methodName);
+		if (!method) return;
+		obj[methodName] = method;
+	}
+	// endregion
+
+	// region getters
+	/**
+	 * @param obj
+	 * @param getterName
+	 * @param [opts]
+	 * @param [opts.isBind]
+	 */
+	static cacheGetter (obj, getterName, opts) {
+		opts = opts || {};
+
+		const existing = UtilPatch.getCachedMethod(obj, getterName);
+		if (existing != null) return;
+
+		const getterMeta = this._getGetterMeta(obj, getterName);
+		getterMeta.fnGet = opts.isBind ? getterMeta.fnGet.bind(getterMeta.obj) : getterMeta.fnGet;
+
+		// Expose the original method for other mods/etc to use
+		Object.defineProperty(
+			getterMeta.obj,
+			`_plutoniumCache${getterName}`,
+			{
+				configurable: true,
+				get: getterMeta.fnGet,
+			},
+		);
+
+		if (!UtilPatch._CACHE_METHODS.has(obj)) UtilPatch._CACHE_METHODS.set(obj, {});
+
+		const store = UtilPatch._CACHE_METHODS.get(obj);
+		store[getterName] = getterMeta;
+	}
+
+	static _getGetterMeta (obj, getterName) {
+		const ownProp = Object.getOwnPropertyDescriptor(obj, getterName);
+		if (ownProp && ownProp.get) {
+			return {
+				fnGet: ownProp.get,
+				obj,
+			};
+		}
+
+		while (Object.getPrototypeOf(obj) !== null) {
+			obj = Object.getPrototypeOf(obj);
+			const parentProp = Object.getOwnPropertyDescriptor(obj, getterName);
+			if (parentProp && parentProp.get) {
+				return {
+					fnGet: parentProp.get,
+					obj,
+				};
+			}
+		}
+
+		throw new Error(`Could not find getter "${getterName}" on object`);
+	}
+
+	static getCachedGetterMeta (obj, getterName) {
+		const getterMeta = UtilPatch.getCachedMethod(obj, getterName);
+		if (getterMeta) return getterMeta;
+
+		while (Object.getPrototypeOf(obj) !== null) {
+			obj = Object.getPrototypeOf(obj);
+			const getterMeta = UtilPatch.getCachedMethod(obj, getterName);
+			if (getterMeta) return getterMeta;
+		}
+	}
+
+	static restoreCachedGetter (obj, getterName) {
+		const getterMeta = UtilPatch.getCachedGetterMeta(obj, getterName);
+		if (!getterMeta) return;
+		Object.defineProperty(
+			getterMeta.obj,
+			getterName,
+			{
+				configurable: true,
+				get: getterMeta.fnGet,
+			},
+		);
+	}
+	// endregion
+}
+UtilPatch._CACHE_METHODS = new Map();
+UtilPatch._CACHE_GETTERS = new Map();
+
+class UtilPatcher {
+	/** Search for the exact text node, to avoid breaking compatibility with e.g. Tidy UI */
+	static findPlutoniumTextNodes (ele, {isSingle = false} = {}) {
+		const stack = [];
+		this._findPlutoniumTextNodes(ele, {isSingle, stack});
+		return isSingle ? stack[0] : stack;
+	}
+
+	static _findPlutoniumTextNodes (ele, {isSingle, stack}) {
+		if (!ele) return;
+		if (isSingle && stack.length) return;
+
+		if (ele.nodeName === "#text") {
+			const txt = (ele.data || "").trim();
+			if (txt === SharedConsts.MODULE_TITLE) stack.push(ele);
+			if (isSingle && stack.length) return;
+		}
+
+		for (let i = 0; i < ele.childNodes.length; ++i) {
+			const node = ele.childNodes[i];
+			this._findPlutoniumTextNodes(node, {isSingle, stack});
+			if (isSingle && stack.length) return;
+		}
+	}
+}
+
+/**
+ * Unfortunately [and probably for the best], libWrapper (as of 2021-07-06) can't wrap `_onDropActor` or `_onDropItem`,
+ *   so we directly overwrite the method instead.
+ */
+class UtilPatchActorDrop {
+	static init () {
+		const ActorSheet5eCharacter = MiscUtil.get(CONFIG.Actor, "sheetClasses", "character", "dnd5e.ActorSheet5eCharacter", "cls");
+		if (!ActorSheet5eCharacter) {
+			return console.warn(...LGT, `Could not find "dnd5e.ActorSheet5eCharacter" sheet. Are you using a non-dnd5e system?`);
+		}
+
+		const baseClassActor = Object.getPrototypeOf(ActorSheet5eCharacter);
+
+		UtilPatchActorDrop._CACHED_ACTOR_SHEET_DROP = UtilPatch.cacheMethod(baseClassActor.prototype, "_onDrop");
+		UtilPatchActorDrop._CACHED_ACTOR_SHEET_DROP_ACTOR = UtilPatch.cacheMethod(baseClassActor.prototype, "_onDropActor");
+		UtilPatchActorDrop._CACHED_ACTOR_SHEET_DROP_ITEM = UtilPatch.cacheMethod(baseClassActor.prototype, "_onDropItem");
+
+		baseClassActor.prototype._onDrop = async function (...args) {
+			const boundCachedMethod = UtilPatchActorDrop._CACHED_ACTOR_SHEET_DROP.bind(this);
+			return UtilPatchActorDrop._pCallPatches.bind(this)(boundCachedMethod, UtilPatchActorDrop._PATCHES_DROP, ...args);
+		};
+
+		baseClassActor.prototype._onDropActor = async function (...args) {
+			const boundCachedMethod = UtilPatchActorDrop._CACHED_ACTOR_SHEET_DROP_ACTOR.bind(this);
+			return UtilPatchActorDrop._pCallPatches.bind(this)(boundCachedMethod, UtilPatchActorDrop._PATCHES_DROP_ACTOR, ...args);
+		};
+
+		baseClassActor.prototype._onDropItem = async function (...args) {
+			const boundCachedMethod = UtilPatchActorDrop._CACHED_ACTOR_SHEET_DROP_ITEM.bind(this);
+			return UtilPatchActorDrop._pCallPatches.bind(this)(boundCachedMethod, UtilPatchActorDrop._PATCHES_DROP_ITEM, ...args);
+		};
+	}
+
+	static async _pCallPatches (boundCachedMethod, patches, ...args) {
+		if (!patches.length) return boundCachedMethod(...args);
+
+		let boundLast = null;
+		[...patches].reverse()
+			.forEach(patch => boundLast = patch.bind(this, boundLast || boundCachedMethod, ...args));
+
+		return boundLast();
+	}
+
+	static registerDrop (patch) { UtilPatchActorDrop._PATCHES_DROP.push(patch); }
+	static registerDropActor (patch) { UtilPatchActorDrop._PATCHES_DROP_ACTOR.push(patch); }
+	static registerDropItem (patch) { UtilPatchActorDrop._PATCHES_DROP_ITEM.push(patch); }
+}
+UtilPatchActorDrop._CACHED_ACTOR_SHEET_DROP = null;
+UtilPatchActorDrop._CACHED_ACTOR_SHEET_DROP_ACTOR = null;
+UtilPatchActorDrop._CACHED_ACTOR_SHEET_DROP_ITEM = null;
+UtilPatchActorDrop._PATCHES_DROP = [];
+UtilPatchActorDrop._PATCHES_DROP_ACTOR = [];
+UtilPatchActorDrop._PATCHES_DROP_ITEM = [];
+
+export {UtilPatch, UtilPatcher, UtilPatchActorDrop};

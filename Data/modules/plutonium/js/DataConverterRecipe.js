@@ -1,1 +1,43 @@
-const _0x49c5=['permission','now','pGetFluff','getBodyHtml','204542fDewXy','getCleanEntityName','1LnslUT','images','getMediaUrl','data/fluff-recipes.json','739085ldWupQ','1pZAWAn','img','106716vRdzzh','452017gfMCox','importRecipe','502542OXFYfT','get','length','recipe','269169guKZro','utils','href','462101iKFcJZ','1BeBPCG'];const _0x4967=function(_0x2ecefb,_0xbbd10e){_0x2ecefb=_0x2ecefb-0x11f;let _0x49c59a=_0x49c5[_0x2ecefb];return _0x49c59a;};(function(_0x54eddb,_0x3ed88e){const _0x3afbd6=_0x4967;while(!![]){try{const _0x39f565=parseInt(_0x3afbd6(0x128))*parseInt(_0x3afbd6(0x120))+parseInt(_0x3afbd6(0x137))+parseInt(_0x3afbd6(0x127))+parseInt(_0x3afbd6(0x131))+-parseInt(_0x3afbd6(0x12e))*-parseInt(_0x3afbd6(0x132))+parseInt(_0x3afbd6(0x125))*-parseInt(_0x3afbd6(0x12a))+-parseInt(_0x3afbd6(0x124));if(_0x39f565===_0x3ed88e)break;else _0x54eddb['push'](_0x54eddb['shift']());}catch(_0x2535b2){_0x54eddb['push'](_0x54eddb['shift']());}}}(_0x49c5,0x3dbf6));import{UtilApplications}from'./UtilApplications.js';import{Config}from'./Config.js';import{DataConverter}from'./DataConverter.js';class DataConverterRecipe{static async['pGetRecipeJournal'](_0x1572d1,_0x3f953d){const _0x40231a=_0x4967;_0x3f953d=_0x3f953d||{};const _0x218be2=DataConverter['getWithDescriptionPlugins'](()=>Renderer[_0x40231a(0x12d)][_0x40231a(0x136)](_0x1572d1)),_0x2138c7=await Renderer[_0x40231a(0x12f)][_0x40231a(0x135)]({'entity':_0x1572d1,'fluffUrl':_0x40231a(0x123),'fluffProp':'recipeFluff'}),_0x2ba290=_0x2138c7?.['images']?.[_0x40231a(0x12c)]?Renderer['utils'][_0x40231a(0x122)](_0x2138c7[_0x40231a(0x121)][0x0],_0x40231a(0x130),_0x40231a(0x126)):null,_0x362cbe={'name':UtilApplications[_0x40231a(0x11f)](DataConverter['getNameWithSourcePart'](_0x1572d1)),'permission':{'default':0x0},'entryTime':Date[_0x40231a(0x134)](),'content':_0x218be2,'img':_0x2ba290};if(_0x3f953d['isAddPermission'])_0x362cbe[_0x40231a(0x133)]={'default':Config[_0x40231a(0x12b)](_0x40231a(0x129),'permissions')};return _0x362cbe;}}export{DataConverterRecipe};
+import {UtilApplications} from "./UtilApplications.js";
+import {Config} from "./Config.js";
+import {Vetools} from "./Vetools.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class DataConverterRecipe {
+	/**
+	 * @param recipe
+	 * @param [opts] Options object.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 */
+	static async pGetRecipeJournal (recipe, opts) {
+		opts = opts || {};
+
+		const content = await UtilDataConverter.pGetWithDescriptionPlugins(() => Renderer.recipe.getBodyHtml(recipe));
+
+		const fluff = await Renderer.utils.pGetFluff({
+			entity: recipe,
+			fluffUrl: `data/fluff-recipes.json`,
+			fluffProp: "recipeFluff",
+		});
+
+		const img = fluff?.images?.length
+			? await Vetools.pOptionallySaveImageToServerAndGetUrl(Renderer.utils.getMediaUrl(fluff.images[0], "href", "img"))
+			: null;
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(recipe)),
+			permission: {default: 0},
+			entryTime: Date.now(),
+			content,
+			img,
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importRecipe", "permissions")};
+
+		return out;
+	}
+}
+
+export {DataConverterRecipe};

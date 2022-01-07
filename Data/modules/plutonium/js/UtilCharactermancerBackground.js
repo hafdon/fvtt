@@ -1,40 +1,556 @@
-const _0x3f2d=['<button\x20class=\x22btn\x20btn-xs\x20btn-default\x22>Roll','withUnpatchedDiceRendering','905GjHqru','<button\x20class=\x22btn\x20btn-default\x20btn-5et\x20w-100\x20mr-2\x20mb-2\x22>Choose\x20Background</button>','getDataFromSelected','_PROP_TO_FULL','getOrSet','toggleClass','_getCharacteristicTables','toMessage','_getDefaultState_manualEntryMeta','</div>','standard','$wrpHeaderControls','state','copy','getOrdinalForm','<span\x20data-plut-temp-dice=\x22true\x22></span>','Ideal','type','_render_default','_mode','No\x20result\x20found\x20for\x20roll\x20of\x20','modalFilter','resize-vertical','Hide\x20Tables','map','_featureEntries','error','mergeMap','_renderCollection','No\x20cell\x20found\x20for\x20row\x20','13FnDtDt','[data-roll-min]','assign','<div\x20class=\x22render-roller\x22>','_PROP_METAS','text','find','Customize\x20your\x20Background:\x20Add\x20Feature(s)\x20from\x20Another\x20Background','ideal','title','every','total','220927dVapLR','count','SYM_UI_SKIP','24059wPCglw','mb-2','addClass','_state','300650pGanyl','194887sdnLtE','html','ctrlKey','_value','bond','details','$getIptEntries','trim','getTableRollMode','mode','_getCpyTableCell','entries','$getIptStr','1397Jfafcp','__state','data','_render_manual','_MODE_OTHER_BACKGROUND','render','_MODE_TO_FULL','pGetImportCompApplicationFormData','addHookPulseFeatures','notifications','pGetUserInput','observe','_addHookBase','values','flaw','evaluate','manualEntryMetas','custom','comp','colLabels','stripTags','174114FQjSsP','Customize\x20your\x20Background:\x20Add\x20Custom\x20Feature(s)','target','walk','withCustomDiceRenderingPatch','replaceWith','_$wrpHeaderControls','_triggerCollectionUpdate','STR_SEE_CONSOLE','toggleVe','style','_proxyAssignSimple','empty','_MODE_MANUAL','[data-plut-temp-dice]','(Unnamed\x20Feature)','length','keys','exec','toObject','getMaxWindowWidth','isCancelled','WALKER_READONLY_GENERIC','<button\x20class=\x22btn\x20btn-5et\x20btn-xs\x20btn-danger\x20ml-1\x22\x20title=\x22Delete\x22><span\x20class=\x22glyphicon\x20glyphicon-trash\x22></span></button>','getFormData','_getDefaultState','appendTo','height','active','_PROP_TO_ACTOR_DETAILS_PROP','_getFeatureEntries','_getProps','Personality\x20Traits','_tables','flat','_MODE_DEFAULT','isFeature','pGetFormData','_modalFilter','append','Show\x20Tables','applyFormDataToActorUpdate','propValue','replace','rows','propMode','otherBackgroundEntries','</button>','41wcYCZu','Left-click\x20to\x20set\x20the\x20first\x20field;\x20CTRL-click\x20to\x20set\x20the\x20second\x20field.','get','39CISLOU','$getSelEnum','getMaxWindowHeight','each','pulseFeatures','push','click','Add\x20Features\x20from\x20This\x20Background','name','filter','forEach','fromObject','constructor','prop'];const _0x5872=function(_0xfd297b,_0x5efe3d){_0xfd297b=_0xfd297b-0x193;let _0x3f2d6e=_0x3f2d[_0xfd297b];return _0x3f2d6e;};const _0x35006c=_0x5872;(function(_0x49a729,_0x134d83){const _0x254390=_0x5872;while(!![]){try{const _0x5bb75c=parseInt(_0x254390(0x1b9))*parseInt(_0x254390(0x1c8))+-parseInt(_0x254390(0x1c5))+parseInt(_0x254390(0x1cd))+parseInt(_0x254390(0x1ef))+parseInt(_0x254390(0x1da))*parseInt(_0x254390(0x21f))+-parseInt(_0x254390(0x1cc))+parseInt(_0x254390(0x222))*-parseInt(_0x254390(0x19b));if(_0x5bb75c===_0x134d83)break;else _0x49a729['push'](_0x49a729['shift']());}catch(_0x2b1133){_0x49a729['push'](_0x49a729['shift']());}}}(_0x3f2d,0x2c79d));import{DataConverter}from'./DataConverter.js';import{Vetools}from'./Vetools.js';import{Util}from'./Util.js';import{UtilApplications}from'./UtilApplications.js';class Charactermancer_Background_Characteristics extends BaseComponent{static async[_0x35006c(0x1e4)]({entries:_0x154928}={}){const _0x575ed3=_0x35006c;if(!_0x154928||!_0x154928[_0x575ed3(0x1ff)])return{'isFormComplete':!![],'data':{}};const _0x4487a7=new this({'entries':_0x154928});return UtilApplications[_0x575ed3(0x1e1)]({'comp':_0x4487a7,'width':Util[_0x575ed3(0x203)](0x280),'height':Util[_0x575ed3(0x224)]()});}static async['pFillActorCharacteristicsData'](_0x2db9a6,_0x1a65ea,_0x772e28){const _0x1fcf4c=_0x35006c;if(!_0x2db9a6||!_0x2db9a6['length'])return;const _0x551743=await this['pGetUserInput']({'entries':_0x2db9a6});if(!_0x551743)return _0x772e28[_0x1fcf4c(0x204)]=!![];if(_0x551743===VeCt[_0x1fcf4c(0x1c7)])return;this[_0x1fcf4c(0x218)](_0x1a65ea,_0x551743);}static[_0x35006c(0x218)](_0x53b4e5,_0x58800b){const _0x32c0de=_0x35006c;MiscUtil[_0x32c0de(0x19f)](_0x53b4e5,_0x32c0de(0x1dc),_0x32c0de(0x1d2),{}),Charactermancer_Background_Characteristics['_PROP_METAS']['forEach'](_0x387cc1=>{const _0x193414=_0x32c0de;_0x53b4e5[_0x193414(0x1dc)][_0x193414(0x1d2)][Charactermancer_Background_Characteristics[_0x193414(0x20c)][_0x387cc1[_0x193414(0x198)]]]=[...new Array(_0x387cc1['count']||0x1)]['map']((_0x51cd13,_0xd04eb0)=>{const _0x486377=_0x193414,{propValue:_0x3544ec}=this[_0x486377(0x20e)](_0x387cc1[_0x486377(0x198)],_0xd04eb0);if(!_0x58800b['data'][_0x3544ec])return null;return _0x58800b[_0x486377(0x1dc)][_0x3544ec];})['filter'](Boolean)['join']('\x0a\x0a');});}constructor(_0x24a306){const _0x45592b=_0x35006c;_0x24a306=_0x24a306||{},super(),this[_0x45592b(0x210)]=Charactermancer_Background_Characteristics[_0x45592b(0x1a1)](_0x24a306[_0x45592b(0x1d8)]),this['_$wrpHeaderControls']=_0x24a306[_0x45592b(0x1a6)],Object[_0x45592b(0x1bb)](this[_0x45592b(0x1db)],Charactermancer_Background_Characteristics['_PROP_METAS'][_0x45592b(0x1b6)](_0x507dab=>({[Charactermancer_Background_Characteristics['_getProps'](_0x507dab['prop'])[_0x45592b(0x21c)]]:this[_0x45592b(0x210)][_0x507dab[_0x45592b(0x198)]]!=null?_0x45592b(0x1a5):_0x45592b(0x1eb)})));}static[_0x35006c(0x20e)](_0x147a7f,_0x400aef){const _0xb10697=_0x35006c;return{'propValue':_0x147a7f+'_'+_0x400aef+_0xb10697(0x1d0),'propMode':_0x147a7f+_0xb10697(0x1ae)};}static[_0x35006c(0x1d7)](_0x35b704,_0x3d0795){const _0x21249a=_0x35006c,_0x64500a=_0x35b704[_0x21249a(0x21b)][_0x3d0795]?.[0x1];if(!_0x64500a)return ui[_0x21249a(0x1e3)][_0x21249a(0x1b5)](_0x21249a(0x1b8)+_0x3d0795+'!'),null;return MiscUtil[_0x21249a(0x1a8)](_0x64500a);}get['modalTitle'](){return'Characteristics';}[_0x35006c(0x1df)](_0x29c1ac){const _0x30f749=_0x35006c,_0x484364=Charactermancer_Background_Characteristics['_PROP_METAS'][_0x30f749(0x1b3)]((_0x52f5c9,_0x5ae8b2)=>{const _0x1aca32=_0x30f749,_0x264db4=_0x52f5c9[_0x1aca32(0x1c6)]||0x1,{propMode:_0x202ef7}=this['constructor'][_0x1aca32(0x20e)](_0x52f5c9[_0x1aca32(0x198)]);let _0x1af197,_0x408042;if(this[_0x1aca32(0x210)][_0x52f5c9[_0x1aca32(0x198)]]){const _0x5926d5=$('<button\x20class=\x22btn\x20btn-default\x20btn-xs\x22\x20title=\x22Show/Hide\x20Table\x22>View\x20Table</button>')[_0x1aca32(0x228)](()=>this[_0x1aca32(0x1cb)][_0x202ef7]=this[_0x1aca32(0x1cb)][_0x202ef7]===_0x1aca32(0x1eb)?_0x1aca32(0x1a5):_0x1aca32(0x1eb));_0x1af197=$$`<div class="flex-v-center">
-					${_0x5926d5}
-				</div>`;const _0x22c3f3=this[_0x1aca32(0x210)][_0x52f5c9['prop']],_0x4fd5c0=Vetools[_0x1aca32(0x1f3)](()=>{const _0x4c03c5=_0x1aca32,_0x47675a=$(''+Renderer[_0x4c03c5(0x221)]()[_0x4c03c5(0x1df)](_0x22c3f3));return _0x47675a['find'](_0x4c03c5(0x1fd))[_0x4c03c5(0x225)]((_0x4a009b,_0x577594)=>{const _0x2e5982=_0x4c03c5,_0x4d180=$(_0x577594),_0x50ebd6=[...new Array(_0x264db4)][_0x2e5982(0x1b3)]((_0x26c7ee,_0x1a331e)=>{const _0x1e90e4=_0x2e5982;return $(_0x1e90e4(0x199)+(_0x264db4>0x1?'\x20'+Parser[_0x1e90e4(0x1a9)](_0x1a331e+0x1):'')+_0x1e90e4(0x21e))[_0x1e90e4(0x228)](async()=>{const _0x3c873e=_0x1e90e4,{propValue:_0x4d46e8}=this[_0x3c873e(0x197)][_0x3c873e(0x20e)](_0x52f5c9[_0x3c873e(0x198)],_0x1a331e);let _0x26e834;try{_0x26e834=new Roll(Renderer[_0x3c873e(0x1ee)](_0x22c3f3[_0x3c873e(0x1ed)][0x0])),await _0x26e834[_0x3c873e(0x1e9)]({'async':!![]}),_0x26e834[_0x3c873e(0x1a2)]();}catch(_0x42525c){return ui[_0x3c873e(0x1e3)][_0x3c873e(0x1b5)]('Failed\x20to\x20roll\x20dice!\x20'+VeCt[_0x3c873e(0x1f7)]);}const _0x5dcbb7=_0x22c3f3['rows'][_0x26e834['total']-0x1]?.[0x1];if(!_0x5dcbb7)return ui[_0x3c873e(0x1e3)][_0x3c873e(0x1b5)](_0x3c873e(0x1af)+_0x26e834[_0x3c873e(0x1c4)]+'!');this[_0x3c873e(0x1cb)][_0x4d46e8]=MiscUtil[_0x3c873e(0x1a8)](_0x5dcbb7);});}),_0x207369=$$`<div class="flex-vh-center btn-group">${_0x50ebd6}</div>`;_0x4d180[_0x2e5982(0x1f4)](_0x207369);}),_0x47675a[_0x4c03c5(0x1bf)](_0x4c03c5(0x1ba))['each']((_0x4ab754,_0x201173)=>{const _0x3ee6ad=_0x4c03c5,_0x44a772=$(_0x201173),_0x3ede04=_0x44a772['html']();$(_0x3ee6ad(0x1bc)+_0x3ede04+_0x3ee6ad(0x1a4))[_0x3ee6ad(0x228)](_0x508780=>{const _0x374d91=_0x3ee6ad,{propValue:_0x2c7f2b}=this[_0x374d91(0x197)]['_getProps'](_0x52f5c9['prop'],_0x508780[_0x374d91(0x1cf)]?0x1:0x0);this[_0x374d91(0x1cb)][_0x2c7f2b]=this['constructor']['_getCpyTableCell'](_0x22c3f3,_0x4ab754);})[_0x3ee6ad(0x1c2)](_0x264db4>0x1?_0x3ee6ad(0x220):null)[_0x3ee6ad(0x209)](_0x44a772[_0x3ee6ad(0x1fb)]());}),_0x47675a;},()=>{const _0x2e1e6d=_0x1aca32;return _0x2e1e6d(0x1aa);});_0x408042=$$`<div class="flex-col w-100 ve-small">
-					${_0x4fd5c0}
-				</div>`;const _0x4fe26f=()=>{const _0x37e06d=_0x1aca32;_0x5926d5[_0x37e06d(0x1a0)](_0x37e06d(0x20b),this[_0x37e06d(0x1cb)][_0x202ef7]===_0x37e06d(0x1a5)),_0x408042['toggleVe'](this[_0x37e06d(0x1cb)][_0x202ef7]===_0x37e06d(0x1a5));};this['_addHookBase'](_0x202ef7,_0x4fe26f),_0x4fe26f();}const _0x2bbf9d=[...new Array(_0x264db4)][_0x1aca32(0x1b3)]((_0x4977c7,_0x393500)=>ComponentUiUtil['$getIptEntries'](this,this['constructor'][_0x1aca32(0x20e)](_0x52f5c9[_0x1aca32(0x198)],_0x393500)[_0x1aca32(0x219)])[_0x1aca32(0x1ca)](_0x1aca32(0x1b1)));if(_0x264db4!==0x1){const _0x55ad85=_0x2bbf9d[_0x1aca32(0x1b3)](_0x5cc57e=>_0x5cc57e[0x0]),_0x336dc7=new ResizeObserver(_0x2e44ae=>{const _0x2a3ad2=_0x1aca32;if(_0x2e44ae[_0x2a3ad2(0x1ff)]!==0x1)return;const _0x5aa739=_0x2e44ae[0x0][_0x2a3ad2(0x1f1)];_0x55ad85[_0x2a3ad2(0x194)](_0x5ecdd9=>_0x5ecdd9!==_0x5aa739)[_0x2a3ad2(0x195)](_0x2b8e46=>_0x2b8e46[_0x2a3ad2(0x1f9)][_0x2a3ad2(0x20a)]=_0x5aa739[_0x2a3ad2(0x1f9)]['height']);});_0x55ad85['forEach'](_0x51a627=>_0x336dc7[_0x1aca32(0x1e5)](_0x51a627));}return $$`<div class="flex-col ${_0x5ae8b2<Charactermancer_Background_Characteristics[_0x1aca32(0x1bd)][_0x1aca32(0x1ff)]-0x1?_0x1aca32(0x1c9):''}">
+import {Vetools} from "./Vetools.js";
+import {Util} from "./Util.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class Charactermancer_Background_Characteristics extends BaseComponent {
+	// region External
+	static async pGetUserInput ({entries} = {}) {
+		if (!entries || !entries.length) return {isFormComplete: true, data: {}};
+
+		const comp = new this({entries});
+		return UtilApplications.pGetImportCompApplicationFormData({
+			comp,
+			width: Util.getMaxWindowWidth(640),
+			height: Util.getMaxWindowHeight(),
+		});
+	}
+
+	static async pFillActorCharacteristicsData (entries, actUpdate, opts) {
+		if (!entries || !entries.length) return;
+
+		const formData = await this.pGetUserInput({entries});
+		if (!formData) return opts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.applyFormDataToActorUpdate(actUpdate, formData);
+	}
+
+	static applyFormDataToActorUpdate (actUpdate, formData) {
+		MiscUtil.getOrSet(actUpdate, "data", "details", {});
+		Charactermancer_Background_Characteristics._PROP_METAS.forEach(propMeta => {
+			actUpdate.data.details[Charactermancer_Background_Characteristics._PROP_TO_ACTOR_DETAILS_PROP[propMeta.prop]] = [...new Array(propMeta.count || 1)]
+				.map((_, i) => {
+					const {propValue} = this._getProps(propMeta.prop, i);
+					if (!formData.data[propValue]) return null;
+					return formData.data[propValue];
+				})
+				.filter(Boolean)
+				.join("\n\n");
+		});
+	}
+	// endregion
+
+	/**
+	 * @param opts
+	 * @param opts.entries
+	 * @param [opts.$wrpHeaderControls]
+	 */
+	constructor (opts) {
+		opts = opts || {};
+		super();
+		this._tables = Charactermancer_Background_Characteristics._getCharacteristicTables(opts.entries);
+		this._$wrpHeaderControls = opts.$wrpHeaderControls;
+
+		// Set initial modes
+		Object.assign(
+			this.__state,
+			Charactermancer_Background_Characteristics._PROP_METAS
+				.mergeMap(propMeta => ({[Charactermancer_Background_Characteristics._getProps(propMeta.prop).propMode]: this._tables[propMeta.prop] != null ? "standard" : "custom"})),
+		);
+	}
+
+	static _getProps (prop, ix) {
+		return {
+			propValue: `${prop}_${ix}_value`,
+			propMode: `${prop}_mode`,
+		};
+	}
+
+	static _getCpyTableCell (tbl, ixRow) {
+		const cell = tbl.rows[ixRow]?.[1];
+		if (!cell) {
+			ui.notifications.error(`No cell found for row ${ixRow}!`);
+			return null;
+		}
+		return MiscUtil.copy(cell);
+	}
+
+	get modalTitle () { return `Characteristics`; }
+
+	render ($wrp) {
+		const $wrpsProp = Charactermancer_Background_Characteristics._PROP_METAS.map((propMeta, ixPt) => {
+			const count = propMeta.count || 1;
+			const {propMode} = this.constructor._getProps(propMeta.prop);
+
+			let $stgToggleMode;
+			let $stgStandard;
+			if (this._tables[propMeta.prop]) {
+				const $btnToggleMode = $(`<button class="btn btn-default btn-xs" title="Show/Hide Table">View Table</button>`)
+					.click(() => this._state[propMode] = this._state[propMode] === "custom" ? "standard" : "custom");
+
+				$stgToggleMode = $$`<div class="flex-v-center">
+					${$btnToggleMode}
+				</div>`;
+
+				const tbl = this._tables[propMeta.prop];
+
+				const $rendered = Vetools.withCustomDiceRenderingPatch(
+					() => {
+						const $rendered = $(`${Renderer.get().render(tbl)}`);
+						$rendered.find(`[data-plut-temp-dice]`).each((i, e) => {
+							const $e = $(e);
+
+							const $btnsRoller = [...new Array(count)].map((_, i) => {
+								return $(`<button class="btn btn-xs btn-default">Roll${count > 1 ? ` ${Parser.getOrdinalForm(i + 1)}` : ""}</button>`)
+									.click(async () => {
+										const {propValue} = this.constructor._getProps(propMeta.prop, i);
+
+										let roll;
+										try {
+											roll = new Roll(Renderer.stripTags(tbl.colLabels[0]));
+											await roll.evaluate({async: true});
+											roll.toMessage();
+										} catch (e) {
+											return ui.notifications.error(`Failed to roll dice! ${VeCt.STR_SEE_CONSOLE}`);
+										}
+
+										const cell = tbl.rows[roll.total - 1]?.[1];
+										if (!cell) return ui.notifications.error(`No result found for roll of ${roll.total}!`);
+
+										this._state[propValue] = Renderer.stripTags(MiscUtil.copy(cell));
+									});
+							});
+
+							const $wrpBtnsRoller = $$`<div class="flex-vh-center btn-group">${$btnsRoller}</div>`;
+
+							$e.replaceWith($wrpBtnsRoller);
+						});
+
+						$rendered.find(`[data-roll-min]`).each((i, e) => {
+							const $e = $(e);
+							const html = $e.html();
+							$(`<div class="render-roller">${html}</div>`)
+								.click(evt => {
+									const {propValue} = this.constructor._getProps(propMeta.prop, evt.ctrlKey ? 1 : 0);
+									this._state[propValue] = this.constructor._getCpyTableCell(tbl, i);
+								})
+								.title(count > 1 ? `Left-click to set the first field; CTRL-click to set the second field.` : null)
+								.appendTo($e.empty());
+						});
+
+						return $rendered;
+					},
+					() => {
+						// Always return a generic span, regardless of arguments; we will find and replace it later
+						return `<span data-plut-temp-dice="true"></span>`;
+					},
+				);
+
+				$stgStandard = $$`<div class="flex-col w-100 ve-small">
+					${$rendered}
+				</div>`;
+
+				const hkMode = () => {
+					$btnToggleMode.toggleClass("active", this._state[propMode] === "standard");
+					$stgStandard.toggleVe(this._state[propMode] === "standard");
+				};
+				this._addHookBase(propMode, hkMode);
+				hkMode();
+			}
+
+			const $iptsText = [...new Array(count)]
+				.map((_, i) => ComponentUiUtil.$getIptEntries(this, this.constructor._getProps(propMeta.prop, i).propValue).addClass("resize-vertical"));
+
+			// Glue together pairs+ of input fields
+			if (count !== 1) {
+				const iptsText = $iptsText.map(it => it[0]);
+				const resizeObserver = new ResizeObserver(entries => {
+					if (entries.length !== 1) return; // avoid successive retry triggers
+					const eleResized = entries[0].target;
+					iptsText.filter(ipt => ipt !== eleResized).forEach(ipt => ipt.style.height = eleResized.style.height);
+				});
+				iptsText.forEach(ipt => resizeObserver.observe(ipt));
+			}
+
+			return $$`<div class="flex-col ${ixPt < Charactermancer_Background_Characteristics._PROP_METAS.length - 1 ? `mb-2` : ""}">
 				<div class="split-v-center mb-1">
-					<div>${Charactermancer_Background_Characteristics[_0x1aca32(0x19e)][_0x52f5c9[_0x1aca32(0x198)]]}:</div>
-					${_0x1af197}
+					<div>${Charactermancer_Background_Characteristics._PROP_TO_FULL[propMeta.prop]}:</div>
+					${$stgToggleMode}
 				</div>
 
-				${_0x408042}
+				${$stgStandard}
 
-				<div class="flex">${_0x2bbf9d}</div>
-			</div>`;}),_0x2f6e68=!!Object[_0x30f749(0x200)](this['_tables'])[_0x30f749(0x1ff)];let _0x1d328e;if(_0x2f6e68){_0x1d328e=$('<button\x20class=\x22btn\x20btn-default\x20btn-xs\x22>Hide\x20Tables</button>')[_0x30f749(0x228)](()=>{const _0xaa5f45=_0x30f749,_0x1c9232=_0x1d328e[_0xaa5f45(0x1be)]()===_0xaa5f45(0x1b2);this[_0xaa5f45(0x1fa)](_0xaa5f45(0x1a7),Charactermancer_Background_Characteristics[_0xaa5f45(0x1bd)][_0xaa5f45(0x1b6)](_0x52031f=>({[Charactermancer_Background_Characteristics[_0xaa5f45(0x20e)](_0x52031f[_0xaa5f45(0x198)])[_0xaa5f45(0x21c)]]:this[_0xaa5f45(0x210)][_0x52031f[_0xaa5f45(0x198)]]!=null&&!_0x1c9232?'standard':_0xaa5f45(0x1eb)}))),_0x1d328e[_0xaa5f45(0x1be)](_0x1c9232?_0xaa5f45(0x217):_0xaa5f45(0x1b2));});const _0x1e44fd=()=>{const _0x4bf47c=_0x30f749,_0x2c4a39=Charactermancer_Background_Characteristics[_0x4bf47c(0x1bd)][_0x4bf47c(0x194)](_0x5d3082=>this[_0x4bf47c(0x210)][_0x5d3082[_0x4bf47c(0x198)]])[_0x4bf47c(0x1b3)](_0x412b93=>this['_state'][Charactermancer_Background_Characteristics['_getProps'](_0x412b93[_0x4bf47c(0x198)])[_0x4bf47c(0x21c)]]===_0x4bf47c(0x1eb));if(_0x2c4a39[_0x4bf47c(0x1c3)](Boolean))_0x1d328e['text'](_0x4bf47c(0x217));else{if(_0x2c4a39[_0x4bf47c(0x1c3)](_0x28c491=>!_0x28c491))_0x1d328e[_0x4bf47c(0x1be)]('Hide\x20Tables');}};Charactermancer_Background_Characteristics[_0x30f749(0x1bd)]['map'](_0x25ebc8=>Charactermancer_Background_Characteristics[_0x30f749(0x20e)](_0x25ebc8[_0x30f749(0x198)])['propMode'])[_0x30f749(0x195)](_0x3cfc08=>this[_0x30f749(0x1e6)](_0x3cfc08,_0x1e44fd)),_0x1e44fd();}let _0x1ed4a4;if(!this[_0x30f749(0x1f5)]&&_0x2f6e68)_0x1ed4a4=$$`<div class="mb-2 flex-h-right">${_0x1d328e}</div>`;else this['_$wrpHeaderControls']&&_0x2f6e68&&this[_0x30f749(0x1f5)][_0x30f749(0x216)](_0x1d328e);$$(_0x29c1ac)`
-			${_0x1ed4a4}
-			${_0x484364}
-		`;}[_0x35006c(0x214)](){const _0xe93c08=_0x35006c,_0x2739d1=Charactermancer_Background_Characteristics[_0xe93c08(0x1bd)]['map'](_0x4c0b16=>[...new Array(_0x4c0b16['count']||0x1)][_0xe93c08(0x1b3)]((_0x5660cf,_0x126828)=>this['constructor'][_0xe93c08(0x20e)](_0x4c0b16['prop'],_0x126828)['propValue']))['flat']()[_0xe93c08(0x1b6)](_0x2d3aa5=>({[_0x2d3aa5]:UiUtil['getEntriesAsText'](this['_state'][_0x2d3aa5])}));return{'isFormComplete':Object[_0xe93c08(0x1e7)](_0x2739d1)[_0xe93c08(0x1c3)](_0x2d08d8=>_0x2d08d8[_0xe93c08(0x1d4)]()),'data':_0x2739d1};}[_0x35006c(0x208)](){const _0x3cdeeb=_0x35006c;return Charactermancer_Background_Characteristics[_0x3cdeeb(0x1bd)][_0x3cdeeb(0x1b3)](_0x5dd645=>[...new Array(_0x5dd645[_0x3cdeeb(0x1c6)]||0x1)][_0x3cdeeb(0x1b3)]((_0x4834f1,_0x225e60)=>this[_0x3cdeeb(0x197)]['_getProps'](_0x5dd645[_0x3cdeeb(0x198)],_0x225e60)[_0x3cdeeb(0x219)]))[_0x3cdeeb(0x211)]()[_0x3cdeeb(0x1b6)](_0x1280db=>({[_0x1280db]:''}));}static['_getCharacteristicTables'](_0x2b2cba){const _0x5c9b5e=_0x35006c;if(!_0x2b2cba)return{};const _0x2ed8ef={};return DataConverter[_0x5c9b5e(0x205)][_0x5c9b5e(0x1f2)](_0x2b2cba,{'object':_0x54321a=>{const _0x3166ba=_0x5c9b5e;if(_0x54321a[_0x3166ba(0x1ac)]!=='table'||_0x54321a?.[_0x3166ba(0x1ed)]?.[_0x3166ba(0x1ff)]!==0x2||Renderer[_0x3166ba(0x1d5)](_0x54321a)!==RollerUtil['ROLL_COL_STANDARD'])return;const _0x192325=_0x54321a['colLabels'][0x1]['toLowerCase']()[_0x3166ba(0x21a)](/\s+/g,''),_0x585611=/^(personalitytrait|ideal|bond|flaw)s?$/i[_0x3166ba(0x201)](_0x192325);if(!_0x585611)return;_0x2ed8ef[_0x192325]=MiscUtil['copy'](_0x54321a);}}),_0x2ed8ef;}}Charactermancer_Background_Characteristics['_PROP_METAS']=[{'prop':'personalitytrait','count':0x2},{'prop':_0x35006c(0x1c1)},{'prop':_0x35006c(0x1d1)},{'prop':_0x35006c(0x1e8)}],Charactermancer_Background_Characteristics[_0x35006c(0x19e)]={'personalitytrait':_0x35006c(0x20f),'ideal':_0x35006c(0x1ab),'bond':'Bond','flaw':'Flaw'},Charactermancer_Background_Characteristics[_0x35006c(0x20c)]={'personalitytrait':'trait','ideal':_0x35006c(0x1c1),'bond':_0x35006c(0x1d1),'flaw':_0x35006c(0x1e8)};class Charactermancer_Background_Features extends BaseComponent{static async[_0x35006c(0x1e4)]({entries:_0x4e3703,modalFilter:_0x95398d}={}){const _0x24c3bf=_0x35006c,_0x4c37ef=new this({'entries':_0x4e3703,'modalFilter':_0x95398d});return UtilApplications[_0x24c3bf(0x1e1)]({'comp':_0x4c37ef,'width':Util['getMaxWindowWidth'](0x280),'height':Util[_0x24c3bf(0x224)](0x1e0)});}constructor(_0x2977b2){const _0x3db7af=_0x35006c;_0x2977b2=_0x2977b2||{},super(),this['_featureEntries']=Charactermancer_Background_Features[_0x3db7af(0x20d)](_0x2977b2['entries']),this[_0x3db7af(0x215)]=_0x2977b2[_0x3db7af(0x1b0)];}static[_0x35006c(0x20d)](_0x8603e2){const _0x43a5f4=_0x35006c;return(_0x8603e2||[])[_0x43a5f4(0x194)](_0x2888fa=>_0x2888fa[_0x43a5f4(0x1dc)]?.[_0x43a5f4(0x213)])['map'](_0x5905d6=>{const _0x5b520f=_0x43a5f4,_0x28a8bc=MiscUtil['copy'](_0x5905d6);if(_0x28a8bc[_0x5b520f(0x193)])_0x28a8bc[_0x5b520f(0x193)][_0x5b520f(0x21a)](/^.*?:\s*/,'');return _0x28a8bc;});}get['modalTitle'](){return'Customize\x20Background:\x20Features';}get[_0x35006c(0x1d6)](){const _0x47ed76=_0x35006c;return this[_0x47ed76(0x1cb)][_0x47ed76(0x1d6)];}[_0x35006c(0x1e2)](_0x2046c2){const _0x2e2d51=_0x35006c;this[_0x2e2d51(0x1e6)](_0x2e2d51(0x226),_0x2046c2);}[_0x35006c(0x1df)](_0x18d589){const _0x5a5359=_0x35006c,_0x3d085f=ComponentUiUtil[_0x5a5359(0x223)](this,'mode',{'values':[Charactermancer_Background_Features[_0x5a5359(0x212)],Charactermancer_Background_Features[_0x5a5359(0x1de)],Charactermancer_Background_Features['_MODE_MANUAL']],'fnDisplay':_0x3faa00=>Charactermancer_Background_Features['_MODE_TO_FULL'][_0x3faa00]});this[_0x5a5359(0x1e6)](_0x5a5359(0x1d6),()=>this[_0x5a5359(0x1cb)][_0x5a5359(0x226)]=!this[_0x5a5359(0x1cb)]['pulseFeatures']);const _0x2dc4ae=$('<button\x20class=\x22btn\x20btn-xs\x20btn-5et\x20ml-1\x22><span\x20class=\x22glyphicon\x20glyphicon-plus\x22></span>\x20Add\x20Feature</button>')[_0x5a5359(0x228)](()=>{const _0x40cce9=_0x5a5359,_0x2b3a19=this[_0x40cce9(0x1a3)]();this[_0x40cce9(0x1cb)]['manualEntryMetas']=[...this['_state'][_0x40cce9(0x1ea)],_0x2b3a19];}),_0x1f4113=()=>_0x2dc4ae[_0x5a5359(0x1f8)](this['_state'][_0x5a5359(0x1d6)]===Charactermancer_Background_Features[_0x5a5359(0x1fc)]);this[_0x5a5359(0x1e6)](_0x5a5359(0x1d6),_0x1f4113),_0x1f4113();const _0x40788b=this[_0x5a5359(0x1ad)](),_0x29a4b9=this['_render_other'](),_0x25eb56=this['_render_manual']();$$(_0x18d589)`
+				<div class="flex">${$iptsText}</div>
+			</div>`;
+		});
+
+		const hasAnyTable = !!Object.keys(this._tables).length;
+		let $btnToggleAllTables;
+		if (hasAnyTable) {
+			$btnToggleAllTables = $(`<button class="btn btn-default btn-xs">Hide Tables</button>`)
+				.click(() => {
+					const isDoHide = $btnToggleAllTables.text() === "Hide Tables";
+
+					this._proxyAssignSimple(
+						"state",
+						Charactermancer_Background_Characteristics._PROP_METAS
+							.mergeMap(propMeta => ({[Charactermancer_Background_Characteristics._getProps(propMeta.prop).propMode]: this._tables[propMeta.prop] != null && !isDoHide ? "standard" : "custom"})),
+					);
+
+					$btnToggleAllTables.text(isDoHide ? "Show Tables" : "Hide Tables");
+				});
+
+			// region Switch "show/hide all" button text on all tables being shown/hidden
+			const hkAllHidden = () => {
+				const allModes = Charactermancer_Background_Characteristics._PROP_METAS
+					.filter(propMeta => this._tables[propMeta.prop])
+					.map(propMeta => this._state[Charactermancer_Background_Characteristics._getProps(propMeta.prop).propMode] === "custom");
+
+				if (allModes.every(Boolean)) $btnToggleAllTables.text("Show Tables");
+				else if (allModes.every(it => !it)) $btnToggleAllTables.text("Hide Tables");
+			};
+			Charactermancer_Background_Characteristics._PROP_METAS
+				.map(propMeta => Charactermancer_Background_Characteristics._getProps(propMeta.prop).propMode)
+				.forEach(propMode => this._addHookBase(propMode, hkAllHidden));
+			hkAllHidden();
+			// endregion
+		}
+
+		let $stgHeaderControls;
+		if (!this._$wrpHeaderControls && hasAnyTable) {
+			$stgHeaderControls = $$`<div class="mb-2 flex-h-right">${$btnToggleAllTables}</div>`;
+		} else if (this._$wrpHeaderControls && hasAnyTable) {
+			this._$wrpHeaderControls.append($btnToggleAllTables);
+		}
+
+		$$($wrp)`
+			${$stgHeaderControls}
+			${$wrpsProp}
+		`;
+	}
+
+	pGetFormData () {
+		const rendered = Charactermancer_Background_Characteristics._PROP_METAS
+			.map(propMeta => [...new Array(propMeta.count || 1)].map((_, i) => this.constructor._getProps(propMeta.prop, i).propValue))
+			.flat()
+			.mergeMap(propValue => ({[propValue]: UiUtil.getEntriesAsText(this._state[propValue])}));
+
+		return {
+			isFormComplete: Object.values(rendered).every(txt => txt.trim()),
+			data: rendered,
+		};
+	}
+
+	_getDefaultState () {
+		return Charactermancer_Background_Characteristics._PROP_METAS
+			.map(propMeta => [...new Array(propMeta.count || 1)].map((_, i) => this.constructor._getProps(propMeta.prop, i).propValue))
+			.flat()
+			.mergeMap(propValue => ({[propValue]: ""}));
+	}
+
+	static _getCharacteristicTables (entries) {
+		if (!entries) return {};
+
+		const out = {};
+
+		// Walk the entries, finding tables with appropriate captions
+		UtilDataConverter.WALKER_READONLY_GENERIC.walk(
+			entries,
+			{
+				object: (obj) => {
+					if (
+						obj.type !== "table"
+						|| obj?.colLabels?.length !== 2
+						|| Renderer.getAutoConvertedTableRollMode(obj) !== RollerUtil.ROLL_COL_STANDARD
+					) return;
+
+					const captionFlat = obj.colLabels[1].toLowerCase().replace(/\s+/g, "");
+					const mCaption = /^(personalitytrait|ideal|bond|flaw)s?$/i.exec(captionFlat);
+					if (!mCaption) return;
+
+					out[captionFlat] = MiscUtil.copy(obj);
+				},
+			},
+		);
+
+		return out;
+	}
+}
+Charactermancer_Background_Characteristics._PROP_METAS = [
+	{prop: "personalitytrait", count: 2},
+	{prop: "ideal"},
+	{prop: "bond"},
+	{prop: "flaw"},
+];
+Charactermancer_Background_Characteristics._PROP_TO_FULL = {
+	"personalitytrait": "Personality Traits",
+	"ideal": "Ideal",
+	"bond": "Bond",
+	"flaw": "Flaw",
+};
+Charactermancer_Background_Characteristics._PROP_TO_ACTOR_DETAILS_PROP = {
+	"personalitytrait": "trait",
+	"ideal": "ideal",
+	"bond": "bond",
+	"flaw": "flaw",
+};
+
+class Charactermancer_Background_Features extends BaseComponent {
+	static async pGetUserInput ({entries, modalFilter} = {}) {
+		const comp = new this({entries, modalFilter});
+		return UtilApplications.pGetImportCompApplicationFormData({
+			comp,
+			width: Util.getMaxWindowWidth(640),
+			height: Util.getMaxWindowHeight(480),
+		});
+	}
+
+	/**
+	 * @param opts
+	 * @param opts.entries
+	 * @param opts.modalFilter
+	 */
+	constructor (opts) {
+		opts = opts || {};
+		super();
+
+		this._featureEntries = Charactermancer_Background_Features._getFeatureEntries(opts.entries);
+
+		this._modalFilter = opts.modalFilter;
+	}
+
+	static _getFeatureEntries (entries) {
+		return (entries || [])
+			.filter(it => it.data?.isFeature)
+			.map(ent => {
+				// Copy the entry, and remove the "Feature: " prefix if one exists
+				const cpyEnt = MiscUtil.copy(ent);
+				if (cpyEnt.name) cpyEnt.name.replace(/^.*?:\s*/, "");
+				return cpyEnt;
+			});
+	}
+
+	get modalTitle () { return `Customize Background: Features`; }
+
+	get mode () { return this._state.mode; }
+
+	addHookPulseFeatures (hk) { this._addHookBase("pulseFeatures", hk); }
+
+	render ($wrp) {
+		const $selMode = ComponentUiUtil.$getSelEnum(
+			this,
+			"mode",
+			{
+				values: [
+					Charactermancer_Background_Features._MODE_DEFAULT,
+					Charactermancer_Background_Features._MODE_OTHER_BACKGROUND,
+					Charactermancer_Background_Features._MODE_MANUAL,
+				],
+				fnDisplay: v => Charactermancer_Background_Features._MODE_TO_FULL[v],
+			},
+		);
+		this._addHookBase("mode", () => this._state.pulseFeatures = !this._state.pulseFeatures);
+
+		const $btnAddManual = $(`<button class="btn btn-xs btn-5et ml-1"><span class="glyphicon glyphicon-plus"></span> Add Feature</button>`)
+			.click(() => {
+				const nxt = this._getDefaultState_manualEntryMeta();
+				this._state.manualEntryMetas = [...this._state.manualEntryMetas, nxt];
+			});
+		const hkMode = () => $btnAddManual.toggleVe(this._state.mode === Charactermancer_Background_Features._MODE_MANUAL);
+		this._addHookBase("mode", hkMode);
+		hkMode();
+
+		const $stgDefault = this._render_default();
+		const $stgOther = this._render_other();
+		const $stgManual = this._render_manual();
+
+		$$($wrp)`
 			<div class="flex-v-center mb-1">
-				${_0x3d085f}
-				${_0x2dc4ae}
+				${$selMode}
+				${$btnAddManual}
 			</div>
-			${_0x40788b}
-			${_0x29a4b9}
-			${_0x25eb56}
-		`;}[_0x35006c(0x1ad)](){const _0x2651fa=_0x35006c,_0x276628=$$`<div class="flex-col mt-1">
-			<div class="w-100">${Vetools[_0x2651fa(0x19a)](()=>Renderer[_0x2651fa(0x221)]()[_0x2651fa(0x1df)]({'type':_0x2651fa(0x1d8),'entries':this[_0x2651fa(0x1b4)]}))}</div>
-		</div>`,_0x54d3be=()=>_0x276628[_0x2651fa(0x1f8)](this[_0x2651fa(0x1cb)][_0x2651fa(0x1d6)]===Charactermancer_Background_Features['_MODE_DEFAULT']);return this[_0x2651fa(0x1e6)](_0x2651fa(0x1d6),_0x54d3be),_0x54d3be(),_0x276628;}['_render_other'](){const _0x8abfc6=_0x35006c,_0x4f4b20=$(_0x8abfc6(0x19c))[_0x8abfc6(0x228)](async()=>{const _0x1e86e6=_0x8abfc6,_0x231ba8=await this[_0x1e86e6(0x215)]['pGetUserSelection']();if(_0x231ba8==null||!_0x231ba8['length'])return;const _0xdf5f20=this[_0x1e86e6(0x215)][_0x1e86e6(0x19d)](_0x231ba8[0x0]);this[_0x1e86e6(0x1cb)][_0x1e86e6(0x21d)]=Charactermancer_Background_Features['_getFeatureEntries'](_0xdf5f20[_0x1e86e6(0x1d8)]);}),_0x5de719=$('<div\x20class=\x22w-100\x22></div>'),_0x38797d=()=>{const _0x422d71=_0x8abfc6;_0x5de719[_0x422d71(0x1ce)](Vetools[_0x422d71(0x19a)](()=>Renderer[_0x422d71(0x221)]()[_0x422d71(0x1df)](this[_0x422d71(0x1cb)][_0x422d71(0x21d)]?.[_0x422d71(0x1ff)]?{'type':_0x422d71(0x1d8),'entries':this[_0x422d71(0x1cb)]['otherBackgroundEntries']}:'<i\x20class=\x22ve-muted\x22>Select\x20an\x20alternate\x20background,\x20whose\x20feature(s)\x20will\x20replace\x20your\x20current\x20background\x27s\x20feature(s).</i>'))),this[_0x422d71(0x1cb)]['pulseFeatures']=!this['_state']['pulseFeatures'];};this['_addHookBase'](_0x8abfc6(0x21d),_0x38797d),_0x38797d();const _0x40201b=$$`<div class="flex-col mt-1">
-			${_0x4f4b20}
-			${_0x5de719}
-		</div>`,_0x4bce2f=()=>_0x40201b['toggleVe'](this[_0x8abfc6(0x1cb)][_0x8abfc6(0x1d6)]===Charactermancer_Background_Features[_0x8abfc6(0x1de)]);return this[_0x8abfc6(0x1e6)](_0x8abfc6(0x1d6),_0x4bce2f),_0x4bce2f(),_0x40201b;}[_0x35006c(0x1dd)](){const _0x311bef=_0x35006c,_0x458c3b=$('<div\x20class=\x22italic\x20text-center\x20ve-muted\x20my-1\x22>No\x20features.</div>'),_0x28dfd6=$('<div\x20class=\x22flex-col\x22></div>'),_0x5815ef=()=>{const _0x1e9826=_0x5872;this[_0x1e9826(0x1b7)]({'prop':_0x1e9826(0x1ea),'fnDeleteExisting':()=>{const _0x51f009=_0x1e9826;this['_state']['pulseFeatures']=!this[_0x51f009(0x1cb)][_0x51f009(0x226)];},'fnUpdateExisting':(_0x521ea5,_0x4bf8c3)=>{const _0x17d98a=_0x1e9826;_0x521ea5[_0x17d98a(0x1ec)]['_proxyAssignSimple'](_0x17d98a(0x1a7),_0x4bf8c3[_0x17d98a(0x1dc)],!![]),this[_0x17d98a(0x1cb)][_0x17d98a(0x226)]=!this[_0x17d98a(0x1cb)][_0x17d98a(0x226)];},'fnGetNew':_0x3804df=>{const _0x1a2205=_0x1e9826,_0x13ee27=BaseComponent[_0x1a2205(0x196)](_0x3804df[_0x1a2205(0x1dc)],'*');_0x13ee27['_addHookAll'](_0x1a2205(0x1a7),()=>{const _0xb376df=_0x1a2205;_0x3804df[_0xb376df(0x1dc)]=_0x13ee27[_0xb376df(0x202)]('*'),this[_0xb376df(0x1f6)](_0xb376df(0x1ea));});const _0x25c919=ComponentUiUtil[_0x1a2205(0x1d9)](_0x13ee27,'name'),_0x47d8e9=ComponentUiUtil[_0x1a2205(0x1d3)](_0x13ee27,_0x1a2205(0x1d8)),_0x5d21b4=$(_0x1a2205(0x206))['click'](()=>this[_0x1a2205(0x1cb)][_0x1a2205(0x1ea)]=this[_0x1a2205(0x1cb)][_0x1a2205(0x1ea)]['filter'](_0xe327c2=>_0xe327c2!==_0x3804df)),_0x296902=$$`<div class="flex-col py-1 w-100 stripe-even">
+			${$stgDefault}
+			${$stgOther}
+			${$stgManual}
+		`;
+	}
+
+	_render_default () {
+		const $stg = $$`<div class="flex-col mt-1">
+			<div class="w-100">${Vetools.withUnpatchedDiceRendering(() => Renderer.get().render({type: "entries", entries: this._featureEntries}))}</div>
+		</div>`;
+
+		const hkMode = () => $stg.toggleVe(this._state.mode === Charactermancer_Background_Features._MODE_DEFAULT);
+		this._addHookBase("mode", hkMode);
+		hkMode();
+
+		return $stg;
+	}
+
+	_render_other () {
+		const $btnSelect = $(`<button class="btn btn-default btn-5et w-100 mr-2 mb-2">Choose Background</button>`)
+			.click(async () => {
+				const selecteds = await this._modalFilter.pGetUserSelection();
+				if (selecteds == null || !selecteds.length) return;
+
+				const bg = this._modalFilter.getDataFromSelected(selecteds[0]);
+				this._state.otherBackgroundEntries = Charactermancer_Background_Features._getFeatureEntries(bg.entries);
+			});
+
+		const $dispOther = $(`<div class="w-100"></div>`);
+		const hkOther = () => {
+			$dispOther.html(Vetools.withUnpatchedDiceRendering(() => Renderer.get().render(this._state.otherBackgroundEntries?.length ? {type: "entries", entries: this._state.otherBackgroundEntries} : `<i class="ve-muted">Select an alternate background, whose feature(s) will replace your current background's feature(s).</i>`)));
+			this._state.pulseFeatures = !this._state.pulseFeatures;
+		};
+		this._addHookBase("otherBackgroundEntries", hkOther);
+		hkOther();
+
+		const $stg = $$`<div class="flex-col mt-1">
+			${$btnSelect}
+			${$dispOther}
+		</div>`;
+
+		const hkMode = () => $stg.toggleVe(this._state.mode === Charactermancer_Background_Features._MODE_OTHER_BACKGROUND);
+		this._addHookBase("mode", hkMode);
+		hkMode();
+
+		return $stg;
+	}
+
+	_render_manual () {
+		const $dispNoRows = $(`<div class="italic text-center ve-muted my-1">No features.</div>`);
+		const $wrpRows = $(`<div class="flex-col"></div>`);
+
+		const hkManualMetas = () => {
+			this._renderCollection({
+				prop: "manualEntryMetas",
+				fnDeleteExisting: () => {
+					this._state.pulseFeatures = !this._state.pulseFeatures;
+				},
+				fnUpdateExisting: (renderedMeta, featureMeta) => {
+					renderedMeta.comp._proxyAssignSimple("state", featureMeta.data, true);
+					this._state.pulseFeatures = !this._state.pulseFeatures;
+				},
+				fnGetNew: featureMeta => {
+					const comp = BaseComponent.fromObject(featureMeta.data, "*");
+					comp._addHookAll("state", () => {
+						featureMeta.data = comp.toObject("*");
+						this._triggerCollectionUpdate("manualEntryMetas");
+					});
+
+					const $iptName = ComponentUiUtil.$getIptStr(comp, "name");
+
+					const $iptText = ComponentUiUtil.$getIptEntries(comp, "entries");
+
+					const $btnDelete = $(`<button class="btn btn-5et btn-xs btn-danger ml-1" title="Delete"><span class="glyphicon glyphicon-trash"></span></button>`)
+						.click(() => this._state.manualEntryMetas = this._state.manualEntryMetas.filter(it => it !== featureMeta));
+
+					const $wrpRow = $$`<div class="flex-col py-1 w-100 stripe-even">
 						<div class="split-v-center mb-1">
-							<label class="flex-v-center w-100"><div class="mr-1 text-right pr-1 no-shrink w-50p">Name</div>${_0x25c919}</label>
-							${_0x5d21b4}
+							<label class="flex-v-center w-100"><div class="mr-1 text-right pr-1 no-shrink w-50p">Name</div>${$iptName}</label>
+							${$btnDelete}
 						</div>
-						<label class="flex-v-center w-100"><div class="mr-1 text-right pr-1 no-shrink w-50p">Text</div>${_0x47d8e9}</label>
-					</div>`[_0x1a2205(0x209)](_0x28dfd6);return{'comp':_0x13ee27,'$wrpRow':_0x296902};}}),_0x458c3b['toggleVe'](!this[_0x1e9826(0x1cb)]['manualEntryMetas']?.[_0x1e9826(0x1ff)]);};_0x5815ef(),this[_0x311bef(0x1e6)](_0x311bef(0x1ea),_0x5815ef);const _0x478789=$$`<div class="flex-col">
+						<label class="flex-v-center w-100"><div class="mr-1 text-right pr-1 no-shrink w-50p">Text</div>${$iptText}</label>
+					</div>`.appendTo($wrpRows);
+
+					return {
+						comp,
+						$wrpRow,
+					};
+				},
+			});
+
+			$dispNoRows.toggleVe(!this._state.manualEntryMetas?.length);
+		};
+		hkManualMetas();
+		this._addHookBase("manualEntryMetas", hkManualMetas);
+
+		const $stg = $$`<div class="flex-col">
 			<hr class="hr-1">
-			${_0x458c3b}
-			${_0x28dfd6}
-		</div>`,_0x5c2f77=()=>_0x478789[_0x311bef(0x1f8)](this[_0x311bef(0x1cb)][_0x311bef(0x1d6)]===Charactermancer_Background_Features[_0x311bef(0x1fc)]);return this[_0x311bef(0x1e6)]('mode',_0x5c2f77),_0x5c2f77(),_0x478789;}[_0x35006c(0x207)](){const _0x29c533=_0x35006c;let _0x1c15c9=!![];const _0x2fc01c=[];switch(this[_0x29c533(0x1cb)]['mode']){case Charactermancer_Background_Features[_0x29c533(0x212)]:{_0x2fc01c['push'](...this[_0x29c533(0x1b4)]);break;}case Charactermancer_Background_Features[_0x29c533(0x1de)]:{if(!this[_0x29c533(0x1cb)]['otherBackgroundEntries']?.['length'])_0x1c15c9=![];_0x2fc01c[_0x29c533(0x227)](...this[_0x29c533(0x1cb)][_0x29c533(0x21d)]||[]);break;}case Charactermancer_Background_Features[_0x29c533(0x1fc)]:{const _0x1eb271=this[_0x29c533(0x1cb)][_0x29c533(0x1ea)][_0x29c533(0x194)](({data:_0x5bce6e})=>_0x5bce6e[_0x29c533(0x1d8)]&&_0x5bce6e['entries']['length'])[_0x29c533(0x1b3)](({data:_0x48f445})=>{const _0x2a480c=_0x29c533;return _0x48f445=MiscUtil[_0x2a480c(0x1a8)](_0x48f445),_0x48f445[_0x2a480c(0x193)]=_0x48f445['name']||_0x2a480c(0x1fe),_0x48f445['type']=_0x2a480c(0x1d8),_0x48f445;});if(!_0x1eb271[_0x29c533(0x1ff)])_0x1c15c9=![];_0x2fc01c[_0x29c533(0x227)](..._0x1eb271);break;}}return{'isFormComplete':_0x1c15c9,'data':{'entries':_0x2fc01c,'isCustomize':this[_0x29c533(0x1cb)][_0x29c533(0x1d6)]!==Charactermancer_Background_Features[_0x29c533(0x212)]}};}[_0x35006c(0x214)](){const _0x4e9c3b=_0x35006c;return this[_0x4e9c3b(0x207)]();}[_0x35006c(0x1a3)](){return{'id':CryptUtil['uid'](),'data':{'name':'','entries':[]}};}[_0x35006c(0x208)](){return{'mode':Charactermancer_Background_Features['_MODE_DEFAULT'],'otherBackgroundName':null,'otherBackgroundSource':null,'otherBackgroundEntries':null,'manualEntryMetas':[this['_getDefaultState_manualEntryMeta']()],'pulseFeatures':![]};}}Charactermancer_Background_Features[_0x35006c(0x212)]=0x0,Charactermancer_Background_Features[_0x35006c(0x1de)]=0x1,Charactermancer_Background_Features[_0x35006c(0x1fc)]=0x2,Charactermancer_Background_Features[_0x35006c(0x1e0)]={[Charactermancer_Background_Features[_0x35006c(0x212)]]:_0x35006c(0x229),[Charactermancer_Background_Features[_0x35006c(0x1de)]]:_0x35006c(0x1c0),[Charactermancer_Background_Features['_MODE_MANUAL']]:_0x35006c(0x1f0)};export{Charactermancer_Background_Characteristics,Charactermancer_Background_Features};
+			${$dispNoRows}
+			${$wrpRows}
+		</div>`;
+
+		const hkMode = () => $stg.toggleVe(this._state.mode === Charactermancer_Background_Features._MODE_MANUAL);
+		this._addHookBase("mode", hkMode);
+		hkMode();
+
+		return $stg;
+	}
+
+	getFormData () {
+		let isComplete = true;
+		const entries = [];
+
+		switch (this._state.mode) {
+			case Charactermancer_Background_Features._MODE_DEFAULT: {
+				entries.push(...this._featureEntries);
+				break;
+			}
+			case Charactermancer_Background_Features._MODE_OTHER_BACKGROUND: {
+				if (!this._state.otherBackgroundEntries?.length) isComplete = false;
+
+				entries.push(...this._state.otherBackgroundEntries || []);
+				break;
+			}
+			case Charactermancer_Background_Features._MODE_MANUAL: {
+				const ents = this._state.manualEntryMetas
+					.filter(({data}) => data.entries && data.entries.length)
+					.map(({data}) => {
+						data = MiscUtil.copy(data);
+						data.name = data.name || "(Unnamed Feature)"; // Ensure a name, so as not to crash the sheet
+						data.type = "entries";
+						return data;
+					});
+
+				if (!ents.length) isComplete = false;
+
+				entries.push(...ents);
+				break;
+			}
+		}
+
+		return {
+			isFormComplete: isComplete,
+			data: {entries, isCustomize: this._state.mode !== Charactermancer_Background_Features._MODE_DEFAULT},
+		};
+	}
+
+	pGetFormData () { return this.getFormData(); }
+
+	_getDefaultState_manualEntryMeta () {
+		return {
+			id: CryptUtil.uid(),
+			data: {
+				name: "",
+				entries: [],
+			},
+		};
+	}
+
+	_getDefaultState () {
+		return {
+			mode: Charactermancer_Background_Features._MODE_DEFAULT,
+
+			otherBackgroundName: null,
+			otherBackgroundSource: null,
+			otherBackgroundEntries: null,
+
+			manualEntryMetas: [this._getDefaultState_manualEntryMeta()],
+
+			pulseFeatures: false,
+		};
+	}
+}
+Charactermancer_Background_Features._MODE_DEFAULT = 0;
+Charactermancer_Background_Features._MODE_OTHER_BACKGROUND = 1;
+Charactermancer_Background_Features._MODE_MANUAL = 2;
+
+Charactermancer_Background_Features._MODE_TO_FULL = {
+	[Charactermancer_Background_Features._MODE_DEFAULT]: "Add Features from This Background",
+	[Charactermancer_Background_Features._MODE_OTHER_BACKGROUND]: "Customize your Background: Add Feature(s) from Another Background",
+	[Charactermancer_Background_Features._MODE_MANUAL]: "Customize your Background: Add Custom Feature(s)",
+};
+
+export {Charactermancer_Background_Characteristics, Charactermancer_Background_Features};

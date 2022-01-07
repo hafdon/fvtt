@@ -1,1 +1,90 @@
-const _0x2be2=['getSourceWithPagePart','13CZoTlD','331287GAXedo','entries','348lwokZQ','isImportDescription','461385JZAiSN','_pGetAdditionalData','foundryCondition','454211TdSooB','1MxhqJE','173324AzTMlM','PG_CONDITIONS_DISEASES','19oRvQuY','pGetConditionDiseaseItem','MODULE_NAME_FAKE','getWithDescriptionPlugins','render','get','isAddPermission','modules/','disease','permissions','1GASMkT','importConditionDisease','2221sYGmJc','knockout.svg','571iNYuaH','getNameWithSourcePart','MODULE_NAME','__prop','foundryDisease','setFirstSection','pGetAdditionalData_','URL_TO_HASH_BUILDER','1GpGbon','/media/icon/','17027oqtrKZ','pGetConditionDiseaseSideData','source'];const _0x1609=function(_0x51d679,_0x18613a){_0x51d679=_0x51d679-0xbd;let _0x2be27f=_0x2be2[_0x51d679];return _0x2be27f;};const _0x4e073c=_0x1609;(function(_0x3406e3,_0x3ebd4c){const _0x2a0781=_0x1609;while(!![]){try{const _0x3f430c=-parseInt(_0x2a0781(0xc9))*-parseInt(_0x2a0781(0xe1))+parseInt(_0x2a0781(0xdf))*parseInt(_0x2a0781(0xd1))+parseInt(_0x2a0781(0xd3))*parseInt(_0x2a0781(0xc3))+parseInt(_0x2a0781(0xcc))*parseInt(_0x2a0781(0xe3))+parseInt(_0x2a0781(0xc5))*parseInt(_0x2a0781(0xd5))+-parseInt(_0x2a0781(0xca))*parseInt(_0x2a0781(0xd2))+-parseInt(_0x2a0781(0xce));if(_0x3f430c===_0x3ebd4c)break;else _0x3406e3['push'](_0x3406e3['shift']());}catch(_0x479cad){_0x3406e3['push'](_0x3406e3['shift']());}}}(_0x2be2,0x5e3a5));import{UtilApplications}from'./UtilApplications.js';import{SharedConsts}from'../shared/SharedConsts.js';import{Config}from'./Config.js';import{DataConverter}from'./DataConverter.js';import{Vetools}from'./Vetools.js';class DataConverterConditionDisease{static async[_0x4e073c(0xd6)](_0x2037c9,_0x4f76b0){const _0xde0c6f=_0x4e073c;_0x4f76b0=_0x4f76b0||{};const _0x13ed8f=Config[_0xde0c6f(0xda)](_0xde0c6f(0xe0),_0xde0c6f(0xcd))?DataConverter[_0xde0c6f(0xd8)](()=>'<div>'+Renderer[_0xde0c6f(0xda)]()[_0xde0c6f(0xc0)](!![])[_0xde0c6f(0xd9)]({'entries':_0x2037c9[_0xde0c6f(0xcb)]},0x2)+'</div>'):'',_0x1d2ea5=await this['_pGetAdditionalData'](_0x2037c9),_0x1109fb={'name':UtilApplications['getCleanEntityName'](DataConverter[_0xde0c6f(0xe4)](_0x2037c9,{'isActorItem':_0x4f76b0['isActorItem']})),'data':{'source':DataConverter[_0xde0c6f(0xc8)](_0x2037c9),'description':{'value':_0x13ed8f,'chat':'','unidentified':''},'activation':{'type':'','cost':0x0,'condition':''},'duration':{'value':0x0,'units':''},'target':{'value':0x0,'units':'','type':''},'range':{'value':0x0,'long':0x0,'units':null},'uses':{'value':0x0,'max':0x0,'per':''},'ability':'','actionType':'','attackBonus':0x0,'chatFlavor':'','critical':null,'damage':{'parts':[],'versatile':''},'formula':'','save':{'ability':'','dc':null},'requirements':'','recharge':{'value':0x0,'charged':!![]},..._0x1d2ea5},'permission':{'default':0x0},'type':'feat','img':_0xde0c6f(0xdc)+SharedConsts[_0xde0c6f(0xbd)]+_0xde0c6f(0xc4)+(_0x2037c9[_0xde0c6f(0xbe)]===_0xde0c6f(0xdd)?'parmecia.svg':_0xde0c6f(0xe2)),'flags':{[SharedConsts[_0xde0c6f(0xd7)]]:{'page':UrlUtil[_0xde0c6f(0xd4)],'source':_0x2037c9[_0xde0c6f(0xc7)],'hash':UrlUtil[_0xde0c6f(0xc2)][UrlUtil[_0xde0c6f(0xd4)]](_0x2037c9)}},'effects':[]};if(_0x4f76b0[_0xde0c6f(0xdb)])_0x1109fb['permission']={'default':Config[_0xde0c6f(0xda)](_0xde0c6f(0xe0),_0xde0c6f(0xde))};return _0x1109fb;}static async[_0x4e073c(0xcf)](_0x5557a4){const _0x13784b=_0x4e073c;return DataConverter[_0x13784b(0xc1)](_0x5557a4,{'propBrew':_0x5557a4[_0x13784b(0xbe)]===_0x13784b(0xdd)?_0x13784b(0xbf):_0x13784b(0xd0),'fnLoadJson':Vetools[_0x13784b(0xc6)],'propJson':_0x5557a4['__prop']});}}export{DataConverterConditionDisease};
+import {UtilApplications} from "./UtilApplications.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Config} from "./Config.js";
+import {DataConverter} from "./DataConverter.js";
+import {Vetools} from "./Vetools.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class DataConverterConditionDisease {
+	/**
+	 * @param conDis
+	 * @param [opts] Options object.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 * @param [opts.isActorItem]
+	 */
+	static async pGetConditionDiseaseItem (conDis, opts) {
+		opts = opts || {};
+
+		const content = Config.get("importConditionDisease", "isImportDescription")
+			? await UtilDataConverter.pGetWithDescriptionPlugins(() => `<div>${Renderer.get().setFirstSection(true).render({entries: conDis.entries}, 2)}</div>`)
+			: "";
+
+		const additionalData = await this._pGetAdditionalData(conDis);
+		const additionalFlags = await this._pGetAdditionalFlags(conDis);
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(conDis, {isActorItem: opts.isActorItem})),
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(conDis),
+				description: {
+					value: content,
+					chat: "",
+					unidentified: "",
+				},
+
+				activation: {type: "", cost: 0, condition: ""},
+				duration: {value: 0, units: ""},
+				target: {value: 0, units: "", type: ""},
+				range: {value: 0, long: 0, units: null},
+				uses: {value: 0, max: 0, per: ""},
+				ability: "",
+				actionType: "",
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				damage: {parts: [], versatile: ""},
+				formula: "",
+				save: {ability: "", dc: null},
+				requirements: "",
+				recharge: {value: 0, charged: true},
+
+				...additionalData,
+			},
+			permission: {default: 0},
+			type: "feat",
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				`modules/${SharedConsts.MODULE_NAME}/media/icon/${conDis.__prop === "disease" ? "parmecia.svg" : "knockout.svg"}`,
+			),
+			flags: {
+				[SharedConsts.MODULE_NAME_FAKE]: {
+					page: UrlUtil.PG_CONDITIONS_DISEASES,
+					source: conDis.source,
+					hash: UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CONDITIONS_DISEASES](conDis),
+					propDroppable: conDis.__prop,
+				},
+				...additionalFlags,
+			},
+			effects: [],
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importConditionDisease", "permissions")};
+
+		return out;
+	}
+
+	static async _pGetAdditionalData (conDis) {
+		return DataConverter.pGetAdditionalData_(conDis, this._getSideDataOpts(conDis));
+	}
+
+	static async _pGetAdditionalFlags (conDis) {
+		return DataConverter.pGetAdditionalFlags_(conDis, this._getSideDataOpts(conDis));
+	}
+
+	static _getSideDataOpts (conDis) {
+		return {propBrew: conDis.__prop === "disease" ? "foundryDisease" : "foundryCondition", fnLoadJson: Vetools.pGetConditionDiseaseSideData, propJson: conDis.__prop};
+	}
+}
+
+export {DataConverterConditionDisease};

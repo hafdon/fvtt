@@ -8,15 +8,13 @@
 		<button class="btn-5et col-1-5 sort" data-sort="source">Source</button>
 		<button class="btn-5et col-1-5 sort" data-sort="level">Level</button>
 
-		{{#if isActor}}
-			<label class="btn btn-5et col-1-2 no-wrap flex-v-center">
-				<span class="mr-1" title="Is Spell Scroll">Scroll</span>
-				<input title="Select All" type="checkbox" name="cb-is-scroll-all">
-			</label>
-		{{/if}}
+		<label class="btn btn-5et col-1-2 no-wrap flex-v-center">
+			<span class="mr-1" title="Is Spell Scroll">Scroll</span>
+			<input title="Select All" type="checkbox" name="cb-is-scroll-all">
+		</label>
 
-		<button class="btn-5et {{#if isActor}}col-2-4{{else}}col-3{{/if}}" disabled>Currently Prepared</button>
-		<button class="btn-5et {{#if isActor}}col-2-4{{else}}col-3{{/if}}" disabled>Preparation Mode</button>
+		<button class="btn-5et col-2-4" disabled>Currently Prepared</button>
+		<button class="btn-5et col-2-4" disabled>Preparation Mode</button>
 	</div>
 
 	<div class="veapp__list mb-1 h-100">
@@ -26,20 +24,18 @@
 				<span class="col-1-5 text-center {{sourceClassName}}" title="{{sourceLong}}">{{sourceShort}}</span>
 				<span class="col-1-5 text-center">{{level}}</span>
 
-				{{#if ../isActor}}
-					<div class="col-1-2 flex-vh-center">
-						<input type="checkbox" name="cb-is-scroll">
-					</div>
-				{{/if}}
+				<div class="col-1-2 flex-vh-center">
+					<input type="checkbox" name="cb-is-scroll">
+				</div>
 
-				<div class="{{#if ../isActor}}col-2-4{{else}}col-3{{/if}} flex-v-center">
+				<div class="col-2-4 flex-v-center">
 					<select class="w-100 mx-1 input-xs veapp__sel-row-inline form-control" name="sel-is-prepared">
 						<option value="-1" title="Use Config Default">&mdash;</option>
 						<option value="0">Not Prepared</option>
 						<option value="1">Currently Prepared</option>
 					</select>
 				</div>
-				<div class="{{#if ../isActor}}col-2-4{{else}}col-3{{/if}} flex-v-center">
+				<div class="col-2-4 flex-v-center">
 					<select class="w-100 mx-1 input-xs veapp__sel-row-inline form-control" name="sel-preparation-mode">
 						<option value="-1" title="Use Config Default">&mdash;</option>
 						<option value="always">Always Prepared</option>

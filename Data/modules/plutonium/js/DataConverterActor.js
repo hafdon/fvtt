@@ -1,1 +1,133 @@
-const _0x508d=['creature','object','trim','str','2gCtdRt','getAbilityModNumber','exec','2957UMjzAL','string','entries','1rVCiVz','5XAindr','393IDLGvd','122041FFfGTJ','-\x20@attributes.prof\x20-\x20@mod\x20+\x20@srd5e.userchar.spellAttackRanged','21562voJGwq','ABIL_ABVS','getAttackActionType','34423kyktFw','replace','push','113983lvEXhL','1AJAUwV','getAttackRange','assumedPb','576QplRMD'];const _0x1f52=function(_0x14d0af,_0xbea2e5){_0x14d0af=_0x14d0af-0x112;let _0x508d51=_0x508d[_0x14d0af];return _0x508d51;};const _0x5bdca7=_0x1f52;(function(_0x2ad6bd,_0x2b676b){const _0x38d4f2=_0x1f52;while(!![]){try{const _0x1269b0=-parseInt(_0x38d4f2(0x11c))*parseInt(_0x38d4f2(0x123))+parseInt(_0x38d4f2(0x11e))+parseInt(_0x38d4f2(0x12a))+parseInt(_0x38d4f2(0x11b))*-parseInt(_0x38d4f2(0x118))+-parseInt(_0x38d4f2(0x120))*-parseInt(_0x38d4f2(0x115))+parseInt(_0x38d4f2(0x127))*-parseInt(_0x38d4f2(0x11d))+parseInt(_0x38d4f2(0x126));if(_0x1269b0===_0x2b676b)break;else _0x2ad6bd['push'](_0x2ad6bd['shift']());}catch(_0x30ebc1){_0x2ad6bd['push'](_0x2ad6bd['shift']());}}}(_0x508d,0x19743));import{DataConverter}from'./DataConverter.js';class DataConverterActor{static['getParsedActionEntryData'](_0x1d1173,_0x207031,_0x8fb5e1,{mode:mode=_0x5bdca7(0x12b),summonSpellLevel:summonSpellLevel=null}={}){const _0x3c91e6=_0x5bdca7;if(!(_0x207031['entries']&&_0x207031[_0x3c91e6(0x11a)][0x0]&&typeof _0x207031[_0x3c91e6(0x11a)][0x0]===_0x3c91e6(0x119)))return;let _0x504247=!![];const _0x4111a3=[];let _0x11b141=_0x3c91e6(0x114),_0x29f957=0x0;const _0x2f62e7=_0x207031[_0x3c91e6(0x11a)][0x0],{damageTupleMetas:_0x4cfa55}=DataConverter['getDamageTupleMetas'](_0x2f62e7,{'summonSpellLevel':summonSpellLevel}),{damageParts:_0x5a50e3,formula:_0x70dd9}=DataConverter['getDamagePartsAndOtherFormula'](_0x4cfa55);_0x4111a3[_0x3c91e6(0x125)](..._0x5a50e3);const {rangeShort:_0x55cda1,rangeLong:_0x2df963}=DataConverter[_0x3c91e6(0x128)](_0x2f62e7),_0x13721d=/{@hit ([^}]+)}/gi[_0x3c91e6(0x117)](_0x2f62e7);if(_0x13721d){const _0x434abb=Number(_0x13721d[0x1]);if(!isNaN(_0x434abb)){const _0x48c1fa=/\+(\d)/['exec'](_0x207031['name']||''),_0x25d60c=_0x48c1fa?Number(_0x48c1fa[0x0]):0x0,_0xfc37dc=_0x434abb-_0x25d60c-(_0x8fb5e1[_0x3c91e6(0x129)]||0x0),_0x1c9735=_0x4111a3['length']?_0x4111a3[0x0][0x0]||'':'',_0x6eddf6=/\d+\s*([-+]\s*\d+)$/[_0x3c91e6(0x117)](_0x1c9735[_0x3c91e6(0x113)]());let _0x5d5fa4;if(_0x6eddf6)_0x5d5fa4=Number(_0x6eddf6[0x1][_0x3c91e6(0x124)](/\s+/g,''))-_0x25d60c;let _0x18429f=_0xfc37dc;if(_0x5d5fa4!=null&&_0xfc37dc!==_0x5d5fa4){_0x18429f=_0x5d5fa4;if(_0xfc37dc<_0x5d5fa4)_0x504247=![];else{const _0x1a092c=_0xfc37dc-_0x5d5fa4;_0x8fb5e1['pb']===0x0?_0x8fb5e1[_0x3c91e6(0x129)]=_0x8fb5e1[_0x3c91e6(0x129)]||_0x1a092c:_0x29f957=_0x1a092c;}}let _0x4fc67a=![];for(const _0x4b7fdf of Parser[_0x3c91e6(0x121)]){if(_0x1d1173[_0x4b7fdf]==null)continue;const _0x500654=Parser['getAbilityModNumber'](_0x1d1173[_0x4b7fdf]);if(_0x500654===_0x18429f){_0x11b141=_0x4b7fdf,_0x4fc67a=!![];break;}}if(mode===_0x3c91e6(0x12b)){if(!_0x4fc67a&&_0x8fb5e1['assumedPb']){const _0x324bae=_0x8fb5e1[_0x3c91e6(0x129)]+Parser[_0x3c91e6(0x116)](_0x1d1173[_0x11b141])+_0x29f957;if(_0x324bae!==_0x434abb){const _0x204899=_0x434abb-_0x324bae;_0x29f957+=_0x204899;}}else{if(!_0x504247){const _0x4b28d4=Parser[_0x3c91e6(0x116)](_0x1d1173[_0x11b141])+_0x29f957;if(_0x4b28d4!==_0x434abb){const _0x4005df=_0x434abb-_0x4b28d4;_0x29f957+=_0x4005df;}}}}mode===_0x3c91e6(0x112)&&(_0x29f957=_0x434abb);}}const _0x4b7d4e=/{@hitYourSpellAttack}/gi[_0x3c91e6(0x117)](_0x2f62e7);!_0x13721d&&_0x4b7d4e&&(_0x504247=!![],_0x11b141=null,_0x29f957=_0x3c91e6(0x11f));const {isAttack:_0x51d5b6,actionType:_0x5d4d42}=DataConverter[_0x3c91e6(0x122)](_0x2f62e7);return{'damageTuples':_0x4111a3,'formula':_0x70dd9,'offensiveAbility':_0x11b141,'isAttack':_0x51d5b6,'rangeShort':_0x55cda1,'rangeLong':_0x2df963,'actionType':_0x5d4d42,'isProficient':_0x504247,'attackBonus':_0x29f957};}}export{DataConverterActor};
+import {DataConverter} from "./DataConverter.js";
+
+class DataConverterActor {
+	static getParsedActionEntryData (entity, action, dataBuilderOpts, {mode = "creature", summonSpellLevel = null} = {}) {
+		if (!(action.entries && action.entries[0] && typeof action.entries[0] === "string")) return;
+
+		let isProficient = true;
+		const damageTuples = [];
+
+		let offensiveAbility = "str"; // This is the default if "null" is specified anyway. Specify it here so we can compensate for it later.
+		let attackBonus = 0;
+
+		const str = action.entries[0];
+
+		const {damageTupleMetas} = DataConverter.getDamageTupleMetas(str, {summonSpellLevel});
+		const {damageParts, formula} = DataConverter.getDamagePartsAndOtherFormula(damageTupleMetas);
+
+		damageTuples.push(...damageParts);
+
+		const {rangeShort, rangeLong} = DataConverter.getAttackRange(str);
+
+		const mHit = /{@hit ([^}]+)}/gi.exec(str);
+		if (mHit) {
+			const hitBonus = Number(mHit[1]);
+			if (!isNaN(hitBonus)) {
+				const enchantmentPart = /\+(\d)/.exec(action.name || "");
+				const enchBonus = enchantmentPart ? Number(enchantmentPart[0]) : 0;
+				const hitBonusFromAbil = hitBonus - enchBonus - (dataBuilderOpts.assumedPb || 0);
+
+				// Check this against the damage bonus we might to have from the first damage number
+				const dmg1 = damageTuples.length ? damageTuples[0][0] || "" : "";
+
+				const mDamageBonus = /\d+\s*([-+]\s*\d+)$/.exec(dmg1.trim());
+				let damageBonusFromAbil;
+				if (mDamageBonus) damageBonusFromAbil = Number(mDamageBonus[1].replace(/\s+/g, "")) - enchBonus;
+
+				// If we have a bonus from dmg1 and it doesn't match that from the +hit, use the one from damage
+				//   instead when trying to work out the offensive ability score
+				let assumedAbilMod = hitBonusFromAbil;
+				if (damageBonusFromAbil != null && hitBonusFromAbil !== damageBonusFromAbil) {
+					assumedAbilMod = damageBonusFromAbil;
+
+					// Handles e.g. Ghast bite attack, which lacks proficiency
+					if (hitBonusFromAbil < damageBonusFromAbil) {
+						isProficient = false;
+					} else {
+						const bonus = hitBonusFromAbil - damageBonusFromAbil;
+
+						if (dataBuilderOpts.pb === 0) {
+							// Note that `opts.pb` can be 0 in a few rare cases, e.g. ERLW's "Steel Defender," which
+							//   has no CR, but does appear to have a +2 proficiency bonus. Just assume whatever
+							//   bonus we have left is the proficiency bonus, and ignore any potential errors this
+							//   could cause.
+							dataBuilderOpts.assumedPb = dataBuilderOpts.assumedPb || bonus;
+						} else {
+							// Handles e.g. Hobgoblin Warlord (double proficiency?) or oddly-enchanted weapons
+							attackBonus = bonus;
+						}
+					}
+				}
+
+				// Loop through abilities until we find one that matches our bonus, or give up if there are none
+				let isFoundOffensiveAbility = false;
+				for (const k of Parser.ABIL_ABVS) {
+					if (entity[k] == null) continue;
+
+					const mod = Parser.getAbilityModNumber(entity[k]);
+					if (mod === assumedAbilMod) {
+						offensiveAbility = k;
+						isFoundOffensiveAbility = true;
+						break;
+					}
+				}
+
+				if (mode === "creature") {
+					// If we could not find an offensive ability, we're missing some amount of bonus. Try to calculate
+					//   what that bonus should be. (Generally this is unnecessary, as enchantment bonuses should be
+					//   pulled out above, but there are rare cases like Githyanki Knight Silver Greatswords).
+					// Only attempt this for creatures if the proficiency bonus is known.
+					if (!isFoundOffensiveAbility && dataBuilderOpts.assumedPb) {
+						// This is the number we expect to see on the sheet if we import the item as-is. If it's wrong,
+						//   we need to compensate.
+						const curCalcBonus = dataBuilderOpts.assumedPb + Parser.getAbilityModNumber(entity[offensiveAbility]) + attackBonus;
+
+						if (curCalcBonus !== hitBonus) {
+							const delta = hitBonus - curCalcBonus;
+							attackBonus += delta;
+						}
+
+					// If the numbers don't nicely line up, e.g. for Clay Golem's slam, add the missing offset as a
+					//   generic bonus.
+					} else if (!isProficient) {
+						const curCalcBonus = Parser.getAbilityModNumber(entity[offensiveAbility]) + attackBonus;
+						if (curCalcBonus !== hitBonus) {
+							const delta = hitBonus - curCalcBonus;
+							attackBonus += delta;
+						}
+					}
+				}
+
+				// For creatures, just give up and use the whole bonus as the final attack bonus, as it's probably an
+				//   arbitrary number anyway.
+				if (mode === "object") {
+					attackBonus = hitBonus;
+				}
+			}
+		}
+
+		const mHitYourSpellAttack = /{@hitYourSpellAttack}/gi.exec(str);
+		if (!mHit && mHitYourSpellAttack) {
+			isProficient = true;
+			offensiveAbility = null;
+			// Negate the default bonuses; use the user's ranged spell attack (which we assume is the "primary" mode)
+			attackBonus = "- @attributes.prof - @mod + @srd5e.userchar.spellAttackRanged";
+		}
+
+		const {isAttack, actionType} = DataConverter.getAttackActionType(str);
+
+		return {
+			damageTuples,
+			formula,
+			offensiveAbility,
+			isAttack,
+			rangeShort,
+			rangeLong,
+			actionType,
+			isProficient,
+			attackBonus,
+		};
+	}
+}
+
+export {DataConverterActor};

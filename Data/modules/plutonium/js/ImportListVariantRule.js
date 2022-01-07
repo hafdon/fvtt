@@ -1,1 +1,123 @@
-var _0x5c1b=['variantrule','SOURCE_TYP_OFFICIAL_ALL','DATA_URL_VARIANTRULES','PG_VARIANTRULES','get','absorbFnGetData','SOURCE_TYP_CUSTOM','SOURCE_TYP_BREW','_content','_list','variant\x20rule','_isRadio','map','564835MTlENL','Variant\x20&\x20Optional\x20Rules','Upload\x20File','29ZtBJYf','_titleButtonRun','pGetSources','mutateForFilters','12079qVdKvk','source','name','Custom\x20URL','697870TGkAPZ','constructor','absorbFnBindListeners','5tCXgTu','1bJRNLi','Name','isStreamerMode','doAbsorbItems','sourceLong','variant\x20or\x20optional\x20rule','sourceJsonToAbv','1STSMes','_page','SRD','Import\x20Variant\x20&\x20Optional\x20Rules','DataSourceFile','10817oJQPmZ','getData','426351uTEsdu','absorbFnBindListenersRadio','sourceShort','97367QoSWYk','URL_TO_HASH_BUILDER','DataSourceUrl','sourceJsonToColor','journal','30587WsTAag','getVariantRuleJournal','JournalEntry','Source','_pImportEntry_pImportToDirectoryGeneric_pGetImportableData','6MreCLM','sourceClassName'];var _0x757b=function(_0x41c8d1,_0x39adf7){_0x41c8d1=_0x41c8d1-0x19e;var _0x5c1b43=_0x5c1b[_0x41c8d1];return _0x5c1b43;};var _0x3e6eb5=_0x757b;(function(_0xdceb6e,_0x532b38){var _0x4d4c85=_0x757b;while(!![]){try{var _0x144e48=-parseInt(_0x4d4c85(0x1a0))*parseInt(_0x4d4c85(0x1a4))+-parseInt(_0x4d4c85(0x1ba))+parseInt(_0x4d4c85(0x1b0))*-parseInt(_0x4d4c85(0x1d1))+parseInt(_0x4d4c85(0x1b2))+parseInt(_0x4d4c85(0x1a3))*parseInt(_0x4d4c85(0x1d5))+-parseInt(_0x4d4c85(0x1ab))*-parseInt(_0x4d4c85(0x1ce))+-parseInt(_0x4d4c85(0x1bf))*-parseInt(_0x4d4c85(0x1b5));if(_0x144e48===_0x532b38)break;else _0xdceb6e['push'](_0xdceb6e['shift']());}catch(_0x216963){_0xdceb6e['push'](_0xdceb6e['shift']());}}}(_0x5c1b,0x90ee1));import{Vetools}from'./Vetools.js';import{Config}from'./Config.js';import{UtilList2}from'./UtilList2.js';import{DataConverterVariantRule}from'./DataConverterVariantRule.js';import{UtilDataSource}from'./UtilDataSource.js';import{ImportListJournal}from'./ImportListJournal.js';class ImportListVariantRule extends ImportListJournal{constructor(_0x2104f4){var _0x227cdb=_0x757b;_0x2104f4=_0x2104f4||{},super({'title':_0x227cdb(0x1ae)},_0x2104f4,{'props':['variantrule'],'titleSearch':_0x227cdb(0x1a9),'sidebarTab':_0x227cdb(0x1b9),'gameProp':_0x227cdb(0x1b9),'defaultFolderPath':[_0x227cdb(0x1cf)],'folderType':_0x227cdb(0x1bc),'pageFilter':new PageFilterVariantRules(),'page':UrlUtil[_0x227cdb(0x1c4)],'isPreviewable':!![],'isDedupable':!![]},{'titleLog':_0x227cdb(0x1cb)});}async[_0x3e6eb5(0x1d3)](){var _0x337a24=_0x3e6eb5;return[new UtilDataSource[(_0x337a24(0x1b7))](Config[_0x337a24(0x1c5)]('ui',_0x337a24(0x1a6))?_0x337a24(0x1ad):'5etools',Vetools[_0x337a24(0x1c3)],{'filterTypes':[UtilDataSource[_0x337a24(0x1c2)]],'isDefault':!![]}),new UtilDataSource[(_0x337a24(0x1b7))](_0x337a24(0x19f),'',{'filterTypes':[UtilDataSource[_0x337a24(0x1c7)]]}),new UtilDataSource[(_0x337a24(0x1af))](_0x337a24(0x1d0),{'filterTypes':[UtilDataSource[_0x337a24(0x1c7)]]}),...(await Vetools['pGetHomebrewSources'](_0x337a24(0x1c1)))[_0x337a24(0x1cd)](({name:_0x12e993,url:_0x445fe1})=>new UtilDataSource[(_0x337a24(0x1b7))](_0x12e993,_0x445fe1,{'filterTypes':[UtilDataSource[_0x337a24(0x1c8)]]}))];}[_0x3e6eb5(0x1b1)](){var _0x592746=_0x3e6eb5;return{'isPreviewable':this['_isPreviewable'],'titleButtonRun':this[_0x592746(0x1d2)],'titleSearch':this['_titleSearch'],'cols':[{'name':_0x592746(0x1a5),'width':0x9,'field':_0x592746(0x19e)},{'name':_0x592746(0x1bd),'width':0x2,'field':_0x592746(0x1d6),'titleProp':_0x592746(0x1a8),'displayProp':_0x592746(0x1b4),'classNameProp':_0x592746(0x1c0),'rowClassName':'text-center'}],'rows':this[_0x592746(0x1c9)][_0x592746(0x1cd)]((_0x460f16,_0x51baa2)=>{var _0x4b188f=_0x592746;return this['_pageFilter'][_0x4b188f(0x1a1)][_0x4b188f(0x1d4)](_0x460f16),{'name':_0x460f16[_0x4b188f(0x19e)],'source':_0x460f16[_0x4b188f(0x1d6)],'sourceShort':Parser[_0x4b188f(0x1aa)](_0x460f16['source']),'sourceLong':Parser['sourceJsonToFull'](_0x460f16[_0x4b188f(0x1d6)]),'sourceClassName':Parser[_0x4b188f(0x1b8)](_0x460f16[_0x4b188f(0x1d6)]),'ix':_0x51baa2};})};}['_activateListeners_absorbListItems'](){var _0x11b63c=_0x3e6eb5;this['_list'][_0x11b63c(0x1a7)](this[_0x11b63c(0x1c9)],{'fnGetName':_0x189a74=>_0x189a74[_0x11b63c(0x19e)],'fnGetValues':_0x4a188a=>({'source':_0x4a188a['source'],'hash':UrlUtil[_0x11b63c(0x1b6)][this[_0x11b63c(0x1ac)]](_0x4a188a)}),'fnGetData':UtilList2[_0x11b63c(0x1c6)],'fnBindListeners':_0xfe0e7e=>this[_0x11b63c(0x1cc)]?UtilList2[_0x11b63c(0x1b3)](this['_list'],_0xfe0e7e):UtilList2[_0x11b63c(0x1a2)](this[_0x11b63c(0x1ca)],_0xfe0e7e)});}[_0x3e6eb5(0x1be)](_0x26c58b,_0x34ac30){var _0x9af8f7=_0x3e6eb5;return DataConverterVariantRule[_0x9af8f7(0x1bb)](_0x26c58b,_0x34ac30);}}export{ImportListVariantRule};
+import {Vetools} from "./Vetools.js";
+import {Config} from "./Config.js";
+import {UtilList2} from "./UtilList2.js";
+import {DataConverterVariantRule} from "./DataConverterVariantRule.js";
+import {UtilDataSource} from "./UtilDataSource.js";
+import {ImportListJournal} from "./ImportListJournal.js";
+
+class ImportListVariantRule extends ImportListJournal {
+	static get FOLDER_TYPE () { return "JournalEntry"; }
+
+	constructor (externalData) {
+		externalData = externalData || {};
+		super(
+			{title: "Import Variant & Optional Rules"},
+			externalData,
+			{
+				props: ["variantrule"],
+				dirsHomebrew: ["variantrule"],
+				titleSearch: "variant or optional rule",
+				sidebarTab: "journal",
+				gameProp: "journal",
+				defaultFolderPath: ["Variant & Optional Rules"],
+				pageFilter: new PageFilterVariantRules(),
+				page: UrlUtil.PG_VARIANTRULES,
+				isPreviewable: true,
+				isDedupable: true,
+				configGroup: "importRule",
+			},
+			{
+				titleLog: "variant rule",
+			},
+		);
+	}
+
+	async pGetSources () {
+		return [
+			new UtilDataSource.DataSourceUrl(
+				Config.get("ui", "isStreamerMode") ? "SRD" : "5etools",
+				Vetools.DATA_URL_VARIANTRULES,
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_OFFICIAL_ALL],
+					isDefault: true,
+				},
+			),
+			new UtilDataSource.DataSourceUrl(
+				"Custom URL",
+				"",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			new UtilDataSource.DataSourceFile(
+				"Upload File",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			...(await this._pGetSourcesHomebrew()),
+		];
+	}
+
+	getData () {
+		return {
+			isPreviewable: this._isPreviewable,
+			titleButtonRun: this._titleButtonRun,
+			titleSearch: this._titleSearch,
+			cols: [
+				{
+					name: "Name",
+					width: 9,
+					field: "name",
+				},
+				{
+					name: "Source",
+					width: 2,
+					field: "source",
+					titleProp: "sourceLong",
+					displayProp: "sourceShort",
+					classNameProp: "sourceClassName",
+					styleProp: "sourceStyle",
+					rowClassName: "text-center",
+				},
+			],
+			rows: this._content.map((it, ix) => {
+				this._pageFilter.constructor.mutateForFilters(it);
+
+				return {
+					name: it.name,
+					source: it.source,
+					sourceShort: Parser.sourceJsonToAbv(it.source),
+					sourceLong: Parser.sourceJsonToFull(it.source),
+					sourceClassName: Parser.sourceJsonToColor(it.source),
+					sourceStyle: BrewUtil.sourceJsonToStylePart(it.source),
+					ix,
+				};
+			}),
+		};
+	}
+
+	_activateListeners_absorbListItems () {
+		this._list.doAbsorbItems(
+			this._content,
+			{
+				fnGetName: it => it.name,
+				// values used for sorting/search
+				fnGetValues: it => ({
+					source: it.source,
+					hash: UrlUtil.URL_TO_HASH_BUILDER[this._page](it),
+				}),
+				fnGetData: UtilList2.absorbFnGetData,
+				fnBindListeners: it => this._isRadio
+					? UtilList2.absorbFnBindListenersRadio(this._list, it)
+					: UtilList2.absorbFnBindListeners(this._list, it),
+			},
+		);
+	}
+
+	_pImportEntry_pImportToDirectoryGeneric_pGetImportableData (it, getItemOpts) {
+		return DataConverterVariantRule.pGetVariantRuleJournal(it, getItemOpts);
+	}
+}
+
+export {ImportListVariantRule};

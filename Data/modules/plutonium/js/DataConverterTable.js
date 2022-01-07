@@ -1,1 +1,300 @@
-const _0x74fa=['TAG_TO_DEFAULT_SOURCE','271794QsXXeW','\x0a\x09\x09\x09\x09</div>','88UuOpGL','setFirstSection','809253yXewSh','_getHighestRoll','splitTagByPipe','join','_pGetTableRollableTable_pRollTable','getTableGroupJournal','17yuGzBx','list','GENERIC_WALKER_ENTRIES_KEY_BLACKLIST','permissions','getCleanDiceString','trim','isAddPermission','_pGetResultText_pGetReplacement','map','caption','RollTable[','get','copy','SYM_AT','37095FIQTOz','1499781pxNTrH','permission','render','icons/svg/d20-black.svg','name','keys','exec','getAsyncWalker','colLabels','importTable','_pGetTableRollableTable_pOtherTable','rows','getCleanEntityName','38469lJOobr','232987vgZXaq','2931oaWYtV','_pGetResultText_pReplace','[[/r\x20','length','getTableRollMode','_pGetResultText','stripTags','index','now','lastIndex','slice','261AJihTG','replace','1OxArhf','<div>\x0a\x09\x09\x09\x09<p>The\x20following\x20tables\x20belong\x20to\x20this\x20group:</p>\x0a\x09\x09\x09\x09','pGetTableRollableTable','pSerialAwaitMap','_getFoundryDiceTagged'];const _0x3e15=function(_0x24622b,_0x52008a){_0x24622b=_0x24622b-0x158;let _0x74fa59=_0x74fa[_0x24622b];return _0x74fa59;};const _0x4ca8c9=_0x3e15;(function(_0xf8eec5,_0x576fca){const _0x2eb6d8=_0x3e15;while(!![]){try{const _0x328fd9=parseInt(_0x2eb6d8(0x173))+-parseInt(_0x2eb6d8(0x188))+-parseInt(_0x2eb6d8(0x187))*parseInt(_0x2eb6d8(0x179))+-parseInt(_0x2eb6d8(0x16f))+-parseInt(_0x2eb6d8(0x15c))*parseInt(_0x2eb6d8(0x167))+-parseInt(_0x2eb6d8(0x15b))*parseInt(_0x2eb6d8(0x169))+-parseInt(_0x2eb6d8(0x171))*-parseInt(_0x2eb6d8(0x15a));if(_0x328fd9===_0x576fca)break;else _0xf8eec5['push'](_0xf8eec5['shift']());}catch(_0x1eb0ea){_0xf8eec5['push'](_0xf8eec5['shift']());}}}(_0x74fa,0xc1ef5));import{UtilApplications}from'./UtilApplications.js';import{Config}from'./Config.js';import{DataConverter}from'./DataConverter.js';import{UtilCompendium}from'./UtilCompendium.js';import{Vetools}from'./Vetools.js';class DataConverterTable{static[_0x4ca8c9(0x178)](_0xed78a6,_0x61de2,_0x5df47e){const _0x8478c=_0x4ca8c9;_0x5df47e=_0x5df47e||{};const _0x36aca3={'type':_0x8478c(0x17a),'items':_0x61de2[_0x8478c(0x181)](_0x5bc13b=>DataConverter[_0x8478c(0x186)]+_0x8478c(0x183)+_0x5bc13b['id']+']{'+(_0x5bc13b[_0x8478c(0x182)]||_0x5bc13b[_0x8478c(0x18c)])+'}')},_0x1f872c={'name':UtilApplications[_0x8478c(0x159)](_0xed78a6[_0x8478c(0x18c)]),'permission':{'default':0x0},'entryTime':Date[_0x8478c(0x164)](),'content':_0x8478c(0x16a)+Renderer[_0x8478c(0x184)]()[_0x8478c(0x172)](!![])[_0x8478c(0x18a)](_0x36aca3)[_0x8478c(0x168)](new RegExp(DataConverter[_0x8478c(0x186)],'g'),'@')+_0x8478c(0x170)};if(_0x5df47e[_0x8478c(0x17f)])_0x1f872c[_0x8478c(0x189)]={'default':Config[_0x8478c(0x184)]('importTable',_0x8478c(0x17c))};return _0x1f872c;}static[_0x4ca8c9(0x16b)](_0x3d4cc6,_0x3b395e){const _0x29c380=_0x4ca8c9;_0x3b395e=_0x3b395e||{};if(Renderer[_0x29c380(0x160)](_0x3d4cc6))return this[_0x29c380(0x177)](_0x3d4cc6,_0x3b395e);else return this[_0x29c380(0x192)](_0x3d4cc6,_0x3b395e);}static async[_0x4ca8c9(0x177)](_0x1c65a,_0x35368a){const _0x33004e=_0x4ca8c9;_0x35368a=_0x35368a||{};const _0x15e9e7=(_0x1c65a[_0x33004e(0x190)][0x0]||'')[_0x33004e(0x17e)]()['replace'](/{@dice ([^}]+)}/,'$1'),_0x561f45={'name':UtilApplications[_0x33004e(0x159)](_0x1c65a[_0x33004e(0x18c)]),'formula':_0x15e9e7,'results':await _0x1c65a[_0x33004e(0x158)]['pSerialAwaitMap'](async(_0x51e86d,_0x1025b)=>{const _0x50aff4=_0x33004e;let _0x2a0d05,_0x1898f2;const _0x305f06=/^(\d+)([-\u2013](\d+))?$/[_0x50aff4(0x18e)](String(_0x51e86d[0x0])[_0x50aff4(0x17e)]());if(_0x305f06){if(_0x305f06[0x1]&&!_0x305f06[0x2]){_0x2a0d05=Number(_0x305f06[0x1]);if(_0x2a0d05===0x0)_0x2a0d05=this[_0x50aff4(0x174)](_0x15e9e7);_0x1898f2=_0x2a0d05;}else _0x2a0d05=Number(_0x305f06[0x1]),_0x1898f2=Number(_0x305f06[0x3]),_0x1898f2<_0x2a0d05&&(_0x1898f2=this[_0x50aff4(0x174)](_0x15e9e7));}else{const _0x316cb7=/^(\d+)\+$/['exec'](_0x51e86d[0x0]);_0x2a0d05=Number(_0x316cb7[0x1]),_0x1898f2=_0x2a0d05;}return{'id':_0x1025b+0x1,'flags':{},'type':0x0,'text':await this['_pGetResultText'](_0x51e86d[_0x50aff4(0x166)](0x1)),'img':_0x50aff4(0x18b),'weight':0x1,'range':[_0x2a0d05,_0x1898f2],'drawn':![]};}),'replacement':!![],'displayRoll':!![]};if(_0x35368a[_0x33004e(0x17f)])_0x561f45[_0x33004e(0x189)]={'default':Config[_0x33004e(0x184)]('importTable','permissions')};return _0x561f45;}static async[_0x4ca8c9(0x161)](_0x223bb7){const _0x200c8d=_0x4ca8c9,_0x4975b6=MiscUtil[_0x200c8d(0x18f)]({'keyBlacklist':MiscUtil[_0x200c8d(0x17b)]}),_0x4f6634=Object[_0x200c8d(0x18d)](Parser[_0x200c8d(0x16e)])[_0x200c8d(0x181)](_0x454bc8=>({'tag':_0x454bc8,'re':RegExp('{@'+_0x454bc8+'\x20([^}]+)}','g')})),_0x18b161=await _0x4975b6['pWalk'](MiscUtil[_0x200c8d(0x185)](_0x223bb7),{'string':async _0x29fcf7=>{const _0x6d4122=_0x200c8d;for(const {tag:_0x5dc7f1,re:_0x50d11c}of _0x4f6634)_0x29fcf7=await this['_pGetResultText_pReplace']({'str':_0x29fcf7,'tag':_0x5dc7f1,'re':_0x50d11c});return Renderer[_0x6d4122(0x162)](this[_0x6d4122(0x16d)](_0x29fcf7));}});return _0x18b161['map'](_0x32adba=>Renderer[_0x200c8d(0x184)]()[_0x200c8d(0x172)](!![])[_0x200c8d(0x18a)](_0x32adba))[_0x200c8d(0x176)]('\x20|\x20');}static[_0x4ca8c9(0x174)](_0x1ad66e){const _0x33f508=_0x4ca8c9,_0x7d879f=/\d+/[_0x33f508(0x18e)](_0x1ad66e);if(_0x7d879f)return Number(_0x7d879f[0x0]);return 0x64;}static async[_0x4ca8c9(0x15d)]({str:_0x4065c0,re:_0x2aa382,tag:_0xe24d1b}){const _0x4e0ea9=_0x4ca8c9;let _0x551004;while(_0x551004=_0x2aa382[_0x4e0ea9(0x18e)](_0x4065c0)){const _0x2d7f19=_0x4065c0[_0x4e0ea9(0x166)](0x0,_0x551004[_0x4e0ea9(0x163)]),_0x4821c7=_0x4065c0[_0x4e0ea9(0x166)](_0x2aa382[_0x4e0ea9(0x165)]),_0xb1fde6=await this['_pGetResultText_pGetReplacement']({'tag':_0xe24d1b,'m':_0x551004});_0x4065c0=''+_0x2d7f19+_0xb1fde6+_0x4821c7,_0x2aa382[_0x4e0ea9(0x165)]=_0x2d7f19[_0x4e0ea9(0x15f)]+_0xb1fde6[_0x4e0ea9(0x15f)];}return _0x4065c0;}static async[_0x4ca8c9(0x180)]({tag:_0x470f37,m:_0x918f93}){const _0x3611ee=_0x918f93[0x1];return'@'+_0x470f37+'['+_0x3611ee+']';}static async[_0x4ca8c9(0x192)](_0x8a8e41,_0x1039f3){const _0x60d85a=_0x4ca8c9;_0x1039f3=_0x1039f3||{};const _0x5963f7={'name':UtilApplications[_0x60d85a(0x159)](_0x8a8e41[_0x60d85a(0x18c)]),'formula':'1d'+(_0x8a8e41['rows']?_0x8a8e41[_0x60d85a(0x158)][_0x60d85a(0x15f)]:'1'),'results':await _0x8a8e41[_0x60d85a(0x158)][_0x60d85a(0x16c)](async(_0x241e9a,_0x4b7030)=>{const _0x6cfb2=_0x60d85a;return _0x241e9a=_0x241e9a['row']||_0x241e9a,{'id':_0x4b7030+0x1,'flags':{},'type':0x0,'text':await this['_pGetResultText'](_0x241e9a),'img':_0x6cfb2(0x18b),'weight':0x1,'range':[_0x4b7030+0x1,_0x4b7030+0x1],'drawn':![]};}),'replacement':!![],'displayRoll':!![]};if(_0x1039f3['isAddPermission'])_0x5963f7[_0x60d85a(0x189)]={'default':Config[_0x60d85a(0x184)](_0x60d85a(0x191),_0x60d85a(0x17c))};return _0x5963f7;}static[_0x4ca8c9(0x16d)](_0x48c124){const _0x5bde4f=_0x4ca8c9;return _0x48c124[_0x5bde4f(0x168)](/{@(?:dice|damage) ([^}]+)}/gi,(..._0x357468)=>{const _0x20b123=_0x5bde4f,[_0x1434ae,_0x616a00]=Renderer[_0x20b123(0x175)](_0x357468[0x1]),_0x51acea=Vetools[_0x20b123(0x17d)](_0x1434ae);return _0x20b123(0x15e)+_0x51acea+']]'+(_0x616a00&&_0x51acea['toLowerCase']()[_0x20b123(0x17e)]()!==_0x616a00['toLowerCase']()[_0x20b123(0x17e)]()?'\x20('+_0x616a00+')':'');});}}export{DataConverterTable};
+import {UtilApplications} from "./UtilApplications.js";
+import {Config} from "./Config.js";
+import {DataConverter} from "./DataConverter.js";
+import {Vetools} from "./Vetools.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+
+class DataConverterTable {
+	/**
+	 * @param tg
+	 * @param rollableTables Foundry entities.
+	 * @param [opts] Options object.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 */
+	static getTableGroupJournal (tg, rollableTables, opts) {
+		opts = opts || {};
+
+		const entry = {
+			type: "list",
+			items: rollableTables.map(it => `${DataConverter.SYM_AT}RollTable[${it.id}]{${it.caption || it.name}}`),
+		};
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(tg.name),
+			permission: {default: 0},
+			entryTime: Date.now(),
+			content: `<div>
+				<p>The following tables belong to this group:</p>
+				${Renderer.get().setFirstSection(true).render(entry).replace(new RegExp(DataConverter.SYM_AT, "g"), "@")}
+				</div>`,
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importTable", "permissions")};
+
+		return out;
+	}
+
+	/**
+	 * @param tbl
+	 * @param [opts] Options object.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 * @param [opts.isImportAsJournalEntry]
+	 */
+	static pGetTableRollableTable (tbl, opts) {
+		opts = opts || {};
+
+		if (opts.isImportAsJournalEntry) return this.pGetTableJournal(tbl, opts);
+
+		if (this._isRollableTable(tbl)) return this._pGetTableRollableTable_pRollTable(tbl, opts);
+		else return this._pGetTableRollableTable_pOtherTable(tbl, opts);
+	}
+
+	static _isRollableTable (tbl) {
+		return this._isRollableTable_getEntriesTableRollMode(tbl) || Renderer.getAutoConvertedTableRollMode(tbl);
+	}
+
+	static _isRollableTable_getEntriesTableRollMode (tbl) {
+		if (!tbl.colLabels || tbl.colLabels.length < 2) return RollerUtil.ROLL_COL_NONE;
+
+		const rollColMode = RollerUtil.getColRollType(tbl.colLabels[0]);
+		if (!rollColMode) return RollerUtil.ROLL_COL_NONE;
+
+		// scan the first column to ensure all rollable
+		if (tbl.rows.some(r => r[0]?.type !== "cell" || r[0].roll == null || (r[0].roll.exact == null && r[0].roll.min == null && r[0].roll.max == null))) return RollerUtil.ROLL_COL_NONE;
+
+		return rollColMode;
+	}
+
+	static _getTableDescription (tbl) {
+		return tbl.colLabels?.length ? `Table columns: ${tbl.colLabels.map(it => Renderer.stripTags(it)).join(" | ")}` : "";
+	}
+
+	static async _pGetTableRollableTable_pRollTable (tbl, opts) {
+		opts = opts || {};
+
+		const toRoll = (tbl.colLabels[0] || "").trim().replace(/{@dice ([^}]+)}/, "$1");
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(tbl.name),
+			formula: toRoll,
+			description: this._getTableDescription(tbl),
+			results: await tbl.rows.pSerialAwaitMap(async (r, i) => {
+				const {rangeLow, rangeHigh} = this._getRollRange(toRoll, r[0]);
+
+				return this.pGetTableResult({
+					type: CONST.TABLE_RESULT_TYPES.TEXT,
+					text: await this._pGetResultText(r.slice(1)),
+					rangeLow,
+					rangeHigh,
+				});
+			}),
+			replacement: true,
+			displayRoll: true,
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importTable", "permissions")};
+
+		return out;
+	}
+
+	static _getRollRange (toRoll, cell) {
+		if (cell.type === "cell" && cell.roll != null) {
+			if (cell.roll.exact != null) {
+				return {rangeLow: cell.roll.exact, rangeHigh: cell.roll.exact};
+			} else {
+				return {rangeLow: cell.roll.min, rangeHigh: cell.roll.max};
+			}
+		}
+
+		let rangeLow;
+		let rangeHigh;
+
+		const cellClean = String(cell).trim();
+
+		// format: "95-00" or "12"
+		const mBasic = /^(\d+)([-\u2013](\d+))?$/.exec(cellClean);
+		if (mBasic) {
+			if (mBasic[1] && !mBasic[2]) {
+				rangeLow = Number(mBasic[1]);
+				// Convert "00" to "100"
+				if (rangeLow === 0) rangeLow = this._getHighestRoll(toRoll);
+				rangeHigh = rangeLow;
+			} else {
+				rangeLow = Number(mBasic[1]);
+				rangeHigh = Number(mBasic[3]);
+
+				// Convert "95-00" to "95-100"
+				if (rangeHigh < rangeLow) {
+					rangeHigh = this._getHighestRoll(toRoll);
+				}
+			}
+
+			return {rangeLow, rangeHigh};
+		}
+
+		// format "3 or less"
+		const mOrLess = /^(\d+) or less$/i.exec(cellClean);
+		if (mOrLess) {
+			rangeLow = 1;
+			rangeHigh = Number(mOrLess[1]);
+
+			return {rangeLow, rangeHigh};
+		}
+
+		// format: "12+"
+		const mPlus = /^(\d+)\+$/.exec(cellClean);
+		rangeLow = Number(mPlus[1]);
+		rangeHigh = rangeLow;
+
+		return {rangeLow, rangeHigh};
+	}
+
+	static async _pGetResultText (cells) {
+		const walker = MiscUtil.getWalker({keyBlacklist: MiscUtil.GENERIC_WALKER_ENTRIES_KEY_BLACKLIST});
+
+		let cpyCells = UtilDataConverter.getConvertedTagLinkEntries(MiscUtil.copy(cells));
+
+		cpyCells = walker.walk(
+			cpyCells,
+			{
+				string: str => {
+					return Renderer.stripTags(this._getFoundryDiceTagged(str));
+				},
+			},
+		);
+
+		return cpyCells
+			.map(it => Renderer.get().setFirstSection(true).render(it))
+			.join(" | ");
+	}
+
+	static _getHighestRoll (toRoll) {
+		const mFirstNum = /\d+/.exec(toRoll); // catch e.g. d1000's
+		if (mFirstNum) return Number(mFirstNum[0]);
+		return 100; // Fall back on d100, as this is the most common cause
+	}
+
+	static async _pGetTableRollableTable_pOtherTable (tbl, opts) {
+		opts = opts || {};
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(tbl.name),
+			formula: `1d${tbl.rows ? tbl.rows.length : "1"}`,
+			description: this._getTableDescription(tbl),
+			results: await tbl.rows.pSerialAwaitMap(async (r, i) => {
+				r = r.row || r;
+				return this.pGetTableResult({
+					type: CONST.TABLE_RESULT_TYPES.TEXT,
+					text: await this._pGetResultText(r),
+					rangeExact: i + 1,
+				});
+			}),
+			replacement: true,
+			displayRoll: true,
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importTable", "permissions")};
+
+		return out;
+	}
+
+	/**
+	 * @param type `0` for "Text", `1` for "Entity", `2` for "Compendium"
+	 * @param text
+	 * @param [resultId] The ID of an entity, if this result is in "Entity" or "Compendium" mode. `text` and `resultId`
+	 *   are combined/converted to form the final result by `TableResult.getChatText`, which does:
+	 *   `@${collection}[${resultId}]{${text}}`.
+	 * @param [collection] Compendium ID, e.g. `world.my-compendium`.
+	 * @param rangeLow
+	 * @param rangeHigh
+	 * @param rangeExact
+	 * @param [img]
+	 * @param [flags]
+	 */
+	static async pGetTableResult (
+		{
+			type,
+			text,
+			resultId,
+			collection,
+			rangeLow,
+			rangeHigh,
+			rangeExact,
+			img = "icons/svg/d20-black.svg",
+			flags = {},
+		},
+	) {
+		if (rangeExact != null && (rangeLow != null || rangeHigh != null)) throw new Error(`Only one of "rangeExact" and "rangeLow/rangeHigh" may be specified!`);
+
+		return {
+			id: foundry.utils.randomID(),
+			resultId,
+			collection,
+			flags,
+			type,
+			text,
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(img),
+			weight: 1,
+			range: [
+				rangeLow ?? rangeExact,
+				rangeHigh ?? rangeExact,
+			],
+			drawn: false,
+		};
+	}
+
+	static getMaxTableRange (table) { return Math.max(0, ...table.results.map(it => it.data.range).flat()); }
+
+	static _getFoundryDiceTagged (str) {
+		return str.replace(/{@(?:dice|damage) ([^}]+)}/gi, (...m) => {
+			const [rollText, displayText] = Renderer.splitTagByPipe(m[1]);
+			const rollTextClean = Vetools.getCleanDiceString(rollText);
+			return `[[/r ${rollTextClean}]]${displayText && rollTextClean.toLowerCase().trim() !== displayText.toLowerCase().trim() ? ` (${displayText})` : ""}`;
+		});
+	}
+
+	/**
+	 * @param tbl
+	 * @param [opts] Options object.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 */
+	static async pGetTableJournal (tbl, opts) {
+		opts = opts || {};
+
+		const cpy = MiscUtil.copy(tbl);
+		delete cpy.name;
+		cpy.type = cpy.type || "table";
+
+		const content = await UtilDataConverter.pGetWithDescriptionPlugins(() => {
+			return `<div>${Renderer.get().setFirstSection(true).render(cpy)}</div>`;
+		});
+
+		const img = await DataConverterTable._pGetImagePath(tbl);
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(tbl)),
+			permission: {default: 0},
+			entryTime: Date.now(),
+			content,
+			img,
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importTable", "permissions")};
+
+		return out;
+	}
+
+	static async _pGetImagePath (tbl) {
+		return `modules/${SharedConsts.MODULE_NAME}/media/icon/hamburger-menu.svg`;
+	}
+}
+
+export {DataConverterTable};

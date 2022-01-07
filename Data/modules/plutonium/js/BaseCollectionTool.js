@@ -1,1 +1,286 @@
-const _0x7a8c=['contents','Please\x20select\x20something\x20to\x20delete!','actor','sort','children','Delete\x20Folders','_folderType','tables','notifications','content','name','reset','19562qzUisr','items','280646GmMyYF','tool-','<h3>Are\x20you\x20sure?</h3><p>','filter','Macro','get','167INuuaF','deleteDocuments','item','Deleting\x20','delete','.fltr__mini-view','pRunTasks','pInitFilterBox','<h3>Are\x20you\x20sure?</h3><p>Any\x20empty\x20folders\x20will\x20be\x20permanently\x20deleted.</p>','Item','_rows','_$btnReset','warn','bind','Delete\x20','_list','249LPlyJN','find','collection','filterBox','length','Deleted\x20','_pageFilter','map','macros','init','_entityClass','_sortNamePathRows','_pDoPruneFolders','[data-name=\x22wrp-btns-sort\x22]','actors','input','its','data','journal\x20entries','table','Failed\x20to\x20delete\x20','fa-trash','Actor','EVNT_VALCHANGE','Task','.search','_gameProp','_sidebarTab','type','addToFilters','val','instance','7301ohJJce','then','_activateListeners_initBtnReset','[name=\x22cb-select-all\x22]','_nameSingle','_collection','activateTab','[name=btn-toggle-summary]','getValues','click','journal\x20entry','133443keQytg','rolltable','pGetConfirmation','_activateListeners_doBindSelectAll','_collectionName','forEach','toDisplay','4WlcqLn','_getSelectedIds','close','\x20and\x20','Unknown\x20collection\x20\x22','macro','Folder','has','_$iptSearch','checked','JournalEntry','journal','getFolderPath','...','info','initBtnSortHandlers','prop','bindSelectAllCheckbox','_activateListeners_listAbsorbGetData','_handleFilterChange','render','148622PApocx','_mapEntitiesToRows','path','[name=\x22btn-reset\x22]','_namePlural','Delete\x20Complete','400501jKHfBr','doAbsorbItems','values','\x20folder','RollTable','_listSortNamePathRows','add','906826gzehfw','11ArVOea','ascSortLower','[name=btn-filter]','unknown'];const _0x4b6c=function(_0x3a66bb,_0x36d9d5){_0x3a66bb=_0x3a66bb-0x103;let _0x7a8cb4=_0x7a8c[_0x3a66bb];return _0x7a8cb4;};const _0x1809ed=_0x4b6c;(function(_0x41249e,_0x414ccb){const _0x4d2753=_0x4b6c;while(!![]){try{const _0x4dd291=parseInt(_0x4d2753(0x146))*parseInt(_0x4d2753(0x154))+parseInt(_0x4d2753(0x153))+parseInt(_0x4d2753(0x12a))+-parseInt(_0x4d2753(0x16c))*-parseInt(_0x4d2753(0x11f))+-parseInt(_0x4d2753(0x131))*-parseInt(_0x4d2753(0x14c))+parseInt(_0x4d2753(0x166))+parseInt(_0x4d2753(0x17c))*-parseInt(_0x4d2753(0x164));if(_0x4dd291===_0x414ccb)break;else _0x41249e['push'](_0x41249e['shift']());}catch(_0x5bf9e4){_0x41249e['push'](_0x41249e['shift']());}}}(_0x7a8c,0xdd36a));import{UtilList2}from'./UtilList2.js';import{UtilApplications}from'./UtilApplications.js';import{Util}from'./Util.js';class BaseCollectionTool extends Application{static[_0x1809ed(0x10a)](_0x5daf6d,_0x49f827){const _0x380b2c=_0x1809ed;if(_0x5daf6d[_0x380b2c(0x148)]==null&&_0x49f827[_0x380b2c(0x148)]==null)return SortUtil[_0x380b2c(0x155)](_0x5daf6d[_0x380b2c(0x162)],_0x49f827['name']);if(_0x5daf6d[_0x380b2c(0x148)]!=null&&_0x49f827[_0x380b2c(0x148)]==null)return-0x1;if(_0x5daf6d[_0x380b2c(0x148)]==null&&_0x49f827[_0x380b2c(0x148)]!=null)return 0x1;return SortUtil[_0x380b2c(0x155)](_0x5daf6d['path'],_0x49f827['path'])||SortUtil['ascSortLower'](_0x5daf6d[_0x380b2c(0x162)],_0x49f827['name']);}static[_0x1809ed(0x151)](_0x2496da,_0x285319,_0x4c5662){const _0x2f2329=_0x1809ed,_0x4dc852={'name':_0x2496da[_0x2f2329(0x162)],'path':_0x2496da[_0x2f2329(0x14e)][_0x2f2329(0x148)]},_0x329f00={'name':_0x285319[_0x2f2329(0x162)],'path':_0x285319['values']['path']};return BaseCollectionTool[_0x2f2329(0x10a)](_0x4dc852,_0x329f00);}constructor(_0x106299,_0x50a79a){const _0x34ec5b=_0x1809ed;super(_0x106299),this['_collectionName']=_0x50a79a,this['_entityClass']=null,this[_0x34ec5b(0x124)]=null,this[_0x34ec5b(0x11a)]=null,this['_gameProp']=null,this[_0x34ec5b(0x15e)]=null,this[_0x34ec5b(0x123)]=null,this[_0x34ec5b(0x14a)]=null;switch(_0x50a79a){case _0x34ec5b(0x16e):{this[_0x34ec5b(0x109)]=Item,this[_0x34ec5b(0x124)]=CONFIG['Item'][_0x34ec5b(0x17e)][_0x34ec5b(0x11e)],this[_0x34ec5b(0x11a)]=_0x34ec5b(0x165),this[_0x34ec5b(0x119)]=_0x34ec5b(0x165),this['_folderType']=_0x34ec5b(0x175),this[_0x34ec5b(0x123)]=_0x34ec5b(0x16e),this['_namePlural']=_0x34ec5b(0x165);break;}case _0x34ec5b(0x15a):{this['_entityClass']=Actor,this[_0x34ec5b(0x124)]=CONFIG[_0x34ec5b(0x115)][_0x34ec5b(0x17e)][_0x34ec5b(0x11e)],this[_0x34ec5b(0x11a)]=_0x34ec5b(0x10d),this[_0x34ec5b(0x119)]=_0x34ec5b(0x10d),this[_0x34ec5b(0x15e)]=_0x34ec5b(0x115),this['_nameSingle']='actor',this['_namePlural']='actors';break;}case _0x34ec5b(0x13c):{this[_0x34ec5b(0x109)]=JournalEntry,this[_0x34ec5b(0x124)]=CONFIG['JournalEntry']['collection']['instance'],this[_0x34ec5b(0x11a)]=_0x34ec5b(0x13c),this[_0x34ec5b(0x119)]=_0x34ec5b(0x13c),this[_0x34ec5b(0x15e)]=_0x34ec5b(0x13b),this['_nameSingle']=_0x34ec5b(0x129),this['_namePlural']=_0x34ec5b(0x111);break;}case _0x34ec5b(0x12b):{this[_0x34ec5b(0x109)]=RollTable,this[_0x34ec5b(0x124)]=CONFIG[_0x34ec5b(0x150)][_0x34ec5b(0x17e)][_0x34ec5b(0x11e)],this[_0x34ec5b(0x11a)]='tables',this['_gameProp']=_0x34ec5b(0x15f),this[_0x34ec5b(0x15e)]=_0x34ec5b(0x150),this[_0x34ec5b(0x123)]=_0x34ec5b(0x112),this[_0x34ec5b(0x14a)]=_0x34ec5b(0x15f);break;}case _0x34ec5b(0x136):{this[_0x34ec5b(0x109)]=Macro,this[_0x34ec5b(0x124)]=CONFIG[_0x34ec5b(0x16a)][_0x34ec5b(0x17e)][_0x34ec5b(0x11e)],this[_0x34ec5b(0x11a)]=null,this[_0x34ec5b(0x119)]=_0x34ec5b(0x107),this[_0x34ec5b(0x15e)]=null,this[_0x34ec5b(0x123)]=_0x34ec5b(0x136),this[_0x34ec5b(0x14a)]=_0x34ec5b(0x107);break;}default:throw new Error(_0x34ec5b(0x135)+_0x50a79a+'\x22');}}[_0x1809ed(0x147)](){const _0x3186c2=_0x1809ed;return this[_0x3186c2(0x124)][_0x3186c2(0x158)]['map']((_0x232c22,_0x5f0c30)=>{const _0xa1b552=_0x3186c2,_0x11d690=UtilApplications[_0xa1b552(0x13d)](_0x232c22,{'isAddTrailingSlash':!![]});return{'path':_0x11d690,'name':_0x232c22['name'],'displayName':''+(_0x11d690||'')+_0x232c22[_0xa1b552(0x162)],'id':_0x232c22['id'],'type':MiscUtil[_0xa1b552(0x16b)](_0x232c22,'data',_0xa1b552(0x11b))||_0xa1b552(0x157),'ix':_0x5f0c30};})[_0x3186c2(0x15b)](BaseCollectionTool[_0x3186c2(0x10a)]);}['_handleFilterChange'](){const _0x4c298c=_0x1809ed,_0x158d86=this['_pageFilter'][_0x4c298c(0x17f)][_0x4c298c(0x127)]();this[_0x4c298c(0x17b)]['filter'](_0x4176fa=>this['_pageFilter'][_0x4c298c(0x130)](_0x158d86,this['_rows'][_0x4176fa['ix']]));}[_0x1809ed(0x121)](_0x58a960){const _0x51ccf6=_0x1809ed;this['_$btnReset']=_0x58a960['find'](_0x51ccf6(0x149))[_0x51ccf6(0x128)](()=>{const _0x11299d=_0x51ccf6;_0x58a960['find'](_0x11299d(0x118))[_0x11299d(0x11d)]('');if(this[_0x11299d(0x17b)])this[_0x11299d(0x17b)][_0x11299d(0x163)]();});}[_0x1809ed(0x143)](_0x132fc8){return UtilList2['absorbFnGetData'](_0x132fc8);}[_0x1809ed(0x12d)](_0x402104){const _0x55d2a0=_0x1809ed;ListUiUtil[_0x55d2a0(0x142)](_0x402104,this[_0x55d2a0(0x17b)]);}['_activateListeners_pInitListAndFilters'](_0x488aeb){const _0x4d6cc0=_0x1809ed;return this[_0x4d6cc0(0x139)]=_0x488aeb['find'](_0x4d6cc0(0x118)),this['_list']=new List({'$iptSearch':this[_0x4d6cc0(0x139)],'$wrpList':_0x488aeb[_0x4d6cc0(0x17d)]('.veapp__list'),'fnSort':BaseCollectionTool[_0x4d6cc0(0x151)]}),SortUtil[_0x4d6cc0(0x140)](_0x488aeb['find'](_0x4d6cc0(0x10c)),this[_0x4d6cc0(0x17b)]),this[_0x4d6cc0(0x12d)](_0x488aeb[_0x4d6cc0(0x17d)](_0x4d6cc0(0x122))),this[_0x4d6cc0(0x105)][_0x4d6cc0(0x173)]({'$iptSearch':this[_0x4d6cc0(0x139)],'$btnReset':this[_0x4d6cc0(0x177)],'$btnOpen':_0x488aeb['find'](_0x4d6cc0(0x156)),'$btnToggleSummaryHidden':_0x488aeb['find'](_0x4d6cc0(0x126)),'$wrpMiniPills':_0x488aeb[_0x4d6cc0(0x17d)](_0x4d6cc0(0x171)),'namespace':_0x4d6cc0(0x167)+this['_collectionName']})[_0x4d6cc0(0x120)](()=>{const _0x3dd36b=_0x4d6cc0;this[_0x3dd36b(0x176)]['forEach'](_0x55918c=>this[_0x3dd36b(0x105)][_0x3dd36b(0x11c)](_0x55918c)),this[_0x3dd36b(0x17b)][_0x3dd36b(0x14d)](this[_0x3dd36b(0x176)],{'fnGetName':_0x3ee602=>_0x3ee602[_0x3dd36b(0x162)],'fnGetValues':_0x291665=>({'id':_0x291665['id'],'path':_0x291665['path']}),'fnGetData':this[_0x3dd36b(0x143)][_0x3dd36b(0x179)](this),'fnBindListeners':_0x550f80=>UtilList2['absorbFnBindListeners'](this[_0x3dd36b(0x17b)],_0x550f80)}),this[_0x3dd36b(0x17b)][_0x3dd36b(0x108)](),this['_pageFilter'][_0x3dd36b(0x17f)]['render'](),this[_0x3dd36b(0x105)][_0x3dd36b(0x17f)]['on'](FilterBox[_0x3dd36b(0x116)],this['_handleFilterChange'][_0x3dd36b(0x179)](this)),this[_0x3dd36b(0x144)]();});}[_0x1809ed(0x132)](){const _0x2f5c94=_0x1809ed;return this['_list'][_0x2f5c94(0x165)][_0x2f5c94(0x169)](_0x527ed2=>$(_0x527ed2['ele'])['find'](_0x2f5c94(0x10e))[_0x2f5c94(0x141)](_0x2f5c94(0x13a)))[_0x2f5c94(0x106)](_0x556586=>({'name':_0x556586[_0x2f5c94(0x162)],'id':_0x556586[_0x2f5c94(0x14e)]['id']}));}['_activateListeners_initBtnPrune'](_0x4febb9){const _0x13757f=_0x1809ed;_0x4febb9[_0x13757f(0x17d)]('[name=\x22btn-prune\x22]')[_0x13757f(0x128)](async()=>{const _0x16951f=_0x13757f,_0x29dc1d=await UtilApplications[_0x16951f(0x12c)]({'title':_0x16951f(0x15d),'content':_0x16951f(0x174),'confirmText':'Delete','faIcon':_0x16951f(0x114)});if(!_0x29dc1d)return;await this[_0x16951f(0x10b)]();});}async['_pDoDelete'](_0x245f99){const _0x501978=_0x1809ed;if(!this[_0x501978(0x17b)])return;let _0x26cd85=this[_0x501978(0x132)]();if(!_0x26cd85[_0x501978(0x103)])return ui[_0x501978(0x160)][_0x501978(0x178)](_0x501978(0x159));const _0x2f980c=this[_0x501978(0x12e)]['uppercaseFirst'](),_0x2c3fbe=_0x26cd85[_0x501978(0x103)]!==0x1?'s':'',_0x5313be=await UtilApplications['pGetConfirmation']({'title':_0x501978(0x17a)+_0x2f980c+_0x2c3fbe,'content':_0x501978(0x168)+_0x26cd85[_0x501978(0x103)]+'\x20'+_0x2f980c+_0x2c3fbe+_0x501978(0x134)+(_0x2c3fbe?'their':_0x501978(0x10f))+'\x20data\x20will\x20be\x20permanently\x20deleted.</p>','confirmText':'Delete','faIcon':_0x501978(0x114)});if(!_0x5313be)return;this[_0x501978(0x133)]();if(this['_sidebarTab'])ui['sidebar'][_0x501978(0x125)](this['_sidebarTab']);if(_0x245f99[_0x501978(0x141)](_0x501978(0x13a))){const _0xc45ad=await this[_0x501978(0x10b)](_0x26cd85['map'](({id:_0x4a7690})=>_0x4a7690));_0x26cd85=_0x26cd85[_0x501978(0x169)](({id:_0x2f135d})=>!_0xc45ad[_0x501978(0x138)](_0x2f135d));}const _0x33bf08=new Util[(_0x501978(0x117))](_0x26cd85[_0x501978(0x103)],()=>this[_0x501978(0x109)][_0x501978(0x16d)](_0x26cd85[_0x501978(0x106)](({id:_0x145f02})=>_0x145f02)));await UtilApplications[_0x501978(0x172)]([_0x33bf08],{'titleInitial':'Deleting...','titleComplete':_0x501978(0x14b),'fnGetRowRunningText':_0x38429a=>_0x501978(0x16f)+_0x38429a+'\x20'+(_0x38429a===0x1?this['_nameSingle']:this[_0x501978(0x14a)])+_0x501978(0x13e),'fnGetRowSuccessText':_0x5323b0=>_0x501978(0x104)+_0x5323b0+'\x20'+(_0x5323b0===0x1?this[_0x501978(0x123)]:this[_0x501978(0x14a)])+'.','fnGetRowErrorText':_0x3a8166=>_0x501978(0x113)+_0x3a8166+'\x20'+(_0x3a8166===0x1?this[_0x501978(0x123)]:this['_namePlural'])+'!\x20'+VeCt['STR_SEE_CONSOLE']});if(_0x245f99[_0x501978(0x141)](_0x501978(0x13a)))await this[_0x501978(0x10b)]();game[this[_0x501978(0x119)]][_0x501978(0x145)]();}async[_0x1809ed(0x10b)](_0x30f8b5){const _0x5c621f=_0x1809ed,_0x37bc36=()=>CONFIG[_0x5c621f(0x137)][_0x5c621f(0x17e)][_0x5c621f(0x11e)]['contents']['filter'](_0x484265=>_0x484265[_0x5c621f(0x110)][_0x5c621f(0x11b)]===this['_folderType']),_0x400a88=_0x30f8b5?new Set(_0x30f8b5):null,_0x5137fd=new Set();let _0x13fa9d=0x0,_0x35a346=null,_0x332834=_0x37bc36()[_0x5c621f(0x103)];do{let _0x18476e;_0x400a88?_0x18476e=_0x37bc36()[_0x5c621f(0x169)](_0x50b0d0=>{const _0xd42221=_0x5c621f;if(!_0x50b0d0[_0xd42221(0x15c)]||!_0x50b0d0[_0xd42221(0x15c)][_0xd42221(0x103)]){if(!_0x50b0d0[_0xd42221(0x161)]['length'])return!![];const _0x48961c=_0x50b0d0['content'][_0xd42221(0x106)](_0x7e096b=>_0x7e096b['id'])['filter'](_0x2a6161=>_0x400a88[_0xd42221(0x138)](_0x2a6161));if(_0x48961c[_0xd42221(0x103)]===_0x50b0d0[_0xd42221(0x161)][_0xd42221(0x103)])return _0x48961c[_0xd42221(0x12f)](_0x598c3c=>_0x5137fd[_0xd42221(0x152)](_0x598c3c)),!![];}return![];}):_0x18476e=_0x37bc36()[_0x5c621f(0x169)](_0x2ebcda=>!_0x2ebcda[_0x5c621f(0x161)]['length']&&(!_0x2ebcda[_0x5c621f(0x15c)]||!_0x2ebcda[_0x5c621f(0x15c)][_0x5c621f(0x103)]));for(const _0x1aad29 of _0x18476e){await _0x1aad29[_0x5c621f(0x170)]({'deleteSubfolders':!![],'deleteContents':!![]}),_0x13fa9d++;}_0x35a346=_0x332834,_0x332834=_0x37bc36()[_0x5c621f(0x103)];}while(_0x332834!==_0x35a346);if(_0x13fa9d)ui[_0x5c621f(0x160)][_0x5c621f(0x13f)](_0x5c621f(0x104)+_0x13fa9d+_0x5c621f(0x14f)+(_0x13fa9d===0x1?'':'s')+'.');return _0x5137fd;}}export{BaseCollectionTool};
+import {UtilList2} from "./UtilList2.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {Util} from "./Util.js";
+
+class BaseCollectionTool extends Application {
+	static _sortNamePathRows (a, b) {
+		if (a.path == null && b.path == null) return SortUtil.ascSortLower(a.name, b.name);
+		if (a.path != null && b.path == null) return -1;
+		if (a.path == null && b.path != null) return 1;
+		return SortUtil.ascSortLower(a.path, b.path) || SortUtil.ascSortLower(a.name, b.name);
+	}
+
+	static _listSortNamePathRows (a, b, o) { // This ignores the options object--potentially expand in future
+		const nxtA = {name: a.name, path: a.values.path};
+		const nxtB = {name: b.name, path: b.values.path};
+		return BaseCollectionTool._sortNamePathRows(nxtA, nxtB);
+	}
+
+	constructor (applicationOpts, collectionName) {
+		super(applicationOpts);
+
+		this._collectionName = collectionName;
+		this._entityClass = null;
+		this._collection = null;
+		this._sidebarTab = null;
+		this._gameProp = null;
+		this._folderType = null;
+		this._nameSingle = null;
+		this._namePlural = null;
+		switch (collectionName) {
+			case "scene": {
+				this._entityClass = Scene;
+				this._collection = CONFIG.Scene.collection.instance;
+				this._sidebarTab = "scenes";
+				this._gameProp = "scenes";
+				this._folderType = "Scene";
+				this._nameSingle = "scene";
+				this._namePlural = "scenes";
+				break;
+			}
+			case "actor": {
+				this._entityClass = Actor;
+				this._collection = CONFIG.Actor.collection.instance;
+				this._sidebarTab = "actors";
+				this._gameProp = "actors";
+				this._folderType = "Actor";
+				this._nameSingle = "actor";
+				this._namePlural = "actors";
+				break;
+			}
+			case "item": {
+				this._entityClass = Item;
+				this._collection = CONFIG.Item.collection.instance;
+				this._sidebarTab = "items";
+				this._gameProp = "items";
+				this._folderType = "Item";
+				this._nameSingle = "item";
+				this._namePlural = "items";
+				break;
+			}
+			case "journal": {
+				this._entityClass = JournalEntry;
+				this._collection = CONFIG.JournalEntry.collection.instance;
+				this._sidebarTab = "journal";
+				this._gameProp = "journal";
+				this._folderType = "JournalEntry";
+				this._nameSingle = "journal entry";
+				this._namePlural = "journal entries";
+				break;
+			}
+			case "rolltable": {
+				this._entityClass = RollTable;
+				this._collection = CONFIG.RollTable.collection.instance;
+				this._sidebarTab = "tables";
+				this._gameProp = "tables";
+				this._folderType = "RollTable";
+				this._nameSingle = "table";
+				this._namePlural = "tables";
+				break;
+			}
+			case "macro": {
+				this._entityClass = Macro;
+				this._collection = CONFIG.Macro.collection.instance;
+				this._sidebarTab = null;
+				this._gameProp = "macros";
+				this._folderType = null;
+				this._nameSingle = "macro";
+				this._namePlural = "macros";
+				break;
+			}
+			default: throw new Error(`Unknown collection "${collectionName}"`);
+		}
+	}
+
+	_mapEntitiesToRows () {
+		return this._collection.contents
+			.map((it, ix) => {
+				const path = UtilApplications.getFolderPath(it, {isAddTrailingSlash: true});
+				return {
+					path,
+					name: it.name,
+					displayName: `${path || ""}${it.name}`,
+					id: it.id,
+					type: MiscUtil.get(it, "data", "type") || "unknown",
+					ix,
+				};
+			})
+			.sort(BaseCollectionTool._sortNamePathRows);
+	}
+
+	_handleFilterChange () {
+		const f = this._pageFilter.filterBox.getValues();
+		this._list.filter(li => this._pageFilter.toDisplay(f, this._rows[li.ix]));
+	}
+
+	_activateListeners_initBtnReset ($html) {
+		this._$btnReset = $html.find(`[name="btn-reset"]`).click(() => {
+			$html.find(`.search`).val("");
+			if (this._list) this._list.reset();
+		});
+	}
+
+	// Expose these methods to be overridden by child classes
+	_activateListeners_listAbsorbGetData (li) { return UtilList2.absorbFnGetData(li); }
+	_activateListeners_doBindSelectAll ($cbAll) { ListUiUtil.bindSelectAllCheckbox($cbAll, this._list); }
+
+	_activateListeners_pInitListAndFilters ($html) {
+		this._$iptSearch = $html.find(`.search`);
+
+		// Init list library
+		this._list = new List({
+			$iptSearch: this._$iptSearch,
+			$wrpList: $html.find(`.veapp__list`),
+			fnSort: BaseCollectionTool._listSortNamePathRows,
+		});
+		SortUtil.initBtnSortHandlers($html.find(`[data-name="wrp-btns-sort"]`), this._list);
+		this._activateListeners_doBindSelectAll($html.find(`[name="cb-select-all"]`));
+
+		return this._pageFilter.pInitFilterBox({
+			$iptSearch: this._$iptSearch,
+			$btnReset: this._$btnReset,
+			$btnOpen: $html.find(`[name=btn-filter]`),
+			$btnToggleSummaryHidden: $html.find(`[name=btn-toggle-summary]`),
+			$wrpMiniPills: $html.find(`.fltr__mini-view`),
+			namespace: `tool-${this._collectionName}`,
+		}).then(() => {
+			this._rows.forEach(it => this._pageFilter.addToFilters(it));
+
+			this._list.doAbsorbItems(
+				this._rows,
+				{
+					fnGetName: it => it.name,
+					fnGetValues: it => ({
+						id: it.id,
+						path: it.path,
+					}),
+					fnGetData: this._activateListeners_listAbsorbGetData.bind(this),
+					fnBindListeners: it => UtilList2.absorbFnBindListeners(this._list, it),
+				},
+			);
+
+			this._list.init();
+
+			this._pageFilter.filterBox.render();
+
+			this._pageFilter.filterBox.on(
+				FilterBox.EVNT_VALCHANGE,
+				this._handleFilterChange.bind(this),
+			);
+
+			this._handleFilterChange();
+		});
+	}
+
+	_getSelectedIds () {
+		return this._list.items
+			.filter(it => $(it.ele).find(`input`).prop("checked"))
+			.map(it => ({name: it.name, id: it.values.id}));
+	}
+
+	_activateListeners_initBtnPrune ($html) {
+		$html.find(`[name="btn-prune"]`).click(async () => {
+			const doDelete = await UtilApplications.pGetConfirmation({
+				title: `Delete Folders`,
+				content: `<h3>Are you sure?</h3><p>Any empty folders will be permanently deleted.</p>`,
+				confirmText: "Delete",
+				faIcon: "fa-trash",
+			});
+			if (!doDelete) return;
+
+			await this._pDoPruneFolders();
+		});
+	}
+
+	async _pDoDelete ($cbPruneAuto) {
+		if (!this._list) return;
+
+		let selIds = this._getSelectedIds();
+
+		if (!selIds.length) return ui.notifications.warn(`Please select something to delete!`);
+
+		const collectionTitle = this._collectionName.uppercaseFirst();
+		const pluralStr = selIds.length !== 1 ? "s" : "";
+		const doDelete = await UtilApplications.pGetConfirmation({
+			title: `Delete ${collectionTitle}${pluralStr}`,
+			content: `<h3>Are you sure?</h3><p>${selIds.length} ${collectionTitle}${pluralStr} and ${pluralStr ? "their" : "its"} data will be permanently deleted.</p>`,
+			confirmText: "Delete",
+			faIcon: "fa-trash",
+		});
+		if (!doDelete) return;
+
+		this.close();
+		if (this._sidebarTab) ui.sidebar.activateTab(this._sidebarTab);
+
+		// If folder pruning is enabled, check if there any folders that we can delete (thus deleting their contents)
+		//   This is much faster than deleting individual records
+		if ($cbPruneAuto.prop("checked")) {
+			const delIds = await this._pDoPruneFolders(selIds.map(({id}) => id));
+			selIds = selIds.filter(({id}) => !delIds.has(id));
+		}
+
+		const task = new Util.Task(selIds.length, () => this._entityClass.deleteDocuments(selIds.map(({id}) => id)));
+		await UtilApplications.pRunTasks(
+			[task],
+			{
+				titleInitial: "Deleting...",
+				titleComplete: "Delete Complete",
+				fnGetRowRunningText: (entityCount) => `Deleting ${entityCount} ${entityCount === 1 ? this._nameSingle : this._namePlural}...`,
+				fnGetRowSuccessText: (entityCount) => `Deleted ${entityCount} ${entityCount === 1 ? this._nameSingle : this._namePlural}.`,
+				fnGetRowErrorText: (entityCount) => `Failed to delete ${entityCount} ${entityCount === 1 ? this._nameSingle : this._namePlural}! ${VeCt.STR_SEE_CONSOLE}`,
+			},
+		);
+
+		if ($cbPruneAuto.prop("checked")) await this._pDoPruneFolders();
+
+		game[this._gameProp].render();
+	}
+
+	/**
+	 * @param [toDeleteEntityIds] Optional list of IDs for entities that are to be deleted.
+	 */
+	async _pDoPruneFolders (toDeleteEntityIds) {
+		const getFolders = () => CONFIG.Folder.collection.instance.contents.filter(it => it.data.type === this._folderType);
+
+		const setSelectedIds = toDeleteEntityIds ? new Set(toDeleteEntityIds) : null;
+		const setDeleted = new Set();
+
+		let cntPruned = 0;
+		let cntFoldersPrev = null;
+		let cntFolders = getFolders().length;
+		do {
+			let dirsToDelete;
+			if (setSelectedIds) {
+				dirsToDelete = getFolders().filter(it => {
+					if (!it.children || !it.children.length) {
+						if (!it.content.length) return true;
+
+						// If all the directory's contents are to be deleted, delete the directory instead
+						const selContentIds = it.content.map(c => c.id).filter(id => setSelectedIds.has(id));
+						if (selContentIds.length === it.content.length) {
+							selContentIds.forEach(id => setDeleted.add(id));
+							return true;
+						}
+					}
+					return false;
+				});
+			} else {
+				dirsToDelete = getFolders().filter(it => !it.content.length && (!it.children || !it.children.length));
+			}
+
+			for (const dir of dirsToDelete) {
+				await dir.delete({deleteSubfolders: true, deleteContents: true});
+				cntPruned++;
+			}
+
+			cntFoldersPrev = cntFolders;
+			cntFolders = getFolders().length;
+		} while (cntFolders !== cntFoldersPrev);
+
+		if (cntPruned) ui.notifications.info(`Deleted ${cntPruned} folder${cntPruned === 1 ? "" : "s"}.`);
+
+		return setDeleted;
+	}
+}
+
+export {BaseCollectionTool};

@@ -1,1 +1,30 @@
-const _0x44e4=['activateListeners','22973yLnNzO','then','1571925dPKoJX','15OCZuOA','867375EcdDzx','empty','368977tESRxW','37839Uknwct','489346uBLaOa','Changelog','3miTBco','render','999crHYIG','61kXgLYw','MODULE_LOCATION','1317FFevqK','renderChangelog','pGetChangelog'];const _0x596c=function(_0x55035a,_0x375d86){_0x55035a=_0x55035a-0x13d;let _0x44e462=_0x44e4[_0x55035a];return _0x44e462;};const _0x16fc13=_0x596c;(function(_0x4bce14,_0x55b9fd){const _0x24a0cb=_0x596c;while(!![]){try{const _0x3def3f=-parseInt(_0x24a0cb(0x142))*-parseInt(_0x24a0cb(0x13f))+-parseInt(_0x24a0cb(0x14c))*parseInt(_0x24a0cb(0x13d))+-parseInt(_0x24a0cb(0x148))+parseInt(_0x24a0cb(0x14a))+-parseInt(_0x24a0cb(0x14d))*parseInt(_0x24a0cb(0x149))+-parseInt(_0x24a0cb(0x146))*-parseInt(_0x24a0cb(0x140))+parseInt(_0x24a0cb(0x14e));if(_0x3def3f===_0x55b9fd)break;else _0x4bce14['push'](_0x4bce14['shift']());}catch(_0x377352){_0x4bce14['push'](_0x4bce14['shift']());}}}(_0x44e4,0xc9fb4));import{SharedConsts}from'../shared/SharedConsts.js';import{Vetools}from'./Vetools.js';class Changelog extends Application{constructor(){const _0x581263=_0x596c;super({'width':0x258,'height':0x320,'title':_0x581263(0x14f),'template':SharedConsts[_0x581263(0x141)]+'/template/Changelog.hbs','resizable':!![]});}[_0x16fc13(0x145)](_0x42d833){const _0x4da14e=_0x16fc13;super['activateListeners'](_0x42d833),Vetools[_0x4da14e(0x144)]()[_0x4da14e(0x147)](_0x4e206a=>{const _0x51d7f8=_0x4da14e,_0x44f3b4=_0x42d833[_0x51d7f8(0x14b)]();UtilsChangelog[_0x51d7f8(0x143)](_0x4e206a,_0x44f3b4);});}static['open'](){const _0x335820=_0x16fc13,_0x1ce560=new Changelog();_0x1ce560[_0x335820(0x13e)](!![]);}}export{Changelog};
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Vetools} from "./Vetools.js";
+
+class Changelog extends Application {
+	constructor () {
+		super({
+			width: 600,
+			height: 800,
+			title: "Changelog",
+			template: `${SharedConsts.MODULE_LOCATION}/template/Changelog.hbs`,
+			resizable: true,
+		});
+	}
+
+	activateListeners ($html) {
+		super.activateListeners($html);
+		Vetools.pGetChangelog()
+			.then(changelog => {
+				const $wrp = $html.empty();
+				UtilsChangelog.renderChangelog(changelog, $wrp);
+			});
+	}
+
+	static open () {
+		const changelog = new Changelog();
+		changelog.render(true);
+	}
+}
+
+export {Changelog};

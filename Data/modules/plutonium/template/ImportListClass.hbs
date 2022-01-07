@@ -7,6 +7,7 @@
 			<div class="lst__wrp-search-glass no-events flex-vh-center"><span class="glyphicon glyphicon-search"></span></div>
 			<div class="lst__wrp-search-visible no-events flex-vh-center"></div>
 		</div>
+		<button class="btn-5et veapp__btn-list-feeling-lucky flex-vh-center" name="btn-feeling-lucky" title="Feeling Lucky?"><span class="glyphicon glyphicon-random"></span></button>
 		<button class="btn-5et veapp__btn-list-reset" name="btn-reset">Reset</button>
 	</div>
 
@@ -31,7 +32,7 @@
 					<span class="col-1 flex-vh-center">{{#unless disabled}}<input type="checkbox" class="no-events">{{/unless}}</span>
 				{{/if}}
 				<span class="col-9 bold">{{name}}</span>
-				<span class="col-2 text-center {{sourceClassName}}" title="{{sourceLong}}">{{sourceShort}}</span>
+				<span class="col-2 text-center {{sourceClassName}}" title="{{sourceLong}}" {{#if sourceStyle}}style="{{sourceStyle}}"{{/if}}>{{sourceShort}}</span>
 			</label>
 
 			{{#each subRows}}
@@ -42,7 +43,7 @@
 						<span class="col-1 flex-vh-center"><input type="checkbox" class="no-events"></span>
 					{{/if}}
 					<span class="col-9" title="Class: {{../name}}"><span class="mx-3">&mdash;</span>{{name}}</span>
-					<span class="col-2 text-center {{sourceClassName}}" title="{{sourceLong}}">{{sourceShort}}</span>
+					<span class="col-2 text-center {{sourceClassName}}" title="{{sourceLong}}" {{#if sourceStyle}}style="{{sourceStyle}}"{{/if}}>{{sourceShort}}</span>
 				</label>
 			{{/each}}
 		{{/each}}

@@ -1,1 +1,137 @@
-const _0x222b=['_doMergeExistingSkillData','_actor','filter','_pApplyAllAdditionalSpellsToActor','value','30vtRNsI','58967LSRehV','_doMergeExistingGenericTraitsData','1011781aRxIvt','additionalSpells','1YkmdUU','traits','1301617hMqXMl','entries','custom','get','keys','106AybSvc','forEach','151289FxBcla','_pDoMergeAndApplyActorUpdate','equipmentItemEntries','ImportEntryOpts','skills','1594859vYlpDf','getTotalClassLevels','3kZvbFZ','1UCsrWs','pApplyFormDataToActor','433hvvSHX','isCancelled','_doMergeExistingDiDrDvCiData','data','trim','toLowerCase','_doMergeExistingOtherProficiencyData','length','split','CHAR_MAX_LEVEL','push','1987zIOjTo','some','join','isCharactermancer','languages','set','15242QlxGmc','toolProf','copy'];const _0x3b28=function(_0x15b1e5,_0x25f37a){_0x15b1e5=_0x15b1e5-0x87;let _0x222b15=_0x222b[_0x15b1e5];return _0x222b15;};const _0xf56133=_0x3b28;(function(_0x3e6d20,_0x101bad){const _0xfbf657=_0x3b28;while(!![]){try{const _0x374e9c=parseInt(_0xfbf657(0x98))+parseInt(_0xfbf657(0x92))*-parseInt(_0xfbf657(0x91))+-parseInt(_0xfbf657(0x9d))*-parseInt(_0xfbf657(0x89))+parseInt(_0xfbf657(0xb4))*parseInt(_0xfbf657(0xa9))+parseInt(_0xfbf657(0xa6))*-parseInt(_0xfbf657(0x9f))+-parseInt(_0xfbf657(0x96))*-parseInt(_0xfbf657(0x94))+parseInt(_0xfbf657(0xa4))*-parseInt(_0xfbf657(0xa7));if(_0x374e9c===_0x101bad)break;else _0x3e6d20['push'](_0x3e6d20['shift']());}catch(_0x103a09){_0x3e6d20['push'](_0x3e6d20['shift']());}}}(_0x222b,0xed3a5));import{ImportList}from'./ImportList.js';import{Charactermancer_AdditionalSpellsSelect}from'./UtilCharactermancerAdditionalSpells.js';import{UtilActors}from'./UtilActors.js';import{Consts}from'./Consts.js';class ImportListCharacter extends ImportList{async[_0xf56133(0x8f)]({entity:_0x211fb8,dataBuilderOpts:_0x30ab8a,spellHashToItemPosMap:_0x4de21b}){const _0x37c417=_0xf56133,_0xe9517=await Charactermancer_AdditionalSpellsSelect['pGetUserInput']({'additionalSpells':_0x211fb8[_0x37c417(0x95)],'sourceHintText':_0x211fb8['name'],'curLevel':0x0,'targetLevel':Consts[_0x37c417(0xb2)],'spellLevelLow':0x0,'spellLevelHigh':0x9});if(_0xe9517==null)return _0x30ab8a[_0x37c417(0xaa)]=!![];if(_0xe9517===VeCt['SYM_UI_SKIP'])return;const _0x3bb7a9=UtilActors[_0x37c417(0xa5)](this[_0x37c417(0x8d)]);await Charactermancer_AdditionalSpellsSelect[_0x37c417(0xa8)](this['_actor'],_0xe9517,{'hashToIdMap':_0x4de21b});}async[_0xf56133(0xa0)](_0x5d7e3d){const _0x271b24=_0xf56133;if(!Object[_0x271b24(0x9c)](_0x5d7e3d)['length'])return;this['_doMergeExistingSkillData']({'actorUpdate':_0x5d7e3d}),this[_0x271b24(0xaf)]({'actorUpdate':_0x5d7e3d}),this[_0x271b24(0xab)]({'actorUpdate':_0x5d7e3d}),await this['_actor']['update'](_0x5d7e3d);}[_0xf56133(0x8c)]({actorUpdate:_0x49ba44}){const _0x4e107d=_0xf56133;_0x49ba44?.[_0x4e107d(0xac)]?.[_0x4e107d(0xa3)]&&Object[_0x4e107d(0x99)](_0x49ba44['data'][_0x4e107d(0xa3)])[_0x4e107d(0x9e)](([_0x10dd29,_0x128ca5])=>{const _0xd0f1d6=_0x4e107d;_0x128ca5[_0xd0f1d6(0x90)]=Math['max'](this[_0xd0f1d6(0x8d)][_0xd0f1d6(0xac)]?.[_0xd0f1d6(0xac)]?.[_0xd0f1d6(0xa3)]?.[_0x10dd29]?.[_0xd0f1d6(0x90)],_0x128ca5[_0xd0f1d6(0x90)],0x0);});}[_0xf56133(0xaf)]({actorUpdate:_0x1a92d9}){const _0x198296=_0xf56133,_0x4bdf64=[['data','data',_0x198296(0x97),_0x198296(0x87)],[_0x198296(0xac),'data','traits',_0x198296(0x8a)],[_0x198296(0xac),_0x198296(0xac),_0x198296(0x97),'weaponProf'],[_0x198296(0xac),'data',_0x198296(0x97),'armorProf']];return this['_doMergeExistingGenericTraitsData']({'actorUpdate':_0x1a92d9,'actorDataPaths':_0x4bdf64});}['_doMergeExistingDiDrDvCiData']({actorUpdate:_0x2d9af3}){const _0xbacb92=_0xf56133,_0x5c54aa=[[_0xbacb92(0xac),_0xbacb92(0xac),_0xbacb92(0x97),'di'],[_0xbacb92(0xac),_0xbacb92(0xac),_0xbacb92(0x97),'dr'],['data','data','traits','dv'],['data',_0xbacb92(0xac),_0xbacb92(0x97),'ci']];return this[_0xbacb92(0x93)]({'actorUpdate':_0x2d9af3,'actorDataPaths':_0x5c54aa});}[_0xf56133(0x93)]({actorUpdate:_0x5b0847,actorDataPaths:_0x4989bd}){const _0x35c9e7=_0xf56133;_0x4989bd[_0x35c9e7(0x9e)](_0x2a8e65=>{const _0x5f440b=_0x35c9e7,_0x36cab7=_0x2a8e65['slice'](0x1),_0x2ba8ce=MiscUtil[_0x5f440b(0x9b)](this[_0x5f440b(0x8d)],..._0x2a8e65),_0x55698f=MiscUtil[_0x5f440b(0x9b)](_0x5b0847,..._0x36cab7);if(!_0x2ba8ce&&!_0x55698f)return;if(!_0x2ba8ce&&_0x55698f)return;if(_0x2ba8ce&&!_0x55698f)return MiscUtil[_0x5f440b(0x88)](_0x5b0847,..._0x36cab7,MiscUtil[_0x5f440b(0x8b)](_0x2ba8ce));_0x2ba8ce[_0x5f440b(0x90)]&&_0x55698f[_0x5f440b(0x90)]?MiscUtil[_0x5f440b(0x88)](_0x5b0847,..._0x36cab7,_0x5f440b(0x90),[...new Set([..._0x2ba8ce[_0x5f440b(0x90)],..._0x55698f[_0x5f440b(0x90)]])]):MiscUtil[_0x5f440b(0x88)](_0x5b0847,..._0x36cab7,_0x5f440b(0x90),MiscUtil['copy'](_0x2ba8ce[_0x5f440b(0x90)]||_0x55698f[_0x5f440b(0x90)]));if(_0x2ba8ce[_0x5f440b(0x9a)]&&_0x2ba8ce[_0x5f440b(0x9a)][_0x5f440b(0xad)]()['length']&&_0x55698f[_0x5f440b(0x9a)]&&_0x55698f['custom'][_0x5f440b(0xad)]()[_0x5f440b(0xb0)]){const _0x3859aa=_0x2ba8ce[_0x5f440b(0x9a)][_0x5f440b(0xad)]()['split'](';')['map'](_0x410358=>_0x410358[_0x5f440b(0xad)]())[_0x5f440b(0x8e)](Boolean);_0x55698f[_0x5f440b(0x9a)][_0x5f440b(0xad)]()[_0x5f440b(0xb1)](';')['map'](_0x17fb8a=>_0x17fb8a[_0x5f440b(0xad)]())['filter'](Boolean)[_0x5f440b(0x8e)](_0x5b41a3=>!_0x3859aa[_0x5f440b(0xb5)](_0xaf233f=>_0xaf233f[_0x5f440b(0xae)]()===_0x5b41a3['toLowerCase']()))[_0x5f440b(0x9e)](_0x4cf04d=>_0x3859aa[_0x5f440b(0xb3)](_0x4cf04d)),MiscUtil[_0x5f440b(0x88)](_0x5b0847,..._0x36cab7,_0x5f440b(0x9a),_0x3859aa[_0x5f440b(0xb6)](';'));}else MiscUtil[_0x5f440b(0x88)](_0x5b0847,..._0x36cab7,_0x5f440b(0x9a),_0x2ba8ce[_0x5f440b(0x9a)]||_0x55698f['custom']);});}}ImportListCharacter[_0xf56133(0xa2)]=class{constructor(_0x19f5c1){const _0x514c48=_0xf56133;_0x19f5c1=_0x19f5c1||{},this[_0x514c48(0xb7)]=!!_0x19f5c1['isCharactermancer'],this[_0x514c48(0xaa)]=![],this['items']=[],this['effects']=[],this[_0x514c48(0xa1)]=[];}};export{ImportListCharacter};
+import {ImportList} from "./ImportList.js";
+import {Charactermancer_AdditionalSpellsSelect} from "./UtilCharactermancerAdditionalSpells.js";
+import {UtilActors} from "./UtilActors.js";
+import {Consts} from "./Consts.js";
+import {UtilDocuments} from "./UtilDocuments.js";
+import {Charactermancer_AdditionalFeatsSelect} from "./UtilCharactermancerAdditionalFeats.js";
+
+class ImportListCharacter extends ImportList {
+	// FIXME(Future) this does't actually track spell IDs
+	async _pApplyAllAdditionalSpellsToActor ({entity, dataBuilderOpts, spellHashToItemPosMap}) {
+		const formData = await Charactermancer_AdditionalSpellsSelect.pGetUserInput({
+			additionalSpells: entity.additionalSpells,
+			sourceHintText: entity.name,
+
+			// Force all levels to be added
+			curLevel: 0,
+			targetLevel: Consts.CHAR_MAX_LEVEL,
+			spellLevelLow: 0,
+			spellLevelHigh: 9,
+		});
+
+		if (formData == null) return dataBuilderOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		const totalClassLevels = UtilActors.getTotalClassLevels(this._actor);
+		await Charactermancer_AdditionalSpellsSelect.pApplyFormDataToActor(this._actor, formData);
+	}
+
+	// region Update merging
+	/** Ensure any proficiencies that have been added during an import are maintained. */
+	async _pDoMergeAndApplyActorUpdate (actorUpdate) {
+		if (!Object.keys(actorUpdate).length) return;
+
+		this._doMergeExistingSkillData({actorUpdate});
+		this._doMergeExistingOtherProficiencyData({actorUpdate});
+		this._doMergeExistingDiDrDvCiData({actorUpdate});
+		await UtilDocuments.pUpdateDocument(this._actor, actorUpdate);
+	}
+
+	_doMergeExistingSkillData ({actorUpdate}) {
+		if (actorUpdate?.data?.skills) {
+			Object.entries(actorUpdate.data.skills)
+				.forEach(([skl, meta]) => {
+					meta.value = Math.max(this._actor.data?.data?.skills?.[skl]?.value, meta.value, 0);
+				});
+		}
+	}
+
+	_doMergeExistingOtherProficiencyData ({actorUpdate}) {
+		const actorDataPaths = [
+			["data", "data", "traits", "languages"],
+			["data", "data", "traits", "toolProf"],
+			["data", "data", "traits", "weaponProf"],
+			["data", "data", "traits", "armorProf"],
+		];
+		return this._doMergeExistingGenericTraitsData({actorUpdate, actorDataPaths});
+	}
+
+	_doMergeExistingDiDrDvCiData ({actorUpdate}) {
+		const actorDataPaths = [
+			["data", "data", "traits", "di"],
+			["data", "data", "traits", "dr"],
+			["data", "data", "traits", "dv"],
+			["data", "data", "traits", "ci"],
+		];
+		return this._doMergeExistingGenericTraitsData({actorUpdate, actorDataPaths});
+	}
+
+	_doMergeExistingGenericTraitsData ({actorUpdate, actorDataPaths}) {
+		actorDataPaths.forEach(actorDataPath => {
+			const actorUpdatePath = actorDataPath.slice(1);
+			const fromActor = MiscUtil.get(this._actor, ...actorDataPath);
+			const fromUpdate = MiscUtil.get(actorUpdate, ...actorUpdatePath);
+			if (!fromActor && !fromUpdate) return;
+			if (!fromActor && fromUpdate) return;
+			if (fromActor && !fromUpdate) return MiscUtil.set(actorUpdate, ...actorUpdatePath, MiscUtil.copy(fromActor));
+
+			if (fromActor.value && fromUpdate.value) {
+				MiscUtil.set(actorUpdate, ...actorUpdatePath, "value", [...new Set([...fromActor.value, ...fromUpdate.value])]);
+			} else {
+				MiscUtil.set(actorUpdate, ...actorUpdatePath, "value", MiscUtil.copy(fromActor.value || fromUpdate.value));
+			}
+
+			if (fromActor.custom && fromActor.custom.trim().length && fromUpdate.custom && fromUpdate.custom.trim().length) {
+				const allCustom = fromActor.custom.trim().split(";").map(it => it.trim()).filter(Boolean);
+				fromUpdate.custom.trim().split(";")
+					.map(it => it.trim())
+					.filter(Boolean)
+					.filter(it => !allCustom.some(ac => ac.toLowerCase() === it.toLowerCase()))
+					.forEach(it => allCustom.push(it));
+
+				MiscUtil.set(actorUpdate, ...actorUpdatePath, "custom", allCustom.join(";"));
+			} else {
+				MiscUtil.set(actorUpdate, ...actorUpdatePath, "custom", fromActor.custom || fromUpdate.custom);
+			}
+		});
+	}
+	// endregion
+
+	async _pImportActorAdditionalFeats (ent, importOpts, dataBuilderOpts) {
+		if (!ent.feats) return;
+
+		const formData = await Charactermancer_AdditionalFeatsSelect.pGetUserInput({available: ent.feats, actor: this._actor});
+		if (!formData) return dataBuilderOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		if (!(formData.data || []).length) return;
+
+		const {ImportListFeat} = await import("./ImportListFeat.js");
+		const importListFeat = new ImportListFeat({actor: this._actor});
+		await importListFeat.pInit();
+
+		for (const {page, source, hash} of (formData.data || [])) {
+			const feat = await Renderer.hover.pCacheAndGet(page, source, hash);
+			await importListFeat.pImportEntry(feat, importOpts);
+		}
+	}
+}
+
+/**
+ * Generic import options for use in any application which imports data to a character sheet.
+ */
+ImportListCharacter.ImportEntryOpts = class {
+	constructor (opts) {
+		opts = opts || {};
+
+		this.isCharactermancer = !!opts.isCharactermancer;
+
+		this.isCancelled = false;
+
+		this.items = [];
+		this.effects = [];
+		this.equipmentItemEntries = []; // 5etools item data to be imported as equipment
+	}
+};
+
+export {ImportListCharacter};

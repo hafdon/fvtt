@@ -1,1 +1,190 @@
-const _0x43fb=['Vehicles\x20Upgrades','length','_pImportEntry_pFillItems','109639nduali','pGetVehicleUpgradeItem','pImportEntry','1qVNuEc','isToken','TASK_EXIT_COMPLETE','TASK_EXIT_CANCELLED','absorbFnGetData','isCancelled','absorbFnBindListenersRadio','_pImportEntry_pImportToDirectoryGeneric','1dFUoVR','pGetSources','2327txLlBf','_isPreviewable','upgradeType','text-center','sourceShort','pHasVehicleUpgradeSideLoadedEffects','isCharactermancer','_list','PG_VEHICLES','push','425363HMjrIf','vehicleUpgrade','SOURCE_TYP_CUSTOM','_isRadio','isStreamerMode','map','pAddActorItems','50981lBLsrl','DATA_URL_VEHICLES','256442tIIaWg','SOURCE_TYP_BREW','render','items','pAddActorEffects','get','absorbFnBindListeners','mutateForFilters','document','2TPyyKN','_actor','265492ssMMdX','DataSourceUrl','2JeKadR','191knAmBq','5etools','_pImportEntry_pImportToDirectoryGeneric_pGetImportableData','Type','Item','Source','data','Custom\x20URL','source','sourceClassName','_pageFilter','_content','13658VaWcBC','_titleButtonRun','SRD','2RmkPLA','Name','_titleSearch','SOURCE_TYP_OFFICIAL_ALL','Import\x20Vehicle\x20Upgrades','keys','constructor','name'];const _0x33f0=function(_0xa78e24,_0x5bec47){_0xa78e24=_0xa78e24-0x190;let _0x43fb4f=_0x43fb[_0xa78e24];return _0x43fb4f;};const _0x12bd50=_0x33f0;(function(_0x200094,_0x51e1e4){const _0x3d9737=_0x33f0;while(!![]){try{const _0x3c66bb=-parseInt(_0x3d9737(0x1bd))*-parseInt(_0x3d9737(0x190))+-parseInt(_0x3d9737(0x1ae))*-parseInt(_0x3d9737(0x1b9))+-parseInt(_0x3d9737(0x1cd))*parseInt(_0x3d9737(0x1ca))+parseInt(_0x3d9737(0x1be))*-parseInt(_0x3d9737(0x19d))+-parseInt(_0x3d9737(0x1a7))*-parseInt(_0x3d9737(0x193))+-parseInt(_0x3d9737(0x19b))*-parseInt(_0x3d9737(0x1b0))+-parseInt(_0x3d9737(0x1bb));if(_0x3c66bb===_0x51e1e4)break;else _0x200094['push'](_0x200094['shift']());}catch(_0x1f89a2){_0x200094['push'](_0x200094['shift']());}}}(_0x43fb,0x40e34));import{Vetools}from'./Vetools.js';import{LGT}from'./Util.js';import{Config}from'./Config.js';import{UtilList2}from'./UtilList2.js';import{UtilApplications}from'./UtilApplications.js';import{UtilDataSource}from'./UtilDataSource.js';import{ImportListCharacter}from'./ImportListCharacter.js';import{UtilActors}from'./UtilActors.js';import{DataConverter}from'./DataConverter.js';import{DataConverterVehicleUpgrade}from'./DataConverterVehicleUpgrade.js';class ImportListVehicleUpgrade extends ImportListCharacter{constructor(_0x3951a4){const _0x2ad656=_0x33f0;_0x3951a4=_0x3951a4||{},super({'title':_0x2ad656(0x1d1)},_0x3951a4,{'props':['vehicleUpgrade'],'titleSearch':'vehicle\x20upgrades','sidebarTab':'items','gameProp':_0x2ad656(0x1b3),'defaultFolderPath':[_0x2ad656(0x1d5)],'folderType':_0x2ad656(0x1c2),'pageFilter':new PageFilterVehicles(),'page':UrlUtil[_0x2ad656(0x1a5)],'isPreviewable':!![],'isDedupable':!![]});}async[_0x12bd50(0x19c)](){const _0x1991ce=_0x12bd50;return[new UtilDataSource['DataSourceUrl'](Config[_0x1991ce(0x1b5)]('ui',_0x1991ce(0x1ab))?_0x1991ce(0x1cc):_0x1991ce(0x1bf),Vetools[_0x1991ce(0x1af)],{'filterTypes':[UtilDataSource[_0x1991ce(0x1d0)]],'isDefault':!![]}),new UtilDataSource[(_0x1991ce(0x1bc))](_0x1991ce(0x1c5),'',{'filterTypes':[UtilDataSource['SOURCE_TYP_CUSTOM']]}),new UtilDataSource['DataSourceFile']('Upload\x20File',{'filterTypes':[UtilDataSource[_0x1991ce(0x1a9)]]}),...(await Vetools['pGetHomebrewSources'](_0x1991ce(0x1a8)))[_0x1991ce(0x1ac)](({name:_0x52235a,url:_0x42bbdb})=>new UtilDataSource[(_0x1991ce(0x1bc))](_0x52235a,_0x42bbdb,{'filterTypes':[UtilDataSource[_0x1991ce(0x1b1)]]}))];}['getData'](){const _0x377e8e=_0x12bd50;return{'isPreviewable':this[_0x377e8e(0x19e)],'titleButtonRun':this[_0x377e8e(0x1cb)],'titleSearch':this[_0x377e8e(0x1cf)],'cols':[{'name':_0x377e8e(0x1ce),'width':0x8,'field':_0x377e8e(0x1d4)},{'name':_0x377e8e(0x1c1),'width':0x2,'field':'type','rowClassName':'text-center'},{'name':_0x377e8e(0x1c3),'width':0x1,'field':_0x377e8e(0x1c6),'titleProp':'sourceLong','displayProp':_0x377e8e(0x1a1),'classNameProp':_0x377e8e(0x1c7),'rowClassName':_0x377e8e(0x1a0)}],'rows':this[_0x377e8e(0x1c9)][_0x377e8e(0x1ac)]((_0x3b42c0,_0xa135bd)=>{const _0x20d6c6=_0x377e8e;return this[_0x20d6c6(0x1c8)][_0x20d6c6(0x1d3)][_0x20d6c6(0x1b7)](_0x3b42c0),{'name':_0x3b42c0['name'],'type':_0x3b42c0[_0x20d6c6(0x19f)],'source':_0x3b42c0[_0x20d6c6(0x1c6)],'sourceShort':Parser['sourceJsonToAbv'](_0x3b42c0[_0x20d6c6(0x1c6)]),'sourceLong':Parser['sourceJsonToFull'](_0x3b42c0[_0x20d6c6(0x1c6)]),'sourceClassName':Parser['sourceJsonToColor'](_0x3b42c0[_0x20d6c6(0x1c6)]),'ix':_0xa135bd};})};}['_activateListeners_absorbListItems'](){const _0x3dfd28=_0x12bd50;this[_0x3dfd28(0x1a4)]['doAbsorbItems'](this[_0x3dfd28(0x1c9)],{'fnGetName':_0x41127f=>_0x41127f[_0x3dfd28(0x1d4)],'fnGetValues':_0x27e07e=>({'source':_0x27e07e[_0x3dfd28(0x1c6)],'type':_0x27e07e[_0x3dfd28(0x19f)],'hash':UrlUtil['URL_TO_HASH_BUILDER'][this['_page']](_0x27e07e)}),'fnGetData':UtilList2[_0x3dfd28(0x197)],'fnBindListeners':_0x49be63=>this[_0x3dfd28(0x1aa)]?UtilList2[_0x3dfd28(0x199)](this['_list'],_0x49be63):UtilList2[_0x3dfd28(0x1b6)](this[_0x3dfd28(0x1a4)],_0x49be63)});}async[_0x12bd50(0x192)](_0x5d9538,_0x2f2c52){const _0x33e659=_0x12bd50;_0x2f2c52=_0x2f2c52||{},console['log'](...LGT,'Importing\x20vehicle\x20upgrade\x20\x22'+_0x5d9538[_0x33e659(0x1d4)]+'\x22\x20(from\x20\x22'+Parser['sourceJsonToAbv'](_0x5d9538[_0x33e659(0x1c6)])+'\x22)');if(_0x2f2c52['isTemp'])return this[_0x33e659(0x19a)](_0x5d9538,_0x2f2c52);else{if(this[_0x33e659(0x1ba)])return this['_pImportEntry_pImportToActor'](_0x5d9538,_0x2f2c52);else return this[_0x33e659(0x19a)](_0x5d9538,_0x2f2c52);}}async['_pImportEntry_pImportToActor'](_0x5a1117,_0x32e660){const _0x124950=_0x12bd50,_0x9d939={'data':{}},_0x545d74=new ImportListCharacter['ImportEntryOpts']({'isCharactermancer':_0x32e660[_0x124950(0x1a3)]});await this[_0x124950(0x1d7)](_0x5a1117,_0x9d939,_0x545d74);if(_0x545d74[_0x124950(0x198)])return{'status':UtilApplications[_0x124950(0x196)]};if(Object[_0x124950(0x1d2)](_0x9d939[_0x124950(0x1c4)])[_0x124950(0x1d6)])await this[_0x124950(0x1ba)]['update'](_0x9d939);if(this[_0x124950(0x1ba)][_0x124950(0x194)])this['_actor']['sheet'][_0x124950(0x1b2)]();return{'imported':[{'name':_0x5a1117[_0x124950(0x1d4)],'actor':this[_0x124950(0x1ba)]}],'status':UtilApplications[_0x124950(0x195)]};}async[_0x12bd50(0x1d7)](_0x357a03,_0x3c804d,_0x5579a1){const _0x5984a4=_0x12bd50,_0x4c0300=await DataConverterVehicleUpgrade[_0x5984a4(0x191)](_0x357a03,{'isActorItem':!![]});_0x5579a1[_0x5984a4(0x1b3)][_0x5984a4(0x1a6)](_0x4c0300);const _0x5560cb=await UtilActors[_0x5984a4(0x1ad)](this[_0x5984a4(0x1ba)],_0x5579a1[_0x5984a4(0x1b3)]),_0x394fad=[];if(await DataConverterVehicleUpgrade[_0x5984a4(0x1a2)](this[_0x5984a4(0x1ba)],_0x357a03)){const _0x481b83=DataConverter['getImportedEmbed'](_0x5560cb,_0x4c0300);if(_0x481b83)_0x394fad['push'](...await DataConverterVehicleUpgrade['pGetVehicleUpgradeItemEffects'](this[_0x5984a4(0x1ba)],_0x357a03,_0x481b83[_0x5984a4(0x1b8)]));}await UtilActors[_0x5984a4(0x1b4)](this[_0x5984a4(0x1ba)],_0x394fad);}[_0x12bd50(0x1c0)](_0x1e0bf4,_0x457d04){return DataConverterVehicleUpgrade['pGetVehicleUpgradeItem'](_0x1e0bf4,_0x457d04);}}export{ImportListVehicleUpgrade};
+import {Vetools} from "./Vetools.js";
+import {LGT} from "./Util.js";
+import {Config} from "./Config.js";
+import {UtilList2} from "./UtilList2.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {UtilDataSource} from "./UtilDataSource.js";
+import {ImportListCharacter} from "./ImportListCharacter.js";
+import {UtilActors} from "./UtilActors.js";
+import {DataConverter} from "./DataConverter.js";
+import {DataConverterVehicleUpgrade} from "./DataConverterVehicleUpgrade.js";
+import {ImportedDocument, ImportSummary} from "./ImportList.js";
+import {UtilDocuments} from "./UtilDocuments.js";
+
+class ImportListVehicleUpgrade extends ImportListCharacter {
+	constructor (externalData) {
+		externalData = externalData || {};
+		super(
+			{title: "Import Vehicle Upgrades"},
+			externalData,
+			{
+				props: ["vehicleUpgrade"],
+				dirsHomebrew: ["vehicleUpgrade"],
+				titleSearch: "vehicle upgrades",
+				sidebarTab: "items",
+				gameProp: "items",
+				defaultFolderPath: ["Vehicles Upgrades"],
+				pageFilter: new PageFilterVehicles(),
+				page: UrlUtil.PG_VEHICLES,
+				isPreviewable: true,
+				isDedupable: true,
+				configGroup: "importVehicleUpgrade",
+			},
+		);
+	}
+
+	async pGetSources () {
+		return [
+			new UtilDataSource.DataSourceUrl(
+				Config.get("ui", "isStreamerMode") ? "SRD" : "5etools",
+				Vetools.DATA_URL_VEHICLES,
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_OFFICIAL_ALL],
+					isDefault: true,
+				},
+			),
+			new UtilDataSource.DataSourceUrl(
+				"Custom URL",
+				"",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			new UtilDataSource.DataSourceFile(
+				"Upload File",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			...(await this._pGetSourcesHomebrew()),
+		];
+	}
+
+	getData () {
+		return {
+			isPreviewable: this._isPreviewable,
+			titleButtonRun: this._titleButtonRun,
+			titleSearch: this._titleSearch,
+			cols: [
+				{
+					name: "Name",
+					width: 8,
+					field: "name",
+				},
+				{
+					name: "Type",
+					width: 2,
+					field: "type",
+					rowClassName: "text-center",
+				},
+				{
+					name: "Source",
+					width: 1,
+					field: "source",
+					titleProp: "sourceLong",
+					displayProp: "sourceShort",
+					classNameProp: "sourceClassName",
+					styleProp: "sourceStyle",
+					rowClassName: "text-center",
+				},
+			],
+			rows: this._content.map((it, ix) => {
+				this._pageFilter.constructor.mutateForFilters(it);
+
+				return {
+					name: it.name,
+					type: it.upgradeType,
+					source: it.source,
+					sourceShort: Parser.sourceJsonToAbv(it.source),
+					sourceLong: Parser.sourceJsonToFull(it.source),
+					sourceClassName: Parser.sourceJsonToColor(it.source),
+					sourceStyle: BrewUtil.sourceJsonToStylePart(it.source),
+					ix,
+				};
+			}),
+		};
+	}
+
+	_activateListeners_absorbListItems () {
+		this._list.doAbsorbItems(
+			this._content,
+			{
+				fnGetName: it => it.name,
+				// values used for sorting/search
+				fnGetValues: it => ({
+					source: it.source,
+					type: it.upgradeType,
+					hash: UrlUtil.URL_TO_HASH_BUILDER[this._page](it),
+				}),
+				fnGetData: UtilList2.absorbFnGetData,
+				fnBindListeners: it => this._isRadio
+					? UtilList2.absorbFnBindListenersRadio(this._list, it)
+					: UtilList2.absorbFnBindListeners(this._list, it),
+			},
+		);
+	}
+
+	/**
+	 * @param optFeature
+	 * @param importOpts Options object.
+	 * @param [importOpts.isTemp] if the item should be temporary, and displayed.
+	 * @param [importOpts.isCharactermancer]
+	 */
+	async _pImportEntry (optFeature, importOpts) {
+		importOpts = importOpts || {};
+
+		console.log(...LGT, `Importing vehicle upgrade "${optFeature.name}" (from "${Parser.sourceJsonToAbv(optFeature.source)}")`);
+
+		if (importOpts.isTemp) return this._pImportEntry_pImportToDirectoryGeneric(optFeature, importOpts);
+		if (this._actor) return this._pImportEntry_pImportToActor(optFeature, importOpts);
+		return this._pImportEntry_pImportToDirectoryGeneric(optFeature, importOpts);
+	}
+
+	async _pImportEntry_pImportToActor (vehUpgrade, importOpts) {
+		const actUpdate = {data: {}};
+		const dataBuilderOpts = new ImportListCharacter.ImportEntryOpts({isCharactermancer: importOpts.isCharactermancer});
+
+		// Add actor items
+		await this._pImportEntry_pFillItems(vehUpgrade, actUpdate, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return ImportSummary.cancelled();
+
+		// Update actor
+		if (Object.keys(actUpdate.data).length) await UtilDocuments.pUpdateDocument(this._actor, actUpdate);
+
+		if (this._actor.isToken) this._actor.sheet.render();
+
+		return new ImportSummary({
+			status: UtilApplications.TASK_EXIT_COMPLETE,
+			imported: [
+				new ImportedDocument({
+					name: vehUpgrade.name,
+					actor: this._actor,
+				}),
+			],
+		});
+	}
+
+	async _pImportEntry_pFillItems (vehUpgrade, actUpdate, dataBuilderOpts) {
+		const vehUpgradeItem = await DataConverterVehicleUpgrade.pGetVehicleUpgradeItem(vehUpgrade, {isActorItem: true});
+		dataBuilderOpts.items.push(vehUpgradeItem);
+
+		const importedEmbeds = await UtilActors.pAddActorItems(this._actor, dataBuilderOpts.items);
+
+		// region Add item effects
+		const effectsToAdd = [];
+		if (await DataConverterVehicleUpgrade.pHasVehicleUpgradeSideLoadedEffects(this._actor, vehUpgrade)) {
+			const importedEmbed = DataConverter.getImportedEmbed(importedEmbeds, vehUpgradeItem);
+
+			if (importedEmbed) effectsToAdd.push(...(await DataConverterVehicleUpgrade.pGetVehicleUpgradeItemEffects(this._actor, vehUpgrade, importedEmbed.document)));
+		}
+
+		await UtilActors.pAddActorEffects(this._actor, effectsToAdd);
+		// endregion
+	}
+
+	_pImportEntry_pImportToDirectoryGeneric_pGetImportableData (it, getItemOpts) {
+		return DataConverterVehicleUpgrade.pGetVehicleUpgradeItem(it, getItemOpts);
+	}
+}
+
+export {ImportListVehicleUpgrade};

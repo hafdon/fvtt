@@ -15,7 +15,7 @@ export class Tidy5eVehicle extends ActorSheet5eVehicle {
 
 	  return mergeObject(super.defaultOptions, {
 			classes: ["tidy5e", "sheet", "actor", "vehicle"],
-			width: 740,
+			width: game.settings.get("tidy5e-sheet", "vehicleSheetWidth") ?? 740,
 			height: 720,
 			tabs: [{navSelector: ".tabs", contentSelector: ".sheet-body", initial: defaultTab}]
 		});
@@ -146,7 +146,7 @@ async function toggleTraitsList(app, html, data){
 async function abbreviateCurrency(app,html,data) {
 	html.find('.currency .currency-item label').each(function(){
 		let currency = $(this).data('denom').toUpperCase();
-		let abbr = game.i18n.localize(`TIDY5E.CurrencyAbbr${currency}`);
+		let abbr = game.i18n.localize(`DND5E.CurrencyAbbr${currency}`);
 		$(this).html(abbr);
 	});
 }

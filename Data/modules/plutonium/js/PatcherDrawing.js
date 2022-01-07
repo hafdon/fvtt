@@ -1,1 +1,27 @@
-var _0x5ed7=['options','1SHkUgq','2IWIkPR','isFixDrawingFreehandMinDistance','373948MpYaMH','_CACHED_MOUSE_INTERACTION_MANAGER_OPTIONS','907502AGoelD','mouseInteractionManager','dragResistance','1661528pegQOC','648934vEmTWD','881194spybYy','get','477493Dpcuwt','1EKHEaG','1129813mBRLGu','handleConfigUpdate'];var _0x3906=function(_0x28e74f,_0x1e08d9){_0x28e74f=_0x28e74f-0x154;var _0x5ed7ec=_0x5ed7[_0x28e74f];return _0x5ed7ec;};var _0x581a5b=_0x3906;(function(_0x5ed279,_0x3f0f47){var _0x4cc18b=_0x3906;while(!![]){try{var _0x5b9fcc=parseInt(_0x4cc18b(0x156))*-parseInt(_0x4cc18b(0x15a))+-parseInt(_0x4cc18b(0x159))+parseInt(_0x4cc18b(0x161))*parseInt(_0x4cc18b(0x15f))+-parseInt(_0x4cc18b(0x15e))*parseInt(_0x4cc18b(0x157))+parseInt(_0x4cc18b(0x15b))+-parseInt(_0x4cc18b(0x163))+parseInt(_0x4cc18b(0x155));if(_0x5b9fcc===_0x3f0f47)break;else _0x5ed279['push'](_0x5ed279['shift']());}catch(_0x1f47d4){_0x5ed279['push'](_0x5ed279['shift']());}}}(_0x5ed7,0x985f2));import{Config}from'./Config.js';class Patcher_Drawing{static[_0x581a5b(0x15c)](){var _0x1000ec=_0x581a5b;if(!MiscUtil[_0x1000ec(0x158)](canvas,_0x1000ec(0x164),_0x1000ec(0x15d)))return;if(Config[_0x1000ec(0x158)]('ui',_0x1000ec(0x160))){if(Patcher_Drawing['_CACHED_MOUSE_INTERACTION_MANAGER_OPTIONS']==null)Patcher_Drawing[_0x1000ec(0x162)]=canvas[_0x1000ec(0x164)]['options'];canvas[_0x1000ec(0x164)]['options'][_0x1000ec(0x154)]=0x1;}else{if(Patcher_Drawing[_0x1000ec(0x162)]!=null)canvas[_0x1000ec(0x164)][_0x1000ec(0x15d)]=Patcher_Drawing[_0x1000ec(0x162)];}}}Patcher_Drawing[_0x581a5b(0x162)]=null;export{Patcher_Drawing};
+import {Config} from "./Config.js";
+
+class Patcher_Drawing {
+	static handleConfigUpdate ({isInit = false} = {}) {
+		try {
+			return this._handleConfigUpdate_();
+		} catch (e) {
+			if (!isInit) throw e;
+			Config.handleFailedInitConfigApplication("ui", "isFixDrawingFreehandMinDistance", e);
+		}
+	}
+
+	static _handleConfigUpdate_ () {
+		// This occurs if there's no scene
+		if (!MiscUtil.get(canvas, "mouseInteractionManager", "options")) return;
+
+		if (Config.get("ui", "isFixDrawingFreehandMinDistance")) {
+			if (Patcher_Drawing._CACHED_MOUSE_INTERACTION_MANAGER_OPTIONS == null) Patcher_Drawing._CACHED_MOUSE_INTERACTION_MANAGER_OPTIONS = canvas.mouseInteractionManager.options;
+			canvas.mouseInteractionManager.options.dragResistance = 1;
+		} else {
+			if (Patcher_Drawing._CACHED_MOUSE_INTERACTION_MANAGER_OPTIONS != null) canvas.mouseInteractionManager.options = Patcher_Drawing._CACHED_MOUSE_INTERACTION_MANAGER_OPTIONS;
+		}
+	}
+}
+Patcher_Drawing._CACHED_MOUSE_INTERACTION_MANAGER_OPTIONS = null;
+
+export {Patcher_Drawing};

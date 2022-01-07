@@ -1,1 +1,197 @@
-const _0x4bb2=['10fpiQmz','renderArtBrowserApp','renderSettings','className','<style>\x0a\x09\x09\x09\x09','<a\x20class=\x22pop__btn-open\x22\x20title=\x22Pop\x20Out\x20(Warning:\x20Experimental)\x22><span\x20class=\x22fas\x20fa-external-link-alt\x22></span></a>','_plut_IsPopout','</title>\x0a\x0a\x09\x09\x09','265231bEIScQ','.close','99CDrXgh','renderItemSheet','7339MLrtMU','append','remove','styleSheets','removeClass','addEventListener','init','\x22></body></html>\x0a\x09\x09','\x20{\x0a','body','minimize','forEach','find','addClass','\x0a\x09\x09\x09</style>','write','join','@font-face','renderJournalDirectory','renderCompendiumDirectory','4007NrEXjk','renderActorSheet','_getDocumentStyleHtml','document','507wEFOjO','renderCombatTracker','cssRules','click','split','\x0a\x09\x09</head><body\x20class=\x22flex-col\x20','ve-hidden','pHandleButtonClick','pathname','89BAGZOg','253810XMWCeX','cssText','renderJournalSheet','href','insertBefore','\x0a}\x0a','1909ddKzIu','\x0a\x09\x09<!DOCTYPE\x20html>\x0a\x09\x09<html\x20lang=\x22en\x22><head>\x0a\x09\x09\x09<meta\x20name=\x22viewport\x22\x20content=\x22width=device-width,\x20initial-scale=1\x22>\x0a\x09\x09\x09<title>','pop__window','push','694780jkdJyX','2SYlVkl','style','slice','renderActorDirectory','preventDefault','_doAddButtonSheet','_handlePopoutClick','388dhfwuv','element','title','getDataName','includes','close'];const _0x6ec1=function(_0x559859,_0x31d582){_0x559859=_0x559859-0x1e9;let _0x4bb2cc=_0x4bb2[_0x559859];return _0x4bb2cc;};const _0xd749e2=_0x6ec1;(function(_0x534116,_0x1376d4){const _0x21bfd4=_0x6ec1;while(!![]){try{const _0x5bed1b=-parseInt(_0x21bfd4(0x1ea))*-parseInt(_0x21bfd4(0x210))+parseInt(_0x21bfd4(0x21c))*-parseInt(_0x21bfd4(0x1f7))+parseInt(_0x21bfd4(0x202))+parseInt(_0x21bfd4(0x203))*parseInt(_0x21bfd4(0x218))+-parseInt(_0x21bfd4(0x21a))*-parseInt(_0x21bfd4(0x1fe))+parseInt(_0x21bfd4(0x20a))*-parseInt(_0x21bfd4(0x1ee))+-parseInt(_0x21bfd4(0x1f8));if(_0x5bed1b===_0x1376d4)break;else _0x534116['push'](_0x534116['shift']());}catch(_0x6dd145){_0x534116['push'](_0x534116['shift']());}}}(_0x4bb2,0x5598e));import{LGT}from'./Util.js';import{UtilApplications}from'./UtilApplications.js';class PopoutSheet{static[_0xd749e2(0x222)](){const _0x37d545=_0xd749e2;Hooks['on']('renderSceneConfig',(_0x7193d2,_0x1702c0,_0x1cf5c5)=>PopoutSheet[_0x37d545(0x208)](_0x7193d2,_0x1702c0,_0x1cf5c5)),Hooks['on'](_0x37d545(0x1eb),(_0x2bc793,_0x1653cb,_0x3ebdc4)=>PopoutSheet[_0x37d545(0x208)](_0x2bc793,_0x1653cb,_0x3ebdc4)),Hooks['on'](_0x37d545(0x21b),(_0x56c319,_0x1db0c8,_0x2b5201)=>PopoutSheet[_0x37d545(0x208)](_0x56c319,_0x1db0c8,_0x2b5201)),Hooks['on'](_0x37d545(0x1fa),(_0x370e80,_0x31ee44,_0x2f0fd1)=>PopoutSheet[_0x37d545(0x208)](_0x370e80,_0x31ee44,_0x2f0fd1)),Hooks['on']('renderRollTableConfig',(_0x103b7a,_0xc96d94,_0x12f852)=>PopoutSheet[_0x37d545(0x208)](_0x103b7a,_0xc96d94,_0x12f852)),Hooks['on'](_0x37d545(0x211),(_0xcb1f77,_0x3c88c1,_0x2486ec)=>PopoutSheet[_0x37d545(0x208)](_0xcb1f77,_0x3c88c1,_0x2486ec)),Hooks['on'](_0x37d545(0x1ef),(_0x31ddc2,_0xdfa62d,_0x5e6773)=>PopoutSheet[_0x37d545(0x208)](_0x31ddc2,_0xdfa62d,_0x5e6773)),Hooks['on']('renderSceneDirectory',(_0x56a551,_0x14f95e,_0xe579d)=>PopoutSheet[_0x37d545(0x208)](_0x56a551,_0x14f95e,_0xe579d)),Hooks['on'](_0x37d545(0x206),(_0x2356bf,_0x24816b,_0x122c2f)=>PopoutSheet[_0x37d545(0x208)](_0x2356bf,_0x24816b,_0x122c2f)),Hooks['on']('renderItemDirectory',(_0x537ced,_0x2360e5,_0x31c266)=>PopoutSheet['_doAddButtonSheet'](_0x537ced,_0x2360e5,_0x31c266)),Hooks['on'](_0x37d545(0x22e),(_0x1f07fc,_0x14cd3d,_0x3972f4)=>PopoutSheet[_0x37d545(0x208)](_0x1f07fc,_0x14cd3d,_0x3972f4)),Hooks['on']('renderRollTableDirectory',(_0x303ce6,_0x516a8e,_0x584d71)=>PopoutSheet[_0x37d545(0x208)](_0x303ce6,_0x516a8e,_0x584d71)),Hooks['on']('renderPlaylistDirectory',(_0x54e9b6,_0x3b0820,_0x4c71e6)=>PopoutSheet[_0x37d545(0x208)](_0x54e9b6,_0x3b0820,_0x4c71e6)),Hooks['on'](_0x37d545(0x1e9),(_0x525135,_0x43f206,_0x11f6d2)=>PopoutSheet[_0x37d545(0x208)](_0x525135,_0x43f206,_0x11f6d2)),Hooks['on'](_0x37d545(0x212),(_0x35bc2b,_0x4ee624,_0xa13302)=>PopoutSheet[_0x37d545(0x208)](_0x35bc2b,_0x4ee624,_0xa13302)),Hooks['on']('renderMacroDirectory',(_0x15ad3d,_0x5178b0,_0xa74051)=>PopoutSheet[_0x37d545(0x208)](_0x15ad3d,_0x5178b0,_0xa74051));}static[_0xd749e2(0x208)](_0x5cf321,_0x46403b,_0x43a007){const _0xc3ec62=_0xd749e2,_0x1761df=_0x5cf321[_0xc3ec62(0x20b)][_0xc3ec62(0x228)]('.window-header');_0x1761df[_0xc3ec62(0x228)]('.pop__btn-open')[_0xc3ec62(0x21e)](),$(_0xc3ec62(0x215))[_0xc3ec62(0x1f1)](_0x463a31=>this[_0xc3ec62(0x1f5)](_0x463a31,_0x5cf321,_0x46403b,_0x43a007))[_0xc3ec62(0x1fc)](_0x1761df[_0xc3ec62(0x228)](_0xc3ec62(0x219)));}static[_0xd749e2(0x1f5)](_0x5ce6dc,_0x17cc83,_0x1968d3,_0x43ce66){const _0x1273ce=_0xd749e2;_0x5ce6dc[_0x1273ce(0x207)](),this[_0x1273ce(0x209)](_0x17cc83,_0x43ce66);}static[_0xd749e2(0x1ec)](){const _0x15bfe6=_0xd749e2,_0x5026a1=[],_0x394cb5=_0x1dcd4e=>{const _0x1aa05a=_0x6ec1,_0x19fe37=_0x1aa05a(0x1f0)in _0x1dcd4e?_0x1dcd4e['cssRules']:_0x1dcd4e['rules'];if(!_0x19fe37)return;const _0x52a02f=[];[..._0x19fe37||[]][_0x1aa05a(0x227)](_0x232850=>{const _0x2af472=_0x1aa05a;let _0x430191='cssText'in _0x232850?_0x232850[_0x2af472(0x1f9)]:_0x232850['selectorText']+_0x2af472(0x224)+_0x232850[_0x2af472(0x204)]['cssText']+_0x2af472(0x1fd);_0x430191[_0x2af472(0x20e)](_0x2af472(0x22d))&&(_0x430191=_0x430191['replace'](/(url\(")([^"]+)("\))/g,(..._0x541804)=>{const _0x30bbdf=_0x2af472;if(_0x541804[0x2]['startsWith']('/')||!_0x1dcd4e['href'])return''+_0x541804[0x1]+_0x541804[0x2]+_0x541804[0x3];else{const _0x4a8a25=new URL(_0x1dcd4e[_0x30bbdf(0x1fb)])[_0x30bbdf(0x1f6)][_0x30bbdf(0x1f2)]('/')[_0x30bbdf(0x205)](0x0,-0x1)[_0x30bbdf(0x22c)]('/');return''+_0x541804[0x1]+_0x4a8a25+'/'+_0x541804[0x2]+_0x541804[0x3];}})),_0x52a02f['push'](_0x430191);}),_0x5026a1[_0x1aa05a(0x201)](_0x1aa05a(0x214)+_0x52a02f[_0x1aa05a(0x22c)]('\x0a')+_0x1aa05a(0x22a));};return[...document[_0x15bfe6(0x21f)]||[]][_0x15bfe6(0x227)](_0x3b4ae3=>{const _0x5aa74b=_0x15bfe6;try{_0x394cb5(_0x3b4ae3);}catch(_0x38f522){console['error'](...LGT,_0x38f522);if(_0x3b4ae3[_0x5aa74b(0x1fb)])_0x5026a1[_0x5aa74b(0x201)]('<link\x20rel=\x22stylesheet\x22\x20href=\x22'+_0x3b4ae3['href']+'\x22>');}}),_0x5026a1['join']('\x0a');}static[_0xd749e2(0x209)](_0x5db46d,_0x82424){const _0x2126f8=_0xd749e2,_0x155f32=_0x5db46d[_0x2126f8(0x20c)]||UtilApplications[_0x2126f8(0x20d)](_0x82424),_0x10fab8=open('',_0x155f32,'width=800,height=800,location=0,menubar=0,status=0,titlebar=0,toolbar=0,directories=0');_0x10fab8[_0x2126f8(0x1ed)][_0x2126f8(0x22b)](_0x2126f8(0x1ff)+_0x155f32+_0x2126f8(0x217)+this[_0x2126f8(0x1ec)]()+_0x2126f8(0x1f3)+document[_0x2126f8(0x225)][_0x2126f8(0x213)]+_0x2126f8(0x223));const _0x3cc42b=$(_0x10fab8[_0x2126f8(0x1ed)][_0x2126f8(0x225)]);_0x5db46d[_0x2126f8(0x216)]=!![];const _0x1aeba1=_0x5db46d[_0x2126f8(0x226)];_0x5db46d[_0x2126f8(0x226)]=async()=>{},_0x5db46d['element']['addClass'](_0x2126f8(0x200)),_0x3cc42b[_0x2126f8(0x21d)](_0x5db46d[_0x2126f8(0x20b)]);const _0x5c4ae0=_0x5db46d[_0x2126f8(0x20b)]['find']('.window-resizable-handle')[_0x2126f8(0x229)]('ve-hidden');_0x10fab8[_0x2126f8(0x221)]('unload',()=>{const _0x4a1eb0=_0x2126f8;$(document[_0x4a1eb0(0x225)])['append'](_0x5db46d[_0x4a1eb0(0x20b)]),_0x5db46d['element']['removeClass'](_0x4a1eb0(0x200)),_0x5c4ae0[_0x4a1eb0(0x220)](_0x4a1eb0(0x1f4)),_0x5db46d['_plut_IsPopout']=![],_0x5db46d['minimize']=_0x1aeba1,_0x5db46d[_0x4a1eb0(0x20f)]();});}}export{PopoutSheet};
+import {LGT} from "./Util.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {Config} from "./Config.js";
+import {UtilEvents} from "./UtilEvents.js";
+import {libWrapper, UtilLibWrapper} from "./PatcherLibWrapper.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+
+/**
+ * N.B.: KaKaRoTo already did this, albeit differently: https://github.com/kakaroto/fvtt-module-popout
+ */
+class PopoutSheet {
+	// region External
+	static init () {
+		PopoutSheet._POPOUT_HOOKS.forEach(hookName => {
+			Hooks.on(hookName, (app, $html, data) => {
+				PopoutSheet._doAddButtonSheet(app, $html, data);
+				PopoutSheet._doHandleSubPopout(app, $html, data);
+			});
+		});
+
+		libWrapper.register(
+			SharedConsts.MODULE_NAME,
+			"Application.prototype.bringToTop",
+			function (fn, ...args) {
+				const out = fn(...args);
+				if (this._plut_popoutWindow) {
+					try {
+						this._plut_popoutWindow.focus();
+					} catch (e) {
+						// Should never occur
+					}
+				}
+				return out;
+			},
+			UtilLibWrapper.LIBWRAPPER_MODE_WRAPPER,
+		);
+	}
+
+	static _doAddButtonSheet (app, $html, data) {
+		const $sheetHeader = UtilApplications.$getAppElement(app).closest(`.app`).find(`.window-header`);
+		$sheetHeader.find(`.pop__btn-open`).remove();
+
+		$(`<a class="pop__btn-open" title="Pop Out"><span class="fas fa-fw fa-external-link-alt"></span></a>`)
+			.click(evt => this.pHandleButtonClick(evt, app, $html, data))
+			.insertBefore($sheetHeader.find(`.close`));
+	}
+
+	static pHandleButtonClick (evt, app, $html, data) {
+		evt.preventDefault();
+		this.doPopout(app, data);
+	}
+	// endregion
+
+	static _getDocumentStyleHtml () {
+		const out = [];
+
+		const addAsRules = (sheet) => {
+			const rules = "cssRules" in sheet ? sheet.cssRules : sheet.rules;
+			if (!rules) return;
+
+			const css = [];
+
+			[...(rules || [])].forEach(rule => {
+				let str = "cssText" in rule ? rule.cssText : `${rule.selectorText} {\n${rule.style.cssText}\n}\n`;
+
+				// resolve all fonts to absolute paths
+				if (str.includes("@font-face")) {
+					str = str.replace(/(url\(")([^"]+)("\))/g, (...m) => {
+						if (m[2].startsWith("/") || !sheet.href) return `${m[1]}${m[2]}${m[3]}`;
+						else {
+							const path = (new URL(sheet.href)).pathname.split("/").slice(0, -1).join("/");
+							return `${m[1]}${path}/${m[2]}${m[3]}`;
+						}
+					});
+				}
+				css.push(str);
+			});
+
+			out.push(`<style>
+				${css.join("\n")}
+			</style>`);
+		};
+
+		[...(document.styleSheets || [])].forEach(sheet => {
+			try {
+				// Attempt to read and modify the styles, to preserve fonts
+				addAsRules(sheet);
+			} catch (e) {
+				console.error(...LGT, e);
+				// If we can't read the styles, it's probably a CORS issue--just link the sheet
+				if (sheet.href) out.push(`<link rel="stylesheet" href="${sheet.href}">`);
+			}
+		});
+
+		return out.join("\n");
+	}
+
+	static doPopout (app, data) {
+		const name = app.title || UtilApplications.getDataName(data);
+
+		// Take the classes of the main body in case a game-wide class (such as "dark-mode") has been applied
+		const win = open(
+			"",
+			name,
+			`width=800,height=800,location=0,menubar=0,status=0,titlebar=0,toolbar=0,directories=0`,
+		);
+
+		if (win == null) {
+			ui.notifications.error(`Could not open pop-up window! Please check your browser settings, and allow this site to open (multiple) pop-up windows.`);
+			throw new Error(`Could not open popout window!`);
+		}
+
+		win.document.write(`
+		<!DOCTYPE html>
+		<html lang="en"><head>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>${name}</title>
+
+			${this._getDocumentStyleHtml()}
+		</head><body class="flex-col overflow-overlay ${document.body.className}"></body></html>
+		`);
+
+		const $body = $(win.document.body);
+
+		// Track the popout window on the application, so we can focus it on any bring-to-front calls.
+		// This is also used as a flag to avoid closing the application on ESC press.
+		app._plut_popoutWindow = win;
+
+		// No-op the minimize for when the user e.g. clicks a spell with a template
+		const cachedMinimize = app.minimize;
+		app.minimize = async () => {};
+
+		// We use `.closest` here as a compatibility fix for modules which, for whatever reason, don't have the app's
+		// top-level element as the `app.element`. "Monk's Enhanced Journal" is one such offender.
+		// :(
+		const $appElement = UtilApplications.$getAppElement(app).closest(`.app`);
+
+		$appElement.addClass("pop__window");
+		$body.append($appElement);
+
+		const $drgResize = $appElement.find(`.window-resizable-handle`)
+			.addClass("ve-hidden");
+
+		UtilEvents.bindDocumentHandlers({element: win.document.body});
+
+		win.addEventListener("unload", () => {
+			UtilEvents.unbindDocumentHandlers({element: win.document.body});
+			$(document.body).append($appElement);
+			$appElement.removeClass("pop__window");
+			$drgResize.removeClass("ve-hidden");
+			delete app._plut_popoutWindow;
+			app.minimize = cachedMinimize;
+			app.close();
+		});
+
+		// When closing/reloading the main browser window, close any sub-windows
+		window.addEventListener("beforeunload", () => {
+			win.close();
+		});
+	}
+
+	static _doHandleSubPopout (app, $html, data) {
+		if (!Config.get("ui", "isEnableSubPopouts")) return;
+
+		if (app._plut_popoutWindow) return;
+
+		const parentApps = app?.object?.parent?.apps || {};
+		if (!parentApps) return;
+
+		const isParentPopped = Object.values(parentApps).some(parentApp => !!parentApp._plut_popoutWindow);
+		if (!isParentPopped) return;
+
+		this.doPopout(app, data);
+	}
+}
+PopoutSheet._POPOUT_HOOKS = [
+	"renderSceneConfig",
+	"renderActorSheet",
+	"renderItemSheet",
+	"renderJournalSheet",
+	"renderRollTableConfig",
+
+	"renderArtBrowserApp",
+
+	"renderCombatTracker",
+	"renderSceneDirectory",
+	"renderActorDirectory",
+	"renderItemDirectory",
+	"renderJournalDirectory",
+	"renderRollTableDirectory",
+	"renderPlaylistDirectory",
+	"renderCompendiumDirectory",
+	"renderSettings",
+	"renderMacroDirectory",
+];
+
+export {PopoutSheet};

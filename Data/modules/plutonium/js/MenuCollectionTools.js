@@ -1,1 +1,103 @@
-const _0x53df=['stopPropagation','click','_pOpenMenu','_pHandleButtonClick','renderItemDirectory','28QulxTm','renderMacroDirectory','<button\x20class=\x22ml-0\x20mr-1\x20w-initial\x22\x20title=\x22Open\x20tools\x20list\x22><span\x20class=\x22fas\x20fa-toolbox\x22></span></button>','actor','5EsjSja','327781gzyeMM','rolltable','fa-sitemap','Bulk\x20Directory\x20Mover','macro','8165SDsuKX','down','Package\x20Importer','fa-cube','626RlYXWR','renderActorDirectory','11243oqbcMX','Directory\x20Deduplicator','23oihFAw','item','150940uXlYEC','20149IYJCxT','443bVOAkI','fa-id-card','renderRollTableDirectory','renderJournalDirectory','fa-user-circle','Bulk\x20Prototype\x20Token\x20Editor','fa-object-group','_TOOL_LIST','Unhandled\x20hook\x20type\x20\x22','9dqJUzA','preventDefault','41723CagSJx','1dMDlwF'];const _0x4c78=function(_0x321316,_0x5cb575){_0x321316=_0x321316-0x193;let _0x53df6d=_0x53df[_0x321316];return _0x53df6d;};const _0x582e24=_0x4c78;(function(_0x540058,_0x29a7e5){const _0x18b170=_0x4c78;while(!![]){try{const _0x44c066=-parseInt(_0x18b170(0x193))*-parseInt(_0x18b170(0x1a2))+-parseInt(_0x18b170(0x1af))*parseInt(_0x18b170(0x1a4))+parseInt(_0x18b170(0x197))*-parseInt(_0x18b170(0x1a5))+-parseInt(_0x18b170(0x195))*parseInt(_0x18b170(0x1b5))+-parseInt(_0x18b170(0x199))*parseInt(_0x18b170(0x1b9))+parseInt(_0x18b170(0x1b0))+parseInt(_0x18b170(0x1ab))*parseInt(_0x18b170(0x198));if(_0x44c066===_0x29a7e5)break;else _0x540058['push'](_0x540058['shift']());}catch(_0x3c8c9b){_0x540058['push'](_0x540058['shift']());}}}(_0x53df,0x29218));import{Menu}from'./Menu.js';import{CollectionCleaner}from'./CollectionCleaner.js';import{CollectionFolderizer}from'./CollectionFolderizer.js';import{CollectionPermissionUpdater}from'./CollectionPermissionUpdater.js';import{CollectionTokenUpdater}from'./CollectionTokenUpdater.js';import{CollectionDeduplicator}from'./CollectionDeduplicator.js';import{ImportSpecialPackages}from'./ImportSpecialPackages.js';class MenuCollectionTools extends Menu{static['$getDirButton'](_0x1717b5){const _0x1a068c=_0x4c78;return $(_0x1a068c(0x1ad))[_0x1a068c(0x1a7)](_0x44e7e3=>{const _0xcc4312=_0x1a068c,_0x417caf=new MenuCollectionTools();return _0x417caf[_0xcc4312(0x1a9)](_0x44e7e3,_0x1717b5);});}constructor(){const _0xd527cf=_0x4c78;super({'eventNamespace':MenuCollectionTools['_EVT_NAMESPACE'],'toolsList':MenuCollectionTools[_0xd527cf(0x1a0)],'direction':_0xd527cf(0x1b6)});}[_0x582e24(0x1a9)](_0x5e8472,_0x4dd00e){const _0x31ffea=_0x582e24;_0x5e8472[_0x31ffea(0x1a3)](),_0x5e8472[_0x31ffea(0x1a6)]();let _0x274ce9;switch(_0x4dd00e){case _0x31ffea(0x1ba):_0x274ce9=_0x31ffea(0x1ae);break;case _0x31ffea(0x1aa):_0x274ce9=_0x31ffea(0x196);break;case _0x31ffea(0x19c):_0x274ce9='journal';break;case _0x31ffea(0x19b):_0x274ce9=_0x31ffea(0x1b1);break;case _0x31ffea(0x1ac):_0x274ce9=_0x31ffea(0x1b4);break;default:throw new Error(_0x31ffea(0x1a1)+_0x4dd00e+'\x22');}return this[_0x31ffea(0x1a8)](_0x5e8472,_0x274ce9);}}MenuCollectionTools['_EVT_NAMESPACE']='plutonium-collection-tools-menu',MenuCollectionTools[_0x582e24(0x1a0)]=[{'name':'Directory\x20Cleaner','Class':CollectionCleaner,'iconClass':'fa-trash-alt'},{'name':_0x582e24(0x194),'Class':CollectionDeduplicator,'iconClass':_0x582e24(0x19f)},{'name':_0x582e24(0x1b3),'Class':CollectionFolderizer,'iconClass':_0x582e24(0x1b2),'fnCheckRequirements':_0x1f7a39=>_0x1f7a39!==_0x582e24(0x1b4)},{'name':'Bulk\x20Permission\x20Editor','Class':CollectionPermissionUpdater,'iconClass':_0x582e24(0x19a)},{'name':_0x582e24(0x19e),'Class':CollectionTokenUpdater,'iconClass':_0x582e24(0x19d),'fnCheckRequirements':_0x28daf1=>_0x28daf1===_0x582e24(0x1ae)},null,{'name':_0x582e24(0x1b7),'Class':ImportSpecialPackages,'iconClass':_0x582e24(0x1b8)}];export{MenuCollectionTools};
+import {Menu} from "./Menu.js";
+import {CollectionCleaner} from "./CollectionCleaner.js";
+import {CollectionFolderizer} from "./CollectionFolderizer.js";
+import {CollectionPermissionUpdater} from "./CollectionPermissionUpdater.js";
+import {CollectionTokenUpdater} from "./CollectionTokenUpdater.js";
+import {CollectionDeduplicator} from "./CollectionDeduplicator.js";
+import {ImportSpecialPackages} from "./ImportSpecialPackages.js";
+import {CompendiumListVisibilityToggler} from "./CompendiumListVisibilityToggler.js";
+import {LootGeneratorApp} from "./LootGeneratorApp.js";
+
+class MenuCollectionTools extends Menu {
+	// region External
+	static $getDirButton (hookName) {
+		return $(`<button class="ml-0 mr-1 w-initial" title="Open tools list"><span class="fas fa-fw fa-toolbox"></span></button>`)
+			.click(evt => {
+				const menu = new MenuCollectionTools();
+				return menu._pHandleButtonClick(evt, hookName);
+			});
+	}
+	// endregion
+
+	constructor () {
+		super({
+			eventNamespace: MenuCollectionTools._EVT_NAMESPACE,
+			toolsList: MenuCollectionTools._TOOL_LIST,
+			direction: "down",
+		});
+	}
+
+	_pHandleButtonClick (evt, hookName) {
+		evt.preventDefault();
+		evt.stopPropagation();
+
+		let type;
+		switch (hookName) {
+			case "renderSceneDirectory": type = "scene"; break;
+			case "renderActorDirectory": type = "actor"; break;
+			case "renderItemDirectory": type = "item"; break;
+			case "renderJournalDirectory": type = "journal"; break;
+			case "renderRollTableDirectory": type = "rolltable"; break;
+			case "renderMacroDirectory": type = "macro"; break;
+			case "renderCompendiumDirectory": type = "compendium"; break;
+			default: throw new Error(`Unhandled hook type "${hookName}"`);
+		}
+
+		return this._pOpenMenu(evt, type);
+	}
+}
+MenuCollectionTools._EVT_NAMESPACE = "plutonium-collection-tools-menu";
+MenuCollectionTools._TOOL_LIST = [
+	{
+		name: "Directory Cleaner",
+		Class: CollectionCleaner,
+		iconClass: "fa-trash-alt",
+		fnCheckRequirements: type => type !== "compendium",
+	},
+	{
+		name: "Directory Deduplicator",
+		Class: CollectionDeduplicator,
+		iconClass: "fa-object-group",
+		fnCheckRequirements: type => type !== "compendium",
+	},
+	{
+		name: "Bulk Directory Mover",
+		Class: CollectionFolderizer,
+		iconClass: "fa-sitemap",
+		fnCheckRequirements: type => !["macro", "compendium"].includes(type),
+	},
+	{
+		name: "Bulk Permission Editor",
+		Class: CollectionPermissionUpdater,
+		iconClass: "fa-id-card",
+		fnCheckRequirements: type => !["scene", "compendium"].includes(type),
+	},
+	{
+		name: "Bulk Prototype Token Editor",
+		Class: CollectionTokenUpdater,
+		iconClass: "fa-user-circle",
+		fnCheckRequirements: type => type === "actor",
+	},
+	{
+		name: "Visibility Toggler",
+		Class: CompendiumListVisibilityToggler,
+		iconClass: "fa-eye",
+		fnCheckRequirements: type => type === "compendium",
+	},
+	null,
+	{
+		name: "Loot Generator",
+		Class: LootGeneratorApp,
+		iconClass: "fa-search-dollar",
+		fnCheckRequirements: type => ["item", "journal", "compendium"].includes(type),
+	},
+	null,
+	{
+		name: "Package Importer",
+		Class: ImportSpecialPackages,
+		iconClass: "fa-cube",
+		fnCheckRequirements: type => type !== "compendium",
+	},
+];
+
+export {MenuCollectionTools};

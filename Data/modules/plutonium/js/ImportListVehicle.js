@@ -1,1 +1,416 @@
-const _0x498f=['_pImportEntry_pFillItems','weight','vehicleType','80471mTrjWo','Unhandled\x20vehicle\x20type\x20\x22','_addInfWarTrait','control','isImportBio','151707vuNNQS','104820AZzBJx','getItemActorPassive','\x20miles\x20per\x20hour\x20(','source','_pImportEntry_fillData_Attributes','Upload\x20File','_pImportEntry_fillData_Details','getTokenUrl','actions','feat','Actor','ImportEntryOpts','_pImportEntry_pFillItems_infWar','_pImportEntry_fillConditionsDamage','getInfWarActionItem','dimensions','attributes','DataSourceFile','_pImportEntry_pFillBase','_pack','items','copy','MODULE_NAME','pace','weapon','SHIP','isTemp','pGetFluff','actor','1APfceD','SOURCE_TYP_BREW','OBJECT','map','hull','\x20lb.','other','data','biography','permissions','534522rZMKFZ','action','actionThresholds','traits','_addInfWarActionStation','details','_pImportEntry_fillData_Currency','actors','_pImportEntry_pFillToken','pSyncStateFrom','_isSkipFolder','isImportBioImages','fluff','importVehicle','Import\x20Vehicles','init','\x20ft.','\x20by\x20','getAbilityModNumber','capCargo','/media/icon/gears.svg','pInit','modules/','slice','_addInfWarReaction','538621VIJLpR','isStreamerMode','pGetHomebrewSources','actionStation','_addShipOther','pImportEntry','getShipOtherItem','entries','ascSort','_addShipEquipment','426997BMUHSi','SRD','toLocaleString','dex','_pImportEntry_pGetFolderId','get','tokenUrl','_pImportEntry_pFillItems_ship','getShipCreatureCapacity','832794vixsoe','Custom\x20URL','spelldc','permission','push','_pImportEntry_fillData_Traits','DATA_URL_VEHICLES','forEach','string','_pImportEntry_fillData_Cargo','currency','VET_SIZE_TO_ABV','foundryVehicle','vehicle','CREATURE','trait','5etools','INFWAR','join','_pImportEntry_fillData_Abilities','_addShipAction','capacity','3eKyMBg','_getBiographyValue','pGetSources','reaction','DataSourceUrl','movement','Vehicles','getSourceWithPagePart'];const _0x5f3b=function(_0x25fc70,_0x5a665e){_0x25fc70=_0x25fc70-0x143;let _0x498fa5=_0x498f[_0x25fc70];return _0x498fa5;};const _0x133c3b=_0x5f3b;(function(_0x49c498,_0x55e75a){const _0x313b72=_0x5f3b;while(!![]){try{const _0x2d9fae=-parseInt(_0x313b72(0x15b))+-parseInt(_0x313b72(0x1ae))+parseInt(_0x313b72(0x187))+parseInt(_0x313b72(0x1ad))*parseInt(_0x313b72(0x19d))+parseInt(_0x313b72(0x17e))+-parseInt(_0x313b72(0x174))+parseInt(_0x313b72(0x151))*-parseInt(_0x313b72(0x1a8));if(_0x2d9fae===_0x55e75a)break;else _0x49c498['push'](_0x49c498['shift']());}catch(_0xb2066e){_0x49c498['push'](_0x49c498['shift']());}}}(_0x498f,0x6f71e));import{ImportListActor}from'./ImportListActor.js';import{Vetools}from'./Vetools.js';import{Config}from'./Config.js';import{DataConverter}from'./DataConverter.js';import{UtilActors}from'./UtilActors.js';import{ImportListCreature}from'./ImportListCreature.js';import{DataConverterVehicle}from'./DataConverterVehicle.js';import{SharedConsts}from'../shared/SharedConsts.js';import{UtilDataSource}from'./UtilDataSource.js';import{ImportListObject}from'./ImportListObject.js';class ImportListVehicle extends ImportListActor{constructor(_0x4139a7){const _0x54dffa=_0x5f3b;_0x4139a7=_0x4139a7||{},super({'title':_0x54dffa(0x169)},_0x4139a7,{'props':[_0x54dffa(0x194)],'propsBrewAdditionalData':[_0x54dffa(0x193)],'fnLoadSideData':Vetools['pGetVehicleSideData'],'titleSearch':'vehicles','sidebarTab':_0x54dffa(0x162),'gameProp':_0x54dffa(0x162),'defaultFolderPath':[_0x54dffa(0x1a3)],'folderType':_0x54dffa(0x1b8),'pageFilter':new PageFilterVehicles(),'page':UrlUtil['PG_VEHICLES'],'isDedupable':!![]},{'actorType':_0x54dffa(0x194)});}async[_0x133c3b(0x19f)](){const _0x283d52=_0x133c3b;return[new UtilDataSource[(_0x283d52(0x1a1))](Config[_0x283d52(0x183)]('ui',_0x283d52(0x175))?_0x283d52(0x17f):_0x283d52(0x197),Vetools[_0x283d52(0x18d)],{'filterTypes':[UtilDataSource['SOURCE_TYP_OFFICIAL_ALL']],'isDefault':!![]}),new UtilDataSource[(_0x283d52(0x1a1))](_0x283d52(0x188),'',{'filterTypes':[UtilDataSource['SOURCE_TYP_CUSTOM']]}),new UtilDataSource[(_0x283d52(0x145))](_0x283d52(0x1b3),{'filterTypes':[UtilDataSource['SOURCE_TYP_CUSTOM']]}),...(await Vetools[_0x283d52(0x176)](_0x283d52(0x194)))[_0x283d52(0x154)](({name:_0x38dc14,url:_0x38dc1d})=>new UtilDataSource['DataSourceUrl'](_0x38dc14,_0x38dc1d,{'filterTypes':[UtilDataSource[_0x283d52(0x152)]]}))];}async['_pImportEntry_pGetImportMetadata'](_0x3e0476,_0x4242f7,_0x136aa4){const _0x1f215e=_0x133c3b,_0x11d459={},_0x7614d3=await Renderer[_0x1f215e(0x194)][_0x1f215e(0x14f)](_0x4242f7),_0x28bf3e=new ImportListVehicle[(_0x1f215e(0x1b9))]({'actor':_0x3e0476,'fluff':_0x7614d3});await this[_0x1f215e(0x146)](_0x4242f7,_0x11d459,_0x28bf3e[_0x1f215e(0x167)],{'isUseTokenImageAsPortrait':Config[_0x1f215e(0x183)](_0x1f215e(0x168),'isUseTokenImageAsPortrait')}),_0x11d459['data']={};if(!this[_0x1f215e(0x165)]&&!_0x136aa4[_0x1f215e(0x14e)]&&!this[_0x1f215e(0x147)]){const _0x3ce611=await this[_0x1f215e(0x182)](_0x4242f7);if(_0x3ce611)_0x11d459['folder']=_0x3ce611;}return _0x11d459[_0x1f215e(0x18a)]={'default':Config[_0x1f215e(0x183)](_0x1f215e(0x168),_0x1f215e(0x15a))},this[_0x1f215e(0x19a)](_0x4242f7,_0x11d459[_0x1f215e(0x158)],_0x28bf3e),this[_0x1f215e(0x1b2)](_0x4242f7,_0x11d459['data'],_0x28bf3e),this[_0x1f215e(0x1b4)](_0x4242f7,_0x11d459[_0x1f215e(0x158)],_0x28bf3e),this[_0x1f215e(0x18c)](_0x4242f7,_0x11d459[_0x1f215e(0x158)],_0x28bf3e),this[_0x1f215e(0x161)](_0x4242f7,_0x11d459[_0x1f215e(0x158)],_0x28bf3e),this[_0x1f215e(0x190)](_0x4242f7,_0x11d459[_0x1f215e(0x158)],_0x28bf3e),await this[_0x1f215e(0x163)](_0x4242f7,_0x11d459,'importVehicle'),{'dataBuilderOpts':_0x28bf3e,'actorData':_0x11d459};}async[_0x133c3b(0x179)](_0x55e6f8,_0x2192b8){const _0xddc2ee=_0x133c3b;_0x2192b8=_0x2192b8||{};if(_0x55e6f8[_0xddc2ee(0x1a7)]===_0xddc2ee(0x195)){const _0x1f4a95=new ImportListCreature({});return await _0x1f4a95['pInit'](),await _0x1f4a95[_0xddc2ee(0x164)](this),_0x55e6f8=MiscUtil[_0xddc2ee(0x149)](_0x55e6f8),_0x55e6f8[_0xddc2ee(0x184)]=Vetools[_0xddc2ee(0x1b5)](_0xddc2ee(0x194),_0x55e6f8),_0x1f4a95['pImportEntry'](_0x55e6f8,_0x2192b8);}else{if(_0x55e6f8['vehicleType']===_0xddc2ee(0x153)){const _0x787bc1=new ImportListObject({});return await _0x787bc1[_0xddc2ee(0x170)](),await _0x787bc1['pSyncStateFrom'](this),_0x55e6f8=MiscUtil[_0xddc2ee(0x149)](_0x55e6f8),_0x55e6f8[_0xddc2ee(0x184)]=Vetools[_0xddc2ee(0x1b5)]('object',_0x55e6f8),_0x787bc1[_0xddc2ee(0x179)](_0x55e6f8,_0x2192b8);}}return super[_0xddc2ee(0x179)](_0x55e6f8,_0x2192b8);}[_0x133c3b(0x1b2)](_0x398a30,_0x1e54a6){const _0xfab972=_0x133c3b,_0x42f587={};_0x42f587[_0xfab972(0x16a)]={'value':0x0,'bonus':0x0,'mod':0x0,'prof':0x0,'total':0x0},_0x42f587[_0xfab972(0x189)]=null,_0x42f587[_0xfab972(0x1a2)]=DataConverterVehicle['getShipMovement'](_0x398a30);switch(_0x398a30[_0xfab972(0x1a7)]){case _0xfab972(0x198):{const _0x369aee=Parser[_0xfab972(0x16d)](_0x398a30[_0xfab972(0x181)]);_0x42f587['ac']={'value':0x13+_0x369aee,'motionless':'19'},_0x42f587['hp']={'value':MiscUtil['get'](_0x398a30,'hp','hp')||0x0,'min':0x0,'max':MiscUtil[_0xfab972(0x183)](_0x398a30,'hp','hp')||0x0,'temp':0x0,'tempmax':0x0,'dt':MiscUtil['get'](_0x398a30,'hp','dt')||0x0,'mt':MiscUtil[_0xfab972(0x183)](_0x398a30,'hp','mt')||0x0},_0x42f587[_0xfab972(0x1b6)]={'stations':!![],'value':0x0,'thresholds':{0x0:0x0,0x1:0x0,0x2:0x0}},_0x42f587['capacity']={'creature':Renderer['vehicle']['getInfwarCreatureCapacity'](_0x398a30),'cargo':typeof _0x398a30['capCargo']===_0xfab972(0x18f)?0x0:_0x398a30[_0xfab972(0x16e)]},_0x42f587['speed']=_0x398a30['speed']+_0xfab972(0x16b);break;}case _0xfab972(0x14d):{_0x42f587['ac']={'value':MiscUtil[_0xfab972(0x183)](_0x398a30,_0xfab972(0x155),'ac')||0x0,'motionless':''},_0x42f587['hp']={'value':MiscUtil[_0xfab972(0x183)](_0x398a30,_0xfab972(0x155),'hp')||0x0,'min':0x0,'max':MiscUtil[_0xfab972(0x183)](_0x398a30,'hull','hp')||0x0,'temp':0x0,'tempmax':0x0,'dt':MiscUtil[_0xfab972(0x183)](_0x398a30,_0xfab972(0x155),'dt')||0x0,'mt':0x0};let _0x2c219d=0x0;const _0x56f13f={0x0:0x0,0x1:0x0,0x2:0x0};_0x398a30[_0xfab972(0x15d)]&&Object[_0xfab972(0x17b)](_0x398a30[_0xfab972(0x15d)])['sort'](([_0xd7450],[_0x20c462])=>SortUtil[_0xfab972(0x17c)](Number(_0x20c462),Number(_0xd7450)))[_0xfab972(0x172)](0x0,0x3)[_0xfab972(0x18e)](([_0x1198e9,_0x569c88],_0x3b24d5)=>{_0x56f13f[_0x3b24d5]=_0x569c88;});_0x42f587[_0xfab972(0x1b6)]={'stations':![],'value':_0x2c219d,'thresholds':_0x56f13f},_0x42f587[_0xfab972(0x19c)]={'creature':Renderer['vehicle'][_0xfab972(0x186)](_0x398a30),'cargo':typeof _0x398a30[_0xfab972(0x16e)]==='string'?0x0:_0x398a30['capCargo']},_0x42f587['speed']=_0x398a30[_0xfab972(0x14b)]+_0xfab972(0x1b0)+_0x398a30[_0xfab972(0x14b)]*0x18+'\x20miles\x20per\x20day)';break;}default:throw new Error('Unhandled\x20vehicle\x20type\x20\x22'+_0x398a30['vehicleType']+'\x22');}_0x1e54a6[_0xfab972(0x144)]=_0x42f587;}['_pImportEntry_fillData_Details'](_0x128af9,_0x2c61f5,_0x593958){const _0x579bdd=_0x133c3b,_0x47e990={};_0x47e990[_0x579bdd(0x159)]={'value':this[_0x579bdd(0x19e)](_0x128af9,_0x593958[_0x579bdd(0x167)],{'isImportText':Config[_0x579bdd(0x183)](_0x579bdd(0x168),_0x579bdd(0x1ac)),'isImportImages':Config[_0x579bdd(0x183)]('importVehicle',_0x579bdd(0x166))})},_0x47e990[_0x579bdd(0x1b1)]=DataConverter[_0x579bdd(0x1a4)](_0x128af9),_0x2c61f5[_0x579bdd(0x160)]=_0x47e990;}[_0x133c3b(0x18c)](_0x41fd0d,_0x5c33e6){const _0x5bf194=_0x133c3b,_0x5798f8={};_0x5798f8['size']=UtilActors[_0x5bf194(0x192)][_0x41fd0d['size']]||'med';switch(_0x41fd0d[_0x5bf194(0x1a7)]){case _0x5bf194(0x198):{_0x5798f8[_0x5bf194(0x143)]=_0x41fd0d[_0x5bf194(0x1a6)][_0x5bf194(0x180)]()+_0x5bf194(0x156);break;}case _0x5bf194(0x14d):{_0x5798f8['dimensions']=_0x41fd0d[_0x5bf194(0x143)]?_0x41fd0d[_0x5bf194(0x143)][_0x5bf194(0x199)](_0x5bf194(0x16c)):'';break;}default:throw new Error(_0x5bf194(0x1a9)+_0x41fd0d['vehicleType']+'\x22');}this[_0x5bf194(0x1bb)](_0x41fd0d,_0x5798f8),_0x5c33e6[_0x5bf194(0x15e)]=_0x5798f8;}[_0x133c3b(0x161)](_0x52eb85,_0x21e6c9){const _0x2ca9dd=_0x133c3b;_0x21e6c9[_0x2ca9dd(0x191)]={'pp':0x0,'gp':0x0,'ep':0x0,'sp':0x0,'cp':0x0};}async[_0x133c3b(0x1a5)](_0x371284,_0x6324e0,_0x146221,_0xe032f8){const _0x153583=_0x133c3b;await this[_0x153583(0x185)](_0x371284,_0x6324e0,_0x146221,_0xe032f8),await this['_pImportEntry_pFillItems_infWar'](_0x371284,_0x6324e0,_0x146221,_0xe032f8);const _0x32d239=_0xe032f8['isTemp']||this['_pack']!=null;await UtilActors['pAddActorItems'](_0x146221[_0x153583(0x150)],_0x146221[_0x153583(0x148)],{'isTemporary':_0x32d239});}[_0x133c3b(0x185)](_0x8a3eed,_0xef2b8,_0x220d02,_0x46b649){const _0x453637=_0x133c3b;_0x8a3eed[_0x453637(0x1ab)]&&_0x8a3eed[_0x453637(0x1ab)]['forEach'](_0x44a2d2=>this[_0x453637(0x17d)](_0x8a3eed,_0xef2b8,_0x220d02,_0x46b649,_0x44a2d2,_0x453637(0x1ab))),_0x8a3eed['movement']&&_0x8a3eed['movement'][_0x453637(0x18e)](_0x1328e2=>this[_0x453637(0x17d)](_0x8a3eed,_0xef2b8,_0x220d02,_0x46b649,_0x1328e2,'movement')),_0x8a3eed[_0x453637(0x14c)]&&_0x8a3eed[_0x453637(0x14c)][_0x453637(0x18e)](_0x130ec4=>this['_addShipWeapon'](_0x8a3eed,_0xef2b8,_0x220d02,_0x46b649,_0x130ec4)),_0x8a3eed[_0x453637(0x157)]&&_0x8a3eed[_0x453637(0x157)]['forEach'](_0x4e54a2=>this[_0x453637(0x178)](_0x8a3eed,_0xef2b8,_0x220d02,_0x46b649,_0x4e54a2)),_0x8a3eed[_0x453637(0x15c)]&&this[_0x453637(0x19b)](_0x8a3eed,_0xef2b8,_0x220d02,_0x46b649,_0x8a3eed[_0x453637(0x15c)]);}['_addShipEquipment'](_0x4545f6,_0x437e1e,_0x59bdcf,_0x3e64cf,_0x55d1a3,_0x599490){const _0x1d9671=_0x133c3b,_0x3ea389=DataConverterVehicle['getShipEquipmentItem'](_0x4545f6,_0x55d1a3,_0x599490);if(!_0x3ea389)return;_0x59bdcf[_0x1d9671(0x148)][_0x1d9671(0x18b)](_0x3ea389);}['_addShipWeapon'](_0x53ca05,_0x1ac862,_0x411aef,_0xd51945,_0x6433ad){const _0x58acb1=DataConverterVehicle['getShipWeaponItem'](_0x53ca05,_0x6433ad);if(!_0x58acb1)return;_0x411aef['items']['push'](_0x58acb1);}['_addShipOther'](_0x55be71,_0xa407ba,_0x1b003f,_0x31b858,_0x2528fc){const _0x10f33c=_0x133c3b,_0x5c2539=DataConverterVehicle[_0x10f33c(0x17a)](_0x55be71,_0x2528fc);if(!_0x5c2539)return;_0x1b003f['items']['push'](_0x5c2539);}[_0x133c3b(0x19b)](_0x25bf0d,_0x1f17a6,_0x46ec16,_0x1e4723,_0x2ba7fd){const _0x567153=_0x133c3b,_0x1164bd=DataConverterVehicle['getShipActionItems'](_0x25bf0d,_0x2ba7fd);if(!_0x1164bd||!_0x1164bd['length'])return;_0x46ec16[_0x567153(0x148)][_0x567153(0x18b)](..._0x1164bd);}[_0x133c3b(0x1ba)](_0xbba295,_0x45174f,_0x2d3917,_0x2ea030){const _0x5e1cbf=_0x133c3b;_0xbba295[_0x5e1cbf(0x196)]&&_0xbba295[_0x5e1cbf(0x196)][_0x5e1cbf(0x18e)](_0x4aa003=>this[_0x5e1cbf(0x1aa)](_0xbba295,_0x45174f,_0x2d3917,_0x2ea030,_0x4aa003)),_0xbba295['actionStation']&&_0xbba295[_0x5e1cbf(0x177)][_0x5e1cbf(0x18e)](_0x18740b=>this[_0x5e1cbf(0x15f)](_0xbba295,_0x45174f,_0x2d3917,_0x2ea030,_0x18740b)),_0xbba295[_0x5e1cbf(0x1a0)]&&_0xbba295[_0x5e1cbf(0x1a0)][_0x5e1cbf(0x18e)](_0x415764=>this[_0x5e1cbf(0x173)](_0xbba295,_0x45174f,_0x2d3917,_0x2ea030,_0x415764));}[_0x133c3b(0x1aa)](_0x947f6a,_0x2325cb,_0x341bb1,_0x494f72,_0x4fdb33){const _0x4d4ada=_0x133c3b,_0xba5134=DataConverter[_0x4d4ada(0x1af)](_0x4fdb33,{'fvttType':_0x4d4ada(0x1b7),'mode':_0x4d4ada(0x194),'entity':_0x947f6a,'source':_0x947f6a['source'],'actor':{'data':_0x2325cb},'img':'modules/'+SharedConsts[_0x4d4ada(0x14a)]+_0x4d4ada(0x16f)});_0x341bb1[_0x4d4ada(0x148)][_0x4d4ada(0x18b)](_0xba5134);}['_addInfWarActionStation'](_0x19b5f0,_0x39270b,_0x85c4bf,_0x431f01,_0x54e44f){const _0xa56de=_0x133c3b,_0x170633=DataConverterVehicle[_0xa56de(0x1bc)](_0x19b5f0,_0x54e44f);if(!_0x170633)return;_0x85c4bf['items'][_0xa56de(0x18b)](_0x170633);}[_0x133c3b(0x173)](_0x4e17ab,_0x3dddd8,_0x233b9d,_0x26366e,_0x478dd4){const _0x5a4d08=_0x133c3b,_0x55e4a2=DataConverter[_0x5a4d08(0x1af)](_0x478dd4,{'activationType':_0x5a4d08(0x1a0),'activationCost':0x1,'fvttType':'feat','mode':_0x5a4d08(0x194),'entity':_0x4e17ab,'source':_0x4e17ab[_0x5a4d08(0x1b1)],'actor':{'data':_0x3dddd8},'img':_0x5a4d08(0x171)+SharedConsts[_0x5a4d08(0x14a)]+'/media/icon/gears.svg'});_0x233b9d['items']['push'](_0x55e4a2);}['_pImportEntry_fillData_Cargo'](_0x24d24f,_0x2a824f){_0x2a824f['cargo']={'crew':[],'passengers':[]};}}ImportListVehicle[_0x133c3b(0x1b9)]=class extends ImportListActor[_0x133c3b(0x1b9)]{};export{ImportListVehicle};
+import {ImportListActor} from "./ImportListActor.js";
+import {Vetools} from "./Vetools.js";
+import {Config} from "./Config.js";
+import {DataConverter} from "./DataConverter.js";
+import {UtilActors} from "./UtilActors.js";
+import {ImportListCreature} from "./ImportListCreature.js";
+import {DataConverterVehicle} from "./DataConverterVehicle.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {UtilDataSource} from "./UtilDataSource.js";
+import {ImportListObject} from "./ImportListObject.js";
+import {LGT} from "./Util.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class ImportListVehicle extends ImportListActor {
+	constructor (externalData) {
+		externalData = externalData || {};
+		super(
+			{
+				title: "Import Vehicles",
+			},
+			externalData,
+			{
+				props: ["vehicle"],
+				dirsHomebrew: ["vehicle"],
+				propsBrewAdditionalData: ["foundryVehicle"],
+				fnLoadSideData: Vetools.pGetVehicleSideData,
+				titleSearch: "vehicles",
+				sidebarTab: "actors",
+				gameProp: "actors",
+				defaultFolderPath: ["Vehicles"],
+				pageFilter: new PageFilterVehicles(),
+				page: UrlUtil.PG_VEHICLES,
+				isPreviewable: true,
+				isDedupable: true,
+				configGroup: "importVehicle",
+			},
+			{
+				actorType: "vehicle",
+			},
+		);
+	}
+
+	async pGetSources () {
+		return [
+			new UtilDataSource.DataSourceUrl(
+				Config.get("ui", "isStreamerMode") ? "SRD" : "5etools",
+				Vetools.DATA_URL_VEHICLES,
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_OFFICIAL_ALL],
+					isDefault: true,
+				},
+			),
+			new UtilDataSource.DataSourceUrl(
+				"Custom URL",
+				"",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			new UtilDataSource.DataSourceFile(
+				"Upload File",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			...(await this._pGetSourcesHomebrew()),
+		];
+	}
+
+	async _pImportEntry_pGetImportMetadata (actor, veh, importOpts) {
+		const act = {};
+
+		const fluff = await Renderer.vehicle.pGetFluff(veh);
+
+		const vehOpts = new ImportListVehicle.ImportEntryOpts({actor, fluff});
+
+		await this._pImportEntry_pFillBase(veh, act, vehOpts.fluff, {isUseTokenImageAsPortrait: Config.get(this._configGroup, "isUseTokenImageAsPortrait")});
+
+		act.data = {};
+		act.flags = {};
+
+		await this._pImportEntry_pFillFolder(veh, act, importOpts);
+
+		if (importOpts.defaultPermission != null) act.permission = {default: importOpts.defaultPermission};
+		else act.permission = {default: Config.get(this._configGroup, "permissions")};
+
+		act.data.vehicleType = this._pImportEntry_getVehicleType(veh);
+
+		this._pImportEntry_fillData_Abilities(veh, act.data, vehOpts);
+		this._pImportEntry_fillData_Attributes(veh, act.data, vehOpts);
+		await this._pImportEntry_pFillData_Details(veh, act.data, vehOpts);
+		this._pImportEntry_fillData_Traits(veh, act.data, vehOpts);
+		this._pImportEntry_fillData_Currency(veh, act.data, vehOpts);
+		this._pImportEntry_fillData_Cargo(veh, act.data, vehOpts);
+
+		await this._pImportEntry_pFillToken({importable: veh, actor: act});
+
+		return {dataBuilderOpts: vehOpts, actorData: act};
+	}
+
+	_pImportEntry_getVehicleType (veh) {
+		if (veh.terrain?.length) {
+			const terr = veh.terrain[0];
+			switch (terr) {
+				case "land": return "land";
+				case "sea": return "water";
+				case "air": return "air";
+				default: console.warn(...LGT, `Unknown vehicle terrain type "${terr}"`);
+			}
+		}
+
+		switch (veh.vehicleType) {
+			case "INFWAR": return "land";
+			case "SHIP": return "sea";
+			default: throw new Error(`Unhandled vehicle type "${veh.vehicleType}"`);
+		}
+	}
+
+	/**
+	 * If we're importing a creature-type vehicle, delegate to the creature importer.
+	 * For object-type vehicles, delegate to the object importer.
+	 */
+	async _pImportEntry (veh, importOpts) {
+		importOpts = importOpts || {};
+
+		if (veh.vehicleType === "CREATURE") {
+			const importerCreature = new ImportListCreature({});
+			await importerCreature.pInit();
+			await importerCreature.pSyncStateFrom(this);
+			// Override the token URL
+			// TODO(future) override fluff, too, if this is ever required
+			veh = MiscUtil.copy(veh);
+			veh.tokenUrl = await Vetools.pGetTokenUrl("vehicle", veh);
+			return importerCreature._pImportEntry(veh, importOpts);
+		} else if (veh.vehicleType === "OBJECT") {
+			const objectImporter = new ImportListObject({});
+			await objectImporter.pInit();
+			await objectImporter.pSyncStateFrom(this);
+			// Override the token URL
+			// TODO(future) override fluff, too, if this is ever required
+			veh = MiscUtil.copy(veh);
+			veh.tokenUrl = await Vetools.pGetTokenUrl("object", veh);
+			return objectImporter._pImportEntry(veh, importOpts);
+		}
+
+		return super._pImportEntry(veh, importOpts);
+	}
+
+	_pImportEntry_fillData_Attributes (veh, data) {
+		const out = {};
+
+		out.init = {
+			value: 0,
+			bonus: 0,
+			mod: 0,
+			prof: 0,
+			total: 0,
+		};
+
+		out.spelldc = null;
+
+		out.movement = DataConverterVehicle.getShipMovement(veh);
+		out.speed = DataConverterVehicle.getVehicleSpeed(veh);
+
+		switch (veh.vehicleType) {
+			case "INFWAR": {
+				const dexMod = Parser.getAbilityModNumber(veh.dex);
+				out.ac = {
+					flat: 19 + dexMod,
+					motionless: "19",
+				};
+
+				out.hp = {
+					value: MiscUtil.get(veh, "hp", "hp") || 0,
+					min: 0,
+					max: MiscUtil.get(veh, "hp", "hp") || 0,
+					temp: 0,
+					tempmax: 0,
+					dt: MiscUtil.get(veh, "hp", "dt") || 0,
+					mt: MiscUtil.get(veh, "hp", "mt") || 0,
+				};
+
+				out.actions = {
+					stations: true,
+					value: 0,
+					thresholds: {
+						0: 0,
+						1: 0,
+						2: 0,
+					},
+				};
+
+				out.capacity = {
+					creature: Renderer.vehicle.getInfwarCreatureCapacity(veh),
+					cargo: typeof veh.capCargo === "string" ? 0 : veh.capCargo,
+				};
+
+				break;
+			}
+
+			case "SHIP": {
+				out.ac = {
+					flat: MiscUtil.get(veh, "hull", "ac") || null,
+					motionless: "",
+				};
+
+				out.hp = {
+					value: MiscUtil.get(veh, "hull", "hp") || null,
+					min: null,
+					max: MiscUtil.get(veh, "hull", "hp") || null,
+					temp: null,
+					tempmax: null,
+					dt: MiscUtil.get(veh, "hull", "dt") || null,
+					mt: null,
+				};
+
+				let actionsValue = 0;
+				const actionThresholds = {
+					0: 0,
+					1: 0,
+					2: 0,
+				};
+				if (veh.actionThresholds) {
+					Object.entries(veh.actionThresholds)
+						.sort(([ka], [kb]) => SortUtil.ascSort(Number(kb), Number(ka)))
+						.slice(0, 3) // FVTT supports a max of 3, so take the highest
+						.forEach(([actions, crew], i) => {
+							actionThresholds[i] = crew;
+						});
+				}
+
+				out.actions = {
+					stations: false,
+					value: actionsValue,
+					thresholds: actionThresholds,
+				};
+
+				out.capacity = {
+					creature: Renderer.vehicle.getShipCreatureCapacity(veh),
+					cargo: typeof veh.capCargo === "string" ? 0 : veh.capCargo,
+				};
+
+				break;
+			}
+
+			default: throw new Error(`Unhandled vehicle type "${veh.vehicleType}"`);
+		}
+
+		data.attributes = out;
+	}
+
+	async _pImportEntry_pFillData_Details (veh, data, vehOpts) {
+		const out = {};
+
+		out.biography = {
+			value: await this._pGetBiographyValue(veh, vehOpts.fluff, {isImportText: Config.get(this._configGroup, "isImportBio"), isImportImages: Config.get(this._configGroup, "isImportBioImages")}),
+		};
+
+		out.source = UtilDataConverter.getSourceWithPagePart(veh);
+
+		data.details = out;
+	}
+
+	_pImportEntry_fillData_Traits (veh, data) {
+		const out = {};
+
+		out.size = UtilActors.VET_SIZE_TO_ABV[veh.size] || "med";
+
+		switch (veh.vehicleType) {
+			case "INFWAR": {
+				out.dimensions = `${veh.weight.toLocaleString()} lb.`;
+				break;
+			}
+
+			case "SHIP": {
+				out.dimensions = veh.dimensions ? veh.dimensions.join(" by ") : "";
+				break;
+			}
+
+			default: throw new Error(`Unhandled vehicle type "${veh.vehicleType}"`);
+		}
+
+		this._pImportEntry_fillConditionsDamage(veh, out);
+
+		data.traits = out;
+	}
+
+	_pImportEntry_fillData_Currency (veh, data) {
+		// Dummy data
+		data.currency = {
+			pp: 0,
+			gp: 0,
+			ep: 0,
+			sp: 0,
+			cp: 0,
+		};
+	}
+
+	async _pImportEntry_pFillItems (veh, act, vehOpts, importOpts) {
+		await this._pImportEntry_pFillItems_ship(veh, act, vehOpts, importOpts);
+		await this._pImportEntry_pFillItems_infWar(veh, act, vehOpts, importOpts);
+
+		const isTemporary = importOpts.isTemp || this._pack != null;
+		await UtilActors.pAddActorItems(vehOpts.actor, vehOpts.items, {isTemporary});
+	}
+
+	async _pImportEntry_pFillItems_ship (veh, act, vehOpts, importOpts) {
+		if (veh.control) { // e.g. "Battle Balloon"
+			await veh.control.pSerialAwaitMap(it => this._pAddShipEquipment(veh, act, vehOpts, importOpts, it, "control"));
+		}
+
+		if (veh.movement) { // e.g. "Battle Balloon"
+			await veh.movement.pSerialAwaitMap(it => this._pAddShipEquipment(veh, act, vehOpts, importOpts, it, "movement"));
+		}
+
+		if (veh.weapon) { // e.g. "Battle Balloon"
+			await veh.weapon.pSerialAwaitMap(it => this._pAddShipWeapon(veh, act, vehOpts, importOpts, it));
+		}
+
+		if (veh.other) { // e.g. "Airship" (UAOfShipsAndSea)
+			await veh.other.pSerialAwaitMap(it => this._pAddShipOther(veh, act, vehOpts, importOpts, it));
+		}
+
+		if (veh.action) { // e.g. "Battle Balloon"
+			await this._pAddShipAction(veh, act, vehOpts, importOpts, veh.action);
+		}
+	}
+
+	async _pAddShipEquipment (veh, act, vehOpts, importOpts, equipment, prop) {
+		const equipmentItem = await DataConverterVehicle.pGetShipEquipmentItem(veh, equipment, prop);
+		if (!equipmentItem) return;
+		vehOpts.items.push(equipmentItem);
+	}
+
+	async _pAddShipWeapon (veh, act, vehOpts, importOpts, weap) {
+		const weaponItem = await DataConverterVehicle.pGetShipWeaponItem(veh, weap);
+		if (!weaponItem) return;
+		vehOpts.items.push(weaponItem);
+	}
+
+	async _pAddShipOther (veh, act, vehOpts, importOpts, ent) {
+		const otherItem = await DataConverterVehicle.pGetShipOtherItem(veh, ent);
+		if (!otherItem) return;
+		vehOpts.items.push(otherItem);
+	}
+
+	async _pAddShipAction (veh, act, vehOpts, importOpts, actionEnts) {
+		const actionItems = await DataConverterVehicle.pGetShipActionItems(veh, actionEnts);
+		if (!actionItems || !actionItems.length) return;
+		vehOpts.items.push(...actionItems);
+	}
+
+	async _pImportEntry_pFillItems_infWar (veh, act, vehOpts, importOpts) {
+		if (veh.trait) { // e.g. "Demon Grinder"
+			await veh.trait.pSerialAwaitMap(it => this._pAddInfWarTrait(veh, act, vehOpts, importOpts, it));
+		}
+
+		if (veh.actionStation) { // e.g. "Demon Grinder"
+			await veh.actionStation.pSerialAwaitMap(it => this._pAddInfWarActionStation(veh, act, vehOpts, importOpts, it));
+		}
+
+		if (veh.reaction) { // e.g. "Devil's Ride"
+			await veh.reaction.pSerialAwaitMap(it => this._pAddInfWarReaction(veh, act, vehOpts, importOpts, it));
+		}
+	}
+
+	async _pAddInfWarTrait (veh, act, vehOpts, importOpts, trait) {
+		const traitItem = await DataConverter.pGetItemActorPassive(
+			trait,
+			{
+				fvttType: "feat",
+				mode: "vehicle",
+				entity: veh,
+				source: veh.source,
+				actor: {data: act}, // wrap our update data to give the appearance of a real actor
+				img: `modules/${SharedConsts.MODULE_NAME}/media/icon/gears.svg`,
+			},
+		);
+		vehOpts.items.push(traitItem);
+	}
+
+	async _pAddInfWarActionStation (veh, act, vehOpts, importOpts, action) {
+		const actionStationItem = await DataConverterVehicle.pGetInfWarActionItem(veh, action);
+		if (!actionStationItem) return;
+		vehOpts.items.push(actionStationItem);
+	}
+
+	async _pAddInfWarReaction (veh, act, vehOpts, importOpts, reaction) {
+		const reactionItem = await DataConverter.pGetItemActorPassive(
+			reaction,
+			{
+				activationType: "reaction",
+				activationCost: 1,
+				fvttType: "feat",
+				mode: "vehicle",
+				entity: veh,
+				source: veh.source,
+				actor: {data: act}, // wrap our update data to give the appearance of a real actor
+				img: `modules/${SharedConsts.MODULE_NAME}/media/icon/gears.svg`,
+			},
+		);
+		vehOpts.items.push(reactionItem);
+	}
+
+	_pImportEntry_fillData_Cargo (veh, data) {
+		// Dummy data
+		data.cargo = {
+			crew: [],
+			passengers: [],
+		};
+	}
+}
+
+ImportListVehicle.ImportEntryOpts = class extends ImportListActor.ImportEntryOpts {};
+
+export {ImportListVehicle};

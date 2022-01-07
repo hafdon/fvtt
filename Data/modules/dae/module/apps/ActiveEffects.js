@@ -1,5 +1,5 @@
 // import {ItemEffectSelector} from "./apps/daeSelector"
-import { ValidSpec, cubActive, confirmDelete, aboutTimeInstalled } from "../dae.js";
+import { ValidSpec, confirmDelete, aboutTimeInstalled } from "../dae.js";
 import { i18n, confirmAction, daeSpecialDurations } from "../../dae.js";
 import { DAEActiveEffectConfig } from "./DAEActiveEffectConfig.js";
 export class ActiveEffects extends FormApplication {
@@ -98,14 +98,12 @@ export class ActiveEffects extends FormApplication {
             }
             e.transfer = e.transfer ?? e.flags?.dae?.transfer ?? true;
         });
-        let efl = CONFIG.statusEffects.map(se => { return { "id": se.id, "label": i18n(se.label) }; }).sort((a, b) => a.label < b.label ? -1 : 1);
+        let efl = CONFIG.statusEffects
+            .map(se => { return { "id": se.id, "label": se.id.startsWith("combat-utility-belt.") ? `${se.label} (CUB)` : i18n(se.label) }; })
+            .sort((a, b) => a.label < b.label ? -1 : 1);
         this.effectList = { "new": "new" };
         efl.forEach(se => {
-            if (cubActive && game.cub.getCondition(se.label) && se.id.startsWith("combat-utility-belt")) {
-                this.effectList[se.id] = se.label + " (CUB)";
-            }
-            else
-                this.effectList[se.id] = se.label;
+            this.effectList[se.id] = se.label;
         });
         //@ts-ignore documentClass;
         const isItem = this.object instanceof CONFIG.Item.documentClass;
@@ -184,7 +182,7 @@ export class ActiveEffects extends FormApplication {
         html.find('.effect-delete').click(async (ev) => {
             const effect_id = $(ev.currentTarget).parents(".effect-header").attr("effect-id");
             confirmAction(confirmDelete, () => {
-                this.object.deleteEmbeddedEntity("ActiveEffect", effect_id).then(() => this.render());
+                this.object.deleteEmbeddedDocuments("ActiveEffect", [effect_id]).then(() => this.render());
             });
         });
         html.find('.effect-edit').click(async (ev) => {

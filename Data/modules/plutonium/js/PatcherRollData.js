@@ -1,1 +1,40 @@
-const _0x5e3c=['toLowerCase','name','bonuses','MODULE_NAME_FAKE','prof','1tZMwLi','332418OAqJZg','spellcasting','rsak','attack','character','user','933tbmWaB','1796toTTgC','42843duvWyk','mod','8219LyyHWz','24443pKozHM','15jLHObI','6MWAuqY','data','103aFyiKE','attributes','getAdditionalRollDataBase','1XGSjxw','45363KNpocY','16vbMcwo'];const _0x302c=function(_0x3ad17e,_0x17c5a8){_0x3ad17e=_0x3ad17e-0xd3;let _0x5e3c20=_0x5e3c[_0x3ad17e];return _0x5e3c20;};const _0x334720=_0x302c;(function(_0x339420,_0x1a222f){const _0x27dc80=_0x302c;while(!![]){try{const _0x4e7f23=-parseInt(_0x27dc80(0xe8))*parseInt(_0x27dc80(0xde))+-parseInt(_0x27dc80(0xd3))*-parseInt(_0x27dc80(0xdf))+-parseInt(_0x27dc80(0xda))*parseInt(_0x27dc80(0xe0))+-parseInt(_0x27dc80(0xe6))*-parseInt(_0x27dc80(0xd4))+parseInt(_0x27dc80(0xe7))+-parseInt(_0x27dc80(0xe1))*parseInt(_0x27dc80(0xdc))+-parseInt(_0x27dc80(0xdb))*-parseInt(_0x27dc80(0xe3));if(_0x4e7f23===_0x1a222f)break;else _0x339420['push'](_0x339420['shift']());}catch(_0x3cd922){_0x339420['push'](_0x339420['shift']());}}}(_0x5e3c,0x2d14f));import{SharedConsts}from'../shared/SharedConsts.js';class PatcherRollData{static[_0x334720(0xe5)](_0x1b876c){const _0x40ebad=_0x334720,_0x4e621e=game['user'][_0x40ebad(0xd8)]?.[_0x40ebad(0xe2)]?.[_0x40ebad(0xe2)]?.[_0x40ebad(0xe4)]?.[_0x40ebad(0xed)];let _0x498514,_0x5b081b=null;if(game[_0x40ebad(0xd9)][_0x40ebad(0xd8)]){const _0x45569e=game[_0x40ebad(0xd9)][_0x40ebad(0xd8)]?game[_0x40ebad(0xd9)][_0x40ebad(0xd8)][_0x40ebad(0xe2)]?.[_0x40ebad(0xe2)][_0x40ebad(0xe4)][_0x40ebad(0xd5)]||'int':null,_0x3c1350=(game[_0x40ebad(0xd9)][_0x40ebad(0xd8)][_0x40ebad(0xe2)]?.[_0x40ebad(0xe2)]?.['abilities']?.[_0x45569e][_0x40ebad(0xdd)]??0x0)+(_0x4e621e??0x0);_0x498514=_0x3c1350+Number(game[_0x40ebad(0xd9)][_0x40ebad(0xd8)]['data']?.[_0x40ebad(0xe2)]?.[_0x40ebad(0xeb)]?.[_0x40ebad(0xd6)]?.[_0x40ebad(0xd7)])||0x0,_0x5b081b=_0x3c1350+Number(game[_0x40ebad(0xd9)][_0x40ebad(0xd8)][_0x40ebad(0xe2)]?.[_0x40ebad(0xe2)]?.[_0x40ebad(0xeb)]?.['msak']?.['attack'])||0x0;}return{'name':_0x1b876c[_0x40ebad(0xea)],[SharedConsts[_0x40ebad(0xec)]]:{'name':{[_0x1b876c[_0x40ebad(0xea)][_0x40ebad(0xe9)]()['replace'](/[^a-zA-Z0-9]/g,'')]:0x1},'user':{'id':game[_0x40ebad(0xd9)]['id']},'userchar':{'id':game['user'][_0x40ebad(0xd8)]?.['id'],'pb':_0x4e621e,'spellAttackRanged':_0x498514,'spellAttackMelee':_0x5b081b}}};}}export{PatcherRollData};
+import {SharedConsts} from "../shared/SharedConsts.js";
+
+class PatcherRollData {
+	static getAdditionalRollDataBase (entity) {
+		// Add info from the user's character
+		// `@srd5e.userchar.id`, etc.
+		const pb = game.user.character?.data?.data?.attributes?.prof;
+		let spellAttackRanged; let spellAttackMelee = null;
+		if (game.user.character) {
+			const scAbility = game.user.character ? game.user.character.data?.data.attributes.spellcasting || "int" : null;
+			const baseMod = (game.user.character.data?.data?.abilities?.[scAbility].mod ?? 0)
+				+ (pb ?? 0);
+			spellAttackRanged = baseMod + Number(game.user.character.data?.data?.bonuses?.rsak?.attack) || 0;
+			spellAttackMelee = baseMod + Number(game.user.character.data?.data?.bonuses?.msak?.attack) || 0;
+		}
+
+		return {
+			// Add `@name` as the entity's name
+			name: entity.name,
+			[SharedConsts.MODULE_NAME_FAKE]: {
+				name: {
+					// Add `@srd5e.name.<scrubbed entity name>`
+					[entity.name.toLowerCase().replace(/[^a-zA-Z0-9]/g, "")]: 1,
+				},
+				user: {
+					id: game.user.id,
+				},
+				userchar: {
+					id: game.user.character?.id,
+					pb,
+					classes: game.user.character?.data?.data?.classes || {},
+					spellAttackRanged,
+					spellAttackMelee,
+				},
+			},
+		};
+	}
+}
+
+export {PatcherRollData};

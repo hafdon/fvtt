@@ -1,1 +1,54 @@
-const _0x1cfb=['_registerClient','3VGnBBG','SETTINGS_KEY','plutonium','1ttpZWy','pGetWorld','plutonium_client','377911DQZOuX','30612ZGqkuS','register','2KTEBwJ','set','6kroVaW','_registerWorld','132511vmBBtB','_STORE_KEY_WORLD','162502zfPBBc','152237xnZpHb','_register','world','settings','getSafe','pSetClient','37853Pnwila','269281qEpsYt','1BHKIuI','pSetWorld'];const _0x3285=function(_0x5c7b51,_0x5f4bb1){_0x5c7b51=_0x5c7b51-0x70;let _0x1cfba7=_0x1cfb[_0x5c7b51];return _0x1cfba7;};const _0x5c7cea=_0x3285;(function(_0x4b2e2c,_0x29e26d){const _0x3a75bd=_0x3285;while(!![]){try{const _0x574bcc=parseInt(_0x3a75bd(0x81))+-parseInt(_0x3a75bd(0x75))*-parseInt(_0x3a75bd(0x7d))+parseInt(_0x3a75bd(0x87))*parseInt(_0x3a75bd(0x7a))+parseInt(_0x3a75bd(0x80))*-parseInt(_0x3a75bd(0x77))+-parseInt(_0x3a75bd(0x8a))+-parseInt(_0x3a75bd(0x83))*parseInt(_0x3a75bd(0x76))+parseInt(_0x3a75bd(0x85))*parseInt(_0x3a75bd(0x89));if(_0x574bcc===_0x29e26d)break;else _0x4b2e2c['push'](_0x4b2e2c['shift']());}catch(_0x32d89f){_0x4b2e2c['push'](_0x4b2e2c['shift']());}}}(_0x1cfb,0x5ae4c));import{UtilGameSettings}from'./UtilGameSettings.js';class GameStorage{static[_0x5c7cea(0x79)](_0x1c7001){const _0xd3c3bb=_0x5c7cea;return this[_0xd3c3bb(0x70)](_0x1c7001,'client');}static[_0x5c7cea(0x86)](_0x5652cd){const _0x1ef52b=_0x5c7cea;return this[_0x1ef52b(0x70)](_0x5652cd,_0x1ef52b(0x71));}static['_register'](_0x4e35e8,_0x38c83b){const _0x30e5f6=_0x5c7cea,_0x3aa234=_0x38c83b===_0x30e5f6(0x71)?GameStorage[_0x30e5f6(0x88)]:GameStorage['_STORE_KEY_CLIENT'];return _0x4e35e8=_0x3aa234+'_'+_0x4e35e8,game[_0x30e5f6(0x72)][_0x30e5f6(0x82)](GameStorage[_0x30e5f6(0x7b)],_0x4e35e8,{'name':_0x4e35e8,'hint':_0x4e35e8,'scope':_0x38c83b,'config':![],'default':{},'type':Object}),_0x4e35e8;}static async['pGetClient'](_0x128603){const _0x106d96=_0x5c7cea,_0x1d5823=this[_0x106d96(0x79)](_0x128603);return(UtilGameSettings[_0x106d96(0x73)](GameStorage['SETTINGS_KEY'],_0x1d5823)||{})['_'];}static async[_0x5c7cea(0x74)](_0x1c1be7,_0x56ddbf){const _0x3ce04d=_0x5c7cea,_0x34c173=this[_0x3ce04d(0x79)](_0x1c1be7);await game[_0x3ce04d(0x72)][_0x3ce04d(0x84)](GameStorage[_0x3ce04d(0x7b)],_0x34c173,{'_':_0x56ddbf});}static async[_0x5c7cea(0x7e)](_0x397eae){const _0x3bdb82=_0x5c7cea,_0x4fde06=this['_registerWorld'](_0x397eae);return(UtilGameSettings[_0x3bdb82(0x73)](GameStorage[_0x3bdb82(0x7b)],_0x4fde06)||{})['_'];}static async[_0x5c7cea(0x78)](_0x27adc3,_0x106673){const _0x5d26fd=_0x5c7cea,_0x43d4ef=this[_0x5d26fd(0x86)](_0x27adc3);await game[_0x5d26fd(0x72)][_0x5d26fd(0x84)](GameStorage[_0x5d26fd(0x7b)],_0x43d4ef,{'_':_0x106673});}}GameStorage['SETTINGS_KEY']=_0x5c7cea(0x7c),GameStorage['_STORE_KEY_CLIENT']=_0x5c7cea(0x7f),GameStorage[_0x5c7cea(0x88)]='plutonium_world';export{GameStorage};
+import {UtilGameSettings} from "./UtilGameSettings.js";
+
+class GameStorage {
+	static _registerClient (key) {
+		return this._register(key, "client");
+	}
+
+	static _registerWorld (key) {
+		return this._register(key, "world");
+	}
+
+	static _register (key, type) {
+		const keyPrefix = type === "world" ? GameStorage._STORE_KEY_WORLD : GameStorage._STORE_KEY_CLIENT;
+		key = `${keyPrefix}_${key}`;
+		game.settings.register(
+			GameStorage.SETTINGS_KEY,
+			key,
+			{
+				name: key,
+				hint: key,
+				scope: type,
+				config: false,
+				default: {},
+				type: Object,
+			},
+		);
+		return key;
+	}
+
+	static async pGetClient (key) {
+		const fullKey = this._registerClient(key);
+		return (UtilGameSettings.getSafe(GameStorage.SETTINGS_KEY, fullKey) || {})._;
+	}
+
+	static async pSetClient (key, value) {
+		const fullKey = this._registerClient(key);
+		await game.settings.set(GameStorage.SETTINGS_KEY, fullKey, {_: value});
+	}
+
+	static async pGetWorld (key) {
+		const fullKey = this._registerWorld(key);
+		return (UtilGameSettings.getSafe(GameStorage.SETTINGS_KEY, fullKey) || {})._;
+	}
+
+	static async pSetWorld (key, value) {
+		const fullKey = this._registerWorld(key);
+		await game.settings.set(GameStorage.SETTINGS_KEY, fullKey, {_: value});
+	}
+}
+GameStorage.SETTINGS_KEY = "plutonium";
+GameStorage._STORE_KEY_CLIENT = "plutonium_client";
+GameStorage._STORE_KEY_WORLD = "plutonium_world";
+
+export {GameStorage};

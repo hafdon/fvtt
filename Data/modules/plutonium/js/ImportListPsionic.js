@@ -1,1 +1,176 @@
-const _0xc4ca=['_isRadio','\x22\x20(from\x20\x22','full','sheet','name','sourceClassName','sourceJsonToAbv','1fBoOnF','get','Import\x20Psionics','psiTypeToMeta','short','Psionic','Upload\x20File','source','1pihzWX','items','URL_TO_HASH_BUILDER','245689dScTaC','pImportEntry','isTemp','_list','18317MIkrly','383549hoWavD','render','_fOrder','_initCreateSheetItemHook','log','Item','map','_titleSearch','48mcxWgc','psionics','_pImportEntry_pImportToDirectoryGeneric_pGetImportableData','SOURCE_TYP_BREW','SOURCE_TYP_OFFICIAL_ALL','isToken','_pImportEntry_pImportToDirectoryGeneric','sourceJsonToColor','4wECWgF','absorbFnBindListeners','order','TASK_EXIT_COMPLETE','16194jQsnNQ','isStreamerMode','sourceLong','DataSourceFile','Order','_pImportEntry_pImportToActor','pGetHomebrewSources','psionic','20695VBgGin','_isPreviewable','_actor','pGetSources','3487yWHAKC','9244VzARHS','_content','DataSourceUrl','getData','mutateForFilters','DATA_URL_PSIONICS','SRD','absorbFnBindListenersRadio','pGetPsionicItems','SOURCE_TYP_CUSTOM','PG_PSIONICS','Importing\x20psionic\x20\x22','41wTLMyk','absorbFnGetData','Custom\x20URL','type','5etools'];const _0x1c61=function(_0x2d8046,_0x8b594c){_0x2d8046=_0x2d8046-0x1af;let _0xc4ca33=_0xc4ca[_0x2d8046];return _0xc4ca33;};const _0xe06b7=_0x1c61;(function(_0x1e5309,_0x3a8f5d){const _0x38b00c=_0x1c61;while(!![]){try{const _0x446363=-parseInt(_0x38b00c(0x1e6))*parseInt(_0x38b00c(0x1ca))+-parseInt(_0x38b00c(0x1d1))*parseInt(_0x38b00c(0x1c2))+-parseInt(_0x38b00c(0x1f3))*-parseInt(_0x38b00c(0x1da))+parseInt(_0x38b00c(0x1cd))+-parseInt(_0x38b00c(0x1ee))*parseInt(_0x38b00c(0x1e2))+-parseInt(_0x38b00c(0x1b6))*-parseInt(_0x38b00c(0x1f2))+-parseInt(_0x38b00c(0x1d2));if(_0x446363===_0x3a8f5d)break;else _0x1e5309['push'](_0x1e5309['shift']());}catch(_0x4cb1e5){_0x1e5309['push'](_0x1e5309['shift']());}}}(_0xc4ca,0x50f08));import{ImportList}from'./ImportList.js';import{Vetools}from'./Vetools.js';import{LGT}from'./Util.js';import{Config}from'./Config.js';import{UtilList2}from'./UtilList2.js';import{DataConverterPsionic}from'./DataConverterPsionic.js';import{UtilApplications}from'./UtilApplications.js';import{UtilDataSource}from'./UtilDataSource.js';class ImportListPsionic extends ImportList{static['init'](){const _0x937bc3=_0x1c61;this[_0x937bc3(0x1d5)]({'prop':_0x937bc3(0x1ed),'importerName':_0x937bc3(0x1c7)});}constructor(_0x553e71){const _0xed6893=_0x1c61;_0x553e71=_0x553e71||{},super({'title':_0xed6893(0x1c4)},_0x553e71,{'props':[_0xed6893(0x1ed)],'titleSearch':_0xed6893(0x1db),'sidebarTab':'items','gameProp':_0xed6893(0x1cb),'defaultFolderPath':['Psionics'],'folderType':_0xed6893(0x1d7),'pageFilter':new PageFilterPsionics(),'page':UrlUtil[_0xed6893(0x1b4)],'isPreviewable':!![],'isDedupable':!![]});}async[_0xe06b7(0x1f1)](){const _0x4b6a06=_0xe06b7;return[new UtilDataSource[(_0x4b6a06(0x1f5))](Config[_0x4b6a06(0x1c3)]('ui',_0x4b6a06(0x1e7))?_0x4b6a06(0x1b0):_0x4b6a06(0x1ba),Vetools[_0x4b6a06(0x1af)],{'filterTypes':[UtilDataSource[_0x4b6a06(0x1de)]],'isDefault':!![]}),new UtilDataSource[(_0x4b6a06(0x1f5))](_0x4b6a06(0x1b8),'',{'filterTypes':[UtilDataSource[_0x4b6a06(0x1b3)]]}),new UtilDataSource[(_0x4b6a06(0x1e9))](_0x4b6a06(0x1c8),{'filterTypes':[UtilDataSource[_0x4b6a06(0x1b3)]]}),...(await Vetools[_0x4b6a06(0x1ec)](_0x4b6a06(0x1ed)))[_0x4b6a06(0x1d8)](({name:_0x3eb91,url:_0x4d7c14})=>new UtilDataSource['DataSourceUrl'](_0x3eb91,_0x4d7c14,{'filterTypes':[UtilDataSource[_0x4b6a06(0x1dd)]]}))];}[_0xe06b7(0x1f6)](){const _0x422e55=_0xe06b7;return{'isPreviewable':this[_0x422e55(0x1ef)],'titleButtonRun':this['_titleButtonRun'],'titleSearch':this[_0x422e55(0x1d9)],'cols':[{'name':'Name','width':0x4,'field':_0x422e55(0x1bf)},{'name':'Type','width':0x3,'field':_0x422e55(0x1b9)},{'name':_0x422e55(0x1ea),'width':0x3,'field':_0x422e55(0x1e4)},{'name':'Source','width':0x1,'field':_0x422e55(0x1c9),'titleProp':_0x422e55(0x1e8),'displayProp':'sourceShort','classNameProp':_0x422e55(0x1c0),'rowClassName':'text-center'}],'rows':this['_content'][_0x422e55(0x1d8)]((_0xf4e1db,_0x20eae4)=>{const _0x2ab260=_0x422e55;return this['_pageFilter']['constructor'][_0x2ab260(0x1f7)](_0xf4e1db),{'name':_0xf4e1db[_0x2ab260(0x1bf)],'type':Parser[_0x2ab260(0x1c5)](_0xf4e1db[_0x2ab260(0x1b9)])[_0x2ab260(0x1c6)],'order':_0xf4e1db['_fOrder'],'source':_0xf4e1db['source'],'sourceShort':Parser[_0x2ab260(0x1c1)](_0xf4e1db[_0x2ab260(0x1c9)]),'sourceLong':Parser['sourceJsonToFull'](_0xf4e1db[_0x2ab260(0x1c9)]),'sourceClassName':Parser[_0x2ab260(0x1e1)](_0xf4e1db['source']),'ix':_0x20eae4};})};}['_activateListeners_absorbListItems'](){const _0x5d3bd2=_0xe06b7;this[_0x5d3bd2(0x1d0)]['doAbsorbItems'](this[_0x5d3bd2(0x1f4)],{'fnGetName':_0x3fccf3=>_0x3fccf3[_0x5d3bd2(0x1bf)],'fnGetValues':_0x186ce2=>({'source':_0x186ce2[_0x5d3bd2(0x1c9)],'type':Parser['psiTypeToMeta'](_0x186ce2[_0x5d3bd2(0x1b9)])[_0x5d3bd2(0x1bd)],'order':_0x186ce2[_0x5d3bd2(0x1d4)],'hash':UrlUtil[_0x5d3bd2(0x1cc)][this['_page']](_0x186ce2)}),'fnGetData':UtilList2[_0x5d3bd2(0x1b7)],'fnBindListeners':_0x453086=>this[_0x5d3bd2(0x1bb)]?UtilList2[_0x5d3bd2(0x1b1)](this['_list'],_0x453086):UtilList2[_0x5d3bd2(0x1e3)](this[_0x5d3bd2(0x1d0)],_0x453086)});}async[_0xe06b7(0x1ce)](_0x3fc0c4,_0x2baa2e){const _0x1557d5=_0xe06b7;_0x2baa2e=_0x2baa2e||{},console[_0x1557d5(0x1d6)](...LGT,_0x1557d5(0x1b5)+_0x3fc0c4['name']+_0x1557d5(0x1bc)+Parser[_0x1557d5(0x1c1)](_0x3fc0c4[_0x1557d5(0x1c9)])+'\x22)');if(_0x2baa2e[_0x1557d5(0x1cf)])return this[_0x1557d5(0x1e0)](_0x3fc0c4,_0x2baa2e);else{if(this[_0x1557d5(0x1f0)])return this[_0x1557d5(0x1eb)](_0x3fc0c4,_0x2baa2e);else return this[_0x1557d5(0x1e0)](_0x3fc0c4,_0x2baa2e);}}async[_0xe06b7(0x1eb)](_0x3884f4,_0x121062){const _0x224cfb=_0xe06b7,_0x13e376=await DataConverterPsionic[_0x224cfb(0x1b2)](_0x3884f4,{'filterValues':_0x121062['filterValues']});await this[_0x224cfb(0x1f0)]['createEmbeddedDocuments'](_0x224cfb(0x1d7),_0x13e376,{});if(this[_0x224cfb(0x1f0)][_0x224cfb(0x1df)])this[_0x224cfb(0x1f0)][_0x224cfb(0x1be)][_0x224cfb(0x1d3)]();return{'imported':[{'name':_0x3884f4[_0x224cfb(0x1bf)],'actor':this[_0x224cfb(0x1f0)]}],'status':UtilApplications[_0x224cfb(0x1e5)]};}[_0xe06b7(0x1dc)](_0x397140,_0x497ad1){return DataConverterPsionic['pGetPsionicItem'](_0x397140,_0x497ad1);}}export{ImportListPsionic};
+import {ImportedDocument, ImportList, ImportSummary} from "./ImportList.js";
+import {Vetools} from "./Vetools.js";
+import {LGT} from "./Util.js";
+import {Config} from "./Config.js";
+import {UtilList2} from "./UtilList2.js";
+import {DataConverterPsionic} from "./DataConverterPsionic.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {UtilDataSource} from "./UtilDataSource.js";
+import {UtilActors} from "./UtilActors.js";
+
+class ImportListPsionic extends ImportList {
+	// region External
+	static init () {
+		this._initCreateSheetItemHook({
+			prop: "psionic",
+			importerName: "Psionic",
+		});
+	}
+	// endregion
+
+	constructor (externalData) {
+		externalData = externalData || {};
+		super(
+			{title: "Import Psionics"},
+			externalData,
+			{
+				props: ["psionic"],
+				dirsHomebrew: ["psionic"],
+				titleSearch: "psionics",
+				sidebarTab: "items",
+				gameProp: "items",
+				defaultFolderPath: ["Psionics"],
+				pageFilter: new PageFilterPsionics(),
+				page: UrlUtil.PG_PSIONICS,
+				isPreviewable: true,
+				isDedupable: true,
+				configGroup: "importPsionic",
+			},
+		);
+	}
+
+	async pGetSources () {
+		return [
+			new UtilDataSource.DataSourceUrl(
+				Config.get("ui", "isStreamerMode") ? "SRD" : "5etools",
+				Vetools.DATA_URL_PSIONICS,
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_OFFICIAL_ALL],
+					isDefault: true,
+				},
+			),
+			new UtilDataSource.DataSourceUrl(
+				"Custom URL",
+				"",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			new UtilDataSource.DataSourceFile(
+				"Upload File",
+				{
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			...(await this._pGetSourcesHomebrew()),
+		];
+	}
+
+	getData () {
+		return {
+			isPreviewable: this._isPreviewable,
+			titleButtonRun: this._titleButtonRun,
+			titleSearch: this._titleSearch,
+			cols: [
+				{
+					name: "Name",
+					width: 4,
+					field: "name",
+				},
+				{
+					name: "Type",
+					width: 3,
+					field: "type",
+				},
+				{
+					name: "Order",
+					width: 3,
+					field: "order",
+				},
+				{
+					name: "Source",
+					width: 1,
+					field: "source",
+					titleProp: "sourceLong",
+					displayProp: "sourceShort",
+					classNameProp: "sourceClassName",
+					styleProp: "sourceStyle",
+					rowClassName: "text-center",
+				},
+			],
+			rows: this._content.map((it, ix) => {
+				this._pageFilter.constructor.mutateForFilters(it);
+
+				return {
+					name: it.name,
+					type: Parser.psiTypeToMeta(it.type).short,
+					order: it._fOrder,
+					source: it.source,
+					sourceShort: Parser.sourceJsonToAbv(it.source),
+					sourceLong: Parser.sourceJsonToFull(it.source),
+					sourceClassName: Parser.sourceJsonToColor(it.source),
+					sourceStyle: BrewUtil.sourceJsonToStylePart(it.source),
+					ix,
+				};
+			}),
+		};
+	}
+
+	_activateListeners_absorbListItems () {
+		this._list.doAbsorbItems(
+			this._content,
+			{
+				fnGetName: it => it.name,
+				// values used for sorting/search
+				fnGetValues: it => ({
+					source: it.source,
+					type: Parser.psiTypeToMeta(it.type).full,
+					order: it._fOrder,
+					hash: UrlUtil.URL_TO_HASH_BUILDER[this._page](it),
+				}),
+				fnGetData: UtilList2.absorbFnGetData,
+				fnBindListeners: it => this._isRadio
+					? UtilList2.absorbFnBindListenersRadio(this._list, it)
+					: UtilList2.absorbFnBindListeners(this._list, it),
+			},
+		);
+	}
+
+	/**
+	 * @param psi
+	 * @param importOpts Options object.
+	 * @param [importOpts.isTemp] if the item should be temporary, and displayed.
+	 * @param [importOpts.filterValues] Saved filter values to be used instead of our own.
+	 */
+	async _pImportEntry (psi, importOpts) {
+		importOpts = importOpts || {};
+
+		console.log(...LGT, `Importing psionic "${psi.name}" (from "${Parser.sourceJsonToAbv(psi.source)}")`);
+
+		if (importOpts.isTemp) return this._pImportEntry_pImportToDirectoryGeneric(psi, importOpts);
+		if (this._actor) return this._pImportEntry_pImportToActor(psi, importOpts);
+		return this._pImportEntry_pImportToDirectoryGeneric(psi, importOpts);
+	}
+
+	async _pImportEntry_pImportToActor (psi, importOpts) {
+		const allItems = await DataConverterPsionic.pGetPsionicItems(psi, {filterValues: importOpts.filterValues});
+		await UtilActors.pAddActorItems(this._actor, allItems);
+		if (this._actor.isToken) this._actor.sheet.render();
+
+		return new ImportSummary({
+			status: UtilApplications.TASK_EXIT_COMPLETE,
+			imported: [
+				new ImportedDocument({
+					name: psi.name,
+					actor: this._actor,
+				}),
+			],
+		});
+	}
+
+	_pImportEntry_pImportToDirectoryGeneric_pGetImportableData (it, getItemOpts) {
+		return DataConverterPsionic.pGetPsionicItem(it, getItemOpts);
+	}
+}
+
+export {ImportListPsionic};

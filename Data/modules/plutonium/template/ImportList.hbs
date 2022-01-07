@@ -7,6 +7,7 @@
 			<div class="lst__wrp-search-glass no-events flex-vh-center"><span class="glyphicon glyphicon-search"></span></div>
 			<div class="lst__wrp-search-visible no-events flex-vh-center"></div>
 		</div>
+		<button class="btn-5et veapp__btn-list-feeling-lucky flex-vh-center" name="btn-feeling-lucky" title="Feeling Lucky?"><span class="glyphicon glyphicon-random"></span></button>
 		<button class="btn-5et veapp__btn-list-reset" name="btn-reset">Reset</button>
 	</div>
 
@@ -31,7 +32,7 @@
 	<div class="veapp__list mb-1 h-100">
 		{{#each rows}}
 			<div class="w-100 flex-col no-shrink veapp__list-row">
-				<label class="w-100 veapp__list-row-hoverable flex-v-center">
+				<label class="w-100 veapp__list-row-hoverable flex-v-center {{#if isVersion}}ve-muted{{/if}}">
 					<span class="{{#if ../isPreviewable}}col-0-4{{else}}col-1{{/if}} px-1 flex-vh-center">
 						{{#if ../isRadio}}
 							<input type="radio" name="radio" class="no-events">
@@ -42,7 +43,7 @@
 
 					{{#if ../isPreviewable}}
 						<div class="col-0-6 px-1 flex-vh-center">
-							<div class="ui-list__btn-inline" title="Toggle Preview">[+]</div>
+							<div class="ui-list__btn-inline" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
 							<div class="ui-list__btn-inline" title="Import">[&#10151;]</div>
 						</div>
 					{{/if}}
@@ -50,7 +51,7 @@
 					{{#each ../cols}}
 						<span
 								class="px-1 col-{{width}} {{#if rowClassName}}{{rowClassName}}{{/if}} {{#if classNameProp}}{{{lookup .. classNameProp}}}{{/if}}"
-								{{#if titleProp}}title="{{lookup .. titleProp}}"{{/if}}
+								{{#if titleProp}}title="{{lookup .. titleProp}}"{{/if}} {{#if styleProp}}{{#if (lookup .. styleProp)}}style="{{lookup .. styleProp}}"{{/if}}{{/if}}
 						>
 							{{#if displayProp}}{{{lookup .. displayProp}}}{{else}}{{{lookup .. field}}}{{/if}}
 						</span>

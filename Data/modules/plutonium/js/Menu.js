@@ -1,1 +1,100 @@
-const _0x1d14=['</span></a>','css','forEach','escapeQuotes','mouseup','_$wrpMenu','_OPEN_MENUS','render','title=\x22','preventDefault','mouseup.','_pHandleOpenButtonClick','delete','getClientX','body','off','add','click.','3SzOFTB','215893zNyZsx','streamerName','_toolsList','11PBirhQ','remove','7388aEcBeh','title','<div\x20class=\x22veapp-ctx-menu__spacer\x20','length','fnCheckRequirements','appendTo','_direction','getClientY','36LBYjKt','177bpekAG','height','direction','399214mIIWcy','get','2309CYlgeX','1TrqcQF','339513kWDeVk','_closeMenu','Class','additionalClassesPreSpacer','_pOpenMenu','push','1559AOyoyE','\x22></div>','closeAllMenus','map','><span\x20class=\x22fas\x20','iconClass','_eventNamespace','\x20mr-1\x22></span><span>','<a\x20class=\x22veapp-ctx-menu__item\x20m-1\x20flex-v-center\x20px-1\x20','filter','width','295387WNQHjY','toolsList'];const _0x21c5=function(_0x408fbb,_0x786b3a){_0x408fbb=_0x408fbb-0xd3;let _0x1d14fe=_0x1d14[_0x408fbb];return _0x1d14fe;};const _0x1a9208=_0x21c5;(function(_0x48da45,_0x25771a){const _0x36d1b7=_0x21c5;while(!![]){try{const _0x1089d8=-parseInt(_0x36d1b7(0x107))*-parseInt(_0x36d1b7(0x106))+-parseInt(_0x36d1b7(0xff))*parseInt(_0x36d1b7(0xf7))+parseInt(_0x36d1b7(0x10d))*parseInt(_0x36d1b7(0x100))+-parseInt(_0x36d1b7(0xdd))+-parseInt(_0x36d1b7(0xf2))*-parseInt(_0x36d1b7(0xf1))+parseInt(_0x36d1b7(0xf5))*parseInt(_0x36d1b7(0x105))+-parseInt(_0x36d1b7(0x103));if(_0x1089d8===_0x25771a)break;else _0x48da45['push'](_0x48da45['shift']());}catch(_0x47b4a6){_0x48da45['push'](_0x48da45['shift']());}}}(_0x1d14,0x5011d));import{Config}from'./Config.js';class Menu{constructor(_0x5ed8fe){const _0x14baf2=_0x21c5;this[_0x14baf2(0xd8)]=_0x5ed8fe['eventNamespace'],this['_toolsList']=_0x5ed8fe[_0x14baf2(0xde)],this['_direction']=_0x5ed8fe[_0x14baf2(0x102)],this[_0x14baf2(0xe4)]=null;}[_0x1a9208(0x108)](_0x2e7fac){const _0x1f2587=_0x1a9208;if(_0x2e7fac)_0x2e7fac[_0x1f2587(0xe8)]();this['_$wrpMenu'][_0x1f2587(0xf6)](),$(document[_0x1f2587(0xed)])[_0x1f2587(0xee)](_0x1f2587(0xf0)+this[_0x1f2587(0xd8)]),Menu[_0x1f2587(0xe5)][_0x1f2587(0xeb)](this);}async[_0x1a9208(0x10b)](_0x459ecb,..._0x5a6ed5){const _0x539eae=_0x1a9208;Menu[_0x539eae(0xd4)](),Menu[_0x539eae(0xe5)][_0x539eae(0xef)](this);const _0x5d5443=[];this[_0x539eae(0xf4)][_0x539eae(0xdb)](_0x5c3a06=>!_0x5c3a06||!_0x5c3a06[_0x539eae(0xfb)]||_0x5c3a06[_0x539eae(0xfb)](..._0x5a6ed5))[_0x539eae(0xe1)]((_0x2e8071,_0x3a7ee1)=>{const _0x5c4b17=_0x539eae;if(_0x3a7ee1!==0x0)_0x5d5443[_0x5c4b17(0x10c)]($(_0x5c4b17(0xf9)+(_0x2e8071?.[_0x5c4b17(0x10a)]||'')+_0x5c4b17(0xd3)));if(!_0x2e8071)return;const _0x5700d7=_0x2e8071['streamerName']&&Config[_0x5c4b17(0x104)]('ui','isStreamerMode')?_0x2e8071[_0x5c4b17(0xf3)]:_0x2e8071['name'],_0x1e0eca=$(_0x5c4b17(0xda)+(_0x2e8071['additionalClassesButton']||'')+'\x22\x20'+(_0x2e8071[_0x5c4b17(0xf8)]?_0x5c4b17(0xe7)+_0x2e8071[_0x5c4b17(0xf8)][_0x5c4b17(0xe2)]()+'\x22':'')+_0x5c4b17(0xd6)+_0x2e8071[_0x5c4b17(0xd7)]+_0x5c4b17(0xd9)+_0x5700d7+_0x5c4b17(0xdf))[_0x5c4b17(0xe3)](_0x71ac4=>{const _0xf035cd=_0x5c4b17;this[_0xf035cd(0x108)](_0x71ac4),this[_0xf035cd(0xea)](_0x71ac4,_0x2e8071,..._0x5a6ed5);});_0x5d5443[_0x5c4b17(0x10c)](_0x1e0eca);}),$(document[_0x539eae(0xed)])['on'](_0x539eae(0xe9)+this[_0x539eae(0xd8)],()=>{const _0x5d3361=_0x539eae;this[_0x5d3361(0x108)]();}),this[_0x539eae(0xe4)]=$$`<div class="veapp-ctx-menu__wrp flex-col">${_0x5d5443}</div>`[_0x539eae(0xfc)](document['body']);const _0x2b3833=this[_0x539eae(0xe4)][_0x539eae(0xdc)]();if(this[_0x539eae(0xfd)]==='up'){const _0x2009a3=this[_0x539eae(0xe4)][_0x539eae(0x101)]();this[_0x539eae(0xe4)][_0x539eae(0xe0)]({'top':EventUtil[_0x539eae(0xfe)](_0x459ecb)-_0x2009a3+0x4,'left':EventUtil[_0x539eae(0xec)](_0x459ecb)-_0x2b3833+0x4});}else{let _0x1953e5=EventUtil[_0x539eae(0xec)](_0x459ecb)-0x10;if(EventUtil[_0x539eae(0xec)](_0x459ecb)+_0x2b3833>window['innerWidth'])_0x1953e5-=_0x2b3833-0x20;this[_0x539eae(0xe4)][_0x539eae(0xe0)]({'top':EventUtil['getClientY'](_0x459ecb)-0xa,'left':_0x1953e5});}}async[_0x1a9208(0xea)](_0x40f595,_0x574d2b,..._0x1e59d5){const _0x92c69e=_0x1a9208,_0x3ea5e0=new _0x574d2b[(_0x92c69e(0x109))](..._0x1e59d5);if(_0x3ea5e0['pInit'])await _0x3ea5e0['pInit']();_0x3ea5e0[_0x92c69e(0xe6)](!![]);}static[_0x1a9208(0xd4)](){const _0x4fb495=_0x1a9208;return!![...Menu[_0x4fb495(0xe5)]][_0x4fb495(0xd5)](_0x13157a=>_0x13157a[_0x4fb495(0x108)]())[_0x4fb495(0xfa)];}}Menu[_0x1a9208(0xe5)]=new Set();export{Menu};
+import {Config} from "./Config.js";
+
+/**
+ * Base class for context menus.
+ */
+class Menu {
+	/**
+	 * @param opts
+	 * @param opts.eventNamespace
+	 * @param opts.toolsList
+	 * @param [opts.direction]
+	 * @param [opts.fnHandleToolClick]
+	 */
+	constructor (opts) {
+		this._eventNamespace = opts.eventNamespace;
+		this._toolsList = opts.toolsList;
+		this._direction = opts.direction;
+
+		this._$wrpMenu = null;
+	}
+
+	_closeMenu (evt) {
+		if (evt) evt.preventDefault();
+		this._$wrpMenu.remove();
+		$(document.body).off(`click.${this._eventNamespace}`);
+		Menu._OPEN_MENUS.delete(this);
+	}
+
+	_getFilteredToolList (toolArgs) {
+		let availableToolList = this._toolsList.filter(it => !it || !it.fnCheckRequirements || it.fnCheckRequirements(...toolArgs));
+
+		// Trim trailing/leading nully values; ensure no double-null values
+		while (availableToolList.length && !availableToolList[0]) availableToolList.shift();
+		while (availableToolList.length && !availableToolList.last()) availableToolList.pop();
+
+		let prevVal = null;
+		availableToolList = availableToolList.filter(it => {
+			if (it == null && prevVal == null) return false;
+			prevVal = it;
+			return true;
+		});
+
+		return availableToolList;
+	}
+
+	async _pOpenMenu (evt, ...toolArgs) {
+		// Clean up any previous menus
+		Menu.closeAllMenus();
+
+		Menu._OPEN_MENUS.add(this);
+
+		const $eles = [];
+		this._getFilteredToolList(toolArgs).forEach((toolMeta, i) => {
+			if (i !== 0) $eles.push($(`<div class="veapp-ctx-menu__spacer ${toolMeta?.additionalClassesPreSpacer || ""}"></div>`));
+
+			if (!toolMeta) return;
+
+			const displayName = toolMeta.streamerName && Config.get("ui", "isStreamerMode") ? toolMeta.streamerName : toolMeta.name;
+
+			const $btnOpen = $(`<a class="veapp-ctx-menu__item m-1 flex-v-center px-1 ${toolMeta.additionalClassesButton || ""}" ${toolMeta.title ? `title="${toolMeta.title.escapeQuotes()}"` : ""}>${toolMeta.getIcon ? toolMeta.getIcon() : `<i class="fas fa-fw ${toolMeta.iconClass}"></i>`}<span class="ml-1">${displayName}</span></a>`)
+				.mouseup(evt => {
+					this._closeMenu(evt);
+					this._pHandleOpenButtonClick(evt, toolMeta, ...toolArgs);
+				});
+
+			$eles.push($btnOpen);
+		});
+
+		$(document.body).on(`mouseup.${this._eventNamespace}`, () => {
+			this._closeMenu();
+		});
+
+		this._$wrpMenu = $$`<div class="veapp-ctx-menu__wrp flex-col">${$eles}</div>`
+			.appendTo(document.body);
+
+		const w = this._$wrpMenu.width();
+		if (this._direction === "up") {
+			const h = this._$wrpMenu.height();
+			this._$wrpMenu.css({top: EventUtil.getClientY(evt) - h + 4, left: EventUtil.getClientX(evt) - w + 4});
+		} else {
+			let left = EventUtil.getClientX(evt) - 16;
+			if (EventUtil.getClientX(evt) + w > window.innerWidth) left -= w - 32;
+			this._$wrpMenu.css({top: EventUtil.getClientY(evt) - 10, left});
+		}
+	}
+
+	async _pHandleOpenButtonClick (evt, toolMeta, ...toolArgs) {
+		const tool = new toolMeta.Class(...toolArgs);
+		if (tool.pInit) await tool.pInit();
+		tool.render(true);
+	}
+
+	/** Close all menus, returning `true` if any were closed, `false` otherwise. */
+	static closeAllMenus () {
+		return !![...Menu._OPEN_MENUS].map(it => it._closeMenu()).length;
+	}
+}
+Menu._OPEN_MENUS = new Set();
+
+export {Menu};

@@ -1,11 +1,9 @@
 <div class="flex-col ve-window min-h-0 h-100">
 	{{#unless isLegacy}}
-		<div>
-			<p>Worlds can no longer be imported via this tool. These worlds were/are community-created, and discussing them in relation to this module is prohibited, for the safety of both communities.</p>
-			<p>Please <a href="{{supportUrl}}">visit the Worlds Discord server</a> to get answers for your questions, concerns, and support requests.</p>
+		<div class="flex-col">
+			{{{nonLegacyHeader}}}
+			<hr class="hr-2">
 		</div>
-
-		<hr class="hr-2">
 	{{/unless}}
 
 	<div class="flex-v-stretch input-group input-group--top no-shrink">
@@ -20,13 +18,11 @@
 	<div class="flex-v-stretch input-group input-group--bottom mb-1 no-shrink" data-name="wrp-btns-sort">
 		<button class="btn-5et col-0-5 px-1" disabled></button>
 		<button class="btn-5et col-4-5 px-1 sort" data-sort="name">Name</button>
-		<button class="btn-5et {{#if isLegacy}}col-3-8{{else}}col-5{{/if}} px-1 sort" data-sort="author">Authors</button>
+		<button class="btn-5et col-3-8 px-1 sort" data-sort="author">Authors</button>
 		<button class="btn-5et col-1 px-1" disabled title="Version">Ver.</button>
 		<button class="btn-5et col-1 px-1" disabled title="Size">Sz.</button>
-		{{#if isLegacy}}
-			<button class="btn-5et col-0-6 px-1 sort" data-sort="module" title="Has Module">Mod.</button>
-			<button class="btn-5et col-0-6 px-1 sort" data-sort="world" title="Has World">Wld.</button>
-		{{/if}}
+		<button class="btn-5et col-0-6 px-1 sort" data-sort="module" title="Has Module">Mod.</button>
+		<button class="btn-5et col-0-6 px-1 sort" data-sort="world" title="Has World">Wld.</button>
 	</div>
 
 	<div class="flex-col h-100 min-h-0 veapp__list">
@@ -35,24 +31,17 @@
 				<span class="col-0-5 px-1 flex-vh-center"><input type="radio" name="radio" class="no-events"></span>
 
 				<span class="px-1 col-4-5">{{name}}</span>
-				<span class="px-1 {{#if isLegacy}}col-3-8{{else}}col-5{{/if}} text-clip-ellipsis" title="{{join _lAuthor ", "}}">{{join _lAuthor ", "}}</span>
+				<span class="px-1 col-3-8 text-clip-ellipsis" title="{{join _lAuthor ", "}}">{{join _lAuthor ", "}}</span>
 				<span class="px-1 col-1 ve-small text-center">{{version}}</span>
 				<span class="px-1 col-1 ve-small code text-center" title="{{_sizeHumanReadableTitle}}">{{_sizeHumanReadable}}</span>
-
-				{{#if ../isLegacy}}
-					<span class="px-1 col-0-6 text-center">{{#if manifesturlModule}}<span class="veapp__msg-warning fas fa-check" title="Available as Module"></span>{{else}}{{/if}}</span>
-					<span class="px-1 col-0-6 text-center">{{#if manifesturlWorld}}<span class="veapp__msg-warning fas fa-check" title="Available as World"></span>{{else}}{{/if}}</span>
-				{{/if}}
+				<span class="px-1 col-0-6 text-center">{{#if manifesturlModule}}<span class="veapp__msg-warning fas fa-fw fa-check" title="Available as Module"></span>{{else}}{{/if}}</span>
+				<span class="px-1 col-0-6 text-center">{{#if manifesturlWorld}}<span class="veapp__msg-warning fas fa-fw fa-check" title="Available as World"></span>{{else}}{{/if}}</span>
 			</label>
 		{{/each}}
 	</div>
 
 	<div class="no-shrink flex-v-center">
-		{{#if isLegacy}}
-			<button class="btn-5et w-50 mr-2" name="btn-run--module">Import as Module</button>
-			<button class="btn-5et w-50" name="btn-run--world">Import as World</button>
-		{{else}}
-			<button class="btn-5et" name="btn-run--module">Import Module</button>
-		{{/if}}
+		<button class="btn-5et w-50 mr-2" name="btn-run--module">Import as Module</button>
+		<button class="btn-5et w-50" name="btn-run--world">Import as World</button>
 	</div>
 </div>

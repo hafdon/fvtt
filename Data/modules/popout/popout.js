@@ -131,6 +131,13 @@ class PopoutModule {
   }
 
   async addPopout(app) {
+    if (
+      app._disable_popout_module !== undefined &&
+      app._disable_popout_module
+    ) {
+      this.log("Ignoring app marked as do not popout", app);
+      return;
+    }
     if (this.poppedOut.has(app.appId)) {
       this.log("Already popped out");
       this.poppedOut.get(app.appId).window.focus();
@@ -220,10 +227,10 @@ class PopoutModule {
     const deadline = Date.now() - 1000; // Last click happened within the last second
     for (let state of this.poppedOut.values()) {
       if (state.window._popout_last_click > deadline) {
-        this.log("Intercepting likely dialog of popped out window.", app);
         // We only nest popout intercepted application if they extend the Dialog class.
         // eslint-disable-next-line no-undef
         if (app instanceof Dialog) {
+          this.log("Intercepting likely dialog of popped out window.", app);
           this.moveDialog(app, state.app);
           return true;
         }
@@ -254,12 +261,22 @@ class PopoutModule {
     node.style.top = "50%";
     node.style.left = "50%";
     node.style.transform = "translate(-50%, -50%)";
+    parentApp.element[0].style.zIndex = 0;
 
     // We manually intercept the setPosition function of the dialog app in
     // order to handle re-renders that change the position.
     // In particular the FilePicker application.
     // eslint-disable-next-line no-unused-vars
-    app.setPosition = (args) => {
+
+    const oldClose = app.close.bind(app);
+    const oldSetPosition = app.setPosition.bind(app);
+    app.close = (...args) => {
+      this.log("Intercepted dialog close, fixing setPosition.", app);
+      app.setPosition = oldSetPosition;
+      return oldClose.apply(app, args);
+    };
+
+    app.setPosition = () => {
       this.log("Intercepted dialog setting position", app.constructor.name);
     };
 
@@ -501,6 +518,7 @@ class PopoutModule {
         this.log("Closing popout", app.title);
         app.position = poppedOut.position; // Set the original position.
         app._minimized = poppedOut.minimized;
+        app.bringToTop = poppedOut.bringToTop;
         app.render = poppedOut.render;
         app.minimize = poppedOut.minimize;
         app.maximize = poppedOut.maximize;
@@ -641,37 +659,51 @@ class PopoutModule {
 
     // -------------------- Install intercept methods ----------------
 
-    const oldRender = app.render.bind(app);
-    app.render = (force, options) => {
+    const oldBringToTop = app.bringToTop.bind(app);
+    app.bringToTop = (...args) => {
+      this.log("Intercepted popout bringToTop", app);
       popout.focus();
-      oldRender(force, options);
+      const result = oldBringToTop.apply(app, args);
+      // In a popout we always want the base sheet to be at the back.
+      app.element[0].style.zIndex = 0;
+      return result;
+    };
+
+    const oldRender = app.render.bind(app);
+    app.render = (...args) => {
+      this.log("Intercepted popout render", app);
+      popout.focus();
+      return oldRender.apply(app, args);
     };
 
     const oldClose = app.close.bind(app);
-    app.close = function () {
+    app.close = (...args) => {
+      this.log("Intercepted popout close.", app);
       // Prevent closing of popped out windows with ESC in main page
       if (game.keyboard.isDown("Escape")) return; // eslint-disable-line no-undef
       popout.close();
+      return oldClose.apply(app, args);
     };
 
     const oldMinimize = app.minimize.bind(app);
-    app.minimize = () => {
-      this.log("Trying to focus main window."); // Doesn't appear to work due to popout blockers.
+    app.minimize = (...args) => {
+      this.log("Trying to focus main window.", app); // Doesn't appear to work due to popout blockers.
       popout._rootWindow.focus();
       if (popout._rootWindow.getAttention) {
         popout._rootWindow.getAttention();
       }
-      oldMinimize();
+      return oldMinimize.apply(app, args);
     };
 
     const oldMaximize = app.maximize.bind(app);
-    app.maximize = () => {
+    app.maximize = (...args) => {
       popout.focus();
-      this.log("Trying to focus popout.", app.appId);
-      oldMaximize();
+      this.log("Trying to focus popout.", popout);
+      return oldMaximize.apply(app, args);
     };
 
     state.window = popout;
+    state.bringToTop = oldBringToTop;
     state.render = oldRender;
     state.minimize = oldMinimize;
     state.maximize = oldMaximize;
@@ -701,7 +733,9 @@ Hooks.on("ready", () => {
       if (app.pdfData && app.pdfData.url !== undefined) {
         app.open(app.pdfData.url, app.pdfData.offset);
       }
-      app.onViewerReady();
+      if (app.onViewerReady !== undefined) {
+        app.onViewerReady();
+      }
     }
     return;
   });

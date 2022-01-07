@@ -21,9 +21,12 @@
 	"TIDY5E.Exhaustion5": "Geschwindigkeit auf 0 reduziert",
 	"TIDY5E.Exhaustion6": "Tod",
 
+	"TIDY5E.AbbrInitiative": "Ini",
+
 	"TIDY5E.RestHint": "Rasten",
 	"TIDY5E.RestS": "Kurze Rast",
 	"TIDY5E.RestL": "Lange Rast",
+	"TIDY5E.HitDiceRollAverage": "Rechtsklick: Durchschnitt",
 
 	"TIDY5E.Journal": "Tagebuch",
 
@@ -75,12 +78,6 @@
 	"TIDY5E.Abilities" : "Fähigkeiten",
 
 	"TIDY5E.Environment" : "Umgebung",
-
-	"TIDY5E.CurrencyAbbrCP" : "KM",
-	"TIDY5E.CurrencyAbbrSP" : "SM",
-	"TIDY5E.CurrencyAbbrGP" : "GM",
-	"TIDY5E.CurrencyAbbrEP" : "EM",
-	"TIDY5E.CurrencyAbbrPP" : "PM",
 
 	"TIDY5E.SearchItem" : "Suche Gegenstand",
 	"TIDY5E.SearchSpell" : "Suche Zauber",
@@ -292,5 +289,17 @@
 		"hint" : "Auswahl zwischen 'Aktionen' und 'Attributen'.",
 		"default": "Aktionen",
 		"attributes": "Attribute"
+	},
+	"TIDY5E.Settings.npsSheetWidth" : {
+		"name" : "Standard Breite des NSC Bogens.",
+		"hint" : "Die Breite des NSC Bogens in Pixeln, benötigt ein Neuladen der Seite (standard 740)."
+	},
+	"TIDY5E.Settings.playerSheetWidth" : {
+		"name" : "Standard Breite des Spieler Bogens.",
+		"hint" : "Die Breite des Spieler Bogens in Pixeln, benötigt ein Neuladen der Seite (standard 740)."
+	},
+	"TIDY5E.Settings.vehicleSheetWidth" : {
+		"name" : "Standard Breite des Fahrzeug Bogens.",
+		"hint" : "Die Breite des Fahrzeug Bogens in Pixeln, benötigt ein Neuladen der Seite (standard 740)."
 	}
 }

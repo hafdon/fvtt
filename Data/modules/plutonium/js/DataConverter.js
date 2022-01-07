@@ -1,1 +1,2132 @@
-const _0xe25b=['other','bookOrdinalToAbv','MODULE_NAME','stringify','SYM_UI_SKIP','msak','getImportedEmbed','tokens','book','SORT_INTEGER_DENSITY','splitTagByPipe','player','doApplySavingThrowProficienciesFormDataToActorUpdate','unit','find','disease','conditionals','getFromCache','\x20+\x20','bonus','min','429858GYczID','tuple','hover','))?\x20your\x20(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma)\x20modifier(?:\x20\x5c(minimum\x20of\x20(','physical','short\x20rest','token','getWithDescriptionPlugins','toLowerCase','\x20(Expertise)','reaction','79egKJsW','1355MRgyZb','sourceJsonToAbv','\x22\x20from\x20object','traits','bludgeoning','entity','map','getMappedLanguage','fly','ascSortLower','stripTags','note','739594rSYsRV','9385ILTbyh','number','img','scalarAdd','PG_ITEMS','spell','_getWithDescriptionPlugins_fnPlugin','resources.primary.value','getBookJournals','cond','skillProficiencies','in\x20imported\x20embedded\x20entities','instance','toolProficiencies',')\x5c))?','fnGetMappedItem','scalarAddUnit','burrow','doApplyDamageImmunityFormDataToActorUpdate','toTitleCase','getMovement','doApplyOtherProficienciesFormData','value','getAbilityModNumber','isUseOtherFormulaFieldForSaveHalvesDamage','skills','769iWiyzj','_getAdventureBookJournals','filter','ABIL_ABVS','items','savingThrowProficiencies','pGetAdditionalStarFromFound_','getWalker','isChannelDivinity','add','floor((@abilities.','147mdBCLD','length','actorTraitProp','custom','walk','getItemSource','getDamagePartsAndOtherFormula','ordinal','_getActorDamageResImmVulnConditionImm_addDamageTypesOrConditionTypes','prop','ability','split','now','13fbJLOG','weaponCategory','mode','deepEquals','_getCleanOriginalData_recurse','pFillActorToolProfData','GENERIC_WALKER_ENTRIES_KEY_BLACKLIST','fnGetMappedCustomItem','count','mod','some','WALKER_GENERIC','getCombinedFoundryFlags','sort','actor','set','permission','trim','3026joVSkw','WEAPONS_MARTIAL','\x20([^}]+)}','data','page','renderDepth','\x20*\x20','special','save','getSentences','(Unnamed)','contents','{@dc\x20','getSpeedValue','getFullCondImm','doApplyConditionImmunityFormDataToActorUpdate','29ZbeVEQ','URL_TO_HASH_BUILDER','unitShort','weaponProficiencies','isPageSourceCached','PLUT_CONTEXT','actorTokenMod','attributesHover','getMappedTool','isAddPermission','<div\x20class=\x22w-100\x20overflow-x-hidden\x22>','weaponProf','abilities','includes','_pGetAdditional_fnMatch','doApplyArmorProficienciesFormDataToActorUpdate','name','shields','slashing','_mutActorUpdate_mutFromSideMod','joiner','test','importBook','index','adventure','getAdventureJournals','sideData','pFillActorSkillData','render','pWithPlugin','endsWith','_mutActorUpdate_mutFromSideDataMod','doApplyDamageResistanceFormDataToActorUpdate','replace','75IAkGGr','getDamageTupleMetas','warn','doApplySkillFormDataToActorUpdate','_SOURCE_PAGE_PREFIX_RE','languageProficiencies','get','_mutActorUpdate_mutFromSideTokenMod','data-plut-hover=\x27','getActorDamageResImmVulnConditionImm','VALID_CONDITIONS','string','setEq','_mutActorUpdate_mutFromSideMod_handleProp','simple','_doApplyFormData_doCheckAddCustomItem','doApplyToolProficienciesFormDataToActorUpdate','STR_SEE_CONSOLE','getAttackActionType','_SET_PHYSICAL_DAMAGE','isAddPageNumberToSource','isSkipDescription','</div>','pFillActorVulnerabilityData','conditionImmune','assign','mwak','exec','WEAPONS_SIMPLE','import','withPlugin','getMappedWeaponProficiency','creature','appendIfNotExistsArr','keys','pFillActorLanguageOrToolData','max','resist','abilityDc','attributes','modules/','\x5cd+','source','armorProf','Unhandled\x20mode\x20\x22','SKILL_ABV_TO_FULL','vehicle','fvttType','href','pGetAdditionalData_','padStart','max(','foundryEffects','languages','getFullImmRes','getSourceWithPagePart','WALKER_READONLY_GENERIC','@srd5e.userchar.pb','actorDataMod','isCancelled','pFillActorResistanceData','swim','TERMS_COUNT','rwak','join','_PROPS_DAMAGE_IMM_VULN_RES','\x20pg.\x20','Removed\x20key\x20\x22','ITEM_TYPES_ACTOR_ARMOR','doApplyLanguageProficienciesFormDataToActorUpdate','ITEM_TYPES_ACTOR_TOOLS','pFillActorArmorProfData','getItemActorPassive','importAdventure','_SOURCE_PAGE_PREFIX','pGetIconLookup','SYM_AT','effects','isOrderingPrefixJournalNames','the\x20spell\x27s\x20level','getCombinedFoundryData','flat','summonSpellLevel','getCleanEntityName','pGetUserInput','modeOptions','a\x20number\x20of\x20times\x20equal\x20to(?:\x20(','vulnerable','entries','doApplyWeaponProficienciesFormDataToActorUpdate','proficient','toolProf','setFirstSection','push','pGetWithDescriptionPlugins','pFillActorWeaponProfData','27363SGVWvs','VALID_DAMAGE_TYPES','appendStr','link','getFeatureFlags','_pGetAdditionalStar','scalar','copy','pGetSideData_','collection','pFillActorConditionImmunityData','isSpeedHover','permissions','str','isOnFailSavingThrow','getMappedArmorProficiency','day','getEntryDescription','forEach','piercing','isCached','diseased','slice','error','mutActorUpdate'];const _0x4fc5=function(_0x4bd72e,_0x30b86c){_0x4bd72e=_0x4bd72e-0x100;let _0xe25b3d=_0xe25b[_0x4bd72e];return _0xe25b3d;};const _0x1464dd=_0x4fc5;(function(_0x356e65,_0x599c3d){const _0x32f395=_0x4fc5;while(!![]){try{const _0x4add01=parseInt(_0x32f395(0x199))+parseInt(_0x32f395(0x16b))*parseInt(_0x32f395(0x1e4))+parseInt(_0x32f395(0x206))*parseInt(_0x32f395(0x1cc))+-parseInt(_0x32f395(0x1b1))+-parseInt(_0x32f395(0x1a5))*-parseInt(_0x32f395(0x1a4))+parseInt(_0x32f395(0x1f6))*-parseInt(_0x32f395(0x1d7))+-parseInt(_0x32f395(0x10b))*-parseInt(_0x32f395(0x1b2));if(_0x4add01===_0x599c3d)break;else _0x356e65['push'](_0x356e65['shift']());}catch(_0x438c7d){_0x356e65['push'](_0x356e65['shift']());}}}(_0xe25b,0x6a0ce));import{SharedConsts}from'../shared/SharedConsts.js';import{UtilActors}from'./UtilActors.js';import{Config}from'./Config.js';import{UtilApplications}from'./UtilApplications.js';import{Vetools}from'./Vetools.js';import{Consts}from'./Consts.js';import{Charactermancer_SkillProficiencySelect,Charactermancer_LanguageProficiencySelect,Charactermancer_ToolProficiencySelect,Charactermancer_ArmorProficiencySelect,Charactermancer_WeaponProficiencySelect,Charactermancer_LanguageToolProficiencySelect,Charactermancer_ConditionImmunitySelect,Charactermancer_DamageVulnerabilitySelect,Charactermancer_DamageResistanceSelect,Charactermancer_DamageImmunitySelect}from'./UtilCharactermancer.js';import{LGT,Util}from'./Util.js';import{UtilCompat}from'./UtilCompat.js';class DataConverter{static['getNameWithSourcePart'](_0x46585a,{displayName:displayName=null,isActorItem:isActorItem=![]}={}){const _0x330d45=_0x4fc5;return''+(displayName||Renderer[_0x330d45(0x1af)](_0x46585a['_displayName']||_0x46585a[_0x330d45(0x216)]||''))+(!isActorItem&&_0x46585a[_0x330d45(0x135)]&&Config[_0x330d45(0x111)](_0x330d45(0x128),'isAddSourceToName')?'\x20('+Parser['sourceJsonToAbv'](_0x46585a[_0x330d45(0x135)])+')':'');}static[_0x1464dd(0x142)](_0x36004c){const _0x1c1872=_0x1464dd;return''+Parser[_0x1c1872(0x1a6)](_0x36004c[_0x1c1872(0x135)])+(Config[_0x1c1872(0x111)](_0x1c1872(0x128),_0x1c1872(0x11f))&&_0x36004c['page']?''+DataConverter[_0x1c1872(0x155)]+_0x36004c[_0x1c1872(0x1fa)]:'');}static[_0x1464dd(0x1dc)](_0x25cc15){const _0x56bb8c=_0x1464dd;let _0x340064=_0x25cc15[_0x56bb8c(0x1f9)]||{};if(_0x340064['data'])_0x340064=_0x340064['data'];let _0x2a562f=_0x340064[_0x56bb8c(0x135)];if(_0x2a562f instanceof Array)_0x2a562f=_0x2a562f[0x0];if(!_0x2a562f)return _0x2a562f;return _0x2a562f[_0x56bb8c(0x1e2)](DataConverter[_0x56bb8c(0x10f)])[0x0]['trim']();}static['getTagUids'](_0x1a668d,_0x4ddb33){const _0x48c6b4=_0x1464dd,_0x337f8c=new RegExp('{@'+_0x1a668d+_0x48c6b4(0x1f8),'gi'),_0x529a21=[];return _0x4ddb33[_0x48c6b4(0x10a)](_0x337f8c,(..._0x4110fd)=>_0x529a21[_0x48c6b4(0x168)](_0x4110fd[0x1])),_0x529a21;}static async['pGetIconImage'](_0x511880,_0x4ba623){const _0x55b399=_0x1464dd;switch(_0x511880){case'feat':case _0x55b399(0x1b7):{const _0x4e4b51=await Vetools[_0x55b399(0x156)](_0x511880),_0x20eb02=MiscUtil[_0x55b399(0x111)](_0x4e4b51,_0x4ba623[_0x55b399(0x135)],_0x4ba623[_0x55b399(0x216)]);if(!_0x20eb02)return null;return _0x55b399(0x133)+SharedConsts[_0x55b399(0x186)]+'/'+_0x20eb02;}default:return null;}}static[_0x1464dd(0x15b)](_0x1b1aa2,_0x1563a4){const _0x37f905=_0x1464dd;if(!_0x1563a4&&!_0x1b1aa2)return{};const _0x45392d=MiscUtil[_0x37f905(0x172)](_0x1563a4||{});return Object[_0x37f905(0x124)](_0x45392d,MiscUtil[_0x37f905(0x172)](_0x1b1aa2||{})),_0x45392d;}static[_0x1464dd(0x1f0)](_0x4b2ce2,_0x1388d7){const _0x4bb4a5=_0x1464dd;if(!_0x4b2ce2&&!_0x1388d7)return{};const _0x25155=MiscUtil[_0x4bb4a5(0x172)](_0x1388d7||{});return Object[_0x4bb4a5(0x163)](MiscUtil[_0x4bb4a5(0x172)](_0x4b2ce2||{}))[_0x4bb4a5(0x17d)](([_0x2f36a2,_0x4c0143])=>{const _0x48f4ca=_0x4bb4a5;if(!_0x25155[_0x2f36a2])return _0x25155[_0x2f36a2]=_0x4c0143;Object[_0x48f4ca(0x124)](_0x25155[_0x2f36a2],_0x4c0143);}),_0x25155;}static[_0x1464dd(0x17c)](_0x4939fc,_0x42f71e){const _0x14f5fb=_0x1464dd;_0x42f71e=_0x42f71e||{},_0x42f71e[_0x14f5fb(0x1e0)]=_0x42f71e[_0x14f5fb(0x1e0)]||_0x14f5fb(0x163);let _0x10a20c='';if(_0x4939fc[_0x42f71e[_0x14f5fb(0x1e0)]]){let _0x5e2cc7=MiscUtil[_0x14f5fb(0x172)](_0x4939fc[_0x42f71e[_0x14f5fb(0x1e0)]]);_0x5e2cc7=DataConverter[_0x14f5fb(0x1ef)][_0x14f5fb(0x1db)](_0x5e2cc7,{'string':_0xee8930=>{const _0x18fe9b=_0x14f5fb;return _0xee8930[_0x18fe9b(0x10a)](/{@hitYourSpellAttack}/gi,()=>'{@dice\x201d20\x20+\x20@srd5e.userchar.spellAttackRanged|your\x20spell\x20attack\x20modifier}')[_0x18fe9b(0x10a)](/{(@dice|@damage|@scaledice|@scaledamage) ([^}]+)}/gi,(..._0x3adf9d)=>{const _0x37582b=_0x18fe9b,[,_0x3ec59a,_0x20cfd1]=_0x3adf9d;let [_0x3c7272,_0x52a523,_0x561cee,..._0x47cb6c]=Renderer['splitTagByPipe'](_0x20cfd1);const _0x134b31=_0x3c7272;return _0x3c7272=_0x3c7272[_0x37582b(0x10a)](/\bPB\b/gi,'@srd5e.userchar.pb')[_0x37582b(0x10a)](/\bsummonSpellLevel\b/gi,''+(_0x42f71e[_0x37582b(0x15d)]??0x0)),!_0x52a523&&_0x134b31!==_0x3c7272&&(_0x52a523=_0x134b31['replace'](/\bsummonSpellLevel\b/gi,_0x37582b(0x15a))),'{'+_0x3ec59a+'\x20'+[_0x3c7272,_0x52a523||'',_0x561cee||'',..._0x47cb6c][_0x37582b(0x14b)]('|')+'}';});}}),_0x10a20c=DataConverter['getWithDescriptionPlugins'](()=>Renderer[_0x14f5fb(0x111)]()[_0x14f5fb(0x167)](!![])[_0x14f5fb(0x105)]({'type':_0x14f5fb(0x163),'entries':_0x5e2cc7},_0x42f71e['depth']!=null?_0x42f71e['depth']:0x2));}return _0x10a20c;}static[_0x1464dd(0x1a0)](_0x594849){const _0x1bd6d3=_0x1464dd;return Renderer[_0x1bd6d3(0x111)]()[_0x1bd6d3(0x129)]({'entryType':_0x1bd6d3(0x16e),'pluginType':_0x1bd6d3(0x20d),'fnPlugin':(_0x1822b7,_0x27ceaf)=>this['_getWithDescriptionPlugins_fnPlugin'](_0x1822b7,_0x27ceaf),'fn':_0x594849});}static async[_0x1464dd(0x169)](_0xc1a1ca){const _0x4be476=_0x1464dd;return Renderer[_0x4be476(0x111)]()[_0x4be476(0x106)]({'entryType':_0x4be476(0x16e),'pluginType':_0x4be476(0x20d),'fnPlugin':(_0x1f0a37,_0x34a975)=>this[_0x4be476(0x1b8)](_0x1f0a37,_0x34a975),'pFn':_0xc1a1ca});}static['_getWithDescriptionPlugins_fnPlugin'](_0x4d451a,_0x338eec){const _0x460310=_0x1464dd,_0x54e6fe={'page':_0x4d451a[_0x460310(0x13b)][_0x460310(0x19b)][_0x460310(0x1fa)],'source':_0x4d451a[_0x460310(0x13b)][_0x460310(0x19b)][_0x460310(0x135)],'hash':_0x338eec,'preloadId':_0x4d451a['href']['hover']['preloadId']};return{'attributesHoverReplace':[_0x460310(0x113)+JSON['stringify'](_0x54e6fe)['qq']()+'\x27']};}static[_0x1464dd(0x183)](_0x2e682f,_0x15f72f,_0x235e0d,_0x51dd56){const _0x5649e9=_0x1464dd;_0x51dd56=_0x51dd56||{},this[_0x5649e9(0x108)](_0x2e682f,_0x15f72f,_0x51dd56),this[_0x5649e9(0x112)](_0x2e682f,_0x15f72f,_0x51dd56);}static[_0x1464dd(0x108)](_0x51b12a,_0x257587,_0x42edfa){const _0x343881=_0x1464dd;return this[_0x343881(0x219)](_0x51b12a,_0x257587,_0x42edfa,_0x343881(0x145),_0x343881(0x1f9));}static[_0x1464dd(0x112)](_0x36bfac,_0x55bd39,_0xc21342){const _0x3ded4e=_0x1464dd;return this[_0x3ded4e(0x219)](_0x36bfac,_0x55bd39,_0xc21342,_0x3ded4e(0x20c),_0x3ded4e(0x19f));}static[_0x1464dd(0x219)](_0x5a7b0e,_0x2de5d8,_0x59cd9a,_0x318e60,_0x3ca8e6){const _0x34ab4a=_0x1464dd;if(!_0x59cd9a[_0x34ab4a(0x103)]||!_0x59cd9a[_0x34ab4a(0x103)][_0x318e60])return;Object['entries'](_0x59cd9a['sideData'][_0x318e60])[_0x34ab4a(0x17d)](([_0x187090,_0x33dac8])=>this['_mutActorUpdate_mutFromSideMod_handleProp'](_0x5a7b0e,_0x2de5d8,_0x59cd9a,_0x318e60,_0x3ca8e6,_0x187090,_0x33dac8));}static[_0x1464dd(0x118)](_0x4785e1,_0x285a62,_0x1a7bb8,_0x1d23a6,_0x3c0d4e,_0x4811e2,_0x537758){const _0x2ebe04=_0x1464dd,_0x5a16e1=_0x4811e2[_0x2ebe04(0x1e2)]('.');if(_0x4811e2==='_'){_0x537758[_0x2ebe04(0x17d)](_0x36fdcb=>{const _0xe28e03=_0x2ebe04;switch(_0x36fdcb[_0xe28e03(0x1e6)]){case'conditionals':{for(const _0x2e6a48 of _0x36fdcb[_0xe28e03(0x194)]){window[_0xe28e03(0x20b)]={'actor':_0x4785e1};if(_0x2e6a48['condition']&&!eval(_0x2e6a48['condition']))continue;Object[_0xe28e03(0x163)](_0x2e6a48[_0xe28e03(0x1ed)])[_0xe28e03(0x17d)](([_0x383beb,_0xa09b10])=>this['_mutActorUpdate_mutFromSideMod_handleProp'](_0x4785e1,_0x285a62,_0x1a7bb8,_0x1d23a6,_0x3c0d4e,_0x383beb,_0xa09b10));break;}break;}default:throw new Error(_0xe28e03(0x137)+_0x36fdcb['mode']+'\x22');}});return;}const _0x598173=MiscUtil[_0x2ebe04(0x111)](_0x4785e1,'data',_0x3c0d4e,..._0x5a16e1),_0x31a7c1=MiscUtil[_0x2ebe04(0x111)](_0x285a62,_0x3c0d4e,..._0x5a16e1),_0x4b22ba=_0x31a7c1||_0x598173;_0x537758[_0x2ebe04(0x17d)](_0x36e4bb=>{const _0x5d45cd=_0x2ebe04;switch(_0x36e4bb[_0x5d45cd(0x1e6)]){case _0x5d45cd(0x16d):{const _0x39d8a4=MiscUtil[_0x5d45cd(0x111)](_0x285a62,_0x3c0d4e,..._0x5a16e1),_0x518320=_0x39d8a4?''+_0x39d8a4+(_0x36e4bb[_0x5d45cd(0x21a)]||'')+_0x36e4bb[_0x5d45cd(0x178)]:_0x36e4bb[_0x5d45cd(0x178)];MiscUtil['set'](_0x285a62,_0x3c0d4e,..._0x5a16e1,_0x518320);break;}case _0x5d45cd(0x12c):{const _0x3b38bd=MiscUtil['copy'](_0x4b22ba||[]),_0x5c3108=[..._0x3b38bd];_0x5c3108[_0x5d45cd(0x168)](..._0x36e4bb[_0x5d45cd(0x1d0)][_0x5d45cd(0x1ce)](_0x45c11c=>!_0x3b38bd[_0x5d45cd(0x1ee)](_0x4fcc66=>CollectionUtil[_0x5d45cd(0x1e7)](_0x45c11c,_0x4fcc66)))),MiscUtil['set'](_0x285a62,_0x3c0d4e,..._0x5a16e1,_0x5c3108);break;}case _0x5d45cd(0x1b5):{MiscUtil[_0x5d45cd(0x1f3)](_0x285a62,_0x3c0d4e,..._0x5a16e1,_0x36e4bb[_0x5d45cd(0x171)]+_0x4b22ba||0x0);break;}case _0x5d45cd(0x1c2):{const _0x3f3dd2=(''+(_0x4b22ba||0x0))['toLowerCase'](),_0x2a8ee9=_0x9ea958=>{const _0x4f76e3=_0x5d45cd,_0x207b3d=_0x3f3dd2['indexOf'](_0x9ea958[_0x4f76e3(0x1a1)]());let _0x5d200e=_0x4b22ba[_0x4f76e3(0x181)](0x0,_0x207b3d);const _0x39d218=_0x4b22ba['slice'](_0x207b3d),_0x28976c=_0x5d200e[_0x4f76e3(0x107)]('\x20');_0x5d200e=_0x5d200e[_0x4f76e3(0x1f5)]();if(!isNaN(_0x5d200e)){const _0x147d53=''+(_0x36e4bb[_0x4f76e3(0x171)]+Number(_0x5d200e))+(_0x28976c?'\x20':'')+_0x39d218;MiscUtil[_0x4f76e3(0x1f3)](_0x285a62,_0x3c0d4e,..._0x5a16e1,_0x147d53);}};if(!_0x4b22ba)MiscUtil[_0x5d45cd(0x1f3)](_0x285a62,_0x3c0d4e,..._0x5a16e1,_0x36e4bb[_0x5d45cd(0x171)]+'\x20'+(_0x36e4bb['unitShort']||_0x36e4bb['unit']));else{if(_0x36e4bb[_0x5d45cd(0x191)]&&_0x3f3dd2[_0x5d45cd(0x213)](_0x36e4bb['unit'][_0x5d45cd(0x1a1)]()))_0x2a8ee9(_0x36e4bb[_0x5d45cd(0x191)]);else _0x36e4bb['unitShort']&&_0x3f3dd2[_0x5d45cd(0x213)](_0x36e4bb['unitShort'][_0x5d45cd(0x1a1)]())&&_0x2a8ee9(_0x36e4bb[_0x5d45cd(0x208)]);}break;}case'setMax':{const _0x231c89=(''+(_0x4b22ba||0x0))['toLowerCase']();let _0x5d3023=Number(_0x231c89);if(isNaN(_0x5d3023))_0x5d3023=0x0;const _0x3a362e=Math[_0x5d45cd(0x12f)](_0x5d3023,_0x36e4bb['value']);MiscUtil[_0x5d45cd(0x1f3)](_0x285a62,_0x3c0d4e,..._0x5a16e1,_0x3a362e);break;}case _0x5d45cd(0x1f3):{MiscUtil[_0x5d45cd(0x1f3)](_0x285a62,_0x3c0d4e,..._0x5a16e1,MiscUtil[_0x5d45cd(0x172)](_0x36e4bb[_0x5d45cd(0x1c8)]));break;}default:throw new Error(_0x5d45cd(0x137)+_0x36e4bb[_0x5d45cd(0x1e6)]+'\x22');}});}static[_0x1464dd(0x153)](_0x4db301,_0x35d30f){const _0x8c996d=_0x1464dd;_0x35d30f=_0x35d30f||{},_0x35d30f[_0x8c996d(0x160)]=_0x35d30f['modeOptions']||{};if(_0x35d30f[_0x8c996d(0x1e6)]==='object')_0x35d30f['mode']='creature';let {description:_0x56e5de,activationType:_0x55f461,activationCost:_0x5028e6,activationCondition:_0x46edda,saveAbility:_0x5ac038,saveDc:_0x4993a4,saveScaling:_0x39d449,damageParts:_0x33b48b,attackBonus:_0x3ab236,requirements:_0x673234,actionType:_0x37ec5d,durationValue:_0x2fdfc2,durationUnits:_0x86c1c3,consumeType:_0x4a39b8,consumeTarget:_0x1d5ded,consumeAmount:_0x333233,formula:_0xa14a09,targetValue:_0x2ba3d3,targetUnits:_0x51255f,targetType:_0x32d757,usesCount:_0x448e82,usesCountMax:_0xf29251,usesPer:_0x4bf726,foundryData:_0x42c532,_foundryData:_0x2e5c09,foundryFlags:_0xe1b43f,_foundryFlags:_0x24d5e1}=_0x35d30f;const _0x49708d=DataConverter[_0x8c996d(0x15b)](_0x42c532,_0x2e5c09),_0x30ce94=DataConverter[_0x8c996d(0x1f0)](_0xe1b43f,_0x24d5e1);_0x56e5de=_0x56e5de||(_0x35d30f[_0x8c996d(0x120)]?'':DataConverter['getEntryDescription'](_0x4db301,{'depth':_0x35d30f[_0x8c996d(0x1fb)],'summonSpellLevel':_0x35d30f[_0x8c996d(0x15d)]})),_0x55f461=_0x55f461||'',_0x5028e6=_0x5028e6||0x0,_0x46edda=_0x46edda||'',_0x5ac038=_0x5ac038||'',_0x4993a4=_0x4993a4||null,_0x39d449=_0x39d449||'',_0x33b48b=_0x33b48b||[],_0x3ab236=_0x3ab236||0x0,_0x673234=_0x673234||'',_0x37ec5d=_0x37ec5d||'',_0x2fdfc2=_0x2fdfc2||null,_0x86c1c3=_0x86c1c3||'',_0x4a39b8=_0x4a39b8||null,_0x1d5ded=_0x1d5ded||null,_0x333233=_0x333233||null,_0xa14a09=_0xa14a09||'',_0x2ba3d3=_0x2ba3d3||null,_0x51255f=_0x51255f||'',_0x32d757=_0x32d757||'',_0x448e82=_0x448e82||0x0,_0xf29251=_0xf29251||'0',_0x4bf726=_0x4bf726||null;let _0x56f632=UtilApplications[_0x8c996d(0x15e)](DataConverter['getNameWithSourcePart'](_0x4db301,{'isActorItem':!![]}));const _0x555331=_0x4db301[_0x8c996d(0x163)]?JSON[_0x8c996d(0x187)](_0x4db301[_0x8c996d(0x163)]):null;let _0x187760=null;if(_0x4db301[_0x8c996d(0x216)]){const _0x410aff=/{@recharge( \d+)?}/gi['exec'](_0x4db301['name']);_0x410aff&&(_0x187760=_0x410aff[0x1]?Number(_0x410aff[0x1][_0x8c996d(0x1f5)]()):0x6,_0x56f632=_0x56f632['replace'](/\(Recharge \d+(–\d+)?\)/gi,'')['trim']()[_0x8c996d(0x10a)](/[ ]+/g,'\x20'));}if(_0x4db301[_0x8c996d(0x163)]){/(?:^|\W)bonus action(?:\W|$)/i[_0x8c996d(0x21b)](_0x555331)&&(_0x55f461=_0x55f461||_0x8c996d(0x197),_0x5028e6=_0x5028e6||0x1);if(_0x35d30f['mode']===_0x8c996d(0x18f)){if(!_0x55f461&&!_0x5028e6){const _0x10a9b5=DataConverter[_0x8c996d(0x143)];_0x10a9b5[_0x8c996d(0x1db)](_0x4db301[_0x8c996d(0x163)],{'string':_0x573c52=>{const _0x1e76d1=_0x8c996d;if(_0x55f461)return _0x573c52;const _0x57c23a=Util[_0x1e76d1(0x1ff)](_0x573c52);for(const _0x113476 of _0x57c23a){if(/as an action|can take an action/i[_0x1e76d1(0x21b)](_0x113476)){_0x55f461=_0x55f461||'action',_0x5028e6=_0x5028e6||0x1;break;}const _0x190a30=/you can use your reaction|using your reaction|you can use this special reaction/i['exec'](_0x113476);if(_0x190a30){_0x55f461=_0x55f461||_0x1e76d1(0x1a3),_0x5028e6=_0x5028e6||0x1;let _0xe1ab16=_0x113476[_0x1e76d1(0x181)](0x0,_0x190a30[_0x1e76d1(0x100)])[_0x1e76d1(0x1f5)]()[_0x1e76d1(0x10a)](/,$/,'');const _0x30a4af=/(^|\W)(?:if|when)(?:|\W)/i[_0x1e76d1(0x126)](_0xe1ab16);_0x30a4af&&(_0xe1ab16=_0xe1ab16[_0x1e76d1(0x181)](_0x30a4af[_0x1e76d1(0x100)]+_0x30a4af[0x1][_0x1e76d1(0x1d8)])[_0x1e76d1(0x1f5)](),_0x46edda=_0x46edda||_0xe1ab16);break;}}}}),!_0x55f461&&_0x10a9b5['walk'](_0x4db301[_0x8c996d(0x163)],{'string':_0x130a48=>{const _0x11d206=_0x8c996d;if(_0x55f461)return _0x130a48;const _0x142f5f=Util[_0x11d206(0x1ff)](_0x130a48);for(const _0xb53a8d of _0x142f5f){if(/you can't use this feature again|once you use this feature/i[_0x11d206(0x21b)](_0xb53a8d))_0x55f461='special';}}});}}_0x35d30f[_0x8c996d(0x1e6)]===_0x8c996d(0x12b)&&_0x4db301[_0x8c996d(0x216)]&&(!_0x55f461&&!_0x5028e6&&(/^legendary resistance/i[_0x8c996d(0x21b)](_0x4db301[_0x8c996d(0x216)])&&(_0x55f461=_0x8c996d(0x1fd))));}_0x35d30f[_0x8c996d(0x1e6)]===_0x8c996d(0x12b)&&_0x4db301[_0x8c996d(0x216)]&&(_0x56f632=_0x56f632['replace'](/\(\s*(\d+)\s*\/\s*(Day|Short Rest|Long Rest)\s*\)/i,(..._0x30e122)=>{const _0x582840=_0x8c996d;_0x448e82=Number(_0x30e122[0x1]),_0xf29251=''+_0x448e82;const _0x53ccd1=_0x30e122[0x2][_0x582840(0x1f5)]()[_0x582840(0x1a1)]();switch(_0x53ccd1){case _0x582840(0x17b):_0x4bf726=_0x582840(0x17b);break;case _0x582840(0x19e):_0x4bf726='sr';break;case'long\x20rest':_0x4bf726='lr';break;}return'';}),!_0x4bf726&&(_0x56f632=_0x56f632['replace'](/\(\s*(\d+)\s+Charges\s*\)/i,(..._0x3b9b8f)=>{return _0x448e82=Number(_0x3b9b8f[0x1]),_0xf29251=''+_0x448e82,_0x4bf726='charges','';})),_0x4bf726&&(_0x56f632=_0x56f632[_0x8c996d(0x1f5)]()[_0x8c996d(0x10a)](/[ ]+/g,'\x20'),_0x55f461=_0x55f461||'none',_0x4db301[_0x8c996d(0x163)]&&typeof _0x4db301['entries'][0x0]===_0x8c996d(0x116)&&/^(?:If |When )/i[_0x8c996d(0x21b)](_0x4db301[_0x8c996d(0x163)][0x0][_0x8c996d(0x1f5)]())&&(_0x46edda=_0x4db301[_0x8c996d(0x163)][0x0]['trim']())),/legendary resistance/gi[_0x8c996d(0x21b)](_0x56f632)&&(_0x448e82=0x0,_0xf29251=''+_0x448e82,_0x4bf726=null));if(_0x35d30f[_0x8c996d(0x1e6)]===_0x8c996d(0x18f)&&_0x4db301[_0x8c996d(0x163)]){const _0x16663a=/finish a short rest/['test'](_0x555331)||/finish a short or long rest/[_0x8c996d(0x21b)](_0x555331)||/finish a short rest or a long rest/['test'](_0x555331)||/finish a short or long rest/[_0x8c996d(0x21b)](_0x555331),_0x2a10ca=!_0x16663a&&/finish a long rest/['test'](_0x555331);if(_0x16663a)_0x4bf726='sr';else{if(_0x2a10ca)_0x4bf726='lr';}const _0x40d1c3=new RegExp(_0x8c996d(0x161)+Consts['TERMS_COUNT']['map'](_0x114d15=>_0x114d15[_0x8c996d(0x18b)][_0x8c996d(0x14b)](''))[_0x8c996d(0x14b)]('|')+_0x8c996d(0x19c)+Consts[_0x8c996d(0x149)][_0x8c996d(0x1ab)](_0x3bb83d=>_0x3bb83d['tokens']['join'](''))[_0x8c996d(0x14b)]('|')+_0x8c996d(0x1c0),'i'),_0x232d04=_0x40d1c3[_0x8c996d(0x126)](_0x555331);if(_0x232d04&&_0x35d30f[_0x8c996d(0x1f2)]){const _0x958a02=_0x232d04[0x2][_0x8c996d(0x181)](0x0,0x3)[_0x8c996d(0x1a1)](),_0x41af70=MiscUtil[_0x8c996d(0x111)](_0x35d30f[_0x8c996d(0x1f2)],'data',_0x8c996d(0x1f9),_0x8c996d(0x212),_0x958a02,_0x8c996d(0x1c8));if(_0x41af70!=null){let _0x2b5d9a=Parser[_0x8c996d(0x1c9)](_0x41af70),_0x3dbd01=_0x8c996d(0x1d6)+_0x958a02+'.value\x20-\x2010)\x20/\x202)';if(_0x232d04[0x1]){const _0x2271f5=(Consts[_0x8c996d(0x149)]['find'](_0x54c0c2=>_0x54c0c2['tokens'][_0x8c996d(0x14b)]('\x20')===_0x232d04[0x1][_0x8c996d(0x1f5)]()[_0x8c996d(0x1a1)]())||{})[_0x8c996d(0x1ec)]||0x1;_0x2b5d9a=_0x2b5d9a*_0x2271f5,_0x3dbd01=_0x3dbd01+_0x8c996d(0x1fc)+_0x2271f5;}if(_0x232d04[0x3]){const _0x7978f4=(Consts[_0x8c996d(0x149)]['find'](_0x5c105f=>_0x5c105f[_0x8c996d(0x18b)][_0x8c996d(0x14b)]('')===_0x232d04[0x3][_0x8c996d(0x1f5)]()[_0x8c996d(0x1a1)]())||{})[_0x8c996d(0x1ec)]||0x1;_0x2b5d9a=Math[_0x8c996d(0x12f)](_0x7978f4,_0x2b5d9a),_0x3dbd01=_0x8c996d(0x13e)+_0x7978f4+',\x20'+_0x3dbd01+')';}_0x448e82=_0x2b5d9a,_0xf29251=_0x3dbd01;}}_0x4bf726&&!_0x448e82&&(!_0xf29251||_0xf29251==='0')&&(_0x448e82=0x1,_0xf29251=''+_0x448e82);}_0x35d30f[_0x8c996d(0x1e6)]===_0x8c996d(0x18f)&&_0x4db301['entries']&&DataConverter[_0x8c996d(0x143)]['walk'](_0x4db301[_0x8c996d(0x163)],{'object':_0xfb5ca4=>{const _0x13be1c=_0x8c996d;if(_0xfb5ca4['type']!==_0x13be1c(0x131))return _0xfb5ca4;if(_0x37ec5d&&_0x39d449)return _0xfb5ca4;return _0x37ec5d=_0x37ec5d||_0x13be1c(0x1fe),_0x39d449=_0xfb5ca4[_0x13be1c(0x132)][0x0],_0xfb5ca4;},'string':_0x25a4a4=>{const _0x494920=_0x8c996d;if(_0x37ec5d&&_0x5ac038&&_0x39d449)return _0x25a4a4;return _0x25a4a4[_0x494920(0x10a)](/8\s*\+\s*your proficiency bonus\s*\+\s*your (.*?) modifier/i,(..._0xcc666b)=>{const _0x36c141=_0x494920,_0x4155de=[];_0xcc666b[0x1][_0x36c141(0x10a)](/(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma)/i,(..._0x2fadbd)=>{_0x4155de['push'](_0x2fadbd[0x1]['toLowerCase']()['slice'](0x0,0x3));});if(!_0x4155de[_0x36c141(0x1d8)])return;_0x37ec5d=_0x37ec5d||_0x36c141(0x1fe),_0x39d449=_0x4155de[0x0];}),_0x25a4a4[_0x494920(0x10a)](/(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma) saving throw against your (.*? )spell save DC/i,(..._0x108852)=>{const _0x2c555c=_0x494920;_0x37ec5d=_0x37ec5d||_0x2c555c(0x1fe),_0x5ac038=_0x5ac038||_0x108852[0x1][_0x2c555c(0x1a1)]()['slice'](0x0,0x3),_0x39d449=_0x39d449||_0x2c555c(0x1b7);}),_0x35d30f[_0x494920(0x160)][_0x494920(0x1d4)]&&_0x25a4a4[_0x494920(0x10a)](/(?:make a|succeed on a) (Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma) saving throw/gi,(..._0x5af4e0)=>{_0x37ec5d=_0x37ec5d||'save',_0x5ac038=_0x5ac038||_0x5af4e0[0x1]['toLowerCase']()['slice'](0x0,0x3),_0x39d449=_0x39d449||'spell';}),_0x25a4a4;}});_0x35d30f['mode']===_0x8c996d(0x12b)&&_0x4db301[_0x8c996d(0x163)]&&_0x555331['replace'](/{@dc ([-+]?\s*\d+)}\s+(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma)/,(..._0x273429)=>{const _0x5c30bd=_0x8c996d,_0x4a4af2=Number(_0x273429[0x1][_0x5c30bd(0x10a)](/\s*/g,''));if(isNaN(_0x4a4af2))return;_0x37ec5d=_0x37ec5d||_0x5c30bd(0x1fe),_0x5ac038=_0x5ac038||_0x273429[0x2]['toLowerCase']()[_0x5c30bd(0x181)](0x0,0x3),_0x4993a4=_0x4a4af2;if(_0x35d30f['pb']==null||_0x35d30f[_0x5c30bd(0x1aa)]==null||Parser[_0x5c30bd(0x1cf)][_0x5c30bd(0x1ee)](_0x118743=>_0x35d30f['entity'][_0x118743]==null)){_0x39d449=_0x5c30bd(0x15c);return;}const _0xe36350=_0x4a4af2-_0x35d30f['pb']-0x8,_0x52e318=Parser[_0x5c30bd(0x1cf)][_0x5c30bd(0x1ab)](_0x326430=>({'ability':_0x326430,'bonus':Parser[_0x5c30bd(0x1c9)](_0x35d30f[_0x5c30bd(0x1aa)][_0x326430])})),_0x5c8b90=_0x52e318[_0x5c30bd(0x1ce)](_0x21a9cf=>_0x21a9cf[_0x5c30bd(0x197)]===_0xe36350);if(_0x5c8b90[_0x5c30bd(0x1d8)]===0x1)_0x39d449=_0x39d449||_0x5c8b90[0x0][_0x5c30bd(0x1e1)];else _0x39d449=_0x5c30bd(0x15c);});_0x35d30f[_0x8c996d(0x1e6)]==='player'&&_0x4db301[_0x8c996d(0x163)]&&DataConverter[_0x8c996d(0x143)][_0x8c996d(0x1db)](_0x4db301[_0x8c996d(0x163)],{'string':_0x2b8189=>{const _0x104b20=_0x8c996d;if(_0x2fdfc2||_0x86c1c3)return;_0x2b8189[_0x104b20(0x10a)](/(?:^|\W)lasts for (\d+) (minute|hour|day|month|year|turn|round)s?(?:\W|$)/gi,(..._0x5d4225)=>{const _0x676d8f=_0x104b20;_0x2fdfc2=Number(_0x5d4225[0x1]),_0x86c1c3=_0x5d4225[0x2][_0x676d8f(0x1a1)]();}),_0x2b8189[_0x104b20(0x10a)](/(?:^|\W)for the next (\d+) (minute|hour|day|month|year|turn|round)s?(?:\W|$)/gi,(..._0xd81c5b)=>{const _0x365f96=_0x104b20;_0x2fdfc2=Number(_0xd81c5b[0x1]),_0x86c1c3=_0xd81c5b[0x2][_0x365f96(0x1a1)]();}),_0x2b8189[_0x104b20(0x10a)](/(?:^|\W)turned for (\d+) (minute|hour|day|month|year|turn|round)s?(?:\W|$)/gi,(..._0x39c269)=>{const _0x565fe3=_0x104b20;_0x2fdfc2=Number(_0x39c269[0x1]),_0x86c1c3=_0x39c269[0x2][_0x565fe3(0x1a1)]();}),_0x2b8189['replace'](/(?:^|\W)this effect lasts for (\d+) (minute|hour|day|month|year|turn|round)s?(?:\W|$)/gi,(..._0x4490e2)=>{const _0x575476=_0x104b20;_0x2fdfc2=Number(_0x4490e2[0x1]),_0x86c1c3=_0x4490e2[0x2][_0x575476(0x1a1)]();}),_0x2b8189[_0x104b20(0x10a)](/(?:^|\W)until the end of your next turn(?:\W|$)/gi,()=>{_0x2fdfc2=0x1,_0x86c1c3='turn';}),Renderer[_0x104b20(0x1af)](_0x2b8189)[_0x104b20(0x10a)](/(?:^|\W)is \w+ by you for (\d+) (minute|hour|day|month|year|turn|round)s(?:\W|$)/gi,(..._0x1c0788)=>{const _0x5aa55e=_0x104b20;_0x2fdfc2=Number(_0x1c0788[0x1]),_0x86c1c3=_0x1c0788[0x2][_0x5aa55e(0x1a1)]();});}});_0x35d30f[_0x8c996d(0x1e6)]===_0x8c996d(0x18f)&&_0x4db301[_0x8c996d(0x163)]&&DataConverter['WALKER_READONLY_GENERIC']['walk'](_0x4db301[_0x8c996d(0x163)],{'string':_0x2e4435=>{const _0x135f25=_0x8c996d;if(_0x4a39b8||_0x1d5ded||_0x333233)return;_0x2e4435[_0x135f25(0x10a)](/(?:(\d+) to )?(\d+) (?:ki|sorcery) point/i,(..._0x269f59)=>{const _0x2d1e8b=_0x135f25;_0x4a39b8='attribute',_0x1d5ded=_0x2d1e8b(0x1b9),_0x333233=Number(_0x269f59[0x1]||_0x269f59[0x2]);});}});let _0x223987=_0x555331;if((_0x35d30f[_0x8c996d(0x1e6)]==='player'||_0x35d30f['mode']===_0x8c996d(0x139))&&_0x4db301[_0x8c996d(0x163)]&&!_0x33b48b[_0x8c996d(0x1d8)]){const {str:_0x307643,damageTupleMetas:_0x261b48}=DataConverter['getDamageTupleMetas'](_0x555331,{'summonSpellLevel':_0x35d30f[_0x8c996d(0x15d)]});_0x223987=_0x307643;const {damageParts:_0x48d5c7,formula:_0x26b3d6}=DataConverter[_0x8c996d(0x1dd)](_0x261b48);_0x33b48b=_0x48d5c7,_0xa14a09=_0xa14a09||_0x26b3d6;}(_0x35d30f[_0x8c996d(0x1e6)]===_0x8c996d(0x18f)||_0x35d30f['mode']===_0x8c996d(0x139))&&_0x4db301[_0x8c996d(0x163)]&&!_0xa14a09&&_0x223987['replace'](/{(?:@dice|@scaledice) ([^}]+)}/i,(..._0x2fa09e)=>{const _0x1c89e9=_0x8c996d,[_0x485a29]=_0x2fa09e[0x1][_0x1c89e9(0x1e2)]('|');_0xa14a09=_0x485a29;});_0x555331&&_0x555331[_0x8c996d(0x10a)](/exhales [^.]*a (\d+)-foot[- ](cone|line)/,(..._0x348344)=>{_0x2ba3d3=_0x2ba3d3||Number(_0x348344[0x1]),_0x51255f=_0x51255f||'ft',_0x32d757=_0x32d757||_0x348344[0x2];});try{_0x46edda=Renderer[_0x8c996d(0x1af)](_0x46edda);}catch(_0x1b3770){console[_0x8c996d(0x182)](...LGT,_0x1b3770);}_0x56f632=_0x56f632['trim']()[_0x8c996d(0x10a)](/\s+/g,'\x20');if(!_0x56f632)_0x56f632=_0x8c996d(0x200);return{'name':_0x56f632,'type':_0x35d30f[_0x8c996d(0x13a)],'data':{'source':_0x35d30f[_0x8c996d(0x135)]?Parser[_0x8c996d(0x1a6)](_0x35d30f[_0x8c996d(0x135)]):'','description':{'value':_0x56e5de,'chat':'','unidentified':''},'damage':{'parts':_0x33b48b,'versatile':''},'duration':{'value':_0x2fdfc2,'units':_0x86c1c3},'range':{'value':null,'long':null,'units':''},'requirements':_0x673234,'save':{'ability':_0x5ac038,'dc':_0x4993a4,'scaling':_0x39d449||_0x8c996d(0x15c)},'activation':{'type':_0x55f461,'cost':_0x5028e6,'condition':_0x46edda},'target':{'value':_0x2ba3d3,'units':_0x51255f,'type':_0x32d757},'uses':{'value':_0x448e82,'max':_0xf29251,'per':_0x4bf726},'ability':'','actionType':_0x37ec5d||_0x8c996d(0x184),'attackBonus':_0x3ab236,'chatFlavor':'','critical':null,'formula':_0xa14a09,'recharge':{'value':_0x187760,'charged':_0x187760!=null},'consume':{'type':_0x4a39b8,'target':_0x1d5ded,'amount':_0x333233},..._0x49708d||{},..._0x35d30f['additionalData']||{}},'img':_0x35d30f[_0x8c996d(0x1b4)],'flags':{...UtilCompat[_0x8c996d(0x16f)]({'isReaction':_0x55f461===_0x8c996d(0x1a3)}),..._0x30ce94||{}},'effects':_0x35d30f['effects']||[]};}static['_getAdventureBookJournals'](_0x2613ac,_0xd277f4,_0x36e2bf,_0x49a594){const _0x99a35e=_0x1464dd,_0x14ccce=_0x36e2bf===_0x99a35e(0x101)?_0x99a35e(0x154):_0x99a35e(0x21c),_0x2af77d=[],_0x32c3c2=_0xd277f4[_0x99a35e(0x201)],_0x2dea13=Math[_0x99a35e(0x198)](_0x32c3c2[_0x99a35e(0x1d8)],_0x2613ac[_0x99a35e(0x1d8)]);for(let _0x10a864=0x0;_0x10a864<_0x2dea13;++_0x10a864){const _0x503e5b=_0x32c3c2[_0x10a864],_0x1fb199=_0x2613ac[_0x10a864],_0x250c75=DataConverter[_0x99a35e(0x1a0)](()=>{const _0x17fd69=_0x99a35e;return(_0x17fd69(0x210)+Renderer[_0x17fd69(0x111)]()[_0x17fd69(0x167)](!![])[_0x17fd69(0x105)](_0x1fb199)+_0x17fd69(0x121))[_0x17fd69(0x10a)](new RegExp(DataConverter[_0x17fd69(0x157)],'g'),'@');}),_0x1124e0={'name':UtilApplications['getCleanEntityName'](''+this['_getAdventureBookJournalPrefix'](_0x14ccce,_0xd277f4[_0x99a35e(0x135)],_0x10a864,_0x2dea13)+Parser[_0x99a35e(0x185)](_0x503e5b[_0x99a35e(0x1de)])+_0x503e5b[_0x99a35e(0x216)]),'permission':{'default':0x0},'entryTime':Date[_0x99a35e(0x1e3)](),'content':_0x250c75,'sort':CONFIG['JournalEntry'][_0x99a35e(0x174)][_0x99a35e(0x1be)][_0x99a35e(0x201)][_0x99a35e(0x1d8)]+CONST[_0x99a35e(0x18d)]*_0x10a864};if(_0x49a594[_0x99a35e(0x20f)])_0x1124e0[_0x99a35e(0x1f4)]={'default':Config[_0x99a35e(0x111)](_0x14ccce,_0x99a35e(0x177))};_0x2af77d[_0x99a35e(0x168)](_0x1124e0);}return _0x2af77d;}static['_getAdventureBookJournalPrefix'](_0xf37ee3,_0x312f3c,_0x3da038,_0x390a83){const _0x1954b0=_0x1464dd;if(!Config[_0x1954b0(0x111)](_0xf37ee3,_0x1954b0(0x159)))return'';const _0x2c4682=(''+_0x390a83)['length'];return''+Parser[_0x1954b0(0x1a6)](_0x312f3c)[_0x1954b0(0x181)](0x0,0x3)+(''+_0x3da038)[_0x1954b0(0x13d)](_0x2c4682,'0')+'\x20';}static[_0x1464dd(0x102)](_0x21a2f3,_0x2a7318,_0x46098e){const _0x15e712=_0x1464dd;return this[_0x15e712(0x1cd)](_0x21a2f3,_0x2a7318,'adventure',_0x46098e);}static[_0x1464dd(0x1ba)](_0x2b6324,_0x383a47,_0x4c9787){const _0x3bcbb5=_0x1464dd;return this[_0x3bcbb5(0x1cd)](_0x2b6324,_0x383a47,_0x3bcbb5(0x18c),_0x4c9787);}static async[_0x1464dd(0x104)](_0x247143,_0x5ebfd0,_0x7dd45f,_0x191966,_0x210e5c){const _0x503c32=_0x1464dd;_0x210e5c=_0x210e5c||{};if(!_0x5ebfd0)return{};const _0x520464=await Charactermancer_SkillProficiencySelect[_0x503c32(0x15f)]({..._0x210e5c,'existingFvtt':{'skillProficiencies':_0x247143},'available':_0x5ebfd0});if(!_0x520464)return _0x191966['isCancelled']=!![];if(_0x520464===VeCt['SYM_UI_SKIP'])return;return this[_0x503c32(0x10e)]({'existingProfs':_0x247143,'formData':_0x520464,'actorData':_0x7dd45f});}static[_0x1464dd(0x10e)]({existingProfs:_0x3f7c2a,formData:_0x3aee58,actorData:_0x20a006}){const _0x146a7f=_0x1464dd;if(!_0x3aee58?.[_0x146a7f(0x1f9)]?.['skillProficiencies'])return;const _0x59f02f={};return _0x20a006['skills']=_0x20a006[_0x146a7f(0x1cb)]||{},Object[_0x146a7f(0x163)](UtilActors[_0x146a7f(0x138)])[_0x146a7f(0x1ce)](([_0x312159,_0x813a11])=>_0x3aee58[_0x146a7f(0x1f9)][_0x146a7f(0x1bc)][_0x813a11])[_0x146a7f(0x17d)](([_0x13a4bf,_0x39e914])=>{const _0x1867d5=_0x146a7f;_0x59f02f[_0x13a4bf]=_0x3aee58['data']['skillProficiencies'][_0x39e914];const _0x5028a0=Math[_0x1867d5(0x12f)]((_0x3f7c2a[_0x13a4bf]||{})[_0x1867d5(0x1c8)]||0x0,_0x3aee58[_0x1867d5(0x1f9)][_0x1867d5(0x1bc)][_0x39e914]!=null?Number(_0x3aee58[_0x1867d5(0x1f9)][_0x1867d5(0x1bc)][_0x39e914]):0x0,(_0x20a006[_0x1867d5(0x1cb)][_0x13a4bf]||{})[_0x1867d5(0x1c8)]||0x0),_0x26cf3d=_0x5028a0>(MiscUtil[_0x1867d5(0x111)](_0x20a006[_0x1867d5(0x1cb)],_0x13a4bf,'value')||0x0);if(_0x26cf3d)(_0x20a006[_0x1867d5(0x1cb)][_0x13a4bf]=_0x20a006[_0x1867d5(0x1cb)][_0x13a4bf]||{})[_0x1867d5(0x1c8)]=_0x5028a0;}),_0x59f02f;}static async['pFillActorLanguageData'](_0x2fe530,_0x10038e,_0x5a5990,_0x430646,_0x311334){const _0x22e92e=_0x1464dd;_0x311334=_0x311334||{};const _0x295f62=await Charactermancer_LanguageProficiencySelect[_0x22e92e(0x15f)]({..._0x311334,'existingFvtt':{'languageProficiencies':_0x2fe530},'available':_0x10038e});if(!_0x295f62)return _0x430646[_0x22e92e(0x146)]=!![];if(_0x295f62===VeCt[_0x22e92e(0x188)])return;this[_0x22e92e(0x150)]({'existingProfs':_0x2fe530,'formData':_0x295f62,'actorData':_0x5a5990});}static[_0x1464dd(0x150)]({existingProfs:_0x1710c2,formData:_0x3a509c,actorData:_0xacfaa}){const _0x511374=_0x1464dd;this[_0x511374(0x1c7)]({'existingProfsActor':_0x1710c2,'formData':_0x3a509c,'formDataProp':_0x511374(0x110),'actorData':_0xacfaa,'opts':{'fnGetMappedItem':_0x14cf7d=>UtilActors[_0x511374(0x1ac)](_0x14cf7d),'actorTraitProp':_0x511374(0x140)}});}static async[_0x1464dd(0x1e9)](_0x2efc22,_0x5516f3,_0x122a81,_0x4744ea,_0x146c22){const _0x20ee80=_0x1464dd;_0x146c22=_0x146c22||{};const _0x932098=await Charactermancer_ToolProficiencySelect[_0x20ee80(0x15f)]({..._0x146c22,'existingFvtt':{'toolProficiencies':_0x2efc22},'available':_0x5516f3});if(!_0x932098)return _0x4744ea[_0x20ee80(0x146)]=!![];if(_0x932098===VeCt[_0x20ee80(0x188)])return;this[_0x20ee80(0x11b)]({'existingProfs':_0x2efc22,'formData':_0x932098,'actorData':_0x122a81});}static['doApplyToolProficienciesFormDataToActorUpdate']({existingProfs:_0x32873e,formData:_0x57db4e,actorData:_0xc5ab3b}){const _0x5ae999=_0x1464dd;this[_0x5ae999(0x1c7)]({'existingProfsActor':_0x32873e,'formData':_0x57db4e,'formDataProp':_0x5ae999(0x1bf),'actorData':_0xc5ab3b,'opts':{'fnGetMappedItem':_0x35926f=>UtilActors[_0x5ae999(0x20e)](_0x35926f),'actorTraitProp':'toolProf'}});}static async[_0x1464dd(0x12e)](_0x3e6c33,_0x455f84,_0x3fe9ec,_0x1e73e1,_0x19b91f,_0x222189){const _0x18e5f6=_0x1464dd;_0x222189=_0x222189||{};const _0x349377=await Charactermancer_LanguageToolProficiencySelect['pGetUserInput']({..._0x222189,'existingFvtt':{'languageProficiencies':_0x3e6c33,'toolProficiencies':_0x455f84},'available':_0x3fe9ec});if(!_0x349377)return _0x19b91f[_0x18e5f6(0x146)]=!![];if(_0x349377===VeCt[_0x18e5f6(0x188)])return;this[_0x18e5f6(0x1c7)]({'existingProfsActor':_0x3e6c33,'formData':_0x349377,'formDataProp':_0x18e5f6(0x110),'actorData':_0x1e73e1,'opts':{'fnGetMappedItem':_0x5893ca=>UtilActors[_0x18e5f6(0x1ac)](_0x5893ca),'actorTraitProp':_0x18e5f6(0x140)}}),this[_0x18e5f6(0x1c7)]({'existingProfsActor':_0x455f84,'formData':_0x349377,'formDataProp':_0x18e5f6(0x1bf),'actorData':_0x1e73e1,'opts':{'fnGetMappedItem':_0x1e37db=>UtilActors['getMappedTool'](_0x1e37db),'actorTraitProp':_0x18e5f6(0x166)}});}static async[_0x1464dd(0x152)](_0x4c6618,_0x37caca,_0x172def,_0x436abb,_0x5ec264){const _0x56ae78=_0x1464dd;_0x5ec264=_0x5ec264||{};const _0x3f51bb=await Charactermancer_ArmorProficiencySelect['pGetUserInput']({..._0x5ec264,'existingFvtt':{'armorProficiencies':_0x4c6618},'available':_0x37caca});if(!_0x3f51bb)return _0x436abb[_0x56ae78(0x146)]=!![];if(_0x3f51bb===VeCt[_0x56ae78(0x188)])return;this[_0x56ae78(0x215)]({'existingProfs':_0x4c6618,'formData':_0x3f51bb,'actorData':_0x172def});}static['doApplyArmorProficienciesFormDataToActorUpdate']({existingProfs:_0x17492c,formData:_0x2a2bf5,actorData:_0x4adf7b}){const _0x26bbfa=_0x1464dd;this[_0x26bbfa(0x1c7)]({'existingProfsActor':_0x17492c,'formData':_0x2a2bf5,'formDataProp':'armorProficiencies','actorData':_0x4adf7b,'opts':{'fnGetMappedItem':_0x5ec818=>{const _0x10d09d=_0x26bbfa;if(!_0x5ec818)return null;if(/^shield\|phb\b/i[_0x10d09d(0x21b)](_0x5ec818))return UtilActors[_0x10d09d(0x17a)](_0x10d09d(0x217));return UtilActors[_0x10d09d(0x17a)](_0x5ec818);},'fnGetMappedCustomItem':_0x5e87ca=>Renderer['splitTagByPipe'](_0x5e87ca)[0x0][_0x26bbfa(0x1c5)](),'actorTraitProp':_0x26bbfa(0x136)}});}static async[_0x1464dd(0x16a)](_0x29c483,_0x23da09,_0x33e7ae,_0x13156d,_0x2d52b1){const _0x253b00=_0x1464dd;_0x2d52b1=_0x2d52b1||{};const _0x25a6f1=await Charactermancer_WeaponProficiencySelect[_0x253b00(0x15f)]({..._0x2d52b1,'existingFvtt':{'weaponProficiencies':_0x29c483},'available':_0x23da09});if(!_0x25a6f1)return _0x13156d[_0x253b00(0x146)]=!![];if(_0x25a6f1===VeCt[_0x253b00(0x188)])return;this[_0x253b00(0x164)]({'existingProfs':_0x29c483,'formData':_0x25a6f1,'actorData':_0x33e7ae});}static[_0x1464dd(0x164)]({existingProfs:_0x5442b0,formData:_0x5ce670,actorData:_0x4be6c7}){const _0x133f90=_0x1464dd;this['doApplyOtherProficienciesFormData']({'existingProfsActor':_0x5442b0,'formData':_0x5ce670,'formDataProp':_0x133f90(0x209),'actorData':_0x4be6c7,'opts':{'fnGetMappedItem':_0x5cfa6b=>UtilActors[_0x133f90(0x12a)](_0x5cfa6b),'fnGetMappedCustomItem':_0x2a1e08=>Renderer['splitTagByPipe'](_0x2a1e08)[0x0][_0x133f90(0x1c5)](),'actorTraitProp':_0x133f90(0x211)}});}static[_0x1464dd(0x1c7)]({existingProfsActor:_0x529bc0,formData:_0x29ecc1,formDataProp:_0x571f2e,actorData:_0x535e1,opts:_0x4174b5}){const _0x46ba16=_0x1464dd;if(!_0x29ecc1?.['data']?.[_0x571f2e])return![];_0x529bc0=_0x529bc0||{};const _0x23954d=_0x29ecc1[_0x46ba16(0x1f9)][_0x571f2e];if(!Object[_0x46ba16(0x12d)](_0x23954d)['length'])return![];const _0x4d83db=MiscUtil[_0x46ba16(0x172)](_0x23954d),_0x4cd41b=new Set();Object[_0x46ba16(0x12d)](_0x4d83db)['filter'](_0x21aea5=>_0x4d83db[_0x21aea5])[_0x46ba16(0x17d)](_0x2cb0d0=>_0x4cd41b[_0x46ba16(0x1d5)](_0x2cb0d0));const _0x1f51bb=new Set(),_0x11d8e6=[];(_0x529bc0[_0x46ba16(0x1c8)]||[])[_0x46ba16(0x17d)](_0x3effbb=>_0x1f51bb[_0x46ba16(0x1d5)](_0x3effbb)),(_0x529bc0[_0x46ba16(0x1da)]||'')[_0x46ba16(0x1e2)](';')[_0x46ba16(0x1ab)](_0x125176=>_0x125176[_0x46ba16(0x1f5)]())[_0x46ba16(0x1ce)](Boolean)[_0x46ba16(0x17d)](_0x1347f2=>this[_0x46ba16(0x11a)](_0x11d8e6,_0x1347f2));const _0x216e00=MiscUtil[_0x46ba16(0x111)](_0x535e1,_0x46ba16(0x1a8),_0x4174b5[_0x46ba16(0x1d9)]);(_0x216e00?.[_0x46ba16(0x1c8)]||[])[_0x46ba16(0x17d)](_0x1514db=>_0x1f51bb['add'](_0x1514db)),(_0x216e00?.[_0x46ba16(0x1da)]||'')[_0x46ba16(0x1e2)](';')[_0x46ba16(0x1ab)](_0xdb64e5=>_0xdb64e5[_0x46ba16(0x1f5)]())[_0x46ba16(0x1ce)](Boolean)[_0x46ba16(0x17d)](_0x62fe04=>this[_0x46ba16(0x11a)](_0x11d8e6,_0x62fe04)),_0x4cd41b[_0x46ba16(0x17d)](_0x103286=>{const _0x546345=_0x46ba16,_0x527dd6=_0x4174b5[_0x546345(0x1c1)]?_0x4174b5[_0x546345(0x1c1)](_0x103286):_0x103286;if(_0x527dd6)_0x1f51bb[_0x546345(0x1d5)](_0x527dd6);else{const _0xe647c2=_0x4174b5['fnGetMappedCustomItem']?_0x4174b5[_0x546345(0x1eb)](_0x103286):_0x103286[_0x546345(0x1c5)]();this[_0x546345(0x11a)](_0x11d8e6,_0xe647c2);}});const _0x93fa71=MiscUtil['set'](_0x535e1,'traits',_0x4174b5[_0x46ba16(0x1d9)],{});_0x93fa71[_0x46ba16(0x1c8)]=[..._0x1f51bb][_0x46ba16(0x1ab)](_0x5d9d47=>_0x5d9d47['toLowerCase']())[_0x46ba16(0x1f1)](SortUtil[_0x46ba16(0x1ae)]),_0x93fa71[_0x46ba16(0x1da)]=_0x11d8e6[_0x46ba16(0x14b)](';');}static[_0x1464dd(0x11a)](_0x3e07d7,_0x4dfd6f){const _0xad4aba=_0x1464dd,_0xb92f44=_0x4dfd6f[_0xad4aba(0x1f5)]()[_0xad4aba(0x1a1)]();if(!_0x3e07d7['some'](_0x400b39=>_0x400b39['trim']()[_0xad4aba(0x1a1)]()===_0xb92f44))_0x3e07d7[_0xad4aba(0x168)](_0x4dfd6f);}static[_0x1464dd(0x190)]({existingProfs:_0xa1fbde,formData:_0x531c70,actorData:_0x2fc3f1}){const _0x9c3a27=_0x1464dd;if(!_0x531c70?.[_0x9c3a27(0x1f9)]?.[_0x9c3a27(0x1d1)])return;_0x2fc3f1[_0x9c3a27(0x212)]=_0x2fc3f1['abilities']||{},Parser[_0x9c3a27(0x1cf)][_0x9c3a27(0x1ce)](_0x237e70=>_0x531c70['data'][_0x9c3a27(0x1d1)][_0x237e70])[_0x9c3a27(0x17d)](_0x55699c=>{const _0x10f66c=_0x9c3a27,_0x398dd5=Math[_0x10f66c(0x12f)](_0xa1fbde[_0x55699c]?.[_0x10f66c(0x165)]||0x0,_0x531c70[_0x10f66c(0x1f9)][_0x10f66c(0x1d1)][_0x55699c]?0x1:0x0,_0x2fc3f1[_0x10f66c(0x212)][_0x55699c]?.[_0x10f66c(0x165)]||0x0),_0x123548=_0x398dd5>(MiscUtil['get'](_0x2fc3f1[_0x10f66c(0x212)],_0x55699c,_0x10f66c(0x165))||0x0);if(_0x123548)MiscUtil[_0x10f66c(0x1f3)](_0x2fc3f1[_0x10f66c(0x212)],_0x55699c,_0x10f66c(0x165),_0x398dd5);});}static async['pFillActorImmunityData'](_0x1ce625,_0x56be31,_0x29f95c,_0x5e8be3,_0x42127e){const _0x23404c=_0x1464dd;_0x42127e=_0x42127e||{};const _0x50906a=await Charactermancer_DamageImmunitySelect[_0x23404c(0x15f)]({..._0x42127e,'existingFvtt':{'immune':_0x1ce625},'available':_0x56be31});if(!_0x50906a)return _0x5e8be3[_0x23404c(0x146)]=!![];if(_0x50906a===VeCt[_0x23404c(0x188)])return;this[_0x23404c(0x1c4)]({'existingProfs':_0x1ce625,'formData':_0x50906a,'actorData':_0x29f95c});}static async[_0x1464dd(0x147)](_0x5b705c,_0x1a2aea,_0x39cec2,_0x36dcd4,_0xe7ac17){const _0x2ad109=_0x1464dd;_0xe7ac17=_0xe7ac17||{};const _0x30164c=await Charactermancer_DamageResistanceSelect['pGetUserInput']({..._0xe7ac17,'existingFvtt':{'resist':_0x5b705c},'available':_0x1a2aea});if(!_0x30164c)return _0x36dcd4['isCancelled']=!![];if(_0x30164c===VeCt[_0x2ad109(0x188)])return;this['doApplyDamageResistanceFormDataToActorUpdate']({'existingProfs':_0x5b705c,'formData':_0x30164c,'actorData':_0x39cec2});}static async[_0x1464dd(0x122)](_0x368ef2,_0x3f5203,_0x1963e5,_0x34927f,_0x2a49e8){const _0x514365=_0x1464dd;_0x2a49e8=_0x2a49e8||{};const _0xbfd350=await Charactermancer_DamageVulnerabilitySelect[_0x514365(0x15f)]({..._0x2a49e8,'existingFvtt':{'vulnerable':_0x368ef2},'available':_0x3f5203});if(!_0xbfd350)return _0x34927f['isCancelled']=!![];if(_0xbfd350===VeCt[_0x514365(0x188)])return;this['doApplyDamageVulnerabilityFormDataToActorUpdate']({'existingProfs':_0x368ef2,'formData':_0xbfd350,'actorData':_0x1963e5});}static async[_0x1464dd(0x175)](_0x476a84,_0x2fd9a6,_0x29244f,_0x5ed105,_0xb666d3){const _0x364426=_0x1464dd;_0xb666d3=_0xb666d3||{};const _0x1c5955=await Charactermancer_ConditionImmunitySelect[_0x364426(0x15f)]({..._0xb666d3,'existingFvtt':{'conditionImmune':_0x476a84},'available':_0x2fd9a6});if(!_0x1c5955)return _0x5ed105[_0x364426(0x146)]=!![];if(_0x1c5955===VeCt[_0x364426(0x188)])return;this[_0x364426(0x205)]({'existingProfs':_0x476a84,'formData':_0x1c5955,'actorData':_0x29244f});}static[_0x1464dd(0x1c4)]({existingProfs:_0x40f544,formData:_0x35e5f8,actorData:_0x41cdf1}){const _0x30c56d=_0x1464dd;this[_0x30c56d(0x1c7)]({'existingProfsActor':_0x40f544,'formData':_0x35e5f8,'formDataProp':'immune','actorData':_0x41cdf1,'opts':{'actorTraitProp':'di'}});}static[_0x1464dd(0x109)]({existingProfs:_0x51f164,formData:_0x49883b,actorData:_0x4fc5cc}){this['doApplyOtherProficienciesFormData']({'existingProfsActor':_0x51f164,'formData':_0x49883b,'formDataProp':'resist','actorData':_0x4fc5cc,'opts':{'actorTraitProp':'dr'}});}static['doApplyDamageVulnerabilityFormDataToActorUpdate']({existingProfs:_0x520711,formData:_0x4cb9b8,actorData:_0x4d16e2}){const _0x8f94a3=_0x1464dd;this[_0x8f94a3(0x1c7)]({'existingProfsActor':_0x520711,'formData':_0x4cb9b8,'formDataProp':_0x8f94a3(0x162),'actorData':_0x4d16e2,'opts':{'actorTraitProp':'dv'}});}static[_0x1464dd(0x205)]({existingProfs:_0x449cb6,formData:_0x1a5034,actorData:_0x3387c0}){const _0x5dae3d=_0x1464dd;this['doApplyOtherProficienciesFormData']({'existingProfsActor':_0x449cb6,'formData':_0x1a5034,'formDataProp':_0x5dae3d(0x123),'actorData':_0x3387c0,'opts':{'fnGetMappedItem':_0x4e13ae=>_0x4e13ae===_0x5dae3d(0x193)?_0x5dae3d(0x180):_0x4e13ae,'actorTraitProp':'ci'}});}static['doApplyExpertiseFormDataToActorUpdate']({existingProfs:_0x1ee954,formData:_0x5f06a0,actorData:_0x511915}){const _0x2d6fd7=_0x1464dd;this[_0x2d6fd7(0x10e)]({'existingProfs':_0x1ee954[_0x2d6fd7(0x1bc)],'formData':_0x5f06a0,'actorData':_0x511915}),this[_0x2d6fd7(0x1c7)]({'existingProfsActor':_0x1ee954[_0x2d6fd7(0x1bf)],'formData':_0x5f06a0,'formDataProp':_0x2d6fd7(0x1bf),'actorData':_0x511915,'opts':{'fnGetMappedItem':_0x15c195=>{const _0x6a5d8a=_0x2d6fd7;if(_0x5f06a0?.[_0x6a5d8a(0x1f9)]?.[_0x6a5d8a(0x1bf)][_0x15c195]===0x2)return null;return UtilActors['getMappedTool'](_0x15c195);},'fnGetMappedCustomItem':_0x4683fd=>{const _0x98c416=_0x2d6fd7;if(_0x5f06a0?.[_0x98c416(0x1f9)]?.[_0x98c416(0x1bf)][_0x4683fd]===0x2)return _0x4683fd['toTitleCase']()+_0x98c416(0x1a2);return _0x4683fd[_0x98c416(0x1c5)]();},'actorTraitProp':_0x2d6fd7(0x166)}});}static[_0x1464dd(0x10c)](_0x5ea334,{summonSpellLevel:summonSpellLevel=0x0}={}){const _0x4c888f=_0x1464dd,_0x243c30=[],_0x396642=_0x5ea334['indexOf'](_0x4c888f(0x202)),_0x23d5a6=_0x5ea334[_0x4c888f(0x10a)](/(?:(\d+)|\(?{@(?:dice|damage) ([^}]+)}(?:\s+[-+]\s+the spell's level)?(?: plus {@(?:dice|damage) ([^}]+)})?\)?)(?:\s+[-+]\s+[-+a-zA-Z0-9 ]*?)? ([^ ]+) damage/gi,(..._0x432310)=>{const _0x31c48b=_0x4c888f,[,_0x364ec6,_0x4e7a4f,_0x291ddd,_0x3b57e3,_0x479622]=_0x432310,_0x344c05=_0x364ec6!=null;let _0x4e384f=_0x344c05?_0x364ec6:_0x291ddd?_0x4e7a4f+_0x31c48b(0x196)+_0x291ddd:_0x4e7a4f;if(_0x344c05){const _0x1e47f0=_0x5ea334[_0x31c48b(0x1e2)](/( )/g);let _0x4ed025=0x0;const _0x5bf7c7=[];for(let _0x5e219d=0x0;_0x5e219d<_0x1e47f0['length'];++_0x5e219d){_0x5bf7c7[_0x31c48b(0x168)](_0x1e47f0[_0x5e219d]),_0x4ed025+=_0x1e47f0[_0x5e219d]['length'];if(_0x4ed025===_0x479622){const _0x9abf58=_0x5bf7c7[_0x31c48b(0x181)](-0x4);if(/^by dealing$/i[_0x31c48b(0x21b)](_0x9abf58[_0x31c48b(0x14b)]('')[_0x31c48b(0x1f5)]()))return'';}}}_0x4e384f=_0x4e384f[_0x31c48b(0x10a)](/\bPB\b/gi,_0x31c48b(0x144)),_0x4e384f=_0x4e384f['replace'](/\bsummonSpellLevel\b/gi,''+(summonSpellLevel??0x0));const _0x4bb3a1={'tuple':[_0x4e384f,_0x3b57e3]};return~_0x396642&&_0x479622>=_0x396642&&(_0x4bb3a1[_0x31c48b(0x179)]=!![]),_0x243c30[_0x31c48b(0x168)](_0x4bb3a1),'';});return{'str':_0x23d5a6,'damageTupleMetas':_0x243c30[_0x4c888f(0x1ce)](_0x5af8a1=>_0x5af8a1['tuple'][_0x4c888f(0x1d8)])};}static['getDamagePartsAndOtherFormula'](_0x53d879){const _0x2f62f9=_0x1464dd;_0x53d879=_0x53d879||[];if(!Config['get'](_0x2f62f9(0x128),_0x2f62f9(0x1ca)))return{'damageParts':_0x53d879[_0x2f62f9(0x1ab)](_0x1deb45=>_0x1deb45[_0x2f62f9(0x19a)]),'formula':''};const _0x268039=[];let _0x1d9b39='';_0x53d879[_0x2f62f9(0x17d)](_0x49ca81=>{const _0x207a82=_0x2f62f9;if(_0x1d9b39||!_0x49ca81[_0x207a82(0x179)])return _0x268039[_0x207a82(0x168)](_0x49ca81[_0x207a82(0x19a)]);_0x1d9b39=''+_0x49ca81[_0x207a82(0x19a)][0x0]+(_0x49ca81[_0x207a82(0x19a)][0x1]?'['+_0x49ca81['tuple'][0x1]+']':'');});if(!_0x268039['length'])return{'damageParts':_0x53d879[_0x2f62f9(0x1ab)](_0x3557c5=>_0x3557c5[_0x2f62f9(0x19a)]),'formula':''};return{'damageParts':_0x268039,'formula':_0x1d9b39};}static['getSpeedValue'](_0x384e56,_0x2592d2){const _0x58edf6=_0x1464dd;if(typeof _0x384e56===_0x58edf6(0x1b3))return _0x2592d2==='walk'?_0x384e56:null;_0x384e56=_0x384e56[_0x2592d2];if(_0x384e56==null)return null;if(_0x384e56[_0x58edf6(0x1b3)]!=null)return _0x384e56[_0x58edf6(0x1b3)];return Number(_0x384e56);}static[_0x1464dd(0x176)](_0x1fc8aa){const _0x4cabbd=_0x1464dd;if(typeof _0x1fc8aa===_0x4cabbd(0x1b3))return![];return!!_0x1fc8aa['canHover'];}static[_0x1464dd(0x1c6)](_0x578e93){const _0x14d11b=_0x1464dd;return{'burrow':DataConverter['getSpeedValue'](_0x578e93,_0x14d11b(0x1c3)),'climb':DataConverter[_0x14d11b(0x203)](_0x578e93,'climb'),'fly':DataConverter['getSpeedValue'](_0x578e93,_0x14d11b(0x1ad)),'swim':DataConverter[_0x14d11b(0x203)](_0x578e93,_0x14d11b(0x148)),'walk':DataConverter[_0x14d11b(0x203)](_0x578e93,_0x14d11b(0x1db)),'units':'ft','hover':DataConverter['isSpeedHover'](_0x578e93)};}static['getAttackRange'](_0x371558){const _0x301622=_0x1464dd;let _0x400050=0x0,_0x8db660=0x0;const _0x368219=/range (\d+)\/(\d+) ft/gi[_0x301622(0x126)](_0x371558);if(_0x368219)_0x400050=Number(_0x368219[0x1]),_0x8db660=Number(_0x368219[0x2]);else{const _0x2b4c02=/reach (\d+) ft/gi[_0x301622(0x126)](_0x371558);_0x2b4c02&&(_0x400050=Number(_0x2b4c02[0x1]));}return{'rangeShort':_0x400050,'rangeLong':_0x8db660};}static[_0x1464dd(0x11d)](_0x2cc0a4){const _0x4f00a9=_0x1464dd;let _0x22d12d='',_0x3e9d1b=![];const _0x2eec70=/{@atk ([^}]+)}/gi[_0x4f00a9(0x126)](_0x2cc0a4);if(_0x2eec70){_0x3e9d1b=!![];if(_0x2eec70[0x1][_0x4f00a9(0x213)]('s')){if(_0x2eec70[0x1][_0x4f00a9(0x213)]('m'))_0x22d12d=_0x4f00a9(0x189);else _0x22d12d='rsak';}else{if(_0x2eec70[0x1][_0x4f00a9(0x213)]('m'))_0x22d12d=_0x4f00a9(0x125);else{if(_0x2eec70[0x1][_0x4f00a9(0x213)]('r'))_0x22d12d=_0x4f00a9(0x14a);}}}return{'actionType':_0x22d12d,'isAttack':_0x3e9d1b};}static['getCleanOriginalData'](_0x467beb){const _0x217032=_0x1464dd;return _0x467beb=MiscUtil[_0x217032(0x172)](_0x467beb),Object[_0x217032(0x12d)](_0x467beb)[_0x217032(0x1ce)](_0x5521ac=>/^_f[A-Z]/[_0x217032(0x21b)](_0x5521ac))[_0x217032(0x17d)](_0x2f38c4=>delete _0x467beb[_0x2f38c4]),this['_getCleanOriginalData_recurse'](_0x467beb),_0x467beb;}static[_0x1464dd(0x1e8)](_0x5cbe23){const _0x4ca82f=_0x1464dd;if(_0x5cbe23==null)return;if(typeof _0x5cbe23!=='object')return;_0x5cbe23 instanceof Array?_0x5cbe23[_0x4ca82f(0x17d)](_0xaffdd2=>this[_0x4ca82f(0x1e8)](_0xaffdd2)):Object[_0x4ca82f(0x163)](_0x5cbe23)['forEach'](([_0x4ea7a5,_0x4f6f66])=>{const _0x1b92c5=_0x4ca82f;if(_0x4ea7a5[_0x1b92c5(0x213)]('$'))delete _0x5cbe23[_0x4ea7a5],console[_0x1b92c5(0x10d)](...LGT,_0x1b92c5(0x14e)+_0x4ea7a5+_0x1b92c5(0x1a7));else this[_0x1b92c5(0x1e8)](_0x4f6f66);});}static[_0x1464dd(0x114)](_0x152418){const _0x42107c=_0x1464dd,_0x44ddeb={},_0x2288af=new Set();let _0x2777fd=[];this['_getActorDamageResImmVulnConditionImm_addDamageTypesOrConditionTypes']({'ent':_0x152418,'validTypesArr':UtilActors['VALID_DAMAGE_TYPES'],'fnRender':Parser[_0x42107c(0x141)],'prop':'immune','allSet':_0x2288af,'customStack':_0x2777fd}),_0x44ddeb['di']={'value':[..._0x2288af],'custom':_0x2777fd['join'](',\x20')};const _0x5ffb12=new Set();let _0x25d57d=[];this[_0x42107c(0x1df)]({'ent':_0x152418,'validTypesArr':UtilActors[_0x42107c(0x16c)],'fnRender':Parser[_0x42107c(0x141)],'prop':_0x42107c(0x130),'allSet':_0x5ffb12,'customStack':_0x25d57d}),_0x44ddeb['dr']={'value':[..._0x5ffb12],'custom':_0x25d57d[_0x42107c(0x14b)](',\x20')};const _0x2a2acd=new Set();let _0x35f77f=[];this['_getActorDamageResImmVulnConditionImm_addDamageTypesOrConditionTypes']({'ent':_0x152418,'validTypesArr':UtilActors[_0x42107c(0x16c)],'fnRender':Parser[_0x42107c(0x141)],'prop':'vulnerable','allSet':_0x2a2acd,'customStack':_0x35f77f}),_0x44ddeb['dv']={'value':[..._0x2a2acd],'custom':_0x35f77f[_0x42107c(0x14b)](',\x20')};const _0x246a83=new Set();let _0x45efe7=[];return this[_0x42107c(0x1df)]({'ent':_0x152418,'validTypesArr':UtilActors[_0x42107c(0x115)],'fnRender':_0x43ed53=>Parser[_0x42107c(0x204)](_0x43ed53,!![]),'prop':_0x42107c(0x123),'allSet':_0x246a83,'customStack':_0x45efe7}),_0x44ddeb['ci']={'value':[..._0x246a83],'custom':_0x45efe7[_0x42107c(0x14b)](',\x20')},_0x44ddeb;}static['_getActorDamageResImmVulnConditionImm_addDamageTypesOrConditionTypes']({ent:_0x3fbaea,validTypesArr:_0x60e777,fnRender:_0x26ed3d,prop:_0x58c080,allSet:_0x52b2af,customStack:_0x4b23bb}){const _0xe367fa=_0x1464dd;if(!_0x3fbaea[_0x58c080])return;_0x3fbaea[_0x58c080][_0xe367fa(0x17d)](_0x3776d8=>{const _0x31072d=_0xe367fa;if(_0x60e777[_0x31072d(0x213)](_0x3776d8))_0x52b2af[_0x31072d(0x1d5)](_0x3776d8);else{if(this[_0x31072d(0x14c)]['has'](_0x58c080)&&_0x3776d8[_0x58c080]&&_0x3776d8[_0x58c080]instanceof Array&&CollectionUtil[_0x31072d(0x117)](new Set(_0x3776d8[_0x58c080]),this[_0x31072d(0x11e)])&&_0x3776d8[_0x31072d(0x1b0)]&&_0x3776d8[_0x31072d(0x1bb)])_0x52b2af[_0x31072d(0x1d5)](_0x31072d(0x19d));else{const _0x2aa85f=_0x26ed3d([_0x3776d8]);_0x52b2af[_0x31072d(0x1d5)](_0x31072d(0x1da)),_0x4b23bb[_0x31072d(0x168)](_0x2aa85f);}}});}static async[_0x1464dd(0x173)](_0x518cde,{propBrew:_0x7cc77b,fnLoadJson:_0x481b04,propJson:_0x15a3a0,fnMatch:_0x3c0f84}){const _0x42fa8a=_0x1464dd;let _0x44c321=(MiscUtil[_0x42fa8a(0x111)](BrewUtil,'homebrew',_0x7cc77b)||[])[_0x42fa8a(0x192)](_0x302f26=>(_0x3c0f84||this['_pGetAdditional_fnMatch'])(_0x518cde,_0x302f26));if(!_0x44c321){const _0xfc55e6=await _0x481b04();_0x44c321=(_0xfc55e6[_0x15a3a0]||[])[_0x42fa8a(0x192)](_0x426abe=>(_0x3c0f84||this[_0x42fa8a(0x214)])(_0x518cde,_0x426abe));}return _0x44c321;}static[_0x1464dd(0x214)](_0x2e30ac,_0x124bcb){const _0x1445ac=_0x1464dd;return _0x2e30ac['name']===_0x124bcb[_0x1445ac(0x216)]&&_0x2e30ac[_0x1445ac(0x135)]===_0x124bcb[_0x1445ac(0x135)];}static async[_0x1464dd(0x13c)](_0x2bb96f,{propBrew:_0x331029,fnLoadJson:_0x290569,propJson:_0x39e2fb,fnMatch:_0x33fd67}){const _0x17ee06=_0x1464dd;return this['_pGetAdditionalStar'](_0x2bb96f,{'propBrew':_0x331029,'fnLoadJson':_0x290569,'propJson':_0x39e2fb,'fnMatch':_0x33fd67,'propFromEntity':'foundryData','propFromSideLoaded':_0x17ee06(0x1f9)});}static async['pGetAdditionalEffectsRaw_'](_0x3aa05c,{propBrew:_0x2b6124,fnLoadJson:_0x3b6a96,propJson:_0x43a1c0,fnMatch:_0x3adab5}){const _0x10f5de=_0x1464dd;return this[_0x10f5de(0x170)](_0x3aa05c,{'propBrew':_0x2b6124,'fnLoadJson':_0x3b6a96,'propJson':_0x43a1c0,'fnMatch':_0x3adab5,'propFromEntity':_0x10f5de(0x13f),'propFromSideLoaded':_0x10f5de(0x158)});}static async[_0x1464dd(0x170)](_0x3f55cc,{propBrew:_0x223fcd,fnLoadJson:_0x441f72,propJson:_0x5a3b75,fnMatch:_0x25dc39,propFromEntity:_0x45126c,propFromSideLoaded:_0x32d6c8}){const _0x32660c=_0x1464dd,_0x270bfa=await this[_0x32660c(0x173)](_0x3f55cc,{'propBrew':_0x223fcd,'fnLoadJson':_0x441f72,'propJson':_0x5a3b75,'fnMatch':_0x25dc39});return this[_0x32660c(0x1d2)](_0x3f55cc,{'propFromEntity':_0x45126c,'propFromSideLoaded':_0x32d6c8,'found':_0x270bfa});}static async[_0x1464dd(0x1d2)](_0x24506d,{propFromEntity:_0x43c086,propFromSideLoaded:_0x41a2ca,found:_0x1adae7}){const _0x19c8da=_0x1464dd,_0x16ac58=_0x24506d[_0x43c086];if((!_0x1adae7||!_0x1adae7[_0x41a2ca])&&!_0x16ac58)return null;const _0x2af692=MiscUtil['copy'](_0x1adae7?_0x1adae7[_0x41a2ca]:_0x16ac58);if(_0x1adae7&&_0x16ac58){if(_0x2af692 instanceof Array)_0x2af692['push'](...MiscUtil[_0x19c8da(0x172)](_0x16ac58));else Object[_0x19c8da(0x124)](_0x2af692,MiscUtil['copy'](_0x16ac58));}return _0x2af692;}static async['pGetItemWeaponType'](_0x920760){const _0x1f899a=_0x1464dd;_0x920760=_0x920760[_0x1f899a(0x1a1)]()[_0x1f899a(0x1f5)]();if(UtilActors[_0x1f899a(0x1f7)][_0x1f899a(0x213)](_0x920760))return'martial';if(UtilActors[_0x1f899a(0x127)]['includes'](_0x920760))return _0x1f899a(0x119);let [_0x4854b1,_0xfe6e8c]=Renderer[_0x1f899a(0x18e)](_0x920760);_0xfe6e8c=_0xfe6e8c||'phb';const _0x4d8e08=UrlUtil[_0x1f899a(0x207)][UrlUtil[_0x1f899a(0x1b6)]]({'name':_0x4854b1,'source':_0xfe6e8c});if(Renderer[_0x1f899a(0x19b)][_0x1f899a(0x17f)](UrlUtil[_0x1f899a(0x1b6)],_0xfe6e8c,_0x4d8e08))return Renderer[_0x1f899a(0x19b)][_0x1f899a(0x195)](UrlUtil[_0x1f899a(0x1b6)],_0xfe6e8c,_0x4d8e08)?.[_0x1f899a(0x1e5)];if(Renderer[_0x1f899a(0x19b)][_0x1f899a(0x20a)](UrlUtil[_0x1f899a(0x1b6)],_0xfe6e8c))return null;const _0x55318e=await Renderer[_0x1f899a(0x19b)]['pCacheAndGet'](UrlUtil['PG_ITEMS'],_0xfe6e8c,_0x4d8e08);return _0x55318e?.[_0x1f899a(0x1e5)];}static[_0x1464dd(0x18a)](_0x208730,_0x265528){const _0x4743a5=_0x1464dd,_0x37aa27=_0x208730[_0x4743a5(0x192)](_0x58c1be=>_0x58c1be['raw']===_0x265528);if(!_0x37aa27)return ui['notifications'][_0x4743a5(0x10d)]('Failed\x20to\x20link\x20embedded\x20entity\x20for\x20active\x20effects!\x20'+VeCt[_0x4743a5(0x11c)]),console[_0x4743a5(0x10d)](...LGT,'Could\x20not\x20find\x20loaded\x20item\x20data',_0x265528,_0x4743a5(0x1bd),_0x208730),null;return _0x37aa27;}}DataConverter['WALKER_READONLY_GENERIC']=MiscUtil[_0x1464dd(0x1d3)]({'isNoModification':!![],'keyBlacklist':MiscUtil[_0x1464dd(0x1ea)]}),DataConverter[_0x1464dd(0x1ef)]=MiscUtil[_0x1464dd(0x1d3)]({'keyBlacklist':MiscUtil[_0x1464dd(0x1ea)]}),DataConverter[_0x1464dd(0x157)]='<PLUT_SYM__AT>',DataConverter['_SOURCE_PAGE_PREFIX']=_0x1464dd(0x14d),DataConverter['_SOURCE_PAGE_PREFIX_RE']=new RegExp(DataConverter[_0x1464dd(0x155)]+_0x1464dd(0x134)),DataConverter[_0x1464dd(0x151)]=new Set(['AT','GS','INS','T']),DataConverter['ITEM_TYPES_ACTOR_WEAPONS']=new Set(['M','R']),DataConverter[_0x1464dd(0x14f)]=new Set(['LA','MA','HA','S']),DataConverter[_0x1464dd(0x14c)]=new Set(['immune',_0x1464dd(0x130),_0x1464dd(0x162)]),DataConverter[_0x1464dd(0x11e)]=new Set([_0x1464dd(0x1a9),_0x1464dd(0x17e),_0x1464dd(0x218)]);export{DataConverter};
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {UtilActors} from "./UtilActors.js";
+import {Config} from "./Config.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {Vetools} from "./Vetools.js";
+import {Consts} from "./Consts.js";
+import {
+	Charactermancer_ConditionImmunitySelect,
+	Charactermancer_DamageVulnerabilitySelect,
+	Charactermancer_DamageResistanceSelect,
+	Charactermancer_DamageImmunitySelect,
+	Charactermancer_OtherProficiencySelect,
+	Charactermancer_ExpertiseSelect,
+} from "./UtilCharactermancer.js";
+import {LGT, Util} from "./Util.js";
+import {UtilCompat} from "./UtilCompat.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class DataConverter {
+	static getTagUids (tag, str) {
+		const re = new RegExp(`{@${tag} ([^}]+)}`, "gi");
+		const out = [];
+		str.replace(re, (...m) => out.push(m[1]));
+		return out;
+	}
+
+	static async pGetIconImage (entityType, entity) {
+		switch (entityType) {
+			case "feat":
+			case "spell": {
+				const iconLookup = await Vetools.pGetIconLookup(entityType);
+				const path = MiscUtil.get(iconLookup, entity.source, entity.name);
+				if (!path) return null;
+				return `modules/${SharedConsts.MODULE_NAME}/${path}`;
+			}
+			default: return null;
+		}
+	}
+
+	/** Combine Foundry-specific data found on entries. Pure takes precedence over underscore. */
+	static getCombinedFoundryData (foundryData, _foundryData) {
+		if (!_foundryData && !foundryData) return {};
+
+		const combinedFoundryData = MiscUtil.copy(_foundryData || {});
+		Object.assign(combinedFoundryData, MiscUtil.copy(foundryData || {}));
+
+		return combinedFoundryData;
+	}
+
+	/** Combine Foundry-specific flags found on entries. Pure takes precedence over underscore. */
+	static getCombinedFoundryFlags (foundryFlags, _foundryFlags) {
+		if (!foundryFlags && !_foundryFlags) return {};
+
+		const combinedFoundryFlags = MiscUtil.copy(_foundryFlags || {});
+
+		// Since flags are namespaced at the outer level, overwrite entries at one level deep.
+		Object.entries(MiscUtil.copy(foundryFlags || {}))
+			.forEach(([flagNamespace, flagData]) => {
+				if (!combinedFoundryFlags[flagNamespace]) return combinedFoundryFlags[flagNamespace] = flagData;
+				Object.assign(combinedFoundryFlags[flagNamespace], flagData);
+			});
+
+		return combinedFoundryFlags;
+	}
+
+	/**
+	 * @param entry Entry to render.
+	 * @param [opts] Options object.
+	 * @param [opts.prop] Entry property.
+	 * @param [opts.depth] Render depth.
+	 * @param [opts.summonSpellLevel]
+	 * @return {Promise<String>}
+	 */
+	static async pGetEntryDescription (entry, opts) {
+		opts = opts || {};
+		opts.prop = opts.prop || "entries";
+
+		let description = "";
+		if (entry[opts.prop]) {
+			let cpyEntries = MiscUtil.copy(entry[opts.prop]);
+
+			cpyEntries = UtilDataConverter.WALKER_GENERIC.walk(
+				cpyEntries,
+				{
+					string: (str) => {
+						return str
+							// Replace `@hitYourSpellAttack`
+							.replace(/{@hitYourSpellAttack}/gi, () => `{@dice 1d20 + @srd5e.userchar.spellAttackRanged|your spell attack modifier}`)
+							.replace(/{(@dice|@damage|@scaledice|@scaledamage) ([^}]+)}/gi, (...m) => {
+								const [, tag, text] = m;
+								let [rollText, displayText, name, ...others] = Renderer.splitTagByPipe(text);
+								const originalRollText = rollText;
+
+								rollText = rollText
+									// Replace `+ PB`
+									.replace(/\bPB\b/gi, `@srd5e.userchar.pb`)
+									// Replace `+ summonSpellLevel`
+									.replace(/\bsummonSpellLevel\b/gi, `${opts.summonSpellLevel ?? 0}`);
+
+								// If we did any replaces, ensure the display text does not change
+								if (!displayText && originalRollText !== rollText) {
+									displayText = originalRollText
+										// Replace `+ summonSpellLevel`
+										.replace(/\bsummonSpellLevel\b/gi, `the spell's level`);
+								}
+
+								return `{${tag} ${[rollText, displayText || "", name || "", ...others].join("|")}}`;
+							})
+						;
+					},
+				},
+			);
+
+			description = await UtilDataConverter.pGetWithDescriptionPlugins(
+				() => Renderer.get().setFirstSection(true).render(
+					{
+						type: "entries",
+						entries: cpyEntries,
+					},
+					opts.depth != null ? opts.depth : 2,
+				),
+			);
+		}
+
+		return description;
+	}
+
+	/**
+	 * Note that (where appropriate) updates should first load the actor's data, copy it, and modify it to suit.
+	 *
+	 * @param actor The actor's current data.
+	 * @param actorUpdate The actor update data to be mutated.
+	 * @param entry Entry to process.
+	 * @param [opts] Options object.
+	 * @param [opts.sideData] Side-loaded Foundry data.
+	 * @param [opts.sideData.actorDataMod] Generic actor data modifications to apply.
+	 * @param [opts.sideData.actorTokenMod] Generic actor token modifications to apply.
+	 */
+	static mutActorUpdate (actor, actorUpdate, entry, opts) {
+		opts = opts || {};
+
+		this._mutActorUpdate_mutFromSideDataMod(actor, actorUpdate, opts);
+		this._mutActorUpdate_mutFromSideTokenMod(actor, actorUpdate, opts);
+	}
+
+	static _mutActorUpdate_mutFromSideDataMod (actor, actorUpdate, opts) {
+		return this._mutActorUpdate_mutFromSideMod(actor, actorUpdate, opts, "actorDataMod", "data");
+	}
+
+	static _mutActorUpdate_mutFromSideTokenMod (actor, actorUpdate, opts) {
+		return this._mutActorUpdate_mutFromSideMod(actor, actorUpdate, opts, "actorTokenMod", "token");
+	}
+
+	static _mutActorUpdate_mutFromSideMod (actor, actorUpdate, opts, sideProp, actorProp) {
+		if (!opts.sideData || !opts.sideData[sideProp]) return;
+
+		Object.entries(opts.sideData[sideProp])
+			.forEach(([path, modMetas]) => this._mutActorUpdate_mutFromSideMod_handleProp(actor, actorUpdate, opts, sideProp, actorProp, path, modMetas));
+	}
+
+	static _mutActorUpdate_mutFromSideMod_handleProp (actor, actorUpdate, opts, sideProp, actorProp, path, modMetas) {
+		const pathParts = path.split(".");
+
+		// "Special" paths
+		if (path === "_") {
+			modMetas.forEach(modMeta => {
+				switch (modMeta.mode) {
+					case "conditionals": {
+						for (const cond of modMeta.conditionals) {
+							// If there is no condition (i.e. this is the "else" branch), always run.
+							//   Otherwise, evaluate the condition.
+
+							// Create a context for our variables to avoid any minification renames
+							window.PLUT_CONTEXT = {actor};
+
+							// eslint-disable-next-line no-eval
+							if (cond.condition && !eval(cond.condition)) continue;
+
+							Object.entries(cond.mod)
+								.forEach(([path, modMetas]) => this._mutActorUpdate_mutFromSideMod_handleProp(actor, actorUpdate, opts, sideProp, actorProp, path, modMetas));
+
+							break;
+						}
+
+						break;
+					}
+
+					default: throw new Error(`Unhandled mode "${modMeta.mode}"`);
+				}
+			});
+			return;
+		}
+
+		const fromActor = MiscUtil.get(actor, "data", actorProp, ...pathParts);
+		const fromUpdate = MiscUtil.get(actorUpdate, actorProp, ...pathParts);
+		const existing = fromUpdate || fromActor;
+
+		modMetas.forEach(modMeta => {
+			switch (modMeta.mode) {
+				case "appendStr": {
+					const existing = MiscUtil.get(actorUpdate, actorProp, ...pathParts);
+					const next = existing ? `${existing}${modMeta.joiner || ""}${modMeta.str}` : modMeta.str;
+					MiscUtil.set(actorUpdate, actorProp, ...pathParts, next);
+					break;
+				}
+
+				case "appendIfNotExistsArr": {
+					const existingArr = MiscUtil.copy(existing || []);
+					const out = [...existingArr];
+					out.push(...modMeta.items.filter(it => !existingArr.some(x => CollectionUtil.deepEquals(it, x))));
+					MiscUtil.set(actorUpdate, actorProp, ...pathParts, out);
+					break;
+				}
+
+				case "scalarAdd": {
+					MiscUtil.set(actorUpdate, actorProp, ...pathParts, modMeta.scalar + existing || 0);
+					break;
+				}
+
+				case "scalarAddUnit": {
+					const existingLower = `${existing || 0}`.toLowerCase();
+
+					const handle = (toFind) => {
+						const ix = existingLower.indexOf(toFind.toLowerCase());
+						let numPart = existing.slice(0, ix);
+						const rest = existing.slice(ix);
+						const isSep = numPart.endsWith(" ");
+						numPart = numPart.trim();
+
+						if (!isNaN(numPart)) {
+							const out = `${modMeta.scalar + Number(numPart)}${isSep ? " " : ""}${rest}`;
+							MiscUtil.set(actorUpdate, actorProp, ...pathParts, out);
+						} // else silently fail
+					};
+
+					if (!existing) MiscUtil.set(actorUpdate, actorProp, ...pathParts, `${modMeta.scalar} ${modMeta.unitShort || modMeta.unit}`);
+					else if (modMeta.unit && existingLower.includes(modMeta.unit.toLowerCase())) {
+						handle(modMeta.unit);
+					} else if (modMeta.unitShort && existingLower.includes(modMeta.unitShort.toLowerCase())) {
+						handle(modMeta.unitShort);
+					} // else silently fail
+					break;
+				}
+
+				// Set something to the numerical max of its existing value and the incoming value
+				case "setMax": {
+					const existingLower = `${existing || 0}`.toLowerCase();
+					let asNum = Number(existingLower);
+					if (isNaN(asNum)) asNum = 0;
+					const maxValue = Math.max(asNum, modMeta.value);
+					MiscUtil.set(actorUpdate, actorProp, ...pathParts, maxValue);
+					break;
+				}
+
+				case "set": {
+					MiscUtil.set(actorUpdate, actorProp, ...pathParts, MiscUtil.copy(modMeta.value));
+					break;
+				}
+
+				default: throw new Error(`Unhandled mode "${modMeta.mode}"`);
+			}
+		});
+	}
+
+	/**
+	 * Generic entry -> item data parsing.
+	 * @param entry Entry to process.
+	 * @param opts Options object.
+	 * @param opts.mode Parsing mode; `"creature"` or `"player" or "object"`.
+	 * @param [opts.modeOptions] Parsing mode options.
+	 * @param [opts.modeOptions.isChannelDivinity]
+	 * @param opts.fvttType Foundry type.
+	 * @param opts.img Image path.
+	 * @param [opts.effects] Item effects.
+	 * @param opts.source Item source.
+	 * @param [opts.renderDepth] Render depth.
+	 * @param [opts.activationType] Foundry activation type.
+	 * @param [opts.activationCost] Foundry action type.
+	 * @param [opts.consumeType]
+	 * @param [opts.consumeTarget]
+	 * @param [opts.consumeAmount]
+	 * @param [opts.formula]
+	 * @param [opts.description] Pre-rendered description.
+	 * @param [opts.isSkipDescription] If a description should not be created from the entry.
+	 * @param [opts.actor] Actor data.
+	 * @param [opts.summonSpellLevel] Spell level used to summon the creature this item will belong to, if appropriate.
+	 * @param [opts.additionalData] Additional side-loaded Foundry data.
+	 * @param [opts.additionalFlags] Additional side-loaded Foundry flags.
+	 * @param [opts.pb] A proficiency bonus for this actor. Used for creature text parsing.
+	 * @param [opts.entity] An entity with str/dex/con/int/wis/cha scores. Used for creature text parsing.
+	 * @param [opts.entity.str]
+	 * @param [opts.entity.dex]
+	 * @param [opts.entity.con]
+	 * @param [opts.entity.int]
+	 * @param [opts.entity.wis]
+	 * @param [opts.entity.cha]
+	 */
+	static async pGetItemActorPassive (entry, opts) {
+		opts = opts || {};
+		opts.modeOptions = opts.modeOptions || {};
+
+		// Treat object parses as creature parses; potentially to be reworked in future.
+		if (opts.mode === "object") opts.mode = "creature";
+
+		// region Inputs
+		let {
+			description,
+
+			activationType,
+			activationCost,
+			activationCondition,
+
+			saveAbility,
+			saveDc,
+			saveScaling,
+
+			damageParts,
+
+			attackBonus,
+
+			requirements,
+
+			actionType,
+
+			durationValue,
+			durationUnits,
+
+			consumeType,
+			consumeTarget,
+			consumeAmount,
+
+			formula,
+
+			targetValue,
+			targetUnits,
+			targetType,
+
+			usesCount,
+			usesCountMax,
+			usesPer,
+
+			rangeShort,
+			rangeLong,
+
+			foundryData,
+			_foundryData,
+			foundryFlags,
+			_foundryFlags,
+		} = opts;
+
+		const combinedFoundryData = DataConverter.getCombinedFoundryData(foundryData, _foundryData);
+		const combinedFoundryFlags = DataConverter.getCombinedFoundryFlags(foundryFlags, _foundryFlags);
+
+		description = description || (opts.isSkipDescription ? "" : await DataConverter.pGetEntryDescription(entry, {depth: opts.renderDepth, summonSpellLevel: opts.summonSpellLevel}));
+
+		activationType = activationType || "";
+		activationCost = activationCost || 0;
+		activationCondition = activationCondition || "";
+
+		saveAbility = saveAbility || "";
+		saveDc = saveDc || null;
+		saveScaling = saveScaling || "";
+
+		damageParts = damageParts || [];
+
+		attackBonus = attackBonus || null;
+
+		requirements = requirements || "";
+
+		actionType = actionType || "";
+
+		durationValue = durationValue || null;
+		durationUnits = durationUnits || "";
+
+		consumeType = consumeType || null;
+		consumeTarget = consumeTarget || null;
+		consumeAmount = consumeAmount || null;
+
+		formula = formula || "";
+
+		targetValue = targetValue || null;
+		targetUnits = targetUnits || "";
+		targetType = targetType || "";
+
+		usesCount = usesCount || 0; // This is always a number
+		usesCountMax = usesCountMax || "0"; // This can be a formula
+		usesPer = usesPer || null; // Foundry currently (2020-04-26) supports "Day", "Short Rest", "Long Rest", and "Charges"
+
+		rangeShort = rangeShort ?? null;
+		rangeLong = rangeLong ?? null;
+		// endregion
+
+		let name = UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(entry, {isActorItem: true}));
+		const strEntries = entry.entries ? JSON.stringify(entry.entries) : null;
+
+		// region Recharge
+		let rechargeOn = null;
+		if (entry.name) {
+			const mRecharge = /{@recharge( \d+)?}/gi.exec(entry.name);
+			if (mRecharge) {
+				rechargeOn = mRecharge[1] ? Number(mRecharge[1].trim()) : 6;
+				name = name
+					.replace(/\(Recharge \d+(–\d+)?\)/gi, "")
+					.trim()
+					.replace(/[ ]+/g, " ")
+				;
+			}
+		}
+		// endregion
+
+		// region Activation
+		if (entry.entries) {
+			// For other features, actions/reaction
+			if (opts.mode === "player") {
+				if (!activationType && !activationCost) {
+					let isAction = false;
+					let isBonusAction = false;
+					let isReaction = false;
+
+					const walker = UtilDataConverter.WALKER_READONLY_GENERIC;
+					walker.walk(
+						entry.entries,
+						{
+							string: (str) => {
+								if (activationType) return str;
+
+								const sentences = Util.getSentences(str);
+								for (const sentence of sentences) {
+									if (/\b(?:as an action|can take an action|can use your action)\b/i.test(sentence)) {
+										isAction = true;
+										break;
+									}
+
+									if (/\bbonus action\b/i.test(sentence)) {
+										isBonusAction = true;
+										break;
+									}
+
+									const mReact = /\b(?:you can use your reaction|using your reaction|you can use this special reaction)\b/i.exec(sentence);
+									if (mReact) {
+										isReaction = true;
+
+										// Attempt to pull out a condition from the preceding text, e.g.
+										// "When an enemy within 30 feet of you, ..., you can use your reaction"
+										let preceding = sentence.slice(0, mReact.index).trim().replace(/,$/, "");
+										const mCondition = /(^|\W)(?:if|when)(?:|\W)/i.exec(preceding);
+										if (mCondition) {
+											preceding = preceding.slice(mCondition.index + mCondition[1].length).trim();
+											activationCondition = activationCondition || preceding;
+										}
+
+										break;
+									}
+								}
+							},
+						},
+					);
+
+					// Prefer action -> bonus action -> reaction, as some actions (e.g. Tortle's "Shell Defense" have 'bonus
+					//   action to end' clauses.
+					if (isAction) activationType = "action";
+					else if (isBonusAction) activationType = "bonus";
+					else if (isReaction) activationType = "reaction";
+
+					if (isAction || isBonusAction || isReaction) activationCost = 1;
+
+					// If we could not find a well-defined action type, fall back on "special" in some cases
+					if (!activationType) {
+						walker.walk(
+							entry.entries,
+							{
+								string: (str) => {
+									if (activationType) return str;
+
+									const sentences = Util.getSentences(str);
+
+									for (const sentence of sentences) {
+										if (/you can't use this feature again|once you use this feature/i.test(sentence)) activationType = "special";
+									}
+								},
+							},
+						);
+					}
+				}
+			}
+
+			if (opts.mode === "creature" && entry.name) {
+				if (!activationType && !activationCost) {
+					// For creatures, bonus actions end up in traits, so pull these out
+					if (/\bbonus action\b/i.test(strEntries)) {
+						activationType = "bonus";
+						activationCost = 1;
+					}
+
+					if (/^legendary resistance/i.test(entry.name)) {
+						activationType = "special";
+					}
+				}
+			}
+		}
+		// endregion
+
+		// region Uses
+		// For creatures, use information is given in the name
+		if (opts.mode === "creature" && entry.name) {
+			name = name.replace(/\(\s*(\d+)\s*\/\s*(Day|Short Rest|Long Rest)\s*\)/i, (...m) => {
+				usesCount = Number(m[1]);
+				usesCountMax = `${usesCount}`;
+
+				const cleanTime = m[2].trim().toLowerCase();
+				switch (cleanTime) {
+					case "day": usesPer = "day"; break;
+					case "short rest": usesPer = "sr"; break;
+					case "long rest": usesPer = "lr"; break;
+				}
+
+				return "";
+			});
+
+			if (!usesPer) {
+				name = name.replace(/\(\s*(\d+)\s+Charges\s*\)/i, (...m) => {
+					usesCount = Number(m[1]);
+					usesCountMax = `${usesCount}`;
+					usesPer = "charges";
+
+					return "";
+				});
+			}
+
+			if (usesPer) { // If we found any "uses" part
+				// Clean the name after doing any replaces
+				name = name.trim().replace(/[ ]+/g, " ");
+
+				// Force an activation cost if we have an activation cost, as it is required to display the form correctly
+				activationType = activationType || "none";
+
+				// If the first line of the entries starts with "If ..." or "When ...", use the first line as the condition
+				if (entry.entries && typeof entry.entries[0] === "string" && /^(?:If |When )/i.test(entry.entries[0].trim())) {
+					activationCondition = entry.entries[0].trim();
+				}
+			}
+
+			// Avoid adding usage info to legendary resistances, as they will be tracked as resource usage on the sheet
+			if (/legendary resistance/gi.test(name)) {
+				usesCount = 0;
+				usesCountMax = `${usesCount}`;
+				usesPer = null;
+			}
+		}
+
+		if (opts.mode === "player" && entry.entries) {
+			// region Resting
+			const isShortRest = /\b(?:finish|complete) a short rest\b/.test(strEntries) || /\b(?:finish|complete) a short or long rest\b/.test(strEntries) || /\b(?:finish|complete) a short rest or a long rest\b/.test(strEntries) || /\b(?:finish|complete) a short or long rest\b/.test(strEntries);
+			const isLongRest = !isShortRest && /\b(?:finish|complete) a long rest\b/.test(strEntries);
+
+			if (isShortRest) usesPer = "sr";
+			else if (isLongRest) usesPer = "lr";
+			// endregion
+
+			// region Uses
+			const mAbilModifier = new RegExp(`a number of times equal to(?: (${Consts.TERMS_COUNT.map(it => it.tokens.join("")).join("|")}))? your (Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma) modifier(?: \\(minimum of (${Consts.TERMS_COUNT.map(it => it.tokens.join("")).join("|")})\\))?`, "i").exec(strEntries);
+			if (mAbilModifier && opts.actor) {
+				const abv = mAbilModifier[2].slice(0, 3).toLowerCase();
+				const abilScore = MiscUtil.get(opts.actor, "data", "data", "abilities", abv, "value");
+				if (abilScore != null) {
+					let mod = Parser.getAbilityModNumber(abilScore);
+					// FIXME(Future) Test/use the proper version when dnd5e 1.3.0 is released
+					// let modFormula = `@abilities.${abv}.mod`;
+					let modFormula = `floor((@abilities.${abv}.value - 10) / 2)`;
+
+					if (mAbilModifier[1]) {
+						const multiplier = (Consts.TERMS_COUNT.find(it => it.tokens.join(" ") === mAbilModifier[1].trim().toLowerCase()) || {}).count || 1;
+						mod = mod * multiplier;
+						modFormula = `${modFormula} * ${multiplier}`;
+					}
+
+					if (mAbilModifier[3]) {
+						const min = (Consts.TERMS_COUNT.find(it => it.tokens.join("") === mAbilModifier[3].trim().toLowerCase()) || {}).count || 1;
+						mod = Math.max(min, mod);
+						modFormula = `max(${min}, ${modFormula})`;
+					}
+
+					usesCount = mod;
+					usesCountMax = modFormula;
+				}
+			}
+
+			strEntries.replace(/you can use ([^.!?]+) a number of times equal to(?<mult> twice)? your proficiency bonus/i, (...m) => {
+				const mult = m.last().mult
+					? (Consts.TERMS_COUNT.find(meta => CollectionUtil.deepEquals(meta.tokens, m.last().mult.trim().toLowerCase().split(/( )/g)))?.count || 1)
+					: 1;
+				usesCount = opts.actor ? (opts.actor.getRollData().prof * mult) : null;
+				usesCountMax = `@prof${mult > 1 ? ` * ${mult}` : ""}`;
+			});
+
+			// If we found no use count, assume it's one-use
+			if (usesPer && !usesCount && (!usesCountMax || usesCountMax === "0")) {
+				usesCount = 1;
+				usesCountMax = `${usesCount}`;
+			}
+			// endregion
+		}
+		// endregion
+
+		// region Saving throws
+		if (opts.mode === "player" && entry.entries) {
+			UtilDataConverter.WALKER_READONLY_GENERIC.walk(
+				entry.entries,
+				{
+					object: (obj) => {
+						if (obj.type !== "abilityDc") return obj;
+
+						if (actionType && saveScaling) return obj;
+
+						actionType = actionType || "save";
+						saveScaling = obj.attributes[0]; // Use the first available attribute
+
+						return obj;
+					},
+					string: (str) => {
+						if (actionType && saveAbility && saveScaling) return str;
+
+						// region "8 + pb + mod"
+						str.replace(/8\s*\+\s*your proficiency bonus\s*\+\s*your (.*?) modifier/i, (...m) => {
+							const customAbilities = [];
+							m[1].replace(/(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma)/i, (...m2) => {
+								customAbilities.push(m2[1].toLowerCase().slice(0, 3));
+							});
+							if (!customAbilities.length) return;
+
+							actionType = actionType || "save";
+							saveScaling = customAbilities[0]; // Use the first available attribute
+						});
+						// endregion
+
+						// region Spell save
+						// e.g.:
+						// - "succeed on a Wisdom saving throw against your spell save DC"
+						str.replace(/(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma) saving throw against your (.*? )spell save DC/i, (...m) => {
+							actionType = actionType || "save";
+							saveAbility = saveAbility || m[1].toLowerCase().slice(0, 3);
+							saveScaling = saveScaling || "spell";
+						});
+						// endregion
+
+						if (opts.modeOptions.isChannelDivinity) {
+							str.replace(/(?:make a|succeed on a) (Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma) saving throw/gi, (...m) => {
+								actionType = actionType || "save";
+								saveAbility = saveAbility || m[1].toLowerCase().slice(0, 3);
+								saveScaling = saveScaling || "spell";
+							});
+						}
+
+						return str;
+					},
+				},
+			);
+		}
+
+		if (opts.mode === "creature" && entry.entries) {
+			// If a "passive" text feature has one or more DCs embedded, use the first as the save DC info.
+			strEntries.replace(/{@dc ([-+]?\s*\d+)}\s+(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma)/, (...m) => {
+				const dcNum = Number(m[1].replace(/\s*/g, ""));
+				if (isNaN(dcNum)) return;
+
+				actionType = actionType || "save";
+				saveAbility = saveAbility || m[2].toLowerCase().slice(0, 3);
+				saveDc = dcNum;
+
+				if (opts.pb == null || opts.entity == null || Parser.ABIL_ABVS.some(it => opts.entity[it] == null)) {
+					saveScaling = "flat";
+					return;
+				}
+
+				// If there is exactly one ability score that our saving throw could be based on, use it,
+				//   rather than flat scaling.
+				const fromAbil = dcNum - opts.pb - 8;
+				const abilToBonus = Parser.ABIL_ABVS.map(it => ({ability: it, bonus: Parser.getAbilityModNumber(opts.entity[it])}));
+				const matchingAbils = abilToBonus.filter(it => it.bonus === fromAbil);
+
+				if (matchingAbils.length === 1) saveScaling = saveScaling || matchingAbils[0].ability;
+				else saveScaling = "flat";
+			});
+		}
+		// endregion
+
+		// region Duration
+		if (opts.mode === "player" && entry.entries) {
+			UtilDataConverter.WALKER_READONLY_GENERIC.walk(
+				entry.entries,
+				{
+					string: (str) => {
+						// Only update the duration if we can set both units and value
+						if (durationValue || durationUnits) return;
+
+						// "lasts for 1 minute"
+						// "lasts for 8 hours"
+						str.replace(/(?:^|\W)lasts for (\d+) (minute|hour|day|month|year|turn|round)s?(?:\W|$)/gi, (...m) => {
+							durationValue = Number(m[1]);
+							durationUnits = m[2].toLowerCase();
+						});
+
+						// "for the next 8 hours"
+						str.replace(/(?:^|\W)for the next (\d+) (minute|hour|day|month|year|turn|round)s?(?:\W|$)/gi, (...m) => {
+							durationValue = Number(m[1]);
+							durationUnits = m[2].toLowerCase();
+						});
+
+						// "turned for 1 minute" (e.g. channel divinity)
+						str.replace(/(?:^|\W)turned for (\d+) (minute|hour|day|month|year|turn|round)s?(?:\W|$)/gi, (...m) => {
+							durationValue = Number(m[1]);
+							durationUnits = m[2].toLowerCase();
+						});
+
+						// "this effect lasts for 1 minute"
+						str.replace(/(?:^|\W)this effect lasts for (\d+) (minute|hour|day|month|year|turn|round)s?(?:\W|$)/gi, (...m) => {
+							durationValue = Number(m[1]);
+							durationUnits = m[2].toLowerCase();
+						});
+
+						// "until the end of your next turn"
+						str.replace(/(?:^|\W)until the end of your next turn(?:\W|$)/gi, () => {
+							durationValue = 1;
+							durationUnits = "turn";
+						});
+
+						// "it is charmed by you for 1 minute"
+						Renderer.stripTags(str).replace(/(?:^|\W)is \w+ by you for (\d+) (minute|hour|day|month|year|turn|round)s(?:\W|$)/gi, (...m) => {
+							durationValue = Number(m[1]);
+							durationUnits = m[2].toLowerCase();
+						});
+					},
+				},
+			);
+		}
+		// endregion
+
+		// region Resource Consumption
+		if (opts.mode === "player" && entry.entries) {
+			UtilDataConverter.WALKER_READONLY_GENERIC.walk(
+				entry.entries,
+				{
+					string: (str) => {
+						if (consumeType || consumeTarget || consumeAmount) return;
+
+						str.replace(/(?:(\d+) to )?(\d+) (?:ki|sorcery) point/i, (...m) => {
+							consumeType = "attribute";
+							consumeTarget = "resources.primary.value";
+							consumeAmount = Number(m[1] || m[2]);
+						});
+					},
+				},
+			);
+		}
+		// endregion
+
+		// region Damage
+		let strEntriesNoDamageDice = strEntries;
+		if ((opts.mode === "player" || opts.mode === "vehicle") && entry.entries && !damageParts.length) {
+			const {str, damageTupleMetas} = DataConverter.getDamageTupleMetas(strEntries, {summonSpellLevel: opts.summonSpellLevel});
+			strEntriesNoDamageDice = str;
+
+			const {damageParts: damageParts_, formula: formula_} = DataConverter.getDamagePartsAndOtherFormula(damageTupleMetas);
+
+			damageParts = damageParts_;
+			formula = formula || formula_;
+		}
+		// endregion
+
+		// region Other Formulas
+		if ((opts.mode === "player" || opts.mode === "vehicle") && entry.entries && !formula) {
+			// Note: not `[g]lobal`, as only one "other formula" is supported
+			strEntriesNoDamageDice.replace(/{(?:@dice|@scaledice) ([^}]+)}/i, (...m) => {
+				const [dice] = m[1].split("|");
+				formula = dice;
+			});
+		}
+		// endregion
+
+		// region Target
+		if (opts.mode === "creature" && strEntries && !targetValue && !targetUnits && !targetType) {
+			const targetMeta = this._pGetItemActorPassive_getTargetMeta(strEntries);
+			targetValue = targetMeta.targetValue || targetValue;
+			targetUnits = targetMeta.targetUnits || targetUnits;
+			targetType = targetMeta.targetType || targetType;
+		}
+		// endregion
+
+		// region Post-processing
+		try { activationCondition = Renderer.stripTags(activationCondition); } catch (e) { console.error(...LGT, e); }
+		// endregion
+
+		name = name.trim().replace(/\s+/g, " ");
+		if (!name) name = "(Unnamed)"; // Empty names are invalid in Foundry
+
+		return {
+			name: name,
+			type: opts.fvttType,
+			data: {
+				source: opts.source ? Parser.sourceJsonToAbv(opts.source) : "",
+				description: {value: description, chat: "", unidentified: ""},
+
+				damage: {
+					parts: damageParts,
+					versatile: "",
+				},
+				duration: {
+					value: durationValue,
+					units: durationUnits,
+				},
+				range: {value: rangeShort, long: rangeLong, units: (rangeShort != null || rangeLong != null) ? "ft" : ""},
+				requirements,
+
+				save: {
+					ability: saveAbility,
+					dc: saveDc,
+					scaling: saveScaling || "flat",
+				},
+
+				activation: {
+					type: activationType,
+					cost: activationCost,
+					condition: activationCondition,
+				},
+
+				target: {
+					value: targetValue,
+					units: targetUnits,
+					type: targetType,
+				},
+
+				uses: {
+					value: usesCount,
+					max: usesCountMax,
+					per: usesPer,
+				},
+				ability: "",
+				actionType: actionType || "other",
+				attackBonus: attackBonus,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+
+				formula,
+
+				recharge: {
+					value: rechargeOn,
+					charged: rechargeOn != null,
+				},
+
+				consume: {
+					type: consumeType,
+					target: consumeTarget,
+					amount: consumeAmount,
+				},
+
+				...(combinedFoundryData || {}),
+				...(opts.additionalData || {}),
+			},
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(opts.img),
+			flags: {
+				...(UtilCompat.getFeatureFlags({isReaction: activationType === "reaction"})),
+				...(combinedFoundryFlags || {}),
+				...opts.additionalFlags,
+			},
+			effects: opts.effects || [],
+		};
+	}
+
+	static _pGetItemActorPassive_getTargetMeta (strEntries) {
+		let targetValue, targetUnits, targetType;
+		let found = false;
+
+		let tmpEntries = strEntries
+			// Dragon breath weapons; abominable yeti breath weapon
+			.replace(/exhales [^.]*a (?<size>\d+)-foot[- ](?<shape>cone|line)/, (...m) => {
+				targetValue = Number(m.last().size);
+				targetUnits = "ft";
+				targetType = m.last().shape; // "cone" and "line" are both valid values
+
+				found = true;
+
+				return "";
+			});
+
+		if (found) return {targetValue, targetUnits, targetType};
+
+		// e.g. Djinni "Create Whirlwind"
+		tmpEntries = tmpEntries.replace(/(?<size>\d+)-foot-radius,? \d+-foot-tall cylinder/, (...m) => {
+			targetValue = Number(m.last().size);
+			targetUnits = "ft";
+			targetType = "cylinder";
+
+			found = true;
+			return "";
+		});
+
+		if (found) return {targetValue, targetUnits, targetType};
+
+		// e.g.:
+		// - Azer "Illumination"
+		// - Beholder variant "Death Ray"
+		tmpEntries = tmpEntries.replace(/(?<size>\d+)-foot[- ]radius(?<ptSphere> sphere)?/, (...m) => {
+			targetValue = Number(m.last().size);
+			targetUnits = "ft";
+			targetType = (m.last().ptSphere ? "sphere" : "radius");
+
+			found = true;
+			return "";
+		});
+
+		if (found) return {targetValue, targetUnits, targetType};
+
+		// e.g. Beholder "Disintegration Ray"
+		tmpEntries = tmpEntries.replace(/(?<size>\d+)-foot[- ]cube/, (...m) => {
+			targetValue = Number(m.last().size);
+			targetUnits = "ft";
+			targetType = "cube";
+
+			found = true;
+			return "";
+		});
+
+		if (found) return {targetValue, targetUnits, targetType};
+
+		// e.g. Beholder variant "Petrification Ray"
+		tmpEntries = tmpEntries.replace(/(?<size>\d+)-foot[- ]square/, (...m) => {
+			targetValue = Number(m.last().size);
+			targetUnits = "ft";
+			targetType = "square";
+
+			found = true;
+			return "";
+		});
+
+		if (found) return {targetValue, targetUnits, targetType};
+
+		// e.g. Marid "Water Jet"
+		tmpEntries = tmpEntries.replace(/(?<size>\d+)-foot line/, (...m) => {
+			targetValue = Number(m.last().size);
+			targetUnits = "ft";
+			targetType = "line";
+
+			found = true;
+			return "";
+		});
+
+		// e.g. Mind Flayer "Mind Blast"
+		tmpEntries = tmpEntries.replace(/(?<size>\d+)-foot cone/, (...m) => {
+			targetValue = Number(m.last().size);
+			targetUnits = "ft";
+			targetType = "cone";
+
+			found = true;
+			return "";
+		});
+
+		if (found) return {targetValue, targetUnits, targetType};
+		return {};
+	}
+
+	static getMaxCasterProgression (...casterProgressions) {
+		casterProgressions = casterProgressions.filter(Boolean);
+		const ixs = casterProgressions.map(it => this._CASTER_PROGRESSIONS.indexOf(it)).filter(ix => ~ix);
+		if (!ixs.length) return null;
+		return this._CASTER_PROGRESSIONS[Math.min(...ixs)];
+	}
+
+	static getMaxCantripProgression (...casterProgressions) {
+		const out = [];
+		casterProgressions
+			.filter(Boolean)
+			.forEach(progression => {
+				progression.forEach((cnt, i) => {
+					if (out[i] == null) return out[i] = cnt;
+					out[i] = Math.max(out[i], cnt);
+				});
+			});
+		return out;
+	}
+
+	/**
+	 * @param existingProficienciesSkills Actor's current skill proficiencies.
+	 * @param existingProficienciesTools Actor's current tool proficiencies.
+	 * @param existingProficienciesLanguages Actor's current languages.
+	 * @param skillProficiencies Data from a background or race.
+	 * @param languageProficiencies Data from a background or race.
+	 * @param toolProficiencies Data from a background or race.
+	 * @param skillToolLanguageProficiencies Data from a background or race.
+	 * @param actorData Actor update object to fill.
+	 * @param importOpts
+	 * @param [titlePrefix]
+	 */
+	static async pFillActorSkillToolLanguageData (
+		{
+			existingProficienciesSkills,
+			existingProficienciesTools,
+			existingProficienciesLanguages,
+			skillProficiencies,
+			languageProficiencies,
+			toolProficiencies,
+			skillToolLanguageProficiencies,
+			actorData,
+			importOpts,
+			// Other options
+			titlePrefix,
+		},
+	) {
+		skillToolLanguageProficiencies = this._pFillActorSkillToolLanguageData_getMergedProfs({
+			skillProficiencies,
+			languageProficiencies,
+			toolProficiencies,
+			skillToolLanguageProficiencies,
+		});
+
+		const formData = await Charactermancer_OtherProficiencySelect.pGetUserInput({
+			titlePrefix,
+			existingFvtt: {
+				skillProficiencies: existingProficienciesSkills,
+				toolProficiencies: existingProficienciesTools,
+				languageProficiencies: existingProficienciesLanguages,
+			},
+			available: skillToolLanguageProficiencies,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplySkillFormDataToActorUpdate({
+			existingProfsActor: existingProficienciesSkills,
+			formData,
+			actorData,
+		});
+
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor: existingProficienciesLanguages,
+			formData,
+			formDataProp: "languageProficiencies",
+			actorData,
+			opts: {
+				fnGetMappedItem: it => UtilActors.getMappedLanguage(it),
+				actorTraitProp: "languages",
+			},
+		});
+
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor: existingProficienciesTools,
+			formData,
+			formDataProp: "toolProficiencies",
+			actorData,
+			opts: {
+				fnGetMappedItem: it => UtilActors.getMappedTool(it),
+				actorTraitProp: "toolProf",
+			},
+		});
+		// endregion
+	}
+
+	// TODO expand this and use for e.g. armor and weapon profs too
+	static _pFillActorSkillToolLanguageData_getMergedProfs (
+		{
+			skillProficiencies,
+			languageProficiencies,
+			toolProficiencies,
+			skillToolLanguageProficiencies,
+		},
+	) {
+		const hasAnySingles = skillProficiencies?.length || languageProficiencies?.length || toolProficiencies?.length;
+		if (!hasAnySingles) return skillToolLanguageProficiencies;
+
+		if (!skillToolLanguageProficiencies?.length) {
+			const out = [];
+			this._pFillActorSkillToolLanguageData_doMergeToSingleArray({
+				targetArray: out,
+				skillProficiencies,
+				languageProficiencies,
+				toolProficiencies,
+			});
+			return out;
+		}
+
+		if (skillToolLanguageProficiencies?.length && hasAnySingles) console.warn(...LGT, `Founds individual skill/language/tool proficiencies alongside combined skill/language/tool; these will be merged together.`);
+
+		const out = MiscUtil.copy(skillToolLanguageProficiencies || []);
+		this._pFillActorSkillToolLanguageData_doMergeToSingleArray({
+			targetArray: out,
+			skillProficiencies,
+			languageProficiencies,
+			toolProficiencies,
+		});
+		return out;
+	}
+
+	static _pFillActorSkillToolLanguageData_doMergeToSingleArray (
+		{
+			targetArray,
+			skillProficiencies,
+			languageProficiencies,
+			toolProficiencies,
+		},
+	) {
+		const maxLen = Math.max(
+			targetArray?.length || 0,
+			skillProficiencies?.length || 0,
+			languageProficiencies?.length || 0,
+			toolProficiencies?.length || 0,
+		);
+		for (let i = 0; i < maxLen; ++i) {
+			const tgt = (targetArray[i] = {});
+
+			const skillProfSet = skillProficiencies?.[i];
+			const langProfSet = languageProficiencies?.[i];
+			const toolProfSet = toolProficiencies?.[i];
+
+			// region Skills
+			if (skillProfSet) {
+				this._pFillActorSkillToolLanguageData_doAddProfType({
+					targetObject: tgt,
+					profSet: skillProfSet,
+					validKeySet: new Set(Object.keys(Parser.SKILL_TO_ATB_ABV)),
+					anyKeySet: new Set(["any"]),
+					anyKeySuffix: "Skill",
+				});
+			}
+			// endregion
+
+			// region Languages
+			if (langProfSet) {
+				this._pFillActorSkillToolLanguageData_doAddProfType({
+					targetObject: tgt,
+					profSet: langProfSet,
+					anyKeySet: new Set(["any", "anyStandard"]),
+					anyKeySuffix: "Language",
+				});
+			}
+			// endregion
+
+			// region Tools
+			if (toolProfSet) {
+				this._pFillActorSkillToolLanguageData_doAddProfType({
+					targetObject: tgt,
+					profSet: toolProfSet,
+					anyKeySet: new Set(["any"]),
+					anyKeySuffix: "Tool",
+				});
+			}
+			// endregion
+		}
+	}
+
+	static _pFillActorSkillToolLanguageData_doAddProfType (
+		{
+			targetObject,
+			profSet,
+			validKeySet,
+			anyKeySet,
+			anyKeySuffix,
+		},
+	) {
+		Object.entries(profSet)
+			.forEach(([k, v]) => {
+				switch (k) {
+					case "choose": {
+						if (v?.from?.length) {
+							const choose = MiscUtil.copy(v);
+							choose.from = choose.from.filter(kFrom => !validKeySet || validKeySet.has(kFrom));
+							if (choose.from.length) {
+								const tgtChoose = (targetObject.choose = targetObject.choose || []);
+								tgtChoose.push(choose);
+							}
+						}
+						break;
+					}
+
+					default: {
+						if (anyKeySet && anyKeySet.has(k)) {
+							targetObject[`${k}${anyKeySuffix}`] = MiscUtil.copy(v);
+							break;
+						}
+
+						if (!validKeySet || validKeySet.has(k)) targetObject[k] = MiscUtil.copy(v);
+					}
+				}
+			});
+	}
+
+	/**
+	 * @param existingProfsActor Existing skill data.
+	 * @param skillProficiencies Data from a background or race.
+	 * @param actorData Actor update object to fill.
+	 * @param importOpts
+	 * @param [opts] Options
+	 * @param [opts.titlePrefix]
+	 * @return {Promise<object>}
+	 */
+	static async pFillActorSkillData (existingProfsActor, skillProficiencies, actorData, importOpts, opts) {
+		opts = opts || {};
+
+		if (!skillProficiencies) return {};
+		skillProficiencies = Charactermancer_OtherProficiencySelect.getMappedSkillProficiencies(skillProficiencies);
+
+		const formData = await Charactermancer_OtherProficiencySelect.pGetUserInput({
+			...opts,
+			existingFvtt: {
+				skillProficiencies: existingProfsActor,
+			},
+			available: skillProficiencies,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		return this.doApplySkillFormDataToActorUpdate({existingProfsActor, formData, actorData});
+	}
+
+	static doApplySkillFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		if (!formData?.data?.skillProficiencies) return;
+
+		const out = {};
+
+		// 0 = not, 1 = proficient, 2 = expert, 0.5 = jack of all trades
+		actorData.skills = actorData.skills || {};
+		Object.entries(UtilActors.SKILL_ABV_TO_FULL)
+			.filter(([_, name]) => formData.data.skillProficiencies[name])
+			.forEach(([abv, name]) => {
+				out[abv] = formData.data.skillProficiencies[name];
+
+				const maxValue = Math.max(
+					(existingProfsActor[abv] || {}).value || 0,
+					formData.data.skillProficiencies[name] != null ? Number(formData.data.skillProficiencies[name]) : 0,
+					(actorData.skills[abv] || {}).value || 0,
+				);
+
+				const isUpdate = maxValue > (MiscUtil.get(actorData.skills, abv, "value") || 0);
+				if (isUpdate) (actorData.skills[abv] = actorData.skills[abv] || {}).value = maxValue;
+			});
+
+		return out;
+	}
+
+	/**
+	 * @param existingProfsActor Actor's current languages.
+	 * @param importingProfs Data from a background or race.
+	 * @param data Actor update object to fill.
+	 * @param importOpts
+	 * @param [opts] Options
+	 * @param [opts.titlePrefix]
+	 */
+	static async pFillActorLanguageData (existingProfsActor, importingProfs, data, importOpts, opts) {
+		opts = opts || {};
+
+		if (!importingProfs) return;
+		importingProfs = Charactermancer_OtherProficiencySelect.getMappedLanguageProficiencies(importingProfs);
+
+		const formData = await Charactermancer_OtherProficiencySelect.pGetUserInput({
+			...opts,
+			existingFvtt: {
+				languageProficiencies: existingProfsActor,
+			},
+			available: importingProfs,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplyLanguageProficienciesFormDataToActorUpdate({existingProfsActor, formData, actorData: data});
+	}
+
+	static doApplyLanguageProficienciesFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor,
+			formData,
+			formDataProp: "languageProficiencies",
+			actorData,
+			opts: {
+				fnGetMappedItem: it => UtilActors.getMappedLanguage(it),
+				actorTraitProp: "languages",
+			},
+		});
+	}
+
+	/**
+	 * @param existingProfsActor Actor's current tool proficiencies.
+	 * @param importingProfs Data from a background or race.
+	 * @param data Actor update object to fill.
+	 * @param importOpts
+	 * @param [opts] Options
+	 * @param [opts.titlePrefix]
+	 */
+	static async pFillActorToolProfData (existingProfsActor, importingProfs, data, importOpts, opts) {
+		opts = opts || {};
+
+		if (!importingProfs) return;
+		importingProfs = Charactermancer_OtherProficiencySelect.getMappedToolProficiencies(importingProfs);
+
+		const formData = await Charactermancer_OtherProficiencySelect.pGetUserInput({
+			...opts,
+			existingFvtt: {
+				toolProficiencies: existingProfsActor,
+			},
+			available: importingProfs,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplyToolProficienciesFormDataToActorUpdate({existingProfsActor, formData, actorData: data});
+	}
+
+	static doApplyToolProficienciesFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor,
+			formData,
+			formDataProp: "toolProficiencies",
+			actorData,
+			opts: {
+				fnGetMappedItem: it => UtilActors.getMappedTool(it),
+				actorTraitProp: "toolProf",
+			},
+		});
+	}
+
+	/**
+	 * @param existingProfsLanguages Actor's current languages.
+	 * @param existingProfsTools Actor's current tool proficiencies.
+	 * @param importingProfs Data from a background or race.
+	 * @param actorData Actor update object to fill.
+	 * @param importOpts
+	 * @param [opts] Options
+	 * @param [opts.titlePrefix]
+	 */
+	static async pFillActorLanguageOrToolData (existingProfsLanguages, existingProfsTools, importingProfs, actorData, importOpts, opts) {
+		opts = opts || {};
+
+		if (!importingProfs) return;
+		importingProfs = Charactermancer_OtherProficiencySelect.getMappedLanguageProficiencies(importingProfs);
+		importingProfs = Charactermancer_OtherProficiencySelect.getMappedToolProficiencies(importingProfs);
+
+		const formData = await Charactermancer_OtherProficiencySelect.pGetUserInput({
+			...opts,
+			existingFvtt: {
+				languageProficiencies: existingProfsLanguages,
+				toolProficiencies: existingProfsTools,
+			},
+			available: importingProfs,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor: existingProfsLanguages,
+			formData,
+			formDataProp: "languageProficiencies",
+			actorData,
+			opts: {
+				fnGetMappedItem: it => UtilActors.getMappedLanguage(it),
+				actorTraitProp: "languages",
+			},
+		});
+
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor: existingProfsTools,
+			formData,
+			formDataProp: "toolProficiencies",
+			actorData,
+			opts: {
+				fnGetMappedItem: it => UtilActors.getMappedTool(it),
+				actorTraitProp: "toolProf",
+			},
+		});
+	}
+
+	/**
+	 * @param existingProfsActor Actor's current tool proficiencies.
+	 * @param importingProfs Data from a background or race.
+	 * @param data Actor update object to fill.
+	 * @param importOpts
+	 * @param [opts] Options
+	 * @param [opts.titlePrefix]
+	 */
+	static async pFillActorArmorProfData (existingProfsActor, importingProfs, data, importOpts, opts) {
+		opts = opts || {};
+
+		if (!importingProfs) return;
+		importingProfs = Charactermancer_OtherProficiencySelect.getMappedArmorProficiencies(importingProfs);
+
+		const formData = await Charactermancer_OtherProficiencySelect.pGetUserInput({
+			...opts,
+			existingFvtt: {
+				armorProficiencies: existingProfsActor,
+			},
+			available: importingProfs,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplyArmorProficienciesFormDataToActorUpdate({existingProfsActor, formData, actorData: data});
+	}
+
+	static doApplyArmorProficienciesFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor,
+			formData,
+			formDataProp: "armorProficiencies",
+			actorData,
+			opts: {
+				fnGetMappedItem: it => UtilActors.getMappedArmorProficiency(it),
+				fnGetMappedCustomItem: it => Renderer.splitTagByPipe(it)[0].toTitleCase(),
+				actorTraitProp: "armorProf",
+			},
+		});
+	}
+
+	/**
+	 * @param existingProfsActor Actor's current tool proficiencies.
+	 * @param importingProfs Data from a background or race.
+	 * @param data Actor update object to fill.
+	 * @param importOpts
+	 * @param [opts] Options
+	 * @param [opts.titlePrefix]
+	 */
+	static async pFillActorWeaponProfData (existingProfsActor, importingProfs, data, importOpts, opts) {
+		opts = opts || {};
+
+		if (!importingProfs) return;
+		importingProfs = Charactermancer_OtherProficiencySelect.getMappedWeaponProficiencies(importingProfs);
+
+		const formData = await Charactermancer_OtherProficiencySelect.pGetUserInput({
+			...opts,
+			existingFvtt: {
+				weaponProficiencies: existingProfsActor,
+			},
+			available: importingProfs,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplyWeaponProficienciesFormDataToActorUpdate({existingProfsActor, formData, actorData: data});
+	}
+
+	static doApplyWeaponProficienciesFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor,
+			formData,
+			formDataProp: "weaponProficiencies",
+			actorData,
+			opts: {
+				fnGetMappedItem: it => UtilActors.getMappedWeaponProficiency(it),
+				fnGetMappedCustomItem: it => Renderer.splitTagByPipe(it)[0].toTitleCase(),
+				actorTraitProp: "weaponProf",
+			},
+		});
+	}
+
+	/**
+	 * @param existingProfsActor Actor's current proficiencies.
+	 * @param formData Data from a background or race.
+	 * @param formDataProp Property within `formData` to use.
+	 * @param actorData Actor update object to fill.
+	 * @param opts Options object
+	 * @param [opts.fnGetMappedItem]
+	 * @param [opts.fnGetMappedCustomItem]
+	 * @param opts.actorTraitProp
+	 */
+	static doApplyOtherProficienciesFormData ({existingProfsActor, formData, formDataProp, actorData, opts}) {
+		if (!formData?.data?.[formDataProp]) return false;
+
+		existingProfsActor = existingProfsActor || {};
+
+		const formDataSet = formData.data[formDataProp];
+
+		if (!Object.keys(formDataSet).length) return false;
+		const cpyFormDataSet = MiscUtil.copy(formDataSet);
+
+		const profSet = new Set();
+		Object.keys(cpyFormDataSet).filter(k => cpyFormDataSet[k]).forEach(k => profSet.add(k));
+
+		// Map known items to their respective Foundry values; keep invalid items as-is
+		const mappedValidItems = new Set();
+		const customItems = [];
+
+		// Keep existing items
+		(existingProfsActor.value || []).forEach(it => mappedValidItems.add(it));
+		(existingProfsActor.custom || "").split(";").map(it => it.trim()).filter(Boolean).forEach(it => this._doApplyFormData_doCheckAddCustomItem(customItems, it));
+
+		// Keep items already in the actor update
+		const existingProfsActorData = MiscUtil.get(actorData, "traits", opts.actorTraitProp);
+		(existingProfsActorData?.value || []).forEach(it => mappedValidItems.add(it));
+		(existingProfsActorData?.custom || "").split(";").map(it => it.trim()).filter(Boolean).forEach(it => this._doApplyFormData_doCheckAddCustomItem(customItems, it));
+
+		// Add new items
+		profSet.forEach(it => {
+			const mapped = opts.fnGetMappedItem ? opts.fnGetMappedItem(it) : it;
+			if (mapped) mappedValidItems.add(mapped);
+			else {
+				const toAdd = opts.fnGetMappedCustomItem ? opts.fnGetMappedCustomItem(it) : it.toTitleCase();
+				this._doApplyFormData_doCheckAddCustomItem(customItems, toAdd);
+			}
+		});
+
+		// Set data
+		const dataTarget = MiscUtil.set(actorData, "traits", opts.actorTraitProp, {});
+		dataTarget.value = [...mappedValidItems].map(it => it.toLowerCase()).sort(SortUtil.ascSortLower);
+		dataTarget.custom = customItems.join(";");
+	}
+
+	static _doApplyFormData_doCheckAddCustomItem (customItems, item) {
+		const cleanItem = item.trim().toLowerCase();
+		if (!customItems.some(it => it.trim().toLowerCase() === cleanItem)) customItems.push(item);
+	}
+
+	static doApplySavingThrowProficienciesFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		if (!formData?.data?.savingThrowProficiencies) return;
+
+		actorData.abilities = actorData.abilities || {};
+		Parser.ABIL_ABVS
+			.filter(ab => formData.data.savingThrowProficiencies[ab])
+			.forEach(ab => {
+				const maxValue = Math.max(
+					existingProfsActor[ab]?.proficient || 0,
+					formData.data.savingThrowProficiencies[ab] ? 1 : 0,
+					actorData.abilities[ab]?.proficient || 0,
+				);
+				const isUpdate = maxValue > (MiscUtil.get(actorData.abilities, ab, "proficient") || 0);
+				if (isUpdate) MiscUtil.set(actorData.abilities, ab, "proficient", maxValue);
+			});
+	}
+
+	/**
+	 * @param existingProfsActor Actor's current damage immunities.
+	 * @param [importing] Custom data from a race.
+	 * @param data Actor update object to fill.
+	 * @param importOpts
+	 * @param [opts]
+	 * @param [opts.titlePrefix]
+	 */
+	static async pFillActorImmunityData (existingProfsActor, importing, data, importOpts, opts) {
+		opts = opts || {};
+
+		const formData = await Charactermancer_DamageImmunitySelect.pGetUserInput({
+			...opts,
+			existingFvtt: {
+				immune: existingProfsActor,
+			},
+			available: importing,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplyDamageImmunityFormDataToActorUpdate({existingProfsActor, formData, actorData: data});
+	}
+
+	/**
+	 * @param existingProfsActor Actor's current damage resistances.
+	 * @param [importing] Custom data from a race.
+	 * @param data Actor update object to fill.
+	 * @param importOpts
+	 * @param [opts]
+	 * @param [opts.titlePrefix]
+	 */
+	static async pFillActorResistanceData (existingProfsActor, importing, data, importOpts, opts) {
+		opts = opts || {};
+
+		const formData = await Charactermancer_DamageResistanceSelect.pGetUserInput({
+			...opts,
+			existingFvtt: {
+				resist: existingProfsActor,
+			},
+			available: importing,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplyDamageResistanceFormDataToActorUpdate({existingProfsActor, formData, actorData: data});
+	}
+
+	/**
+	 * @param existingProfsActor Actor's current damage vulnerabilities.
+	 * @param [importing] Custom data from a race.
+	 * @param data Actor update object to fill.
+	 * @param importOpts
+	 * @param [opts]
+	 * @param [opts.titlePrefix]
+	 */
+	static async pFillActorVulnerabilityData (existingProfsActor, importing, data, importOpts, opts) {
+		opts = opts || {};
+
+		const formData = await Charactermancer_DamageVulnerabilitySelect.pGetUserInput({
+			...opts,
+			existingFvtt: {
+				vulnerable: existingProfsActor,
+			},
+			available: importing,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplyDamageVulnerabilityFormDataToActorUpdate({existingProfsActor, formData, actorData: data});
+	}
+
+	/**
+	 * @param existing Actor's current condition immunities.
+	 * @param [importing] Custom data from a race.
+	 * @param data Actor update object to fill.
+	 * @param importOpts
+	 * @param [opts]
+	 * @param [opts.titlePrefix]
+	 */
+	static async pFillActorConditionImmunityData (existing, importing, data, importOpts, opts) {
+		opts = opts || {};
+
+		const formData = await Charactermancer_ConditionImmunitySelect.pGetUserInput({
+			...opts,
+			existingFvtt: {
+				conditionImmune: existing,
+			},
+			available: importing,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplyConditionImmunityFormDataToActorUpdate({existingProfsActor: existing, formData, actorData: data});
+	}
+
+	static doApplyDamageImmunityFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor,
+			formData,
+			formDataProp: "immune",
+			actorData,
+			opts: {
+				actorTraitProp: "di",
+			},
+		});
+	}
+
+	static doApplyDamageResistanceFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor,
+			formData,
+			formDataProp: "resist",
+			actorData,
+			opts: {
+				actorTraitProp: "dr",
+			},
+		});
+	}
+
+	static doApplyDamageVulnerabilityFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor,
+			formData,
+			formDataProp: "vulnerable",
+			actorData,
+			opts: {
+				actorTraitProp: "dv",
+			},
+		});
+	}
+
+	static doApplyConditionImmunityFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor,
+			formData,
+			formDataProp: "conditionImmune",
+			actorData,
+			opts: {
+				fnGetMappedItem: it => it === "disease" ? "diseased" : it,
+				actorTraitProp: "ci",
+			},
+		});
+	}
+
+	/**
+	 * @param existingProficienciesSkills Actor's current skill proficiencies.
+	 * @param existingProficienciesTools Actor's current tool proficiencies.
+	 * @param existingProficienciesLanguages Actor's current languages.
+	 * @param expertise Data from background or race.
+	 * @param actorData Actor update object to fill.
+	 * @param importOpts
+	 * @param [titlePrefix]
+	 */
+	static async pFillActorExpertiseData (
+		{
+			existingProficienciesSkills,
+			existingProficienciesTools,
+			expertise,
+			actorData,
+			importOpts,
+			// Other options
+			titlePrefix,
+		},
+	) {
+		const formData = await Charactermancer_ExpertiseSelect.pGetUserInput({
+			titlePrefix,
+			existingFvtt: {
+				skillProficiencies: existingProficienciesSkills,
+				toolProficiencies: existingProficienciesTools,
+			},
+			available: expertise,
+		});
+		if (!formData) return importOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		this.doApplyExpertiseFormDataToActorUpdate({
+			existingProfsActor: {
+				skillProficiencies: existingProficienciesSkills,
+				toolProficiencies: existingProficienciesTools,
+			},
+			formData,
+			actorData: actorData,
+		});
+	}
+
+	static doApplyExpertiseFormDataToActorUpdate ({existingProfsActor, formData, actorData}) {
+		this.doApplySkillFormDataToActorUpdate({
+			existingProfsActor: existingProfsActor.skillProficiencies,
+			formData,
+			actorData,
+		});
+
+		this.doApplyOtherProficienciesFormData({
+			existingProfsActor: existingProfsActor.toolProficiencies,
+			formData,
+			formDataProp: "toolProficiencies",
+			actorData,
+			opts: {
+				// FIXME(Future) As of 2021-06-13 Foundry does not support tool expertise in a useful way (it can only be
+				//   defined on a tool item, rather than character-wide), so work around this by using custom values.
+				fnGetMappedItem: it => {
+					if (formData?.data?.toolProficiencies[it] === 2) return null;
+					return UtilActors.getMappedTool(it);
+				},
+				fnGetMappedCustomItem: it => {
+					if (formData?.data?.toolProficiencies[it] === 2) return `${it.toTitleCase()} (Expertise)`;
+					return it.toTitleCase();
+				},
+				actorTraitProp: "toolProf",
+			},
+		});
+	}
+
+	static getDamageTupleMetas (str, {summonSpellLevel = 0} = {}) {
+		const damageTupleMetas = [];
+
+		const ixFirstDc = str.indexOf(`{@dc `);
+
+		// number or roll; will be a number for e.g. "1 piercing damage"
+		// "the spell's level" part for e.g. TCE's Aberrant Spirit
+		// "plus ..." part for e.g. Orc War Chief
+		const strOut = str.replace(/(?:(\d+)|\(?{@(?:dice|damage) ([^}]+)}(?:\s+[-+]\s+the spell's level)?(?: plus {@(?:dice|damage) ([^}]+)})?\)?)(?:\s+[-+]\s+[-+a-zA-Z0-9 ]*?)? ([^ ]+) damage/gi, (...mDamage) => {
+			const [, dmgFlat, dmgDice1, dmgDice2, dmgType, ixMatch] = mDamage;
+
+			const isFlatDamage = dmgFlat != null;
+			let dmg = isFlatDamage
+				? dmgFlat
+				: dmgDice2
+					? `${dmgDice1} + ${dmgDice2}` : dmgDice1;
+
+			// Ensure the flat damage is not a condition, e.g. CoS Tree Blight "by dealing 6 slashing damage [to the blight]"
+			if (isFlatDamage) {
+				const tokens = str.split(/( )/g);
+				let lenTokenStack = 0;
+				const tokenStack = [];
+				for (let i = 0; i < tokens.length; ++i) {
+					tokenStack.push(tokens[i]);
+					lenTokenStack += tokens[i].length;
+
+					if (lenTokenStack === ixMatch) {
+						const lastFourTokens = tokenStack.slice(-4);
+						if (/^by dealing$/i.test(lastFourTokens.join("").trim())) {
+							return "";
+						}
+					}
+				}
+			}
+
+			// Switch out proficiency bonus
+			dmg = dmg.replace(/\bPB\b/gi, "@srd5e.userchar.pb");
+
+			// Switch out `summonSpellLevel`
+			dmg = dmg.replace(/\bsummonSpellLevel\b/gi, `${summonSpellLevel ?? 0}`);
+
+			const tupleMeta = {
+				tuple: [dmg, dmgType],
+			};
+
+			// If this damage appears to be from failing a DC, mark it as such
+			if (~ixFirstDc && ixMatch >= ixFirstDc) {
+				tupleMeta.isOnFailSavingThrow = true;
+			}
+
+			damageTupleMetas.push(tupleMeta);
+
+			return "";
+		});
+
+		return {
+			str: strOut, // Return this string without damage parts
+			damageTupleMetas: damageTupleMetas.filter(it => it.tuple.length),
+		};
+	}
+
+	static getDamagePartsAndOtherFormula (damageTupleMetas) {
+		damageTupleMetas = damageTupleMetas || [];
+
+		if (!Config.get("import", "isUseOtherFormulaFieldForSaveHalvesDamage")) return {damageParts: damageTupleMetas.map(it => it.tuple), formula: ""};
+
+		const damageTuples = [];
+		let otherFormula = ``;
+
+		damageTupleMetas.forEach(meta => {
+			if (otherFormula || !meta.isOnFailSavingThrow) return damageTuples.push(meta.tuple);
+
+			otherFormula = `${meta.tuple[0]}${meta.tuple[1] ? `[${meta.tuple[1]}]` : ""}`;
+		});
+
+		// If the "save halves" damage is not a rider on some other damage, return generic damage
+		if (!damageTuples.length) return {damageParts: damageTupleMetas.map(it => it.tuple), formula: ""};
+
+		return {damageParts: damageTuples, formula: otherFormula};
+	}
+
+	static getSpeedValue (speed, prop, configGroup) {
+		if (typeof speed === "number") {
+			return prop === "walk"
+				? Config.getMetricNumber({configGroup, originalValue: speed, originalUnit: "feet"})
+				: null;
+		}
+		speed = speed[prop];
+		if (speed == null) return null;
+		if (speed.number != null) return Config.getMetricNumber({configGroup, originalValue: speed.number, originalUnit: "feet"});
+		if (isNaN(speed)) return null;
+		return Config.getMetricNumber({configGroup, originalValue: Number(speed), originalUnit: "feet"});
+	}
+
+	static isSpeedHover (speed) {
+		if (typeof speed === "number") return false;
+		return !!speed.canHover;
+	}
+
+	static getMovement (speed, {configGroup = null} = {}) {
+		return {
+			burrow: DataConverter.getSpeedValue(speed, "burrow", configGroup),
+			climb: DataConverter.getSpeedValue(speed, "climb", configGroup),
+			fly: DataConverter.getSpeedValue(speed, "fly", configGroup),
+			swim: DataConverter.getSpeedValue(speed, "swim", configGroup),
+			walk: DataConverter.getSpeedValue(speed, "walk", configGroup),
+			units: Config.getMetricUnit({configGroup, originalUnit: "ft"}),
+			hover: DataConverter.isSpeedHover(speed),
+		};
+	}
+
+	static getParsedWeaponEntryData (imp, weap) {
+		if (!(weap.entries && weap.entries[0] && typeof weap.entries[0] === "string")) return;
+
+		const damageTupleMetas = [];
+		let attackBonus = 0;
+
+		const str = weap.entries[0];
+
+		damageTupleMetas.push(...DataConverter.getDamageTupleMetas(str).damageTupleMetas);
+
+		const {rangeShort, rangeLong} = DataConverter.getAttackRange(str);
+
+		const mHit = /{@hit ([^}]+)}/gi.exec(str);
+		if (mHit) {
+			const hitBonus = Number(mHit[1]);
+			if (!isNaN(hitBonus)) {
+				attackBonus = hitBonus;
+			}
+		}
+
+		const {isAttack, actionType, attackTypes} = DataConverter.getAttackActionType(str);
+
+		return {
+			damageTupleMetas,
+			isAttack,
+			rangeShort,
+			rangeLong,
+			actionType,
+			attackBonus,
+			attackTypes, // 5etools flags from `@atk` tags, e.g. "m", "s", "r", "w"...
+		};
+	}
+
+	static getAttackRange (str) {
+		let rangeShort = 0;
+		let rangeLong = 0;
+
+		// Prioritise range first, as you can throw a melee weapon, but you Can't:tm: melee with a ranged weapon
+		const mRange = /range (\d+)\/(\d+) ft/gi.exec(str);
+		if (mRange) {
+			rangeShort = Number(mRange[1]);
+			rangeLong = Number(mRange[2]);
+		} else {
+			const mReach = /reach (\d+) ft/gi.exec(str);
+			if (mReach) {
+				rangeShort = Number(mReach[1]);
+			}
+		}
+
+		return {rangeShort, rangeLong};
+	}
+
+	static getAttackActionType (str) {
+		let actionType = "";
+		let isAttack = false;
+		let attackTypes = "";
+
+		const mAtk = /{@atk ([^}]+)}/gi.exec(str);
+		if (mAtk) {
+			attackTypes = mAtk[1];
+			isAttack = true;
+
+			if (attackTypes.includes("s")) {
+				if (attackTypes.includes("m")) actionType = "msak";
+				else actionType = "rsak";
+			} else if (attackTypes.includes("m")) actionType = "mwak";
+			else if (attackTypes.includes("r")) actionType = "rwak";
+		}
+
+		return {actionType, isAttack, attackTypes};
+	}
+
+	static getCleanOriginalData (data) {
+		data = MiscUtil.copy(data);
+
+		// Delete temp filter data
+		Object.keys(data)
+			.filter(k => /^_f[A-Z]/.test(k))
+			.forEach(k => delete data[k]);
+
+		this._getCleanOriginalData_recurse(data);
+
+		return data;
+	}
+
+	static _getCleanOriginalData_recurse (obj) {
+		if (obj == null) return;
+		if (typeof obj !== "object") return;
+
+		if (obj instanceof Array) {
+			obj.forEach(it => this._getCleanOriginalData_recurse(it));
+		} else {
+			Object.entries(obj).forEach(([k, v]) => {
+				// Foundry data objects cannot have keys starting with "$"
+				if (k.includes("$")) {
+					delete obj[k];
+					console.warn(...LGT, `Removed key "${k}" from object`);
+				} else this._getCleanOriginalData_recurse(v);
+			});
+		}
+	}
+
+	static getActorDamageResImmVulnConditionImm (ent) {
+		const out = {};
+
+		const allDis = new Set();
+		let customDis = [];
+		this._getActorDamageResImmVulnConditionImm_addDamageTypesOrConditionTypes({
+			ent,
+			validTypesArr: UtilActors.VALID_DAMAGE_TYPES,
+			fnRender: Parser.getFullImmRes,
+			prop: "immune",
+			allSet: allDis,
+			customStack: customDis,
+		});
+
+		out.di = {
+			value: [...allDis],
+			custom: customDis.join(", "),
+		};
+
+		const allDrs = new Set();
+		let customDrs = [];
+		this._getActorDamageResImmVulnConditionImm_addDamageTypesOrConditionTypes({
+			ent,
+			validTypesArr: UtilActors.VALID_DAMAGE_TYPES,
+			fnRender: Parser.getFullImmRes,
+			prop: "resist",
+			allSet: allDrs,
+			customStack: customDrs,
+		});
+
+		out.dr = {
+			value: [...allDrs],
+			custom: customDrs.join(", "),
+		};
+
+		const allDvs = new Set();
+		let customDvs = [];
+		this._getActorDamageResImmVulnConditionImm_addDamageTypesOrConditionTypes({
+			ent,
+			validTypesArr: UtilActors.VALID_DAMAGE_TYPES,
+			fnRender: Parser.getFullImmRes,
+			prop: "vulnerable",
+			allSet: allDvs,
+			customStack: customDvs,
+		});
+
+		out.dv = {
+			value: [...allDvs],
+			custom: customDvs.join(", "),
+		};
+
+		const allCis = new Set();
+		let customCis = [];
+		this._getActorDamageResImmVulnConditionImm_addDamageTypesOrConditionTypes({
+			ent,
+			validTypesArr: UtilActors.VALID_CONDITIONS,
+			fnRender: arr => Parser.getFullCondImm(arr, true),
+			prop: "conditionImmune",
+			allSet: allCis,
+			customStack: customCis,
+		});
+
+		out.ci = {
+			value: [...allCis],
+			custom: customCis.join(", "),
+		};
+
+		return out;
+	}
+
+	static _getActorDamageResImmVulnConditionImm_addDamageTypesOrConditionTypes (
+		{ent, validTypesArr, fnRender, prop, allSet, customStack},
+	) {
+		if (!ent[prop]) return;
+
+		ent[prop].forEach(it => {
+			if (validTypesArr.includes(it)) allSet.add(it);
+			else if (
+				this._PROPS_DAMAGE_IMM_VULN_RES.has(prop)
+				&& it[prop]
+				&& it[prop] instanceof Array
+				&& CollectionUtil.setEq(new Set(it[prop]), this._SET_PHYSICAL_DAMAGE)
+				&& it.note
+				&& /\bnon[- ]?magical\b/.test(it.note)
+				&& it.cond
+			) {
+				allSet.add("physical");
+			} else {
+				const asText = fnRender([it]);
+				customStack.push(asText);
+			}
+		});
+	}
+
+	static async pGetSideData_ (ent, {propBrew, fnLoadJson, propJson, fnMatch}) {
+		let found = (MiscUtil.get(BrewUtil, "homebrew", propBrew) || [])
+			.find(it => (fnMatch || this._pGetAdditional_fnMatch)(ent, it));
+
+		if (!found) {
+			const additionalData = await fnLoadJson();
+			found = (additionalData[propJson] || [])
+				.find(it => (fnMatch || this._pGetAdditional_fnMatch)(ent, it));
+		}
+
+		return found;
+	}
+
+	static _pGetAdditional_fnMatch (entity, additionalDataEntity) {
+		return entity.name === additionalDataEntity.name && entity.source === additionalDataEntity.source;
+	}
+
+	static async pGetAdditionalData_ (ent, {propBrew, fnLoadJson, propJson, fnMatch}) {
+		return this._pGetAdditionalStar(ent, {propBrew, fnLoadJson, propJson, fnMatch, propFromEntity: "foundryData", propFromSideLoaded: "data"});
+	}
+
+	static async pGetSideLoadedType_ (ent, {propBrew, fnLoadJson, propJson, fnMatch, validTypes}) {
+		let out = await this._pGetAdditionalStar(ent, {propBrew, fnLoadJson, propJson, fnMatch, propFromEntity: "foundryType", propFromSideLoaded: "type"});
+		if (!out) return out;
+		out = out.toLowerCase().trim();
+		if (validTypes && !validTypes.has(out)) return null;
+		return out;
+	}
+
+	static async pGetAdditionalEffectsRaw_ (ent, {propBrew, fnLoadJson, propJson, fnMatch}) {
+		return this._pGetAdditionalStar(ent, {propBrew, fnLoadJson, propJson, fnMatch, propFromEntity: "foundryEffects", propFromSideLoaded: "effects"});
+	}
+
+	static async _pGetAdditionalStar (ent, {propBrew, fnLoadJson, propJson, fnMatch, propFromEntity, propFromSideLoaded}) {
+		const found = await this.pGetSideData_(ent, {propBrew, fnLoadJson, propJson, fnMatch});
+		return this.pGetAdditionalStarFromFound_(ent, {propFromEntity, propFromSideLoaded, found});
+	}
+
+	static async pGetAdditionalStarFromFound_ (ent, {propFromEntity, propFromSideLoaded, found}) {
+		const fromEntity = ent[propFromEntity];
+
+		if ((!found || !found[propFromSideLoaded]) && !fromEntity) return null;
+
+		// Allow the `foundryData` property on the entity to override/compliment anything defined as separate data
+		const out = MiscUtil.copy(found?.[propFromSideLoaded] ? found[propFromSideLoaded] : fromEntity);
+		if (found?.[propFromSideLoaded] && fromEntity) {
+			if (out instanceof Array) out.push(...MiscUtil.copy(fromEntity)); // Array merge strategy, for effects
+			else Object.assign(out, MiscUtil.copy(fromEntity)); // Object merge strategy, for data
+		}
+
+		return out;
+	}
+
+	static async pGetAdditionalFlags_ (ent, {propBrew, fnLoadJson, propJson, fnMatch}) {
+		return this._pGetAdditionalStar(ent, {propBrew, fnLoadJson, propJson, fnMatch, propFromEntity: "foundryFlags", propFromSideLoaded: "flags"});
+	}
+
+	static getImportedEmbed (importedEmbeds, itemData) {
+		const importedEmbed = importedEmbeds.find(it => it.raw === itemData);
+
+		if (!importedEmbed) {
+			ui.notifications.warn(`Failed to link embedded entity for active effects! ${VeCt.STR_SEE_CONSOLE}`);
+			console.warn(...LGT, `Could not find loaded item data`, itemData, `in imported embedded entities`, importedEmbeds);
+			return null;
+		}
+
+		return importedEmbed;
+	}
+}
+
+DataConverter.SYM_AT = "<PLUT_SYM__AT>";
+
+DataConverter.ITEM_TYPES_ACTOR_TOOLS = new Set(["AT", "GS", "INS", "T"]);
+DataConverter.ITEM_TYPES_ACTOR_WEAPONS = new Set(["M", "R"]);
+DataConverter.ITEM_TYPES_ACTOR_ARMOR = new Set(["LA", "MA", "HA", "S"]);
+
+DataConverter._PROPS_DAMAGE_IMM_VULN_RES = new Set(["immune", "resist", "vulnerable"]);
+DataConverter._SET_PHYSICAL_DAMAGE = new Set(["bludgeoning", "piercing", "slashing"]);
+
+DataConverter._CASTER_PROGRESSIONS = [ // Ordered by max spell slots
+	"full",
+	"artificer",
+	"1/2",
+	"1/3",
+	"pact",
+];
+
+export {DataConverter};

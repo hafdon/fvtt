@@ -1,1 +1,493 @@
-const _0x3ae2=['damage','thr','trim','ranged','deepEquals','children','attr','133719xUTAbZ','push','multiattack','tree','values','content','simpleR','last','imageButtonEnabled','Failed\x20to\x20evaluate\x20damage\x20part\x20\x22','length','pop','349949buJwGt','ctrlKey','23096pXnXyB','isPunctuation','sort','_doAnyChoiceReplace','properties','2wVpRrv','avg(','1943959sKQHYS','getCurrentAbilityScores','tokens','_doComplexActionReplace','map','betterrolls5e','data-item-id','speaker','getWithoutParens','test','meanDamage','getAbilityModNumber','\x22></div>','and','altKey','dice','its','_doWeaponChoiceReplace','isAutoMultiattack','TERMS_COUNT','toMessage','textToNumber','weapon','getTokens','init','lang','slice','ability','mwak','join','_onItemRoll','value','data','_MARKER_SPLIT','get','rollItem','toLowerCase','getSentences','rwak','items','copy','46RaCdSL','<div>','error','includes','createChatMessage','filter','name','martialR','_doNamedActionReplace','1EvJoof','userId','martialM','getSafe','_getActionByLowerName','with','567855OfxcWE','actor','isCapsFirst','1374879CKuRQS','melee','item','_getToRuns','find','_pHandleCreateChatMessage','531381KVupJs','split','getTree3','count','type','fake','forEach','_pHandleCreateChatMessage_handleMeleeRangedAttacks','Actor','</div>','replace','first','isBetterRollsActive','_pHandleCreateChatMessage_mutExtractNamedActions','shift','simpleM','instance','max','TITLE_LOWER_WORDS','text','ascSort'];const _0x277b=function(_0x31ce71,_0x5a9d09){_0x31ce71=_0x31ce71-0x83;let _0x3ae245=_0x3ae2[_0x31ce71];return _0x3ae245;};const _0x170cd5=_0x277b;(function(_0x4ff4fb,_0x7d1ade){const _0x26c476=_0x277b;while(!![]){try{const _0x1df7cb=-parseInt(_0x26c476(0xbf))+-parseInt(_0x26c476(0xb6))*parseInt(_0x26c476(0xc5))+-parseInt(_0x26c476(0xbc))+parseInt(_0x26c476(0xad))*-parseInt(_0x26c476(0xef))+parseInt(_0x26c476(0xe1))+parseInt(_0x26c476(0xed))+parseInt(_0x26c476(0x84))*parseInt(_0x26c476(0xf4));if(_0x1df7cb===_0x7d1ade)break;else _0x4ff4fb['push'](_0x4ff4fb['shift']());}catch(_0x86c0d3){_0x4ff4fb['push'](_0x4ff4fb['shift']());}}}(_0x3ae2,0xcbdef));import{Config}from'./Config.js';import{LGT,Util}from'./Util.js';import{Consts}from'./Consts.js';import{UtilCompat}from'./UtilCompat.js';import{Charactermancer_Util}from'./UtilCharactermancer.js';import{UtilGameSettings}from'./UtilGameSettings.js';class ActorMultiattack{static[_0x170cd5(0x9c)](){const _0x56b35d=_0x170cd5;Hooks['on'](_0x56b35d(0xb1),(_0x275a32,_0x5d6e5b,_0x4b36a0)=>{this['_pHandleCreateChatMessage'](_0x275a32,_0x5d6e5b,_0x4b36a0);});}static async[_0x170cd5(0xc4)](_0x2f2f4c,_0x410790,_0x5b360c){const _0x572941=_0x170cd5;if(!Config[_0x572941(0xa6)](_0x572941(0xbd),_0x572941(0x96)))return;if(_0x5b360c!==game[_0x572941(0xb7)])return;const _0x573037=MiscUtil[_0x572941(0xa6)](_0x2f2f4c,'data',_0x572941(0x8b),_0x572941(0xbd));if(!_0x573037)return;const _0x52d381=CONFIG[_0x572941(0xcd)]['collection'][_0x572941(0xd5)][_0x572941(0xa6)](_0x573037);if(!_0x52d381)return;const _0x594a35=$(_0x572941(0xae)+(_0x2f2f4c[_0x572941(0xa4)][_0x572941(0xe6)]||'')+_0x572941(0xce))[_0x572941(0xdf)]()[_0x572941(0xd0)]()[_0x572941(0xe0)](_0x572941(0x8a));if(!_0x594a35)return;const _0x30d58e=_0x52d381[_0x572941(0xab)][_0x572941(0xa6)](_0x594a35),_0x579ef0=Util[_0x572941(0x8c)](_0x30d58e['name'])[_0x572941(0xa8)]();if(_0x579ef0!==_0x572941(0xe3))return;const _0x4ad8aa=$(_0x30d58e[_0x572941(0xa4)][_0x572941(0xa4)]['description'][_0x572941(0xa3)])[_0x572941(0xd8)]()['trim']();if(!_0x4ad8aa)return;const _0x20c226=this[_0x572941(0xc2)]({'actor':_0x52d381,'description':_0x4ad8aa});for(const _0x38caf8 of _0x20c226){for(let _0x39308c=0x0;_0x39308c<_0x38caf8[_0x572941(0xc8)];++_0x39308c){const _0x440844={'preventDefault':()=>{},'stopPropagation':()=>{},'currentTarget':$('<div\x20class=\x22item\x22\x20data-item-id=\x22'+_0x38caf8[_0x572941(0xc1)]['id']+_0x572941(0x90))[0x0]};if(UtilCompat[_0x572941(0xd1)]()){const _0x255488=new Event(_0x572941(0xca));_0x255488[_0x572941(0xee)]=![],_0x255488['shiftKey']=![],_0x255488[_0x572941(0x92)]=![];const _0x291db0={'adv':0x0,'disadv':0x0,'event':_0x255488};!UtilGameSettings[_0x572941(0xb9)](_0x572941(0x89),_0x572941(0xe9))?_0x38caf8[_0x572941(0xc1)][_0x572941(0xbd)]['sheet'][_0x572941(0xa2)](_0x440844):await BetterRolls[_0x572941(0xa7)](_0x38caf8[_0x572941(0xc1)],mergeObject(_0x291db0,{'preset':0x0}))[_0x572941(0x98)]();}else await _0x38caf8[_0x572941(0xc1)]['roll']();}}}static[_0x170cd5(0xc2)]({actor:_0x44d2c9,description:_0x245cb9}){const _0x18e366=_0x170cd5;let _0x588177=Util[_0x18e366(0xa9)](_0x245cb9);const _0x4c46e1=[];let _0x3b1bae=this['_pHandleCreateChatMessage_mutExtractNamedActions'](_0x44d2c9,_0x588177,_0x4c46e1);return _0x3b1bae=_0x3b1bae['flat'](),this['_pHandleCreateChatMessage_mutExtractSimpleAttacks'](_0x44d2c9,_0x3b1bae,_0x4c46e1),_0x4c46e1;}static[_0x170cd5(0xd2)](_0xa22938,_0x402296,_0x48c7fd){const _0x11fd86=_0x170cd5;_0x402296=MiscUtil[_0x11fd86(0xac)](_0x402296);for(let _0x100379=0x0;_0x100379<_0x402296[_0x11fd86(0xeb)];++_0x100379){const _0x1dd3d5=_0x402296[_0x100379],_0x70336c=Util[_0x11fd86(0x9b)](_0x1dd3d5);while((Util['isPunctuation'](_0x70336c[0x0])||Util[_0x11fd86(0xbe)](_0x70336c[0x0]))&&_0x70336c[_0x11fd86(0xeb)])_0x70336c['shift']();const _0x5c0111=[];let _0x179542=[],_0xd185df={};const _0x4444f8=()=>{const _0x1a7f12=_0x11fd86;if(!_0x179542[_0x1a7f12(0xb2)](_0x2f8767=>_0x2f8767!=='\x20')[_0x1a7f12(0xeb)])return;while(_0x179542[_0x1a7f12(0xeb)]){if(StrUtil[_0x1a7f12(0xd7)][_0x1a7f12(0xb0)](_0x179542[_0x1a7f12(0xe8)]())||_0x179542[_0x1a7f12(0xe8)]()==='\x20')_0x179542[_0x1a7f12(0xec)]();else break;}_0x5c0111[_0x1a7f12(0xe2)]({'name':_0x179542[_0x1a7f12(0xa1)](''),'count':_0xd185df['count']||0x1}),_0x179542=[],_0xd185df={};};for(let _0x2870b7=0x0;_0x2870b7<_0x70336c[_0x11fd86(0xeb)];++_0x2870b7){const _0x32efa3=_0x70336c[_0x2870b7];if(!_0x179542['length']&&_0x32efa3==='\x20')continue;if(Util[_0x11fd86(0xbe)](_0x32efa3))_0x179542[_0x11fd86(0xe2)](_0x32efa3);else{if(_0x179542[_0x11fd86(0xeb)]&&(StrUtil['TITLE_LOWER_WORDS'][_0x11fd86(0xb0)](_0x32efa3)||_0x32efa3==='\x20'))_0x179542[_0x11fd86(0xe2)](_0x32efa3);else{const _0x3d4430=Consts[_0x11fd86(0x97)][_0x11fd86(0xc3)](_0x8beba6=>{const _0x75e447=_0x11fd86,_0x399380=_0x70336c[_0x75e447(0x9e)](_0x2870b7,_0x2870b7+_0x8beba6['tokens'][_0x75e447(0xeb)]);return CollectionUtil[_0x75e447(0xde)](_0x8beba6[_0x75e447(0x86)],_0x399380);});_0x179542[_0x11fd86(0xeb)]&&_0x3d4430&&(_0x2870b7+=_0x3d4430['tokens'][_0x11fd86(0xeb)]-0x1,_0xd185df[_0x11fd86(0xc8)]=_0x3d4430[_0x11fd86(0xc8)]),_0x4444f8();}}}_0x4444f8();let _0xb68dce=_0x1dd3d5;_0x5c0111['forEach'](_0x56cc7e=>{const _0x5c6a0e=_0x11fd86,_0x9ec5f8=_0x56cc7e[_0x5c6a0e(0xb3)][_0x5c6a0e(0xa8)]()[_0x5c6a0e(0xdc)]();if(_0x9ec5f8[_0x5c6a0e(0xb0)]('multiattack'))return;const _0x11c169=_0xa22938[_0x5c6a0e(0xab)][_0x5c6a0e(0xc3)](_0x3ef8d5=>Util[_0x5c6a0e(0x8c)](_0x3ef8d5[_0x5c6a0e(0xb3)])[_0x5c6a0e(0xa8)]()===_0x9ec5f8);if(!_0x11c169)return;_0x48c7fd[_0x5c6a0e(0xe2)]({'item':_0x11c169,'count':_0x56cc7e[_0x5c6a0e(0xc8)]||0x1}),_0xb68dce=_0xb68dce[_0x5c6a0e(0xcf)](_0x56cc7e['name'],ActorMultiattack['_MARKER_SPLIT']);}),_0x402296[_0x100379]=_0xb68dce[_0x11fd86(0xc6)](ActorMultiattack[_0x11fd86(0xa5)]);}return _0x402296;}static['_pHandleCreateChatMessage_mutExtractSimpleAttacks'](_0x180a7e,_0x560d0d,_0x2ad26b){_0x560d0d['forEach'](_0xb97885=>{const _0x3809ba=_0x277b;_0xb97885=_0xb97885[_0x3809ba(0xcf)](/one (.*?) attack(?:[^:]|$)/gi,(..._0x44dfb5)=>this[_0x3809ba(0xb5)]({'outStack':_0x2ad26b,'actor':_0x180a7e,'m':_0x44dfb5})),_0xb97885=_0xb97885['replace'](/(two|three|four|five|six|seven|eight) (.*?) attacks(?:[^:]|$)/gi,(..._0x4db2c3)=>this[_0x3809ba(0xb5)]({'outStack':_0x2ad26b,'actor':_0x180a7e,'m':_0x4db2c3})),_0xb97885=_0xb97885['replace'](/makes (one|two|three|four|five|six|seven|eight) attacks? with its (.*?(?: or .*?)?)$/gi,(..._0x3f60c5)=>this[_0x3809ba(0x95)]({'outStack':_0x2ad26b,'actor':_0x180a7e,'m':_0x3f60c5})),_0xb97885=_0xb97885[_0x3809ba(0xcf)](/makes (?:two|three|four|five|six|seven|eight)(?: melee| ranged)? attacks:(.*?)$/gi,(..._0x575350)=>this['_doComplexActionReplace']({'outStack':_0x2ad26b,'actor':_0x180a7e,'m':_0x575350})),_0xb97885=_0xb97885[_0x3809ba(0xcf)](/makes (two|three|four|five|six|seven|eight) attacks$/gi,(..._0x4c64bf)=>this[_0x3809ba(0xf2)]({'outStack':_0x2ad26b,'actor':_0x180a7e,'m':_0x4c64bf}));});}static[_0x170cd5(0xb5)]({outStack:_0x4e29b3,actor:_0x36eba7,m:_0x1db6b0}){const _0x2b2f38=_0x170cd5,_0x1915a8=_0x1db6b0[0x1]['toLowerCase'](),_0x2df809=Parser['textToNumber'](_0x1915a8),_0x2af5b1=Util[_0x2b2f38(0x8c)](_0x1db6b0[0x2])[_0x2b2f38(0xa8)]();if(_0x2af5b1[_0x2b2f38(0xb0)](_0x2b2f38(0xe3)))return'';if(_0x2af5b1===_0x2b2f38(0xc0)||_0x2af5b1===_0x2b2f38(0xdd))return this[_0x2b2f38(0xcc)](_0x36eba7,_0x2af5b1,_0x2df809,_0x4e29b3),'';const _0x1cf189=_0x36eba7[_0x2b2f38(0xab)][_0x2b2f38(0xc3)](_0x25ce02=>Util['getWithoutParens'](_0x25ce02['name'])['toLowerCase']()===_0x2af5b1);if(!_0x1cf189)return _0x1db6b0[0x0];return _0x4e29b3[_0x2b2f38(0xe2)]({'item':_0x1cf189,'count':_0x2df809}),'';}static[_0x170cd5(0x95)]({outStack:_0x52d468,actor:_0x4d1de4,m:_0x46d0ca}){const _0x4c6963=_0x170cd5,_0x223ba7=_0x46d0ca[0x1];let _0x168e12=_0x46d0ca[0x2];const _0x2085bb=Util[_0x4c6963(0x9b)](_0x168e12);while(_0x2085bb[_0x4c6963(0xeb)]){const _0x59a67f=[];for(let _0x296b85=0x0;_0x296b85<_0x2085bb[_0x4c6963(0xeb)];++_0x296b85){const _0x5daa82=_0x2085bb[_0x296b85][_0x4c6963(0xa8)]();if(_0x5daa82==='and'||_0x5daa82==='or'||_0x5daa82===_0x4c6963(0x94)||_0x5daa82===_0x4c6963(0xbb)||Util[_0x4c6963(0xf0)](_0x5daa82)){_0x2085bb[_0x4c6963(0xd3)]();break;}else _0x59a67f['push'](_0x2085bb['shift']()),_0x296b85--;}if(_0x59a67f[_0x4c6963(0xeb)]){const _0x53a3bf=_0x59a67f[_0x4c6963(0xa1)]('')['trim']();if(_0x53a3bf[_0x4c6963(0xa8)]()[_0x4c6963(0xb0)](_0x4c6963(0xe3)))continue;const _0x327497=this[_0x4c6963(0xba)](_0x4d1de4,_0x53a3bf);_0x327497&&_0x52d468[_0x4c6963(0xe2)]({'item':_0x327497,'count':Parser[_0x4c6963(0x99)](_0x223ba7)});}}return _0x2085bb[_0x4c6963(0xa1)]('')['trim']();}static[_0x170cd5(0xf2)]({outStack:_0x1ebebe,actor:_0x472623,m:_0x17d2ab}){const _0x42ed91=_0x170cd5,_0x32c070=_0x17d2ab[0x1],_0x1ebf3a=Parser[_0x42ed91(0x99)](_0x32c070),_0x24f5cb=_0x472623[_0x42ed91(0xab)][_0x42ed91(0xb2)](_0xa4f4a9=>_0xa4f4a9[_0x42ed91(0xc9)]===_0x42ed91(0x9a)&&!_0xa4f4a9[_0x42ed91(0xb3)]['toLowerCase']()['includes']('multiattack'));return _0x24f5cb[_0x42ed91(0xcb)](_0x31cf2e=>{_0x1ebebe['push']({'item':_0x31cf2e,'count':_0x1ebf3a});}),'';}static[_0x170cd5(0x87)]({outStack:_0xc8463b,actor:_0x35b897,m:_0x257957}){const _0x26f31f=_0x170cd5;let _0x5acd8f=_0x257957[0x1],_0xdec184=![],_0x430c08=null;while(_0x5acd8f[_0x26f31f(0xeb)]&&_0x5acd8f!==_0x430c08){_0x430c08=_0x5acd8f,_0x5acd8f=_0x5acd8f['replace'](/(one|two|three|four|five|six|seven|eight) with (?:its |his |her )(.*)/gi,(..._0x34802d)=>{const _0x16a0f7=_0x26f31f,_0xd807ca=_0x34802d[0x1],_0xd7900d=_0x34802d[0x2],_0x5f133a=[],_0x44429a=Util[_0x16a0f7(0x9b)](_0xd7900d);for(let _0x214fb4=0x0;_0x214fb4<_0x44429a[_0x16a0f7(0xeb)];++_0x214fb4){const _0x4d549d=_0x44429a[_0x214fb4][_0x16a0f7(0xa8)]();if(_0x4d549d===_0x16a0f7(0x91)||_0x4d549d==='or'||Util['isPunctuation'](_0x4d549d)){_0x44429a[_0x16a0f7(0xd3)]();break;}else _0x5f133a[_0x16a0f7(0xe2)](_0x44429a[_0x16a0f7(0xd3)]()),_0x214fb4--;}if(_0x5f133a[_0x16a0f7(0xeb)]){const _0xac8d87=_0x5f133a[_0x16a0f7(0xa1)]('')[_0x16a0f7(0xdc)]();if(_0xac8d87['toLowerCase']()['includes'](_0x16a0f7(0xe3)))return _0x44429a[_0x16a0f7(0xa1)]('')[_0x16a0f7(0xdc)]();const _0x3d7956=this[_0x16a0f7(0xba)](_0x35b897,_0xac8d87);_0x3d7956&&_0xc8463b[_0x16a0f7(0xe2)]({'item':_0x3d7956,'count':Parser['textToNumber'](_0xd807ca)});}return _0x44429a[_0x16a0f7(0xa1)]('')[_0x16a0f7(0xdc)]();});}if(_0xdec184)return'';return _0x257957[0x0];}static['_pHandleCreateChatMessage_handleMeleeRangedAttacks'](_0x509c98,_0x4c6051,_0x2b759a,_0xb47de2){const _0xc1deb6=_0x170cd5;let _0x22019b;const _0x244b98=[],_0x2667f8=[];_0x509c98[_0xc1deb6(0xab)]['filter'](_0x449a43=>_0x449a43['type']===_0xc1deb6(0x9a))[_0xc1deb6(0xcb)](_0x2a4c55=>{const _0x35e61f=_0xc1deb6,_0x33df9b=MiscUtil[_0x35e61f(0xa6)](_0x2a4c55,_0x35e61f(0xa4),_0x35e61f(0xa4));if(!_0x33df9b)return;const _0x16c5e5=MiscUtil[_0x35e61f(0xa6)](_0x33df9b,'weaponType');switch(_0x16c5e5){case _0x35e61f(0xd4):case _0x35e61f(0xb8):{_0x244b98['push'](_0x2a4c55);if(MiscUtil['get'](_0x33df9b,_0x35e61f(0xf3),_0x35e61f(0xdb)))_0x2667f8[_0x35e61f(0xe2)](_0x2a4c55);return;}case _0x35e61f(0xe7):case _0x35e61f(0xb4):{_0x2667f8[_0x35e61f(0xe2)](_0x2a4c55);return;}}const _0x4c4e05=MiscUtil[_0x35e61f(0xa6)](_0x33df9b,'actionType');switch(_0x4c4e05){case _0x35e61f(0xa0):{_0x244b98[_0x35e61f(0xe2)](_0x2a4c55);if(MiscUtil[_0x35e61f(0xa6)](_0x33df9b,'properties','thr'))_0x2667f8['push'](_0x2a4c55);return;}case _0x35e61f(0xaa):{_0x2667f8['push'](_0x2a4c55);return;}}const _0x47f7c6=(MiscUtil[_0x35e61f(0xa6)](_0x33df9b,'description','value')||'')['replace'](/[^a-zA-Z0-9:.,()]/g,'')[_0x35e61f(0xcf)](/\s+/g,'\x20')[_0x35e61f(0xdc)]();if(/melee or ranged weapon attack:/i[_0x35e61f(0x8d)](_0x47f7c6))_0x244b98[_0x35e61f(0xe2)](_0x2a4c55),_0x2667f8[_0x35e61f(0xe2)](_0x2a4c55);else{if(/melee weapon attack:/i[_0x35e61f(0x8d)](_0x47f7c6))_0x244b98[_0x35e61f(0xe2)](_0x2a4c55);else/ranged weapon attack:/i[_0x35e61f(0x8d)](_0x47f7c6)&&_0x2667f8[_0x35e61f(0xe2)](_0x2a4c55);}});const _0x2f5525=_0x4c6051===_0xc1deb6(0xc0)?_0x244b98:_0x2667f8;_0x22019b=_0x2f5525[_0xc1deb6(0x88)](_0x591ca7=>{const _0x5cdebe=_0xc1deb6,_0x398aa7=MiscUtil[_0x5cdebe(0xa6)](_0x591ca7,_0x5cdebe(0xa4),_0x5cdebe(0xa4),_0x5cdebe(0xda),'parts');if(!_0x398aa7)return null;const _0x4ddc7f=_0x398aa7[_0x5cdebe(0x88)](_0x414340=>{const _0x55c17b=_0x5cdebe;try{const _0x3d7d8f=_0x414340[0x0][_0x55c17b(0xcf)](/@mod/gi,()=>{const _0x4cde3f=_0x55c17b,_0x51b080=Charactermancer_Util[_0x4cde3f(0x85)](_0x509c98),_0x33f0b6=MiscUtil['get'](_0x591ca7,_0x4cde3f(0xa4),'data',_0x4cde3f(0x9f))||Charactermancer_Util['getAttackAbilityScore'](_0x591ca7,_0x51b080,_0x4c6051===_0x4cde3f(0xc0)?_0x4cde3f(0xc0):_0x4cde3f(0xdd)),_0x101dc9=_0x51b080?.[_0x33f0b6]||0xa;return Parser[_0x4cde3f(0x8f)](_0x101dc9);}),_0x12682e=Renderer[_0x55c17b(0x93)][_0x55c17b(0x9d)][_0x55c17b(0xc7)](_0x55c17b(0x83)+_0x3d7d8f+')');return{'type':_0x414340[0x1],'meanDamage':_0x12682e[_0x55c17b(0xe4)]['evl']({})};}catch(_0x209d9f){return console[_0x55c17b(0xaf)](...LGT,_0x55c17b(0xea)+_0x414340[0x0]+'\x22',_0x209d9f),null;}})['filter'](Boolean);if(!_0x4ddc7f[_0x5cdebe(0xeb)])return null;const _0x5996aa={};_0x4ddc7f['forEach'](_0x2365d8=>_0x5996aa[_0x2365d8['type']]=Math[_0x5cdebe(0xd6)](_0x2365d8[_0x5cdebe(0x8e)],_0x5996aa[_0x2365d8[_0x5cdebe(0xc9)]]||0x0));const _0x280611=Object[_0x5cdebe(0xe5)](_0x5996aa)['reduce']((_0x14a12f,_0x38be1a)=>_0x14a12f+_0x38be1a,0x0);return{'item':_0x591ca7,'meanDamage':_0x280611};})[_0xc1deb6(0xb2)](Boolean)[_0xc1deb6(0xf1)]((_0x3b53ac,_0x20879d)=>SortUtil[_0xc1deb6(0xd9)](_0x20879d[_0xc1deb6(0x8e)],_0x3b53ac[_0xc1deb6(0x8e)]))[_0xc1deb6(0x88)](_0x41193a=>_0x41193a[_0xc1deb6(0xc1)])['find'](Boolean);if(!_0x22019b&&_0x2f5525[0x0])_0x22019b=_0x2f5525[0x0];else{if(!_0x22019b&&!_0x2f5525[0x0])return;}_0xb47de2['push']({'item':_0x22019b,'count':_0x2b759a});}static[_0x170cd5(0xba)](_0x18664f,_0x353eb8){const _0x370de3=_0x170cd5;let _0x2aafcb=_0x18664f[_0x370de3(0xab)][_0x370de3(0xc3)](_0x4f0f23=>Util['getWithoutParens'](_0x4f0f23['name'])[_0x370de3(0xa8)]()===_0x353eb8);if(!_0x2aafcb&&_0x353eb8['endsWith']('s')){const _0x3c5b81=_0x353eb8[_0x370de3(0x9e)](0x0,-0x1);_0x2aafcb=_0x18664f[_0x370de3(0xab)][_0x370de3(0xc3)](_0x576e8a=>Util['getWithoutParens'](_0x576e8a[_0x370de3(0xb3)])[_0x370de3(0xa8)]()===_0x3c5b81);}return _0x2aafcb;}}ActorMultiattack[_0x170cd5(0xa5)]='<PLUT_SPLIT_MARKER>';export{ActorMultiattack};
+import {Config} from "./Config.js";
+import {LGT, Util} from "./Util.js";
+import {Consts} from "./Consts.js";
+import {UtilCompat} from "./UtilCompat.js";
+import {Charactermancer_Util} from "./UtilCharactermancer.js";
+import {UtilGameSettings} from "./UtilGameSettings.js";
+
+class ActorMultiattack {
+	static init () {
+		Hooks.on("createChatMessage", (chatMessage, renderOpts, actorId) => {
+			this._pHandleCreateChatMessage(chatMessage, renderOpts, actorId);
+		});
+	}
+
+	/**
+	 * Some samples this should work on:
+	 *  - Aboleth: "The aboleth makes three tentacle attacks."
+	 *  - Abominable Yeti: "The yeti can use its Chilling Gaze and makes two claw attacks."
+	 *  - Adult Black Dragon: "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws."
+	 *  - Orc War Chief: "The orc makes two attacks with its greataxe or its spear."
+	 *
+	 * Some samples this should _more or less_ work on:
+	 *  - Core Spawn Seer: "The seer uses Fission Staff twice, Psychedelic Orb twice, or each one once."
+	 *
+	 * @param chatMessage
+	 * @param renderOpts
+	 * @param userId
+	 */
+	static async _pHandleCreateChatMessage (chatMessage, renderOpts, userId) {
+		// region Check preconditions
+		if (!Config.get("actor", "isAutoMultiattack")) return;
+		if (userId !== game.userId) return;
+
+		const actorId = MiscUtil.get(chatMessage, "data", "speaker", "actor");
+		if (!actorId) return;
+
+		const actor = CONFIG.Actor.collection.instance.get(actorId);
+		if (!actor) return;
+
+		// (jQuery workaround to avoid crashes on non-element parsing)
+		const itemId = $(`<div>${chatMessage.data.content || ""}</div>`).children().first().attr("data-item-id");
+		if (!itemId) return;
+
+		const item = actor.items.get(itemId);
+		if (!item) return; // Can occur if the item used its last charge, and deleted itself on use
+
+		const cleanLowerName = Util.getWithoutParens(item.name).toLowerCase();
+		if (cleanLowerName !== "multiattack") return;
+
+		const description = $(item.data.data.description.value).text().trim();
+		if (!description) return;
+		// endregion
+
+		const toRuns = this._getToRuns({actor, description});
+
+		// region Run actions
+		for (const toRun of toRuns) {
+			for (let i = 0; i < toRun.count; ++i) {
+				// region intense hacks
+				const evtFakeClick = {
+					preventDefault: () => {},
+					stopPropagation: () => {},
+					currentTarget: $(`<div class="item" data-item-id="${toRun.item.id}"></div>`)[0],
+				};
+
+				if (UtilCompat.isBetterRollsActive()) {
+					// region Based on `changeRollsToDual`
+					const fakeEvent = new Event("fake");
+					fakeEvent.ctrlKey = false;
+					fakeEvent.shiftKey = false;
+					fakeEvent.altKey = false;
+
+					const params = {adv: 0, disadv: 0, event: fakeEvent};
+					if (!UtilGameSettings.getSafe("betterrolls5e", "imageButtonEnabled")) {
+						toRun.item.actor.sheet._onItemRoll(evtFakeClick);
+					} else {
+						await BetterRolls.rollItem(toRun.item, foundry.utils.mergeObject(params, {preset: 0})).toMessage();
+					}
+					// endregion
+				} else {
+					// region taken from `Item._onItemRoll`
+					await toRun.item.roll();
+					// endregion
+				}
+				// endregion
+			}
+		}
+		// endregion
+	}
+
+	static _getToRuns ({actor, description}) {
+		let sentences = Util.getSentences(description);
+		const toRuns = [];
+		let sentencesProc = this._pHandleCreateChatMessage_mutExtractNamedActions(actor, sentences, toRuns);
+		sentencesProc = sentencesProc.flat();
+		this._pHandleCreateChatMessage_mutExtractSimpleAttacks(actor, sentencesProc, toRuns);
+		return toRuns;
+	}
+
+	/**
+	 * Pull out:
+	 * "...can use its >>>Chilling Gaze<<< and make..."
+	 * "...uses Fission Staff twice, Psychedelic Orb twice..."
+	 */
+	static _pHandleCreateChatMessage_mutExtractNamedActions (actor, sentences, outStack) {
+		sentences = MiscUtil.copy(sentences);
+
+		for (let i = 0; i < sentences.length; ++i) {
+			const sentence = sentences[i];
+
+			const tokens = Util.getTokens(sentence);
+
+			// Remove tokens from the start of the sentence that start with a capital (e.g. proper names, "The")
+			while ((Util.isPunctuation(tokens[0]) || Util.isCapsFirst(tokens[0])) && tokens.length) tokens.shift();
+
+			// Extract titles (action names)
+			const actionNameMetas = [];
+			let tokenStack = [];
+			let curMeta = {};
+
+			const collectStack = () => {
+				if (!tokenStack.filter(it => it !== " ").length) return;
+
+				// Pop trailing spaces and "...and"/"...or"
+				while (tokenStack.length) {
+					if (StrUtil.TITLE_LOWER_WORDS.includes(tokenStack.last()) || tokenStack.last() === " ") {
+						tokenStack.pop();
+					} else {
+						break;
+					}
+				}
+
+				actionNameMetas.push({
+					name: tokenStack.join(""),
+					count: curMeta.count || 1,
+				});
+
+				tokenStack = [];
+				curMeta = {};
+			};
+
+			for (let i = 0; i < tokens.length; ++i) {
+				const token = tokens[i];
+
+				// Ignore spaces if we have no other tokens
+				if (!tokenStack.length && token === " ") continue;
+
+				if (Util.isCapsFirst(token)) {
+					tokenStack.push(token);
+				} else if (tokenStack.length && (StrUtil.TITLE_LOWER_WORDS.includes(token) || token === " ")) {
+					tokenStack.push(token);
+				} else {
+					const countAdverbs = Consts.TERMS_COUNT.find(meta => {
+						const slice = tokens.slice(i, i + meta.tokens.length);
+						return CollectionUtil.deepEquals(meta.tokens, slice);
+					});
+
+					if (tokenStack.length && countAdverbs) {
+						i += countAdverbs.tokens.length - 1;
+						curMeta.count = countAdverbs.count;
+					}
+
+					collectStack();
+				}
+			}
+			collectStack();
+
+			let sentenceOut = sentence;
+			actionNameMetas.forEach(meta => {
+				const cleanActionName = meta.name.toLowerCase().trim();
+				if (cleanActionName.includes("multiattack")) return; // Avoid infinite loops
+
+				const item = actor.items.find(it => Util.getWithoutParens(it.name).toLowerCase() === cleanActionName);
+				if (!item) return;
+
+				outStack.push({
+					item,
+					count: meta.count || 1,
+				});
+
+				// Break up the sentence in which we found this named action
+				// This helps to handle e.g. Roper's "The roper makes four attacks with its tendrils, uses Reel, and makes
+				//   one attack with its bite."
+				sentenceOut = sentenceOut.replace(meta.name, ActorMultiattack._MARKER_SPLIT);
+			});
+
+			// (Split out the text we used, so it doesn't get passed to the next step)
+			sentences[i] = sentenceOut.split(ActorMultiattack._MARKER_SPLIT);
+		}
+
+		return sentences;
+	}
+
+	/**
+	 * Pull out:
+	 * "... makes >>>three tentacle<<< attacks."
+	 * "... and makes >>>two claw<<< attacks."
+	 * "... makes three attacks: >>>one with its bite<<< and >>>two with its claws<<<."
+	 * "... makes three melee attacks: >>>two with its fork<<< and >>>one with its tail<<<."
+	 * "... makes >>>two attacks with its greataxe or its spear<<<."
+	 * "... and makes >>>two melee<<< attacks."
+	 * "... makes >>>one attack with its rotting fist<<<."
+	 * "... makes >>>three attacks<<<."
+	 */
+	static _pHandleCreateChatMessage_mutExtractSimpleAttacks (actor, sentences, outStack) {
+		sentences.forEach(sentence => {
+			// region Named actions
+			sentence = sentence.replace(/one (.*?) attack(?:[^:]|$)/gi, (...m) => this._doNamedActionReplace({outStack, actor, m}));
+
+			sentence = sentence.replace(/(two|three|four|five|six|seven|eight) (.*?) attacks(?:[^:]|$)/gi, (...m) => this._doNamedActionReplace({outStack, actor, m}));
+			// endregion
+
+			// Choice between weapons
+			sentence = sentence.replace(/makes (one|two|three|four|five|six|seven|eight) attacks? with its (.*?(?: or .*?)?)$/gi, (...m) => this._doWeaponChoiceReplace({outStack, actor, m}));
+
+			// Complex actions
+			sentence = sentence.replace(/makes (?:two|three|four|five|six|seven|eight)(?: melee| ranged)? attacks:(.*?)$/gi, (...m) => this._doComplexActionReplace({outStack, actor, m}));
+
+			// Simple "makes X attacks"
+			sentence = sentence.replace(/makes (two|three|four|five|six|seven|eight) attacks$/gi, (...m) => this._doAnyChoiceReplace({outStack, actor, m}));
+		});
+	}
+
+	static _doNamedActionReplace ({outStack, actor, m}) {
+		const rawActionCount = m[1].toLowerCase();
+		const actionCount = Parser.textToNumber(rawActionCount);
+
+		const actionNameClean = Util.getWithoutParens(m[2]).toLowerCase();
+		if (actionNameClean.includes("multiattack")) return ""; // Avoid infinite loops
+
+		if (actionNameClean === "melee" || actionNameClean === "ranged") {
+			this._pHandleCreateChatMessage_handleMeleeRangedAttacks(actor, actionNameClean, actionCount, outStack);
+			return "";
+		}
+
+		const item = actor.items.find(it => Util.getWithoutParens(it.name).toLowerCase() === actionNameClean);
+
+		if (!item) return m[0];
+
+		outStack.push({
+			item,
+			count: actionCount,
+		});
+
+		return "";
+	}
+
+	static _doWeaponChoiceReplace ({outStack, actor, m}) {
+		const rawActionCount = m[1];
+		let ptAttacks = m[2];
+
+		const allActionTokens = Util.getTokens(ptAttacks);
+
+		while (allActionTokens.length) {
+			const thisActionTokens = [];
+
+			for (let i = 0; i < allActionTokens.length; ++i) {
+				const cleanActionToken = allActionTokens[i].toLowerCase();
+
+				if (
+					cleanActionToken === "and" || cleanActionToken === "or" || cleanActionToken === "its" || cleanActionToken === "with"
+					|| Util.isPunctuation(cleanActionToken)
+				) {
+					allActionTokens.shift(); // remove the unused token
+					break;
+				} else {
+					thisActionTokens.push(allActionTokens.shift());
+					i--;
+				}
+			}
+
+			if (thisActionTokens.length) {
+				const thisActionName = thisActionTokens.join("").trim();
+				if (thisActionName.toLowerCase().includes("multiattack")) continue; // Avoid infinite loops
+
+				const item = this._getActionByLowerName(actor, thisActionName);
+
+				if (item) {
+					outStack.push({
+						item,
+						count: Parser.textToNumber(rawActionCount),
+					});
+				}
+			}
+		}
+
+		return allActionTokens.join("").trim();
+	}
+
+	static _doAnyChoiceReplace ({outStack, actor, m}) {
+		const rawActionCount = m[1];
+		const actionCount = Parser.textToNumber(rawActionCount);
+
+		const attackItems = actor.items.filter(it => it.type === "weapon" && !it.name.toLowerCase().includes("multiattack"));
+
+		// Spew out the max number of each possible attack
+		// TODO(Future) prompt the user?
+		attackItems.forEach(item => {
+			outStack.push({
+				item,
+				count: actionCount,
+			});
+		});
+
+		return "";
+	}
+
+	static _doComplexActionReplace ({outStack, actor, m}) {
+		let ptAttacks = m[1];
+		let foundAny = false;
+		let lastPtAttacks = null;
+
+		while (ptAttacks.length && ptAttacks !== lastPtAttacks) {
+			lastPtAttacks = ptAttacks;
+
+			ptAttacks = ptAttacks.replace(/(one|two|three|four|five|six|seven|eight) with (?:its |his |her )(.*)/gi, (...n) => {
+				const rawActionCount = n[1];
+				const rawActionPart = n[2];
+
+				const thisActionTokens = [];
+				const allActionTokens = Util.getTokens(rawActionPart);
+
+				for (let i = 0; i < allActionTokens.length; ++i) {
+					const cleanActionToken = allActionTokens[i].toLowerCase();
+
+					if (cleanActionToken === "and" || cleanActionToken === "or" || Util.isPunctuation(cleanActionToken)) {
+						allActionTokens.shift(); // remove the unused token
+						break;
+					} else {
+						thisActionTokens.push(allActionTokens.shift());
+						i--;
+					}
+				}
+
+				if (thisActionTokens.length) {
+					const thisActionName = thisActionTokens.join("").trim();
+					if (thisActionName.toLowerCase().includes("multiattack")) return allActionTokens.join("").trim(); // Avoid infinite loops
+
+					const item = this._getActionByLowerName(actor, thisActionName);
+
+					if (item) {
+						outStack.push({
+							item,
+							count: Parser.textToNumber(rawActionCount),
+						});
+					}
+				}
+
+				return allActionTokens.join("").trim();
+			});
+		}
+
+		if (foundAny) return "";
+		return m[0];
+	}
+
+	/** Attempt to find the attack that does the most damage. If that fails, use the first attack found. */
+	static _pHandleCreateChatMessage_handleMeleeRangedAttacks (actor, actionNameClean, actionCount, outStack) {
+		let item;
+
+		const meleeItems = [];
+		const rangedItems = [];
+
+		actor.items
+			.filter(it => it.type === "weapon")
+			.forEach(it => {
+				const data = MiscUtil.get(it, "data", "data");
+				if (!data) return;
+
+				// Check weapon type
+				const weaponType = MiscUtil.get(data, "weaponType");
+				switch (weaponType) {
+					case "simpleM":
+					case "martialM": {
+						meleeItems.push(it);
+						if (MiscUtil.get(data, "properties", "thr")) rangedItems.push(it);
+						return;
+					}
+
+					case "simpleR":
+					case "martialR": {
+						rangedItems.push(it);
+						return;
+					}
+				}
+
+				// Failing that, check action type
+				const actionType = MiscUtil.get(data, "actionType");
+				switch (actionType) {
+					case "mwak": {
+						meleeItems.push(it);
+						if (MiscUtil.get(data, "properties", "thr")) rangedItems.push(it);
+						return;
+					}
+					case "rwak": {
+						rangedItems.push(it);
+						return;
+					}
+				}
+
+				// Failing that, check text
+				const cleanText = (MiscUtil.get(data, "description", "value") || "")
+					.replace(/[^a-zA-Z0-9:.,()]/g, "")
+					.replace(/\s+/g, " ")
+					.trim();
+				if (/melee or ranged weapon attack:/i.test(cleanText)) {
+					meleeItems.push(it);
+					rangedItems.push(it);
+				} else if (/melee weapon attack:/i.test(cleanText)) {
+					meleeItems.push(it);
+				} else if (/ranged weapon attack:/i.test(cleanText)) {
+					rangedItems.push(it);
+				}
+			});
+
+		const items = actionNameClean === "melee" ? meleeItems : rangedItems;
+
+		item = items
+			.map(it => {
+				const damageParts = MiscUtil.get(it, "data", "data", "damage", "parts");
+				if (!damageParts) return null;
+
+				// Map the parts to their mean damage
+				const mappedParts = damageParts
+					.map(pt => {
+						try {
+							const cleanPart = pt[0].replace(/@mod/gi, () => {
+								const abilityScores = Charactermancer_Util.getCurrentAbilityScores(actor);
+								const atr = MiscUtil.get(it, "data", "data", "ability")
+									|| Charactermancer_Util.getAttackAbilityScore(it, abilityScores, actionNameClean === "melee" ? "melee" : "ranged");
+								const score = abilityScores?.[atr] || 10;
+								return Parser.getAbilityModNumber(score);
+							});
+
+							const wrpTree = Renderer.dice.lang.getTree3(`avg(${cleanPart})`);
+							return {
+								type: pt[1],
+								meanDamage: wrpTree.tree.evl({}),
+							};
+						} catch (e) {
+							console.error(...LGT, `Failed to evaluate damage part "${pt[0]}"`, e);
+							return null;
+						}
+					})
+					.filter(Boolean);
+
+				if (!mappedParts.length) return null;
+
+				// Use the highest average damage part for each damage type--we assume that two parts with the same
+				//   damage type represent two different modes of using the same weapon, rather than summing the two
+				//   parts together.
+				const typeToMeanDamage = {};
+				mappedParts.forEach(it => typeToMeanDamage[it.type] = Math.max(it.meanDamage, typeToMeanDamage[it.type] || 0));
+
+				// Finally, sum all the means of the different damage types, to give us a final mean for the whole
+				//   attack.
+				const meanDamage = Object.values(typeToMeanDamage).reduce((a, b) => a + b, 0);
+
+				return {
+					item: it,
+					meanDamage,
+				};
+			})
+			.filter(Boolean)
+			.sort((a, b) => SortUtil.ascSort(b.meanDamage, a.meanDamage))
+			.map(it => it.item)
+			.find(Boolean);
+
+		// If we failed to find an item above due to errors, use the first item
+		if (!item && items[0]) item = items[0];
+		else if (!item && !items[0]) return;
+
+		outStack.push({
+			item,
+			count: actionCount,
+		});
+	}
+
+	static _getActionByLowerName (actor, actionName) {
+		let item = actor.items.find(it => Util.getWithoutParens(it.name).toLowerCase() === actionName);
+
+		// If we did not find the item, try to find it would any trailing "s" (e.g. "claws" -> "claw")
+		if (!item && actionName.endsWith("s")) {
+			const thisActionNameSingular = actionName.slice(0, -1);
+			item = actor.items.find(it => Util.getWithoutParens(it.name).toLowerCase() === thisActionNameSingular);
+		}
+
+		return item;
+	}
+}
+ActorMultiattack._MARKER_SPLIT = "<PLUT_SPLIT_MARKER>";
+
+export {ActorMultiattack};

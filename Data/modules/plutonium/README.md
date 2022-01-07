@@ -37,7 +37,6 @@ await init.default({
 	debug: isDebug
 });
 (await import("./plutonium-backend.mjs")).Plutonium.init();
-// ===========================================================
 ```
 - Copy the `plutonium-backend.mjs` file from `server/0.8.x/` to the folder containing `main.mjs`
 - Launch Foundry, and pray that nothing explodes. If everything is working, the in-game Foundry logo (in the top-left of the screen) will show the running Plutonium backend version.

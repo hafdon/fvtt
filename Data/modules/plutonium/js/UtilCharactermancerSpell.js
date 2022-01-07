@@ -1,9 +1,1612 @@
-const _0x4d88=['isAlwaysPrepared','ritual','cntLearnedSpells','innerHTML','.manc-sp__btn-learn-cantrip','actor','constructor','_handleAlwaysPreparedSpells','classList','Ranger','manc-sp__is-max-learned-spells--is-over-limit','range','isAvailableClassSpell_','addHookIsMaxLearnedCantrips','createElement','_getListItem','pulseFixedLearned','_list','spSchoolAndSubschoolsAbvsToFull','addHookFixedLearnedProgression','ExistingSpell','usesPer','addHookIsMaxPrepared','591071VQIabp','_parent','_getSpellUid','disabled\x20data-plut-is-existing-spell=\x22true\x22','subclassSource','copy','maxPreparedSpells','string','name','toLowerCase','subclass','$getHoverContent_stats','MIN_SAFE_INTEGER','flags','URL_TO_HASH_BUILDER','toggle','brewSubSubclassSpells','_existingCasterMeta','click','_state','spellLevel','casterProgression','atwill','isOverLearnCantripsLimit_','render','_getExistingSpellLookup','.manc-sp__btn-prepare','_hasBrewSubclassSpell','subSubclassName','_getCntSpellsKnown','</div>\x0a\x09\x09\x09<div\x20class=\x22col-1-2\x20sp__school-','_handleListItemBtnLearnClick_do_doLearn','alwaysPreparedSpellsRace','_getProps','time','map','1466152uojXce','sortSpells','div','\x22\x20name=\x22','forEach','brewSubclassSpells','slug','isPreparedCaster','fixedLearnedProgressionDefault','button','expandedSpellsClass','import','_getBrewClassSubclassSpellCache_addItem','_canLearnMoreFixedSpellsOfLevel','_cacheFilterValues','definedInSource','fromSubclass','_spellLevel','subclassName','ix_prepared_','505dzOuCk','addHookIsPreparedCaster','cntPrepared','state','5aQcMjt','_render_bindLevelledSpellHooks','hideVe','cacheSelectedListItem','canLearnMoreFixedSpellsOfLevel_','handleSearch','source','existingItemId','btnPrepare','getSpellsKnown','_getTotalSpellsKnown','className','trim','some','76594AtWUuh','parentClassName','classSource','always','fromClassList','btn-learn-spell','_addHookBase','\x20text-center\x22\x20title=\x22','_getExistingSpellLookup_isOnSpellList','</div>\x0a\x09\x09\x09<div\x20class=\x22col-0-5\x20text-center\x20bold\x20imp-sp__disp-ritual\x22\x20title=\x22Ritual\x22>','ele','isUpdateOnly','querySelectorAll','_getBrewClassSubclassSpellCache','spLevelToFullLevelText','1DXQNWT','subschools','_handleListItemBtnLearnClick_doFixed','push','_isAvailableSpell','initBtnSortHandlers','_existingClass','<div\x20class=\x22py-1\x20clickable\x20ve-muted\x22>[‒]</div>','flat','_spellDatas','text','_isConc','$wrpPreparedLearned','getItemSource','item','<div\x20class=\x22flex-vh-center\x20italic\x20ve-muted\x20ve-small\x20mt-1\x22>No\x20matching\x20spells</div>','_cacheSelectedListItem','replace','isStrictMatching','_render_bindCantripHooks','handleAlwaysPreparedSpells_','page','_pageFilter','items','preparation','_$dispNoRows','spell','manc-sp__btn-learn-spell','ix_learned_','plut-is-existing-spell','toDisplay','MAX_SAFE_INTEGER','prepared','sourceJsonToAbv','_subclassName','filter','append','visibleItems','handleFilterChange','_actor','maxLearned','school','add','pact','empty','getCombinedClasses','addHookMaxLearnedCantrips','get','preparationMode','length','[+]','usesMax','ixViewedSpell','btn-prepare','flex-v-center\x20manc__list-row\x20clickable\x20veapp__list-row\x20veapp__list-row-hoverable','existingClass','stringToSlug','btn-learn-cantrip','spellDatas','getFormSubData','_CLASS_MAP','maxLearnedCantrips','_classSource','level','set','_resetLevelSpells','mode','_isWithinLevelRange','\x22\x20title=\x22','maxPrepared','alwaysPreparedSpellsSubclass','addItem','contains','isLearned','_subclassSource','_spellDataLookup','1075955RgsZCC','1009369ylceHD','<div\x20class=\x22mx-1\x22>—</div>','subSubclass','sum','dataset','hash','isIncludeUaEtcSpellLists','Prepare','spSchoolAbvToStyle','class','appendTo','isLearnedFixedSpellCasterAtLevel_','spRangeToFull','expandedSpellsRace','addHookIsMaxLearnedSpells','expandedSpellsSubclass','_isLearnedFixedSpellCasterAtLevel','sort','spellLevelLow','_getSpellDataLookup','_hasBrewClassSpell','isAvailableExpandedSpell_','isPrepared','_existingSpellLookup','active','canLearnMoreCantrips_','</div>\x0a\x0a\x09\x09\x09<div\x20class=\x22flex-vh-center\x20col-1-6\x20pr-0\x22>\x0a\x09\x09\x09\x09<button\x20class=\x22btn\x20manc__list-row-button\x20','2209NUPNfo','title=\x22(Previously\x20Learned\x20Spell)\x22','<button\x20class=\x22btn\x20manc__list-row-button\x20manc-sp__btn-prepare\x20','preventDefault','</div>\x0a\x09\x09\x09<div\x20class=\x22col-2-6\x20text-right\x22>','toggleVe','search','toggleClass','join','_getDefaultState','fromClassListVariant','_$wrpRows','PACT_CASTER_MAX_SPELL_LEVEL','isOverLearnFixedSpellsLimitOfLevel_','fixedLearnedProgression','list-multi-selected','data','_normalisedRange','sourceJsonToColor','manc-sp__is-prepared-caster','_compsLevel','pageFilter','spellLevelHigh','manc-sp__is-max-learned-spells','meta','searchText','disabled','sourceJsonToFull','MODULE_NAME_FAKE','\x0a\x09\x09\x09</div>\x0a\x09\x09','PG_SPELLS','_$wrpPreparedLearned','remove','parentClassSource','cntLearnedCantrips','data-plut-is-existing-spell=\x22true\x22','manc-sp__btn-learn-cantrip','>Learn</button>\x0a\x0a\x09\x09\x09\x09','_getMappedClassDetails','manc-sp__is-max-prepared-spells','canPrepareMore_','_className','_getFormSubData_getSpellImportOpts','1250761lzoVuG','getExistingSpellMeta_','stopPropagation','</div>\x0a\x09\x09\x09<div\x20class=\x22col-1-2\x20text-center\x22>','usesCurrent','Spells\x20learned:\x20','includes','_cacheBrewClassSpells','manc-sp__is-max-learned-cantrips--is-over-limit','isAlwaysPreparedSpell_','\x0a\x09\x09\x09<div\x20class=\x22col-3-2\x20pl-0\x22>','isAvailableSubclassSpell_'];const _0x296e=function(_0x5f0bec,_0x2ca552){_0x5f0bec=_0x5f0bec-0x128;let _0x4d884d=_0x4d88[_0x5f0bec];return _0x4d884d;};const _0x46ad54=_0x296e;(function(_0x106d63,_0x558f80){const _0x3de1aa=_0x296e;while(!![]){try{const _0x1a4bdf=-parseInt(_0x3de1aa(0x221))+parseInt(_0x3de1aa(0x17f))+-parseInt(_0x3de1aa(0x159))+-parseInt(_0x3de1aa(0x1da))+-parseInt(_0x3de1aa(0x135))*-parseInt(_0x3de1aa(0x18e))+-parseInt(_0x3de1aa(0x16d))*parseInt(_0x3de1aa(0x1f6))+parseInt(_0x3de1aa(0x1db))*parseInt(_0x3de1aa(0x171));if(_0x1a4bdf===_0x558f80)break;else _0x106d63['push'](_0x106d63['shift']());}catch(_0x2fe8f1){_0x106d63['push'](_0x106d63['shift']());}}}(_0x4d88,0xc4cd1));import{Config}from'./Config.js';import{DataConverter}from'./DataConverter.js';import{SharedConsts}from'../shared/SharedConsts.js';import{UtilActors}from'./UtilActors.js';class Charactermancer_Spell_Util{}class Charactermancer_Spell_SpellMeta{constructor({ix:_0xb81313,spell:_0x469bf1,isPrepared:_0x449f32,isLearned:_0x3ab295,isUpdateOnly:_0xea418,existingItemId:_0xdff2b9,preparationMode:_0x1d8c7b,usesCurrent:_0x44dd79,usesMax:_0x8e72a6,usesPer:_0x4cdc74}){const _0x233733=_0x296e;this['ix']=_0xb81313,this[_0x233733(0x1a8)]=_0x469bf1,this[_0x233733(0x1f1)]=_0x449f32,this['isLearned']=_0x3ab295,this[_0x233733(0x18a)]=_0xea418,this[_0x233733(0x178)]=_0xdff2b9,this[_0x233733(0x1be)]=_0x1d8c7b,this[_0x233733(0x225)]=_0x44dd79,this[_0x233733(0x1c1)]=_0x8e72a6,this[_0x233733(0x133)]=_0x4cdc74;}}class Charactermancer_Spell extends BaseComponent{constructor(_0x52c0e4){const _0x377f97=_0x296e;_0x52c0e4=_0x52c0e4||{},super(),this[_0x377f97(0x1b5)]=_0x52c0e4[_0x377f97(0x232)],this[_0x377f97(0x194)]=_0x52c0e4[_0x377f97(0x1c5)],this[_0x377f97(0x146)]=_0x52c0e4['existingCasterMeta'],this[_0x377f97(0x197)]=_0x52c0e4[_0x377f97(0x1c8)],this['_className']=_0x52c0e4[_0x377f97(0x17c)],this[_0x377f97(0x1cc)]=_0x52c0e4[_0x377f97(0x181)],this['_subclassName']=_0x52c0e4[_0x377f97(0x16b)],this['_subclassSource']=_0x52c0e4[_0x377f97(0x139)],this['_compsLevel']=[...new Array(0xa)]['map']((_0x33533c,_0x1e75a3)=>new Charactermancer_Spell_Level({'spellDatas':_0x52c0e4[_0x377f97(0x1c8)],'spellLevel':_0x1e75a3,'parent':this})),this[_0x377f97(0x1a4)]=_0x52c0e4[_0x377f97(0x20b)],this[_0x377f97(0x215)]=_0x52c0e4[_0x377f97(0x19a)],this[_0x377f97(0x1d9)]=this['_getSpellDataLookup'](),this[_0x377f97(0x1f2)]=this[_0x377f97(0x14e)](),this[_0x377f97(0x19e)]=null,this[_0x377f97(0x167)]=null,this[_0x377f97(0x228)]=Charactermancer_Spell[_0x377f97(0x18c)](_0x52c0e4['brewClassSpells'],_0x52c0e4[_0x377f97(0x15e)],_0x52c0e4[_0x377f97(0x145)]);}[_0x46ad54(0x1ee)](){const _0x306828={};return this['_spellDatas']['forEach'](_0xe0db0d=>{const _0x626cd8=_0x296e;MiscUtil['set'](_0x306828,_0x626cd8(0x1e0),UrlUtil[_0x626cd8(0x143)][UrlUtil[_0x626cd8(0x214)]](_0xe0db0d),_0xe0db0d),MiscUtil[_0x626cd8(0x1ce)](_0x306828,_0x626cd8(0x15f),Parser['stringToSlug'](Parser[_0x626cd8(0x1af)](_0xe0db0d['source'])),Parser[_0x626cd8(0x1c6)](_0xe0db0d[_0x626cd8(0x13d)]),_0xe0db0d);}),_0x306828;}[_0x46ad54(0x14e)](){const _0x580170=_0x46ad54;if(!this['_existingClass']||!this[_0x580170(0x146)])return null;const _0x19dbae=this['_actor'][_0x580170(0x1a5)]['filter'](_0x224ab1=>_0x224ab1['type']===_0x580170(0x1a8)),_0x5dd549={},_0x186093={},_0x4d9221={};return[..._0x19dbae][_0x580170(0x1ec)]((_0x477ab5,_0x5c6728)=>{const _0x16ef2a=_0x580170,_0x21a253=_0x477ab5[_0x16ef2a(0x206)][_0x16ef2a(0x142)]?.[SharedConsts['MODULE_NAME_FAKE']],_0x15334a=_0x5c6728[_0x16ef2a(0x206)]['flags']?.[SharedConsts['MODULE_NAME_FAKE']],_0x4fad74=_0x21a253?.[_0x16ef2a(0x180)]&&_0x21a253?.[_0x16ef2a(0x217)]?0x1:0x0,_0x4e0d67=_0x15334a?.[_0x16ef2a(0x180)]&&_0x15334a?.[_0x16ef2a(0x217)]?0x1:0x0;return _0x4e0d67-_0x4fad74;})[_0x580170(0x15d)](_0x48545f=>{const _0x47e272=_0x580170,_0x1f7bc9=Number(_0x48545f['data']['data']['level']||0x0),_0x470c74=(_0x48545f[_0x47e272(0x13d)]||'')[_0x47e272(0x17d)]()[_0x47e272(0x13e)](),_0x5c3c35=(Config[_0x47e272(0x1bd)](_0x47e272(0x164),'isStrictMatching')?DataConverter[_0x47e272(0x19b)](_0x48545f):'')['toLowerCase'](),_0x537920=_0x48545f['data'][_0x47e272(0x142)]?.[SharedConsts[_0x47e272(0x212)]],_0x3b7ae3=_0x537920?.[_0x47e272(0x180)],_0x3db375=_0x537920?.[_0x47e272(0x217)],_0x5d06c7=_0x48545f['data'][_0x47e272(0x206)][_0x47e272(0x1a6)]?.['mode']==='prepared'&&_0x48545f[_0x47e272(0x206)][_0x47e272(0x206)]['preparation']?.[_0x47e272(0x1ae)],_0x168a7d=_0x48545f[_0x47e272(0x206)]['data'][_0x47e272(0x1a6)]?.[_0x47e272(0x1d0)]===_0x47e272(0x182);if(_0x3b7ae3&&_0x3db375&&_0x3b7ae3!==this[_0x47e272(0x194)][_0x47e272(0x13d)]&&_0x3db375!==this[_0x47e272(0x194)][_0x47e272(0x177)])return;if(_0x3b7ae3&&_0x3db375&&_0x3b7ae3===this[_0x47e272(0x194)]['name']&&_0x3db375===this[_0x47e272(0x194)][_0x47e272(0x177)]){const _0x506769=_0x1f7bc9===0x0||_0x1f7bc9!==0x0&&this['_existingCasterMeta'][_0x47e272(0x204)]!=null,_0x23bffd=this['_existingCasterMeta']['maxPreparedSpells']!=null&&_0x5d06c7;if(_0x506769)_0x5dd549[_0x1f7bc9]=(_0x5dd549[_0x1f7bc9]||0x0)+0x1;if(_0x23bffd)_0x186093[_0x1f7bc9]=(_0x186093[_0x1f7bc9]||0x0)+0x1;MiscUtil[_0x47e272(0x1ce)](_0x4d9221,_0x1f7bc9,_0x5c3c35,_0x470c74,new Charactermancer_Spell[(_0x47e272(0x132))]({'item':_0x48545f,'isLearned':_0x506769,'isPrepared':_0x23bffd,'isAlwaysPrepared':_0x168a7d}));return;}const _0x1f2968=_0x1f7bc9===0x0||(_0x48545f[_0x47e272(0x206)]['data']['preparation']?.[_0x47e272(0x1d0)]==='prepared'||_0x48545f[_0x47e272(0x206)][_0x47e272(0x206)]['preparation']?.[_0x47e272(0x1d0)]===_0x47e272(0x1b9)),_0x14b663=_0x1f7bc9===0x0?_0x1f2968&&this[_0x47e272(0x146)][_0x47e272(0x1cb)]!=null&&(_0x5dd549[_0x1f7bc9]||0x0)<this['_existingCasterMeta'][_0x47e272(0x1cb)]:_0x1f2968&&this['_canLearnMoreFixedSpellsOfLevel']({'lvl':_0x1f7bc9,'fixedLearnedProgression':this[_0x47e272(0x146)][_0x47e272(0x204)],'cntSpellsKnown':_0x5dd549[_0x1f7bc9]||0x0}),_0x3ec2b8=_0x5d06c7&&this[_0x47e272(0x146)][_0x47e272(0x13b)]!=null&&(_0x186093[_0x1f7bc9]||0x0)<this[_0x47e272(0x146)][_0x47e272(0x13b)];if(!this[_0x47e272(0x187)](_0x48545f))return;if(!_0x14b663&&this[_0x47e272(0x1eb)]({'lvl':_0x1f7bc9,'fixedLearnedProgression':this['_existingCasterMeta'][_0x47e272(0x204)]}))return;if(_0x14b663)_0x5dd549[_0x1f7bc9]=(_0x5dd549[_0x1f7bc9]||0x0)+0x1;if(_0x3ec2b8)_0x186093[_0x1f7bc9]=(_0x186093[_0x1f7bc9]||0x0)+0x1;MiscUtil[_0x47e272(0x1ce)](_0x4d9221,_0x1f7bc9,_0x5c3c35,_0x470c74,new Charactermancer_Spell[(_0x47e272(0x132))]({'item':_0x48545f,'isLearned':_0x14b663,'isPrepared':_0x3ec2b8,'isAlwaysPrepared':_0x168a7d}));}),_0x4d9221;}[_0x46ad54(0x187)](_0x3bbe19){const _0x9c9b2e=_0x46ad54,_0x2af5f3=_0x3bbe19[_0x9c9b2e(0x206)][_0x9c9b2e(0x142)]?.[SharedConsts['MODULE_NAME_FAKE']];if(_0x2af5f3?.[_0x9c9b2e(0x1a3)]&&_0x2af5f3?.['source']&&_0x2af5f3?.[_0x9c9b2e(0x1e0)]){const _0x42402f=this[_0x9c9b2e(0x1d9)]['hash'][_0x2af5f3[_0x9c9b2e(0x1e0)]];if(!_0x42402f)return![];return this[_0x9c9b2e(0x12a)](_0x42402f)||this[_0x9c9b2e(0x22c)](_0x42402f)||this[_0x9c9b2e(0x1f0)](_0x42402f);}const _0x52d8fe=DataConverter['getItemSource'](_0x3bbe19)||SRC_PHB,_0x1cd751=_0x3bbe19[_0x9c9b2e(0x13d)][_0x9c9b2e(0x17d)]()[_0x9c9b2e(0x19f)](/\s+/g,'\x20')[_0x9c9b2e(0x13e)](),_0x35eabd=MiscUtil['get'](this['_spellDataLookup'][_0x9c9b2e(0x15f)],Parser[_0x9c9b2e(0x1c6)](_0x52d8fe),Parser[_0x9c9b2e(0x1c6)](_0x1cd751));if(!_0x35eabd)return![];return this['isAvailableClassSpell_'](_0x35eabd)||this['isAvailableSubclassSpell_'](_0x35eabd)||this['isAvailableExpandedSpell_'](_0x35eabd);}static[_0x46ad54(0x18c)](_0x45c261,_0x37cd7e,_0x3f3332){const _0x4d2e82=_0x46ad54,_0x1fe129={};return(_0x45c261||[])[_0x4d2e82(0x15d)](_0x246466=>this[_0x4d2e82(0x165)](_0x1fe129,_0x246466)),(_0x37cd7e||[])[_0x4d2e82(0x15d)](_0x141046=>this['_getBrewClassSubclassSpellCache_addItem'](_0x1fe129,_0x141046)),(_0x3f3332||[])[_0x4d2e82(0x15d)](_0x240b7c=>this[_0x4d2e82(0x165)](_0x1fe129,_0x240b7c)),_0x1fe129;}static['_getBrewClassSubclassSpellCache_addItem'](_0x4f98a1,_0xc6d726){const _0x3edb47=_0x46ad54;if(typeof _0xc6d726===_0x3edb47(0x13c))MiscUtil[_0x3edb47(0x1ce)](_0x4f98a1,_0x3edb47(0x1a8),SRC_PHB[_0x3edb47(0x13e)](),_0xc6d726[_0x3edb47(0x17d)]()[_0x3edb47(0x13e)](),!![]);else{if(_0xc6d726[_0x3edb47(0x13d)])MiscUtil[_0x3edb47(0x1ce)](_0x4f98a1,_0x3edb47(0x1a8),(_0xc6d726['source']||SRC_PHB)[_0x3edb47(0x17d)]()[_0x3edb47(0x13e)](),_0xc6d726['name'][_0x3edb47(0x17d)]()['toLowerCase'](),!![]);else{if(_0xc6d726[_0x3edb47(0x17c)]){let _0x52b476=_0x3edb47(0x1e4);const _0x50d5ca=_0xc6d726['classSource']||SRC_PHB,_0x12fb86=[_0x50d5ca,_0xc6d726['className']];if(_0xc6d726[_0x3edb47(0x16b)]){_0x52b476=_0x3edb47(0x13f);const _0x4f2ba2=_0xc6d726[_0x3edb47(0x139)]||_0x50d5ca;_0x12fb86['push'](_0x4f2ba2,_0xc6d726[_0x3edb47(0x16b)]),_0xc6d726[_0x3edb47(0x151)]&&(_0x52b476=_0x3edb47(0x1dd),_0x12fb86[_0x3edb47(0x191)](_0xc6d726['subSubclassName']));}MiscUtil[_0x3edb47(0x1ce)](_0x4f98a1,_0x52b476,..._0x12fb86[_0x3edb47(0x158)](_0x4912c9=>_0x4912c9[_0x3edb47(0x17d)]()[_0x3edb47(0x13e)]()),!![]);}}}}get['pageFilter'](){const _0x4b0a1b=_0x46ad54;return this[_0x4b0a1b(0x1a4)];}get[_0x46ad54(0x174)](){const _0x178c9e=_0x46ad54;return this[_0x178c9e(0x19e)];}set['cacheSelectedListItem'](_0x1c1ee8){const _0x47cbb2=_0x46ad54;this[_0x47cbb2(0x19e)]=_0x1c1ee8;}get[_0x46ad54(0x160)](){const _0x5b4da0=_0x46ad54;return this['_state'][_0x5b4da0(0x1d3)]!=null;}set['spellLevelLow'](_0x1fdf2c){const _0x2e914=_0x46ad54;this[_0x2e914(0x148)][_0x2e914(0x1ed)]=_0x1fdf2c;}get[_0x46ad54(0x1ed)](){const _0x32acc4=_0x46ad54;return this[_0x32acc4(0x148)][_0x32acc4(0x1ed)];}set[_0x46ad54(0x20c)](_0x1c45ce){const _0x174dca=_0x46ad54;this[_0x174dca(0x148)][_0x174dca(0x20c)]=_0x1c45ce;}get[_0x46ad54(0x20c)](){return this['_state']['spellLevelHigh'];}get[_0x46ad54(0x1c2)](){const _0x2619d5=_0x46ad54;return this[_0x2619d5(0x148)][_0x2619d5(0x1c2)];}set[_0x46ad54(0x1c2)](_0xb212da){const _0x557ca1=_0x46ad54;this['_state'][_0x557ca1(0x1c2)]=_0xb212da;}get[_0x46ad54(0x1cb)](){const _0x18431a=_0x46ad54;return this[_0x18431a(0x148)][_0x18431a(0x1cb)];}set['maxLearnedCantrips'](_0x274b10){const _0x5c9245=_0x46ad54;this[_0x5c9245(0x148)][_0x5c9245(0x1cb)]=_0x274b10;}get[_0x46ad54(0x204)](){const _0x12d586=_0x46ad54;return this['_state'][_0x12d586(0x204)];}set[_0x46ad54(0x204)](_0x2c4c53){const _0x571b4f=_0x46ad54;this[_0x571b4f(0x148)][_0x571b4f(0x204)]=_0x2c4c53;}get['fixedLearnedProgressionDefault'](){const _0xd5855b=_0x46ad54;return this[_0xd5855b(0x148)]['fixedLearnedProgressionDefault'];}set['fixedLearnedProgressionDefault'](_0x5b9675){const _0x42d43e=_0x46ad54;this[_0x42d43e(0x148)][_0x42d43e(0x161)]=_0x5b9675;}get[_0x46ad54(0x12e)](){const _0x4abbc7=_0x46ad54;return this[_0x4abbc7(0x148)][_0x4abbc7(0x12e)];}set[_0x46ad54(0x12e)](_0x4190d7){const _0x59f30c=_0x46ad54;this[_0x59f30c(0x148)][_0x59f30c(0x12e)]=_0x4190d7;}set[_0x46ad54(0x1d3)](_0x28fa40){const _0x4f4ec2=_0x46ad54;this['_state']['maxPrepared']=_0x28fa40;if(_0x28fa40!=null)this[_0x4f4ec2(0x148)][_0x4f4ec2(0x1b6)]=null;}get[_0x46ad54(0x22f)](){const _0x1916cc=_0x46ad54;return this[_0x1916cc(0x148)][_0x1916cc(0x22f)];}set[_0x46ad54(0x22f)](_0x884d86){const _0x267799=_0x46ad54;this[_0x267799(0x148)][_0x267799(0x22f)]=_0x884d86;}get[_0x46ad54(0x218)](){const _0x31fb72=_0x46ad54;return this[_0x31fb72(0x148)][_0x31fb72(0x218)];}set[_0x46ad54(0x218)](_0x9a04e4){this['_state']['cntLearnedCantrips']=_0x9a04e4;}get[_0x46ad54(0x16f)](){const _0x550076=_0x46ad54;return this[_0x550076(0x148)][_0x550076(0x16f)];}set['cntPrepared'](_0x571eca){const _0x3f33bd=_0x46ad54;this['_state'][_0x3f33bd(0x16f)]=_0x571eca;}get[_0x46ad54(0x14a)](){const _0xcde0d5=_0x46ad54;return this[_0xcde0d5(0x148)]['casterProgression'];}set[_0x46ad54(0x14a)](_0x2eafb6){const _0x2a337e=_0x46ad54;this[_0x2a337e(0x148)][_0x2a337e(0x14a)]=_0x2eafb6;}set['isIncludeUaEtcSpellLists'](_0x36ccfc){const _0x27e389=_0x46ad54;this[_0x27e389(0x148)]['isIncludeUaEtcSpellLists']=_0x36ccfc;}[_0x46ad54(0x1bc)](_0x310a28){const _0x280824=_0x46ad54;this['_addHookBase'](_0x280824(0x1cb),_0x310a28);}['addHookSpellLevelLow'](_0x4b32d4){const _0x422aea=_0x46ad54;this['_addHookBase'](_0x422aea(0x1ed),_0x4b32d4);}['addHookSpellLevelHigh'](_0x5bf229){const _0x3385d5=_0x46ad54;this[_0x3385d5(0x185)](_0x3385d5(0x20c),_0x5bf229);}['addHookFixedLearnedProgression'](_0x3e02a2){const _0x2ed1c0=_0x46ad54;this[_0x2ed1c0(0x185)](_0x2ed1c0(0x204),_0x3e02a2);}[_0x46ad54(0x16e)](_0x25dda8){const _0x156fda=_0x46ad54;this['_addHookBase'](_0x156fda(0x1d3),_0x25dda8);}[_0x46ad54(0x1e9)](_0xba7b56){const _0x1bbd56=_0x46ad54;this[_0x1bbd56(0x185)]('fixedLearnedProgression',_0xba7b56),this['_addHookBase'](_0x1bbd56(0x12e),_0xba7b56),this[_0x1bbd56(0x185)](_0x1bbd56(0x1ed),_0xba7b56),this[_0x1bbd56(0x185)](_0x1bbd56(0x20c),_0xba7b56);}[_0x46ad54(0x12b)](_0x5b7c31){const _0x224fd2=_0x46ad54;this['_addHookBase'](_0x224fd2(0x218),_0x5b7c31),this[_0x224fd2(0x185)](_0x224fd2(0x1cb),_0x5b7c31);}[_0x46ad54(0x134)](_0x237e17){const _0x5e9822=_0x46ad54;this[_0x5e9822(0x185)](_0x5e9822(0x16f),_0x237e17),this[_0x5e9822(0x185)]('maxPrepared',_0x237e17);}[_0x46ad54(0x1e6)](_0x2098cb){const _0x3e2444=_0x46ad54;return this[_0x3e2444(0x1eb)]({'lvl':_0x2098cb,'fixedLearnedProgression':this[_0x3e2444(0x148)][_0x3e2444(0x161)]});}[_0x46ad54(0x1eb)]({lvl:_0x47621d,fixedLearnedProgression:_0x3b46d4}){return _0x47621d>0x0&&_0x3b46d4!=null&&_0x3b46d4[_0x47621d-0x1]>0x0;}[_0x46ad54(0x175)](_0x26e77c){const _0x576775=_0x46ad54;return this['_canLearnMoreFixedSpellsOfLevel']({'lvl':_0x26e77c,'fixedLearnedProgression':this[_0x576775(0x148)]['fixedLearnedProgression'],'cntSpellsKnown':this['_compsLevel'][_0x26e77c][_0x576775(0x17a)]()[_0x576775(0x1bf)]});}[_0x46ad54(0x166)]({lvl:_0x269c20,fixedLearnedProgression:_0x14140e,cntSpellsKnown:_0x56e345}){if(!_0x14140e)return![];if(!_0x14140e[_0x269c20-0x1])return![];return _0x56e345<_0x14140e[_0x269c20-0x1];}[_0x46ad54(0x203)](_0x218616){const _0x3e56b2=_0x46ad54;if(!this[_0x3e56b2(0x148)][_0x3e56b2(0x204)])return![];if(!this[_0x3e56b2(0x148)]['fixedLearnedProgression'][_0x218616-0x1])return![];const _0x1150f3=this[_0x3e56b2(0x20a)][_0x218616][_0x3e56b2(0x17a)]();return _0x1150f3['length']>this[_0x3e56b2(0x148)][_0x3e56b2(0x204)][_0x218616-0x1];}[_0x46ad54(0x1f4)](){const _0x1aeb6b=_0x46ad54;return this['_state'][_0x1aeb6b(0x218)]<(this[_0x1aeb6b(0x148)]['maxLearnedCantrips']||0x0);}['isOverLearnCantripsLimit_'](){const _0x2c5c47=_0x46ad54;return this[_0x2c5c47(0x148)][_0x2c5c47(0x218)]>(this[_0x2c5c47(0x148)]['maxLearnedCantrips']||0x0);}[_0x46ad54(0x21e)](){const _0x336e0f=_0x46ad54;return this[_0x336e0f(0x148)][_0x336e0f(0x16f)]<(this['_state'][_0x336e0f(0x1d3)]||0x0);}['isOverPrepareLimit_'](){const _0x29d1e2=_0x46ad54;return this[_0x29d1e2(0x148)][_0x29d1e2(0x16f)]>(this[_0x29d1e2(0x148)]['maxPrepared']||0x0);}[_0x46ad54(0x152)](){const _0x4b77f7=_0x46ad54;return this['_compsLevel'][_0x4b77f7(0x158)](_0x46572b=>_0x46572b[_0x4b77f7(0x17a)]()[_0x4b77f7(0x1bf)])[_0x4b77f7(0x1de)]();}['_getTotalSpellsKnown'](){const _0x13615a=_0x46ad54;return(this['_state'][_0x13615a(0x204)]||[])[_0x13615a(0x1de)]();}[_0x46ad54(0x14d)](_0x23ccf6,_0x3ceea4){const _0x9d3998=_0x46ad54,_0xae8503=()=>{const _0x5732c5=_0x296e,_0x5bc649=[this['_state'][_0x5732c5(0x1cb)]?'Cantrips\x20learned:\x20'+this['_state'][_0x5732c5(0x218)]+'/'+this[_0x5732c5(0x148)][_0x5732c5(0x1cb)]:null,this[_0x5732c5(0x148)][_0x5732c5(0x204)]?_0x5732c5(0x226)+this[_0x5732c5(0x152)]()+'/'+this[_0x5732c5(0x17b)]():null,this[_0x5732c5(0x148)][_0x5732c5(0x1d3)]?'Prepared:\x20'+this[_0x5732c5(0x148)][_0x5732c5(0x16f)]+'/'+this[_0x5732c5(0x148)][_0x5732c5(0x1d3)]:null][_0x5732c5(0x1b1)](Boolean);this[_0x5732c5(0x215)][_0x5732c5(0x1fb)](_0x5bc649[_0x5732c5(0x1bf)])['html'](_0x5bc649[_0x5732c5(0x1fe)](_0x5732c5(0x1dc)));};this[_0x9d3998(0x185)](_0x9d3998(0x16f),_0xae8503),this['_addHookBase'](_0x9d3998(0x1d3),_0xae8503),this[_0x9d3998(0x185)]('fixedLearnedProgression',_0xae8503),this['_addHookBase'](_0x9d3998(0x12e),_0xae8503),this['_addHookBase']('cntLearnedCantrips',_0xae8503),this[_0x9d3998(0x185)](_0x9d3998(0x1cb),_0xae8503),_0xae8503();const _0x266912=()=>this[_0x9d3998(0x234)]();this[_0x9d3998(0x185)]('alwaysPreparedSpellsRace',_0x266912),this[_0x9d3998(0x185)]('alwaysPreparedSpellsSubclass',_0x266912),_0x266912();const _0x5460fe=()=>this[_0x9d3998(0x1b4)]();this[_0x9d3998(0x185)]('expandedSpellsRace',_0x5460fe),this[_0x9d3998(0x185)]('expandedSpellsClass',_0x5460fe),this['_addHookBase'](_0x9d3998(0x1ea),_0x5460fe),this[_0x9d3998(0x185)](_0x9d3998(0x1e1),_0x5460fe),_0x5460fe(),this['_compsLevel'][_0x9d3998(0x15d)](_0x4abe08=>_0x4abe08[_0x9d3998(0x14d)](_0x23ccf6));const _0x20f774=()=>{const _0xa5bb33=_0x9d3998;_0x3ceea4[_0xa5bb33(0x1ba)]();const _0x4e74b1=this['_spellDatas'][this[_0xa5bb33(0x148)][_0xa5bb33(0x1c2)]];if(!_0x4e74b1)return _0x3ceea4['append']('<div\x20class=\x22flex-vh-center\x20w-100\x20h-100\x20italic\x20ve-muted\x22>Select\x20a\x20spell\x20to\x20view</div>');_0x3ceea4[_0xa5bb33(0x1b2)](Renderer['hover'][_0xa5bb33(0x140)](UrlUtil[_0xa5bb33(0x214)],MiscUtil[_0xa5bb33(0x13a)](_0x4e74b1)));};this[_0x9d3998(0x185)](_0x9d3998(0x1c2),_0x20f774),_0x20f774();}[_0x46ad54(0x234)](){const _0x396d15=_0x46ad54;this[_0x396d15(0x20a)][_0x396d15(0x15d)](_0x267851=>_0x267851[_0x396d15(0x1a2)]());}[_0x46ad54(0x1b4)](_0x4d7281){const _0x3cb286=_0x46ad54;this[_0x3cb286(0x167)]=_0x4d7281||this[_0x3cb286(0x167)];if(!this['_cacheFilterValues'])return;this[_0x3cb286(0x20a)][_0x3cb286(0x15d)](_0x385a68=>_0x385a68['handleFilterChange'](this[_0x3cb286(0x167)]));}[_0x46ad54(0x176)](_0x1ca738){const _0x514401=_0x46ad54;this['_compsLevel'][_0x514401(0x15d)](_0x4d082c=>_0x4d082c[_0x514401(0x176)](_0x1ca738));}['getExistingSpellMeta_'](_0x5f070){const _0x5fbf42=_0x46ad54;if(!this['_existingCasterMeta']||!this['_existingSpellLookup'])return null;const _0x2d2226=(Config[_0x5fbf42(0x1bd)]('import',_0x5fbf42(0x1a0))?Parser[_0x5fbf42(0x1af)](_0x5f070[_0x5fbf42(0x177)]):'')[_0x5fbf42(0x13e)](),_0x53f2bb=_0x5f070[_0x5fbf42(0x13d)][_0x5fbf42(0x13e)]();return this[_0x5fbf42(0x1f2)][_0x5f070[_0x5fbf42(0x1cd)]]?.[_0x2d2226]?.[_0x53f2bb];}[_0x46ad54(0x12a)](_0x174d66){const _0x438ba9=_0x46ad54;if(!this[_0x438ba9(0x21f)]||!this['_classSource'])return![];const _0x5aaa2d=Renderer[_0x438ba9(0x1a8)][_0x438ba9(0x1bb)](_0x174d66,_0x438ba9(0x183)),_0x5cf7cf=Renderer['spell']['getCombinedClasses'](_0x174d66,_0x438ba9(0x200))[_0x438ba9(0x1b1)](_0x94d6bc=>this[_0x438ba9(0x148)][_0x438ba9(0x1e1)]?!![]:!SourceUtil['isNonstandardSource'](_0x94d6bc[_0x438ba9(0x168)])),{className:_0xda10f1,classSource:_0xc94575}=this[_0x438ba9(0x233)][_0x438ba9(0x21c)]({'className':this[_0x438ba9(0x21f)],'classSource':this[_0x438ba9(0x1cc)]});if(!_0x5aaa2d['some'](_0x1bda37=>_0x1bda37['name']===_0xda10f1&&_0x1bda37[_0x438ba9(0x177)]===_0xc94575)&&!_0x5cf7cf[_0x438ba9(0x17e)](_0x457d82=>_0x457d82[_0x438ba9(0x13d)]===_0xda10f1&&_0x457d82['source']===_0xc94575)&&!this[_0x438ba9(0x1ef)](_0x174d66,_0x5aaa2d,_0x5cf7cf))return![];return!![];}[_0x46ad54(0x22c)](_0x19d20c){const _0x341a29=_0x46ad54;if(!this[_0x341a29(0x1b0)]||!this[_0x341a29(0x1d8)])return![];const _0x9c0691=Renderer[_0x341a29(0x1a8)][_0x341a29(0x1bb)](_0x19d20c,_0x341a29(0x169));if(!_0x9c0691[_0x341a29(0x17e)](_0x575301=>_0x575301?.[_0x341a29(0x1e4)]['name']===this[_0x341a29(0x21f)]&&_0x575301?.['class']['source']===this[_0x341a29(0x1cc)]&&_0x575301?.[_0x341a29(0x13f)]['name']===this[_0x341a29(0x1b0)]&&_0x575301?.[_0x341a29(0x13f)][_0x341a29(0x177)]===this[_0x341a29(0x1d8)])&&!this[_0x341a29(0x150)](_0x19d20c,_0x9c0691))return![];return!![];}[_0x46ad54(0x1ef)](_0x109ffc,_0x41087d,_0x425143){const _0x171b69=_0x46ad54;if(MiscUtil['get'](this[_0x171b69(0x228)],_0x171b69(0x1a8),_0x109ffc[_0x171b69(0x177)][_0x171b69(0x13e)](),_0x109ffc['name'][_0x171b69(0x13e)]()))return!![];if(_0x41087d['some'](_0x4b99e1=>MiscUtil[_0x171b69(0x1bd)](this[_0x171b69(0x228)],_0x171b69(0x1e4),_0x4b99e1[_0x171b69(0x177)][_0x171b69(0x13e)](),_0x4b99e1[_0x171b69(0x13d)][_0x171b69(0x13e)]())))return!![];if(_0x425143[_0x171b69(0x17e)](_0x3740c6=>MiscUtil[_0x171b69(0x1bd)](this['_cacheBrewClassSpells'],_0x171b69(0x1e4),_0x3740c6['source']['toLowerCase'](),_0x3740c6[_0x171b69(0x13d)][_0x171b69(0x13e)]())))return!![];return![];}[_0x46ad54(0x150)](_0x5139bb,_0x5f0b4f){const _0x587106=_0x46ad54;if(MiscUtil['get'](this[_0x587106(0x228)],_0x587106(0x1a8),_0x5139bb[_0x587106(0x177)]['toLowerCase'](),_0x5139bb[_0x587106(0x13d)][_0x587106(0x13e)]()))return!![];if(_0x5f0b4f[_0x587106(0x17e)](_0x50964f=>!_0x50964f[_0x587106(0x1dd)]&&MiscUtil['get'](this['_cacheBrewClassSpells'],_0x587106(0x13f),_0x50964f[_0x587106(0x1e4)][_0x587106(0x177)][_0x587106(0x13e)](),_0x50964f['class'][_0x587106(0x13d)]['toLowerCase'](),_0x50964f[_0x587106(0x13f)][_0x587106(0x177)][_0x587106(0x13e)](),_0x50964f[_0x587106(0x13f)][_0x587106(0x13d)][_0x587106(0x13e)]())))return!![];if(_0x5f0b4f['some'](_0x457f0c=>_0x457f0c['subSubclass']&&MiscUtil['get'](this[_0x587106(0x228)],_0x587106(0x1dd),_0x457f0c[_0x587106(0x1e4)]['source']['toLowerCase'](),_0x457f0c[_0x587106(0x1e4)][_0x587106(0x13d)][_0x587106(0x13e)](),_0x457f0c[_0x587106(0x13f)][_0x587106(0x177)][_0x587106(0x13e)](),_0x457f0c[_0x587106(0x13f)]['name'][_0x587106(0x13e)](),_0x457f0c[_0x587106(0x13f)][_0x587106(0x1dd)][_0x587106(0x13e)]())))return!![];return![];}[_0x46ad54(0x22a)](_0x201424){const _0x122765=_0x46ad54,_0x4accaf=this[_0x122765(0x233)][_0x122765(0x137)](_0x201424);if(this[_0x122765(0x148)]['alwaysPreparedSpellsRace'][_0x122765(0x227)](_0x4accaf))return!![];if(this[_0x122765(0x148)][_0x122765(0x1d4)][_0x122765(0x227)](_0x4accaf))return!![];return![];}[_0x46ad54(0x1f0)](_0x20c16a){const _0xc9f136=_0x46ad54,_0x51c9ea=this[_0xc9f136(0x233)][_0xc9f136(0x137)](_0x20c16a);if(this[_0xc9f136(0x148)]['expandedSpellsRace'][_0xc9f136(0x227)](_0x51c9ea))return!![];if(this[_0xc9f136(0x148)][_0xc9f136(0x163)][_0xc9f136(0x227)](_0x51c9ea))return!![];if(this[_0xc9f136(0x148)]['expandedSpellsSubclass']['includes'](_0x51c9ea))return!![];return![];}static['_getSpellUid'](_0x3ce5d0){const _0x5cc068=_0x46ad54;return _0x3ce5d0['name'][_0x5cc068(0x13e)]()+'|'+_0x3ce5d0[_0x5cc068(0x177)][_0x5cc068(0x13e)]();}set[_0x46ad54(0x155)](_0xc79143){const _0x5393bd=_0x46ad54;this['_state'][_0x5393bd(0x155)]=_0xc79143;}set[_0x46ad54(0x1d4)](_0x5d8c9c){const _0x21f41d=_0x46ad54;this[_0x21f41d(0x148)][_0x21f41d(0x1d4)]=_0x5d8c9c;}set['expandedSpellsRace'](_0x98be73){const _0x28ac8d=_0x46ad54;this[_0x28ac8d(0x148)][_0x28ac8d(0x1e8)]=_0x98be73;}set[_0x46ad54(0x163)](_0x1d8d43){const _0x309581=_0x46ad54;this[_0x309581(0x148)][_0x309581(0x163)]=_0x1d8d43;}set[_0x46ad54(0x1ea)](_0xe1f49e){const _0x4686cf=_0x46ad54;this[_0x4686cf(0x148)][_0x4686cf(0x1ea)]=_0xe1f49e;}async['pGetFormData'](_0x5afd67){const _0x2ef99a=_0x46ad54;return{'isFormComplete':(this[_0x2ef99a(0x148)][_0x2ef99a(0x218)]===this[_0x2ef99a(0x148)][_0x2ef99a(0x1cb)]||0x0)&&(this['_state'][_0x2ef99a(0x16f)]===this[_0x2ef99a(0x148)]['maxPrepared']||0x0),'data':{'spells':this[_0x2ef99a(0x20a)]['map'](_0xdc4a7=>_0xdc4a7[_0x2ef99a(0x1c9)](_0x5afd67))[_0x2ef99a(0x196)]()}};}[_0x46ad54(0x1ff)](){return{'spellLevelLow':null,'spellLevelHigh':null,'ixViewedSpell':null,'cntLearnedCantrips':0x0,'maxLearnedCantrips':null,'fixedLearnedProgression':null,'pulseFixedLearned':![],'cntPrepared':0x0,'maxPrepared':null,'alwaysPreparedSpellsRace':[],'alwaysPreparedSpellsSubclass':[],'alwaysPreparedSpellsBackground':{},'alwaysPreparedSpellsFeat':{},'expandedSpellsRace':[],'expandedSpellsClass':[],'expandedSpellsSubclass':[],'expandedSpellsBackground':{},'expandedSpellsFeat':{},'casterProgression':null,'isIncludeUaEtcSpellLists':![]};}static[_0x46ad54(0x21c)]({className:_0x67edd9,classSource:_0x4b862a}){return Charactermancer_Spell_Level['_CLASS_MAP']?.[_0x4b862a]?.[_0x67edd9]||{'className':_0x67edd9,'classSource':_0x4b862a};}}Charactermancer_Spell[_0x46ad54(0x1ca)]={[SRC_UATRR]:{'Ranger\x20(Revised)':{'className':_0x46ad54(0x236),'classSource':SRC_PHB}}},Charactermancer_Spell[_0x46ad54(0x132)]=class{constructor({item:_0x5a3518,isLearned:_0x1e2135,isPrepared:_0x19a2fd,isAlwaysPrepared:_0x19a14b}){const _0x4996b9=_0x46ad54;this[_0x4996b9(0x19c)]=_0x5a3518,this['isLearned']=_0x1e2135,this[_0x4996b9(0x1f1)]=_0x19a2fd,this['isAlwaysPrepared']=_0x19a14b;}};class Charactermancer_Spell_Level extends BaseComponent{constructor(_0x2859a3){const _0x144276=_0x46ad54;super(),_0x2859a3=_0x2859a3||{},this[_0x144276(0x197)]=_0x2859a3[_0x144276(0x1c8)],this[_0x144276(0x16a)]=_0x2859a3[_0x144276(0x149)],this[_0x144276(0x136)]=_0x2859a3['parent'],this[_0x144276(0x201)]=null,this['_$dispNoRows']=null,this[_0x144276(0x12f)]=null;}[_0x46ad54(0x192)](_0x1a395e){const _0x47c1b4=_0x46ad54;return _0x1a395e[_0x47c1b4(0x1cd)]===this['_spellLevel'];}[_0x46ad54(0x14d)](_0x3fd568){const _0x28a39b=_0x46ad54;this['_$wrpRows']=$$`<div class="flex-col manc__list mt-1 mb-3"></div>`,this[_0x28a39b(0x1a7)]=$(_0x28a39b(0x19d))[_0x28a39b(0x173)]();const _0x2f9362=()=>{const _0x303f9e=_0x28a39b;this[_0x303f9e(0x1a7)][_0x303f9e(0x1fb)](!this['_list'][_0x303f9e(0x1b3)]['length']&&_0x5759e7[_0x303f9e(0x198)]()!==_0x303f9e(0x1c0));},_0x2db53e=$('<div\x20class=\x22flex-v-stretch\x20input-group\x20no-shrink\x22>\x0a\x09\x09\x09<button\x20class=\x22btn-5et\x20btn-xxs\x20col-3-2\x20pr-1\x20sort\x22\x20data-sort=\x22name\x22>Name</button>\x0a\x09\x09\x09<button\x20class=\x22btn-5et\x20btn-xxs\x20col-1-2\x20px-1\x20sort\x22\x20data-sort=\x22time\x22>Time</button>\x0a\x09\x09\x09<button\x20class=\x22btn-5et\x20btn-xxs\x20col-1-2\x20px-1\x20sort\x22\x20data-sort=\x22school\x22>School</button>\x0a\x09\x09\x09<button\x20class=\x22btn-5et\x20btn-xxs\x20col-0-5\x20px-1\x20sort\x22\x20data-sort=\x22concentration\x22\x20title=\x22Concentration\x22>C.</button>\x0a\x09\x09\x09<button\x20class=\x22btn-5et\x20btn-xxs\x20col-0-5\x20px-1\x20sort\x22\x20data-sort=\x22ritual\x22\x20title=\x22Ritual\x22>R.</button>\x0a\x09\x09\x09<button\x20class=\x22btn-5et\x20btn-xxs\x20col-2-6\x20px-1\x20sort\x22\x20data-sort=\x22range\x22>Range</button>\x0a\x09\x09\x09<button\x20class=\x22btn-5et\x20btn-xxs\x20col-1-2\x20px-1\x20sort\x22\x20data-sort=\x22source\x22>Source</button>\x0a\x09\x09\x09<button\x20class=\x22btn-5et\x20btn-xxs\x20col-1-6\x20pl-1\x22\x20disabled>&nbsp;</button>\x0a\x09\x09</div>');this['_list']=new List({'$wrpList':this[_0x28a39b(0x201)],'fnSort':PageFilterSpells[_0x28a39b(0x15a)],'fnSearch':(_0x5e0d37,_0x3b7ec6)=>{const _0x36a32c=_0x28a39b,{ixLearned:_0x4e295d,ixPrepared:_0x3b76f2,ixAlwaysPrepared:_0x39a8f3}=this[_0x36a32c(0x233)][_0x36a32c(0x156)](_0x5e0d37['ix']);if(this[_0x36a32c(0x148)][_0x4e295d]||this[_0x36a32c(0x148)][_0x3b76f2]||this[_0x36a32c(0x148)][_0x39a8f3])return!![];return _0x5e0d37[_0x36a32c(0x20f)][_0x36a32c(0x227)](_0x3b7ec6);}}),SortUtil[_0x28a39b(0x193)](_0x2db53e,this[_0x28a39b(0x12f)]),this['_list']['on']('updated',()=>_0x2f9362());const _0x5759e7=$(_0x28a39b(0x195))[_0x28a39b(0x147)](()=>{const _0x5501f7=_0x28a39b;_0x5759e7[_0x5501f7(0x198)](_0x5759e7[_0x5501f7(0x198)]()==='[+]'?'[‒]':_0x5501f7(0x1c0)),this[_0x5501f7(0x201)]['toggleVe'](),_0x2db53e[_0x5501f7(0x1fb)](),_0x2f9362();}),_0x5691b4=$$`<div class="flex-col w-100">
-			<div class="split-v-center">
-				<div class="bold">${Parser[_0x28a39b(0x18d)](this['_spellLevel'])}</div>
-				${_0x5759e7}
+import {Config} from "./Config.js";
+import {DataConverter} from "./DataConverter.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {UtilActors} from "./UtilActors.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {Charactermancer_Spell_SlotLevelSelect} from "./UtilCharactermancerSpellSlotLevelSelect.js";
+import {LGT, Util} from "./Util.js";
+import {Charactermancer_Util} from "./UtilCharactermancer.js";
+import {DataConverterSpell} from "./DataConverterSpell.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class Charactermancer_Spell_Util {
+	/**
+	 * @param opts
+	 * @param opts.casterProgression The class spellcasting progression
+	 * @param opts.curLevel The current actor level (zero is valid)
+	 * @param opts.targetLevel The target actor level
+	 * @param [opts.isBreakpointsOnly] If class levels between jumps in spell level should be ignored.
+	 */
+	static getCasterProgressionMeta ({casterProgression, curLevel, targetLevel, isBreakpointsOnly = false}) {
+		if (casterProgression == null || curLevel == null || targetLevel == null) return null;
+
+		const progression = UtilActors.CASTER_TYPE_TO_PROGRESSION[casterProgression];
+		if (!progression) return null;
+
+		const levelToSpellLevel = [];
+		let lastSpellLevel = 0;
+		progression.forEach(slots => {
+			let isFound = false;
+			for (let i = 0; i < slots.length; ++i) {
+				const spellLevel = i + 1;
+				if (slots[i] && spellLevel > lastSpellLevel) {
+					levelToSpellLevel.push(spellLevel);
+					lastSpellLevel = spellLevel;
+					isFound = true;
+					break;
+				}
+			}
+			if (!isFound) {
+				if (isBreakpointsOnly) levelToSpellLevel.push(null);
+				// Copy the last spell level to form a contiguous spell level array
+				else levelToSpellLevel.push(levelToSpellLevel.length ? levelToSpellLevel.last() : null);
+			}
+		});
+
+		const spannedLevels = levelToSpellLevel.slice(curLevel, targetLevel).filter(Boolean);
+		if (!spannedLevels.length) return null;
+
+		const spellLevelLow = Math.min(...spannedLevels);
+		const spellLevelHigh = Math.max(...spannedLevels);
+
+		const deltaLevels = Math.max(0, targetLevel - curLevel);
+		const deltaSpellLevels = spellLevelHigh - spellLevelLow;
+
+		return {
+			spellLevelLow,
+			spellLevelHigh,
+			deltaLevels,
+			deltaSpellLevels,
+		};
+	}
+
+	static getCasterCantripProgressionMeta ({cls, sc, curLevel, targetLevel}) {
+		if (cls == null || curLevel == null || targetLevel == null) return null;
+
+		const atCurLevel = curLevel === 0 ? 0 : this.getMaxLearnedCantrips({cls, sc, targetLevel: curLevel});
+		const atTargetLevel = this.getMaxLearnedCantrips({cls, sc, targetLevel: targetLevel});
+		if (atCurLevel == null || atTargetLevel == null) return null;
+
+		const deltaLevels = Math.max(0, targetLevel - curLevel);
+		const deltaMaxCantrips = atTargetLevel - atCurLevel;
+
+		return {
+			maxCantripsLow: atCurLevel,
+			maxCantripsHigh: atTargetLevel,
+			deltaLevels,
+			deltaMaxCantrips,
+		};
+	}
+
+	static getMaxLearnedCantrips ({cls, sc, targetLevel}) {
+		if (!cls || targetLevel == null) return null;
+
+		let cantripProgression = DataConverter.getMaxCantripProgression(cls.cantripProgression, sc?.cantripProgression);
+
+		// Auto-detect for homebrew, if required
+		if (BrewUtil.hasSourceJson(cls.source) || (sc && BrewUtil.hasSourceJson(sc.source))) cantripProgression = cantripProgression || this._getApproximateCantripProgression({cls, sc});
+
+		if (!cantripProgression) return null;
+
+		return cantripProgression[targetLevel - 1];
+	}
+
+	static _getApproximateCantripProgression ({cls, sc}) {
+		return this._getApproximateNumberCol({cls, sc, colNameLower: "cantrips known"});
+	}
+
+	static _getApproximateSpellsKnownProgression (cls, sc) {
+		return this._getApproximateNumberCol({cls, sc, colNameLower: "spells known"});
+	}
+
+	static _getApproximateNumberCol ({cls, sc, colNameLower}) {
+		const tableGroups = (BrewUtil.hasSourceJson(cls.source) ? cls.classTableGroups : null)
+			|| ((sc && BrewUtil.hasSourceJson(sc.source)) ? sc?.subclassTableGroups : null);
+		if (!tableGroups) return;
+		for (const tblGroup of tableGroups) {
+			const ixCol = (tblGroup.colLabels || []).findIndex(it => `${it}`.toLowerCase().includes(colNameLower));
+			if (!~ixCol) continue;
+
+			const numbers = (tblGroup.rowsSpellProgression || tblGroup.rows || []).map(row => row.filter((_, ixCell) => ixCell === ixCol)).flat();
+
+			if (numbers.every(it => !isNaN(it))) return numbers.map(it => Number(it));
+		}
+	}
+
+	static getFixedLearnedProgression ({cls, sc, targetLevel, isExistingClass, isDefault = false, formDataSlotSelectFromComp} = {}) {
+		if (targetLevel == null) return null;
+
+		const casterProgression = DataConverter.getMaxCasterProgression(cls.casterProgression, sc?.casterProgression);
+
+		if (!casterProgression || !UtilActors.CASTER_TYPE_TO_PROGRESSION[casterProgression]) return null;
+
+		const totalKnownPerLevel = [...new Array(9)].map(() => 0);
+
+		let isAnyData = false;
+
+		const formDataSlotSelect = (isExistingClass || isDefault)
+			? Charactermancer_Spell_SlotLevelSelect.getDefaultFormData({
+				targetLevel,
+				casterProgression,
+				// ISSUE(3) this should select the max
+				spellsKnownProgression: cls?.spellsKnownProgression || sc?.spellsKnownProgression,
+				// ISSUE(3) this should select the max
+				spellsKnownProgressionFixed: cls?.spellsKnownProgressionFixed || sc?.spellsKnownProgressionFixed,
+			})
+			: formDataSlotSelectFromComp;
+
+		if (formDataSlotSelect) {
+			isAnyData = isAnyData || formDataSlotSelect?.isAnyData;
+			if (formDataSlotSelect?.data) formDataSlotSelect.data.forEach((it, i) => totalKnownPerLevel[i] += it);
+		}
+
+		if (cls.spellsKnownProgressionFixedByLevel) {
+			isAnyData = true;
+
+			Object.entries(cls.spellsKnownProgressionFixedByLevel)
+				.forEach(([lvl, spellSummary]) => {
+					if (Number(lvl) > targetLevel) return;
+
+					Object.entries(spellSummary)
+						.forEach(([lvlSpell, count]) => {
+							lvlSpell = Number(lvlSpell);
+							totalKnownPerLevel[lvlSpell - 1] += count;
+						});
+				});
+		}
+
+		// If there is no slot data to apply, null out the field
+		if (!isAnyData) return null;
+
+		// For a 3rd-level Wizard, the output is e.g.:
+		//   `[8, 2, 0, 0, 0, 0, 0, 0, 0]`
+		return totalKnownPerLevel;
+	}
+
+	static getMaxPreparedSpells ({cls, sc, targetLevel, existingAbilityScores, abilityScoresFromComp} = {}) {
+		if (!cls || targetLevel == null) return null;
+
+		const casterProgression = DataConverter.getMaxCasterProgression(cls.casterProgression, sc?.casterProgression);
+
+		if (!casterProgression || !UtilActors.CASTER_TYPE_TO_PROGRESSION[casterProgression]) return null;
+
+		const spellSlotsAtLevel = UtilActors.CASTER_TYPE_TO_PROGRESSION[casterProgression][targetLevel - 1];
+		if (!spellSlotsAtLevel) return null;
+
+		// If there are no spell slots at this level, we can't prepare spells at this level
+		if (!spellSlotsAtLevel.some(Boolean)) return null;
+
+		let preparedSpellExpression = cls.preparedSpells;
+
+		if (BrewUtil.hasSourceJson(cls.source)) {
+			// Attempt to generate a prepared spell expression for homebrew classes, if it doesn't exist
+			preparedSpellExpression = preparedSpellExpression || this._getApproximatePreparedFormula(cls, sc);
+		}
+
+		if (!preparedSpellExpression) return null;
+
+		const totalsAsi = abilityScoresFromComp;
+		const preparedSpellExpressionEvaluable = preparedSpellExpression.replace(/<\$([^$]+)\$>/g, (...m) => {
+			switch (m[1]) {
+				case "level": return targetLevel;
+				case "str_mod": return this._getMaxPreparedSpells_getAbilityScore({ability: "str", totalsAsi, existingAbilityScores});
+				case "dex_mod": return this._getMaxPreparedSpells_getAbilityScore({ability: "dex", totalsAsi, existingAbilityScores});
+				case "con_mod": return this._getMaxPreparedSpells_getAbilityScore({ability: "con", totalsAsi, existingAbilityScores});
+				case "int_mod": return this._getMaxPreparedSpells_getAbilityScore({ability: "int", totalsAsi, existingAbilityScores});
+				case "wis_mod": return this._getMaxPreparedSpells_getAbilityScore({ability: "wis", totalsAsi, existingAbilityScores});
+				case "cha_mod": return this._getMaxPreparedSpells_getAbilityScore({ability: "cha", totalsAsi, existingAbilityScores});
+				default: throw new Error(`Unknown variable "${m[1]}"`);
+			}
+		});
+
+		// eslint-disable-next-line no-eval
+		const outRaw = eval(preparedSpellExpressionEvaluable);
+		if (isNaN(outRaw)) {
+			console.warn(...LGT, `Could not evaluate expression "${preparedSpellExpressionEvaluable}" (originally "${preparedSpellExpression}") as a number!`);
+			return null;
+		}
+
+		// We prepare a minimum of 1 spell, and round down any fractions
+		return Math.max(1, Math.floor(outRaw));
+	}
+
+	static _getMaxPreparedSpells_getAbilityScore ({totalsAsi, existingAbilityScores, ability}) {
+		if (existingAbilityScores) return existingAbilityScores[ability] || 0;
+		return Parser.getAbilityModNumber(totalsAsi?.totals?.[totalsAsi.mode]?.[ability] || 0);
+	}
+
+	static _getApproximatePreparedFormula (cls, sc) {
+		if (!cls) return null;
+
+		const casterProgression = DataConverter.getMaxCasterProgression(cls.casterProgression, sc?.casterProgression);
+
+		if (!casterProgression || (!cls.classTableGroups && !sc?.subclassTableGroups) || casterProgression === "pact") return null;
+
+		const hasSpellsKnown = [cls.classTableGroups, sc?.subclassTableGroups]
+			.filter(Boolean)
+			.some(tableGroups => {
+				tableGroups.map(it => it.colLabels || [])
+					.flat()
+					.map(lbl => Renderer.stripTags(`${lbl}`.trim()))
+					.some(it => {
+						const parts = it.toLowerCase().split(/[^a-z0-9]/g).map(it => it.trim()).filter(Boolean);
+						return parts.some(pt => pt === "spell" || pt === "spells") && parts.some(pt => pt === "known");
+					});
+			});
+
+		if (hasSpellsKnown) return null;
+
+		// Default to "5" as the ability modifier if the ability score is unavailable--the user can trim down after
+		return `<$level$> ${casterProgression !== "full" ? `/ 2 ` : ""}+ ${cls.spellcastingAbility ? `<$${cls.spellcastingAbility}_mod$>` : "5"}`;
+	}
+
+	static getExistingCasterMeta ({cls, sc, actor, targetLevel, formDataSlotSelectFromComp = null, abilityScoresFromComp = null}) {
+		if (!targetLevel) return null;
+
+		const casterProgression = DataConverter.getMaxCasterProgression(cls?.casterProgression, sc?.casterProgression);
+		const casterProgressionMeta = Charactermancer_Spell_Util.getCasterProgressionMeta({casterProgression, curLevel: 0, targetLevel: targetLevel});
+
+		return {
+			maxLearnedCantrips: this.getMaxLearnedCantrips({cls, sc, targetLevel}),
+			fixedLearnedProgression: this.getFixedLearnedProgression({cls, sc, targetLevel, isExistingClass: true, formDataSlotSelectFromComp}),
+			maxPreparedSpells: this.getMaxPreparedSpells({cls, sc, targetLevel, existingAbilityScores: Charactermancer_Util.getCurrentAbilityScores(actor), abilityScoresFromComp}),
+			spellLevelLow: casterProgressionMeta?.spellLevelLow,
+			spellLevelLowHigh: casterProgressionMeta?.spellLevelHigh,
+		};
+	}
+}
+
+class Charactermancer_Spell_SpellMeta {
+	constructor ({ix, spell, isPrepared, isLearned, isUpdateOnly, existingItemId, preparationMode, usesCurrent, usesMax, usesPer}) {
+		this.ix = ix;
+		this.spell = spell; // The spell entity
+		this.isPrepared = isPrepared;
+		this.isLearned = isLearned;
+
+		// region Updates
+		this.isUpdateOnly = isUpdateOnly; // If the spell should not be imported, but an existing sheet item should be updated
+		this.existingItemId = existingItemId;
+		// endregion
+
+		// region Spell-importer-format options
+		this.preparationMode = preparationMode;
+		this.usesCurrent = usesCurrent;
+		this.usesMax = usesMax;
+		this.usesPer = usesPer;
+		// endregion
+	}
+}
+
+class Charactermancer_Spell extends BaseComponent {
+	static async pApplyFormDataToActor (actor, formData, {cls, sc}) {
+		const spells = formData?.data?.spells || [];
+		for (let i = 0; i < spells.length; ++i) {
+			const {
+				spell,
+				isPrepared,
+
+				isUpdateOnly,
+				existingItemId,
+
+				preparationMode,
+				usesCurrent,
+				usesMax,
+				usesPer,
+				castAtLevel,
+			} = spells[i];
+
+			if (isUpdateOnly && existingItemId) {
+				await DataConverterSpell.pSetSpellItemIsPrepared(actor.items.get(existingItemId), isPrepared);
+				continue;
+			}
+
+			if (!Charactermancer_Spell._IMPORT_LIST_SPELL || Charactermancer_Spell._IMPORT_LIST_SPELL.actor !== actor) {
+				const {ImportListSpell} = await import("./ImportListSpell.js");
+				Charactermancer_Spell._IMPORT_LIST_SPELL = new ImportListSpell({actor: actor});
+				await Charactermancer_Spell._IMPORT_LIST_SPELL.pInit();
+			}
+
+			await Charactermancer_Spell._IMPORT_LIST_SPELL.pImportEntry(
+				spell,
+				{
+					isCharactermancer: true,
+					opts_pGetSpellItem: {
+						isActorItem: true,
+
+						isPrepared: isPrepared,
+						abilityAbv: sc?.spellcastingAbility || cls.spellcastingAbility,
+
+						preparationMode,
+						usesCurrent,
+						usesMax,
+						usesPer,
+						castAtLevel,
+
+						parentClassName: cls.name,
+						parentClassSource: cls.source,
+						parentSubclassName: sc?.name,
+						parentSubclassShortName: sc?.shortName,
+						parentSubclassSource: sc?.source,
+					},
+				},
+			);
+		}
+	}
+
+	/**
+	 * Note that spell progressions are converted into a "fixed learned progression" by another component before being
+	 * used here.
+	 * @param opts
+	 * @param opts.actor
+	 * @param [opts.existingClass]
+	 * @param [opts.existingCasterMeta]
+	 * @param opts.spellDatas
+	 * @param opts.className
+	 * @param [opts.subclassName]
+	 * @param [opts.subclassShortName]
+	 * @param opts.classSource
+	 * @param [opts.subclassSource]
+	 * @param [opts.brewClassSpells] `"classSpells"` defined on the class.
+	 * @param [opts.brewSubclassSpells] `"subclassSpells"` defined on the subclass.
+	 * @param [opts.brewSubSubclassSpells] `"subSubclassSpells"` defined on the subclass.
+	 * @param opts.pageFilter
+	 * @param [opts.$wrpsPreparedLearned]
+	 * @param [opts.maxLevel]
+	 */
+	constructor (opts) {
+		opts = opts || {};
+		super();
+
+		this._actor = opts.actor;
+		this._existingClass = opts.existingClass; // Only link by class, as we assume any subclass is part of the same class
+		this._existingCasterMeta = opts.existingCasterMeta;
+		this._spellDatas = opts.spellDatas;
+		this._className = opts.className;
+		this._classSource = opts.classSource;
+		this._subclassName = opts.subclassName;
+		this._subclassShortName = opts.subclassShortName;
+		this._subclassSource = opts.subclassSource;
+		this._compsLevel = [...new Array(opts.maxLevel != null ? (opts.maxLevel + 1) : 10)]
+			.map((_, i) => new Charactermancer_Spell_Level({spellDatas: opts.spellDatas, spellLevel: i, parent: this}));
+		this._pageFilter = opts.pageFilter;
+		this._$wrpsPreparedLearned = opts.$wrpsPreparedLearned;
+
+		this._spellDataLookup = this._getSpellDataLookup();
+		this._existingSpellLookup = this._getExistingSpellLookup();
+
+		this._cacheSelectedListItem = null;
+		this._cacheFilterValues = null;
+		this._cacheBrewClassSpells = Charactermancer_Spell._getBrewClassSubclassSpellCache(opts.brewClassSpells, opts.brewSubclassSpells, opts.brewSubSubclassSpells);
+	}
+
+	_getSpellDataLookup () {
+		const out = {};
+		this._spellDatas.forEach(sp => {
+			MiscUtil.set(out, "hash", UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_SPELLS](sp), sp);
+			MiscUtil.set(out, "slug", Parser.stringToSlug(Parser.sourceJsonToAbv(sp.source)), Parser.stringToSlug(sp.name), sp);
+		});
+		return out;
+	}
+
+	_getExistingSpellLookup () {
+		if (!this._existingClass || !this._existingCasterMeta) return null;
+
+		const spItems = this._actor.items
+			.filter(it => it.type === "spell");
+
+		const cntsSeenLearnedPerLevel = {};
+		const cntsSeenPreparedPerLevel = {};
+
+		const out = {};
+
+		[...spItems]
+			// Process any spell items with class info flags first
+			.sort((a, b) => {
+				const flagsA = a.data.flags?.[SharedConsts.MODULE_NAME_FAKE];
+				const flagsB = b.data.flags?.[SharedConsts.MODULE_NAME_FAKE];
+				const a_ = flagsA?.parentClassName && flagsA?.parentClassSource ? 1 : 0;
+				const b_ = flagsB?.parentClassName && flagsB?.parentClassSource ? 1 : 0;
+				return b_ - a_;
+			})
+			.forEach(spItem => {
+				const level = Number(spItem.data.data.level || 0);
+				const lookupName = (spItem.name || "").trim().toLowerCase();
+				// Use empty string as the source value if we don't care about source
+				const lookupSource = (Config.get("import", "isStrictMatching") ? UtilDataConverter.getItemSource(spItem) : "").toLowerCase();
+
+				const flags = spItem.data.flags?.[SharedConsts.MODULE_NAME_FAKE];
+				const parentClassName = flags?.parentClassName;
+				const parentClassSource = flags?.parentClassSource;
+
+				const isItemPrepared = spItem.data.data.preparation?.mode === "prepared" && spItem.data.data.preparation?.prepared;
+				const isItemAlwaysPrepared = spItem.data.data.preparation?.mode === "always"; // Trust the item data on this
+
+				// Skip any spells that are definitely from another class
+				if (parentClassName && parentClassSource && parentClassName !== this._existingClass.name && parentClassSource !== this._existingClass.source) return;
+
+				// Forcibly add any spells which are definitely from this class
+				if (parentClassName && parentClassSource && parentClassName === this._existingClass.name && parentClassSource === this._existingClass.source) {
+					const isLearned = level === 0 || (level !== 0 && this._existingCasterMeta.fixedLearnedProgression != null);
+					const isPrepared = this._existingCasterMeta.maxPreparedSpells != null && isItemPrepared;
+
+					if (isLearned) cntsSeenLearnedPerLevel[level] = (cntsSeenLearnedPerLevel[level] || 0) + 1;
+					if (isPrepared) cntsSeenPreparedPerLevel[level] = (cntsSeenPreparedPerLevel[level] || 0) + 1;
+
+					MiscUtil.set(out, level, lookupSource, lookupName, new Charactermancer_Spell.ExistingSpell({
+						item: spItem,
+						isLearned,
+						isPrepared,
+						isAlwaysPrepared: isItemAlwaysPrepared,
+					}));
+
+					return;
+				}
+
+				// For other spells, if they *could* be from this class, count them, assuming we're below our limits
+				const isItemLearned = level === 0
+					// Ignore at-will/innate spells, as we assume they are not from standard spellcasting
+					|| (spItem.data.data.preparation?.mode === "prepared" || spItem.data.data.preparation?.mode === "pact");
+
+				const isLearned = level === 0
+					? isItemLearned && this._existingCasterMeta.maxLearnedCantrips != null && ((cntsSeenLearnedPerLevel[level] || 0) < this._existingCasterMeta.maxLearnedCantrips)
+					: isItemLearned && this._canLearnMoreFixedSpellsOfLevel({lvl: level, fixedLearnedProgression: this._existingCasterMeta.fixedLearnedProgression, cntSpellsKnown: cntsSeenLearnedPerLevel[level] || 0});
+
+				const isPrepared = isItemPrepared
+					&& this._existingCasterMeta.maxPreparedSpells != null
+					&& (cntsSeenPreparedPerLevel[level] || 0) < this._existingCasterMeta.maxPreparedSpells;
+
+				/* Note: best not to do this, as it breaks e.g. levelling up a non-Charactermancer actor
+				// If it's neither learned nor prepared, bail out
+				if (!isLearned && !isPrepared && !isItemAlwaysPrepared) return;
+				 */
+
+				// If it's not on our known spell list, bail out
+				if (!this._getExistingSpellLookup_isOnSpellList(spItem)) return;
+
+				// If it should be a learned spell and we've not learned it, bail out
+				if (!isLearned && this._isLearnedFixedSpellCasterAtLevel({lvl: level, fixedLearnedProgression: this._existingCasterMeta.fixedLearnedProgression})) return;
+
+				if (isLearned) cntsSeenLearnedPerLevel[level] = (cntsSeenLearnedPerLevel[level] || 0) + 1;
+				if (isPrepared) cntsSeenPreparedPerLevel[level] = (cntsSeenPreparedPerLevel[level] || 0) + 1;
+
+				MiscUtil.set(out, level, lookupSource, lookupName, new Charactermancer_Spell.ExistingSpell({
+					item: spItem,
+					isLearned,
+					isPrepared,
+					isAlwaysPrepared: isItemAlwaysPrepared,
+				}));
+			});
+
+		return out;
+	}
+
+	/** Attempt to map the spell item to an equivalent 5etools spell. */
+	_getExistingSpellLookup_isOnSpellList (spItem) {
+		// region If we're lucky enough to have Plutonium flags, use them
+		const flags = spItem.data.flags?.[SharedConsts.MODULE_NAME_FAKE];
+
+		if (flags?.page && flags?.source && flags?.hash) {
+			const sp = this._spellDataLookup.hash[flags.hash];
+			if (!sp) return false;
+			return this.isAvailableClassSpell_(sp) || this.isAvailableSubclassSpell_(sp) || this.isAvailableExpandedSpell_(sp);
+		}
+		// endregion
+
+		// Otherwise, slug the name/source, and do a lookup
+		const itemSourceClean = UtilDataConverter.getItemSource(spItem) || SRC_PHB;
+		const itemNameClean = spItem.name.trim().replace(/\s+/g, " ").toLowerCase();
+		const sp = MiscUtil.get(this._spellDataLookup.slug, Parser.stringToSlug(itemSourceClean), Parser.stringToSlug(itemNameClean));
+		if (!sp) return false;
+		return this.isAvailableClassSpell_(sp) || this.isAvailableSubclassSpell_(sp) || this.isAvailableExpandedSpell_(sp);
+	}
+
+	static _getBrewClassSubclassSpellCache (brewClassSpells, brewSubclassSpells, brewSubSubclassSpells) {
+		const out = {};
+		(brewClassSpells || []).forEach(it => this._getBrewClassSubclassSpellCache_addItem(out, it));
+		(brewSubclassSpells || []).forEach(it => this._getBrewClassSubclassSpellCache_addItem(out, it));
+		(brewSubSubclassSpells || []).forEach(it => this._getBrewClassSubclassSpellCache_addItem(out, it));
+		return out;
+	}
+
+	static _getBrewClassSubclassSpellCache_addItem (out, it) {
+		if (typeof it === "string") MiscUtil.set(out, "spell", SRC_PHB.toLowerCase(), it.trim().toLowerCase(), true);
+		else if (it.name) MiscUtil.set(out, "spell", (it.source || SRC_PHB).trim().toLowerCase(), it.name.trim().toLowerCase(), true);
+		else if (it.className) {
+			let prop = "class";
+			const classSource = it.classSource || SRC_PHB;
+			const path = [classSource, it.className];
+			if (it.subclassName) {
+				prop = "subclass";
+				const subclassSource = it.subclassSource || classSource;
+				path.push(subclassSource, it.subclassName);
+				if (it.subSubclassName) {
+					prop = "subSubclass";
+					path.push(it.subSubclassName);
+				}
+			}
+			MiscUtil.set(out, prop, ...path.map(it => it.trim().toLowerCase()), true);
+		}
+	}
+
+	get pageFilter () { return this._pageFilter; }
+
+	set subclassName (val) { this._subclassName = val; }
+	set subclassShortName (val) { this._subclassShortName = val; }
+	set subclassSource (val) { this._subclassSource = val; }
+
+	get cacheSelectedListItem () { return this._cacheSelectedListItem; }
+	set cacheSelectedListItem (val) { this._cacheSelectedListItem = val; }
+
+	get isPreparedCaster () { return this._state.maxPrepared != null; }
+
+	set spellLevelLow (val) { this._state.spellLevelLow = val; }
+	get spellLevelLow () { return this._state.spellLevelLow; }
+
+	set spellLevelHigh (val) { this._state.spellLevelHigh = val; }
+	get spellLevelHigh () { return this._state.spellLevelHigh; }
+
+	get ixViewedSpell () { return this._state.ixViewedSpell; }
+	set ixViewedSpell (val) { this._state.ixViewedSpell = val; }
+
+	get maxLearnedCantrips () { return this._state.maxLearnedCantrips; }
+	set maxLearnedCantrips (val) { this._state.maxLearnedCantrips = val; }
+
+	get fixedLearnedProgression () { return this._state.fixedLearnedProgression; }
+	set fixedLearnedProgression (val) { this._state.fixedLearnedProgression = val; }
+
+	get fixedLearnedProgressionDefault () { return this._state.fixedLearnedProgressionDefault; }
+	set fixedLearnedProgressionDefault (val) { this._state.fixedLearnedProgressionDefault = val; }
+
+	get pulseFixedLearned () { return this._state.pulseFixedLearned; }
+	set pulseFixedLearned (val) { this._state.pulseFixedLearned = val; }
+
+	set maxPrepared (val) {
+		this._state.maxPrepared = val;
+		if (val != null) this._state.maxLearned = null;
+	}
+
+	get cntLearnedSpells () { return this._state.cntLearnedSpells; }
+	set cntLearnedSpells (val) { this._state.cntLearnedSpells = val; }
+
+	get cntLearnedCantrips () { return this._state.cntLearnedCantrips; }
+	set cntLearnedCantrips (val) { this._state.cntLearnedCantrips = val; }
+
+	get cntPrepared () { return this._state.cntPrepared; }
+	set cntPrepared (val) { this._state.cntPrepared = val; }
+
+	get casterProgression () { return this._state.casterProgression; }
+	set casterProgression (val) { this._state.casterProgression = val; }
+
+	set isIncludeUaEtcSpellLists (val) { this._state.isIncludeUaEtcSpellLists = val; }
+
+	addHookMaxLearnedCantrips (hk) { this._addHookBase("maxLearnedCantrips", hk); }
+	addHookSpellLevelLow (hk) { this._addHookBase("spellLevelLow", hk); }
+	addHookSpellLevelHigh (hk) { this._addHookBase("spellLevelHigh", hk); }
+	addHookFixedLearnedProgression (hk) { this._addHookBase("fixedLearnedProgression", hk); }
+
+	addHookIsPreparedCaster (hk) { this._addHookBase("maxPrepared", hk); }
+
+	addHookIsMaxLearnedSpells (hk) {
+		this._addHookBase("fixedLearnedProgression", hk);
+		this._addHookBase("pulseFixedLearned", hk);
+		this._addHookBase("spellLevelLow", hk);
+		this._addHookBase("spellLevelHigh", hk);
+	}
+
+	addHookIsMaxLearnedCantrips (hk) {
+		this._addHookBase("cntLearnedCantrips", hk);
+		this._addHookBase("maxLearnedCantrips", hk);
+	}
+
+	addHookIsMaxPrepared (hk) {
+		this._addHookBase("cntPrepared", hk);
+		this._addHookBase("maxPrepared", hk);
+	}
+
+	isLearnedFixedSpellCasterAtLevel_ (lvl) {
+		// Use the default spell progression, so we don't "forget" we are a learned caster if we have converted all
+		//   fixed slots for this level to slots of another level.
+		return this._isLearnedFixedSpellCasterAtLevel({lvl, fixedLearnedProgression: this._state.fixedLearnedProgressionDefault});
+	}
+
+	_isLearnedFixedSpellCasterAtLevel ({lvl, fixedLearnedProgression}) {
+		return lvl > 0 && fixedLearnedProgression != null && fixedLearnedProgression[lvl - 1] > 0;
+	}
+
+	canLearnMoreFixedSpellsOfLevel_ (lvl) {
+		return this._canLearnMoreFixedSpellsOfLevel({
+			lvl,
+			fixedLearnedProgression: this._state.fixedLearnedProgression,
+			cntSpellsKnown: this._compsLevel[lvl].getSpellsKnown().length,
+		});
+	}
+
+	_canLearnMoreFixedSpellsOfLevel ({lvl, fixedLearnedProgression, cntSpellsKnown}) {
+		if (!fixedLearnedProgression) return false;
+		if (!fixedLearnedProgression[lvl - 1]) return false;
+		return cntSpellsKnown < fixedLearnedProgression[lvl - 1];
+	}
+
+	isOverLearnFixedSpellsLimitOfLevel_ (lvl) {
+		if (!this._state.fixedLearnedProgression) return false;
+		if (!this._state.fixedLearnedProgression[lvl - 1]) return false;
+		const spellsKnown = this._compsLevel[lvl].getSpellsKnown();
+		return spellsKnown.length > this._state.fixedLearnedProgression[lvl - 1];
+	}
+
+	canLearnMoreCantrips_ () { return this._state.cntLearnedCantrips < (this._state.maxLearnedCantrips || 0); }
+	isOverLearnCantripsLimit_ () { return this._state.cntLearnedCantrips > (this._state.maxLearnedCantrips || 0); }
+
+	canPrepareMore_ () { return this._state.cntPrepared < (this._state.maxPrepared || 0); }
+	isOverPrepareLimit_ () { return this._state.cntPrepared > (this._state.maxPrepared || 0); }
+
+	_getCntSpellsKnown () { return this._compsLevel.map(it => it.getSpellsKnown().length).sum(); }
+	_getTotalSpellsKnown () { return (this._state.fixedLearnedProgression || []).sum(); }
+
+	render ($wrp, $dispSpell) {
+		// region Spells prepared and learned
+		const hkPreparedLearned = () => {
+			const parts = [
+				this._state.maxLearnedCantrips ? `Cantrips learned: ${this._state.cntLearnedCantrips}/${this._state.maxLearnedCantrips}` : null,
+				this._state.fixedLearnedProgression ? `Spells learned: ${this._getCntSpellsKnown()}/${this._getTotalSpellsKnown()}` : null,
+				this._state.maxPrepared ? `Prepared: ${this._state.cntPrepared}/${this._state.maxPrepared}` : null,
+			].filter(Boolean);
+
+			(this._$wrpsPreparedLearned || [])
+				.forEach($it => {
+					$it
+						.toggleVe(parts.length)
+						.html(parts.join(`<div class="mx-1">\u2014</div>`));
+				});
+		};
+		this._addHookBase("cntPrepared", hkPreparedLearned);
+		this._addHookBase("maxPrepared", hkPreparedLearned);
+		this._addHookBase("fixedLearnedProgression", hkPreparedLearned);
+		this._addHookBase("pulseFixedLearned", hkPreparedLearned);
+		this._addHookBase("cntLearnedCantrips", hkPreparedLearned);
+		this._addHookBase("maxLearnedCantrips", hkPreparedLearned);
+		hkPreparedLearned();
+		// endregion
+
+		// region Always prepared spell lists
+		const hkAlwaysPreparedSpells = () => this._handleAlwaysPreparedSpells();
+		this._addHookBase("alwaysPreparedSpellsRace", hkAlwaysPreparedSpells);
+		this._addHookBase("alwaysPreparedSpellsBackground", hkAlwaysPreparedSpells);
+		this._addHookBase("alwaysPreparedSpellsClass", hkAlwaysPreparedSpells);
+		this._addHookBase("alwaysPreparedSpellsSubclass", hkAlwaysPreparedSpells);
+		hkAlwaysPreparedSpells();
+		// endregion
+
+		// region Expanded spell lists (and UA spell lists)
+		const hkExpandedSpells = () => this.handleFilterChange();
+		this._addHookBase("expandedSpellsRace", hkExpandedSpells);
+		this._addHookBase("expandedSpellsBackground", hkExpandedSpells);
+		this._addHookBase("expandedSpellsClass", hkExpandedSpells);
+		this._addHookBase("expandedSpellsSubclass", hkExpandedSpells);
+
+		this._addHookBase("isIncludeUaEtcSpellLists", hkExpandedSpells);
+		hkExpandedSpells();
+		// endregion
+
+		// region Learned cantrips
+		const hkAlwaysKnownSpells = () => this._handleAlwaysKnownSpells();
+		this._addHookBase("alwaysKnownSpellsRace", hkAlwaysKnownSpells);
+		this._addHookBase("alwaysKnownSpellsBackground", hkAlwaysKnownSpells);
+		this._addHookBase("alwaysKnownSpellsClass", hkAlwaysKnownSpells);
+		this._addHookBase("alwaysKnownSpellsSubclass", hkAlwaysKnownSpells);
+		hkAlwaysKnownSpells();
+		// endregion
+
+		// region Render level parts
+		this._compsLevel.forEach(it => it.render($wrp));
+		// endregion
+
+		// region Init spell display
+		const hkDisplaySpell = () => {
+			// Note that multiple spell components from multiple classes share the same display component; that is, the
+			//   spell displayed is not guaranteed to match the internal state of every component, only the most recently
+			//   modified one.
+			$dispSpell.empty();
+			const spell = this._spellDatas[this._state.ixViewedSpell];
+			if (!spell) return $dispSpell.append(`<div class="flex-vh-center w-100 h-100 italic">Select a spell to view</div>`);
+
+			$dispSpell.append(Renderer.hover.$getHoverContent_stats(UrlUtil.PG_SPELLS, MiscUtil.copy(spell)));
+		};
+		this._addHookBase("ixViewedSpell", hkDisplaySpell);
+		hkDisplaySpell();
+		// endregion
+	}
+
+	_handleAlwaysPreparedSpells () { this._compsLevel.forEach(it => it.handleAlwaysPreparedSpells_()); }
+	_handleAlwaysKnownSpells () { this._compsLevel.forEach(it => it.handleAlwaysKnownSpells_()); }
+
+	handleFilterChange (f) {
+		this._cacheFilterValues = f || this._cacheFilterValues;
+		if (!this._cacheFilterValues) return; // Filtering with no values, and no cached values, is a no-op
+		this._compsLevel.forEach(it => it.handleFilterChange(this._cacheFilterValues));
+	}
+
+	handleSearch (searchTerm) { this._compsLevel.forEach(it => it.handleSearch(searchTerm)); }
+
+	getExistingSpellMeta_ (spell) {
+		if (!this._existingCasterMeta || !this._existingSpellLookup) return null;
+		const lookupSource = (Config.get("import", "isStrictMatching") ? Parser.sourceJsonToAbv(spell.source) : "").toLowerCase();
+		const lookupName = spell.name.toLowerCase();
+		return this._existingSpellLookup[spell.level]?.[lookupSource]?.[lookupName];
+	}
+
+	isAvailableClassSpell_ (sp) {
+		if (!this._className || !this._classSource) return false;
+
+		const fromClassList = Renderer.spell.getCombinedClasses(sp, "fromClassList");
+		const fromClassListVariant = Renderer.spell.getCombinedClasses(sp, "fromClassListVariant")
+			.filter(it => this._state.isIncludeUaEtcSpellLists ? true : !SourceUtil.isNonstandardSource(it.definedInSource));
+
+		const {className, classSource} = this.constructor._getMappedClassDetails({className: this._className, classSource: this._classSource});
+
+		if (
+			!fromClassList.some(it => it.name === className && it.source === classSource)
+			&& !fromClassListVariant.some(it => it.name === className && it.source === classSource)
+			&& !this._hasBrewClassSpell(sp, fromClassList, fromClassListVariant)) return false;
+
+		return true;
+	}
+
+	isAvailableSubclassSpell_ (sp) {
+		if ((!this._subclassName && !this._subclassShortName) || !this._subclassSource) return false;
+
+		const fromSubclassList = Renderer.spell.getCombinedClasses(sp, "fromSubclass");
+
+		const scName = this._subclassShortName || this._subclassName;
+
+		if (!fromSubclassList.some(it => it?.class.name === this._className && it?.class.source === this._classSource && it?.subclass.name === scName && it?.subclass.source === this._subclassSource)
+			&& !this._hasBrewSubclassSpell(sp, fromSubclassList)) return false;
+
+		return true;
+	}
+
+	_hasBrewClassSpell (sp, fromClassList, fromClassListVariant) {
+		if (MiscUtil.get(this._cacheBrewClassSpells, "spell", sp.source.toLowerCase(), sp.name.toLowerCase())) return true;
+		if (fromClassList.some(it => MiscUtil.get(this._cacheBrewClassSpells, "class", it.source.toLowerCase(), it.name.toLowerCase()))) return true;
+		if (fromClassListVariant.some(it => MiscUtil.get(this._cacheBrewClassSpells, "class", it.source.toLowerCase(), it.name.toLowerCase()))) return true;
+		return false;
+	}
+
+	_hasBrewSubclassSpell (sp, fromSubclassList) {
+		if (MiscUtil.get(this._cacheBrewClassSpells, "spell", sp.source.toLowerCase(), sp.name.toLowerCase())) return true;
+		if (fromSubclassList.some(it => !it.subSubclass && MiscUtil.get(this._cacheBrewClassSpells, "subclass", it.class.source.toLowerCase(), it.class.name.toLowerCase(), it.subclass.source.toLowerCase(), it.subclass.name.toLowerCase()))) return true;
+		if (fromSubclassList.some(it => it.subSubclass && MiscUtil.get(this._cacheBrewClassSpells, "subSubclass", it.class.source.toLowerCase(), it.class.name.toLowerCase(), it.subclass.source.toLowerCase(), it.subclass.name.toLowerCase(), it.subclass.subSubclass.toLowerCase()))) return true;
+		return false;
+	}
+
+	isAlwaysPreparedSpell_ (sp) {
+		const spellUid = this.constructor._getSpellUid(sp);
+		if (this._state.alwaysPreparedSpellsRace.includes(spellUid)) return true;
+		if (this._state.alwaysPreparedSpellsBackground.includes(spellUid)) return true;
+		if (this._state.alwaysPreparedSpellsClass.includes(spellUid)) return true;
+		if (this._state.alwaysPreparedSpellsSubclass.includes(spellUid)) return true;
+		// TODO(future) handle feats?
+		return false;
+	}
+
+	isAvailableExpandedSpell_ (sp) {
+		const spellUid = this.constructor._getSpellUid(sp);
+		if (this._state.expandedSpellsRace.includes(spellUid)) return true;
+		if (this._state.expandedSpellsBackground.includes(spellUid)) return true;
+		if (this._state.expandedSpellsClass.includes(spellUid)) return true;
+		if (this._state.expandedSpellsSubclass.includes(spellUid)) return true;
+		// TODO(future) handle feats?
+		return false;
+	}
+
+	isAlwaysKnownSpell_ (sp) {
+		const spellUid = this.constructor._getSpellUid(sp);
+		if (this._state.alwaysKnownSpellsRace.includes(spellUid)) return true;
+		if (this._state.alwaysKnownSpellsBackground.includes(spellUid)) return true;
+		if (this._state.alwaysKnownSpellsClass.includes(spellUid)) return true;
+		if (this._state.alwaysKnownSpellsSubclass.includes(spellUid)) return true;
+		// TODO(future) handle feats?
+		return false;
+	}
+
+	static _getSpellUid (sp) { return `${sp.name.toLowerCase()}|${sp.source.toLowerCase()}`; }
+
+	// region Always prepared spell sources
+	set alwaysPreparedSpellsRace (val) { this._state.alwaysPreparedSpellsRace = val; }
+	set alwaysPreparedSpellsBackground (val) { this._state.alwaysPreparedSpellsBackground = val; }
+	set alwaysPreparedSpellsClass (val) { this._state.alwaysPreparedSpellsClass = val; }
+	set alwaysPreparedSpellsSubclass (val) { this._state.alwaysPreparedSpellsSubclass = val; }
+	// endregion
+
+	// region Expanded spell sources
+	set expandedSpellsRace (val) { this._state.expandedSpellsRace = val; }
+	set expandedSpellsBackground (val) { this._state.expandedSpellsBackground = val; }
+	set expandedSpellsClass (val) { this._state.expandedSpellsClass = val; }
+	set expandedSpellsSubclass (val) { this._state.expandedSpellsSubclass = val; }
+	// endregion
+
+	// region Learned cantrip sources
+	set alwaysKnownSpellsRace (val) { this._state.alwaysKnownSpellsRace = val; }
+	set alwaysKnownSpellsBackground (val) { this._state.alwaysKnownSpellsBackground = val; }
+	set alwaysKnownSpellsClass (val) { this._state.alwaysKnownSpellsClass = val; }
+	set alwaysKnownSpellsSubclass (val) { this._state.alwaysKnownSpellsSubclass = val; }
+	// endregion
+
+	async pGetFormData (filterValues) {
+		return {
+			isFormComplete: (this._state.cntLearnedCantrips === this._state.maxLearnedCantrips || 0)
+				&& (this._state.cntPrepared === this._state.maxPrepared || 0),
+			data: {
+				spells: this._compsLevel.map(comp => comp.getFormSubData(filterValues)).flat(),
+			},
+		};
+	}
+
+	_getDefaultState () {
+		return {
+			spellLevelLow: null,
+			spellLevelHigh: null,
+			ixViewedSpell: null,
+
+			cntLearnedCantrips: 0,
+			maxLearnedCantrips: null,
+
+			fixedLearnedProgression: null,
+			pulseFixedLearned: false,
+
+			cntPrepared: 0,
+			maxPrepared: null,
+
+			alwaysPreparedSpellsRace: [],
+			alwaysPreparedSpellsBackground: [],
+			alwaysPreparedSpellsClass: [],
+			alwaysPreparedSpellsSubclass: [],
+			// region TODO(future) unused; consider handling in the future
+			alwaysPreparedSpellsFeat: {},
+			// endregion
+
+			expandedSpellsRace: [],
+			expandedSpellsBackground: [],
+			expandedSpellsClass: [],
+			expandedSpellsSubclass: [],
+			// region TODO(future) unused; consider handling in the future
+			expandedSpellsFeat: {},
+			// endregion
+
+			alwaysKnownSpellsRace: [],
+			alwaysKnownSpellsBackground: [],
+			alwaysKnownSpellsClass: [],
+			alwaysKnownSpellsSubclass: [],
+			// region TODO(future) unused; consider handling in the future
+			alwaysKnownSpellsFeat: {},
+			// endregion
+
+			casterProgression: null,
+
+			isIncludeUaEtcSpellLists: false,
+		};
+	}
+
+	/** Map one class to another for the purpose of "class spell" lookups. */
+	static _getMappedClassDetails ({className, classSource}) {
+		return Charactermancer_Spell_Level._CLASS_MAP?.[classSource]?.[className] || {className, classSource};
+	}
+}
+Charactermancer_Spell._IMPORT_LIST_SPELL = null;
+Charactermancer_Spell._CLASS_MAP = {
+	[SRC_UATRR]: {
+		"Ranger (Revised)": {
+			className: "Ranger",
+			classSource: SRC_PHB,
+		},
+	},
+};
+
+Charactermancer_Spell.ExistingSpell = class {
+	constructor ({item, isLearned, isPrepared, isAlwaysPrepared}) {
+		this.item = item; // The current sheet item
+		this.isLearned = isLearned;
+		this.isPrepared = isPrepared;
+		this.isAlwaysPrepared = isAlwaysPrepared;
+	}
+};
+
+class Charactermancer_Spell_Modal extends Charactermancer_Spell {
+	constructor (opts) {
+		opts.pageFilter = new PageFilterSpells();
+
+		super(opts);
+
+		this._filterBoxSpells = null;
+	}
+
+	static pGetUserInput (opts) {
+		const comp = new this(opts);
+		comp.maxLearnedCantrips = opts.maxLearnedCantrips;
+
+		return UtilApplications.pGetImportCompApplicationFormData({
+			comp,
+			width: Util.getMaxWindowWidth(1200),
+			height: Util.getMaxWindowHeight(),
+		});
+	}
+
+	get modalTitle () { return `Select Cantrips`; }
+
+	pRender ($wrpModalInner) {
+		const $wrpLhs = $(`<div class="flex-col h-100 w-50"></div>`);
+		const $wrpRhs = $(`<div class="flex-col h-100 w-50"></div>`);
+
+		const pRender = this._render_pFilterBox($wrpLhs);
+		$wrpRhs.append(`<i class="ve-muted text-center">Select a spell to view it here.</i>`);
+
+		$$`<div class="split w-100 h-100">
+			${$wrpLhs}
+			<div class="vr-1 h-100"></div>
+			${$wrpRhs}
+		</div>`.appendTo($wrpModalInner);
+
+		super.render($wrpLhs, $wrpRhs);
+
+		return pRender
+			.then(() => {
+				this.handleFilterChange(this._filterBoxSpells.getValues());
+			});
+	}
+
+	_render_pFilterBox ($wrp) {
+		const $btnFilter = $(`<button class="btn-5et veapp__btn-filter">Filter</button>`);
+		const $btnToggleFilterSummary = $(`<button class="btn btn-5et" title="Toggle Filter Summary Display"><span class="glyphicon glyphicon-resize-small"></span></button>`);
+		const $iptSearch = $(`<input type="search" class="search w-100 form-control" placeholder="Find spell...">`);
+		const $btnReset = $(`<button class="btn-5et veapp__btn-list-reset">Reset</button>`)
+			.click(() => $iptSearch.val("").keyup());
+
+		const $wrpMiniPills = $(`<div class="fltr__mini-view btn-group"></div>`);
+
+		$$($wrp)`
+			<div class="flex-v-stretch input-group input-group--top no-shrink">
+				${$btnFilter}
+				${$btnToggleFilterSummary}
+				${$iptSearch}
+				${$btnReset}
 			</div>
-			${_0x2db53e}
-			${this[_0x28a39b(0x1a7)]}
-			${this[_0x28a39b(0x201)]}
-		</div>`[_0x28a39b(0x1e5)](_0x3fd568),_0x285b1c=this[_0x28a39b(0x197)][_0x28a39b(0x1bf)];for(let _0x36b8e3=0x0;_0x36b8e3<_0x285b1c;++_0x36b8e3){const _0xfba610=this[_0x28a39b(0x197)][_0x36b8e3];if(!this[_0x28a39b(0x192)](_0xfba610))continue;const _0x18e1eb=this[_0x28a39b(0x12d)](_0xfba610,_0x36b8e3);if(!_0x18e1eb)continue;this['_list'][_0x28a39b(0x1d5)](_0x18e1eb);}this[_0x28a39b(0x12f)]['init']();const _0x4a6504=()=>{const _0x538e5d=_0x28a39b,_0x399bc6=this[_0x538e5d(0x1d1)]();_0x5691b4[_0x538e5d(0x1fb)](_0x399bc6);if(!_0x399bc6)this[_0x538e5d(0x1cf)]();};this[_0x28a39b(0x136)][_0x28a39b(0x1bc)](_0x4a6504),this[_0x28a39b(0x136)]['addHookSpellLevelLow'](_0x4a6504),this[_0x28a39b(0x136)]['addHookSpellLevelHigh'](_0x4a6504),this['_parent'][_0x28a39b(0x131)](_0x4a6504),_0x4a6504();if(this[_0x28a39b(0x16a)]===0x0)this[_0x28a39b(0x1a1)]();else this['_render_bindLevelledSpellHooks']();}[_0x46ad54(0x1a1)](){const _0x1d29e4=_0x46ad54,_0x34ecf5=()=>{const _0x311534=_0x296e;this[_0x311534(0x201)][_0x311534(0x1fd)]('manc-sp__is-max-learned-cantrips',!this[_0x311534(0x136)][_0x311534(0x1f4)]()),this[_0x311534(0x201)][_0x311534(0x1fd)](_0x311534(0x229),this[_0x311534(0x136)][_0x311534(0x14c)]());};this[_0x1d29e4(0x136)][_0x1d29e4(0x12b)](_0x34ecf5),_0x34ecf5();}[_0x46ad54(0x172)](){const _0x418325=_0x46ad54,_0x432465=()=>this[_0x418325(0x201)][_0x418325(0x1fd)](_0x418325(0x209),this['_parent'][_0x418325(0x160)]);this[_0x418325(0x136)]['addHookIsPreparedCaster'](_0x432465),_0x432465();const _0x427aef=()=>{const _0xe42e8f=_0x418325,_0x35f093=this['_parent'][_0xe42e8f(0x1e6)](this[_0xe42e8f(0x16a)]);let _0x4d8427=!![],_0x3eeb5b=!![];if(_0x35f093){if(this[_0xe42e8f(0x136)][_0xe42e8f(0x175)](this[_0xe42e8f(0x16a)]))_0x4d8427=![];if(!this[_0xe42e8f(0x136)][_0xe42e8f(0x203)](this['_spellLevel']))_0x3eeb5b=![];}this[_0xe42e8f(0x201)][_0xe42e8f(0x1fd)]('manc-sp__is-learn-caster',_0x35f093),this[_0xe42e8f(0x201)]['toggleClass'](_0xe42e8f(0x20d),_0x35f093&&_0x4d8427),this['_$wrpRows'][_0xe42e8f(0x1fd)](_0xe42e8f(0x128),_0x35f093&&_0x3eeb5b);};this[_0x418325(0x136)][_0x418325(0x1e9)](_0x427aef),_0x427aef();const _0x347401=()=>{const _0x4f5de6=_0x418325;this[_0x4f5de6(0x201)][_0x4f5de6(0x1fd)](_0x4f5de6(0x21d),!this[_0x4f5de6(0x136)]['canPrepareMore_']()),this[_0x4f5de6(0x201)][_0x4f5de6(0x1fd)]('manc-sp__is-max-prepared-spells--is-over-limit',this[_0x4f5de6(0x136)]['isOverPrepareLimit_']());};this[_0x418325(0x136)][_0x418325(0x134)](_0x347401),_0x347401();}[_0x46ad54(0x1d1)](){const _0x218739=_0x46ad54;if(this[_0x218739(0x16a)]!==0x0&&this[_0x218739(0x136)][_0x218739(0x204)]!=null&&this[_0x218739(0x136)]['fixedLearnedProgression'][this['_spellLevel']-0x1])return!![];if(this[_0x218739(0x16a)]===0x0)return!!this[_0x218739(0x136)]['maxLearnedCantrips'];return this[_0x218739(0x16a)]>=(this[_0x218739(0x136)][_0x218739(0x1ed)]??Number[_0x218739(0x1ad)])&&this[_0x218739(0x16a)]<=(this[_0x218739(0x136)][_0x218739(0x20c)]??Number[_0x218739(0x141)]);}[_0x46ad54(0x12d)](_0x430904,_0x39531f){const _0x4dbfb3=_0x46ad54,{ixLearned:_0x1f611d,ixPrepared:_0x3c22bb,ixAlwaysPrepared:_0x3c0bff}=this[_0x4dbfb3(0x233)]['_getProps'](_0x39531f),_0x5e961b=this['_parent'][_0x4dbfb3(0x222)](_0x430904);if(_0x5e961b){if(_0x5e961b[_0x4dbfb3(0x1d7)]){this['_state'][_0x1f611d]=!![];if(_0x430904[_0x4dbfb3(0x1cd)]===0x0)this[_0x4dbfb3(0x136)]['cntLearnedCantrips']++;}_0x5e961b[_0x4dbfb3(0x1f1)]&&!_0x5e961b[_0x4dbfb3(0x22d)]&&(this[_0x4dbfb3(0x148)][_0x3c22bb]=!![],this[_0x4dbfb3(0x136)][_0x4dbfb3(0x16f)]++),_0x5e961b[_0x4dbfb3(0x22d)]&&(this[_0x4dbfb3(0x148)][_0x3c0bff]=!![]);}const _0x533739=document[_0x4dbfb3(0x12c)](_0x4dbfb3(0x15b));_0x533739['className']=_0x4dbfb3(0x1c4),_0x533739[_0x4dbfb3(0x1df)]['ix']=_0x39531f;const _0x303388=Parser[_0x4dbfb3(0x1af)](_0x430904[_0x4dbfb3(0x177)]),_0x14c8cf=PageFilterSpells['getTblTimeStr'](_0x430904[_0x4dbfb3(0x157)][0x0]),_0x58de53=Parser['spSchoolAndSubschoolsAbvsShort'](_0x430904[_0x4dbfb3(0x1b7)],_0x430904[_0x4dbfb3(0x18f)]),_0x46195c=_0x430904[_0x4dbfb3(0x199)]?'×':'',_0x278d28=_0x430904[_0x4dbfb3(0x20e)]?.[_0x4dbfb3(0x22e)]?'×':'',_0x83b43c=Parser[_0x4dbfb3(0x1e7)](_0x430904[_0x4dbfb3(0x129)]),_0x12f996=_0x5e961b&&(this[_0x4dbfb3(0x16a)]===0x0||_0x5e961b['isLearned']),_0x441abd=_0x12f996||this[_0x4dbfb3(0x148)][_0x3c0bff];_0x533739[_0x4dbfb3(0x230)]=_0x4dbfb3(0x22b)+_0x430904['name']+_0x4dbfb3(0x224)+_0x14c8cf+_0x4dbfb3(0x153)+_0x430904[_0x4dbfb3(0x1b7)]+_0x4dbfb3(0x186)+Parser[_0x4dbfb3(0x130)](_0x430904[_0x4dbfb3(0x1b7)],_0x430904[_0x4dbfb3(0x18f)])+'\x22\x20'+Parser[_0x4dbfb3(0x1e3)](_0x430904[_0x4dbfb3(0x1b7)])+'>'+_0x58de53+'</div>\x0a\x09\x09\x09<div\x20class=\x22col-0-5\x20text-center\x20bold\x20imp-sp__disp-conc\x22\x20title=\x22Concentration\x22>'+_0x46195c+_0x4dbfb3(0x188)+_0x278d28+_0x4dbfb3(0x1fa)+_0x83b43c+'</div>\x0a\x09\x09\x09<div\x20class=\x22col-1-2\x20text-center\x20'+Parser[_0x4dbfb3(0x208)](_0x430904[_0x4dbfb3(0x177)])+_0x4dbfb3(0x1d2)+Parser[_0x4dbfb3(0x211)](_0x430904[_0x4dbfb3(0x177)])+'\x22\x20'+BrewUtil['sourceJsonToStyle'](_0x430904[_0x4dbfb3(0x177)])+'>'+_0x303388+_0x4dbfb3(0x1f5)+(this[_0x4dbfb3(0x16a)]===0x0?_0x4dbfb3(0x21a):_0x4dbfb3(0x1a9))+'\x20'+(this[_0x4dbfb3(0x148)][_0x1f611d]||_0x5e961b?.[_0x4dbfb3(0x1d7)]?_0x4dbfb3(0x1f3):'')+_0x4dbfb3(0x15c)+(this['_spellLevel']===0x0?_0x4dbfb3(0x1c7):_0x4dbfb3(0x184))+'\x22\x20'+(_0x5e961b?_0x4dbfb3(0x138):'')+'\x20'+(_0x5e961b?_0x4dbfb3(0x1f7):'')+_0x4dbfb3(0x21b)+(this[_0x4dbfb3(0x16a)]!==0x0?_0x4dbfb3(0x1f8)+(this[_0x4dbfb3(0x148)][_0x3c22bb]||this['_state'][_0x3c0bff]||_0x5e961b?.[_0x4dbfb3(0x1f1)]||_0x5e961b?.['isAlwaysPrepared']?'active':'')+'\x22\x20name=\x22btn-prepare\x22\x20title=\x22'+(_0x12f996?'(Previously\x20Added\x20Spell)':_0x4dbfb3(0x1e2))+'\x22\x20'+(_0x441abd?_0x4dbfb3(0x210):'')+'\x20'+(_0x12f996?_0x4dbfb3(0x219):'')+'>Prep.</button>':'')+_0x4dbfb3(0x213);const _0x886da5=_0x533739[_0x4dbfb3(0x18b)](_0x4dbfb3(0x162)),[_0x14803e,_0x804943]=_0x886da5,_0x4f65f7=new ListItem(_0x39531f,_0x533739,_0x430904[_0x4dbfb3(0x13d)],{'source':_0x303388,'level':_0x430904['level'],'time':_0x14c8cf,'school':Parser['spSchoolAbvToFull'](_0x430904[_0x4dbfb3(0x1b7)]),'concentration':_0x46195c,'ritual':_0x278d28,'normalisedTime':_0x430904['_normalisedTime'],'normalisedRange':_0x430904[_0x4dbfb3(0x207)]},{'btnLearn':_0x14803e,'btnPrepare':_0x804943});return _0x886da5['forEach'](_0x40ddba=>{const _0x4792bc=_0x4dbfb3;_0x40ddba['addEventListener'](_0x4792bc(0x147),_0x11632b=>{const _0x268086=_0x4792bc;_0x11632b[_0x268086(0x223)](),_0x11632b[_0x268086(0x1f9)]();const _0x369a7d=_0x40ddba['classList'][_0x268086(0x1d6)](_0x268086(0x1f3));switch(_0x40ddba[_0x268086(0x13d)]){case'btn-learn-cantrip':{if(!_0x369a7d&&!this[_0x268086(0x136)][_0x268086(0x1f4)]())return;_0x40ddba[_0x268086(0x235)][_0x268086(0x144)]('active'),this[_0x268086(0x148)][_0x1f611d]=!this[_0x268086(0x148)][_0x1f611d];if(this[_0x268086(0x148)][_0x1f611d])this[_0x268086(0x136)][_0x268086(0x218)]++;else this[_0x268086(0x136)][_0x268086(0x218)]--;break;}case _0x268086(0x184):{this[_0x268086(0x190)]({'btn':_0x40ddba,'isActive':_0x369a7d,'ixPrepared':_0x3c22bb,'ixLearned':_0x1f611d});break;}case _0x268086(0x1c3):{if(!_0x369a7d&&!this[_0x268086(0x136)][_0x268086(0x21e)]())return;if(!_0x369a7d&&this[_0x268086(0x136)]['isLearnedFixedSpellCasterAtLevel_'](this[_0x268086(0x16a)])&&!this[_0x268086(0x148)][_0x1f611d]){const _0x34b6d5=this[_0x268086(0x190)]({'btn':_0x14803e,'isActive':this[_0x268086(0x148)][_0x1f611d],'ixPrepared':_0x3c22bb,'ixLearned':_0x1f611d});if(!_0x34b6d5)return;}_0x40ddba['classList'][_0x268086(0x144)](_0x268086(0x1f3)),this[_0x268086(0x148)][_0x3c22bb]=!this[_0x268086(0x148)][_0x3c22bb];if(this['_state'][_0x3c22bb])this[_0x268086(0x136)]['cntPrepared']++;else this[_0x268086(0x136)][_0x268086(0x16f)]--;break;}default:throw new Error('Unhandled\x20button\x20name:\x20\x22'+_0x40ddba[_0x268086(0x13d)]+'\x22');}});}),_0x533739['addEventListener']('click',_0x17ec02=>{const _0x51a884=_0x4dbfb3;_0x17ec02[_0x51a884(0x223)](),_0x17ec02[_0x51a884(0x1f9)]();if(this['_parent'][_0x51a884(0x174)])this[_0x51a884(0x136)][_0x51a884(0x174)][_0x51a884(0x189)][_0x51a884(0x235)]['remove']('list-multi-selected');_0x533739[_0x51a884(0x235)]['add'](_0x51a884(0x205)),this['_parent'][_0x51a884(0x1c2)]=_0x39531f,this[_0x51a884(0x136)][_0x51a884(0x174)]=_0x4f65f7;}),_0x4f65f7;}['_handleListItemBtnLearnClick_do_doLearn']({btn:_0x580b0f,isActive:_0x18d5cd,ixPrepared:_0x483962,ixLearned:_0x247557}){const _0x5af6b3=_0x46ad54;_0x18d5cd&&this[_0x5af6b3(0x136)][_0x5af6b3(0x160)]&&this[_0x5af6b3(0x148)][_0x483962]&&(this[_0x5af6b3(0x148)][_0x483962]=![],this[_0x5af6b3(0x136)][_0x5af6b3(0x16f)]--),_0x580b0f[_0x5af6b3(0x235)][_0x5af6b3(0x144)](_0x5af6b3(0x1f3)),this[_0x5af6b3(0x148)][_0x247557]=!this[_0x5af6b3(0x148)][_0x247557];}[_0x46ad54(0x190)]({btn:_0x3cc024,isActive:_0x5eddd2,ixPrepared:_0x5e6829,ixLearned:_0x3aacbb}){const _0x5e4ded=_0x46ad54;if(!_0x5eddd2&&!this['_parent'][_0x5e4ded(0x175)](this[_0x5e4ded(0x16a)]))return![];return this[_0x5e4ded(0x154)]({'btn':_0x3cc024,'isActive':_0x5eddd2,'ixPrepared':_0x5e6829,'ixLearned':_0x3aacbb}),this[_0x5e4ded(0x136)]['pulseFixedLearned']=!this[_0x5e4ded(0x136)][_0x5e4ded(0x12e)],!![];}[_0x46ad54(0x1b4)](_0x5a7c1c){const _0x7f1836=_0x46ad54;this[_0x7f1836(0x12f)][_0x7f1836(0x1b1)](_0xecd9d5=>{const _0x5b9aad=_0x7f1836,_0x32a6df=this[_0x5b9aad(0x197)][_0xecd9d5['ix']];if(!this[_0x5b9aad(0x136)][_0x5b9aad(0x12a)](_0x32a6df)&&!this[_0x5b9aad(0x136)][_0x5b9aad(0x22c)](_0x32a6df)&&!this[_0x5b9aad(0x136)][_0x5b9aad(0x1f0)](_0x32a6df))return![];const {ixLearned:_0x4c0f2e,ixPrepared:_0x33e836,ixAlwaysPrepared:_0x2d5a62}=this[_0x5b9aad(0x233)][_0x5b9aad(0x156)](_0xecd9d5['ix']);if(this['_state'][_0x4c0f2e]||this['_state'][_0x33e836]||this[_0x5b9aad(0x148)][_0x2d5a62])return!![];return this[_0x5b9aad(0x136)]['pageFilter'][_0x5b9aad(0x1ac)](_0x5a7c1c,_0x32a6df);});}['handleSearch'](_0x5905fd){const _0x2d48f4=_0x46ad54;this['_list'][_0x2d48f4(0x1fc)](_0x5905fd);}['handleAlwaysPreparedSpells_'](){const _0x215a34=_0x46ad54;if(!this[_0x215a34(0x12f)])return;this[_0x215a34(0x12f)][_0x215a34(0x1a5)][_0x215a34(0x15d)](_0xb00e92=>{const _0x56c9ce=_0x215a34,_0x341a34=this[_0x56c9ce(0x197)][_0xb00e92['ix']],_0x4ff874=this[_0x56c9ce(0x136)][_0x56c9ce(0x222)](_0x341a34);if(_0x4ff874?.[_0x56c9ce(0x1d7)]||_0x4ff874?.['isPrepared'])return;const {ixPrepared:_0x1f730d,ixAlwaysPrepared:_0x55e094}=this['constructor']['_getProps'](_0xb00e92['ix']),_0x5f5c67=_0x4ff874?.['isAlwaysPrepared']||this[_0x56c9ce(0x136)][_0x56c9ce(0x22a)](_0x341a34);_0x5f5c67?(this[_0x56c9ce(0x148)][_0x1f730d]&&(this['_state'][_0x1f730d]=![],this[_0x56c9ce(0x136)]['cntPrepared']--),!this['_state'][_0x55e094]&&_0xb00e92[_0x56c9ce(0x206)][_0x56c9ce(0x179)]&&(_0xb00e92[_0x56c9ce(0x206)][_0x56c9ce(0x179)][_0x56c9ce(0x235)][_0x56c9ce(0x1b8)]('active'),_0xb00e92[_0x56c9ce(0x206)][_0x56c9ce(0x179)][_0x56c9ce(0x210)]=!![])):this[_0x56c9ce(0x148)][_0x55e094]&&_0xb00e92[_0x56c9ce(0x206)][_0x56c9ce(0x179)]&&(_0xb00e92[_0x56c9ce(0x206)]['btnPrepare'][_0x56c9ce(0x235)]['remove'](_0x56c9ce(0x1f3)),_0xb00e92['data'][_0x56c9ce(0x179)][_0x56c9ce(0x210)]=![]),this[_0x56c9ce(0x148)][_0x55e094]=_0x5f5c67;});}static[_0x46ad54(0x156)](_0x5b21f4){const _0x5c890c=_0x46ad54;return{'ixLearned':_0x5c890c(0x1aa)+_0x5b21f4,'ixPrepared':_0x5c890c(0x16c)+_0x5b21f4,'ixAlwaysPrepared':'ix_always_prepared_'+_0x5b21f4};}[_0x46ad54(0x1cf)](){const _0x5b3802=_0x46ad54;let _0x1462f9=0x0,_0x4bccb2=0x0;const _0xeba85d={},_0x18b66d=this[_0x5b3802(0x197)]['length'];for(let _0x4341fe=0x0;_0x4341fe<_0x18b66d;++_0x4341fe){const _0x5afe71=this[_0x5b3802(0x197)][_0x4341fe];if(!this[_0x5b3802(0x192)](_0x5afe71))continue;const _0x289895=this[_0x5b3802(0x136)][_0x5b3802(0x222)](_0x5afe71);if(_0x289895)continue;const {ixLearned:_0x13c82b,ixPrepared:_0x282d13,ixAlwaysPrepared:_0x2e1b25}=this[_0x5b3802(0x233)][_0x5b3802(0x156)](_0x4341fe);this['_state'][_0x13c82b]&&(_0xeba85d[_0x13c82b]=![],_0x1462f9++),this[_0x5b3802(0x148)][_0x282d13]&&(_0xeba85d[_0x282d13]=![],_0x4bccb2++),this[_0x5b3802(0x148)][_0x2e1b25]&&(_0xeba85d[_0x2e1b25]=![]);}this['_proxyAssignSimple'](_0x5b3802(0x170),_0xeba85d),_0x1462f9&&(this['_spellLevel']===0x0?(this[_0x5b3802(0x136)][_0x5b3802(0x218)]-=_0x1462f9,this[_0x5b3802(0x201)][0x0][_0x5b3802(0x18b)](_0x5b3802(0x231))[_0x5b3802(0x15d)](_0x56a57b=>{const _0x5c5cce=_0x5b3802;if(_0x56a57b[_0x5c5cce(0x1df)]?.['plut-is-existing-spell'])return;_0x56a57b[_0x5c5cce(0x235)]['remove'](_0x5c5cce(0x1f3));})):(this[_0x5b3802(0x136)][_0x5b3802(0x22f)]-=_0x1462f9,this['_$wrpRows'][0x0][_0x5b3802(0x18b)]('.manc-sp__btn-learn-spell')[_0x5b3802(0x15d)](_0x5ec486=>{const _0x994b1f=_0x5b3802;if(_0x5ec486[_0x994b1f(0x1df)]?.[_0x994b1f(0x1ab)])return;_0x5ec486[_0x994b1f(0x235)][_0x994b1f(0x216)]('active');}))),_0x4bccb2&&(this['_parent']['cntPrepared']-=_0x4bccb2,this[_0x5b3802(0x201)][0x0][_0x5b3802(0x18b)](_0x5b3802(0x14f))['forEach'](_0x34e88e=>{const _0x4aaef8=_0x5b3802;if(_0x34e88e[_0x4aaef8(0x1df)]?.['plut-is-existing-spell'])return;_0x34e88e[_0x4aaef8(0x235)]['remove']('active');}));}['getSpellsKnown'](){const _0x165f36=_0x46ad54;if(!this[_0x165f36(0x1d1)]()||this[_0x165f36(0x16a)]===0x0)return[];const _0x54d796=[],_0x402d80=this['_spellDatas'][_0x165f36(0x1bf)];for(let _0x2fd466=0x0;_0x2fd466<_0x402d80;++_0x2fd466){const _0x39e878=this['_spellDatas'][_0x2fd466];if(!this['_isAvailableSpell'](_0x39e878))continue;if(!this[_0x165f36(0x136)][_0x165f36(0x12a)](_0x39e878)&&!this[_0x165f36(0x136)]['isAvailableSubclassSpell_'](_0x39e878)&&!this[_0x165f36(0x136)][_0x165f36(0x1f0)](_0x39e878))continue;const {ixLearned:_0x575f07}=this[_0x165f36(0x233)][_0x165f36(0x156)](_0x2fd466);if(!this[_0x165f36(0x148)][_0x575f07])continue;_0x54d796[_0x165f36(0x191)]({'ix':_0x2fd466,'spell':this['_spellDatas'][_0x2fd466]});}return _0x54d796;}[_0x46ad54(0x1c9)](_0x24b81b){const _0x3e4c8d=_0x46ad54;if(!this[_0x3e4c8d(0x1d1)]())return[];const _0x34e6ea=[],_0x53f732=this[_0x3e4c8d(0x136)][_0x3e4c8d(0x1e6)](this[_0x3e4c8d(0x16a)]),_0x599af7=this[_0x3e4c8d(0x197)][_0x3e4c8d(0x1bf)];for(let _0x1f4ed4=0x0;_0x1f4ed4<_0x599af7;++_0x1f4ed4){const _0x4c5d4f=this[_0x3e4c8d(0x197)][_0x1f4ed4];if(!this[_0x3e4c8d(0x192)](_0x4c5d4f))continue;if(!this[_0x3e4c8d(0x136)][_0x3e4c8d(0x12a)](_0x4c5d4f)&&!this[_0x3e4c8d(0x136)]['isAvailableSubclassSpell_'](_0x4c5d4f)&&!this['_parent'][_0x3e4c8d(0x1f0)](_0x4c5d4f))continue;const {ixLearned:_0x3b9422,ixPrepared:_0x1c5f4d,ixAlwaysPrepared:_0x45ed53}=this[_0x3e4c8d(0x233)][_0x3e4c8d(0x156)](_0x1f4ed4);if(this[_0x3e4c8d(0x148)][_0x45ed53])continue;const _0xd45039=this[_0x3e4c8d(0x148)][_0x3b9422],_0x943ba8=this[_0x3e4c8d(0x148)][_0x1c5f4d]||this[_0x3e4c8d(0x16a)]===0x0&&_0xd45039;if(this[_0x3e4c8d(0x16a)]===0x0&&!_0xd45039)continue;let _0x2bbf0c=![];const _0x1c2b55=this[_0x3e4c8d(0x136)][_0x3e4c8d(0x222)](_0x4c5d4f);if(_0x1c2b55){if(this[_0x3e4c8d(0x16a)]===0x0)continue;if(_0x53f732)continue;_0x2bbf0c=_0x1c2b55['isPrepared']!==_0x943ba8;if(!_0x2bbf0c)continue;}if(!_0xd45039&&_0x53f732)continue;if(this[_0x3e4c8d(0x136)][_0x3e4c8d(0x160)]&&!_0xd45039&&!_0x943ba8&&!this[_0x3e4c8d(0x136)]['pageFilter']['toDisplay'](_0x24b81b,_0x4c5d4f))continue;const _0x54e4ca=this['_getFormSubData_getSpellImportOpts']({'isLearned':_0xd45039});_0x34e6ea['push'](new Charactermancer_Spell_SpellMeta({..._0x54e4ca,'ix':_0x1f4ed4,'spell':this[_0x3e4c8d(0x197)][_0x1f4ed4],'isPrepared':_0x943ba8,'isLearned':_0xd45039,'isUpdateOnly':_0x2bbf0c,'existingItemId':_0x1c2b55?.[_0x3e4c8d(0x19c)]?.['id']}));}return _0x34e6ea;}[_0x46ad54(0x220)]({isLearned:_0x5aee75}){const _0x27d39b=_0x46ad54;let _0x5db298=_0x27d39b(0x182),_0x5cbf26=null,_0x3e037b=null,_0x5470d8=null;if(this[_0x27d39b(0x136)]['casterProgression']===_0x27d39b(0x1b9)){if(_0x5aee75){if(this['_spellLevel']>UtilActors[_0x27d39b(0x202)])_0x5db298=_0x27d39b(0x14b),_0x5cbf26=0x1,_0x3e037b=0x1,_0x5470d8='lr';else _0x5db298='pact';}}else _0x5db298=this[_0x27d39b(0x136)][_0x27d39b(0x160)]?_0x27d39b(0x1ae):_0x27d39b(0x182);return{'preparationMode':_0x5db298,'usesCurrent':_0x5cbf26,'usesMax':_0x3e037b,'usesPer':_0x5470d8};}}export{Charactermancer_Spell_Util,Charactermancer_Spell};
+			${$wrpMiniPills}
+			<div class="flex-v-stretch input-group input-group--bottom mb-1 no-shrink">
+				<button class="btn-5et w-100" disabled></button>
+			</div>
+		`;
+
+		return this._pageFilter.pInitFilterBox({
+			$iptSearch: $iptSearch,
+			$btnReset: $btnReset,
+			$btnOpen: $btnFilter,
+			$btnToggleSummaryHidden: $btnToggleFilterSummary,
+			$wrpMiniPills: $wrpMiniPills,
+			namespace: `Charactermancer_Spell_Modal.filter`,
+		}).then(filterBoxSpells => {
+			this._filterBoxSpells = filterBoxSpells;
+
+			this._spellDatas.forEach(it => this._pageFilter.mutateAndAddToFilters(it));
+			this._filterBoxSpells.render();
+
+			UiUtil.bindTypingEnd({
+				$ipt: $iptSearch,
+				fnKeyup: () => {
+					const val = List.getCleanSearchTerm($iptSearch.val());
+					if (this._lastSearchTermSpells === val) return;
+					this._lastSearchTermSpells = val;
+
+					this.handleSearch(val);
+				},
+			});
+
+			this._filterBoxSpells.on(FilterBox.EVNT_VALCHANGE, () => {
+				this.handleFilterChange(this._filterBoxSpells.getValues());
+			});
+		});
+	}
+}
+
+class Charactermancer_Spell_Level extends BaseComponent {
+	/**
+	 * opts
+	 * opts.spellDatas
+	 * opts.spellLevel
+	 * opts.parent
+	 */
+	constructor (opts) {
+		super();
+		opts = opts || {};
+
+		this._spellDatas = opts.spellDatas;
+		this._spellLevel = opts.spellLevel;
+		this._parent = opts.parent;
+
+		this._$wrpRows = null;
+		this._$dispNoRows = null;
+		this._list = null;
+	}
+
+	_isAvailableSpell (sp) {
+		return sp.level === this._spellLevel;
+	}
+
+	render ($wrp) {
+		this._$wrpRows = $$`<div class="flex-col manc__list mt-1 mb-3"></div>`;
+
+		this._$dispNoRows = $(`<div class="flex-vh-center italic ve-muted ve-small mt-1">No matching spells</div>`).hideVe();
+		const doUpdateDispNoRows = () => {
+			this._$dispNoRows.toggleVe(!this._list.visibleItems.length && $btnToggle.text() !== "[+]");
+		};
+
+		const $wrpBtnsSort = $(`<div class="flex-v-stretch input-group no-shrink">
+			<button class="btn-5et btn-xxs col-3-2 pr-1 sort" data-sort="name">Name</button>
+			<button class="btn-5et btn-xxs col-1-2 px-1 sort" data-sort="time">Time</button>
+			<button class="btn-5et btn-xxs col-1-2 px-1 sort" data-sort="school">School</button>
+			<button class="btn-5et btn-xxs col-0-5 px-1 sort" data-sort="concentration" title="Concentration">C.</button>
+			<button class="btn-5et btn-xxs col-0-5 px-1 sort" data-sort="ritual" title="Ritual">R.</button>
+			<button class="btn-5et btn-xxs col-2-6 px-1 sort" data-sort="range">Range</button>
+			<button class="btn-5et btn-xxs col-1-2 px-1 sort" data-sort="source">Source</button>
+			<button class="btn-5et btn-xxs col-1-6 pl-1" disabled>&nbsp;</button>
+		</div>`);
+
+		this._list = new List({
+			$wrpList: this._$wrpRows,
+			fnSort: PageFilterSpells.sortSpells,
+			fnSearch: (li, searchTerm) => {
+				const {ixLearned, ixPrepared, ixAlwaysPrepared, ixAlwaysKnownSpell} = this.constructor._getProps(li.ix);
+
+				// Force-show any "active" rows
+				if ([ixLearned, ixPrepared, ixAlwaysPrepared, ixAlwaysKnownSpell].some(k => this._state[k])) return true;
+
+				return li.searchText.includes(searchTerm);
+			},
+		});
+		SortUtil.initBtnSortHandlers($wrpBtnsSort, this._list);
+
+		this._list.on("updated", () => doUpdateDispNoRows());
+
+		const $btnToggle = $(`<div class="py-1 clickable ve-muted">[\u2012]</div>`)
+			.click(() => {
+				$btnToggle.text($btnToggle.text() === "[+]" ? "[\u2012]" : "[+]");
+				this._$wrpRows.toggleVe();
+				$wrpBtnsSort.toggleVe();
+				doUpdateDispNoRows();
+			});
+
+		const $wrpInner = $$`<div class="flex-col w-100">
+			<div class="split-v-center">
+				<div class="bold">${Parser.spLevelToFullLevelText(this._spellLevel)}</div>
+				${$btnToggle}
+			</div>
+			${$wrpBtnsSort}
+			${this._$dispNoRows}
+			${this._$wrpRows}
+		</div>`.appendTo($wrp);
+
+		const len = this._spellDatas.length;
+		for (let i = 0; i < len; ++i) {
+			const sp = this._spellDatas[i];
+
+			if (!this._isAvailableSpell(sp)) continue;
+
+			const listItem = this._getListItem(sp, i);
+			if (!listItem) continue;
+			this._list.addItem(listItem);
+		}
+
+		this._list.init();
+
+		const hkSpellLevel = () => {
+			const isWithinRange = this._isWithinLevelRange();
+
+			$wrpInner.toggleVe(isWithinRange);
+			if (!isWithinRange) this._resetLevelSpells();
+		};
+		this._parent.addHookMaxLearnedCantrips(hkSpellLevel);
+		this._parent.addHookSpellLevelLow(hkSpellLevel);
+		this._parent.addHookSpellLevelHigh(hkSpellLevel);
+		this._parent.addHookFixedLearnedProgression(hkSpellLevel);
+		hkSpellLevel();
+
+		if (this._spellLevel === 0) this._render_bindCantripHooks();
+		else this._render_bindLevelledSpellHooks();
+	}
+
+	_render_bindCantripHooks () {
+		const hkIsMaxLearnedCantrips = () => {
+			this._$wrpRows.toggleClass("manc-sp__is-max-learned-cantrips", !this._parent.canLearnMoreCantrips_());
+			this._$wrpRows.toggleClass("manc-sp__is-max-learned-cantrips--is-over-limit", this._parent.isOverLearnCantripsLimit_());
+		};
+		this._parent.addHookIsMaxLearnedCantrips(hkIsMaxLearnedCantrips);
+		hkIsMaxLearnedCantrips();
+	}
+
+	_render_bindLevelledSpellHooks () {
+		const hkIsPrepared = () => this._$wrpRows.toggleClass("manc-sp__is-prepared-caster", this._parent.isPreparedCaster);
+		this._parent.addHookIsPreparedCaster(hkIsPrepared);
+		hkIsPrepared();
+
+		const hkIsMaxLearnedSpells = () => {
+			const isLearnCaster = this._parent.isLearnedFixedSpellCasterAtLevel_(this._spellLevel);
+
+			let isMaxLearnedSpells = true;
+			let isOverMaxLearnedSpells = true;
+
+			if (isLearnCaster) {
+				if (this._parent.canLearnMoreFixedSpellsOfLevel_(this._spellLevel)) isMaxLearnedSpells = false;
+				if (!this._parent.isOverLearnFixedSpellsLimitOfLevel_(this._spellLevel)) isOverMaxLearnedSpells = false;
+			}
+
+			this._$wrpRows.toggleClass("manc-sp__is-learn-caster", isLearnCaster);
+			this._$wrpRows.toggleClass("manc-sp__is-max-learned-spells", isLearnCaster && isMaxLearnedSpells);
+			this._$wrpRows.toggleClass("manc-sp__is-max-learned-spells--is-over-limit", isLearnCaster && isOverMaxLearnedSpells);
+		};
+		this._parent.addHookIsMaxLearnedSpells(hkIsMaxLearnedSpells);
+		hkIsMaxLearnedSpells();
+
+		const hkIsMaxPrepared = () => {
+			this._$wrpRows.toggleClass("manc-sp__is-max-prepared-spells", !this._parent.canPrepareMore_());
+			this._$wrpRows.toggleClass("manc-sp__is-max-prepared-spells--is-over-limit", this._parent.isOverPrepareLimit_());
+		};
+		this._parent.addHookIsMaxPrepared(hkIsMaxPrepared);
+		hkIsMaxPrepared();
+	}
+
+	_isWithinLevelRange () {
+		// If we have a fixed number of spells available at this level, e.g. Warlock Mystic Arcanum, it's within range
+		if (this._spellLevel !== 0 && this._parent.fixedLearnedProgression != null && this._parent.fixedLearnedProgression[this._spellLevel - 1]) return true;
+
+		if (this._spellLevel === 0) {
+			// If it's the cantrip level, hide it if the parent doesn't have cantrips
+			return !!this._parent.maxLearnedCantrips;
+		}
+
+		return this._spellLevel >= (this._parent.spellLevelLow ?? Number.MAX_SAFE_INTEGER)
+			&& this._spellLevel <= (this._parent.spellLevelHigh ?? Number.MIN_SAFE_INTEGER);
+	}
+
+	_getListItem (spell, spI) {
+		const {ixLearned, ixPrepared, ixAlwaysPrepared, ixAlwaysKnownSpell} = this.constructor._getProps(spI);
+
+		const existingSpellMeta = this._parent.getExistingSpellMeta_(spell);
+		if (existingSpellMeta) {
+			if (existingSpellMeta.isLearned) {
+				this._state[ixLearned] = true;
+				if (spell.level === 0) this._parent.cntLearnedCantrips++;
+			}
+
+			if (existingSpellMeta.isPrepared && !existingSpellMeta.isAlwaysPrepared) {
+				this._state[ixPrepared] = true;
+				this._parent.cntPrepared++;
+			}
+
+			if (existingSpellMeta.isAlwaysPrepared) {
+				this._state[ixAlwaysPrepared] = true;
+			}
+		}
+
+		const eleRow = document.createElement("div");
+		eleRow.className = `flex-v-center manc__list-row clickable veapp__list-row veapp__list-row-hoverable`;
+		eleRow.dataset.ix = spI;
+
+		const source = Parser.sourceJsonToAbv(spell.source);
+		const time = PageFilterSpells.getTblTimeStr(spell.time[0]);
+		const school = Parser.spSchoolAndSubschoolsAbvsShort(spell.school, spell.subschools);
+		const concentration = spell._isConc ? "×" : "";
+		const ritual = spell.meta?.ritual ? "×" : "";
+		const range = Parser.spRangeToFull(spell.range);
+
+		const isLearnDisabled = existingSpellMeta || this._state[ixAlwaysKnownSpell];
+
+		const isPrepareDisabledExistingSpell = existingSpellMeta
+			&& (this._spellLevel === 0 || existingSpellMeta.isLearned);
+		const isPrepareDisabled = isPrepareDisabledExistingSpell || this._state[ixAlwaysPrepared];
+
+		eleRow.innerHTML = `
+			<div class="col-3-2 pl-0">${spell.name}</div>
+			<div class="col-1-2 text-center">${time}</div>
+			<div class="col-1-2 sp__school-${spell.school} text-center" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}" ${Parser.spSchoolAbvToStyle(spell.school)}>${school}</div>
+			<div class="col-0-5 text-center bold imp-sp__disp-conc" title="Concentration">${concentration}</div>
+			<div class="col-0-5 text-center bold imp-sp__disp-ritual" title="Ritual">${ritual}</div>
+			<div class="col-2-6 text-right">${range}</div>
+			<div class="col-1-2 text-center ${Parser.sourceJsonToColor(spell.source)}" title="${Parser.sourceJsonToFull(spell.source)}" ${BrewUtil.sourceJsonToStyle(spell.source)}>${source}</div>
+
+			<div class="flex-vh-center col-1-6 pr-0">
+				<button
+					class="btn manc__list-row-button ${this._spellLevel === 0 ? "manc-sp__btn-learn-cantrip" : "manc-sp__btn-learn-spell"} ${this._state[ixLearned] || existingSpellMeta?.isLearned || this._state[ixAlwaysKnownSpell] ? "active" : ""}"
+					name="${this._spellLevel === 0 ? "btn-learn-cantrip" : "btn-learn-spell"}"
+					${isLearnDisabled ? `disabled` : ""}
+					${existingSpellMeta ? `data-plut-is-existing-spell="true"` : ""}
+					${existingSpellMeta ? `title="(Previously Learned Spell)"` : ""}
+				>Learn</button>
+
+				${this._spellLevel !== 0 ? `<button
+					class="btn manc__list-row-button manc-sp__btn-prepare ${this._state[ixPrepared] || this._state[ixAlwaysPrepared] || existingSpellMeta?.isPrepared || existingSpellMeta?.isAlwaysPrepared ? "active" : ""}"
+					name="btn-prepare"
+					title="${isPrepareDisabledExistingSpell ? `(Previously Added Spell)` : `Prepare`}"
+					${isPrepareDisabled ? `disabled` : ""}
+					${isPrepareDisabledExistingSpell ? `data-plut-is-existing-spell="true"` : ""}
+				>Prep.</button>` : ""}
+			</div>
+		`;
+
+		const elesBtns = eleRow.querySelectorAll("button");
+		const [btnLearn, btnPrepare] = elesBtns;
+
+		const listItem = new ListItem(
+			spI,
+			eleRow,
+			spell.name,
+			{
+				source,
+				level: spell.level,
+				time,
+				school: Parser.spSchoolAbvToFull(spell.school),
+				concentration,
+				ritual,
+				normalisedTime: spell._normalisedTime,
+				normalisedRange: spell._normalisedRange,
+			},
+			{
+				btnLearn,
+				btnPrepare,
+			},
+		);
+
+		elesBtns.forEach(btn => {
+			btn.addEventListener("click", evt => {
+				evt.stopPropagation();
+				evt.preventDefault();
+
+				const isActive = btn.classList.contains("active");
+
+				switch (btn.name) {
+					case "btn-learn-cantrip": {
+						if (!isActive && !this._parent.canLearnMoreCantrips_()) return;
+
+						btn.classList.toggle("active");
+						this._state[ixLearned] = !this._state[ixLearned];
+						if (this._state[ixLearned]) this._parent.cntLearnedCantrips++;
+						else this._parent.cntLearnedCantrips--;
+
+						break;
+					}
+
+					case "btn-learn-spell": {
+						this._handleListItemBtnLearnClick_doFixed({btnLearn, btnPrepare, isActive, ixPrepared, ixLearned});
+						break;
+					}
+
+					case "btn-prepare": {
+						if (!isActive && !this._parent.canPrepareMore_()) return;
+
+						// If we are trying to prepare a spell which we have not learned (and we're a learned caster), try to
+						//   learn the spell first. If we can't, cancel the prepare attempt.
+						if (!isActive && this._parent.isLearnedFixedSpellCasterAtLevel_(this._spellLevel) && !this._state[ixLearned]) {
+							const isLearned = this._handleListItemBtnLearnClick_doFixed({btnLearn, btnPrepare, isActive: this._state[ixLearned], ixPrepared, ixLearned});
+							if (!isLearned) return;
+						}
+
+						btn.classList.toggle("active");
+						this._state[ixPrepared] = !this._state[ixPrepared];
+						if (this._state[ixPrepared]) this._parent.cntPrepared++;
+						else this._parent.cntPrepared--;
+
+						break;
+					}
+
+					default: throw new Error(`Unhandled button name: "${btn.name}"`);
+				}
+			});
+		});
+
+		eleRow.addEventListener("click", evt => {
+			evt.stopPropagation();
+			evt.preventDefault();
+
+			if (this._parent.cacheSelectedListItem) this._parent.cacheSelectedListItem.ele.classList.remove("list-multi-selected");
+
+			eleRow.classList.add("list-multi-selected");
+			this._parent.ixViewedSpell = spI;
+			this._parent.cacheSelectedListItem = listItem;
+		});
+
+		return listItem;
+	}
+
+	_handleListItemBtnLearnClick_do_doLearn ({btnLearn, btnPrepare, isActive, ixPrepared, ixLearned}) {
+		// If we are un-learning a spell we have prepared, un-prepare the spell
+		if (isActive && this._parent.isPreparedCaster && this._state[ixPrepared]) {
+			this._state[ixPrepared] = false;
+			btnPrepare.classList.remove("active");
+			this._parent.cntPrepared--;
+		}
+
+		btnLearn.classList.toggle("active");
+		this._state[ixLearned] = !this._state[ixLearned];
+	}
+
+	_handleListItemBtnLearnClick_doFixed ({btnLearn, btnPrepare, isActive, ixPrepared, ixLearned}) {
+		if (!isActive && !this._parent.canLearnMoreFixedSpellsOfLevel_(this._spellLevel)) return false;
+
+		this._handleListItemBtnLearnClick_do_doLearn({btnLearn, btnPrepare, isActive, ixPrepared, ixLearned});
+		this._parent.pulseFixedLearned = !this._parent.pulseFixedLearned;
+
+		return true;
+	}
+
+	handleFilterChange (f) {
+		if (!this._list) return;
+
+		this._list.filter(it => {
+			const sp = this._spellDatas[it.ix];
+
+			if (!this._parent.isAvailableClassSpell_(sp) && !this._parent.isAvailableSubclassSpell_(sp) && !this._parent.isAvailableExpandedSpell_(sp)) return false;
+
+			const {ixLearned, ixPrepared, ixAlwaysPrepared, ixAlwaysKnownSpell} = this.constructor._getProps(it.ix);
+
+			// Force-show any "active" rows
+			if ([ixLearned, ixPrepared, ixAlwaysPrepared, ixAlwaysKnownSpell].some(k => this._state[k])) return true;
+
+			return this._parent.pageFilter.toDisplay(f, sp);
+		});
+	}
+
+	handleSearch (searchTerm) {
+		this._list.search(searchTerm);
+	}
+
+	handleAlwaysPreparedSpells_ () {
+		return this._handleAlwaysStateSpells_(
+			{
+				propIx: "ixPrepared",
+				propIxAlways: "ixAlwaysPrepared",
+				propBtn: "btnPrepare",
+				propExistingSpellMetaAlways: "isAlwaysPrepared",
+				fnParentCheckAlways: this._parent.isAlwaysPreparedSpell_.bind(this._parent),
+			},
+		);
+	}
+
+	handleAlwaysKnownSpells_ () {
+		return this._handleAlwaysStateSpells_(
+			{
+				propIx: "ixLearned",
+				propIxAlways: "ixAlwaysKnownSpell",
+				propBtn: "btnLearn",
+				fnParentCheckAlways: this._parent.isAlwaysKnownSpell_.bind(this._parent),
+			},
+		);
+	}
+
+	_handleAlwaysStateSpells_ (
+		{
+			propIx,
+			propIxAlways,
+			propBtn,
+			propExistingSpellMetaAlways,
+			fnParentCheckAlways,
+			fnFilterSpell,
+		},
+	) {
+		if (!this._list) return;
+
+		this._list.items.forEach(it => {
+			const sp = this._spellDatas[it.ix];
+
+			if (fnFilterSpell && !fnFilterSpell(sp)) return;
+
+			const existingSpellMeta = this._parent.getExistingSpellMeta_(sp);
+			if (existingSpellMeta?.isLearned || existingSpellMeta?.isPrepared) return;
+
+			const allProps = this.constructor._getProps(it.ix);
+			const propIxProp = allProps[propIx];
+			const propIxAlwaysProp = allProps[propIxAlways];
+
+			const isAlways = (propExistingSpellMetaAlways && existingSpellMeta?.[propExistingSpellMetaAlways])
+				|| fnParentCheckAlways(sp);
+
+			// If it's always prepared/learned, don't count it as prepared/learned; instead, disable the button.
+			if (isAlways) {
+				// Consider the spell un-prepared/un-learned, as it does not count towards our total prepared/learned spells
+				if (this._state[propIxProp]) {
+					this._state[allProps[propIx]] = false;
+					this._parent.cntPrepared--;
+				}
+
+				if (!this._state[propIxAlwaysProp] && it.data[propBtn]) {
+					it.data[propBtn].classList.add("active");
+					it.data[propBtn].disabled = true;
+				}
+			} else {
+				if (this._state[propIxAlwaysProp] && it.data[propBtn]) {
+					it.data[propBtn].classList.remove("active");
+					it.data[propBtn].disabled = false;
+				}
+			}
+
+			this._state[propIxAlwaysProp] = isAlways;
+		});
+	}
+
+	static _getProps (ix) {
+		return {
+			ixLearned: `ix_learned_${ix}`,
+			ixPrepared: `ix_prepared_${ix}`,
+			ixAlwaysPrepared: `ix_always_prepared_${ix}`,
+			ixAlwaysKnownSpell: `ix_always_known_spell_${ix}`,
+		};
+	}
+
+	/** Clean up any lingering state, to ensure we don't learn/prepare spells that are outside our level range. */
+	_resetLevelSpells () {
+		let numDeLearned = 0;
+		let numDePrepared = 0;
+		const nxtState = {};
+
+		const len = this._spellDatas.length;
+		for (let i = 0; i < len; ++i) {
+			const sp = this._spellDatas[i];
+
+			if (!this._isAvailableSpell(sp)) continue;
+
+			const existingSpellMeta = this._parent.getExistingSpellMeta_(sp);
+			if (existingSpellMeta) continue;
+
+			const {ixLearned, ixPrepared, ixAlwaysPrepared, ixAlwaysKnownSpell} = this.constructor._getProps(i);
+
+			if (this._state[ixLearned]) {
+				nxtState[ixLearned] = false;
+				numDeLearned++;
+			}
+
+			if (this._state[ixPrepared]) {
+				nxtState[ixPrepared] = false;
+				numDePrepared++;
+			}
+
+			if (this._state[ixAlwaysPrepared]) nxtState[ixAlwaysPrepared] = false;
+
+			if (this._state[ixAlwaysKnownSpell]) nxtState[ixAlwaysKnownSpell] = false;
+		}
+
+		this._proxyAssignSimple("state", nxtState);
+
+		if (numDeLearned) {
+			if (this._spellLevel === 0) {
+				this._parent.cntLearnedCantrips -= numDeLearned;
+				this._$wrpRows[0].querySelectorAll(`.manc-sp__btn-learn-cantrip`).forEach(it => {
+					if (it.dataset?.["plut-is-existing-spell"]) return;
+					it.classList.remove("active");
+				});
+			} else {
+				this._parent.cntLearnedSpells -= numDeLearned;
+				this._$wrpRows[0].querySelectorAll(`.manc-sp__btn-learn-spell`).forEach(it => {
+					if (it.dataset?.["plut-is-existing-spell"]) return;
+					it.classList.remove("active");
+				});
+			}
+		}
+
+		if (numDePrepared) {
+			this._parent.cntPrepared -= numDePrepared;
+			this._$wrpRows[0].querySelectorAll(`.manc-sp__btn-prepare`).forEach(it => {
+				if (it.dataset?.["plut-is-existing-spell"]) return;
+				it.classList.remove("active");
+			});
+		}
+	}
+
+	getSpellsKnown () { // TODO this is a performance hog; find a way to speed it up (use state rather than looping every spell?)
+		if (!this._isWithinLevelRange() || this._spellLevel === 0) return [];
+
+		const out = [];
+
+		const len = this._spellDatas.length;
+		for (let i = 0; i < len; ++i) {
+			const sp = this._spellDatas[i];
+
+			if (!this._isAvailableSpell(sp)) continue;
+			if (!this._parent.isAvailableClassSpell_(sp) && !this._parent.isAvailableSubclassSpell_(sp) && !this._parent.isAvailableExpandedSpell_(sp)) continue;
+
+			const {ixLearned} = this.constructor._getProps(i);
+
+			if (!this._state[ixLearned]) continue;
+
+			out.push({
+				ix: i,
+				spell: this._spellDatas[i],
+			});
+		}
+
+		return out;
+	}
+
+	getFormSubData (filterValues) {
+		if (!this._isWithinLevelRange()) return [];
+
+		const out = [];
+
+		const isLearnedAtLevel = this._parent.isLearnedFixedSpellCasterAtLevel_(this._spellLevel);
+
+		const len = this._spellDatas.length;
+		for (let i = 0; i < len; ++i) {
+			const sp = this._spellDatas[i];
+
+			if (!this._isAvailableSpell(sp)) continue;
+			if (!this._parent.isAvailableClassSpell_(sp) && !this._parent.isAvailableSubclassSpell_(sp) && !this._parent.isAvailableExpandedSpell_(sp)) continue;
+
+			const {ixLearned, ixPrepared, ixAlwaysPrepared, ixAlwaysKnownSpell} = this.constructor._getProps(i);
+
+			// If the spell is "always prepared" or an "always learned cantrip," ignore it,
+			//   as a separate additional spell pass (i.e. `Charactermancer_FeatureOptionsSelect.pDoApplyAdditionalSpellsFormDataToActor`)
+			//   will handle it.
+			if (this._state[ixAlwaysPrepared] || this._state[ixAlwaysKnownSpell]) continue;
+
+			const isLearned = this._state[ixLearned];
+			const isPrepared = this._state[ixPrepared] || (this._spellLevel === 0 && isLearned);
+
+			if (this._spellLevel === 0 && !isLearned) continue;
+
+			let isUpdatePrepared = false;
+			const existingSpellMeta = this._parent.getExistingSpellMeta_(sp);
+			if (existingSpellMeta) {
+				if (this._spellLevel === 0) continue;
+				if (isLearnedAtLevel) continue;
+				isUpdatePrepared = existingSpellMeta.isPrepared !== isPrepared;
+				if (!isUpdatePrepared) continue;
+			}
+
+			// Track only learned spells if we're a learned spell caster. If we're a prepared spell caster, everything will
+			//   be tracked.
+			if (!isLearned && isLearnedAtLevel) continue;
+
+			// For unused prepared caster spells that we would import, check that they match the current filters
+			if (this._parent.isPreparedCaster && !isLearned && !isPrepared && !this._parent.pageFilter.toDisplay(filterValues, sp)) continue;
+
+			const spellImportOpts = this._getFormSubData_getSpellImportOpts({isLearned});
+
+			out.push(new Charactermancer_Spell_SpellMeta({
+				...spellImportOpts,
+				ix: i,
+				spell: this._spellDatas[i],
+				isPrepared,
+				isLearned,
+				isUpdateOnly: isUpdatePrepared,
+				existingItemId: existingSpellMeta?.item?.id,
+			}));
+		}
+
+		return out;
+	}
+
+	_getFormSubData_getSpellImportOpts ({isLearned}) {
+		let preparationMode = "always";
+		let usesCurrent = null;
+		let usesMax = null;
+		let usesPer = null;
+
+		if (this._parent.casterProgression === "pact") {
+			if (isLearned) {
+				// Set e.g. Mythic Arcanum spells as "at-will", to avoid having them using spell slots
+				if (this._spellLevel > UtilActors.PACT_CASTER_MAX_SPELL_LEVEL) {
+					preparationMode = "atwill";
+					usesCurrent = 1;
+					usesMax = 1;
+					usesPer = "lr";
+				} else preparationMode = "pact";
+			}
+		} else {
+			preparationMode = this._parent.isPreparedCaster ? "prepared" : "always";
+		}
+
+		return {preparationMode, usesCurrent, usesMax, usesPer};
+	}
+}
+
+export {
+	Charactermancer_Spell_Util,
+	Charactermancer_Spell,
+	Charactermancer_Spell_Modal,
+};

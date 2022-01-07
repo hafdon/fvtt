@@ -1,1 +1,231 @@
-const _0x46ba=['13729VqvrBZ','data','mouseleave','41515JXUIsL','7zawmGN','[data-plut-hover]','preventDefault','onclick','data-plutonium-actor-sheet-item','327sCzASW','14CJSMVJ','plut-hover','itemId','4647ulZTxt','handleLinkMouseLeave','init','stopPropagation','1336AqWtab','mouseover','LINK_DATA_SHEET_ITEM','[data-packed-dice]','dice','274LHinJH','attr','296foRdOl','1615RSNcIo','pRollerClickUseData','176660DLvKiL','mousemove','hover','1766nJSfuq'];const _0x5ab5=function(_0x55be9f,_0x8b4b0b){_0x55be9f=_0x55be9f-0x104;let _0x46ba64=_0x46ba[_0x55be9f];return _0x46ba64;};const _0x1c5a78=_0x5ab5;(function(_0x1bd269,_0x55736b){const _0x340cbc=_0x5ab5;while(!![]){try{const _0x3dd8d3=-parseInt(_0x340cbc(0x11c))*parseInt(_0x340cbc(0x116))+parseInt(_0x340cbc(0x10f))*parseInt(_0x340cbc(0x114))+-parseInt(_0x340cbc(0x119))+parseInt(_0x340cbc(0x11d))*parseInt(_0x340cbc(0x121))+parseInt(_0x340cbc(0x120))+parseInt(_0x340cbc(0x108))*-parseInt(_0x340cbc(0x10b))+parseInt(_0x340cbc(0x117))*parseInt(_0x340cbc(0x107));if(_0x3dd8d3===_0x55736b)break;else _0x1bd269['push'](_0x1bd269['shift']());}catch(_0x53eb1b){_0x1bd269['push'](_0x1bd269['shift']());}}}(_0x46ba,0x41445));import{UtilActors}from'./UtilActors.js';class UtilEvents{static[_0x1c5a78(0x10d)](){const _0x5e4df3=_0x1c5a78;$(document['body'])['on']('click','['+UtilEvents[_0x5e4df3(0x111)]+']',function(_0x1f60d7){const _0x5e61dd=_0x5e4df3;_0x1f60d7[_0x5e61dd(0x104)](),_0x1f60d7[_0x5e61dd(0x10e)]();const _0x30882f=$(this),_0x41818b=JSON['parse'](_0x30882f[_0x5e61dd(0x115)](UtilEvents[_0x5e61dd(0x111)]));UtilActors['doShowSheetItem'](_0x1f60d7,_0x41818b['actorId'],_0x41818b[_0x5e61dd(0x10a)]);})['on']('click',_0x5e4df3(0x112),function(_0x3c23b5){const _0x2d8420=_0x5e4df3,_0x10dd02=$(this);if(!_0x10dd02[_0x2d8420(0x115)](_0x2d8420(0x105)))Renderer[_0x2d8420(0x113)][_0x2d8420(0x118)](_0x3c23b5,this);})['on'](_0x5e4df3(0x110),_0x5e4df3(0x122),function(_0x41fd57){const _0x49532f=_0x5e4df3,_0x4afb57=$(this),_0x36d412=_0x4afb57[_0x49532f(0x11e)](_0x49532f(0x109));Renderer['hover']['pHandleLinkMouseOver'](_0x41fd57,this,_0x36d412);})['on'](_0x5e4df3(0x11f),_0x5e4df3(0x122),function(_0x5763e3){const _0x48e623=_0x5e4df3;Renderer[_0x48e623(0x11b)][_0x48e623(0x10c)](_0x5763e3,this);})['on'](_0x5e4df3(0x11a),'[data-plut-hover]',function(_0x257076){const _0x540947=_0x5e4df3;Renderer[_0x540947(0x11b)]['handleLinkMouseMove'](_0x257076,this);});}}UtilEvents[_0x1c5a78(0x111)]=_0x1c5a78(0x106);export{UtilEvents};
+import {UtilActors} from "./UtilActors.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Config} from "./Config.js";
+import {LGT} from "./Util.js";
+
+class UtilEvents {
+	static init () {
+		this.bindDocumentHandlers();
+	}
+
+	static bindDocumentHandlers ({element = document.body} = {}) {
+		$(element)
+			.on(`click`, `[data-packed-dice]`, function (evt) {
+				const $this = $(this);
+				// Only do the fake click if the element doesn't already have its click handler.
+				//  This is useful for e.g. when the other attributes get stripped before posting to chat.
+				if (!$this.attr("onclick")) Renderer.dice.pRollerClickUseData(evt, this);
+			})
+
+			// region Hover replacements
+			// (Based on `Renderer._renderLink_getHoverString`)
+			.on(`mouseover`, `[data-plut-hover]`, function (evt) {
+				const isPreload = !!evt.currentTarget.dataset.plutHoverPreload;
+				const preloadUid = evt.currentTarget.dataset.plutHoverPreloadUid;
+				const page = evt.currentTarget.dataset.plutHoverPage;
+				const source = evt.currentTarget.dataset.plutHoverSource;
+				let hash = evt.currentTarget.dataset.plutHoverHash;
+				const preloadId = evt.currentTarget.dataset.plutHoverPreloadId;
+				const hashPreEncoded = !!evt.currentTarget.dataset.plutHoverHashPreEncoded;
+				let hashHover = evt.currentTarget.dataset.plutHoverHashHover;
+				const hashPreEncodedHover = !!evt.currentTarget.dataset.plutHoverHashPreEncodedHover;
+				const subhashesHover = evt.currentTarget.dataset.plutHoverSubhashesHover;
+
+				if (preloadUid) {
+					const tag = evt.currentTarget.dataset.plutHoverTag;
+					const pipeParts = evt.currentTarget.dataset.plutHoverPipeParts;
+
+					const expander = tag === "skill" ? Parser.skillToExplanation : tag === "sense" ? Parser.senseToExplanation : null;
+					if (!expander) return;
+
+					const [name] = Renderer.splitTagByPipe(pipeParts);
+					const hoverMeta = Renderer.hover.getMakePredefinedHover(
+						{
+							type: "entries",
+							name: name.toTitleCase(),
+							entries: expander(name),
+						},
+						{
+							id: preloadUid,
+						},
+					);
+
+					hoverMeta.mouseOver(evt, this);
+
+					return;
+				}
+
+				if (isPreload) {
+					if (preloadId == null) return;
+					const preloadOptions = evt.currentTarget.dataset.plutHoverPreloadOptions;
+					Renderer.hover.handlePredefinedMouseOver(evt, this, preloadId, preloadOptions ? JSON.parse(preloadOptions) : undefined);
+					return;
+				}
+
+				if (!page || !source || !hash) return;
+
+				if (!hashPreEncoded) hash = UrlUtil.encodeForHash(hash);
+				if (hashHover && !hashPreEncodedHover) hashHover = UrlUtil.encodeForHash(hashHover);
+				if (!hashHover) hashHover = hash;
+
+				if (subhashesHover) {
+					const parsed = JSON.parse(subhashesHover);
+					hashHover += Renderer.utils.getLinkSubhashString(parsed);
+				}
+
+				const hoverMeta = {
+					page: page,
+					source: source,
+					hash: hashHover,
+					preloadId: preloadId,
+					// Delay the appearance of the hover window if the user is pointing at a draggable element
+					isDelay: !!evt.currentTarget.dataset.plutRichLink,
+				};
+				Renderer.hover.pHandleLinkMouseOver(evt, this, hoverMeta).then(null);
+			})
+			.on(`mouseleave`, `[data-plut-hover]`, function (evt) {
+				Renderer.hover.handleLinkMouseLeave(evt, this);
+			})
+			.on(`mousemove`, `[data-plut-hover]`, function (evt) {
+				Renderer.hover.handleLinkMouseMove(evt, this);
+			})
+			// endregion
+
+			// region Drag-drop of `@<tag>[...]` content
+			.on(`dragstart`, `[data-plut-rich-link]`, function (evt) {
+				// Based on `TextEditor._onDragEntityLink`
+
+				const entityType = evt.currentTarget.dataset.plutRichLinkEntityType;
+				const page = evt.currentTarget.dataset.plutHoverPage;
+				const source = evt.currentTarget.dataset.plutHoverSource;
+				let hash = evt.currentTarget.dataset.plutHoverHash;
+				const hashPreEncoded = !!evt.currentTarget.dataset.plutHoverHashPreEncoded;
+				const subhashesHover = evt.currentTarget.dataset.plutHoverSubhashesHover;
+
+				if (!page || !source || !hash || !entityType) return;
+
+				if (!hashPreEncoded) hash = UrlUtil.encodeForHash(hash);
+
+				if (subhashesHover) {
+					const parsed = JSON.parse(subhashesHover);
+					hash += Renderer.utils.getLinkSubhashString(parsed);
+				}
+
+				evt.stopPropagation();
+				evt.originalEvent.dataTransfer.setData(
+					"text/plain",
+					JSON.stringify({
+						type: entityType,
+						subType: UtilEvents.EVT_DATA_SUBTYPE__HOVER,
+						page,
+						source,
+						hash,
+						originalText: evt.currentTarget.dataset.plutRichLinkOriginalText,
+					}),
+				);
+			})
+			// endregion
+
+			// region `"@ActorEmbeddedItem[...][...]{...}"` links
+			.on(`click`, `[data-plut-owned-link]`, function (evt) {
+				const entityType = evt.currentTarget.dataset.parentEntity;
+				const ownedItemType = evt.currentTarget.dataset.childEntity; // N.b. currently unused, as we only support items
+				const parentId = evt.currentTarget.dataset.parentId;
+				const childId = evt.currentTarget.dataset.childId;
+
+				const config = CONFIG[entityType];
+				const parentEntity = config.collection.instance.get(parentId);
+				if (!parentEntity) {
+					const msg = `Could not find ${entityType} "${parentId}"!`;
+					console.warn(...LGT, msg);
+					return ui.notifications.warn(msg);
+				}
+
+				const childEntity = parentEntity.items.get(childId);
+
+				if (Config.get("text", "isAutoRollActorEmbeddedDocumentTags")) {
+					childEntity.roll();
+					return;
+				}
+
+				childEntity.sheet.render(true);
+			})
+			// endregion
+
+			// region `"@Folder[...]{...}"` links
+			.on(`click`, `[data-plut-folder-link]`, async function (evt) {
+				const folderId = evt.currentTarget.dataset.entityId;
+				const folderEntity = CONFIG.Folder.collection.instance.get(folderId);
+				if (!folderEntity) return;
+
+				const sidebarTabName = CONFIG[folderEntity.type]?.documentClass?.metadata?.collection;
+				if (!sidebarTabName) return;
+				await ui.sidebar.activateTab(sidebarTabName);
+
+				const sidebarTab = ui.sidebar.tabs[sidebarTabName];
+				const $eleFolder = sidebarTab.element.find(`[data-folder-id="${folderEntity.id}"]`);
+
+				if (!folderEntity.expanded) {
+					// region Based on `SidebarDirectory._toggleFolder`
+					game.folders._expanded[folderEntity.id] = true;
+
+					$eleFolder.removeClass("collapsed");
+
+					// Resize container
+					if (sidebarTab.popOut) this.setPosition();
+					// endregion
+				}
+
+				$eleFolder[0].scrollIntoView({block: "center"});
+
+				// Briefly make the folder glow
+				$eleFolder.addClass("jlnk__folder-pulse-1s");
+				setTimeout(() => $eleFolder.removeClass("jlnk__folder-pulse-1s"), 1000);
+			})
+			// endregion
+		;
+
+		Renderer.events.bindGeneric({element});
+
+		UtilEvents._ADDITIONAL_DOCUMENT_HANDLERS.forEach(({eventType, selector, fnEvent}) => this._doBindHandler({element, eventType, selector, fnEvent}));
+
+		UtilEvents._BOUND_DOCUMENT_ELEMENTS.add(element);
+	}
+
+	static registerDocumentHandler ({eventType, selector, fnEvent}) {
+		UtilEvents._ADDITIONAL_DOCUMENT_HANDLERS.push({eventType, selector, fnEvent});
+		UtilEvents._BOUND_DOCUMENT_ELEMENTS.forEach(element => this._doBindHandler({element, eventType, selector, fnEvent}));
+	}
+
+	static _doBindHandler ({element, eventType, selector, fnEvent}) {
+		$(element).on(eventType, selector, fnEvent);
+	}
+
+	static unbindDocumentHandlers ({element = document.body} = {}) {
+		// N.b. actual unbinding unimplemented; we assume that this is called if the window is closing
+		UtilEvents._BOUND_DOCUMENT_ELEMENTS.delete(element);
+	}
+
+	static getDropJson (evt) {
+		let data;
+		for (const mimeType of UtilEvents._MIME_TYPES_DROP_JSON) {
+			if (!evt.dataTransfer.types.includes(mimeType)) continue;
+
+			try {
+				const rawJson = evt.dataTransfer.getData(mimeType);
+				if (!rawJson) return;
+				data = JSON.parse(rawJson);
+			} catch (e) {
+				// Do nothing
+			}
+		}
+		return data;
+	}
+}
+UtilEvents._MIME_TYPES_DROP_JSON = ["application/json", "text/plain"]; // In order of preference/priority
+UtilEvents.EVT_DATA_SUBTYPE__HOVER = `${SharedConsts.MODULE_NAME_FAKE}.Hover`;
+
+UtilEvents._BOUND_DOCUMENT_ELEMENTS = new Set();
+UtilEvents._ADDITIONAL_DOCUMENT_HANDLERS = [];
+
+export {UtilEvents};

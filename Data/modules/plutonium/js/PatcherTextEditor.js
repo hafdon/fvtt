@@ -1,1 +1,409 @@
-const _0x2239=['body','each','ENTITY_PERMISSIONS','click','\x22><a\x20target=\x22_blank\x20w-100\x22\x20href=\x22','isAutoExpandJournalEmbeds','615461gIoLLa','getHtml','replace','collection','journalEntries','STR_SEE_CONSOLE','plutRichLinkText','user','1919515cGgzMR','attr','jemb__btn-toggle','entities','register','find','handleToggleClick','sidebarIcon','</button>','<button\x20class=\x22btn\x20btn-xxs\x20btn-5et\x20btn-default\x20flex-vh-center\x20mx-1\x20jemb__btn-toggle\x22\x20data-plut-is-expanded=\x22','currentTarget','<a\x20class=\x22entity-link\x20broken\x22\x20title=\x22Unknown\x20Tag\x20&quot;','getImporter','data','</a>','name','error','\x20<i>(you\x20do\x20not\x20have\x20sufficient\x20permissions\x20to\x20view\x20this\x20journal\x20entry)</i></a>','</div>\x0a\x09\x09\x09</div>','\x22\x20data-plut-rich-link-tag=\x22','ve-hidden','getElementsByTagName','\x20Journal\x20Entry\x20(SHIFT\x20for\x20All\x20Entries)','LIBWRAPPER_MODE_WRAPPER','isEnableContentLinks','_MAX_RECURSION_DEPTH','TextEditor.enrichHTML','Collapse','max','_doEnableToggleButtons','\x22><img\x20src=\x22','parent','1keOPQF','_getEntityPermissions','_sheetMode','<div\x20class=\x22mb-1\x20bold\x20veapp__msg-error\x22>Warning:\x20too\x20many\x20recursive\x20embeds!\x20Have\x20you\x20made\x20an\x20infinite\x20loop?</div>','&quot;\x22><i\x20class=\x22fas\x20fa-unlink\x22></i>\x20','_getBtnHtmlToggle','5731ahJLPG','isGM','934431oNTxLT','.jlnk__entity-link','isEnableJournalEmbeds','\x22\x20title=\x22','next','contains','sheet','<div\x20class=\x22w-100\x20flex-col\x22>\x0a\x09\x09\x09\x09<div\x20class=\x22flex-v-center\x20mb-1\x20jemb__wrp-lnk\x22>','OWNER','Embed','handleClick','rolls','\x22\x20with\x20tag\x20\x22','render','forEach','removeAttribute','OBSERVER','test','<a\x20class=\x22jlnk__entity-link\x22\x20draggable=\x22true\x22\x20data-plut-rich-link-text=\x22','_getEntity','pImportEntry','.jemb__btn-toggle','getTagMeta','142LSkroo','outerHTML','stopPropagation','shiftKey','105603XdblLO','1GTusli','</div>\x0a\x09\x09\x09\x09<div\x20class=\x22flex-vh-center\x20jemb__wrp-content\x20','imported','hover','382282dShwuc','\x22\x20class=\x22jemb__img\x22></a></div>\x0a\x09\x09\x09</div>','contents','disabled','folderType','get','enrichHTML','title','.editor','_handleExpandCollapse','MODULE_NAME','dataset','catch','secrets','content','encodeForHash','img','utils','<i\x20class=\x22fa\x20fa-caret-square-left\x22></i>','\x22></i>\x20','links','450094urifyi','permission','_createContentLink','Expand','preventDefault','<a\x20class=\x22entity-link\x20broken\x22><i\x20class=\x22fas\x20fa-unlink\x22></i>\x20','splitTagByPipe','ContentLoader','<i\x20class=\x22fa\x20fa-caret-square-down\x22></i>'];const _0x59b6=function(_0x49e8dc,_0x4664a4){_0x49e8dc=_0x49e8dc-0xc5;let _0x223962=_0x2239[_0x49e8dc];return _0x223962;};const _0x47bb40=_0x59b6;(function(_0x5cb18e,_0x2433cb){const _0x43f318=_0x59b6;while(!![]){try{const _0x50b22e=parseInt(_0x43f318(0x10a))+parseInt(_0x43f318(0x126))*parseInt(_0x43f318(0x125))+parseInt(_0x43f318(0x12a))+-parseInt(_0x43f318(0x108))*-parseInt(_0x43f318(0x121))+-parseInt(_0x43f318(0xcb))+parseInt(_0x43f318(0xda))+-parseInt(_0x43f318(0x102))*parseInt(_0x43f318(0xe2));if(_0x50b22e===_0x2433cb)break;else _0x5cb18e['push'](_0x5cb18e['shift']());}catch(_0x2c3347){_0x5cb18e['push'](_0x5cb18e['shift']());}}}(_0x2239,0x75ab2));import{libWrapper,UtilLibWrapper}from'./PatcherLibWrapper.js';import{SharedConsts}from'../shared/SharedConsts.js';import{Config}from'./Config.js';import{ChooseImporter}from'./ChooseImporter.js';import{LGT}from'./Util.js';import{UtilApplications}from'./UtilApplications.js';class Patcher_TextEditor{static['init'](){const _0x7944e4=_0x59b6;libWrapper[_0x7944e4(0xe6)](SharedConsts[_0x7944e4(0x134)],_0x7944e4(0xfc),function(_0x13414f,..._0x30c93f){const _0x553421=_0x7944e4;if(!Config[_0x553421(0x12f)](_0x553421(0xde),_0x553421(0x10c))&&!Config[_0x553421(0x12f)](_0x553421(0xde),_0x553421(0xfa)))return _0x13414f(..._0x30c93f);return Patcher_TextEditor['enrichHTML'](_0x13414f,..._0x30c93f);},UtilLibWrapper[_0x7944e4(0xf9)]),libWrapper[_0x7944e4(0xe6)](SharedConsts[_0x7944e4(0x134)],'JournalSheet.prototype._disableFields',function(_0x80b884,..._0x15968e){const _0xbdc924=_0x7944e4,_0x4abdad=_0x80b884(..._0x15968e);if(!Config['get'](_0xbdc924(0xde),_0xbdc924(0x10c)))return _0x4abdad;return Patcher_TextEditor['Embed'][_0xbdc924(0xff)](..._0x15968e),_0x4abdad;},UtilLibWrapper[_0x7944e4(0xf9)]),$(document[_0x7944e4(0xd4)])['on'](_0x7944e4(0xd7),_0x7944e4(0x11f),_0x27720c=>{const _0x1c9720=_0x7944e4;Patcher_TextEditor[_0x1c9720(0x113)]['handleToggleClick'](_0x27720c);})['on'](_0x7944e4(0xd7),_0x7944e4(0x10b),_0x23cd11=>{const _0x211de6=_0x7944e4;Patcher_TextEditor[_0x211de6(0xd2)][_0x211de6(0x114)](_0x23cd11);});}static[_0x47bb40(0x130)](_0x33da91,_0x11ca34,_0x2207e4,_0x134475=0x0){const _0x249ea9=_0x47bb40;_0x2207e4=_0x2207e4||{};if(_0x2207e4[_0x249ea9(0x137)]===undefined)_0x2207e4['secrets']=![];if(_0x2207e4[_0x249ea9(0xe5)]===undefined)_0x2207e4[_0x249ea9(0xe5)]=!![];if(_0x2207e4['links']===undefined)_0x2207e4[_0x249ea9(0xca)]=!![];if(_0x2207e4[_0x249ea9(0x115)]===undefined)_0x2207e4[_0x249ea9(0x115)]=!![];_0x11ca34=_0x33da91(_0x11ca34,_0x2207e4);if(!_0x2207e4[_0x249ea9(0xe5)])return _0x11ca34;return _0x11ca34=_0x11ca34['replace'](/@Embed(JournalEntry)\[([^\]]+)](?:{([^}]+)})?/g,(..._0x20ffc)=>Patcher_TextEditor[_0x249ea9(0x113)]['getHtml'](_0x2207e4,_0x134475,..._0x20ffc))[_0x249ea9(0xdc)](/@([a-zA-Z]+)\[([^\]]+)](?:{([^}]+)})?/g,(..._0x39d232)=>Patcher_TextEditor[_0x249ea9(0xd2)][_0x249ea9(0xdb)](_0x2207e4,_0x134475,..._0x39d232)),_0x11ca34;}}Patcher_TextEditor[_0x47bb40(0x113)]=class{static[_0x47bb40(0xdb)](_0x4a6859,_0x441ce5,_0x9529b0,_0x296f4f,_0x37ab88,_0xa77812){const _0x353145=_0x47bb40,_0xfdd2d=CONFIG[_0x296f4f],_0x12699b=_0xfdd2d[_0x353145(0xdd)]['instance'],_0x26f60e=this[_0x353145(0x11d)](_0x12699b,_0x37ab88);if(!_0x26f60e)return'<a\x20class=\x22entity-link\x20broken\x22><i\x20class=\x22fas\x20fa-unlink\x22></i>\x20'+(_0xa77812||_0x37ab88)+_0x353145(0xf0);if(this[_0x353145(0x103)](_0x26f60e)<CONST['ENTITY_PERMISSIONS'][_0x353145(0x11a)])return _0x353145(0xd0)+(_0xa77812||_0x37ab88)+_0x353145(0xf3);const _0x42fed1=TextEditor[_0x353145(0xcd)](_0x9529b0,_0x296f4f,_0x37ab88,_0xa77812)[_0x353145(0x122)],_0x12436d=Config['get'](_0x353145(0xde),_0x353145(0xd9));if(_0x26f60e[_0x353145(0x110)][_0x353145(0x104)]==='image'){const _0xdade5=_0x26f60e[_0x353145(0xef)][_0x353145(0xc6)];return _0x353145(0x111)+_0x42fed1+this[_0x353145(0x107)](_0x12436d)+_0x353145(0x127)+(_0x12436d?'':_0x353145(0xf6))+_0x353145(0xd8)+_0xdade5+_0x353145(0x100)+_0xdade5+_0x353145(0x12b);}else{const _0x1b8b92=_0x441ce5===Patcher_TextEditor[_0x353145(0x113)][_0x353145(0xfb)],_0x27f4fd=_0x1b8b92?_0x26f60e[_0x353145(0xef)][_0x353145(0x138)]:TextEditor[_0x353145(0x130)](_0x26f60e['data'][_0x353145(0x138)],_0x4a6859,_0x441ce5+0x1);return _0x353145(0x111)+_0x42fed1+this[_0x353145(0x107)](_0x12436d)+'</div>\x0a\x09\x09\x09\x09'+(_0x1b8b92?_0x353145(0x105):'')+'\x0a\x09\x09\x09\x09<div\x20class=\x22w-100\x20jemb__wrp-content\x20'+(_0x12436d?'':'ve-hidden')+'\x22>'+_0x27f4fd+_0x353145(0xf4);}}static[_0x47bb40(0x103)](_0x5a99b3){const _0x1219e5=_0x47bb40;if(game[_0x1219e5(0xe1)][_0x1219e5(0x109)])return CONST[_0x1219e5(0xd6)][_0x1219e5(0x112)];return Math[_0x1219e5(0xfe)](_0x5a99b3[_0x1219e5(0xef)][_0x1219e5(0xcc)][game[_0x1219e5(0xe1)]['id']],_0x5a99b3[_0x1219e5(0xef)][_0x1219e5(0xcc)]['default']);}static[_0x47bb40(0x11d)](_0x763074,_0x299666){const _0x18a5d8=_0x47bb40;let _0x51a619=null;if(/^[a-zA-Z0-9]{16}$/[_0x18a5d8(0x11b)](_0x299666))_0x51a619=_0x763074[_0x18a5d8(0x12f)](_0x299666);if(!_0x51a619)_0x51a619=_0x763074[_0x18a5d8(0x12c)][_0x18a5d8(0xe7)](_0x557358=>_0x557358[_0x18a5d8(0xef)][_0x18a5d8(0xf1)]===_0x299666);return _0x51a619;}static[_0x47bb40(0xe8)](_0x26f4ad){const _0x33cf4c=_0x47bb40,_0x4a09ad=$(_0x26f4ad[_0x33cf4c(0xec)]),_0x326302=_0x4a09ad[_0x33cf4c(0xe3)]('data-plut-is-expanded')==='1';if(_0x26f4ad[_0x33cf4c(0x124)]){_0x26f4ad[_0x33cf4c(0xcf)]();const _0x36d2a5=_0x4a09ad['closest'](_0x33cf4c(0x132));_0x36d2a5[_0x33cf4c(0xe7)]('button[data-plut-is-expanded]')[_0x33cf4c(0xd5)]((_0x3f79d4,_0x400309)=>this[_0x33cf4c(0x133)]($(_0x400309),_0x326302));return;}this['_handleExpandCollapse'](_0x4a09ad,_0x326302);}static[_0x47bb40(0x133)](_0x2c8a0d,_0x1d1795){const _0xb2a804=_0x47bb40,_0x151974=_0x2c8a0d[_0xb2a804(0x101)]()[_0xb2a804(0x10e)]();_0x151974['toggleClass'](_0xb2a804(0xf6),_0x1d1795),_0x2c8a0d[_0xb2a804(0xe3)]('data-plut-is-expanded',_0x1d1795?'0':'1')['html'](_0x1d1795?'<i\x20class=\x22fa\x20fa-caret-square-left\x22></i>':_0xb2a804(0xd3))[_0xb2a804(0x131)]((_0x1d1795?'Expand':_0xb2a804(0xfd))+_0xb2a804(0xf8));}static[_0x47bb40(0x107)](_0x591a2c){const _0x5bdf85=_0x47bb40;return _0x5bdf85(0xeb)+(_0x591a2c?0x1:0x0)+_0x5bdf85(0x10d)+(_0x591a2c?_0x5bdf85(0xfd):_0x5bdf85(0xce))+'\x20Journal\x20Entry\x20(SHIFT\x20for\x20All\x20Entries)\x22\x20type=\x22button\x22>'+(_0x591a2c?_0x5bdf85(0xd3):_0x5bdf85(0xc8))+_0x5bdf85(0xea);}static[_0x47bb40(0xff)](_0x52e529){const _0x4488e0=_0x47bb40;for(let _0x2af051 of _0x52e529[_0x4488e0(0xf7)]('BUTTON')){if(_0x2af051['classList'][_0x4488e0(0x10f)](_0x4488e0(0xe4)))_0x2af051[_0x4488e0(0x119)](_0x4488e0(0x12d));}}},Patcher_TextEditor['Embed'][_0x47bb40(0xfb)]=0x45,Patcher_TextEditor[_0x47bb40(0xd2)]=class{static[_0x47bb40(0xdb)](_0x3616c3,_0x48fb62,_0x47f1f0,_0x528fbc,_0x2ead69,_0x306be1){const _0x1170e2=_0x47bb40,_0x4f1a7b=ChooseImporter[_0x1170e2(0xee)](_0x528fbc),_0x3ea2ef=Renderer[_0x1170e2(0xd1)](_0x2ead69)[0x0]||'';if(!_0x4f1a7b)return _0x1170e2(0xed)+_0x528fbc['qq']()+_0x1170e2(0x106)+StrUtil['qq'](_0x306be1||_0x3ea2ef)+_0x1170e2(0xf0);const _0x384656=CONFIG[_0x4f1a7b['folderType']];if(!_0x384656)return'<a\x20class=\x22entity-link\x20broken\x22\x20title=\x22No\x20CONFIG\x20found\x20for\x20type\x20&quot;'+_0x4f1a7b[_0x1170e2(0x12e)]+'&quot;—this\x20is\x20a\x20bug!\x22><i\x20class=\x22fas\x20fa-unlink\x22></i>\x20'+StrUtil['qq'](_0x306be1||_0x3ea2ef)+_0x1170e2(0xf0);const {displayText:_0x19cd32}=Renderer[_0x1170e2(0xc7)][_0x1170e2(0x120)](_0x2ead69,'@'+_0x528fbc);return _0x1170e2(0x11c)+_0x2ead69['qq']()+_0x1170e2(0xf5)+_0x528fbc['qq']()+'\x22\x20title=\x22Click\x20to\x20show.\x20SHIFT-click\x20to\x20import.\x22><i\x20class=\x22fas\x20'+_0x384656[_0x1170e2(0xe9)]+_0x1170e2(0xc9)+StrUtil['qq'](_0x19cd32||_0x306be1||_0x3ea2ef)+_0x1170e2(0xf0);}static[_0x47bb40(0x114)](_0x4ba556){const _0x3b730b=_0x47bb40;_0x4ba556[_0x3b730b(0x123)](),_0x4ba556[_0x3b730b(0xcf)]();const _0x122e1d=_0x4ba556['currentTarget'][_0x3b730b(0x135)][_0x3b730b(0xe0)],_0x151815=_0x4ba556[_0x3b730b(0xec)][_0x3b730b(0x135)]['plutRichLinkTag'];if(!_0x122e1d||!_0x151815)return;const _0x3c1e19=ChooseImporter[_0x3b730b(0xee)](_0x151815),{source:_0x1bc9f8,page:_0x357453,hash:_0x4320ee,hashPreEncoded:_0x498889,hashHover:_0x18826b,hashPreEncodedHover:_0x246281}=Renderer[_0x3b730b(0xc7)][_0x3b730b(0x120)](_0x122e1d,'@'+_0x151815);let _0x21c1c9=_0x4320ee;if(!_0x498889)_0x21c1c9=UrlUtil[_0x3b730b(0xc5)](_0x21c1c9);if(_0x18826b)_0x21c1c9=_0x18826b;if(_0x18826b&&!_0x246281)_0x21c1c9=UrlUtil[_0x3b730b(0xc5)](_0x21c1c9);const _0x21d689=!!_0x4ba556[_0x3b730b(0x124)];Renderer[_0x3b730b(0x129)]['pCacheAndGet'](_0x357453,_0x1bc9f8,_0x21c1c9)['then'](_0x2ed8b8=>{const _0x133155=_0x3b730b,_0x179501='Could\x20not\x20load\x20\x22'+_0x122e1d+_0x133155(0x116)+_0x151815+'\x22!';if(!_0x2ed8b8)return console[_0x133155(0xf2)](...LGT,_0x179501),ui['notifications'][_0x133155(0xf2)](_0x179501);_0x3c1e19[_0x133155(0x11e)](_0x2ed8b8,{'isTemp':!_0x21d689})['then'](_0x28709e=>{const _0x37695a=_0x133155;if(_0x21d689)UtilApplications['doShowImportedNotification'](_0x28709e);_0x28709e[_0x37695a(0x128)][_0x37695a(0x118)](_0x3c5f0f=>{const _0x3ef1ec=_0x37695a;if(_0x3c5f0f[_0x3ef1ec(0x110)])return _0x3c5f0f['sheet']['render'](!![]);_0x3c5f0f[_0x3ef1ec(0x117)](!![]);});})[_0x133155(0x136)](_0x1e1269=>{const _0x30cb80=_0x133155;console[_0x30cb80(0xf2)](...LGT,_0x1e1269),ui['notifications'][_0x30cb80(0xf2)](_0x179501+'\x20'+VeCt[_0x30cb80(0xdf)]);});});}};export{Patcher_TextEditor};
+import {libWrapper, UtilLibWrapper} from "./PatcherLibWrapper.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Config} from "./Config.js";
+import {ChooseImporter} from "./ChooseImporter.js";
+import {LGT} from "./Util.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {UtilEvents} from "./UtilEvents.js";
+import {UtilPatchActorDrop} from "./UtilPatch.js";
+import {UtilGameSettings} from "./UtilGameSettings.js";
+import {PopoutSheet} from "./PopoutSheet.js";
+
+class Patcher_TextEditor {
+	static init () {
+		libWrapper.register(
+			SharedConsts.MODULE_NAME,
+			"TextEditor.enrichHTML",
+			function (fnEnrichHtml, ...args) {
+				if (!Config.get("journalEntries", "isEnableJournalEmbeds") && !Config.get("text", "isEnableContentLinks")) return fnEnrichHtml(...args);
+				return Patcher_TextEditor.enrichHTML(fnEnrichHtml, ...args);
+			},
+			UtilLibWrapper.LIBWRAPPER_MODE_WRAPPER,
+		);
+
+		libWrapper.register(
+			SharedConsts.MODULE_NAME,
+			"JournalSheet.prototype._disableFields",
+			function (fnDisableFields, ...args) {
+				const res = fnDisableFields(...args);
+				if (!Config.get("journalEntries", "isEnableJournalEmbeds")) return res;
+				Patcher_TextEditor.JournalEmbed._doEnableToggleButtons(...args);
+				return res;
+			},
+			UtilLibWrapper.LIBWRAPPER_MODE_WRAPPER,
+		);
+
+		UtilEvents.registerDocumentHandler({
+			eventType: "click",
+			selector: `.jemb__btn-toggle`,
+			fnEvent: Patcher_TextEditor.JournalEmbed.handleToggleClick.bind(Patcher_TextEditor.JournalEmbed),
+		});
+
+		UtilEvents.registerDocumentHandler({
+			eventType: "click",
+			selector: `.jlnk__entity-link`,
+			fnEvent: Patcher_TextEditor.ContentLoader.handleClick.bind(Patcher_TextEditor.JournalEmbed),
+		});
+
+		Patcher_TextEditor.ContentDragDrop.init();
+	}
+
+	/** Based on the original method. */
+	static enrichHTML (originalEnrichHtml, content, opts, depth = 0) {
+		opts = opts || {};
+
+		if (opts.secrets === undefined) opts.secrets = false;
+		if (opts.entities === undefined) opts.entities = true;
+		if (opts.links === undefined) opts.links = true;
+		if (opts.rolls === undefined) opts.rolls = true;
+
+		// Call the original method--"content" is now enriched HTML
+		content = originalEnrichHtml(content, opts);
+
+		// If we are not to replace dynamic entity links, return the base content
+		if (!opts.entities) return content;
+
+		// Don't load compendiums--we don't match `EmbedCompendium`
+		content = content
+			.replace(/@Embed(JournalEntry)\[([^\]]+)](?:{([^}]+)})?/g, (...m) => Patcher_TextEditor.JournalEmbed.getHtml(opts, depth, ...m))
+			.replace(/@(Actor)Embedded(Item)\[([^\]]+)]\[([^\]]+)](?:{([^}]+)})?/g, (...m) => Patcher_TextEditor.EmbeddedDocument.getHtml(opts, depth, ...m))
+			.replace(/@Folder\[([^\]]+)](?:{([^}]+)})?/g, (...m) => Patcher_TextEditor.Folder.getHtml(opts, depth, ...m))
+			.replace(/@([a-zA-Z]+)\[([^\]]+)](?:{([^}]+)})?/g, (...m) => Patcher_TextEditor.ContentLoader.getHtml(opts, depth, ...m))
+		;
+
+		return content;
+	}
+}
+
+Patcher_TextEditor.Enricher = class {
+	static _getEntityPermissions (entity) {
+		if (game.user.isGM) return CONST.ENTITY_PERMISSIONS.OWNER;
+		return Math.max(entity.data.permission[game.user.id], entity.data.permission["default"]);
+	}
+
+	static _getEntity (collection, entityNameOrId) {
+		// Match either on ID or by name
+		let entity = null;
+		if (/^[a-zA-Z0-9]{16}$/.test(entityNameOrId)) entity = collection.get(entityNameOrId);
+		if (!entity) entity = (collection.contents || collection.entries).find(e => e.data.name === entityNameOrId);
+		return entity;
+	}
+};
+
+Patcher_TextEditor.JournalEmbed = class extends Patcher_TextEditor.Enricher {
+	static getHtml (enrichOpts, depth, fullText, entityType, entityNameOrId, displayText) {
+		const config = CONFIG[entityType];
+		const collection = config.collection.instance;
+		const entity = this._getEntity(collection, entityNameOrId);
+
+		if (!entity) return `<a class="entity-link broken"><i class="fas fa-unlink"></i> ${displayText || entityNameOrId}</a>`;
+		if (this._getEntityPermissions(entity) < CONST.ENTITY_PERMISSIONS.OBSERVER) return `<a class="entity-link broken"><i class="fas fa-unlink"></i> ${displayText || entityNameOrId} <i>(you do not have sufficient permissions to view this journal entry)</i></a>`;
+
+		// Get the standard Foundry link
+		const htmlJournalLink = TextEditor._createContentLink(fullText, entityType, entityNameOrId, displayText).outerHTML;
+
+		const isAutoExpand = Config.get("journalEntries", "isAutoExpandJournalEmbeds");
+		if (entity.sheet._sheetMode === "image") {
+			const img = entity.data.img;
+			return `<div class="w-100 flex-col">
+				<div class="flex-v-center mb-1 jemb__wrp-lnk">${htmlJournalLink}${this._getBtnHtmlToggle(isAutoExpand)}</div>
+				<div class="flex-vh-center jemb__wrp-content ${isAutoExpand ? "" : "ve-hidden"}"><a target="_blank w-100" href="${img}"><img src="${img}" class="jemb__img"></a></div>
+			</div>`;
+		} else {
+			// Avoid infinite loops
+			const isTooDeep = depth === Patcher_TextEditor.JournalEmbed._MAX_RECURSION_DEPTH;
+			const subContent = isTooDeep ? entity.data.content : TextEditor.enrichHTML(entity.data.content, enrichOpts, depth + 1);
+			return `<div class="w-100 flex-col">
+				<div class="flex-v-center mb-1 jemb__wrp-lnk">${htmlJournalLink}${this._getBtnHtmlToggle(isAutoExpand)}</div>
+				${isTooDeep ? `<div class="mb-1 bold veapp__msg-error">Warning: too many recursive embeds! Have you made an infinite loop?</div>` : ""}
+				<div class="w-100 jemb__wrp-content ${isAutoExpand ? "" : "ve-hidden"}">${subContent}</div>
+			</div>`;
+		}
+	}
+
+	static handleToggleClick (event) {
+		const $btn = $(event.currentTarget);
+		const isExpanded = $btn.attr("data-plut-is-expanded") === "1";
+
+		if (event.shiftKey) {
+			event.preventDefault();
+
+			const $editor = $btn.closest(`.editor`);
+			$editor.find(`button[data-plut-is-expanded]`).each((i, e) => this._handleExpandCollapse($(e), isExpanded));
+			return;
+		}
+
+		this._handleExpandCollapse($btn, isExpanded);
+	}
+
+	static _handleExpandCollapse ($btn, isExpanded) {
+		const $wrp = $btn.parent().next();
+		$wrp.toggleClass("ve-hidden", isExpanded);
+		$btn
+			.attr("data-plut-is-expanded", isExpanded ? "0" : "1")
+			.html(isExpanded ? `<i class="fa fa-caret-square-left"></i>` : `<i class="fa fa-caret-square-down"></i>`)
+			.title(`${isExpanded ? `Expand` : `Collapse`} Journal Entry (SHIFT for All Entries)`);
+	}
+
+	static _getBtnHtmlToggle (isAutoExpand) {
+		return `<button class="btn btn-xxs btn-5et btn-default flex-vh-center mx-1 jemb__btn-toggle" data-plut-is-expanded="${isAutoExpand ? 1 : 0}" title="${isAutoExpand ? "Collapse" : "Expand"} Journal Entry (SHIFT for All Entries)" type="button">${isAutoExpand ? `<i class="fa fa-caret-square-down"></i>` : `<i class="fa fa-caret-square-left"></i>`}</button>`;
+	}
+
+	/** Based on `FormApplication._disableFields` */
+	static _doEnableToggleButtons (form) {
+		for (let el of form.getElementsByTagName("BUTTON")) {
+			if (el.classList.contains("jemb__btn-toggle")) el.removeAttribute("disabled");
+		}
+	}
+};
+Patcher_TextEditor.JournalEmbed._MAX_RECURSION_DEPTH = 69; // Arbitrary number of steps
+
+Patcher_TextEditor.EmbeddedDocument = class extends Patcher_TextEditor.Enricher {
+	static getHtml (enrichOpts, depth, fullText, parentEntityType, childEntityType, parentEntityNameOrId, childEntityNameOrId, displayText) {
+		const config = CONFIG[parentEntityType];
+		const collection = config.collection.instance;
+		const parentEntity = this._getEntity(collection, parentEntityNameOrId);
+
+		if (!parentEntity) return `<a class="entity-link broken"><i class="fas fa-unlink"></i> ${displayText || `${parentEntityNameOrId}.${childEntityNameOrId}`}</a>`;
+		if (this._getEntityPermissions(parentEntity) < CONST.ENTITY_PERMISSIONS.OBSERVER) return `<a class="entity-link broken"><i class="fas fa-unlink"></i> ${displayText || parentEntityNameOrId} <i>(you do not have sufficient permissions to view this ${parentEntityType.toLowerCase()})</i></a>`;
+
+		const configChild = CONFIG[childEntityType];
+		const childEntity = this._getEntity(parentEntity.items, childEntityNameOrId);
+		if (!childEntity) return `<a class="entity-link broken"><i class="fas fa-unlink"></i> ${displayText || `${parentEntityNameOrId}.${childEntityNameOrId}`}</a>`;
+
+		return `<a class="jlnk__entity-link" data-plut-owned-link="true" data-parent-entity="${parentEntityType}" data-child-entity="Item" data-parent-id="${parentEntity.id}" data-child-id="${childEntity.id}"><i class="${config.sidebarIcon}"></i> <i class="${configChild.sidebarIcon}"></i> ${childEntity.name}</a>`;
+	}
+};
+
+Patcher_TextEditor.Folder = class extends Patcher_TextEditor.Enricher {
+	static getHtml (enrichOpts, depth, fullText, folderNameOrId, displayText) {
+		const folder = this._getEntity(CONFIG.Folder.collection.instance, folderNameOrId);
+
+		if (!folder) return `<a class="entity-link broken"><i class="fas fa-unlink"></i> ${displayText || folderNameOrId}</a>`;
+		if (this._getEntityPermissions(folder) < CONST.ENTITY_PERMISSIONS.OBSERVER) return `<a class="entity-link broken"><i class="fas fa-unlink"></i> ${displayText || folderNameOrId} <i>(you do not have sufficient permissions to view this folder)</i></a>`;
+
+		return `<a class="jlnk__entity-link" data-plut-folder-link="true" data-entity="Folder" data-entity-id="${folder.id}"><i class="fas fa-folder fa-fw"></i> ${folder.name}</a>`;
+	}
+};
+
+Patcher_TextEditor.ContentLoader = class {
+	static getHtml (enrichOpts, depth, fullText, tag, pipeParts, displayText) {
+		if (Patcher_TextEditor.ContentLoader._STATIC_TAGS.has(tag)) return this._getHtml_staticTag(enrichOpts, depth, fullText, tag, pipeParts, displayText);
+
+		const Importer = ChooseImporter.getImporterClassMeta(tag)?.Class;
+
+		const name = (Renderer.splitTagByPipe(pipeParts)[0] || "");
+
+		if (!Importer) return `<a class="entity-link broken" title="Unknown Tag &quot;${tag.qq()}&quot;"><i class="fas fa-unlink"></i> ${StrUtil.qq(displayText || name)}</a>`;
+
+		const config = CONFIG[Importer.FOLDER_TYPE];
+
+		// (Should never occur)
+		if (!config) return `<a class="entity-link broken" title="No CONFIG found for type &quot;${Importer.FOLDER_TYPE}&quot;\u2014this is a bug!"><i class="fas fa-unlink"></i> ${StrUtil.qq(displayText || name)}</a>`;
+
+		const {displayText: displayTextPipe, page, source, hash, preloadId, hashPreEncoded, hashHover, hashPreEncodedHover, subhashes, subhashesHover} = Renderer.utils.getTagMeta(`@${tag}`, pipeParts);
+
+		return `<a class="jlnk__entity-link" draggable="true" ${Config.get("text", "isEnableHoverForLinkTags") ? `data-plut-hover="${true}"` : `title="SHIFT-Click to Import"`} data-plut-hover-page="${page.qq()}" data-plut-hover-source="${source.qq()}" data-plut-hover-hash="${hash.qq()}" data-plut-hover-tag="${tag}" ${preloadId ? `data-plut-hover-preload-id="${preloadId.qq()}"` : ""} ${hashPreEncoded ? `data-plut-hover-hash-pre-encoded="${hashPreEncoded}"` : ""} ${hashHover ? `data-plut-hover-hash-hover="${hashHover.qq()}"` : ""} ${hashPreEncodedHover ? `data-plut-hover-hash-pre-encoded-hover="${hashPreEncodedHover}"` : ""} ${subhashes?.length ? `data-plut-hover-subhashes="${JSON.stringify(subhashes).qq()}"` : ""} ${subhashesHover?.length ? `data-plut-hover-subhashes-hover="${JSON.stringify(subhashesHover).qq()}"` : ""} data-plut-rich-link="${true}" data-plut-rich-link-entity-type="${Importer.FOLDER_TYPE}" data-plut-rich-link-original-text="${fullText.slice(1).qq()}"><i class="fas ${config.sidebarIcon}"></i> ${StrUtil.qq(displayTextPipe || displayText || name)}</a>`;
+	}
+
+	static _getHtml_staticTag (enrichOpts, depth, fullText, tag, pipeParts, displayText) {
+		const expander = tag === "skill" ? Parser.skillToExplanation : tag === "sense" ? Parser.senseToExplanation : null;
+
+		const [name, displayTextTag] = Renderer.splitTagByPipe(pipeParts);
+		const entries = expander ? expander(name) : null;
+		if (!expander || entries === name || CollectionUtil.deepEquals(entries, expander(""))) return `<a class="entity-link broken" title="Unknown ${tag}"><i class="fas fa-unlink"></i> ${StrUtil.qq(displayTextTag || displayText || name)}</a>`;
+
+		return `<a class="jlnk__entity-link" draggable="true" ${Config.get("text", "isEnableHoverForLinkTags") ? `data-plut-hover="${true}"` : ``} data-plut-hover-preload-uid="${CryptUtil.uid()}" data-plut-hover-tag="${tag}" data-plut-hover-pipe-parts="${pipeParts.qq()}" data-plut-rich-link-original-text="${fullText.slice(1).qq()}"><i class="fas fa-info-circle"></i> ${StrUtil.qq(displayTextTag || displayText || name)}</a>`;
+	}
+
+	static handleClick (evt) {
+		evt.stopPropagation();
+		evt.preventDefault();
+
+		// The "@" is stripped to avoid issues when recursively rendering embedded text, so add it back here
+		const originalText = `@${evt.currentTarget.dataset.plutRichLinkOriginalText}`;
+
+		const tag = evt.currentTarget.dataset.plutHoverTag;
+		const page = evt.currentTarget.dataset.plutHoverPage;
+		const source = evt.currentTarget.dataset.plutHoverSource;
+		let hash = evt.currentTarget.dataset.plutHoverHash;
+		const preloadId = evt.currentTarget.dataset.plutHoverPreloadId;
+		const hashPreEncoded = !!evt.currentTarget.dataset.plutHoverHashPreEncoded;
+		const subhashesHover = evt.currentTarget.dataset.plutHoverSubhashesHover;
+
+		if (!page || !source || !hash) return;
+		const importer = ChooseImporter.getImporter(tag) || ChooseImporter.getImporter(page);
+
+		if (!hashPreEncoded) hash = UrlUtil.encodeForHash(hash);
+
+		if (subhashesHover) {
+			const parsed = JSON.parse(subhashesHover);
+			hash += Renderer.utils.getLinkSubhashString(parsed);
+		}
+
+		const isPermanent = !!evt.shiftKey
+			&& (
+				(game.user.can("ACTOR_CREATE") && importer.gameProp === "actors")
+				|| (game.user.can("ITEM_CREATE") && importer.gameProp === "items")
+				|| (game.user.can("JOURNAL_CREATE") && importer.gameProp === "journal")
+				|| (game.user.can("ROLL_TABLE_CREATE") && importer.gameProp === "tables")
+			);
+		const isPopout = evt.view !== window && Config.get("ui", "isEnableSubPopouts");
+
+		Renderer.hover.pCacheAndGet(page, source, hash)
+			.then(ent => {
+				const msgErrorBase = `Could not load content for tag "${originalText}"!`;
+
+				if (!ent) {
+					const msgError = `${msgErrorBase} Could not find matching entity.`;
+					console.error(...LGT, msgError);
+					return ui.notifications.error(msgError);
+				}
+
+				importer.pImportEntry(ent, {isTemp: !isPermanent, defaultPermission: CONST.ENTITY_PERMISSIONS.OWNER})
+					.then(async importSummary => {
+						if (isPermanent) UtilApplications.doShowImportedNotification(importSummary);
+
+						const renderMetas = await Promise.all(
+							(importSummary.imported || [])
+								.map(it => it.document)
+								.filter(Boolean)
+								.map(doc => UtilApplications.pForceRenderApp(doc.sheet ? doc.sheet : doc)),
+						);
+
+						if (!isPopout) return;
+						renderMetas.filter(Boolean).forEach(({app, data}) => PopoutSheet.doPopout(app, data));
+					})
+					.catch(err => {
+						console.error(...LGT, err);
+						ui.notifications.error(`${msgErrorBase} ${VeCt.STR_SEE_CONSOLE}`);
+					});
+			});
+	}
+};
+Patcher_TextEditor.ContentLoader._STATIC_TAGS = new Set(["skill", "sense"]);
+
+/** Drag-and-drop for @tag links. */
+Patcher_TextEditor.ContentDragDrop = class {
+	static init () {
+		libWrapper.register(
+			SharedConsts.MODULE_NAME,
+			"ActorSheet.prototype._onDragStart",
+			function (fn, ...args) {
+				const evt = args[0];
+				if (evt.target.dataset.plutRichLink) return;
+				return fn(...args);
+			},
+			UtilLibWrapper.LIBWRAPPER_MODE_MIXED,
+		);
+
+		if (!UtilGameSettings.getSafe("core", "noCanvas")) {
+			libWrapper.register(
+				SharedConsts.MODULE_NAME,
+				"canvas.tokens._onDropActorData",
+				async function (fn, ...args) {
+					return Patcher_TextEditor.ContentDragDrop._pHandleCanvasDrop({fn, args});
+				},
+				UtilLibWrapper.LIBWRAPPER_MODE_WRAPPER,
+			);
+
+			libWrapper.register(
+				SharedConsts.MODULE_NAME,
+				"canvas.notes._onDropData",
+				async function (fn, ...args) {
+					return Patcher_TextEditor.ContentDragDrop._pHandleCanvasDrop({fn, args});
+				},
+				UtilLibWrapper.LIBWRAPPER_MODE_WRAPPER,
+			);
+		}
+
+		// region Unfortunately, libWrapper is of no use here
+		UtilPatchActorDrop.registerDropActor(Patcher_TextEditor.ContentDragDrop._pHandleActorDrop);
+		UtilPatchActorDrop.registerDropItem(Patcher_TextEditor.ContentDragDrop._pHandleActorDrop);
+		// endregion
+
+		libWrapper.register(
+			SharedConsts.MODULE_NAME,
+			"TextEditor._onDropEditorData",
+			async function (fn, ...args) {
+				return Patcher_TextEditor.ContentDragDrop._pHandleEditorDrop({fn, args});
+			},
+			UtilLibWrapper.LIBWRAPPER_MODE_MIXED,
+		);
+	}
+
+	static async _pHandleCanvasDrop ({fn, args}) {
+		const [, data] = args;
+		return this._pMutDropDataId({fn, args, data});
+	}
+
+	static async _pHandleActorDrop (fn, ...args) {
+		const [, data] = args;
+		return Patcher_TextEditor.ContentDragDrop._pMutDropDataId({fn, args, data, isTemp: true});
+	}
+
+	static async _pHandleEditorDrop ({fn, args}) {
+		const [evt, editor] = args;
+		evt.preventDefault();
+
+		const data = Patcher_TextEditor.ContentDragDrop._getEvtData(evt);
+		if (!data) return;
+
+		if (data?.subType !== UtilEvents.EVT_DATA_SUBTYPE__HOVER) return fn(...args);
+
+		editor.insertContent(data.originalText);
+	}
+
+	/**
+	 * Fake a compendium entity by creating a compendium, adding one entity to it, using it, then deleting the
+	 * compendium.
+	 */
+	static async _pMutDropDataId ({fn, args, data, isTemp = false}) {
+		if (data?.subType !== UtilEvents.EVT_DATA_SUBTYPE__HOVER) return fn(...args);
+
+		const importer = ChooseImporter.getImporter(data.page);
+		if (!importer) return;
+
+		const ent = await Renderer.hover.pCacheAndGet(data.page, data.source, data.hash, {isCopy: true});
+		if (!ent) return;
+
+		const packName = `${SharedConsts.MODULE_NAME_FAKE}-temp-${importer.constructor.FOLDER_TYPE.toLowerCase()}`;
+		const packKey = `world.${packName}`;
+		if (isTemp) {
+			let pack = game.packs.get(packKey);
+			if (!pack) {
+				pack = await CompendiumCollection.createCompendium({
+					entity: importer.constructor.FOLDER_TYPE,
+					label: `Temp ${importer.constructor.FOLDER_TYPE}`,
+					name: packName,
+					package: "world",
+				});
+			}
+			importer.pack = pack;
+			data.pack = packKey;
+		}
+
+		const importResult = await importer.pImportEntry(ent);
+		const imported = importResult.imported[0]?.document;
+		data.id = imported.id;
+
+		try {
+			return (await fn(...args));
+		} finally {
+			if (isTemp) {
+				const pack = game.packs.get(packKey);
+				pack.delete();
+			}
+		}
+	}
+
+	static _getEvtData (evt) {
+		try {
+			return JSON.parse(evt.dataTransfer.getData("text/plain"));
+		} catch (e) {
+			return null;
+		}
+	}
+};
+
+export {Patcher_TextEditor};

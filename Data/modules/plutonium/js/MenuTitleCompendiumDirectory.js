@@ -1,1 +1,8 @@
-var _0x557d=['1511641PNiWxc','428FNUwwA','fa-external-link-alt','1goDtVb','4588twhmMl','128495fUbnnz','299247anEUVW','4ZQhfhP','_HOOK_NAME','2789YxZOrM','plutonium-compendium-directory-title-menu','renderCompendiumDirectory','153319HRyQyL','2CnvWoA','25SEgiJJ','pop__mnu-btn-open','380818FrwwCf','_TOOL_LIST'];var _0x2142=function(_0x26208e,_0x5088fc){_0x26208e=_0x26208e-0x157;var _0x557d6b=_0x557d[_0x26208e];return _0x557d6b;};var _0x2db35b=_0x2142;(function(_0x32dbe9,_0x3eed47){var _0x4db4eb=_0x2142;while(!![]){try{var _0x248b8b=parseInt(_0x4db4eb(0x158))*parseInt(_0x4db4eb(0x162))+parseInt(_0x4db4eb(0x164))+parseInt(_0x4db4eb(0x15b))*parseInt(_0x4db4eb(0x160))+-parseInt(_0x4db4eb(0x167))*parseInt(_0x4db4eb(0x15d))+-parseInt(_0x4db4eb(0x159))+-parseInt(_0x4db4eb(0x161))*parseInt(_0x4db4eb(0x15a))+parseInt(_0x4db4eb(0x166))*parseInt(_0x4db4eb(0x157));if(_0x248b8b===_0x3eed47)break;else _0x32dbe9['push'](_0x32dbe9['shift']());}catch(_0x35c71a){_0x32dbe9['push'](_0x32dbe9['shift']());}}}(_0x557d,0xaad6a));import{MenuTitle}from'./MenuTitle.js';import{PopoutSheet}from'./PopoutSheet.js';class MenuTitleCompendiumDirectory extends MenuTitle{}MenuTitleCompendiumDirectory[_0x2db35b(0x15c)]=_0x2db35b(0x15f),MenuTitleCompendiumDirectory['_EVT_NAMESPACE']=_0x2db35b(0x15e),MenuTitleCompendiumDirectory[_0x2db35b(0x165)]=[{'name':'Pop\x20Out','Class':PopoutSheet,'iconClass':_0x2db35b(0x168),'additionalClassesButton':_0x2db35b(0x163),'additionalClassesPreSpacer':_0x2db35b(0x163)}];export{MenuTitleCompendiumDirectory};
+import {MenuTitle} from "./MenuTitle.js";
+
+class MenuTitleCompendiumDirectory extends MenuTitle {}
+MenuTitleCompendiumDirectory._HOOK_NAME = "renderCompendiumDirectory";
+MenuTitleCompendiumDirectory._EVT_NAMESPACE = "plutonium-compendium-directory-title-menu";
+MenuTitleCompendiumDirectory._TOOL_LIST = [];
+
+export {MenuTitleCompendiumDirectory};

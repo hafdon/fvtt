@@ -1,1 +1,685 @@
-const _0x4417=['flags','_actorType','constructor','TASK_EXIT_COMPLETE_UPDATE_OVERWRITE','assumedPb','DND5E','deleteEmbeddedDocuments','_page','4657LevCMC','getNameWithSourcePart','copy','tokenBar1Attribute','_pImportEntry_getTokenImage','ACTOR_TEMP_NAME','_getActorFlags','fluff','940688SwzFls','importDocument','senses','images','getTokenUrl','setFirstSection','89nGgKpw','flat','getFluffTabContent','postItemItemUpdates','33612UhYEOj','create','C_USE_GAME_DEFAULT','_pImportEntry_pHandlePostItemItemUpdates','itemProperties','_pImportEntry_fillConditionsDamage','30jcaswN','price','exec','assign','join','push','TASK_EXIT_COMPLETE_DATA_ONLY','ImportEntryOpts','_pImportEntry_pFillItems','_isSkipFolder','ATTUNED','attunement','TASK_EXIT_SKIPPED_DUPLICATE','1028469teCjdL','getAbilityModNumber','Creature\x20\x22','isSkip','type','_pImportEntry_hasTokenImage','expert','_DEFAULT_SAVING_THROW_DATA','filter','bar1','max','mystery-man.svg','pGetAdditionalData_','_pImportEntry_pApplyEffects','tokenNameDisplay','Importing\x20','displayName','_getActorSheetName','_pImportEntry_pFillBase','name','items','_pFillWeaponItem','_fnLoadSideData','Cannot\x20import\x20','displayBars','save','771291VvwerB','source','some','dimSight','_propsBrewAdditionalData','_pImportEntry_pFillToken','core','\x22\x20=\x20\x22','getImageUrlFromFluff','entries','vision','tokenBrightSight','bar2','existing','blindsight','isOverwrite','isUseTokenImageAsPortrait','_props','intToBonus','attuned','ActiveEffect','_pImportEntry_pGetImportMetadata','isTemp',')\x20save\x20\x22','damageVersatile','_pGetAdditionalData','972602NpmAeT','keys','weapon','map','tremorsense','177835XaWcsJ','abs','icons/svg/mystery-man.svg','slice','darkvision','img','includes','render','\x20to\x20actor!','actor','\x22)\x20will\x20be\x20used.','_numberCleanRegexp','tokenDisposition','TASK_EXIT_COMPLETE','tokenBar2Attribute','C_BOOL_ENABLED','forEach','getCleanEntityName','data','abilities','length','weaponType','update','\x22\x20did\x20not\x20match\x20an\x20expected\x20modifier/proficiency\x20amount!\x20A\x20fallback\x20value\x20(\x22','sourceJsonToAbv','tokenBarDisplay','toLowerCase','brightSight','_getMergedTokenData','effects','_pack','Item','MODULE_NAME_FAKE','_displayName','_pImportEntry_pFillBase_pGetCompendiumImage','tokenDimSight','isDataOnly','token','spell','rarity','get','tokenIsAddVision','utils','size','disposition','\x22\x20bonus\x20\x22','Unimplemented!','set'];const _0x1e5e=function(_0x58c282,_0x40a378){_0x58c282=_0x58c282-0xaf;let _0x441787=_0x4417[_0x58c282];return _0x441787;};const _0x43424b=_0x1e5e;(function(_0x291a4b,_0x4673e3){const _0x51f314=_0x1e5e;while(!![]){try{const _0x28d86d=-parseInt(_0x51f314(0x11b))*parseInt(_0x51f314(0x121))+parseInt(_0x51f314(0xb2))+parseInt(_0x51f314(0x117))*-parseInt(_0x51f314(0x109))+-parseInt(_0x51f314(0xcc))+parseInt(_0x51f314(0x12e))+parseInt(_0x51f314(0xd1))+parseInt(_0x51f314(0x111));if(_0x28d86d===_0x4673e3)break;else _0x291a4b['push'](_0x291a4b['shift']());}catch(_0x220c31){_0x291a4b['push'](_0x291a4b['shift']());}}}(_0x4417,0x7fa60));import{ImportList}from'./ImportList.js';import{DataConverter}from'./DataConverter.js';import{Vetools}from'./Vetools.js';import{Config}from'./Config.js';import{UtilApplications}from'./UtilApplications.js';import{UtilActors}from'./UtilActors.js';import{LGT}from'./Util.js';import{Consts}from'./Consts.js';import{UtilCompendium}from'./UtilCompendium.js';import{SharedConsts}from'../shared/SharedConsts.js';import{DataConverterItem}from'./DataConverterItem.js';import{UtilGameSettings}from'./UtilGameSettings.js';import{ConfigConsts}from'./ConfigConsts.js';class ImportListActor extends ImportList{constructor(_0x310121,_0x2ae868,_0x537c7c,_0x6e0bab){const _0x571482=_0x1e5e;super(_0x310121,_0x2ae868,_0x537c7c),this[_0x571482(0x102)]=_0x6e0bab['actorType'],this[_0x571482(0x12a)]=![];}async['pImportEntry'](_0x18c391,_0x5515fa){const _0x3c7896=_0x1e5e;_0x5515fa=_0x5515fa||{},console['log'](...LGT,_0x3c7896(0x13d)+this['_actorType']+'\x20\x22'+_0x18c391[_0x3c7896(0x141)]+'\x22\x20(from\x20\x22'+Parser[_0x3c7896(0xe9)](_0x18c391[_0x3c7896(0xb3)])+'\x22)');if(this['_actor'])throw new Error(_0x3c7896(0xaf)+this[_0x3c7896(0x102)]+_0x3c7896(0xd9));let _0x14bb74;const _0x1cc358=this['_getDuplicateMeta']({'entity':_0x18c391});if(_0x1cc358[_0x3c7896(0x131)])return{'status':UtilApplications[_0x3c7896(0x12d)]};else _0x1cc358[_0x3c7896(0xc1)]?(this[_0x3c7896(0x12a)]=!![],_0x14bb74=_0x1cc358[_0x3c7896(0xbf)]):(this[_0x3c7896(0x12a)]=![],_0x14bb74=this[_0x3c7896(0xef)]?null:await Actor[_0x3c7896(0x11c)]({'name':Consts[_0x3c7896(0x10e)],'type':this[_0x3c7896(0x102)]},{'renderSheet':!!_0x5515fa[_0x3c7896(0xc8)],'temporary':!!_0x5515fa[_0x3c7896(0xc8)]}));const {dataBuilderOpts:_0x3c7989,actorData:_0x4e3ca4}=await this[_0x3c7896(0xc7)](_0x14bb74,_0x18c391,_0x5515fa),_0x34114a=await this[_0x3c7896(0xcb)](_0x18c391);if(_0x34114a)Object['assign'](_0x4e3ca4[_0x3c7896(0xe3)]||{},_0x34114a);if(_0x5515fa['isTemp'])return _0x14bb74=await Actor[_0x3c7896(0x11c)]({..._0x4e3ca4,'type':this[_0x3c7896(0x102)]},{'renderSheet':!_0x5515fa[_0x3c7896(0xf5)],'temporary':!![]}),_0x3c7989[_0x3c7896(0xda)]=_0x14bb74,await this[_0x3c7896(0x129)](_0x18c391,_0x4e3ca4,_0x3c7989,_0x5515fa),await this[_0x3c7896(0x13b)](_0x3c7989,_0x5515fa),await this[_0x3c7896(0x11e)](_0x14bb74,_0x5515fa,_0x3c7989),_0x5515fa[_0x3c7896(0xf5)]?{'imported':[_0x14bb74],'status':UtilApplications[_0x3c7896(0x127)]}:{'imported':[_0x14bb74],'status':UtilApplications[_0x3c7896(0xde)]};else{if(this[_0x3c7896(0xef)]){if(_0x1cc358['isOverwrite'])return _0x3c7989[_0x3c7896(0xda)]=_0x14bb74,await _0x14bb74[_0x3c7896(0x107)](_0x3c7896(0xf0),_0x14bb74['items'][_0x3c7896(0xcf)](_0xcab3de=>_0xcab3de['id'])),await _0x14bb74[_0x3c7896(0x107)]('ActiveEffect',_0x14bb74[_0x3c7896(0xee)]['map'](_0x1ce0ed=>_0x1ce0ed['id'])),await this[_0x3c7896(0x129)](_0x18c391,_0x4e3ca4,_0x3c7989,_0x5515fa),await this['_pImportEntry_pApplyEffects'](_0x3c7989,_0x5515fa),await _0x14bb74['update'](_0x4e3ca4),await this[_0x3c7896(0x11e)](_0x14bb74,_0x5515fa,_0x3c7989),{'imported':[_0x14bb74],'status':UtilApplications[_0x3c7896(0x104)]};else{_0x14bb74=await Actor[_0x3c7896(0x11c)]({..._0x4e3ca4,'type':this['_actorType']},{'temporary':!![]}),_0x3c7989[_0x3c7896(0xda)]=_0x14bb74,await this[_0x3c7896(0x129)](_0x18c391,_0x4e3ca4,_0x3c7989,_0x5515fa),await this[_0x3c7896(0x13b)](_0x3c7989,_0x5515fa);const _0x2e9385=await this[_0x3c7896(0xef)][_0x3c7896(0x112)](_0x14bb74);await this[_0x3c7896(0x11e)](_0x2e9385,_0x5515fa,_0x3c7989);}return{'imported':[_0x14bb74],'status':UtilApplications['TASK_EXIT_COMPLETE']};}else return _0x1cc358[_0x3c7896(0xc1)]&&(await _0x14bb74['deleteEmbeddedDocuments'](_0x3c7896(0xf0),_0x14bb74['items']['map'](_0x16b01b=>_0x16b01b['id'])),await _0x14bb74['deleteEmbeddedDocuments'](_0x3c7896(0xc6),_0x14bb74[_0x3c7896(0xee)][_0x3c7896(0xcf)](_0x3e929b=>_0x3e929b['id']))),await this[_0x3c7896(0x129)](_0x18c391,_0x4e3ca4,_0x3c7989,_0x5515fa),await this['_pImportEntry_pApplyEffects'](_0x3c7989,_0x5515fa),await _0x14bb74[_0x3c7896(0xe7)](_0x4e3ca4),await game['actors'][_0x3c7896(0x100)](_0x14bb74['id'],_0x14bb74),await this[_0x3c7896(0x11e)](_0x14bb74,_0x5515fa,_0x3c7989),{'imported':[_0x14bb74],'status':_0x1cc358['isOverwrite']?UtilApplications[_0x3c7896(0x104)]:UtilApplications[_0x3c7896(0xde)]};}}async[_0x43424b(0x13b)](_0x178d46,_0x458c84){const _0xb8a9ed=_0x43424b;if(!_0x178d46[_0xb8a9ed(0xee)]?.['length'])return;const _0x2d6bfd=_0x458c84['isTemp']||this[_0xb8a9ed(0xef)]!=null;await UtilActors['pAddActorEffects'](_0x178d46[_0xb8a9ed(0xda)],_0x178d46[_0xb8a9ed(0xee)],{'isTemporary':_0x2d6bfd});}async[_0x43424b(0x11e)](_0x4e5aa4,_0x11b5a1,_0x26e7e3){const _0x39a384=_0x43424b;if(!_0x26e7e3[_0x39a384(0x11a)])return;for(const _0x3fd3da of _0x26e7e3[_0x39a384(0x11a)]){await _0x3fd3da({'actor':_0x4e5aa4,'isTemp':_0x11b5a1[_0x39a384(0xc8)],'isPack':this['_pack']!=null,'pack':this[_0x39a384(0xef)]});}}[_0x43424b(0xc7)](){const _0x26353d=_0x43424b;throw new Error(_0x26353d(0xff));}[_0x43424b(0x129)](){const _0x244fb5=_0x43424b;throw new Error(_0x244fb5(0xff));}[_0x43424b(0x133)](_0x6b9115){const _0x2a66d5=_0x43424b;return this[_0x2a66d5(0xc3)][_0x2a66d5(0xb4)](_0x3c0c53=>Vetools['hasTokenUrl'](_0x3c0c53,_0x6b9115));}[_0x43424b(0x10d)](_0x522811){const _0x518fe2=_0x43424b,_0x1be3da=this[_0x518fe2(0xc3)]['find'](_0x331a68=>Vetools['hasTokenUrl'](_0x331a68,_0x522811));if(_0x1be3da)return Vetools[_0x518fe2(0x115)](_0x1be3da,_0x522811);return _0x518fe2(0xd3);}async[_0x43424b(0x140)](_0x1f11e4,_0x1e1aab,_0x4b6928,_0x549e7b){const _0x8a6d0b=_0x43424b;_0x549e7b=_0x549e7b||{},_0x1e1aab[_0x8a6d0b(0x141)]=this[_0x8a6d0b(0x13f)](_0x1f11e4);let _0x3c9d94=_0x549e7b[_0x8a6d0b(0xc2)]?null:Vetools[_0x8a6d0b(0xba)](_0x4b6928);if(!_0x3c9d94){if(this[_0x8a6d0b(0x133)](_0x1f11e4))_0x3c9d94=this[_0x8a6d0b(0x10d)](_0x1f11e4);else{const _0x188d4c=await this[_0x8a6d0b(0xf3)](_0x1f11e4);if(_0x188d4c)_0x3c9d94=_0x188d4c;else _0x3c9d94=this['_pImportEntry_getTokenImage'](_0x1f11e4);}}_0x1e1aab[_0x8a6d0b(0xd6)]=_0x3c9d94,_0x1e1aab[_0x8a6d0b(0x132)]=this['_actorType'],_0x1e1aab[_0x8a6d0b(0x101)]=this['_getActorFlags'](_0x1f11e4);}[_0x43424b(0x13f)](_0x55de63){const _0x49b8ee=_0x43424b;return DataConverter[_0x49b8ee(0x10a)](_0x55de63);}[_0x43424b(0x10f)](_0x49c180){const _0x157120=_0x43424b;return{[SharedConsts[_0x157120(0xf1)]]:{'page':this[_0x157120(0x108)],'source':_0x49c180['source'],'hash':UrlUtil['URL_TO_HASH_BUILDER'][this['_page']](_0x49c180)}};}async[_0x43424b(0xf3)](_0x4b5e58){const _0x52e221=_0x43424b;for(const _0x2e9c0d of this['_props']){const _0x437e10=await UtilCompendium['pGetCompendiumImage'](_0x2e9c0d,_0x4b5e58);if(_0x437e10&&!_0x437e10['toLowerCase']()[_0x52e221(0xd7)](_0x52e221(0x139)))return _0x437e10;}return null;}async[_0x43424b(0xb7)](_0x21572e,_0x36d88e,_0x1b18de){const _0x6e5917=_0x43424b;let _0x274cd6=0x1;switch(_0x21572e[_0x6e5917(0xfc)]||SZ_MEDIUM){case'T':_0x274cd6=0.5;break;case'L':_0x274cd6=0x2;break;case'H':_0x274cd6=0x3;break;case'G':_0x274cd6=0x4;break;}let _0x23b1bb=0x0,_0xaa4b41=0x0;(_0x21572e[_0x6e5917(0x113)]||[])['forEach'](_0x3a0a74=>{const _0x3b9d8f=_0x6e5917;_0x3a0a74=_0x3a0a74['replace'](Parser[_0x3b9d8f(0xdc)],'');const _0x165773=/(blindsight|darkvision|tremorsense|truesight)\s*(\d+)/i[_0x3b9d8f(0x123)](_0x3a0a74);if(_0x165773){const _0x4dba67=Number(_0x165773[0x2]);switch(_0x165773[0x1]){case _0x3b9d8f(0xd5):_0x23b1bb=Math['max'](_0x23b1bb,_0x4dba67);break;case _0x3b9d8f(0xc0):case _0x3b9d8f(0xd0):case'truesight':_0xaa4b41=Math[_0x3b9d8f(0x138)](_0xaa4b41,_0x4dba67);break;}}}),_0x36d88e[_0x6e5917(0xf6)]={...this[_0x6e5917(0x103)][_0x6e5917(0xed)]({'configGroup':_0x1b18de,'maxDimSight':_0x23b1bb,'maxBrightSight':_0xaa4b41}),'name':UtilApplications[_0x6e5917(0xe2)](_0x21572e[_0x6e5917(0xf2)]||_0x21572e[_0x6e5917(0x141)]),'img':this['_pImportEntry_getTokenImage'](_0x21572e),'width':_0x274cd6,'height':_0x274cd6,'scale':0x1,'elevation':0x0,'rotation':0x0,'actorLink':![],'actorData':{},'flags':{},'effects':[],'randomImg':![]};}static[_0x43424b(0xed)]({configGroup:_0x432783,maxDimSight:_0x23ea07,maxBrightSight:_0x1cf83c}){const _0x29ee7d=_0x43424b,_0x29c31b=UtilGameSettings['getSafe'](_0x29ee7d(0xb8),'defaultToken')||{};if(Config[_0x29ee7d(0xf9)](_0x432783,_0x29ee7d(0x13c))!==ConfigConsts['C_USE_GAME_DEFAULT'])_0x29c31b[_0x29ee7d(0x13e)]=Config[_0x29ee7d(0xf9)](_0x432783,_0x29ee7d(0x13c));if(Config['get'](_0x432783,_0x29ee7d(0xfa))!==ConfigConsts[_0x29ee7d(0x11d)])_0x29c31b[_0x29ee7d(0xbc)]=Config[_0x29ee7d(0xf9)](_0x432783,'tokenIsAddVision')===ConfigConsts[_0x29ee7d(0xe0)];if(Config[_0x29ee7d(0xf9)](_0x432783,_0x29ee7d(0xdd))!==ConfigConsts[_0x29ee7d(0x11d)])_0x29c31b[_0x29ee7d(0xfd)]=Config['get'](_0x432783,_0x29ee7d(0xdd));if(Config[_0x29ee7d(0xf9)](_0x432783,_0x29ee7d(0xea))!==ConfigConsts[_0x29ee7d(0x11d)])_0x29c31b[_0x29ee7d(0xb0)]=Config[_0x29ee7d(0xf9)](_0x432783,_0x29ee7d(0xea));if(Config[_0x29ee7d(0xf9)](_0x432783,'tokenBar1Attribute')!==ConfigConsts[_0x29ee7d(0x11d)])MiscUtil[_0x29ee7d(0x100)](_0x29c31b,_0x29ee7d(0x137),'attribute',Config[_0x29ee7d(0xf9)](_0x432783,_0x29ee7d(0x10c)));if(Config['get'](_0x432783,_0x29ee7d(0xdf))!==ConfigConsts[_0x29ee7d(0x11d)])MiscUtil[_0x29ee7d(0x100)](_0x29c31b,_0x29ee7d(0xbe),'attribute',Config[_0x29ee7d(0xf9)](_0x432783,'tokenBar2Attribute'));if(Config['get'](_0x432783,_0x29ee7d(0xf4))!==ConfigConsts['C_USE_GAME_DEFAULT'])_0x29c31b[_0x29ee7d(0xb5)]=_0x23ea07;if(Config[_0x29ee7d(0xf9)](_0x432783,_0x29ee7d(0xbd))!==ConfigConsts[_0x29ee7d(0x11d)])_0x29c31b[_0x29ee7d(0xec)]=_0x1cf83c;return _0x29c31b;}['_pImportEntry_fillData_Abilities'](_0xb507df,_0x46a7c4,_0x5745d8){const _0x2950e5=_0x43424b,_0x195c88={};Parser['ABIL_ABVS'][_0x2950e5(0xe1)](_0x221e5a=>{const _0x1c28d1=_0x2950e5;let _0x3ea3b3=0x0;const _0x110a53=_0xb507df[_0x221e5a]??0x0,_0x58dc4d=Parser[_0x1c28d1(0x12f)](_0x110a53);if(_0xb507df[_0x1c28d1(0xb1)]&&_0xb507df[_0x1c28d1(0xb1)][_0x221e5a]){const _0x266b81=Number(_0xb507df[_0x1c28d1(0xb1)][_0x221e5a]);if(!isNaN(_0x266b81)){const _0x953b6a=Parser['getAbilityModNumber'](_0x110a53),_0x1dd99a=_0x953b6a+(_0x5745d8[_0x1c28d1(0x105)]||_0x5745d8['pb']),_0x4cb56a=_0x953b6a+0x2*(_0x5745d8[_0x1c28d1(0x105)]||_0x5745d8['pb']);if(_0x1dd99a===_0x266b81)_0x3ea3b3=0x1;else{if(_0x4cb56a===_0x266b81)_0x3ea3b3=0x2;else{const _0x1a0042=Math[_0x1c28d1(0xd2)](_0x266b81-_0x1dd99a),_0x10e745=Math[_0x1c28d1(0xd2)](_0x266b81-_0x4cb56a);if(_0x1a0042<_0x10e745)_0x3ea3b3=0x1;else _0x3ea3b3=0x2;const _0x24f732=_0x3ea3b3===0x2?_0x4cb56a:_0x1dd99a;console['warn'](...LGT,_0x1c28d1(0x130)+_0xb507df['name']+'\x22\x20('+_0xb507df[_0x1c28d1(0xb3)]+_0x1c28d1(0xc9)+_0x221e5a+_0x1c28d1(0xfe)+_0xb507df[_0x1c28d1(0xb1)][_0x221e5a]+_0x1c28d1(0xe8)+(_0x3ea3b3===0x2?_0x1c28d1(0x134):'proficient')+_0x1c28d1(0xb9)+UiUtil[_0x1c28d1(0xc4)](_0x24f732)+_0x1c28d1(0xdb));}}}}_0x195c88[_0x221e5a]={'value':_0x110a53,'proficient':_0x3ea3b3,'mod':_0x58dc4d};}),_0x46a7c4[_0x2950e5(0xe4)]=_0x195c88;}['_getBiographyValue'](_0x593e39,_0x1a674b,{isImportText:_0x547143,isImportImages:_0x13254a}={}){const _0x3c37d9=_0x43424b;if(!_0x547143&&!_0x13254a||!_0x1a674b||!(_0x1a674b[_0x3c37d9(0xbb)]&&_0x547143||_0x1a674b[_0x3c37d9(0x114)]&&_0x13254a))return'';return[_0x13254a&&_0x1a674b[_0x3c37d9(0x114)]&&_0x1a674b['images'][_0x3c37d9(0xe5)]?Renderer[_0x3c37d9(0xf9)]()[_0x3c37d9(0x116)](!![])[_0x3c37d9(0xd8)]({'type':_0x3c37d9(0xbb),'entries':[_0x1a674b[_0x3c37d9(0x114)][0x0]]}):null,Renderer[_0x3c37d9(0xfb)][_0x3c37d9(0x119)]({'entity':_0x593e39,'fluff':_0x1a674b,'isImageTab':![]}),_0x13254a&&_0x1a674b[_0x3c37d9(0x114)]&&_0x1a674b[_0x3c37d9(0x114)][_0x3c37d9(0xe5)]>0x1?Renderer['get']()[_0x3c37d9(0x116)](!![])[_0x3c37d9(0xd8)]({'type':_0x3c37d9(0xbb),'entries':[..._0x1a674b[_0x3c37d9(0x114)][_0x3c37d9(0xd4)](0x1)]}):null][_0x3c37d9(0x136)](Boolean)[_0x3c37d9(0x125)]('');}[_0x43424b(0x120)](_0x599527,_0x875e0e){const _0x1e133c=_0x43424b;Object[_0x1e133c(0x124)](_0x875e0e,DataConverter['getActorDamageResImmVulnConditionImm'](_0x599527));}async[_0x43424b(0x143)](_0x32fc29,_0x3ffe87,_0x4123e8,_0x87a9ba,{offensiveAbility:_0x3f974d,damageParts:_0x981780,formula:_0xfa9cae,rangeShort:_0x12d649,rangeLong:_0x3aa805,actionType:_0x301d5e,isProficient:_0x1dcdab,description:_0x4af4d3,saveAbility:_0x5c1b20,saveDc:_0x32bdff,saveScaling:_0x38edac,attackBonus:_0x419436,_foundryData:_0x104d97,foundryData:_0x236573,_foundryFlags:_0x471349,foundryFlags:_0x8806cb,img:_0x3d7d04,isSiegeWeapon:_0x49d160,isMagical:_0x52f8e2}){const _0x22b0ce=_0x43424b,_0xe69032=await DataConverterItem['pGetActionWeaponDetails']({'size':_0x32fc29[_0x22b0ce(0xfc)],'action':_0x4123e8,'damageParts':_0x981780,'isSiegeWeapon':_0x49d160,'isMagical':_0x52f8e2}),_0x220ab0=DataConverter['getCombinedFoundryData'](_0x236573,_0x104d97),_0x360f13=DataConverter['getCombinedFoundryFlags'](_0x8806cb,_0x471349),_0x1d94f3={'name':UtilApplications['getCleanEntityName'](Renderer['stripTags'](_0x4123e8['name']||'')||'\x20'),'type':_0x22b0ce(0xce),'data':{'source':DataConverter['getSourceWithPagePart'](_0x32fc29),'description':{'value':_0x4af4d3},'damage':{'parts':_0xe69032['damageParts'],'versatile':_0xe69032[_0x22b0ce(0xca)]},'range':{'value':_0x12d649,'long':_0x3aa805,'units':'ft'},'actionType':_0x301d5e,'proficient':_0x1dcdab,'quantity':0x1,'weight':_0xe69032['weight'],'price':_0xe69032[_0x22b0ce(0x122)],'rarity':_0xe69032[_0x22b0ce(0xf8)],'weaponType':_0xe69032[_0x22b0ce(0xe6)],'properties':_0xe69032[_0x22b0ce(0x11f)],'attuned':_0xe69032[_0x22b0ce(0xc5)],'attunement':_0xe69032[_0x22b0ce(0x12c)]?CONFIG[_0x22b0ce(0x106)]['attunementTypes'][_0x22b0ce(0x12b)]:_0xe69032[_0x22b0ce(0x12c)],'ability':_0x3f974d,'equipped':!![],'identified':_0xe69032['identified'],'activation':{'type':'action','cost':0x1,'condition':''},'duration':{'value':null,'units':''},'target':{'value':null,'units':'','type':''},'uses':{'value':0x0,'max':0x0,'per':null},'attackBonus':_0x419436||_0xe69032['attackBonus']||0x0,'chatFlavor':'','critical':null,'formula':_0xfa9cae,'save':{'ability':_0x5c1b20,'dc':_0x32bdff,'scaling':_0x38edac},..._0x220ab0||{}},'img':_0xe69032[_0x22b0ce(0xd6)]||_0x3d7d04,'flags':{..._0x360f13||{}},'effects':[]};_0x87a9ba[_0x22b0ce(0x142)][_0x22b0ce(0x126)](_0x1d94f3);}['_getSavingThrowData'](_0x539e62){const _0x3f0e5a=_0x43424b;if(!_0x539e62)return MiscUtil[_0x3f0e5a(0x10b)](ImportListActor[_0x3f0e5a(0x135)]);let _0xc30205=![],{saveAbility:_0x57c8de,saveScaling:_0x3e2bf8,saveDc:_0x29fed1}=MiscUtil[_0x3f0e5a(0x10b)](ImportListActor[_0x3f0e5a(0x135)]);const _0x557fa6=/(?:{@dc (\d+)}|DC\s*(\d+))\s*(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma)/i['exec'](_0x539e62);return _0x557fa6&&(_0x29fed1=Number(_0x557fa6[0x1]||_0x557fa6[0x2]),_0x57c8de=_0x557fa6[0x3][_0x3f0e5a(0xeb)]()['substring'](0x0,0x3),_0x3e2bf8=_0x3f0e5a(0x118),_0xc30205=!![]),{'saveAbility':_0x57c8de,'saveScaling':_0x3e2bf8,'saveDc':_0x29fed1,'isFoundParse':_0xc30205};}async[_0x43424b(0xcb)](_0x37ec7c){const _0x1b1168=_0x43424b;if(!this[_0x1b1168(0xb6)]?.[_0x1b1168(0xe5)]||!this[_0x1b1168(0x144)])return null;const _0x3a20af={};for(const {prop:_0x2749ce,propBrewAdditionalData:_0x2bf517}of this['_propGroups']){const _0x37d87f=await DataConverter[_0x1b1168(0x13a)](_0x37ec7c,{'propBrew':_0x2bf517,'fnLoadJson':this[_0x1b1168(0x144)],'propJson':_0x2749ce});if(_0x37d87f)Object[_0x1b1168(0x124)](_0x3a20af,_0x37d87f);}return Object[_0x1b1168(0xcd)](_0x3a20af)[_0x1b1168(0xe5)]?_0x3a20af:null;}}ImportListActor['_DEFAULT_SAVING_THROW_DATA']={'saveAbility':'','saveScaling':_0x43424b(0xf7),'saveDc':null},ImportListActor[_0x43424b(0x128)]=class{constructor(_0x564326){const _0x25eb98=_0x43424b;_0x564326=_0x564326||{},this[_0x25eb98(0xda)]=_0x564326[_0x25eb98(0xda)],this[_0x25eb98(0x110)]=_0x564326[_0x25eb98(0x110)],this['items']=[],this['effects']=[],this[_0x25eb98(0x11a)]=[];}};export{ImportListActor};
+import {ImportedDocument, ImportList, ImportSummary} from "./ImportList.js";
+import {DataConverter} from "./DataConverter.js";
+import {Vetools} from "./Vetools.js";
+import {Config} from "./Config.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {UtilActors} from "./UtilActors.js";
+import {LGT} from "./Util.js";
+import {Consts} from "./Consts.js";
+import {UtilCompendium} from "./UtilCompendium.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {DataConverterItem} from "./DataConverterItem.js";
+import {UtilGameSettings} from "./UtilGameSettings.js";
+import {ConfigConsts} from "./ConfigConsts.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+import {UtilDocuments} from "./UtilDocuments.js";
+
+class ImportListActor extends ImportList {
+	static get FOLDER_TYPE () { return "Actor"; }
+
+	/**
+	 * @param applicationOpts
+	 * @param externalData
+	 * @param subclassOpts
+	 * @param actorImporterOpts Options object.
+	 * @param actorImporterOpts.actorType
+	 */
+	constructor (applicationOpts, externalData, subclassOpts, actorImporterOpts) {
+		super(applicationOpts, externalData, subclassOpts);
+		this._actorType = actorImporterOpts.actorType;
+	}
+
+	// region Shared
+	/**
+	 * @param imp
+	 * @param importOpts Options object.
+	 * @param [importOpts.isTemp] if the item should be temporary, and displayed.
+	 * @param [importOpts.isDataOnly] If the item should not be imported, but its data should be returned.
+	 * @param [importOpts.isImportToTempDirectory]
+	 *
+	 * @param [importOpts.isSkipFolder] If the folder-setting step should be skipped.
+	 */
+	async _pImportEntry (imp, importOpts) {
+		importOpts = importOpts || {};
+
+		if ((importOpts.isTemp || importOpts.isDataOnly) && importOpts.isImportToTempDirectory) throw new Error(`Incompatible options "isTemp"/"isDataOnly" and "isImportToTempDirectory" supplied!`);
+		if (this._pack && importOpts.isImportToTempDirectory) throw new Error(`Option "isImportToTempDirectory" cannot be used in conjunction with compendium imports!`);
+
+		console.log(...LGT, `Importing ${this._actorType} "${imp.name}" (from "${Parser.sourceJsonToAbv(imp.source)}")`);
+
+		if (this._actor) throw new Error(`Cannot import ${this._actorType} to actor!`);
+
+		let actor;
+		const duplicateMeta = this._getDuplicateMeta({entity: imp, importOpts});
+		if (duplicateMeta.isSkip) {
+			return new ImportSummary({
+				status: UtilApplications.TASK_EXIT_SKIPPED_DUPLICATE,
+				imported: [
+					new ImportedDocument({
+						isExisting: true,
+						document: duplicateMeta.existing,
+					}),
+				],
+			});
+		} else if (duplicateMeta.isOverwrite) {
+			importOpts.isSkipFolder = true;
+			actor = duplicateMeta.existing;
+		} else {
+			actor = this._pack
+				? null
+				// Create the entity, so we have access to its ID
+				: await Actor.create(
+					{name: Consts.ACTOR_TEMP_NAME, type: this._actorType, flags: {[SharedConsts.MODULE_NAME_FAKE]: {isImporterTempActor: true}}},
+					{renderSheet: !!importOpts.isTemp, temporary: !!importOpts.isTemp},
+				);
+		}
+
+		const {dataBuilderOpts, actorData} = await this._pImportEntry_pGetImportMetadata(actor, imp, importOpts);
+
+		const additionalData = await this._pGetAdditionalData(imp);
+		if (additionalData) Object.assign(actorData.data || {}, additionalData);
+
+		const additionalFlags = await this._pGetAdditionalFlags(imp);
+		if (additionalFlags) Object.assign(actorData.flags || {}, additionalFlags);
+
+		if (importOpts.isTemp) {
+			actor = await Actor.create({...actorData, type: this._actorType}, {renderSheet: !importOpts.isDataOnly, temporary: true});
+			dataBuilderOpts.actor = actor;
+
+			await this._pImportEntry_pFillItems(imp, actorData, dataBuilderOpts, importOpts);
+			await this._pImportEntry_pApplyEffects(dataBuilderOpts, importOpts);
+
+			// Handle any post-item item updates
+			await this._pImportEntry_pHandlePostItemItemUpdates(actor, importOpts, dataBuilderOpts);
+
+			if (importOpts.isDataOnly) {
+				return new ImportSummary({
+					status: UtilApplications.TASK_EXIT_COMPLETE_DATA_ONLY,
+					imported: [
+						new ImportedDocument({
+							document: actor,
+						}),
+					],
+				});
+			}
+
+			return new ImportSummary({
+				status: UtilApplications.TASK_EXIT_COMPLETE,
+				imported: [
+					new ImportedDocument({
+						document: actor,
+					}),
+				],
+			});
+		} else if (this._pack) {
+			if (duplicateMeta.isOverwrite) {
+				dataBuilderOpts.actor = actor;
+
+				await actor.deleteEmbeddedDocuments("Item", actor.items.map(it => it.id));
+				await actor.deleteEmbeddedDocuments("ActiveEffect", actor.effects.map(it => it.id));
+
+				await this._pImportEntry_pFillItems(imp, actorData, dataBuilderOpts, importOpts);
+				await this._pImportEntry_pApplyEffects(dataBuilderOpts, importOpts);
+
+				await UtilDocuments.pUpdateDocument(actor, actorData);
+
+				// Handle any post-item item updates (use the new actor reference, just in case)
+				await this._pImportEntry_pHandlePostItemItemUpdates(actor, importOpts, dataBuilderOpts);
+
+				await this._pImportEntry_pAddToTargetTableIfRequired([actor], duplicateMeta);
+
+				return new ImportSummary({
+					status: UtilApplications.TASK_EXIT_COMPLETE_UPDATE_OVERWRITE,
+					imported: [
+						new ImportedDocument({
+							document: actor,
+						}),
+					],
+				});
+			} else {
+				actor = await Actor.create({...actorData, type: this._actorType}, {temporary: true});
+				dataBuilderOpts.actor = actor;
+
+				await this._pImportEntry_pFillItems(imp, actorData, dataBuilderOpts, importOpts);
+				await this._pImportEntry_pApplyEffects(dataBuilderOpts, importOpts);
+
+				const actorImported = await this._pack.importDocument(actor);
+
+				// Handle any post-item item updates; switch to using the "real" actor, which has IDs populated on items
+				await this._pImportEntry_pHandlePostItemItemUpdates(actorImported, importOpts, dataBuilderOpts);
+
+				await this._pImportEntry_pAddToTargetTableIfRequired([actor], duplicateMeta);
+
+				return new ImportSummary({
+					status: UtilApplications.TASK_EXIT_COMPLETE,
+					imported: [
+						new ImportedDocument({
+							document: actor,
+						}),
+					],
+				});
+			}
+		} else {
+			// If we're updating an existing entity, strip its embedded documents, as passing in an updated
+			//   `items`/`effects` array only adds items.
+			if (duplicateMeta.isOverwrite) {
+				await actor.deleteEmbeddedDocuments("Item", actor.items.map(it => it.id));
+				await actor.deleteEmbeddedDocuments("ActiveEffect", actor.effects.map(it => it.id));
+			}
+
+			await this._pImportEntry_pFillItems(imp, actorData, dataBuilderOpts, importOpts);
+			await this._pImportEntry_pApplyEffects(dataBuilderOpts, importOpts);
+
+			// Set the actor's data
+			await UtilDocuments.pUpdateDocument(actor, actorData);
+
+			await actor.unsetFlag(SharedConsts.MODULE_NAME_FAKE, "isImporterTempActor");
+
+			await game.actors.set(actor.id, actor);
+
+			// Handle any post-item item updates
+			await this._pImportEntry_pHandlePostItemItemUpdates(actor, importOpts, dataBuilderOpts);
+
+			return new ImportSummary({
+				status: duplicateMeta.isOverwrite ? UtilApplications.TASK_EXIT_COMPLETE_UPDATE_OVERWRITE : UtilApplications.TASK_EXIT_COMPLETE,
+				imported: [
+					new ImportedDocument({
+						isExisting: duplicateMeta.isOverwrite,
+						document: actor,
+					}),
+				],
+			});
+		}
+	}
+
+	/** Run after any item effects have been applied. */
+	async _pImportEntry_pApplyEffects (dataBuilderOpts, importOpts) {
+		if (!dataBuilderOpts.effects?.length) return;
+		const isTemporary = importOpts.isTemp || this._pack != null;
+		await UtilActors.pAddActorEffects(dataBuilderOpts.actor, dataBuilderOpts.effects, {isTemporary});
+	}
+
+	async _pImportEntry_pHandlePostItemItemUpdates (actor, importOpts, dataBuilderOpts) {
+		if (!dataBuilderOpts.postItemItemUpdates) return;
+
+		for (const pFnUpdate of dataBuilderOpts.postItemItemUpdates) {
+			await pFnUpdate({
+				actor,
+				isTemp: importOpts.isTemp,
+				isPack: this._pack != null,
+				pack: this._pack,
+			});
+		}
+	}
+
+	_pImportEntry_pGetImportMetadata () { throw new Error(`Unimplemented!`); }
+
+	_pImportEntry_pFillItems () { throw new Error(`Unimplemented!`); }
+
+	_pImportEntry_pHasTokenImage (it) { return this._props.pSerialAwaitSome(prop => Vetools.pHasTokenUrl(prop, it)); }
+
+	async _pImportEntry_pGetTokenImage (it) {
+		const getters = [
+			this._pImportEntry_pGetTokenImage_fromPlutonium.bind(this, it),
+			this._pImportEntry_pGetTokenImage_fromFoundry.bind(this, it),
+		];
+		if (Config.get("import", "isPreferFoundryTokens")) getters.reverse();
+
+		for (const getter of getters) {
+			const url = await getter();
+			if (url) return url;
+		}
+
+		return Vetools.getBlankTokenUrl();
+	}
+
+	async _pImportEntry_pGetTokenImage_fromPlutonium (it) {
+		const prop = await this._props.pSerialAwaitFind(prop => Vetools.pHasTokenUrl(prop, it));
+		if (prop) return Vetools.pGetTokenUrl(prop, it);
+	}
+
+	async _pImportEntry_pGetTokenImage_fromFoundry (it) {
+		return this._pGetCompendiumToken(it);
+	}
+	// endregion
+
+	// region Base data
+	/**
+	 * @param it
+	 * @param act
+	 * @param fluff
+	 * @param [opts]
+	 * @param [opts.isUseTokenImageAsPortrait]
+	 * @param [opts.img]
+	 */
+	async _pImportEntry_pFillBase (it, act, fluff, opts) {
+		opts = opts || {};
+
+		act.name = this._getActorSheetName(it);
+
+		act.img = opts.img || (await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await this._pImportEntry_pFillBase_pGetPortraitImagePath(it, fluff, opts),
+		));
+		act.type = this._actorType;
+
+		act.flags = this._getActorFlags(it);
+	}
+
+	async _pImportEntry_pFillBase_pGetPortraitImagePath (it, fluff, opts) {
+		const getters = [
+			this._pImportEntry_pFillBase_pGetPortraitImagePath_fromPlutonium.bind(this, it, fluff, opts),
+			this._pImportEntry_pFillBase_pGetPortraitImagePath_fromFoundry.bind(this, it, opts),
+		];
+		if (Config.get("import", "isPreferFoundryImages")) getters.reverse();
+
+		for (const getter of getters) {
+			const url = await getter();
+			if (url) return url;
+		}
+
+		return this._pImportEntry_pGetTokenImage(it); // fallback on 5etools default "blank token"
+	}
+
+	async _pImportEntry_pFillBase_pGetPortraitImagePath_fromPlutonium (it, fluff, opts) {
+		const fromFluff = opts.isUseTokenImageAsPortrait ? null : await Vetools.pGetImageUrlFromFluff(fluff);
+		if (fromFluff) return fromFluff;
+
+		if (await this._pImportEntry_pHasTokenImage(it)) return this._pImportEntry_pGetTokenImage(it);
+	}
+
+	async _pImportEntry_pFillBase_pGetPortraitImagePath_fromFoundry (it, opts) {
+		const fromCompendium = opts.isUseTokenImageAsPortrait ? null : await this._pImportEntry_pFillBase_pGetCompendiumImage(it);
+		if (fromCompendium) return fromCompendium;
+
+		return this._pGetCompendiumToken(it);
+	}
+
+	async _pImportEntry_pFillFolder (it, act, importOpts) {
+		if (importOpts.isSkipFolder) return;
+
+		if (importOpts.isImportToTempDirectory) {
+			const folderId = await this._pImportEntry_pCreateTempDirectoryGetId();
+			if (folderId) act.folder = folderId;
+			return;
+		}
+
+		if (importOpts.isTemp || this._pack) return;
+
+		const folderId = await this._pImportEntry_pGetFolderId(it);
+		if (folderId) act.folder = folderId;
+	}
+
+	_getActorSheetName (it) {
+		return UtilDataConverter.getNameWithSourcePart(it);
+	}
+
+	_getActorFlags (it) {
+		return {
+			[SharedConsts.MODULE_NAME_FAKE]: {
+				page: this._page,
+				source: it.source,
+				hash: UrlUtil.URL_TO_HASH_BUILDER[this._page](it),
+			},
+		};
+	}
+
+	async _pImportEntry_pFillBase_pGetCompendiumImage (it) {
+		for (const prop of this._props) {
+			const fromCompendium = await UtilCompendium.pGetCompendiumImage(prop, it);
+			// Avoid using the default "mystery-man" image
+			if (fromCompendium && !fromCompendium.toLowerCase().includes("mystery-man.svg")) return fromCompendium;
+		}
+		return null;
+	}
+
+	async _pGetCompendiumToken (it) {
+		for (const prop of this._props) {
+			const dataFromCompendium = await UtilCompendium.getSrdCompendiumEntity(prop, it);
+			const tokenUrl = dataFromCompendium?.token?.img;
+			// Avoid using the default "mystery-man" image
+			if (tokenUrl && !tokenUrl.toLowerCase().includes("mystery-man.svg")) return tokenUrl;
+		}
+		return null;
+	}
+	// endregion
+
+	// region Token data
+	async _pImportEntry_pFillToken ({importable, actor, img = null}) {
+		let dimensions = 1;
+		switch (importable.size || SZ_MEDIUM) {
+			case "T": dimensions = 0.5; break;
+			case "L": dimensions = 2; break;
+			case "H": dimensions = 3; break;
+			case "G": dimensions = 4; break;
+		}
+
+		let maxDimSight = 0;
+		let maxBrightSight = 0;
+		(importable.senses || []).forEach(sens => {
+			sens = sens.replace(Parser._numberCleanRegexp, "");
+			const mSense = /(blindsight|darkvision|tremorsense|truesight)\s*(\d+)/i.exec(sens);
+			if (mSense) {
+				const num = Number(mSense[2]);
+				switch (mSense[1]) {
+					case "darkvision": maxDimSight = Math.max(maxDimSight, num); break;
+					case "blindsight":
+					case "tremorsense":
+					case "truesight": maxBrightSight = Math.max(maxBrightSight, num); break;
+				}
+			}
+		});
+
+		maxDimSight = Config.getMetricNumber({configGroup: this._configGroup, configKey: "isTokenMetric", originalValue: maxDimSight || 0, originalUnit: "ft"});
+		maxBrightSight = Config.getMetricNumber({configGroup: this._configGroup, configKey: "isTokenMetric", originalValue: maxBrightSight || 0, originalUnit: "ft"});
+
+		actor.token = {
+			...this.constructor._getMergedTokenData({configGroup: this._configGroup, maxDimSight, maxBrightSight}),
+			name: UtilApplications.getCleanEntityName(importable._displayName || importable.name),
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				img || (await this._pImportEntry_pGetTokenImage(importable)),
+				{imageType: "token"},
+			),
+			width: dimensions,
+			height: dimensions,
+			elevation: 0,
+			rotation: 0,
+
+			actorLink: false,
+			actorData: {},
+			flags: {},
+			effects: [],
+			randomImg: false,
+		};
+	}
+
+	static _getMergedTokenData ({configGroup, maxDimSight, maxBrightSight}) {
+		const out = UtilGameSettings.getSafe("core", "defaultToken") || {};
+
+		if (Config.get(configGroup, "tokenNameDisplay") !== ConfigConsts.C_USE_GAME_DEFAULT) out.displayName = Config.get(configGroup, "tokenNameDisplay");
+
+		if (Config.get(configGroup, "tokenIsAddVision") !== ConfigConsts.C_USE_GAME_DEFAULT) out.vision = Config.get(configGroup, "tokenIsAddVision") === ConfigConsts.C_BOOL_ENABLED;
+
+		if (Config.get(configGroup, "tokenDisposition") !== ConfigConsts.C_USE_GAME_DEFAULT) out.disposition = Config.get(configGroup, "tokenDisposition");
+
+		if (Config.get(configGroup, "tokenBarDisplay") !== ConfigConsts.C_USE_GAME_DEFAULT) out.displayBars = Config.get(configGroup, "tokenBarDisplay");
+		if (Config.get(configGroup, "tokenBar1Attribute") !== ConfigConsts.C_USE_GAME_DEFAULT) MiscUtil.set(out, "bar1", "attribute", Config.get(configGroup, "tokenBar1Attribute"));
+		if (Config.get(configGroup, "tokenBar2Attribute") !== ConfigConsts.C_USE_GAME_DEFAULT) MiscUtil.set(out, "bar2", "attribute", Config.get(configGroup, "tokenBar2Attribute"));
+
+		if (Config.get(configGroup, "tokenDimSight") !== ConfigConsts.C_USE_GAME_DEFAULT) out.dimSight = maxDimSight;
+		if (Config.get(configGroup, "tokenBrightSight") !== ConfigConsts.C_USE_GAME_DEFAULT) out.brightSight = maxBrightSight;
+
+		// region No default setting available
+		if (Config.get(configGroup, "tokenScale") != null) out.scale = Config.get(configGroup, "tokenScale");
+		// endregion
+
+		// region Unused/use sensible defaults
+
+		// lockRotation: false,
+		// dimLight: 0,
+		// brightLight: 0,
+		// sightAngle: 360,
+		// lightAngle: 360,
+
+		// endregion
+
+		return out;
+	}
+	// endregion
+
+	// region Ability data
+	_pImportEntry_fillData_Abilities (it, data, impOpts) {
+		const out = {};
+
+		Parser.ABIL_ABVS.forEach(ab => {
+			let profType = 0;
+			let bonusCheck = "";
+
+			const score = it[ab] ?? 0;
+
+			const mod = Parser.getAbilityModNumber(score);
+
+			if (it.save && it.save[ab]) {
+				const saveNum = Number(it.save[ab]);
+				if (!isNaN(saveNum)) {
+					const abMod = Parser.getAbilityModNumber(score);
+					const profValue = abMod + (impOpts.assumedPb || impOpts.pb);
+					const expertValue = abMod + (2 * (impOpts.assumedPb || impOpts.pb));
+
+					if (profValue === saveNum) profType = 1;
+					else if (expertValue === saveNum) profType = 2;
+					else {
+						// Default to the closest value, and fill the missing difference with a bonus
+						if (saveNum >= expertValue) profType = 2;
+						else if (saveNum >= profValue) profType = 1;
+						else profType = 0;
+
+						bonusCheck = profType === 0 ? saveNum : profType === 1 ? saveNum - profValue : saveNum - expertValue;
+					}
+				}
+			}
+
+			out[ab] = {
+				value: score,
+				proficient: profType,
+				mod,
+				bonuses: {
+					check: bonusCheck,
+					save: "",
+				},
+			};
+		});
+
+		data.abilities = out;
+	}
+	// endregion
+
+	// region Details
+	async _pGetBiographyValue (entity, fluff, {isImportText, isImportImages, additionalHtml} = {}) {
+		if (
+			(!isImportText && !isImportImages && !additionalHtml)
+			|| ![fluff?.entries && isImportText, fluff?.images && isImportImages, additionalHtml].some(Boolean)
+		) return "";
+
+		return UtilDataConverter.pGetWithDescriptionPlugins(() => {
+			return [
+				isImportImages && fluff?.images?.length
+					? Renderer.get().setFirstSection(true).render({type: "entries", entries: [fluff.images[0]]})
+					: null,
+				isImportText && fluff?.entries?.length
+					? Renderer.utils.getFluffTabContent({entity, fluff, isImageTab: false})
+					: null,
+				additionalHtml || null,
+				isImportImages && fluff?.images && fluff?.images.length > 1
+					? Renderer.get().setFirstSection(true).render({type: "entries", entries: [...fluff.images.slice(1)]})
+					: null,
+			].filter(Boolean).join("");
+		});
+	}
+	// endregion
+
+	// region Traits
+	_pImportEntry_fillConditionsDamage (ent, dataTraits) {
+		Object.assign(dataTraits, DataConverter.getActorDamageResImmVulnConditionImm(ent));
+	}
+	// endregion
+
+	// region Items
+	async _pFillWeaponItem (
+		entity,
+		act,
+		action,
+		dataBuilderOpts,
+		{
+			offensiveAbility,
+			damageParts,
+			formula,
+			rangeShort,
+			rangeLong,
+			actionType,
+			isProficient,
+			description,
+			saveAbility,
+			saveDc,
+			saveScaling,
+			attackBonus,
+			_foundryData,
+			foundryData,
+			_foundryFlags,
+			foundryFlags,
+			img,
+			isSiegeWeapon,
+			isMagical,
+		},
+	) {
+		const weaponDetails = await DataConverterItem.pGetActionWeaponDetails({size: entity.size, action, damageParts, isSiegeWeapon, isMagical});
+		const combinedFoundryData = DataConverter.getCombinedFoundryData(foundryData, _foundryData);
+		const combinedFoundryFlags = DataConverter.getCombinedFoundryFlags(foundryFlags, _foundryFlags);
+
+		const itemData = {
+			name: UtilApplications.getCleanEntityName(Renderer.stripTags(action.name || "") || " "),
+			type: "weapon",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(entity),
+				description: {value: description},
+
+				damage: {
+					parts: weaponDetails.damageParts,
+					versatile: weaponDetails.damageVersatile,
+				},
+
+				range: {
+					value: rangeShort,
+					long: rangeLong,
+					units: "ft",
+				},
+				actionType: actionType,
+				proficient: isProficient,
+
+				quantity: 1,
+				weight: weaponDetails.weight,
+				price: weaponDetails.price,
+				rarity: weaponDetails.rarity,
+
+				weaponType: weaponDetails.weaponType,
+				baseItem: weaponDetails.weaponBaseItem,
+				properties: weaponDetails.itemProperties,
+
+				attuned: weaponDetails.attuned,
+				// Force attune items if they have attunement requirements
+				attunement: weaponDetails.attunement ? CONFIG.DND5E.attunementTypes.ATTUNED : weaponDetails.attunement,
+				ability: offensiveAbility,
+				equipped: true,
+				identified: weaponDetails.identified,
+				activation: {
+					type: "action",
+					cost: 1,
+					condition: "",
+				},
+				duration: {
+					value: null,
+					units: "",
+				},
+				target: {
+					value: null,
+					units: "",
+					type: "",
+				},
+				uses: {
+					value: 0,
+					max: 0,
+					per: null,
+				},
+				attackBonus: attackBonus || weaponDetails.attackBonus || null, // Prefer a custom bonus, if we have one
+				chatFlavor: "",
+				critical: {
+					damage: weaponDetails.damageCritical,
+					threshold: weaponDetails.critThreshold,
+				},
+
+				formula,
+				save: {
+					ability: saveAbility,
+					dc: saveDc,
+					scaling: saveScaling,
+				},
+
+				...(combinedFoundryData || {}),
+			},
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				weaponDetails.img || img,
+			),
+			flags: {
+				...(combinedFoundryFlags || {}),
+			},
+			effects: [],
+		};
+
+		dataBuilderOpts.items.push(itemData);
+
+		return itemData;
+	}
+
+	_getSavingThrowData (strEntries) {
+		if (!strEntries) return MiscUtil.copy(ImportListActor._DEFAULT_SAVING_THROW_DATA);
+
+		let isFoundParse = false;
+		let {
+			saveAbility,
+			saveScaling,
+			saveDc,
+		} = MiscUtil.copy(ImportListActor._DEFAULT_SAVING_THROW_DATA);
+
+		const mDc = /(?:{@dc (\d+)}|DC\s*(\d+))\s*(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma)/i.exec(strEntries);
+		if (mDc) {
+			saveDc = Number(mDc[1] || mDc[2]);
+			saveAbility = mDc[3].toLowerCase().substring(0, 3);
+
+			saveScaling = "flat";
+
+			isFoundParse = true;
+		}
+
+		return {saveAbility, saveScaling, saveDc, isFoundParse};
+	}
+	// endregion
+
+	// region Additional data/flags
+	async _pGetAdditionalData (ent) { return this._pGetAdditionalDataOrFlags(ent, "data"); }
+	async _pGetAdditionalFlags (ent) { return this._pGetAdditionalDataOrFlags(ent, "flags"); }
+
+	async _pGetAdditionalDataOrFlags (ent, mode) {
+		if (!this._propsBrewAdditionalData?.length || !this._fnLoadSideData) return null;
+
+		const out = {};
+
+		for (const {prop, propBrewAdditionalData} of this._propGroups) {
+			const outSub = mode === "data"
+				? await DataConverter.pGetAdditionalData_(ent, {propBrew: propBrewAdditionalData, fnLoadJson: this._fnLoadSideData, propJson: prop})
+				: await DataConverter.pGetAdditionalFlags_(ent, {propBrew: propBrewAdditionalData, fnLoadJson: this._fnLoadSideData, propJson: prop});
+			if (outSub) Object.assign(out, outSub);
+		}
+
+		return Object.keys(out).length ? out : null;
+	}
+	// endregion
+}
+ImportListActor._DEFAULT_SAVING_THROW_DATA = {
+	saveAbility: "",
+	saveScaling: "spell",
+	saveDc: null,
+};
+
+ImportListActor.ImportEntryOpts = class {
+	constructor (opts) {
+		opts = opts || {};
+
+		this.actor = opts.actor;
+		this.fluff = opts.fluff;
+
+		this.items = []; // To be filled
+		this.effects = []; // To be filled
+		this.postItemItemUpdates = []; // Update that will be applied after all item updates have been made.
+	}
+};
+
+export {ImportListActor};

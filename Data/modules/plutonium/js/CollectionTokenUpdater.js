@@ -1,78 +1,660 @@
-const _0x43c8=['[\x22\x27]([^\x22\x27]*?)[\x22\x27]','Last\x20Name','update','_rows','join','sightAngle','collection','visionAngle','_gameProp','addClass','map','click','/template/CollectionTokenUpdater.hbs','last','teardown','225921EakpQD','TOKEN.BarValues','Task','Quoted\x20Part\x20or\x20Last\x20Name','Updated\x20Not\x20Configured','exec','(No\x20update)','[name=\x22btn-run\x22]','STR_SEE_CONSOLE','namePermissions','isDispositionActive','isImageActive','lightBright','Failed\x20to\x20update\x20','Updating\x20','nameRegexFormula','...','_addHookBase','find','fromObject','push','_activateListeners_initBtnReset','sidebar','activateListeners','dimLight','_pUpdateToken_populateResourcesUpdate','lightOpacity','model','IS_DEFAULT','Actor','isNameParseSingleQuotes','<button\x20class=\x22btn-5et\x20w-100\x22>Save</button>','_sidebarTab','i18n','_$stageNameQuotes','Failed\x20to\x20save!\x20','lightAngle','getData','_activateListeners_initBtnRun','TOKEN_DISPLAY_MODES','split','pGet','entries','pGetUserBoolean','empty','lightDim','type','error','Updating...','system','_STORAGE_KEY','pGetState','<input\x20class=\x22code\x22\x20type=\x22text\x22>','pRunTasks','You\x20have\x20not\x20yet\x20configured\x20the\x20updater.\x20Are\x20you\x20sure\x20you\x20wish\x20to\x20proceed?','has','dimSight','trim','Template','isVisionActive','lightAlpha','Updated\x20','flat','visionBright','_pUpdateToken_populateDispositionUpdate','Hostile','render','notifications','_pageFilter','state','751826vLYLEE','_getSelectedIds','showVe','Quoted\x20Part\x20or\x20Full\x20Name','978531gWHGyK','getMaxWindowHeight','_pUpdateToken_populateVisionUpdate','pSet','$getSelEnum','brightLight','isHasVision','189033HlOxNE','_DEFAULTS','debounce','<input\x20class=\x22code\x20text-right\x22\x20type=\x22text\x22\x20placeholder=\x22(No\x20update)\x22>','toTitleCase','_getAllAvailableActorBarAttributes','barAttributeCharacter1','barPermissions','_$stageNameRegex','isNameRegexIgnoreCase','localeCompare','name','isNameActive','_pUpdateToken','NameUpdateMode','Quoted\x20Part\x20or\x20First\x20Name','bar1','First\x20Name','nameMode','_activateListeners_pDoLoadAndRender','bar2','activateTab','Neutral','[name=\x22btn-set-template\x22]','_collectionName','img','localize','toku__cb-head','hideVe','Saved!','_activateListeners_initBtnEditTemplate','barAttributeCharacter2','1YgQNGE','$getCbBool','data','values','142123XCdYjG','barAttributeNpc2','MODULE_LOCATION','Bulk\x20Prototype\x20Token\x20Editor','1625805aeJClM','toObject','isNameParseDoubleQuotes','character','getPod','visionDim','_pUpdateToken_populateImageUpdate','get','Full\x20Name','444681WlIVwA','activate','toku__form','6Hewvsa','isResourcesActive','keys','actor','warn','token','_list','sort','close','Continue','disposition','forEach','$getIptInt','isUseSheetImage','barAttributeNpc1','instance','/template/CollectionTokenUpdaterTemplate.hbs','length','npc','displayName','\x27([^\x27]*?)\x27','Regex','Update\x20Complete','(None)','$getIptStr'];const _0x3e27=function(_0xcd1264,_0x84cd91){_0xcd1264=_0xcd1264-0xbe;let _0x43c851=_0x43c8[_0xcd1264];return _0x43c851;};const _0x4a95cd=_0x3e27;(function(_0x488bb2,_0x479648){const _0x4d6cc7=_0x3e27;while(!![]){try{const _0x3210de=-parseInt(_0x4d6cc7(0x15b))+parseInt(_0x4d6cc7(0xff))+-parseInt(_0x4d6cc7(0x123))*parseInt(_0x4d6cc7(0x133))+-parseInt(_0x4d6cc7(0xf4))+-parseInt(_0x4d6cc7(0x11f))*-parseInt(_0x4d6cc7(0xf8))+-parseInt(_0x4d6cc7(0x130))+parseInt(_0x4d6cc7(0x127));if(_0x3210de===_0x479648)break;else _0x488bb2['push'](_0x488bb2['shift']());}catch(_0x1b09bb){_0x488bb2['push'](_0x488bb2['shift']());}}}(_0x43c8,0x7e83b));import{SharedConsts}from'../shared/SharedConsts.js';import{Util}from'./Util.js';import{AppFilterBasic}from'./FilterApplications.js';import{BaseCollectionTool}from'./BaseCollectionTool.js';import{UtilApplications}from'./UtilApplications.js';import{UtilActors}from'./UtilActors.js';class CollectionTokenUpdater extends BaseCollectionTool{constructor(){const _0x525c9f=_0x3e27;super({'title':_0x525c9f(0x126),'template':SharedConsts[_0x525c9f(0x125)]+_0x525c9f(0x158),'width':0x3c0,'height':Util[_0x525c9f(0xf9)](),'resizable':!![]},_0x525c9f(0x136)),this[_0x525c9f(0xf2)]=new AppFilterBasic(),this['_list']=null,this['_$btnReset']=null;}[_0x4a95cd(0xc5)](_0x4ab2f8){const _0x29863a=_0x4a95cd;super['activateListeners'](_0x4ab2f8),this[_0x29863a(0xd4)](_0x4ab2f8),this[_0x29863a(0x11d)](_0x4ab2f8),this[_0x29863a(0xc3)](_0x4ab2f8),this['_activateListeners_pInitListAndFilters'](_0x4ab2f8);}['_activateListeners_initBtnRun'](_0x1de42b){const _0x4265b9=_0x4a95cd;_0x1de42b[_0x4265b9(0xc0)](_0x4265b9(0x162))[_0x4265b9(0x157)](async()=>{const _0x4caf4d=_0x4265b9;if(!this[_0x4caf4d(0x139)])return;const _0x144c33=this[_0x4caf4d(0xf5)]();if(!_0x144c33[_0x4caf4d(0x144)])return ui[_0x4caf4d(0xf1)][_0x4caf4d(0x137)]('Please\x20select\x20something\x20to\x20update!');const _0x970486=await CollectionTokenUpdater[_0x4caf4d(0xe8)]['pGetState']();if(_0x970486[_0x4caf4d(0xca)]){const _0x569c2f=await InputUiUtil[_0x4caf4d(0xd9)]({'title':_0x4caf4d(0x15f),'htmlDescription':_0x4caf4d(0xe4),'textNo':'Cancel','textYes':_0x4caf4d(0x13c)});if(!_0x569c2f)return;}this['close'](),ui[_0x4caf4d(0xc4)][_0x4caf4d(0x114)](this[_0x4caf4d(0xce)]);const _0x9ea59c=_0x144c33[_0x4caf4d(0x156)](({id:_0x5b243c,name:_0x1f44cf})=>new Util[(_0x4caf4d(0x15d))](_0x1f44cf,()=>this[_0x4caf4d(0x10c)](_0x5b243c,_0x970486)));await UtilApplications[_0x4caf4d(0xe3)](_0x9ea59c,{'titleInitial':_0x4caf4d(0xde),'titleComplete':_0x4caf4d(0x149),'fnGetRowRunningText':_0x53786f=>_0x4caf4d(0x169)+_0x53786f+_0x4caf4d(0xbe),'fnGetRowSuccessText':_0x50cfa6=>_0x4caf4d(0xeb)+_0x50cfa6+'.','fnGetRowErrorText':_0x30b58d=>_0x4caf4d(0x168)+_0x30b58d+'!\x20'+VeCt['STR_SEE_CONSOLE']}),game[this[_0x4caf4d(0x154)]]['render']();});}[_0x4a95cd(0x11d)](_0x36036c){const _0x5d24bb=_0x4a95cd;_0x36036c[_0x5d24bb(0xc0)](_0x5d24bb(0x116))[_0x5d24bb(0x157)](()=>{const _0x462ccb=_0x5d24bb,_0x29d3e9=new CollectionTokenUpdater[(_0x462ccb(0xe8))]();_0x29d3e9[_0x462ccb(0xf0)](!![]);});}[_0x4a95cd(0xd3)](){const _0x1d40c4=_0x4a95cd;return this[_0x1d40c4(0x14f)]=this['_rows']=this['_mapEntitiesToRows'](),{...super[_0x1d40c4(0xd3)](),'titleSearch':this[_0x1d40c4(0x117)]+'s','rows':this[_0x1d40c4(0x14f)]};}async[_0x4a95cd(0x10c)](_0x51177a,_0xf0dc9f){const _0x7cec0f=_0x4a95cd,_0x1f8d1a=CONFIG['Actor'][_0x7cec0f(0x152)]['instance'][_0x7cec0f(0x12e)](_0x51177a);if(!_0x1f8d1a)return;const _0x47100a={};let _0x43d088=![];_0x43d088=this['_pUpdateToken_populateNameUpdate'](_0x1f8d1a,_0xf0dc9f,_0x47100a)||_0x43d088,_0x43d088=this[_0x7cec0f(0xee)](_0x1f8d1a,_0xf0dc9f,_0x47100a)||_0x43d088,_0x43d088=this[_0x7cec0f(0x12d)](_0x1f8d1a,_0xf0dc9f,_0x47100a)||_0x43d088,_0x43d088=this[_0x7cec0f(0xc7)](_0x1f8d1a,_0xf0dc9f,_0x47100a)||_0x43d088,_0x43d088=this[_0x7cec0f(0xfa)](_0x1f8d1a,_0xf0dc9f,_0x47100a)||_0x43d088;if(!_0x43d088)return;_0x1f8d1a[_0x7cec0f(0x14e)]({'token':_0x47100a});}['_pUpdateToken_populateNameUpdate'](_0x48ded4,_0x3c27a5,_0x3d820d){const _0x214a40=_0x4a95cd;if(!_0x3c27a5[_0x214a40(0x10b)])return![];let _0x146574=![];const _0x6e1c15=()=>_0x48ded4[_0x214a40(0x10a)][_0x214a40(0xd6)]('\x20')[0x0]['trim']()['replace'](/,;$/,'')['trim'](),_0x5388ec=()=>_0x48ded4['name'][_0x214a40(0xd6)]('\x20')[_0x214a40(0x159)]()['trim'](),_0x4ff698=()=>{const _0x4e8dbf=_0x214a40,_0x398181=_0x3c27a5['isNameParseDoubleQuotes']&&_0x3c27a5[_0x4e8dbf(0xcc)]?_0x4e8dbf(0x14c):_0x3c27a5[_0x4e8dbf(0x129)]?'\x22([^\x22]*?)\x22':_0x3c27a5['isNameParseSingleQuotes']?_0x4e8dbf(0x147):'^$',_0x3b6052=new RegExp(_0x398181)['exec'](_0x48ded4['name']);if(!_0x3b6052)return null;return _0x3b6052[0x1][_0x4e8dbf(0xe7)]();};if(_0x3c27a5[_0x214a40(0x111)]!=null){_0x146574=!![];switch(_0x3c27a5[_0x214a40(0x111)]){case _0x214a40(0x12f):_0x3d820d[_0x214a40(0x10a)]=_0x48ded4[_0x214a40(0x10a)];break;case _0x214a40(0x110):_0x3d820d[_0x214a40(0x10a)]=_0x6e1c15();break;case _0x214a40(0x14d):_0x3d820d[_0x214a40(0x10a)]=_0x5388ec();break;case _0x214a40(0xf7):{const _0x375d63=_0x4ff698();_0x3d820d[_0x214a40(0x10a)]=_0x375d63||_0x48ded4[_0x214a40(0x10a)];break;}case _0x214a40(0x10e):{const _0x1e635e=_0x4ff698();_0x3d820d[_0x214a40(0x10a)]=_0x1e635e||_0x6e1c15();break;}case'Quoted\x20Part\x20or\x20Last\x20Name':{const _0x54631a=_0x4ff698();_0x3d820d[_0x214a40(0x10a)]=_0x54631a||_0x5388ec();break;}case'Regex':{const _0x5c4ff0=new RegExp(_0x3c27a5[_0x214a40(0x16a)],_0x3c27a5[_0x214a40(0x108)]?'i':'')[_0x214a40(0x160)](_0x48ded4[_0x214a40(0x10a)]);if(_0x5c4ff0)_0x3d820d[_0x214a40(0x10a)]=_0x5c4ff0[0x1];break;}}}return _0x3c27a5['namePermissions']!=null&&(_0x146574=!![],_0x3d820d[_0x214a40(0x146)]=_0x3c27a5[_0x214a40(0x164)]),_0x146574;}[_0x4a95cd(0xee)](_0x1c5d14,_0xef68b2,_0x455232){const _0x21b741=_0x4a95cd;if(!_0xef68b2[_0x21b741(0x165)])return![];if(_0xef68b2['disposition']!=null)return _0x455232[_0x21b741(0x13d)]=_0xef68b2[_0x21b741(0x13d)],!![];return![];}[_0x4a95cd(0x12d)](_0x5c15e1,_0x38e140,_0xec0d24){const _0x37e274=_0x4a95cd;if(!_0x38e140[_0x37e274(0x166)])return![];if(_0x38e140['isUseSheetImage'])return _0xec0d24[_0x37e274(0x118)]=_0x5c15e1[_0x37e274(0x118)],!![];return![];}[_0x4a95cd(0xc7)](_0xf43211,_0x1d3304,_0x27d7ba){const _0x2ae976=_0x4a95cd;if(!_0x1d3304[_0x2ae976(0x134)])return![];let _0x222784=![];return _0x1d3304['barPermissions']!=null&&(_0x222784=!![],_0x27d7ba['displayBars']=_0x1d3304[_0x2ae976(0x106)]),_0xf43211['data']['type']===_0x2ae976(0x12a)&&(_0x1d3304[_0x2ae976(0x105)]!=null&&(_0x222784=!![],_0x27d7ba[_0x2ae976(0x10f)]={'attribute':_0x1d3304[_0x2ae976(0x105)]===_0x2ae976(0x14a)?null:_0x1d3304[_0x2ae976(0x105)]}),_0x1d3304[_0x2ae976(0x11e)]!=null&&(_0x222784=!![],_0x27d7ba[_0x2ae976(0x113)]={'attribute':_0x1d3304[_0x2ae976(0x11e)]==='(None)'?null:_0x1d3304['barAttributeCharacter2']})),_0xf43211['data']['type']===_0x2ae976(0x145)&&(_0x1d3304[_0x2ae976(0x141)]!=null&&(_0x222784=!![],_0x27d7ba['bar1']={'attribute':_0x1d3304[_0x2ae976(0x141)]==='(None)'?null:_0x1d3304[_0x2ae976(0x141)]}),_0x1d3304[_0x2ae976(0x124)]!=null&&(_0x222784=!![],_0x27d7ba[_0x2ae976(0x113)]={'attribute':_0x1d3304[_0x2ae976(0x124)]===_0x2ae976(0x14a)?null:_0x1d3304[_0x2ae976(0x124)]})),_0x222784;}[_0x4a95cd(0xfa)](_0x24f096,_0x951f0b,_0x570fca){const _0x5c601d=_0x4a95cd;if(!_0x951f0b[_0x5c601d(0xe9)])return![];let _0x2904a4=![];return _0x951f0b[_0x5c601d(0xfe)]!=null&&(_0x24f096[_0x5c601d(0x121)]['token']['vision']!==_0x951f0b[_0x5c601d(0xfe)]&&(_0x570fca['vision']=_0x951f0b['isHasVision'],_0x2904a4=!![])),_0x951f0b[_0x5c601d(0x12c)]!=null&&(_0x24f096['data'][_0x5c601d(0x138)][_0x5c601d(0xe6)]!==_0x951f0b[_0x5c601d(0x12c)]&&(_0x570fca[_0x5c601d(0xe6)]=_0x951f0b['visionDim'],_0x2904a4=!![])),_0x951f0b[_0x5c601d(0xed)]!=null&&(_0x24f096[_0x5c601d(0x121)]['token']['brightSight']!==_0x951f0b['visionBright']&&(_0x570fca['brightSight']=_0x951f0b[_0x5c601d(0xed)],_0x2904a4=!![])),_0x951f0b[_0x5c601d(0x153)]!=null&&(_0x24f096['data']['token'][_0x5c601d(0x151)]!==_0x951f0b[_0x5c601d(0x153)]&&(_0x570fca[_0x5c601d(0x151)]=_0x951f0b[_0x5c601d(0x153)],_0x2904a4=!![])),_0x951f0b['lightDim']!=null&&(_0x24f096['data']['token']['dimLight']!==_0x951f0b[_0x5c601d(0xdb)]&&(_0x570fca[_0x5c601d(0xc6)]=_0x951f0b['lightDim'],_0x2904a4=!![])),_0x951f0b[_0x5c601d(0x167)]!=null&&(_0x24f096[_0x5c601d(0x121)][_0x5c601d(0x138)][_0x5c601d(0xfd)]!==_0x951f0b[_0x5c601d(0x167)]&&(_0x570fca[_0x5c601d(0xfd)]=_0x951f0b[_0x5c601d(0x167)],_0x2904a4=!![])),_0x951f0b['lightAngle']!=null&&(_0x24f096[_0x5c601d(0x121)]['token'][_0x5c601d(0xd2)]!==_0x951f0b['lightAngle']&&(_0x570fca[_0x5c601d(0xd2)]=_0x951f0b['lightAngle'],_0x2904a4=!![])),_0x951f0b[_0x5c601d(0xc8)]!=null&&(_0x24f096[_0x5c601d(0x121)][_0x5c601d(0x138)][_0x5c601d(0xea)]!==_0x951f0b[_0x5c601d(0xc8)]&&(_0x570fca[_0x5c601d(0xea)]=_0x951f0b[_0x5c601d(0xc8)],_0x2904a4=!![])),_0x2904a4;}['close'](..._0x5f1542){const _0x1fc043=_0x4a95cd;return this[_0x1fc043(0xf2)][_0x1fc043(0x15a)](),super[_0x1fc043(0x13b)](..._0x5f1542);}}CollectionTokenUpdater[_0x4a95cd(0xe8)]=class extends Application{constructor(){const _0x25d3aa=_0x4a95cd;super({'title':'Prototype\x20Token\x20Updater\x20Configuration','template':SharedConsts[_0x25d3aa(0x125)]+_0x25d3aa(0x143),'width':0x258,'height':0x320,'resizable':!![]});}[_0x4a95cd(0xc5)](_0x25475b){const _0x11e8d0=_0x4a95cd;_0x25475b[_0x11e8d0(0xda)](),this[_0x11e8d0(0x112)](_0x25475b);}static async[_0x4a95cd(0xe1)](){const _0x264e4e=_0x4a95cd,_0x1c240c=await StorageUtil[_0x264e4e(0xd7)](CollectionTokenUpdater['Template'][_0x264e4e(0xe0)]);return _0x1c240c||CollectionTokenUpdater['Template'][_0x264e4e(0x100)];}async[_0x4a95cd(0x112)](_0x11f2ca){const _0x280b67=_0x4a95cd,_0x573521=await StorageUtil[_0x280b67(0xd7)](CollectionTokenUpdater[_0x280b67(0xe8)][_0x280b67(0xe0)]),_0x77ff5e=BaseComponent[_0x280b67(0xc1)](_0x573521||CollectionTokenUpdater[_0x280b67(0xe8)][_0x280b67(0x100)]),_0x49831b=_0x77ff5e[_0x280b67(0x12b)](),_0x5a2284=()=>{const _0x2fbab6=_0x280b67,_0x5eef3e=_0x77ff5e[_0x2fbab6(0x128)]();delete _0x5eef3e[_0x2fbab6(0xca)],StorageUtil[_0x2fbab6(0xfb)](CollectionTokenUpdater[_0x2fbab6(0xe8)]['_STORAGE_KEY'],_0x5eef3e);},_0x1bb0ee=MiscUtil[_0x280b67(0x101)](_0x5a2284,0x64);_0x77ff5e['_addHookAll'](_0x280b67(0xf3),_0x1bb0ee);const _0x44825f=ComponentUiUtil[_0x280b67(0x120)](_0x77ff5e,'isNameActive'),_0x101036=ComponentUiUtil[_0x280b67(0x120)](_0x77ff5e,'isNameParseDoubleQuotes'),_0x55534a=ComponentUiUtil[_0x280b67(0x120)](_0x77ff5e,_0x280b67(0xcc)),_0x3a040d=$$`<div class="flex-v-center toku__row">
-			<label class="flex-v-center mr-2 ml-auto"><div class="mr-1">Accept Double Quotes</div>${_0x101036}</label>
-			<label class="flex-v-center"><div class="mr-1">Accept Single Quotes</div>${_0x55534a}</label>
-		</div>`,_0x137eb1=ComponentUiUtil[_0x280b67(0x14b)](_0x77ff5e,_0x280b67(0x16a),{'html':_0x280b67(0xe2)}),_0x1c4967=ComponentUiUtil[_0x280b67(0x120)](_0x77ff5e,_0x280b67(0x108)),_0x3f641b=$$`<div class="flex-col w=100">
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Util} from "./Util.js";
+import {AppFilterBasic} from "./FilterApplications.js";
+import {BaseCollectionTool} from "./BaseCollectionTool.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {UtilActors} from "./UtilActors.js";
+import {UtilDocuments} from "./UtilDocuments.js";
+
+class CollectionTokenUpdater extends BaseCollectionTool {
+	constructor () {
+		super(
+			{
+				title: "Bulk Prototype Token Editor",
+				template: `${SharedConsts.MODULE_LOCATION}/template/CollectionTokenUpdater.hbs`,
+				width: 960,
+				height: Util.getMaxWindowHeight(),
+				resizable: true,
+			},
+			"actor",
+		);
+
+		// region Local fields
+		this._pageFilter = new AppFilterBasic();
+
+		this._list = null;
+		this._$btnReset = null;
+	}
+
+	activateListeners ($html) {
+		super.activateListeners($html);
+
+		this._activateListeners_initBtnRun($html);
+		this._activateListeners_initBtnEditTemplate($html);
+		this._activateListeners_initBtnReset($html);
+		this._activateListeners_pInitListAndFilters($html);
+	}
+
+	_activateListeners_initBtnRun ($html) {
+		$html.find(`[name="btn-run"]`)
+			.click(async () => {
+				if (!this._list) return;
+
+				const selIds = this._getSelectedIds();
+
+				if (!selIds.length) return ui.notifications.warn(`Please select something to update!`);
+
+				const template = await CollectionTokenUpdater.Template.pGetState();
+				if (template.IS_DEFAULT) {
+					const isAcceptDefaults = await InputUiUtil.pGetUserBoolean({
+						title: "Updated Not Configured",
+						htmlDescription: "You have not yet configured the updater. Are you sure you wish to proceed?",
+						textNo: "Cancel",
+						textYes: "Continue",
+					});
+					if (!isAcceptDefaults) return;
+				}
+
+				this.close();
+				ui.sidebar.activateTab(this._sidebarTab);
+
+				// Do this sequentially to avoid deadlock
+				const tasks = selIds.map(({id, name}) => new Util.Task(name, () => this._pUpdateToken(id, template)));
+				await UtilApplications.pRunTasks(
+					tasks,
+					{
+						titleInitial: "Updating...",
+						titleComplete: "Update Complete",
+						fnGetRowRunningText: (taskName) => `Updating ${taskName}...`,
+						fnGetRowSuccessText: (taskName) => `Updated ${taskName}.`,
+						fnGetRowErrorText: (taskName) => `Failed to update ${taskName}! ${VeCt.STR_SEE_CONSOLE}`,
+					},
+				);
+
+				game[this._gameProp].render();
+			});
+	}
+
+	_activateListeners_initBtnEditTemplate ($html) {
+		$html.find(`[name="btn-set-template"]`)
+			.click(() => {
+				const templateApp = new CollectionTokenUpdater.Template();
+				templateApp.render(true);
+			});
+	}
+
+	getData () {
+		this._rows = this._rows = this._mapEntitiesToRows();
+
+		return {
+			...super.getData(),
+			titleSearch: `${this._collectionName}s`,
+			rows: this._rows,
+		};
+	}
+
+	async _pUpdateToken (actorId, template) {
+		const actor = CONFIG.Actor.collection.instance.get(actorId);
+		if (!actor) return;
+
+		const update = {};
+		let anyChanges = false;
+
+		anyChanges = this._pUpdateToken_populateLinkUpdate(actor, template, update) || anyChanges;
+		anyChanges = this._pUpdateToken_populateNameUpdate(actor, template, update) || anyChanges;
+		anyChanges = this._pUpdateToken_populateDispositionUpdate(actor, template, update) || anyChanges;
+		anyChanges = this._pUpdateToken_populateImageUpdate(actor, template, update) || anyChanges;
+		anyChanges = this._pUpdateToken_populateResourcesUpdate(actor, template, update) || anyChanges;
+		anyChanges = this._pUpdateToken_populateVisionUpdate(actor, template, update) || anyChanges;
+
+		if (!anyChanges) return;
+
+		await UtilDocuments.pUpdateDocument(actor, {token: update});
+	}
+
+	_pUpdateToken_populateLinkUpdate (actor, template, update) {
+		if (!template.isLinkActive) return false;
+
+		update.actorLink = template.isLinkActorData;
+
+		return true;
+	}
+
+	_pUpdateToken_populateNameUpdate (actor, template, update) {
+		if (!template.isNameActive) return false;
+
+		let anyChanges = false;
+
+		const getFirstName = () => actor.name.split(" ")[0].trim().replace(/,;$/, "").trim();
+		const getLastName = () => actor.name.split(" ").last().trim();
+
+		const getQuotedNamePart = () => {
+			const re = template.isNameParseDoubleQuotes && template.isNameParseSingleQuotes
+				? `["']([^"']*?)["']`
+				: template.isNameParseDoubleQuotes
+					? `"([^"]*?)"`
+					: template.isNameParseSingleQuotes
+						? `'([^']*?)'`
+						: "^$";
+
+			const m = new RegExp(re).exec(actor.name);
+			if (!m) return null;
+			return m[1].trim();
+		};
+
+		if (template.nameMode != null) {
+			anyChanges = true;
+
+			switch (template.nameMode) {
+				case "Full Name": update.name = actor.name; break;
+				case "First Name": update.name = getFirstName(); break;
+				case "Last Name": update.name = getLastName(); break;
+				case "Quoted Part or Full Name": {
+					const quotedPart = getQuotedNamePart();
+					update.name = quotedPart || actor.name;
+					break;
+				}
+				case "Quoted Part or First Name": {
+					const quotedPart = getQuotedNamePart();
+					update.name = quotedPart || getFirstName();
+					break;
+				}
+				case "Quoted Part or Last Name": {
+					const quotedPart = getQuotedNamePart();
+					update.name = quotedPart || getLastName();
+					break;
+				}
+				case "Regex": {
+					const m = new RegExp(template.nameRegexFormula, template.isNameRegexIgnoreCase ? "i" : "").exec(actor.name);
+					if (m) update.name = m[1];
+					break;
+				}
+			}
+		}
+
+		if (template.namePermissions != null) {
+			anyChanges = true;
+
+			update.displayName = Number(template.namePermissions);
+		}
+
+		return anyChanges;
+	}
+
+	_pUpdateToken_populateDispositionUpdate (actor, template, update) {
+		if (!template.isDispositionActive) return false;
+
+		if (template.disposition != null) {
+			update.disposition = template.disposition;
+			return true;
+		}
+
+		return false;
+	}
+
+	_pUpdateToken_populateImageUpdate (actor, template, update) {
+		if (!template.isImageActive) return false;
+
+		let anyChanges = false;
+
+		if (template.useSheetImage) {
+			update.img = actor.img;
+			anyChanges = true;
+		}
+
+		if (template.scale != null) {
+			update.scale = template.scale;
+			anyChanges = true;
+		}
+
+		return anyChanges;
+	}
+
+	_pUpdateToken_populateResourcesUpdate (actor, template, update) {
+		if (!template.isResourcesActive) return false;
+
+		let anyChanges = false;
+
+		if (template.barPermissions != null) {
+			anyChanges = true;
+			update.displayBars = Number(template.barPermissions);
+		}
+
+		if (actor.data.type === "character") {
+			if (template.barAttributeCharacter1 != null) {
+				anyChanges = true;
+				update.bar1 = {attribute: template.barAttributeCharacter1 === "(None)" ? null : template.barAttributeCharacter1};
+			}
+
+			if (template.barAttributeCharacter2 != null) {
+				anyChanges = true;
+				update.bar2 = {attribute: template.barAttributeCharacter2 === "(None)" ? null : template.barAttributeCharacter2};
+			}
+		}
+
+		if (actor.data.type === "npc") {
+			if (template.barAttributeNpc1 != null) {
+				anyChanges = true;
+				update.bar1 = {attribute: template.barAttributeNpc1 === "(None)" ? null : template.barAttributeNpc1};
+			}
+
+			if (template.barAttributeNpc2 != null) {
+				anyChanges = true;
+				update.bar2 = {attribute: template.barAttributeNpc2 === "(None)" ? null : template.barAttributeNpc2};
+			}
+		}
+
+		return anyChanges;
+	}
+
+	_pUpdateToken_populateVisionUpdate (actor, template, update) {
+		if (!template.isVisionActive) return false;
+
+		let anyChanges = false;
+
+		if (template.isHasVision != null) {
+			if (actor.data.token.vision !== template.isHasVision) {
+				update.vision = template.isHasVision;
+
+				anyChanges = true;
+			}
+		}
+
+		if (template.visionDim != null) {
+			if (actor.data.token.dimSight !== template.visionDim) {
+				update.dimSight = template.visionDim;
+
+				anyChanges = true;
+			}
+		}
+
+		if (template.visionBright != null) {
+			if (actor.data.token.brightSight !== template.visionBright) {
+				update.brightSight = template.visionBright;
+
+				anyChanges = true;
+			}
+		}
+
+		if (template.visionAngle != null) {
+			if (actor.data.token.sightAngle !== template.visionAngle) {
+				update.sightAngle = template.visionAngle;
+
+				anyChanges = true;
+			}
+		}
+
+		if (template.lightDim != null) {
+			if (actor.data.token.dimLight !== template.lightDim) {
+				update.dimLight = template.lightDim;
+
+				anyChanges = true;
+			}
+		}
+
+		if (template.lightBright != null) {
+			if (actor.data.token.brightLight !== template.lightBright) {
+				update.brightLight = template.lightBright;
+
+				anyChanges = true;
+			}
+		}
+
+		if (template.lightAngle != null) {
+			if (actor.data.token.lightAngle !== template.lightAngle) {
+				update.lightAngle = template.lightAngle;
+
+				anyChanges = true;
+			}
+		}
+
+		if (template.lightOpacity != null) {
+			if (actor.data.token.lightAlpha !== template.lightOpacity) {
+				update.lightAlpha = template.lightOpacity;
+
+				anyChanges = true;
+			}
+		}
+
+		return anyChanges;
+	}
+
+	close (...args) {
+		this._pageFilter.teardown();
+		return super.close(...args);
+	}
+}
+
+CollectionTokenUpdater.Template = class extends Application {
+	constructor () {
+		super({
+			title: `Prototype Token Updater Configuration`,
+			template: `${SharedConsts.MODULE_LOCATION}/template/CollectionTokenUpdaterTemplate.hbs`,
+			width: 600,
+			height: Util.getMaxWindowHeight(900),
+			resizable: true,
+		});
+	}
+
+	activateListeners ($html) {
+		$html.empty();
+		this._activateListeners_pDoLoadAndRender($html);
+	}
+
+	static async pGetState () {
+		const saved = await StorageUtil.pGet(CollectionTokenUpdater.Template._STORAGE_KEY);
+		return saved || CollectionTokenUpdater.Template._DEFAULTS;
+	}
+
+	async _activateListeners_pDoLoadAndRender ($html) {
+		const prevValues = await StorageUtil.pGet(CollectionTokenUpdater.Template._STORAGE_KEY);
+
+		const _comp = BaseComponent.fromObject(prevValues || CollectionTokenUpdater.Template._DEFAULTS);
+		const comp = _comp.getPod();
+		const pSaveState = () => {
+			const out = _comp.toObject();
+			delete out.IS_DEFAULT;
+			StorageUtil.pSet(CollectionTokenUpdater.Template._STORAGE_KEY, out);
+		};
+		const saveStateDebounced = MiscUtil.debounce(pSaveState, 100);
+		_comp._addHookAll("state", saveStateDebounced);
+
+		// region name
+		const $cbSectName = ComponentUiUtil.$getCbBool(_comp, "isNameActive");
+
+		const $cbParseNameDoubleQuotes = ComponentUiUtil.$getCbBool(_comp, "isNameParseDoubleQuotes");
+		const $cbParseNameSingleQuotes = ComponentUiUtil.$getCbBool(_comp, "isNameParseSingleQuotes");
+
+		const $stageNameQuotes = $$`<div class="flex-v-center toku__row">
+			<label class="flex-v-center mr-2 ml-auto"><div class="mr-1">Accept Double Quotes</div>${$cbParseNameDoubleQuotes}</label>
+			<label class="flex-v-center"><div class="mr-1">Accept Single Quotes</div>${$cbParseNameSingleQuotes}</label>
+		</div>`;
+
+		const $iptRegex = ComponentUiUtil.$getIptStr(_comp, "nameRegexFormula", {html: `<input class="code" type="text">`});
+		const $cbIgnoreCase = ComponentUiUtil.$getCbBool(_comp, "isNameRegexIgnoreCase");
+
+		const $stageNameRegex = $$`<div class="flex-col w=100">
 			<label class="flex-v-center flex-h-right toku__row">
-				<div class="mr-2 help" title="The first capture group will be used, if the expression matches">Expression</div>${_0x137eb1}
+				<div class="mr-2 help" title="The first capture group will be used, if the expression matches">Expression</div>${$iptRegex}
 			</label>
 
 			<label class="flex-v-center flex-h-right toku__row">
-				<div class="mr-1">Ignore Case</div>${_0x1c4967}
+				<div class="mr-1">Ignore Case</div>${$cbIgnoreCase}
 			</label>
-		</div>`,_0x14d41d=[new CollectionTokenUpdater['Template'][(_0x280b67(0x10d))](_0x280b67(0x12f),_0x3a040d,_0x3f641b),new CollectionTokenUpdater['Template']['NameUpdateMode']('First\x20Name',_0x3a040d,_0x3f641b),new CollectionTokenUpdater[(_0x280b67(0xe8))]['NameUpdateMode'](_0x280b67(0x14d),_0x3a040d,_0x3f641b),new CollectionTokenUpdater[(_0x280b67(0xe8))][(_0x280b67(0x10d))](_0x280b67(0xf7),_0x3a040d,_0x3f641b),new CollectionTokenUpdater['Template'][(_0x280b67(0x10d))](_0x280b67(0x10e),_0x3a040d,_0x3f641b),new CollectionTokenUpdater[(_0x280b67(0xe8))][(_0x280b67(0x10d))](_0x280b67(0x15e),_0x3a040d,_0x3f641b),new CollectionTokenUpdater[(_0x280b67(0xe8))][(_0x280b67(0x10d))](_0x280b67(0x148),_0x3a040d,_0x3f641b)],_0x407a4b=ComponentUiUtil[_0x280b67(0xfc)](_0x77ff5e,'nameMode',{'values':_0x14d41d['map'](_0x5bbc65=>_0x5bbc65['name']),'isAllowNull':!![],'displayNullAs':_0x280b67(0x161)}),_0xf47d0d=()=>{const _0x53ea0a=_0x280b67,_0x39e339=_0x14d41d[_0x53ea0a(0xc0)](_0x41dcf2=>_0x49831b['get'](_0x53ea0a(0x111))===_0x41dcf2[_0x53ea0a(0x10a)]);if(_0x39e339)_0x39e339[_0x53ea0a(0x131)]();else _0x3a040d['hideVe'](),_0x3f641b[_0x53ea0a(0x11b)]();};_0x77ff5e[_0x280b67(0xbf)](_0x280b67(0x111),_0xf47d0d),_0xf47d0d();const _0x408c2c={};Object[_0x280b67(0xd8)](CONST[_0x280b67(0xd5)])['sort'](([_0x220525,_0x3b8417],[_0x1b7b37,_0xe03bbe])=>SortUtil['ascSort'](_0x3b8417,_0xe03bbe))['forEach'](([_0x378a51,_0x1fc0dc])=>_0x408c2c[_0x1fc0dc]=_0x378a51[_0x280b67(0xd6)]('_')[_0x280b67(0x156)](_0x5e7ef5=>_0x5e7ef5[_0x280b67(0x103)]())[_0x280b67(0x150)]('\x20'));const _0x4fa70c=ComponentUiUtil[_0x280b67(0xfc)](_0x77ff5e,'namePermissions',{'values':Object[_0x280b67(0x135)](_0x408c2c),'fnDisplay':_0x3c9ce9=>_0x408c2c[_0x3c9ce9],'isAllowNull':!![],'displayNullAs':_0x280b67(0x161)}),_0x3b7c5a=ComponentUiUtil[_0x280b67(0x120)](_0x77ff5e,_0x280b67(0x165)),_0x2083d6=[_0x280b67(0xef),_0x280b67(0x115),'Friendly'],_0x296319=ComponentUiUtil['$getSelEnum'](_0x77ff5e,'disposition',{'values':[-0x1,0x0,0x1],'fnDisplay':_0x171035=>_0x2083d6[_0x171035+0x1],'isAllowNull':!![],'displayNullAs':_0x280b67(0x161)}),_0x16b4fb=ComponentUiUtil[_0x280b67(0x120)](_0x77ff5e,_0x280b67(0x166)),_0x23cc74=ComponentUiUtil[_0x280b67(0x120)](_0x77ff5e,_0x280b67(0x140)),_0x2a96c7=ComponentUiUtil['$getCbBool'](_0x77ff5e,'isResourcesActive'),_0x2f78ff=ComponentUiUtil[_0x280b67(0xfc)](_0x77ff5e,_0x280b67(0x106),{'values':Object[_0x280b67(0x135)](_0x408c2c),'fnDisplay':_0x482499=>_0x408c2c[_0x482499],'isAllowNull':!![],'displayNullAs':_0x280b67(0x161)}),_0x381f3c=CollectionTokenUpdater[_0x280b67(0xe8)]['_getAllAvailableActorBarAttributes'](_0x280b67(0x12a)),_0xf1f4ad=[_0x280b67(0x14a),...Object[_0x280b67(0x122)](_0x381f3c)[_0x280b67(0xec)]()],_0x183433=CollectionTokenUpdater[_0x280b67(0xe8)][_0x280b67(0x104)]('npc'),_0x4085f1=['(None)',...Object[_0x280b67(0x122)](_0x183433)[_0x280b67(0xec)]()],_0x2bdf23=ComponentUiUtil[_0x280b67(0xfc)](_0x77ff5e,_0x280b67(0x105),{'values':_0xf1f4ad,'isAllowNull':!![],'displayNullAs':_0x280b67(0x161)}),_0x1485f7=ComponentUiUtil[_0x280b67(0xfc)](_0x77ff5e,_0x280b67(0x11e),{'values':_0xf1f4ad,'isAllowNull':!![],'displayNullAs':_0x280b67(0x161)}),_0x3102fa=ComponentUiUtil[_0x280b67(0xfc)](_0x77ff5e,_0x280b67(0x141),{'values':_0x4085f1,'isAllowNull':!![],'displayNullAs':_0x280b67(0x161)}),_0xae17d4=ComponentUiUtil[_0x280b67(0xfc)](_0x77ff5e,_0x280b67(0x124),{'values':_0x4085f1,'isAllowNull':!![],'displayNullAs':_0x280b67(0x161)}),_0x4afb14=ComponentUiUtil[_0x280b67(0x120)](_0x77ff5e,_0x280b67(0xe9)),_0x8bc3f4=ComponentUiUtil[_0x280b67(0x120)](_0x77ff5e,_0x280b67(0xfe)),_0x57ad28=ComponentUiUtil[_0x280b67(0x13f)](_0x77ff5e,'visionDim',null,{'min':0x0,'isAllowNull':!![],'html':_0x280b67(0x102)}),_0x420e65=ComponentUiUtil['$getIptInt'](_0x77ff5e,_0x280b67(0xed),null,{'min':0x0,'isAllowNull':!![],'html':_0x280b67(0x102)}),_0x497db1=ComponentUiUtil[_0x280b67(0x13f)](_0x77ff5e,'visionAngle',null,{'min':0x0,'max':0x168,'isAllowNull':!![],'html':_0x280b67(0x102)}),_0x15a2de=ComponentUiUtil[_0x280b67(0x13f)](_0x77ff5e,_0x280b67(0xdb),null,{'min':0x0,'isAllowNull':!![],'html':'<input\x20class=\x22code\x20text-right\x22\x20type=\x22text\x22\x20placeholder=\x22(No\x20update)\x22>'}),_0x45e5be=ComponentUiUtil[_0x280b67(0x13f)](_0x77ff5e,_0x280b67(0x167),null,{'min':0x0,'isAllowNull':!![],'html':_0x280b67(0x102)}),_0x219a4a=ComponentUiUtil[_0x280b67(0x13f)](_0x77ff5e,_0x280b67(0xd2),null,{'min':0x0,'max':0x168,'isAllowNull':!![],'html':_0x280b67(0x102)}),_0x22bf5=ComponentUiUtil['$getIptNumber'](_0x77ff5e,_0x280b67(0xc8),null,{'min':0x0,'max':0x1,'isAllowNull':!![],'html':_0x280b67(0x102)}),_0x416d4a=$(_0x280b67(0xcd))[_0x280b67(0x157)](async()=>{const _0x1a1c51=_0x280b67;try{await _0x5a2284(),ui[_0x1a1c51(0xf1)]['info'](_0x1a1c51(0x11c));}catch(_0x6e4d73){ui[_0x1a1c51(0xf1)][_0x1a1c51(0xdd)](_0x1a1c51(0xd1)+VeCt[_0x1a1c51(0x163)]);throw _0x6e4d73;}this[_0x1a1c51(0x13b)]();});_0x11f2ca[_0x280b67(0x155)](_0x280b67(0x132)),$$(_0x11f2ca)`
+		</div>`;
+
+		const NAME_UPDATE_MODES = [
+			new CollectionTokenUpdater.Template.NameUpdateMode("Full Name", $stageNameQuotes, $stageNameRegex),
+			new CollectionTokenUpdater.Template.NameUpdateMode("First Name", $stageNameQuotes, $stageNameRegex),
+			new CollectionTokenUpdater.Template.NameUpdateMode("Last Name", $stageNameQuotes, $stageNameRegex),
+			new CollectionTokenUpdater.Template.NameUpdateMode("Quoted Part or Full Name", $stageNameQuotes, $stageNameRegex),
+			new CollectionTokenUpdater.Template.NameUpdateMode("Quoted Part or First Name", $stageNameQuotes, $stageNameRegex),
+			new CollectionTokenUpdater.Template.NameUpdateMode("Quoted Part or Last Name", $stageNameQuotes, $stageNameRegex),
+			new CollectionTokenUpdater.Template.NameUpdateMode("Regex", $stageNameQuotes, $stageNameRegex),
+		];
+		const $selNameMode = ComponentUiUtil.$getSelEnum(_comp, "nameMode", {values: NAME_UPDATE_MODES.map(it => it.name), isAllowNull: true, displayNullAs: "(No update)"});
+		const hkNameMode = () => {
+			const found = NAME_UPDATE_MODES.find(it => comp.get("nameMode") === it.name);
+			if (found) found.activate();
+			else {
+				$stageNameQuotes.hideVe();
+				$stageNameRegex.hideVe();
+			}
+		};
+		_comp._addHookBase("nameMode", hkNameMode);
+		hkNameMode();
+
+		const INVERTED_TOKEN_DISPLAY_MODES = {};
+		Object.entries(CONST.TOKEN_DISPLAY_MODES)
+			.sort(([nameA, valueA], [nameB, valueB]) => SortUtil.ascSort(valueA, valueB))
+			.forEach(([name, value]) => INVERTED_TOKEN_DISPLAY_MODES[value] = game.i18n.localize(`TOKEN.DISPLAY_${name}`));
+		const $selNamePermissions = ComponentUiUtil.$getSelEnum(_comp, "namePermissions", {values: Object.keys(INVERTED_TOKEN_DISPLAY_MODES), fnDisplay: it => INVERTED_TOKEN_DISPLAY_MODES[it], isAllowNull: true, displayNullAs: "(No update)"});
+		// endregion
+
+		// region Link
+		const $cbSectLink = ComponentUiUtil.$getCbBool(_comp, "isLinkActive");
+
+		const $cbLinkActorData = ComponentUiUtil.$getCbBool(_comp, "isLinkActorData");
+		// endregion
+
+		// region Disposition
+		const $cbSectDisposition = ComponentUiUtil.$getCbBool(_comp, "isDispositionActive");
+
+		const TOKEN_DISPOSITIONS = ["Hostile", "Neutral", "Friendly"];
+		const $selDisposition = ComponentUiUtil.$getSelEnum(_comp, "disposition", {values: [-1, 0, 1], fnDisplay: it => TOKEN_DISPOSITIONS[it + 1], isAllowNull: true, displayNullAs: "(No update)"});
+		// endregion
+
+		// region Image
+		const $cbSectImage = ComponentUiUtil.$getCbBool(_comp, "isImageActive");
+
+		const $selUseSheetImage = ComponentUiUtil.$getSelEnum(_comp, "useSheetImage", {values: [true], isAllowNull: true, fnDisplay: it => it ? `Use Sheet Image` : ``, displayNullAs: "(No update)"});
+
+		const $sliderScale = ComponentUiUtil.$getSliderNumber(_comp, "scale", {min: 0.2, max: 3, step: 0.1});
+
+		const $iptScale = ComponentUiUtil.$getIptNumber(
+			_comp,
+			"scale",
+			null,
+			{
+				$ele: $(`<input class="range-value ml-2 form-control form-control--minimal">`),
+				isAllowNull: true,
+				fallbackOnNaN: null,
+				min: 0.2,
+				max: 3,
+			},
+		);
+
+		const hkScale = () => $iptScale.title(_comp._state.scale == null ? `(No update)` : `Set scale to ${_comp._state.scale}`);
+		_comp._addHookBase("scale", hkScale);
+		hkScale();
+
+		const $btnResetScale = $(`<button class="btn btn-5et btn-xs ml-2" title="Reset to &quot;Do not update&quot;"><span class="glyphicon glyphicon-refresh"></span></button>`).click(() => _comp._state.scale = null);
+		// endregion
+
+		// region Resources
+		const $cbSectResources = ComponentUiUtil.$getCbBool(_comp, "isResourcesActive");
+
+		const $selBarPermissions = ComponentUiUtil.$getSelEnum(_comp, "barPermissions", {values: Object.keys(INVERTED_TOKEN_DISPLAY_MODES), fnDisplay: it => INVERTED_TOKEN_DISPLAY_MODES[it], isAllowNull: true, displayNullAs: "(No update)"});
+
+		const CHAR_TOKEN_ATTRIBUTES_OBJ = CollectionTokenUpdater.Template._getAllAvailableActorBarAttributes("character");
+		const CHAR_TOKEN_ATTRIBUTES = ["(None)", ...Object.values(CHAR_TOKEN_ATTRIBUTES_OBJ).flat()];
+
+		const NPC_TOKEN_ATTRIBUTES_OBJ = CollectionTokenUpdater.Template._getAllAvailableActorBarAttributes("npc");
+		const NPC_TOKEN_ATTRIBUTES = ["(None)", ...Object.values(NPC_TOKEN_ATTRIBUTES_OBJ).flat()];
+
+		const $selBarAttributeCharacter1 = ComponentUiUtil.$getSelEnum(_comp, "barAttributeCharacter1", {values: CHAR_TOKEN_ATTRIBUTES, isAllowNull: true, displayNullAs: "(No update)"});
+		const $selBarAttributeCharacter2 = ComponentUiUtil.$getSelEnum(_comp, "barAttributeCharacter2", {values: CHAR_TOKEN_ATTRIBUTES, isAllowNull: true, displayNullAs: "(No update)"});
+
+		const $selBarAttributeNpc1 = ComponentUiUtil.$getSelEnum(_comp, "barAttributeNpc1", {values: NPC_TOKEN_ATTRIBUTES, isAllowNull: true, displayNullAs: "(No update)"});
+		const $selBarAttributeNpc2 = ComponentUiUtil.$getSelEnum(_comp, "barAttributeNpc2", {values: NPC_TOKEN_ATTRIBUTES, isAllowNull: true, displayNullAs: "(No update)"});
+		// endregion
+
+		// region Vision
+		const $cbSectVision = ComponentUiUtil.$getCbBool(_comp, "isVisionActive");
+
+		const $cbHasVision = ComponentUiUtil.$getCbBool(_comp, "isHasVision");
+		const $iptDimVision = ComponentUiUtil.$getIptInt(_comp, "visionDim", null, {min: 0, isAllowNull: true, html: `<input class="code text-right" type="text" placeholder="(No update)">`});
+		const $iptBrightVision = ComponentUiUtil.$getIptInt(_comp, "visionBright", null, {min: 0, isAllowNull: true, html: `<input class="code text-right" type="text" placeholder="(No update)">`});
+		const $iptVisionAngle = ComponentUiUtil.$getIptInt(_comp, "visionAngle", null, {min: 0, max: 360, isAllowNull: true, html: `<input class="code text-right" type="text" placeholder="(No update)">`});
+		const $iptDimLight = ComponentUiUtil.$getIptInt(_comp, "lightDim", null, {min: 0, isAllowNull: true, html: `<input class="code text-right" type="text" placeholder="(No update)">`});
+		const $iptBrightLight = ComponentUiUtil.$getIptInt(_comp, "lightBright", null, {min: 0, isAllowNull: true, html: `<input class="code text-right" type="text" placeholder="(No update)">`});
+		const $iptLightAngle = ComponentUiUtil.$getIptInt(_comp, "lightAngle", null, {min: 0, max: 360, isAllowNull: true, html: `<input class="code text-right" type="text" placeholder="(No update)">`});
+		const $iptLightOpacity = ComponentUiUtil.$getIptNumber(_comp, "lightOpacity", null, {min: 0, max: 1, isAllowNull: true, html: `<input class="code text-right" type="text" placeholder="(No update)">`});
+		// endregion
+
+		// region Save
+		const $btnSave = $(`<button class="btn-5et w-100">Save</button>`)
+			.click(async () => {
+				try {
+					await pSaveState();
+					ui.notifications.info(`Saved!`);
+				} catch (e) {
+					ui.notifications.error(`Failed to save! ${VeCt.STR_SEE_CONSOLE}`);
+					throw e;
+				}
+				this.close();
+			});
+		// endregion
+
+		$html.addClass(`toku__form`);
+		$$($html)`
 		<label class="split-v-center mb-1" title="Update Token Name">
 			<div class="toku__sect-head">Name</div>
-			${_0x44825f[_0x280b67(0x155)](_0x280b67(0x11a))}
+			${$cbSectName.addClass("toku__cb-head")}
 		</label>
 		<div class="flex-col w-100">
-			<label class="my-1 split-v-center toku__row"><div>Update Mode</div>${_0x407a4b}</label>
-			${_0x3a040d}
-			${_0x3f641b}
-			<label class="my-1 split-v-center toku__row"><div>Display Name</div>${_0x4fa70c}</label>
+			<label class="my-1 split-v-center toku__row"><div>Update Mode</div>${$selNameMode}</label>
+			${$stageNameQuotes}
+			${$stageNameRegex}
+			<label class="my-1 split-v-center toku__row"><div>Display Name</div>${$selNamePermissions}</label>
+		</div>
+
+		<hr class="hr-1">
+
+		<label class="split-v-center mb-1" title="Update Token Link">
+			<div class="toku__sect-head">Link</div>
+			${$cbSectLink.addClass("toku__cb-head")}
+		</label>
+		<div class="flex-col w-100">
+			<label class="my-1 split-v-center toku__row"><div>Link Actor Data</div>${$cbLinkActorData}</label>
 		</div>
 
 		<hr class="hr-1">
 
 		<label class="split-v-center mb-1" title="Update Token Disposition">
 			<div class="toku__sect-head">Disposition</div>
-			${_0x3b7c5a[_0x280b67(0x155)](_0x280b67(0x11a))}
+			${$cbSectDisposition.addClass("toku__cb-head")}
 		</label>
 		<div class="flex-col w-100">
-			<label class="my-1 split-v-center toku__row"><div>Token Disposition</div>${_0x296319}</label>
+			<label class="my-1 split-v-center toku__row"><div>Token Disposition</div>${$selDisposition}</label>
 		</div>
 
 		<hr class="hr-1">
 
 		<label class="split-v-center mb-1" title="Update Token Image">
 			<div class="toku__sect-head">Image</div>
-			${_0x16b4fb[_0x280b67(0x155)](_0x280b67(0x11a))}
+			${$cbSectImage.addClass("toku__cb-head")}
 		</label>
 		<div class="flex-col w-100">
-			<label class="my-1 split-v-center toku__row"><div>Use Sheet Image</div>${_0x23cc74}</label>
+			<label class="my-1 split-v-center toku__row"><div>Image</div>${$selUseSheetImage}</label>
+			<label class="my-1 split-v-center toku__row">
+				<div>Scale</div>
+				<div class="flex-v-center max-w-200p w-100">${$sliderScale}${$iptScale}${$btnResetScale}</div>
+			</label>
 		</div>
 
 		<hr class="hr-1">
 
 		<label class="split-v-center mb-1" title="Update Token Resources">
 			<div class="toku__sect-head">Resources</div>
-			${_0x2a96c7[_0x280b67(0x155)](_0x280b67(0x11a))}
+			${$cbSectResources.addClass("toku__cb-head")}
 		</label>
 		<div class="flex-col w-100">
-			<label class="my-1 split-v-center toku__row"><div>Display Bars</div>${_0x2f78ff}</label>
-			<label class="my-1 split-v-center toku__row"><div>Bar 1 Attribute (Characters)</div>${_0x2bdf23}</label>
-			<label class="my-1 split-v-center toku__row"><div>Bar 2 Attribute (Characters)</div>${_0x1485f7}</label>
-			<label class="my-1 split-v-center toku__row"><div>Bar 1 Attribute (NPCs)</div>${_0x3102fa}</label>
-			<label class="my-1 split-v-center toku__row"><div>Bar 2 Attribute (NPCs)</div>${_0xae17d4}</label>
+			<label class="my-1 split-v-center toku__row"><div>Display Bars</div>${$selBarPermissions}</label>
+			<label class="my-1 split-v-center toku__row"><div>Bar 1 Attribute (Characters)</div>${$selBarAttributeCharacter1}</label>
+			<label class="my-1 split-v-center toku__row"><div>Bar 2 Attribute (Characters)</div>${$selBarAttributeCharacter2}</label>
+			<label class="my-1 split-v-center toku__row"><div>Bar 1 Attribute (NPCs)</div>${$selBarAttributeNpc1}</label>
+			<label class="my-1 split-v-center toku__row"><div>Bar 2 Attribute (NPCs)</div>${$selBarAttributeNpc2}</label>
 		</div>
 
 		<hr class="hr-1">
 
 		<label class="split-v-center mb-1" title="Update Token Vision">
 			<div class="toku__sect-head">Vision</div>
-			${_0x4afb14[_0x280b67(0x155)]('toku__cb-head')}
+			${$cbSectVision.addClass("toku__cb-head")}
 		</label>
 		<div class="flex-col w-100">
-			<label class="my-1 split-v-center toku__row"><div>Has Vision</div>${_0x8bc3f4}</label>
-			<label class="my-1 split-v-center toku__row"><div>Dim Vision <span class="ve-muted ve-small">(Distance)</span></div>${_0x57ad28}</label>
-			<label class="my-1 split-v-center toku__row"><div>Bright Vision <span class="ve-muted ve-small">(Distance)</span></div>${_0x420e65}</label>
-			<label class="my-1 split-v-center toku__row"><div>Sight Angle <span class="ve-muted ve-small">(Degrees)</span></div>${_0x497db1}</label>
-			<label class="my-1 split-v-center toku__row"><div>Emit Dim <span class="ve-muted ve-small">(Distance)</span></div>${_0x15a2de}</label>
-			<label class="my-1 split-v-center toku__row"><div>Emit Bright <span class="ve-muted ve-small">(Distance)</span></div>${_0x45e5be}</label>
-			<label class="my-1 split-v-center toku__row"><div>Emission Angle <span class="ve-muted ve-small">(Degrees)</span></div>${_0x219a4a}</label>
-			<label class="my-1 split-v-center toku__row"><div>Light Opacity <span class="ve-muted ve-small">(0-1)</span></div>${_0x22bf5}</label>
+			<label class="my-1 split-v-center toku__row"><div>Has Vision</div>${$cbHasVision}</label>
+			<label class="my-1 split-v-center toku__row"><div>Dim Vision <span class="ve-muted ve-small">(Distance)</span></div>${$iptDimVision}</label>
+			<label class="my-1 split-v-center toku__row"><div>Bright Vision <span class="ve-muted ve-small">(Distance)</span></div>${$iptBrightVision}</label>
+			<label class="my-1 split-v-center toku__row"><div>Sight Angle <span class="ve-muted ve-small">(Degrees)</span></div>${$iptVisionAngle}</label>
+			<label class="my-1 split-v-center toku__row"><div>Emit Dim <span class="ve-muted ve-small">(Distance)</span></div>${$iptDimLight}</label>
+			<label class="my-1 split-v-center toku__row"><div>Emit Bright <span class="ve-muted ve-small">(Distance)</span></div>${$iptBrightLight}</label>
+			<label class="my-1 split-v-center toku__row"><div>Emission Angle <span class="ve-muted ve-small">(Degrees)</span></div>${$iptLightAngle}</label>
+			<label class="my-1 split-v-center toku__row"><div>Light Opacity <span class="ve-muted ve-small">(0-1)</span></div>${$iptLightOpacity}</label>
 		</div>
 
 		<div class="mt-auto">
-			${_0x416d4a}
+			${$btnSave}
 		</div>
-		`;}static['_getAllAvailableActorBarAttributes'](_0x1f4b73){const _0x507043=_0x4a95cd,_0xad4874=CONFIG[_0x507043(0xcb)]['collection'][_0x507043(0x142)]['contents']['filter'](_0x571cc5=>_0x571cc5[_0x507043(0x121)][_0x507043(0xdc)]===_0x1f4b73);_0xad4874[_0x507043(0xc2)]({'data':{'data':game[_0x507043(0xdf)][_0x507043(0xc9)]['Actor'][_0x1f4b73]}});const _0x4b5aa2={},_0x11bc49={},_0x4ed208=[game['i18n']['localize']('TOKEN.BarAttributes'),game[_0x507043(0xcf)][_0x507043(0x119)](_0x507043(0x15c))];return _0xad4874[_0x507043(0x13e)](_0x5887d0=>{const _0x15c93d=_0x507043,_0x2ab176=UtilActors['getActorBarAttributes'](_0x5887d0);_0x4ed208[_0x15c93d(0x13e)](_0x381640=>{const _0x3b8277=_0x15c93d;(_0x2ab176[_0x381640]||[])[_0x3b8277(0x13e)](_0x5e580a=>{const _0x33111d=_0x3b8277,_0x618fb3=_0x11bc49[_0x381640]=_0x11bc49[_0x381640]||new Set();if(_0x618fb3[_0x33111d(0xe5)](_0x5e580a))return;_0x618fb3['add'](_0x5e580a),(_0x4b5aa2[_0x381640]=_0x4b5aa2[_0x381640]||[])[_0x33111d(0xc2)](_0x5e580a);});});}),_0x4ed208[_0x507043(0x13e)](_0x14a58e=>{const _0x36cea6=_0x507043;(_0x4b5aa2[_0x14a58e]||[])[_0x36cea6(0x13a)]((_0x21c0e2,_0x107344)=>_0x21c0e2[_0x36cea6(0x109)](_0x107344));}),_0x4b5aa2;}},CollectionTokenUpdater['Template'][_0x4a95cd(0xe0)]='collection_token_updater',CollectionTokenUpdater[_0x4a95cd(0xe8)][_0x4a95cd(0x100)]={'IS_DEFAULT':!![],'isNameActive':!![],'isDispositionActive':!![],'isImageActive':!![],'isResourcesActive':!![],'isVisionActive':!![],'isNameParseDoubleQuotes':!![],'isNameParseSingleQuotes':!![]},CollectionTokenUpdater[_0x4a95cd(0xe8)][_0x4a95cd(0x10d)]=class{constructor(_0x1d21d4,_0x21ac9f,_0x51304b){const _0x2272f4=_0x4a95cd;this[_0x2272f4(0x10a)]=_0x1d21d4,this[_0x2272f4(0xd0)]=_0x21ac9f,this[_0x2272f4(0x107)]=_0x51304b;}[_0x4a95cd(0x131)](){const _0x210f69=_0x4a95cd;switch(this[_0x210f69(0x10a)]){case _0x210f69(0x12f):case _0x210f69(0x110):case _0x210f69(0x14d):this[_0x210f69(0xd0)][_0x210f69(0x11b)](),this['_$stageNameRegex'][_0x210f69(0x11b)]();break;case'Quoted\x20Part\x20or\x20Full\x20Name':case _0x210f69(0x10e):case _0x210f69(0x15e):this[_0x210f69(0xd0)][_0x210f69(0xf6)](),this[_0x210f69(0x107)][_0x210f69(0x11b)]();break;case _0x210f69(0x148):this[_0x210f69(0xd0)][_0x210f69(0x11b)](),this[_0x210f69(0x107)][_0x210f69(0xf6)]();break;}}};export{CollectionTokenUpdater};
+		`;
+	}
+
+	/**
+	 * An alternative to e.g.:
+	 * - `UtilActors.getActorBarAttributes({data: {data: game.system.model.Actor.character}});`
+	 * - `UtilActors.getActorBarAttributes({data: {data: game.system.model.Actor.npc}});`
+	 * which ensures every possible bar attribute in the game is collected. This gets around the problem of e.g.
+	 *`attributes.ac.base` being undefined in the default character model, and therefore not being pickable as a bar.
+	 * @param actorType
+	 */
+	static _getAllAvailableActorBarAttributes (actorType) {
+		const actors = CONFIG.Actor.collection.instance.contents.filter(it => it.data.type === actorType);
+		// Add a fake actor to the set with the base model. Ensures we always catch the defaults in an empty game.
+		actors.push({data: {data: game.system.model.Actor[actorType]}});
+
+		const out = {};
+		const seenSets = {};
+		const keys = [
+			game.i18n.localize("TOKEN.BarAttributes"),
+			game.i18n.localize("TOKEN.BarValues"),
+		];
+
+		actors.forEach(actor => {
+			const barAttributes = UtilActors.getActorBarAttributes(actor);
+
+			keys.forEach(k => {
+				(barAttributes[k] || []).forEach(atr => {
+					const seenSet = (seenSets[k] = seenSets[k] || new Set());
+					if (seenSet.has(atr)) return;
+					seenSet.add(atr);
+					(out[k] = out[k] || []).push(atr);
+				});
+			});
+		});
+
+		keys.forEach(k => {
+			(out[k] || []).sort((a, b) => a.localeCompare(b));
+		});
+
+		return out;
+	}
+};
+CollectionTokenUpdater.Template._STORAGE_KEY = `collection_token_updater`;
+CollectionTokenUpdater.Template._DEFAULTS = {
+	IS_DEFAULT: true, // special key that gets deleted when the user has saved the form
+
+	isCharacterActive: false,
+	isNameActive: true,
+	isDispositionActive: true,
+	isImageActive: true,
+	isResourcesActive: true,
+	isVisionActive: true,
+	isNameParseDoubleQuotes: true,
+	isNameParseSingleQuotes: true,
+};
+
+CollectionTokenUpdater.Template.NameUpdateMode = class {
+	constructor (name, $stageNameQuotes, $stageNameRegex) {
+		this.name = name;
+		this._$stageNameQuotes = $stageNameQuotes;
+		this._$stageNameRegex = $stageNameRegex;
+	}
+
+	activate () {
+		switch (this.name) {
+			case "Full Name":
+			case "First Name":
+			case "Last Name":
+				this._$stageNameQuotes.hideVe(); this._$stageNameRegex.hideVe(); break;
+			case "Quoted Part or Full Name":
+			case "Quoted Part or First Name":
+			case "Quoted Part or Last Name":
+				this._$stageNameQuotes.showVe(); this._$stageNameRegex.hideVe(); break;
+			case "Regex":
+				this._$stageNameQuotes.hideVe(); this._$stageNameRegex.showVe(); break;
+		}
+	}
+};
+
+export {CollectionTokenUpdater};

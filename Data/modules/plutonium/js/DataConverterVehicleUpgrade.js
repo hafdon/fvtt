@@ -1,1 +1,135 @@
-const _0x3f7d=['16SwFgUH','56173iKuXWO','1ysBItU','name','vehicle','32068JUQAZl','31520mxXiZe','getCleanEntityName','propDroppable','entries','342868XxCMiB','isImportDescription','549932QVTKIV','importVehicleUpgrade','58144rQMEGq','getUpgradeSummary','URL_TO_HASH_BUILDER','PG_VEHICLES','pGetVehicleUpgradeSideData','pGetVehicleUpgradeItemEffects','1NYgEnV','isActorItem','pGetAdditionalData_','length','_getVehicleUpgradeFlags','isAddDataFlags','isAddPermission','\x0a\x09\x09\x09</div>','feat','_pGetImagePath','modules/','10zdYvmA','MODULE_NAME_FAKE','getNameWithSourcePart','filterValues','MODULE_NAME','pGetAdditionalEffectsRaw_','1fHQDSa','_pGetVehicleUpgradeItem_other','permission','vehicleUpgrade','18cCuFWG','source','_pGetAdditionalData','foundryVehicleUpgrade','get','setFirstSection','render','getWithDescriptionPlugins','pGetVehicleUpgradeItem','requirements','1249226atvSoV','1aogrCV','_foundryData','getSourceWithPagePart','permissions'];const _0x4681=function(_0x48fbfe,_0x28ca20){_0x48fbfe=_0x48fbfe-0x1a0;let _0x3f7dbb=_0x3f7d[_0x48fbfe];return _0x3f7dbb;};const _0x46e19d=_0x4681;(function(_0x5c9865,_0x4fe665){const _0x4c89ca=_0x4681;while(!![]){try{const _0x920ff7=-parseInt(_0x4c89ca(0x1c0))*parseInt(_0x4c89ca(0x1cc))+parseInt(_0x4c89ca(0x1c4))*-parseInt(_0x4c89ca(0x1be))+-parseInt(_0x4c89ca(0x1af))*parseInt(_0x4c89ca(0x1bf))+parseInt(_0x4c89ca(0x1ab))*parseInt(_0x4c89ca(0x1b9))+-parseInt(_0x4c89ca(0x1a5))*-parseInt(_0x4c89ca(0x1c3))+parseInt(_0x4c89ca(0x1d2))*parseInt(_0x4c89ca(0x1c8))+parseInt(_0x4c89ca(0x1ca))*parseInt(_0x4c89ca(0x1ba));if(_0x920ff7===_0x4fe665)break;else _0x5c9865['push'](_0x5c9865['shift']());}catch(_0x2eb3a7){_0x5c9865['push'](_0x5c9865['shift']());}}}(_0x3f7d,0xd9128));import{UtilApplications}from'./UtilApplications.js';import{SharedConsts}from'../shared/SharedConsts.js';import{Config}from'./Config.js';import{DataConverter}from'./DataConverter.js';import{Vetools}from'./Vetools.js';import{UtilActiveEffects}from'./UtilActiveEffects.js';class DataConverterVehicleUpgrade{static async[_0x46e19d(0x1b7)](_0x1bb184,_0x3abc69){const _0x3cd01d=_0x46e19d;return _0x3abc69=_0x3abc69||{},this[_0x3cd01d(0x1ac)](_0x1bb184,_0x3abc69);}static async[_0x46e19d(0x1ac)](_0x425f45,_0x2a394f){const _0x14964b=_0x46e19d,_0x73528c=this['_getDescriptionValue'](_0x425f45),_0x435e52=_0x425f45[_0x14964b(0x1bb)]||{},_0x245e8e=await this[_0x14964b(0x1b1)](_0x425f45),_0x40bd57={'name':UtilApplications[_0x14964b(0x1c5)](DataConverter[_0x14964b(0x1a7)](_0x425f45,{'isActorItem':_0x2a394f[_0x14964b(0x1d3)]})),'data':{'source':DataConverter[_0x14964b(0x1bc)](_0x425f45),'description':{'value':_0x73528c,'chat':'','unidentified':''},'activation':{'type':'','cost':0x0,'condition':''},'duration':{'value':0x0,'units':''},'target':{'value':0x0,'units':'','type':''},'range':{'value':0x0,'long':0x0,'units':null},'uses':{'value':0x0,'max':0x0,'per':''},'ability':'','actionType':'','attackBonus':0x0,'chatFlavor':'','critical':null,'damage':{'parts':[],'versatile':''},'formula':'','save':{'ability':'','dc':null},'requirements':_0x435e52[_0x14964b(0x1b8)]||'','recharge':{'value':0x0,'charged':!![]},..._0x245e8e},'permission':{'default':0x0},'type':_0x14964b(0x1a2),'img':await this[_0x14964b(0x1a3)](_0x425f45),'flags':this[_0x14964b(0x1d6)](_0x425f45,_0x2a394f),'effects':[]};if(_0x2a394f[_0x14964b(0x1a0)])_0x40bd57[_0x14964b(0x1ad)]={'default':Config['get'](_0x14964b(0x1cb),_0x14964b(0x1bd))};return _0x40bd57;}static['_getDescriptionValue'](_0xbf4b6e){const _0x4b4aca=_0x46e19d;if(!Config[_0x4b4aca(0x1b3)](_0x4b4aca(0x1cb),_0x4b4aca(0x1c9)))return'';return DataConverter[_0x4b4aca(0x1b6)](()=>{const _0x55a48d=_0x4b4aca;return'<div>\x0a\x09\x09\x09\x09<p><i>'+Renderer[_0x55a48d(0x1c2)][_0x55a48d(0x1cd)](_0xbf4b6e)+'</i></div></p>\x0a\x09\x09\x09\x09'+Renderer['get']()[_0x55a48d(0x1b4)](!![])[_0x55a48d(0x1b5)]({'entries':_0xbf4b6e[_0x55a48d(0x1c7)]},0x1)+_0x55a48d(0x1a1);});}static[_0x46e19d(0x1d6)](_0x2aae7b,_0x5bcf32){const _0x4bd7be=_0x46e19d;_0x5bcf32=_0x5bcf32||{};const _0xd76962={[SharedConsts[_0x4bd7be(0x1a6)]]:{'page':UrlUtil[_0x4bd7be(0x1cf)],'source':_0x2aae7b[_0x4bd7be(0x1b0)],'hash':UrlUtil[_0x4bd7be(0x1ce)][UrlUtil[_0x4bd7be(0x1cf)]](_0x2aae7b)}};return _0x5bcf32[_0x4bd7be(0x1d7)]&&(_0xd76962[SharedConsts[_0x4bd7be(0x1a6)]][_0x4bd7be(0x1c6)]='vehicleUpgrade',_0xd76962[SharedConsts[_0x4bd7be(0x1a6)]][_0x4bd7be(0x1a8)]=_0x5bcf32[_0x4bd7be(0x1a8)]),_0xd76962;}static async['_pGetImagePath'](_0x1e8c4d){const _0x15bcf6=_0x46e19d;return _0x15bcf6(0x1a4)+SharedConsts[_0x15bcf6(0x1a9)]+'/media/icon/gears.svg';}static async[_0x46e19d(0x1b1)](_0x3eb830){const _0x96848b=_0x46e19d;return DataConverter[_0x96848b(0x1d4)](_0x3eb830,{'propBrew':_0x96848b(0x1b2),'fnLoadJson':Vetools['pGetVehicleUpgradeSideData'],'propJson':_0x96848b(0x1ae)});}static async['pHasVehicleUpgradeSideLoadedEffects'](_0x31c7e4,_0x5a352a){const _0x1f95eb=_0x46e19d;return(await DataConverter[_0x1f95eb(0x1aa)](_0x5a352a,{'propBrew':'foundryVehicleUpgrade','fnLoadJson':Vetools[_0x1f95eb(0x1d0)],'propJson':_0x1f95eb(0x1ae)}))?.[_0x1f95eb(0x1d5)]>0x0;}static async[_0x46e19d(0x1d1)](_0x341bee,_0x2e48f5,_0x10c89e,{additionalData:_0x13755a}={}){const _0x42634d=_0x46e19d,_0xc0e98a=await DataConverter[_0x42634d(0x1aa)](_0x2e48f5,{'propBrew':'foundryVehicleUpgrade','fnLoadJson':Vetools[_0x42634d(0x1d0)],'propJson':_0x42634d(0x1ae)});return UtilActiveEffects['getExpandedEffects'](_0xc0e98a||[],{'actor':_0x341bee,'sheetItem':_0x10c89e,'parentName':_0x2e48f5[_0x42634d(0x1c1)],'additionalData':_0x13755a});}}export{DataConverterVehicleUpgrade};
+import {UtilApplications} from "./UtilApplications.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Config} from "./Config.js";
+import {DataConverter} from "./DataConverter.js";
+import {Vetools} from "./Vetools.js";
+import {UtilActiveEffects} from "./UtilActiveEffects.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class DataConverterVehicleUpgrade {
+	/**
+	 * @param vehUpgrade
+	 * @param [opts] Options object.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 * @param [opts.isActorItem]
+	 */
+	static async pGetVehicleUpgradeItem (vehUpgrade, opts) {
+		opts = opts || {};
+		return this._pGetVehicleUpgradeItem_other(vehUpgrade, opts);
+	}
+
+	static async _pGetVehicleUpgradeItem_other (vehUpgrade, opts) {
+		const descriptionValue = await this._pGetDescriptionValue(vehUpgrade);
+
+		const tempAdditionalData = vehUpgrade._foundryData || {};
+		const additionalData = await this._pGetAdditionalData(vehUpgrade);
+		const additionalFlags = await this._pGetAdditionalFlags(vehUpgrade);
+		const img = await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await this._pGetImagePath(vehUpgrade),
+		);
+		const effects = (await this._pGetVehicleUpgradeEffects(vehUpgrade, img, opts)) || [];
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(vehUpgrade, {isActorItem: opts.isActorItem})),
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(vehUpgrade),
+				description: {value: descriptionValue, chat: "", unidentified: ""},
+
+				activation: {type: "", cost: 0, condition: ""},
+				duration: {value: 0, units: ""},
+				target: {value: 0, units: "", type: ""},
+				range: {value: 0, long: 0, units: null},
+				uses: {value: 0, max: 0, per: ""},
+				ability: "",
+				actionType: "",
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				damage: {parts: [], versatile: ""},
+				formula: "",
+				save: {ability: "", dc: null},
+				requirements: tempAdditionalData.requirements || "",
+				recharge: {value: 0, charged: true},
+
+				...additionalData,
+			},
+			permission: {default: 0},
+			type: "feat",
+			img,
+			flags: {
+				...this._getVehicleUpgradeFlags(vehUpgrade, opts),
+				...additionalFlags,
+			},
+			effects,
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importVehicleUpgrade", "permissions")};
+
+		return out;
+	}
+
+	static _pGetDescriptionValue (vehUpgrade) {
+		if (!Config.get("importVehicleUpgrade", "isImportDescription")) return "";
+
+		return UtilDataConverter.pGetWithDescriptionPlugins(() => {
+			return `<div>
+				<p><i>${Renderer.vehicle.getUpgradeSummary(vehUpgrade)}</i></div></p>
+				${Renderer.get().setFirstSection(true).render({entries: vehUpgrade.entries}, 1)}
+			</div>`;
+		});
+	}
+
+	static _getVehicleUpgradeFlags (vehUpgrade, opts) {
+		opts = opts || {};
+
+		const out = {
+			[SharedConsts.MODULE_NAME_FAKE]: {
+				page: UrlUtil.PG_VEHICLES,
+				source: vehUpgrade.source,
+				hash: UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_VEHICLES](vehUpgrade),
+			},
+		};
+
+		if (opts.isAddDataFlags) {
+			out[SharedConsts.MODULE_NAME_FAKE].propDroppable = "vehicleUpgrade";
+			out[SharedConsts.MODULE_NAME_FAKE].filterValues = opts.filterValues;
+		}
+
+		return out;
+	}
+
+	static async _pGetImagePath (vehUpgrade) {
+		return `modules/${SharedConsts.MODULE_NAME}/media/icon/gears.svg`;
+	}
+
+	static async _pGetVehicleUpgradeEffects (vehUpgrade, img, {isActorItem} = {}) {
+		if (isActorItem) return []; // For actor items, the effects are handled at the importer level
+		if (await this.pHasVehicleUpgradeSideLoadedEffects(null, vehUpgrade)) return this.pGetVehicleUpgradeItemEffects(null, vehUpgrade, null, {img});
+		return [];
+	}
+
+	static async _pGetAdditionalData (vehUpgrade) {
+		return DataConverter.pGetAdditionalData_(vehUpgrade, this._SIDE_DATA_OPTS);
+	}
+
+	static async _pGetAdditionalFlags (vehUpgrade) {
+		return DataConverter.pGetAdditionalFlags_(vehUpgrade, this._SIDE_DATA_OPTS);
+	}
+
+	static async pHasVehicleUpgradeSideLoadedEffects (actor, vehUpgrade) {
+		return (await DataConverter.pGetAdditionalEffectsRaw_(vehUpgrade, this._SIDE_DATA_OPTS))?.length > 0;
+	}
+
+	static async pGetVehicleUpgradeItemEffects (actor, vehUpgrade, sheetItem, {additionalData, img} = {}) {
+		const effectsRaw = await DataConverter.pGetAdditionalEffectsRaw_(vehUpgrade, this._SIDE_DATA_OPTS);
+		return UtilActiveEffects.getExpandedEffects(effectsRaw || [], {actor, sheetItem, parentName: vehUpgrade.name, additionalData, img});
+	}
+
+	static get _SIDE_DATA_OPTS () {
+		return {propBrew: "foundryVehicleUpgrade", fnLoadJson: Vetools.pGetVehicleUpgradeSideData, propJson: "vehicleUpgrade"};
+	}
+}
+
+export {DataConverterVehicleUpgrade};

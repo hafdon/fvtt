@@ -1,10 +1,10 @@
 // Import TypeScript modules
 import { registerSettings } from "./module/settings.js";
 import { preloadTemplates } from "./module/preloadTemplates.js";
-import { daeSetupActions, doEffects, daeInitActions, ValidSpec, fetchParams, daeMacro, DAEfromUuid, DAEfromActorUuid } from "./module/dae.js";
+import { daeSetupActions, doEffects, daeInitActions, ValidSpec, fetchParams, daeMacro, DAEfromUuid, DAEfromActorUuid, useAbilitySave } from "./module/dae.js";
 import { daeReadyActions } from "./module/dae.js";
-import { convertDuration, GMAction, GMActionMessage } from "./module/GMAction.js";
-import { cleanArmorWorld, migrateActorDAESRD, migrateAllActorsDAESRD, migrateAllNPCDAESRD, removeActorArmorEffects, removeActorEffectsArmorEffects, removeAllActorArmorEffects, removeAllItemsArmorEffects, removeAllTokenArmorEffects, removeItemArmorEffects } from "./module/migration.js";
+import { convertDuration, setupSocket } from "./module/GMAction.js";
+import { checkArmorDisabled, checkLibWrapperVersion, cleanArmorWorld, cleanEffectOrigins, fixDeprecatedChanges, fixDeprecatedChangesActor, fixDeprecatedChangesItem, fixTransferEffects, fixupDDBAC, migrateActorDAESRD, migrateAllActorsDAESRD, migrateAllNPCDAESRD, removeActorArmorEffects, removeActorEffectsArmorEffects, removeAllActorArmorEffects, removeAllItemsArmorEffects, removeAllTokenArmorEffects, removeItemArmorEffects, tobMapper } from "./module/migration.js";
 import { ActiveEffects } from "./module/apps/ActiveEffects.js";
 import { patchingSetup, patchingInitSetup, patchSpecialTraits, patchGetInitiativeFormula } from "./module/patching.js";
 import { addAutoFields, DAEActiveEffectConfig } from "./module/apps/DAEActiveEffectConfig.js";
@@ -28,34 +28,38 @@ export let i18n = key => {
     return game.i18n.localize(key);
 };
 export let daeAlternateStatus;
+export let changesQueue;
 /* ------------------------------------ */
 /* Initialize module					*/
 /* ------------------------------------ */
 Hooks.once('init', async function () {
     // Register custom module settings
     registerSettings();
-    fetchParams();
     debug('Init setup actions');
     daeInitActions();
     patchingInitSetup();
+    fetchParams(false);
     // Assign custom classes and constants here
     // Preload Handlebars templates
     await preloadTemplates();
-    // Register custom sheets (if any)
+    //@ts-ignore Semaphore
+    changesQueue = new window.Semaphore(1);
 });
 export let daeSpecialDurations;
 export let daeMacroRepeats;
 Hooks.once('ready', async function () {
     if (!["dnd5e", "sw5e"].includes(game.system.id))
         return;
+    fetchParams();
     debug("ready setup actions");
     daeReadyActions();
     // setupDAEMacros();
-    GMAction.readyActions();
     daeSpecialDurations = { "None": "" };
     if (game.modules.get("times-up")?.active && isNewerVersion(game.modules.get("times-up").data.version, "0.0.9")) {
         daeSpecialDurations["turnStart"] = i18n("dae.turnStart");
         daeSpecialDurations["turnEnd"] = i18n("dae.turnEnd");
+        daeSpecialDurations["turnStartSource"] = i18n("dae.turnStartSource");
+        daeSpecialDurations["turnEndSource"] = i18n("dae.turnEndSource");
         daeMacroRepeats = {
             "none": "",
             "startEveryTurn": i18n("dae.startEveryTurn"),
@@ -64,24 +68,37 @@ Hooks.once('ready', async function () {
     }
     if (game.modules.get("midi-qol")?.active) {
         daeSpecialDurations["1Action"] = i18n("dae.1Action");
-        daeSpecialDurations["1Attack"] = i18n("dae.1Attack");
+        daeSpecialDurations["1Spell"] = i18n("dae.1Spell");
+        //@ts-ignore
+        daeSpecialDurations["1Attack"] = game.i18n.format("dae.1Attack", { type: `${i18n("dae.spell")}/${i18n("dae.weapon")} ${i18n("dae.attack")}` });
+        daeSpecialDurations["1Hit"] = game.i18n.format("dae.1Hit", { type: `${i18n("dae.spell")}/${i18n("dae.weapon")}` });
+        //    daeSpecialDurations["1Hit"] = i18n("dae.1Hit");
+        daeSpecialDurations["1Reaction"] = i18n("dae.1Reaction");
         let attackTypes = ["mwak", "rwak", "msak", "rsak"];
         if (game.system.id === "sw5e")
             attackTypes = ["mwak", "rwak", "mpak", "rpak"];
         attackTypes.forEach(at => {
-            daeSpecialDurations[`1Attack:${at}`] = `${CONFIG.DND5E.itemActionTypes[at]}: ${i18n("dae.1Attack")}`;
+            //@ts-ignore
+            daeSpecialDurations[`1Attack:${at}`] = `${CONFIG.DND5E.itemActionTypes[at]}: ${game.i18n.format("dae.1Attack", { type: CONFIG.DND5E.itemActionTypes[at] })}`;
+            daeSpecialDurations[`1Hit:${at}`] = `${CONFIG.DND5E.itemActionTypes[at]}: ${game.i18n.format("dae.1Hit", { type: CONFIG.DND5E.itemActionTypes[at] })}`;
         });
-        daeSpecialDurations["1Hit"] = i18n("dae.1Hit");
         daeSpecialDurations["DamageDealt"] = i18n("dae.DamageDealt");
         daeSpecialDurations["isAttacked"] = i18n("dae.isAttacked");
         daeSpecialDurations["isDamaged"] = i18n("dae.isDamaged");
+        daeSpecialDurations["isHit"] = i18n("dae.isHit");
         daeSpecialDurations["isSave"] = `${i18n("dae.isRollBase")} ${i18n("dae.isSaveDetail")}`;
         daeSpecialDurations["isSaveSuccess"] = `${i18n("dae.isRollBase")} ${i18n("dae.isSaveDetail")}: ${i18n("dae.success")}`;
         daeSpecialDurations["isSaveFailure"] = `${i18n("dae.isRollBase")} ${i18n("dae.isSaveDetail")}: ${i18n("dae.failure")}`;
         daeSpecialDurations["isCheck"] = `${i18n("dae.isRollBase")} ${i18n("dae.isCheckDetail")}`;
         daeSpecialDurations["isSkill"] = `${i18n("dae.isRollBase")} ${i18n("dae.isSkillDetail")}`;
+        daeSpecialDurations["isMoved"] = i18n("dae.isMoved");
+        daeSpecialDurations["longRest"] = i18n("DND5E.LongRest");
+        daeSpecialDurations["shortRest"] = i18n("DND5E.ShortRest");
+        daeSpecialDurations["newDay"] = `${i18n("DND5E.NewDay")}`;
         Object.keys(CONFIG.DND5E.abilities).forEach(abl => {
             daeSpecialDurations[`isSave.${abl}`] = `${i18n("dae.isRollBase")} ${CONFIG.DND5E.abilities[abl]} ${i18n("dae.isSaveDetail")}`;
+            daeSpecialDurations[`isSaveSuccess.${abl}`] = `${i18n("dae.isRollBase")} ${CONFIG.DND5E.abilities[abl]} ${i18n("dae.isSaveDetail")}: ${i18n("dae.success")}`;
+            daeSpecialDurations[`isSaveFailure.${abl}`] = `${i18n("dae.isRollBase")} ${CONFIG.DND5E.abilities[abl]} ${i18n("dae.isSaveDetail")}: ${i18n("dae.failure")}`;
             daeSpecialDurations[`isCheck.${abl}`] = `${i18n("dae.isRollBase")} ${CONFIG.DND5E.abilities[abl]} ${i18n("dae.isCheckDetail")}`;
         });
         Object.keys(CONFIG.DND5E.damageTypes).forEach(dt => {
@@ -103,14 +120,11 @@ Hooks.once('setup', function () {
     // Do anything after initialization but before
     // ready
     debug("setup actions");
-    GMAction.initActions();
     daeSetupActions();
     patchingSetup();
     //@ts-ignore
     window.DAE = {
         ValidSpec,
-        GMActionMessage,
-        GMAction,
         doEffects,
         daeMacro: daeMacro,
         ActiveEffects: ActiveEffects,
@@ -143,8 +157,17 @@ Hooks.once('setup', function () {
         removeAllItemsArmorEffects: removeAllItemsArmorEffects,
         cleanArmorWorld: cleanArmorWorld,
         addAutoFields: addAutoFields,
-        createToken: createToken
+        createToken: createToken,
+        fixupDDBAC: fixupDDBAC,
+        cleanEffectOrigins: cleanEffectOrigins,
+        tobMapper: tobMapper,
+        fixTransferEffects: fixTransferEffects,
+        fixDeprecatedChanges: fixDeprecatedChanges,
+        fixDeprecatedChangesActor: fixDeprecatedChangesActor,
+        fixDeprecatedChangesItem: fixDeprecatedChangesItem,
+        daeSpecialDurations: () => { return daeSpecialDurations; }
     };
+    setupSocket();
 });
 /* ------------------------------------ */
 /* When ready							*/
@@ -152,8 +175,10 @@ Hooks.once('setup', function () {
 Hooks.once("ready", () => {
     if (!["dnd5e", "sw5e"].includes(game.system.id))
         return;
-    if (!game.modules.get("lib-wrapper")?.active && game.user.isGM)
-        ui.notifications.warn("The 'Dynamic effects using Active Effects' module recommends to install and activate the 'libWrapper' module.");
+    checkLibWrapperVersion();
+    checkArmorDisabled();
+    if (useAbilitySave && isNewerVersion(game.system.data.version, "1.4.9") && game.user.isGM)
+        ui.notifications.warn(`DAE | rollAbilitySave replacement is deprecated and will be removed from version ${game.system.id} 1.5.3`);
 });
 export function confirmAction(toCheck, confirmFunction, title = i18n("dae.confirm")) {
     if (toCheck) {
@@ -180,4 +205,7 @@ export function confirmAction(toCheck, confirmFunction, title = i18n("dae.confir
     else
         return confirmFunction();
 }
-;
+Hooks.once('libChangelogsReady', function () {
+    //@ts-ignore
+    const libch = libChangelogs;
+});

@@ -92,9 +92,9 @@ export function settingsList(){
 		game.settings.register("tidy5e-sheet", "traitLabelsEnabled", {
 			name: `${game.i18n.localize("TIDY5E.Settings.TraitLabels.name")}`,
 			hint: game.i18n.localize("TIDY5E.Settings.TraitLabels.hint"),
-			scope: "user",
+			scope: "world",
 			config: false,
-			default: false,
+			default: true,
 			type: Boolean
 		});
 
@@ -399,6 +399,16 @@ export function settingsList(){
 			type: Boolean
 		});
 		
+		// Hidden Death Saves
+		game.settings.register("tidy5e-sheet", "hiddenDeathSavesEnabled", {
+			name: `${game.i18n.localize("TIDY5E.Settings.HiddenDeathSaves.name")}`,
+			hint: game.i18n.localize("TIDY5E.Settings.HiddenDeathSaves.hint"),
+			scope: "world",
+			config: false,
+			default: false,
+			type: Boolean
+		});
+		
 		// Item quantity
 		game.settings.register("tidy5e-sheet", "quantityAlwaysShownEnabled", {
 			name: `${game.i18n.localize("TIDY5E.Settings.QuantityAlwaysShown.name")}`,
@@ -526,5 +536,35 @@ export function settingsList(){
 				"attributes": game.i18n.localize("TIDY5E.Settings.defaultActionsTab.attributes"),
 			},
 			default: 'default'
+		});
+
+		// Default width for player sheet
+		
+		game.settings.register("tidy5e-sheet", "playerSheetWidth", {
+			name: `${game.i18n.localize("TIDY5E.Settings.playerSheetWidth")}`,
+			scope: "user",
+			config: false,
+			type: Number,
+			default: 740
+		});
+
+		// Default width for NPC sheet
+		
+		game.settings.register("tidy5e-sheet", "npsSheetWidth", {
+			name: `${game.i18n.localize("TIDY5E.Settings.npsSheetWidth")}`,
+			scope: "user",
+			config: false,
+			type: Number,
+			default: 740
+		});
+
+		// Default width for vehicle sheet
+		
+		game.settings.register("tidy5e-sheet", "vehicleSheetWidth", {
+			name: `${game.i18n.localize("TIDY5E.Settings.vehicleSheetWidth")}`,
+			scope: "user",
+			config: false,
+			type: Number,
+			default: 740
 		});
 }

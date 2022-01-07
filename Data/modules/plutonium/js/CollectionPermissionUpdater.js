@@ -1,1 +1,496 @@
-const _0x4e5d=['push','DUR_INLINE_NOTIFY','get','_$iptSearch','cbEachPlayer','cbAllPlayers','...','_pageFilter','getValues','pInitFilterBox','Bulk\x20Permission\x20Editor','permission','input[name=\x22permu__cb-all-players-all-entities\x22]','Failed\x20to\x20update\x20','[name=\x22btn-reset\x22]','tool-permissions_','label[data-permu-type=\x22lbl-player-all-entities\x22]','value','_pHandleBtnClick_run','children','ascSortLower','1ZjPUld','playerPermissions','_setMassAllPlayerCheckboxValues','495671YSALrK','entityMeta','_$btnRun','Saved!','click','checked','ele','input[data-permu-player-id]','_absorbFnGetData','unknown','data','[name=btn-toggle-summary]','find','path','text','handleSelectClick','Updating\x20','_collection','select[data-permu-type=\x22sel-entity-all-players\x22]','disabled','.search','_$cbEach','Update\x20Complete','_$btnReset','1SUCcpy','left','attr','doAbsorbItems','234247cEvNjz','map','toDisplay','Updating...','Save','.fltr__mini-view','_handleFilterChange','_sortEntities','default','.permu__cell-player','label[data-permu-type=\x22lbl-entity-each-player\x22]','values','.veapp__list','data-permu-value','scroll','[name=btn-filter]','_$rowMass','label[data-permu-type=\x22lbl-entity-player\x22]','label[data-permu-type=\x22lbl-entity-all-players\x22]','1LlgpYr','getData','3207973QQkiko','select[data-permu-type=\x22sel-entity\x22]','val','_pUpdateItemPermissions','/template/CollectionPermissionUpdater.hbs','Task','data-permu-entity-id','filter','Please\x20make\x20some\x20changes\x20first!','users','findIndex','_list','1699upPexg','slice','activateListeners','target','sort','Fvtt','.permu__row-ent','input[name=\x22permu__cb-each-player-all-entities\x22]','_pHandleBtnClick_reset','_collectionName','name','metasPlayerUpdates','folder','mergeMap','closest','getFolderPath','Saving...','visibleItems','_players','filterBox','4379xJMIuJ','getMaxWindowHeight','selAllPlayers','forEach','1531315RcrYTn','prop','setAttribute','update','SELECT','selsPlayers','data-permu-player-id','close','_setMassCheckboxValues','select[name=\x22permu__sel-each-player-all-entities\x22]','select[data-permu-type=\x22sel-player-all-entities\x22]','render','type','warn','style','teardown','length','then','tagName','notifications','select[name=\x22permu__sel-all-players-all-entities\x22]','items','scrollLeft','24DmWFyN','1566581SoilVY','allPlayerUpdate','_$cbAll','getPermissionsEnum','cbsPlayers','bind','169KQVkdw','_entities','input','change','allPlayerPermissions'];const _0x539b=function(_0xb5650e,_0x201eac){_0xb5650e=_0xb5650e-0x83;let _0x4e5d20=_0x4e5d[_0xb5650e];return _0x4e5d20;};const _0x142f90=_0x539b;(function(_0x1c4bba,_0x3b131){const _0x38e00a=_0x539b;while(!![]){try{const _0x233d17=parseInt(_0x38e00a(0xb8))*-parseInt(_0x38e00a(0x89))+-parseInt(_0x38e00a(0xf8))+-parseInt(_0x38e00a(0x10b))*-parseInt(_0x38e00a(0xdc))+parseInt(_0x38e00a(0xa1))+parseInt(_0x38e00a(0xbf))*parseInt(_0x38e00a(0x9d))+-parseInt(_0x38e00a(0xb9))*-parseInt(_0x38e00a(0xd9))+-parseInt(_0x38e00a(0xf4))*parseInt(_0x38e00a(0x10d));if(_0x233d17===_0x3b131)break;else _0x1c4bba['push'](_0x1c4bba['shift']());}catch(_0x5b1f22){_0x1c4bba['push'](_0x1c4bba['shift']());}}}(_0x4e5d,0xcfabe));import{SharedConsts}from'../shared/SharedConsts.js';import{Util}from'./Util.js';import{BaseCollectionTool}from'./BaseCollectionTool.js';import{UtilApplications}from'./UtilApplications.js';import{AppFilterBasic}from'./FilterApplications.js';class CollectionPermissionUpdater extends BaseCollectionTool{constructor(_0x494d8d){const _0x2a9b49=_0x539b;super({'title':_0x2a9b49(0xce),'template':SharedConsts['MODULE_LOCATION']+_0x2a9b49(0x111),'width':0x3c0,'height':Util[_0x2a9b49(0x9e)](),'resizable':!![]},_0x494d8d),this['_pageFilter']=new AppFilterBasic(),this[_0x2a9b49(0x88)]=null,this[_0x2a9b49(0xbb)]=null,this[_0x2a9b49(0x108)]=null,this[_0x2a9b49(0xf1)]=null,this[_0x2a9b49(0xde)]=null,this[_0x2a9b49(0xc7)]=null,this[_0x2a9b49(0xf3)]=null,this[_0x2a9b49(0x9b)]=null,this[_0x2a9b49(0xc0)]=null;}[_0x142f90(0x8b)](_0x36cb1e){const _0x1e7969=_0x142f90;super['activateListeners'](_0x36cb1e);const _0x12fd0d='-2',_0x96be5e=_0x36cb1e[0x0][_0x1e7969(0xd7)][0x2],_0x1c8f23=$(_0x96be5e)['find']('.permu__cell-ent-name')[_0x1e7969(0xf9)]((_0xdeca4,_0xd5449f)=>_0xd5449f)['get']();_0x96be5e['addEventListener'](_0x1e7969(0x106),()=>{const _0x3c1ded=_0x1e7969,_0x40df5b=_0x96be5e[_0x3c1ded(0xb7)];_0x1c8f23[_0x3c1ded(0xa0)](_0x3cc48c=>_0x3cc48c[_0x3c1ded(0xaf)][_0x3c1ded(0xf5)]=_0x40df5b+'px');});const _0x3a1250=_0x96be5e[_0x1e7969(0xd7)][0x1];this[_0x1e7969(0x108)]=$(_0x3a1250);const _0x124de8=this[_0x1e7969(0x108)][_0x1e7969(0xe8)](_0x1e7969(0xb5))['change'](()=>{const _0x3efd4d=_0x1e7969,_0x4fc169=_0x124de8['val']();this[_0x3efd4d(0x88)][_0x3efd4d(0x9a)][_0x3efd4d(0xa0)](_0x5183e3=>{const _0x2c4538=_0x3efd4d;if(!_0x5183e3['data'][_0x2c4538(0xc9)][_0x2c4538(0xe1)])return;_0x5183e3[_0x2c4538(0xe6)]['selAllPlayers'][_0x2c4538(0xd5)]=_0x4fc169,_0x5183e3[_0x2c4538(0xe6)][_0x2c4538(0x9f)][_0x2c4538(0xa3)](_0x2c4538(0x105),_0x4fc169);}),_0x124de8[_0x3efd4d(0x10f)](_0x12fd0d);});this[_0x1e7969(0xbb)]=this[_0x1e7969(0x108)][_0x1e7969(0xe8)](_0x1e7969(0xd0))['change'](()=>{const _0x7f63f3=_0x1e7969,_0x53c26b=this['_$cbAll'][_0x7f63f3(0xa2)](_0x7f63f3(0xe1));this['_setMassAllPlayerCheckboxValues'](_0x53c26b),this['_list'][_0x7f63f3(0x9a)][_0x7f63f3(0xa0)](_0x511897=>{const _0x22d347=_0x7f63f3;_0x511897[_0x22d347(0xe6)]['cbAllPlayers'][_0x22d347(0xe1)]=_0x53c26b;});});const _0x410c11=this[_0x1e7969(0x108)][_0x1e7969(0xe8)](_0x1e7969(0xaa))[_0x1e7969(0xc2)](()=>{const _0x3e268f=_0x1e7969,_0x116b85=_0x410c11[_0x3e268f(0x10f)](),_0x2f5c5f=this[_0x3e268f(0x88)][_0x3e268f(0xb6)][0x0]?this[_0x3e268f(0x88)]['items'][0x0][_0x3e268f(0xe6)]['cbsPlayers'][_0x3e268f(0xb1)]:0x0;for(let _0x4ee3b2=0x0;_0x4ee3b2<_0x2f5c5f;++_0x4ee3b2){this[_0x3e268f(0x88)]['visibleItems']['forEach'](_0x35ea62=>{const _0x5197c5=_0x3e268f;if(!_0x35ea62[_0x5197c5(0xe6)]['cbsPlayers'][_0x4ee3b2][_0x5197c5(0xe1)])return;_0x35ea62['data'][_0x5197c5(0xa6)][_0x4ee3b2][_0x5197c5(0xd5)]=_0x116b85,_0x35ea62['data'][_0x5197c5(0xa6)][_0x4ee3b2]['setAttribute'](_0x5197c5(0x105),_0x116b85);});}_0x410c11[_0x3e268f(0x10f)](_0x12fd0d);});this[_0x1e7969(0xf1)]=this['_$rowMass']['find'](_0x1e7969(0x90))[_0x1e7969(0xc2)](()=>{const _0x5e6725=_0x1e7969,_0x1ff469=this[_0x5e6725(0xf1)][_0x5e6725(0xa2)](_0x5e6725(0xe1));this[_0x5e6725(0xa9)](_0x1ff469),this[_0x5e6725(0x88)][_0x5e6725(0x9a)]['forEach'](_0x4ea0b5=>{const _0x16a362=_0x5e6725;_0x4ea0b5[_0x16a362(0xe6)][_0x16a362(0xc8)][_0x16a362(0xe1)]=_0x1ff469,_0x4ea0b5['data'][_0x16a362(0xbd)][_0x16a362(0xa0)](_0x26e977=>_0x26e977[_0x16a362(0xe1)]=_0x1ff469);});}),this['_$rowMass']['on'](_0x1e7969(0xc2),_0x1e7969(0xab),_0xa6976e=>{const _0x5cfbc1=_0x1e7969,_0xe48cd7=$(_0xa6976e['target']),_0x5c685a=_0xe48cd7[_0x5cfbc1(0x10f)](),_0x10c0f2=_0xe48cd7[_0x5cfbc1(0xf6)](_0x5cfbc1(0xa7)),_0x130386=this[_0x5cfbc1(0x9b)][_0x5cfbc1(0x87)](_0x2540fe=>_0x2540fe['id']===_0x10c0f2);this[_0x5cfbc1(0x88)][_0x5cfbc1(0x9a)][_0x5cfbc1(0xa0)](_0x9c2904=>{const _0x43fd85=_0x5cfbc1;if(!_0x9c2904[_0x43fd85(0xe6)][_0x43fd85(0xbd)][_0x130386][_0x43fd85(0xe1)])return;_0x9c2904[_0x43fd85(0xe6)][_0x43fd85(0xa6)][_0x130386][_0x43fd85(0xd5)]=_0x5c685a,_0x9c2904['data']['selsPlayers'][_0x130386][_0x43fd85(0xa3)]('data-permu-value',_0x5c685a);}),_0xe48cd7[_0x5cfbc1(0x10f)](_0x12fd0d);}),this[_0x1e7969(0x108)]['on'](_0x1e7969(0xe0),_0x1e7969(0xd4),_0x40a4d9=>{const _0x2c5a54=_0x1e7969;if(_0x40a4d9[_0x2c5a54(0x8c)][_0x2c5a54(0xb3)]==='SELECT')return;const _0x286ff2=$(_0x40a4d9[_0x2c5a54(0x8c)])[_0x2c5a54(0x97)](_0x2c5a54(0x101)),_0x33f894=_0x286ff2[_0x2c5a54(0xe8)](_0x2c5a54(0xc1)),_0xe75125=_0x33f894[_0x2c5a54(0xa2)](_0x2c5a54(0xe1)),_0x4a7186=_0x33f894[_0x2c5a54(0xf6)]('data-permu-player-id'),_0x278bba=this[_0x2c5a54(0x9b)][_0x2c5a54(0x87)](_0x4baf85=>_0x4baf85['id']===_0x4a7186);this[_0x2c5a54(0x88)][_0x2c5a54(0x9a)]['forEach'](_0x258b73=>{const _0x4b0f3d=_0x2c5a54;_0x258b73[_0x4b0f3d(0xe6)][_0x4b0f3d(0xbd)][_0x278bba][_0x4b0f3d(0xe1)]=_0xe75125;});}),_0x36cb1e['on']('change',_0x1e7969(0xee),_0x15907d=>{const _0x39c963=_0x1e7969,_0x44b2ff=$(_0x15907d[_0x39c963(0x8c)]);_0x44b2ff[_0x39c963(0xf6)](_0x39c963(0x105),_0x44b2ff['val']());}),_0x36cb1e['on'](_0x1e7969(0xe0),_0x1e7969(0x10a),_0x392f4b=>{const _0x3dcfb1=_0x1e7969;if(_0x392f4b['target'][_0x3dcfb1(0xb3)]===_0x3dcfb1(0xa5))return;const _0x234ff9=$(_0x392f4b[_0x3dcfb1(0x8c)])[_0x3dcfb1(0x97)]('.permu__row-ent'),_0xe5b0f=_0x234ff9['attr']('data-permu-entity-id'),_0x5ef980=this[_0x3dcfb1(0x88)][_0x3dcfb1(0xb6)][_0x3dcfb1(0xe8)](_0x17ddd0=>_0x17ddd0[_0x3dcfb1(0x103)]['id']===_0xe5b0f);ListUiUtil[_0x3dcfb1(0xeb)](this[_0x3dcfb1(0x88)],_0x5ef980,_0x392f4b,{'fnGetCb':_0x2ec8a8=>_0x2ec8a8[_0x3dcfb1(0xe6)][_0x3dcfb1(0xc9)],'isNoHighlightSelection':!![],'fnOnSelectionChange':(_0x301d71,_0x4cf103)=>{const _0x1db5be=_0x3dcfb1;_0x301d71[_0x1db5be(0xe6)][_0x1db5be(0xc9)]['checked']=_0x4cf103;}});}),_0x36cb1e['on'](_0x1e7969(0xc2),'select[data-permu-type=\x22sel-entity-each-player\x22]',_0x36968a=>{const _0x34d1b2=_0x1e7969,_0x5e3f33=$(_0x36968a[_0x34d1b2(0x8c)]),_0x8d225f=_0x5e3f33[_0x34d1b2(0x10f)](),_0x415ead=_0x5e3f33[_0x34d1b2(0x97)]('.permu__row-ent'),_0x1b9cba=_0x415ead[_0x34d1b2(0xf6)]('data-permu-entity-id'),_0x5e88c0=this[_0x34d1b2(0x88)][_0x34d1b2(0xb6)][_0x34d1b2(0xe8)](_0x52bae5=>_0x52bae5[_0x34d1b2(0x103)]['id']===_0x1b9cba),_0x4b78e9=_0x5e88c0[_0x34d1b2(0xe6)][_0x34d1b2(0xbd)]['length'];for(let _0x5033c0=0x0;_0x5033c0<_0x4b78e9;++_0x5033c0){if(!_0x5e88c0[_0x34d1b2(0xe6)][_0x34d1b2(0xbd)][_0x5033c0][_0x34d1b2(0xe1)])continue;_0x5e88c0['data'][_0x34d1b2(0xa6)][_0x5033c0]['value']=_0x8d225f,_0x5e88c0['data'][_0x34d1b2(0xa6)][_0x5033c0][_0x34d1b2(0xa3)](_0x34d1b2(0x105),_0x8d225f);}_0x5e3f33[_0x34d1b2(0x10f)](_0x12fd0d);}),_0x36cb1e['on'](_0x1e7969(0xe0),_0x1e7969(0x102),_0x21d9f4=>{const _0x25dbe8=_0x1e7969;if(_0x21d9f4['target'][_0x25dbe8(0xb3)]==='SELECT')return;const _0x2c98fe=$(_0x21d9f4[_0x25dbe8(0x8c)])[_0x25dbe8(0x97)](_0x25dbe8(0x8f)),_0x2644bb=_0x2c98fe[_0x25dbe8(0xf6)](_0x25dbe8(0x83)),_0x39fc56=this[_0x25dbe8(0x88)][_0x25dbe8(0xb6)]['find'](_0x1f042c=>_0x1f042c[_0x25dbe8(0x103)]['id']===_0x2644bb);ListUiUtil[_0x25dbe8(0xeb)](this[_0x25dbe8(0x88)],_0x39fc56,_0x21d9f4,{'fnGetCb':_0x5e9d59=>_0x5e9d59['data'][_0x25dbe8(0xc8)],'isNoHighlightSelection':!![],'fnOnSelectionChange':(_0x199606,_0x370d07)=>{const _0xeaee79=_0x25dbe8;_0x199606[_0xeaee79(0xe6)][_0xeaee79(0xbd)]['forEach'](_0x23992d=>_0x23992d[_0xeaee79(0xe1)]=_0x370d07);}});}),_0x36cb1e['on']('change',_0x1e7969(0x10e),_0x1b7af7=>{const _0x43194c=_0x1e7969,_0xbf840=$(_0x1b7af7[_0x43194c(0x8c)]);_0xbf840[_0x43194c(0xf6)](_0x43194c(0x105),_0xbf840[_0x43194c(0x10f)]());}),_0x36cb1e['on']('click',_0x1e7969(0x109),_0x373d7e=>{const _0x437de1=_0x1e7969;if(_0x373d7e[_0x437de1(0x8c)]['tagName']===_0x437de1(0xa5))return;const _0xcfc723=$(_0x373d7e[_0x437de1(0x8c)])[_0x437de1(0x97)](_0x437de1(0x8f)),_0xa8425a=$(_0x373d7e[_0x437de1(0x8c)])[_0x437de1(0x97)](_0x437de1(0x101))['find'](_0x437de1(0xe3)),_0x461a26=_0xcfc723[_0x437de1(0xf6)]('data-permu-entity-id'),_0x4dbc74=_0xa8425a['attr'](_0x437de1(0xa7)),_0x4e8e00=this['_players'][_0x437de1(0x87)](_0x356a8e=>_0x356a8e['id']===_0x4dbc74),_0x51a5e4=this[_0x437de1(0x88)][_0x437de1(0xb6)][_0x437de1(0xe8)](_0x57e5dd=>_0x57e5dd[_0x437de1(0x103)]['id']===_0x461a26);ListUiUtil['handleSelectClick'](this[_0x437de1(0x88)],_0x51a5e4,_0x373d7e,{'fnGetCb':_0x261ac4=>_0x261ac4[_0x437de1(0xe6)][_0x437de1(0xbd)][_0x4e8e00],'isNoHighlightSelection':!![],'fnOnSelectionChange':(_0x39ebe5,_0x141a18)=>{const _0x3948ea=_0x437de1;_0x39ebe5[_0x3948ea(0xe6)][_0x3948ea(0xbd)][_0x4e8e00][_0x3948ea(0xe1)]=_0x141a18;}});}),this[_0x1e7969(0xde)]=_0x36cb1e[_0x1e7969(0xe8)]('[name=\x22btn-save\x22]')['click'](async()=>this[_0x1e7969(0xd6)]()),this[_0x1e7969(0xc7)]=_0x36cb1e['find']('.search'),this['_$btnReset']=_0x36cb1e[_0x1e7969(0xe8)](_0x1e7969(0xd2))[_0x1e7969(0xe0)](()=>this['_pHandleBtnClick_reset']()),this[_0x1e7969(0x88)]=new List({'$iptSearch':_0x36cb1e[_0x1e7969(0xe8)](_0x1e7969(0xf0)),'$wrpList':_0x36cb1e[_0x1e7969(0xe8)](_0x1e7969(0x104)),'fnSort':CollectionPermissionUpdater['_sortEntities']}),this['_pageFilter'][_0x1e7969(0xcd)]({'$iptSearch':this[_0x1e7969(0xc7)],'$btnReset':this['_$btnReset'],'$btnOpen':_0x36cb1e[_0x1e7969(0xe8)](_0x1e7969(0x107)),'$btnToggleSummaryHidden':_0x36cb1e['find'](_0x1e7969(0xe7)),'$wrpMiniPills':_0x36cb1e[_0x1e7969(0xe8)](_0x1e7969(0xfd)),'namespace':_0x1e7969(0xd3)+this[_0x1e7969(0x92)]})[_0x1e7969(0xb2)](()=>{const _0x5a003f=_0x1e7969;this[_0x5a003f(0xc0)]['forEach'](_0x1c0e3d=>this[_0x5a003f(0xcb)]['addToFilters'](_0x1c0e3d)),this[_0x5a003f(0x88)][_0x5a003f(0xf7)](this[_0x5a003f(0xc0)],{'fnGetName':_0x57a017=>_0x57a017[_0x5a003f(0x93)],'fnGetValues':_0x82e77a=>({'id':_0x82e77a['id'],'path':_0x82e77a['path']}),'fnGetData':CollectionPermissionUpdater[_0x5a003f(0xe4)]}),this['_list']['init'](),this[_0x5a003f(0xcb)][_0x5a003f(0x9c)][_0x5a003f(0xac)](),this['_pageFilter'][_0x5a003f(0x9c)]['on'](FilterBox['EVNT_VALCHANGE'],this[_0x5a003f(0xfe)][_0x5a003f(0xbe)](this)),this[_0x5a003f(0xfe)]();});}async[_0x142f90(0xd6)](){const _0x1b433e=_0x142f90;if(!this[_0x1b433e(0x88)])return;const _0x34b545=[];this[_0x1b433e(0xc0)][_0x1b433e(0xa0)](_0x2dfa1f=>{const _0x2a86df=_0x1b433e,_0x45a967=this['_list'][_0x2a86df(0xb6)][_0x2a86df(0xe8)](_0x2a029f=>_0x2a029f['values']['id']===_0x2dfa1f['id']);let _0x2b0075=null;const _0x1b1124=[],_0x44e0d5=''+_0x2dfa1f[_0x2a86df(0xc3)];if(_0x45a967[_0x2a86df(0xe6)][_0x2a86df(0x9f)][_0x2a86df(0xd5)]!==_0x44e0d5)_0x2b0075=_0x45a967[_0x2a86df(0xe6)][_0x2a86df(0x9f)][_0x2a86df(0xd5)];_0x45a967['data'][_0x2a86df(0xa6)][_0x2a86df(0xa0)]((_0x42f6e0,_0x5da9b4)=>{const _0x5e80af=_0x2a86df,_0x4579c7=this[_0x5e80af(0x9b)][_0x5da9b4]['id'],_0x40e546=''+_0x2dfa1f[_0x5e80af(0xda)][_0x4579c7];if(_0x42f6e0[_0x5e80af(0xd5)]!==_0x40e546)_0x1b1124['push']({'value':_0x42f6e0[_0x5e80af(0xd5)],'playerId':_0x4579c7});});if(_0x2b0075!=null||_0x1b1124[_0x2a86df(0xb1)])_0x34b545[_0x2a86df(0xc4)]({'entityMeta':_0x2dfa1f,'metasPlayerUpdates':_0x1b1124,'allPlayerUpdate':_0x2b0075});});if(!_0x34b545)return ui[_0x1b433e(0xb4)][_0x1b433e(0xae)](_0x1b433e(0x85));this['_$btnRun'][_0x1b433e(0xf6)](_0x1b433e(0xef),!![])[_0x1b433e(0xea)](_0x1b433e(0x99));const _0x3b4a99=_0x34b545[_0x1b433e(0xf9)](_0xec1244=>new Util[(_0x1b433e(0x112))](''+_0xec1244['entityMeta'][_0x1b433e(0xe9)]+_0xec1244[_0x1b433e(0xdd)][_0x1b433e(0x93)],()=>this[_0x1b433e(0x110)](_0xec1244)));await UtilApplications['pRunTasks'](_0x3b4a99,{'titleInitial':_0x1b433e(0xfb),'titleComplete':_0x1b433e(0xf2),'fnGetRowRunningText':_0xb7d34f=>_0x1b433e(0xec)+_0xb7d34f+_0x1b433e(0xca),'fnGetRowSuccessText':_0x55f2e7=>'Updated\x20'+_0x55f2e7+'.','fnGetRowErrorText':_0x925042=>_0x1b433e(0xd1)+_0x925042+'!\x20'+VeCt['STR_SEE_CONSOLE']}),this[_0x1b433e(0xde)]['attr'](_0x1b433e(0xef),![])[_0x1b433e(0xea)](_0x1b433e(0xdf)),setTimeout(()=>this[_0x1b433e(0xde)][_0x1b433e(0xea)](_0x1b433e(0xfc)),VeCt[_0x1b433e(0xc5)]);}async[_0x142f90(0x110)](_0x5341e0){const _0x5c3ff2=_0x142f90,_0x5de58c=this[_0x5c3ff2(0xed)][_0x5c3ff2(0xc6)](_0x5341e0[_0x5c3ff2(0xdd)]['id']),_0x56b72f={..._0x5de58c[_0x5c3ff2(0xe6)][_0x5c3ff2(0xcf)]};_0x5341e0[_0x5c3ff2(0xba)]!=null&&(_0x56b72f[_0x5c3ff2(0x100)]=Number(_0x5341e0['allPlayerUpdate'])),(_0x5341e0['metasPlayerUpdates']||[])[_0x5c3ff2(0xa0)](_0x15c2ae=>{const {playerId:_0x352fc3,value:_0x561859}=_0x15c2ae;_0x56b72f[_0x352fc3]=Number(_0x561859);}),await _0x5de58c[_0x5c3ff2(0xa4)]({'permission':{}}),await _0x5de58c['update']({'permission':_0x56b72f}),_0x5341e0[_0x5c3ff2(0xba)]!=null&&(_0x5341e0['entityMeta'][_0x5c3ff2(0xc3)]=''+_0x5341e0[_0x5c3ff2(0xba)]),(_0x5341e0[_0x5c3ff2(0x94)]||[])[_0x5c3ff2(0xa0)](_0x532a3d=>{const _0x44aa2f=_0x5c3ff2,{playerId:_0x4b988b,value:_0x5606d5}=_0x532a3d;_0x5341e0[_0x44aa2f(0xdd)][_0x44aa2f(0xda)][_0x4b988b]=''+_0x5606d5;});}async[_0x142f90(0x91)](){const _0x3d7baa=_0x142f90;this[_0x3d7baa(0xc7)]['val'](''),this[_0x3d7baa(0xbb)][_0x3d7baa(0xa2)](_0x3d7baa(0xe1),![]),this[_0x3d7baa(0xdb)](![]),this['_$cbEach'][_0x3d7baa(0xa2)](_0x3d7baa(0xe1),![]),this[_0x3d7baa(0xa9)](![]),this[_0x3d7baa(0xc0)][_0x3d7baa(0xa0)](_0x1e735e=>{const _0x3d3299=_0x3d7baa,_0x251b6a=this[_0x3d3299(0x88)][_0x3d3299(0xb6)][_0x3d3299(0xe8)](_0x2b4171=>_0x2b4171[_0x3d3299(0x103)]['id']===_0x1e735e['id']);_0x251b6a[_0x3d3299(0xe6)][_0x3d3299(0xc8)][_0x3d3299(0xe1)]=![],_0x251b6a[_0x3d3299(0xe6)][_0x3d3299(0xbd)][_0x3d3299(0xa0)](_0x4877d3=>_0x4877d3[_0x3d3299(0xe1)]=![]),_0x251b6a[_0x3d3299(0xe6)][_0x3d3299(0xa6)][_0x3d3299(0xa0)]((_0x306266,_0x220fa5)=>{const _0x11fc2c=_0x3d3299,_0xe33d17=this['_players'][_0x220fa5]['id'],_0x1d8ce3=''+_0x1e735e[_0x11fc2c(0xda)][_0xe33d17];_0x306266[_0x11fc2c(0xd5)]=_0x1d8ce3,_0x306266[_0x11fc2c(0xa3)](_0x11fc2c(0x105),_0x1d8ce3);});});}[_0x142f90(0xdb)](_0x3e3d54){const _0x40bc4f=_0x142f90;this[_0x40bc4f(0x88)][_0x40bc4f(0x9a)][_0x40bc4f(0xa0)](_0x314a7f=>_0x314a7f[_0x40bc4f(0xe6)][_0x40bc4f(0xc9)][_0x40bc4f(0xe1)]=_0x3e3d54);}['_setMassCheckboxValues'](_0x288811){const _0x35a9d8=_0x142f90;this[_0x35a9d8(0x108)][_0x35a9d8(0xe8)]('input[data-permu-player-id]')[_0x35a9d8(0xc6)]()[_0x35a9d8(0xa0)](_0x5c38bc=>_0x5c38bc[_0x35a9d8(0xe1)]=_0x288811);}[_0x142f90(0xfe)](){const _0x14c677=_0x142f90,_0x15844c=this[_0x14c677(0xcb)]['filterBox'][_0x14c677(0xcc)]();this[_0x14c677(0x88)][_0x14c677(0x84)](_0x576335=>this[_0x14c677(0xcb)][_0x14c677(0xfa)](_0x15844c,this[_0x14c677(0xc0)][_0x576335['ix']]));}static[_0x142f90(0xe4)](_0xbb343e){const _0x2f29f4=_0x142f90,_0x513781=_0xbb343e[_0x2f29f4(0xe2)][_0x2f29f4(0xd7)][0x2],_0x57dc54=_0xbb343e[_0x2f29f4(0xe2)]['children'][0x3],_0x5ee5ce=[..._0xbb343e[_0x2f29f4(0xe2)][_0x2f29f4(0xd7)]][_0x2f29f4(0x8a)](0x4);return{'cbAllPlayers':_0x513781[_0x2f29f4(0xd7)][0x0],'selAllPlayers':_0x513781[_0x2f29f4(0xd7)][0x1],'cbEachPlayer':_0x57dc54[_0x2f29f4(0xd7)][0x0],'selEachPlayer':_0x57dc54[_0x2f29f4(0xd7)][0x1],'cbsPlayers':_0x5ee5ce[_0x2f29f4(0xf9)](_0x2a3d0f=>_0x2a3d0f[_0x2f29f4(0xd7)][0x0]),'selsPlayers':_0x5ee5ce[_0x2f29f4(0xf9)](_0x483706=>_0x483706[_0x2f29f4(0xd7)][0x1])};}static[_0x142f90(0xff)](_0x4f8875,_0x13a890){const _0x20d456=_0x142f90,_0x43bb44=_0x4f8875['values']?_0x4f8875['values']['path']:_0x4f8875[_0x20d456(0xe9)],_0x36ea70=_0x13a890[_0x20d456(0x103)]?_0x13a890[_0x20d456(0x103)][_0x20d456(0xe9)]:_0x13a890[_0x20d456(0xe9)];if(_0x43bb44&&!_0x36ea70)return-0x1;if(!_0x43bb44&&_0x36ea70)return 0x1;return SortUtil[_0x20d456(0xd8)](_0x43bb44,_0x36ea70)||SortUtil[_0x20d456(0xd8)](_0x4f8875['name'],_0x13a890[_0x20d456(0x93)]);}[_0x142f90(0x10c)](){const _0xa68245=_0x142f90;return this[_0xa68245(0x9b)]=game[_0xa68245(0x86)]['contents'][_0xa68245(0xf9)](_0x541eb6=>({'id':_0x541eb6['id'],'name':_0x541eb6[_0xa68245(0x93)]})),this[_0xa68245(0xc0)]=this[_0xa68245(0xed)]['contents'][_0xa68245(0xf9)]((_0x5f4e40,_0x33cdfe)=>{const _0x1c3b68=_0xa68245,_0x2263af=UtilApplications[_0x1c3b68(0x98)](_0x5f4e40,{'isAddTrailingSlash':!![]}),_0x53d119=(_0x5f4e40[_0x1c3b68(0xe6)]||{})[_0x1c3b68(0xcf)]||{},_0x1aab86=_0x53d119[_0x1c3b68(0x100)]!=null?_0x53d119[_0x1c3b68(0x100)]:-0x1;return{'id':_0x5f4e40['id'],'name':_0x5f4e40[_0x1c3b68(0x93)],'allPlayerPermissions':_0x1aab86,'playerPermissions':this['_players']['map'](_0x481bdf=>_0x481bdf['id'])[_0x1c3b68(0x96)](_0x53784a=>{const _0x58e626=_0x53d119[_0x53784a]!=null?_0x53d119[_0x53784a]:-0x1;return{[_0x53784a]:_0x58e626};}),'type':MiscUtil['get'](_0x5f4e40,_0x1c3b68(0xe6),_0x1c3b68(0xad))||_0x1c3b68(0xe5),'folderId':_0x5f4e40[_0x1c3b68(0x95)]?_0x5f4e40['folder']['id']:null,'path':_0x2263af||'','ix':_0x33cdfe};}),this['_entities'][_0xa68245(0x8d)](CollectionPermissionUpdater[_0xa68245(0xff)]),{...super[_0xa68245(0x10c)](),'titleSearch':this[_0xa68245(0x92)]+'s','players':this['_players'],'entities':this[_0xa68245(0xc0)],'permissions':Util[_0xa68245(0x8e)][_0xa68245(0xbc)]()};}[_0x142f90(0xa8)](..._0x21992f){const _0x22b029=_0x142f90;return this[_0x22b029(0xcb)][_0x22b029(0xb0)](),super[_0x22b029(0xa8)](..._0x21992f);}}export{CollectionPermissionUpdater};
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Util} from "./Util.js";
+import {BaseCollectionTool} from "./BaseCollectionTool.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {AppFilterBasic} from "./FilterApplications.js";
+
+// TODO this performs poorly for lots of entities, see ISSUE(4)
+class CollectionPermissionUpdater extends BaseCollectionTool {
+	constructor (collectionName) {
+		super(
+			{
+				title: "Bulk Permission Editor",
+				template: `${SharedConsts.MODULE_LOCATION}/template/CollectionPermissionUpdater.hbs`,
+				width: 960,
+				height: Util.getMaxWindowHeight(),
+				resizable: true,
+			},
+			collectionName,
+		);
+
+		// region Local fields
+		this._pageFilter = new AppFilterBasic();
+
+		this._list = null;
+		this._$cbAll = null;
+		this._$rowMass = null;
+		this._$cbEach = null;
+		this._$btnRun = null;
+		this._$iptSearch = null;
+		this._$btnReset = null;
+
+		// data caching
+		this._players = null;
+		this._entities = null;
+		// endregion
+	}
+
+	activateListeners ($html) {
+		super.activateListeners($html);
+
+		const SEL_DESELECTED_VALUE = "-2";
+
+		// Pull out the elements to avoid running `.find()` across the whole window
+		const eleScroller = $html[0].children[2];
+		const elesToScroll = $(eleScroller).find(".permu__cell-ent-name").map((i, e) => e).get();
+		eleScroller.addEventListener("scroll", () => {
+			const scrollPos = eleScroller.scrollLeft;
+			elesToScroll.forEach(it => it.style.left = `${scrollPos}px`);
+		});
+
+		const eleRowMass = eleScroller.children[1];
+		this._$rowMass = $(eleRowMass);
+
+		// region "All Players" God controls
+		const $selAll = this._$rowMass.find(`select[name="permu__sel-all-players-all-entities"]`)
+			.change(() => {
+				const toVal = $selAll.val();
+
+				this._list.visibleItems.forEach(li => {
+					if (!li.data.cbAllPlayers.checked) return;
+					li.data.selAllPlayers.value = toVal;
+					li.data.selAllPlayers.setAttribute("data-permu-value", toVal);
+				});
+
+				$selAll.val(SEL_DESELECTED_VALUE);
+			});
+
+		this._$cbAll = this._$rowMass.find(`input[name="permu__cb-all-players-all-entities"]`)
+			.change(() => {
+				const toVal = this._$cbAll.prop("checked");
+
+				this._setMassAllPlayerCheckboxValues(toVal);
+
+				this._list.visibleItems.forEach(li => {
+					li.data.cbAllPlayers.checked = toVal;
+				});
+			});
+		// endregion
+
+		// region God controls
+		const $selEach = this._$rowMass.find(`select[name="permu__sel-each-player-all-entities"]`)
+			.change(() => {
+				const toVal = $selEach.val();
+				const len = this._list.items[0] ? this._list.items[0].data.cbsPlayers.length : 0;
+
+				for (let i = 0; i < len; ++i) {
+					this._list.visibleItems.forEach(li => {
+						if (!li.data.cbsPlayers[i].checked) return;
+						li.data.selsPlayers[i].value = toVal;
+						li.data.selsPlayers[i].setAttribute("data-permu-value", toVal);
+					});
+				}
+
+				$selEach.val(SEL_DESELECTED_VALUE);
+			});
+
+		this._$cbEach = this._$rowMass.find(`input[name="permu__cb-each-player-all-entities"]`)
+			.change(() => {
+				const toVal = this._$cbEach.prop("checked");
+
+				this._setMassCheckboxValues(toVal);
+
+				this._list.visibleItems.forEach(li => {
+					li.data.cbEachPlayer.checked = toVal;
+					li.data.cbsPlayers.forEach(cb => cb.checked = toVal);
+				});
+			});
+		// endregion
+
+		// region Top (player) row
+		this._$rowMass.on(`change`, `select[data-permu-type="sel-player-all-entities"]`, (evt) => {
+			const $sel = $(evt.target);
+
+			const toVal = $sel.val();
+
+			const playerId = $sel.attr("data-permu-player-id");
+			const ixPlayers = this._players.findIndex(it => it.id === playerId);
+
+			this._list.visibleItems.forEach(li => {
+				if (!li.data.cbsPlayers[ixPlayers].checked) return;
+				li.data.selsPlayers[ixPlayers].value = toVal;
+				li.data.selsPlayers[ixPlayers].setAttribute("data-permu-value", toVal);
+			});
+
+			$sel.val(SEL_DESELECTED_VALUE);
+		});
+
+		this._$rowMass.on(`click`, `label[data-permu-type="lbl-player-all-entities"]`, (evt) => {
+			if (evt.target.tagName === "SELECT") return;
+
+			const $row = $(evt.target).closest(`.permu__cell-player`);
+			const $cb = $row.find(`input`);
+
+			const toVal = $cb.prop("checked");
+
+			const playerId = $cb.attr("data-permu-player-id");
+			const ixPlayers = this._players.findIndex(it => it.id === playerId);
+
+			this._list.visibleItems.forEach(li => {
+				li.data.cbsPlayers[ixPlayers].checked = toVal;
+			});
+		});
+		// endregion
+
+		// region "All Players"
+		$html.on(`change`, `select[data-permu-type="sel-entity-all-players"]`, (evt) => {
+			const $sel = $(evt.target);
+			$sel.attr("data-permu-value", $sel.val());
+		});
+
+		$html.on(`click`, `label[data-permu-type="lbl-entity-all-players"]`, (evt) => {
+			if (evt.target.tagName === "SELECT") return;
+
+			const $row = $(evt.target).closest(`.permu__row-ent`);
+
+			const entityId = $row.attr("data-permu-entity-id");
+
+			const li = this._list.items.find(it => it.values.id === entityId);
+
+			ListUiUtil.handleSelectClick(
+				this._list,
+				li,
+				evt,
+				{
+					fnGetCb: li => li.data.cbAllPlayers,
+					isNoHighlightSelection: true,
+					fnOnSelectionChange: (item, toVal) => {
+						item.data.cbAllPlayers.checked = toVal;
+					},
+				},
+			);
+		});
+		// endregion
+
+		// region Entity rows
+		$html.on(`change`, `select[data-permu-type="sel-entity-each-player"]`, (evt) => {
+			const $sel = $(evt.target);
+
+			const toVal = $sel.val();
+
+			const $row = $sel.closest(`.permu__row-ent`);
+			const entityId = $row.attr("data-permu-entity-id");
+
+			const li = this._list.items.find(it => it.values.id === entityId);
+
+			const len = li.data.cbsPlayers.length;
+			for (let i = 0; i < len; ++i) {
+				if (!li.data.cbsPlayers[i].checked) continue;
+				li.data.selsPlayers[i].value = toVal;
+				li.data.selsPlayers[i].setAttribute("data-permu-value", toVal);
+			}
+
+			$sel.val(SEL_DESELECTED_VALUE);
+		});
+
+		$html.on(`click`, `label[data-permu-type="lbl-entity-each-player"]`, (evt) => {
+			if (evt.target.tagName === "SELECT") return;
+
+			const $row = $(evt.target).closest(`.permu__row-ent`);
+
+			const entityId = $row.attr("data-permu-entity-id");
+
+			const li = this._list.items.find(it => it.values.id === entityId);
+
+			ListUiUtil.handleSelectClick(
+				this._list,
+				li,
+				evt,
+				{
+					fnGetCb: li => li.data.cbEachPlayer,
+					isNoHighlightSelection: true,
+					fnOnSelectionChange: (item, toVal) => {
+						item.data.cbsPlayers.forEach(cb => cb.checked = toVal);
+					},
+				},
+			);
+		});
+		// endregion
+
+		// region Single select
+		$html.on(`change`, `select[data-permu-type="sel-entity"]`, (evt) => {
+			const $sel = $(evt.target);
+			$sel.attr("data-permu-value", $sel.val());
+		});
+		// endregion
+
+		// region Single checkbox
+		$html.on(`click`, `label[data-permu-type="lbl-entity-player"]`, (evt) => {
+			if (evt.target.tagName === "SELECT") return;
+
+			const $row = $(evt.target).closest(`.permu__row-ent`);
+			const $cb = $(evt.target).closest(`.permu__cell-player`).find(`input[data-permu-player-id]`);
+
+			const entityId = $row.attr("data-permu-entity-id");
+			const playerId = $cb.attr("data-permu-player-id");
+
+			const ixPlayer = this._players.findIndex(it => it.id === playerId);
+
+			const li = this._list.items.find(it => it.values.id === entityId);
+
+			ListUiUtil.handleSelectClick(
+				this._list,
+				li,
+				evt,
+				{
+					fnGetCb: li => li.data.cbsPlayers[ixPlayer],
+					isNoHighlightSelection: true,
+					fnOnSelectionChange: (item, toVal) => {
+						item.data.cbsPlayers[ixPlayer].checked = toVal;
+					},
+				},
+			);
+		});
+		// endregion
+
+		this._$btnRun = $html.find(`[name="btn-save"]`).click(async () => this._pHandleBtnClick_run());
+		this._$iptSearch = $html.find(`.search`);
+		this._$btnReset = $html.find(`[name="btn-reset"]`).click(() => this._pHandleBtnClick_reset());
+
+		// Init list library
+		this._list = new List({
+			$iptSearch: $html.find(`.search`),
+			$wrpList: $html.find(`.veapp__list`),
+			fnSort: CollectionPermissionUpdater._sortEntities,
+		});
+
+		this._pageFilter.pInitFilterBox({
+			$iptSearch: this._$iptSearch,
+			$btnReset: this._$btnReset,
+			$btnOpen: $html.find(`[name=btn-filter]`),
+			$btnToggleSummaryHidden: $html.find(`[name=btn-toggle-summary]`),
+			$wrpMiniPills: $html.find(`.fltr__mini-view`),
+			namespace: `tool-permissions_${this._collectionName}`,
+		}).then(() => {
+			this._entities.forEach(it => this._pageFilter.addToFilters(it));
+
+			this._list.doAbsorbItems(
+				this._entities,
+				{
+					fnGetName: it => it.name,
+					fnGetValues: it => ({
+						id: it.id,
+						path: it.path,
+					}),
+					fnGetData: CollectionPermissionUpdater._absorbFnGetData,
+				},
+			);
+			this._list.init();
+
+			this._pageFilter.filterBox.render();
+
+			this._pageFilter.filterBox.on(
+				FilterBox.EVNT_VALCHANGE,
+				this._handleFilterChange.bind(this),
+			);
+
+			this._handleFilterChange();
+		});
+	}
+
+	async _pHandleBtnClick_run () {
+		if (!this._list) return;
+
+		const toSaves = [];
+
+		this._entities.forEach(ent => {
+			const row = this._list.items.find(it => it.values.id === ent.id);
+
+			let allPlayerUpdate = null;
+			const metasPlayerUpdates = [];
+
+			const originalAllValue = `${ent.allPlayerPermissions}`;
+			if (row.data.selAllPlayers.value !== originalAllValue) allPlayerUpdate = row.data.selAllPlayers.value;
+
+			row.data.selsPlayers.forEach((eleSel, i) => {
+				const playerId = this._players[i].id;
+				const originalVal = `${ent.playerPermissions[playerId]}`;
+
+				if (eleSel.value !== originalVal) metasPlayerUpdates.push({value: eleSel.value, playerId});
+			});
+
+			if (allPlayerUpdate != null || metasPlayerUpdates.length) toSaves.push({entityMeta: ent, metasPlayerUpdates, allPlayerUpdate});
+		});
+
+		if (!toSaves) return ui.notifications.warn(`Please make some changes first!`);
+
+		this._$btnRun.attr("disabled", true).text("Saving...");
+
+		const tasks = toSaves.map(toSave => new Util.Task(`${toSave.entityMeta.path}${toSave.entityMeta.name}`, () => this._pUpdateItemPermissions(toSave)));
+
+		await UtilApplications.pRunTasks(
+			tasks,
+			{
+				titleInitial: "Updating...",
+				titleComplete: "Update Complete",
+				fnGetRowRunningText: (taskName) => `Updating ${taskName}...`,
+				fnGetRowSuccessText: (taskName) => `Updated ${taskName}.`,
+				fnGetRowErrorText: (taskName) => `Failed to update ${taskName}! ${VeCt.STR_SEE_CONSOLE}`,
+			},
+		);
+
+		this._$btnRun.attr("disabled", false).text("Saved!");
+		setTimeout(() => this._$btnRun.text("Save"), VeCt.DUR_INLINE_NOTIFY);
+	}
+
+	async _pUpdateItemPermissions (toSave) {
+		const entity = this._collection.get(toSave.entityMeta.id);
+
+		// This is asymmetrical with the below (uses `.data.permission` instead of `.permission`)
+		//   `.permission` appears to instead be overridden with a property accessor for *current player's*
+		//   permission for the entity.
+		const nxtPermissions = {...entity.data.permission};
+
+		if (toSave.allPlayerUpdate != null) {
+			nxtPermissions.default = Number(toSave.allPlayerUpdate);
+		}
+
+		(toSave.metasPlayerUpdates || []).forEach(meta => {
+			const {playerId, value} = meta;
+			// "-1" is effectively "delete this permission," since Foundry screeches if we _actually_ pass -1.
+			// The same strategy is used in `PermissionControl._updateObject`.
+			if (!~value) return delete nxtPermissions[playerId];
+			nxtPermissions[playerId] = Number(value);
+		});
+
+		if (!CollectionUtil.deepEquals(entity.data.permission, nxtPermissions)) {
+			// For some unknown reason, this _only_ seems to work with `recursive: false, noHook: true` applied (or maybe
+			//   some subset thereof; didn't test. `diff` along isn't enough, however.)
+			await entity.update({permission: nxtPermissions}, {diff: false, recursive: false, noHook: true});
+		}
+
+		// Update our state (`this._entities` aka the state returned by `getData()`) in a separate post-step, to better handle errors
+		if (toSave.allPlayerUpdate != null) {
+			toSave.entityMeta.allPlayerPermissions = `${toSave.allPlayerUpdate}`;
+		}
+
+		(toSave.metasPlayerUpdates || []).forEach(meta => {
+			const {playerId, value} = meta;
+			toSave.entityMeta.playerPermissions[playerId] = `${value}`;
+		});
+	}
+
+	async _pHandleBtnClick_reset () {
+		this._$iptSearch.val("");
+
+		this._$cbAll.prop("checked", false);
+		this._setMassAllPlayerCheckboxValues(false);
+
+		this._$cbEach.prop("checked", false);
+		this._setMassCheckboxValues(false);
+
+		this._entities.forEach(ent => {
+			const row = this._list.items.find(it => it.values.id === ent.id);
+
+			row.data.cbEachPlayer.checked = false;
+			row.data.cbsPlayers.forEach(cb => cb.checked = false);
+
+			row.data.selsPlayers.forEach((sel, i) => {
+				const playerId = this._players[i].id;
+				const toVal = `${ent.playerPermissions[playerId]}`;
+				sel.value = toVal;
+				sel.setAttribute("data-permu-value", toVal);
+			});
+		});
+	}
+
+	_setMassAllPlayerCheckboxValues (toVal) {
+		// For some reason this doesn't work as a jQuery `.each`
+		this._list.visibleItems.forEach(li => li.data.cbAllPlayers.checked = toVal);
+	}
+
+	_setMassCheckboxValues (toVal) {
+		// For some reason this doesn't work as a jQuery `.each`
+		this._$rowMass.find(`input[data-permu-player-id]`).get().forEach(cb => cb.checked = toVal);
+	}
+
+	_handleFilterChange () {
+		const f = this._pageFilter.filterBox.getValues();
+		this._list.filter(li => this._pageFilter.toDisplay(f, this._entities[li.ix]));
+	}
+
+	static _absorbFnGetData (li) {
+		const eleCellControlsAllPlayers = li.ele.children[2];
+		const eleCellControlsEachPlayer = li.ele.children[3];
+		const eleCellsControlPlayer = [...li.ele.children].slice(4);
+
+		return ({
+			cbAllPlayers: eleCellControlsAllPlayers.children[0],
+			selAllPlayers: eleCellControlsAllPlayers.children[1],
+
+			cbEachPlayer: eleCellControlsEachPlayer.children[0],
+			selEachPlayer: eleCellControlsEachPlayer.children[1],
+
+			cbsPlayers: eleCellsControlPlayer.map(ele => ele.children[0]),
+			selsPlayers: eleCellsControlPlayer.map(ele => ele.children[1]),
+		});
+	}
+
+	static _sortEntities (a, b) {
+		const aPath = a.values ? a.values.path : a.path;
+		const bPath = b.values ? b.values.path : b.path;
+		if (aPath && !bPath) return -1;
+		if (!aPath && bPath) return 1;
+		return SortUtil.ascSortLower(aPath, bPath) || SortUtil.ascSortLower(a.name, b.name);
+	}
+
+	/**
+	 * Used by template engine.
+	 */
+	getData () {
+		// Cache these for later lookups
+		this._players = game.users.contents.map(it => ({
+			id: it.id,
+			name: it.name,
+		}));
+
+		this._entities = this._collection.contents.map((it, ix) => {
+			const path = UtilApplications.getFolderPath(it, {isAddTrailingSlash: true});
+			const permObject = (it.data || {}).permission || {};
+
+			const permissionLevelAll = permObject.default != null ? permObject.default : 0;
+
+			return {
+				id: it.id,
+				name: it.name,
+				allPlayerPermissions: permissionLevelAll,
+				playerPermissions: this._players.map(player => player.id).mergeMap(id => {
+					const permissionLevel = permObject[id] != null ? permObject[id] : -1;
+					return {[id]: permissionLevel};
+				}),
+				type: MiscUtil.get(it, "data", "type") || "unknown",
+				folderId: it.folder ? it.folder.id : null,
+				path: path || "",
+				ix,
+			};
+		});
+
+		this._entities.sort(CollectionPermissionUpdater._sortEntities);
+
+		return {
+			...super.getData(),
+			titleSearch: `${this._collectionName}s`,
+			players: this._players,
+			entities: this._entities,
+			permissionsAll: Util.Fvtt.getPermissionsEnum(),
+			permissions: Util.Fvtt.getPermissionsEnum({isIncludeDefault: true}),
+		};
+	}
+
+	close (...args) {
+		this._pageFilter.teardown();
+		return super.close(...args);
+	}
+}
+
+export {CollectionPermissionUpdater};

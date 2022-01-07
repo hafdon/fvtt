@@ -1,1 +1,91 @@
-var _0x2edd=['constructor','3zaNzBa','addToFilters','filters','739276onXmzJ','Unimplemented!','mutateAndAddToFilters','3sKfZGF','94315gkEVPz','123293mvnhZH','_pPopulateBoxOptions','filterBox','type','506515hzKxUh','18059ZZqSUX','_typeFilter','1jDwHnP','322789uSbCPw','teardown','_filterBox','16928bHncqA','toDisplay','mutateForFilters'];var _0x3f1f=function(_0x4aed29,_0x434bb9){_0x4aed29=_0x4aed29-0xc8;var _0x2edd92=_0x2edd[_0x4aed29];return _0x2edd92;};var _0x5bf512=_0x3f1f;(function(_0x3c306e,_0x5e0f2b){var _0x23342a=_0x3f1f;while(!![]){try{var _0x38b678=-parseInt(_0x23342a(0xd3))+parseInt(_0x23342a(0xc8))+parseInt(_0x23342a(0xd2))*parseInt(_0x23342a(0xd4))+-parseInt(_0x23342a(0xd8))+parseInt(_0x23342a(0xd9))*parseInt(_0x23342a(0xcc))+-parseInt(_0x23342a(0xdc))*parseInt(_0x23342a(0xdb))+parseInt(_0x23342a(0xcf));if(_0x38b678===_0x5e0f2b)break;else _0x3c306e['push'](_0x3c306e['shift']());}catch(_0x4fd261){_0x3c306e['push'](_0x3c306e['shift']());}}}(_0x2edd,0x3ea81));class AppFilter{constructor(){this['_filterBox']=null;}get[_0x5bf512(0xd6)](){var _0x4bd592=_0x5bf512;return this[_0x4bd592(0xde)];}[_0x5bf512(0xd1)](_0x2eb6d5,_0x35975a,_0x10684e){var _0x2c321a=_0x5bf512;this[_0x2c321a(0xcb)][_0x2c321a(0xca)](_0x2eb6d5,_0x10684e),this['addToFilters'](_0x2eb6d5,_0x35975a,_0x10684e);}static[_0x5bf512(0xca)](_0x22619a,_0x590f17){throw new Error('Unimplemented!');}[_0x5bf512(0xcd)](_0x53926f,_0x11e030,_0x224989){var _0x3acb0a=_0x5bf512;throw new Error(_0x3acb0a(0xd0));}[_0x5bf512(0xc9)](_0x597806,_0x2d1e3b){var _0x4e4279=_0x5bf512;throw new Error(_0x4e4279(0xd0));}async[_0x5bf512(0xd5)](){var _0x20ed27=_0x5bf512;throw new Error(_0x20ed27(0xd0));}async['pInitFilterBox'](_0x136fb1){var _0x2a18ec=_0x5bf512;return _0x136fb1=_0x136fb1||{},await this[_0x2a18ec(0xd5)](_0x136fb1),this[_0x2a18ec(0xde)]=new FilterBox(_0x136fb1),await this[_0x2a18ec(0xde)]['pDoLoadState'](),this[_0x2a18ec(0xde)];}[_0x5bf512(0xdd)](){var _0x21830a=_0x5bf512;this[_0x21830a(0xde)][_0x21830a(0xdd)]();}}class AppFilterBasic extends AppFilter{constructor(){var _0x356d7e=_0x5bf512;super(),this[_0x356d7e(0xda)]=new Filter({'header':'Type'});}['addToFilters'](_0x341386,_0x59ac94){var _0x373c54=_0x5bf512;if(_0x59ac94)return;this['_typeFilter']['addItem'](_0x341386[_0x373c54(0xd7)]);}async[_0x5bf512(0xd5)](_0x316120){var _0x3ef978=_0x5bf512;_0x316120[_0x3ef978(0xce)]=[this[_0x3ef978(0xda)]];}[_0x5bf512(0xc9)](_0x1a9c5b,_0x2c1cc9){var _0x15f22a=_0x5bf512;return this[_0x15f22a(0xde)][_0x15f22a(0xc9)](_0x1a9c5b,_0x2c1cc9[_0x15f22a(0xd7)]);}}export{AppFilter,AppFilterBasic};
+class AppFilter {
+	constructor () {
+		this._filterBox = null;
+	}
+
+	get filterBox () { return this._filterBox; }
+
+	mutateAndAddToFilters (entity, isExcluded, opts) {
+		this.constructor.mutateForFilters(entity, opts);
+		this.addToFilters(entity, isExcluded, opts);
+	}
+
+	static mutateForFilters (entity, opts) { throw new Error("Unimplemented!"); }
+	addToFilters (entity, isExcluded, opts) { throw new Error("Unimplemented!"); }
+	toDisplay (values, entity) { throw new Error("Unimplemented!"); }
+	async _pPopulateBoxOptions () { throw new Error("Unimplemented!"); }
+
+	async pInitFilterBox (opts) {
+		opts = opts || {};
+		await this._pPopulateBoxOptions(opts);
+		this._filterBox = new FilterBox(opts);
+		await this._filterBox.pDoLoadState();
+		return this._filterBox;
+	}
+
+	teardown () { this._filterBox.teardown(); }
+}
+
+class AppFilterBasic extends AppFilter {
+	constructor () {
+		super();
+
+		this._typeFilter = new Filter({header: "Type"});
+	}
+
+	addToFilters (entity, isExcluded) {
+		if (isExcluded) return;
+
+		this._typeFilter.addItem(entity.type);
+	}
+
+	async _pPopulateBoxOptions (opts) {
+		opts.filters = [
+			this._typeFilter,
+		];
+	}
+
+	toDisplay (values, ent) {
+		return this._filterBox.toDisplay(
+			values,
+			ent.type,
+		);
+	}
+}
+
+class AppFilterCompendiumList extends AppFilter {
+	constructor () {
+		super();
+
+		this._entityTypeFilter = new Filter({header: "Entity Type"});
+		this._packageFilter = new Filter({header: "Package"});
+		this._systemFilter = new Filter({header: "System"});
+	}
+
+	addToFilters (entity, isExcluded) {
+		if (isExcluded) return;
+
+		this._entityTypeFilter.addItem(entity.entity);
+		this._packageFilter.addItem(entity.package);
+		this._systemFilter.addItem(entity.system);
+	}
+
+	async _pPopulateBoxOptions (opts) {
+		opts.filters = [
+			this._entityTypeFilter,
+			this._packageFilter,
+			this._systemFilter,
+		];
+	}
+
+	toDisplay (values, ent) {
+		return this._filterBox.toDisplay(
+			values,
+			ent.entity,
+			ent.package,
+			ent.system,
+		);
+	}
+}
+
+export {AppFilter, AppFilterBasic, AppFilterCompendiumList};

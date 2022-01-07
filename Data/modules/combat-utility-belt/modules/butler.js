@@ -135,13 +135,29 @@ export const DEFAULT_CONFIG = {
         outputChat: false,
         promptRoll: false,
         autoConcentrate: false,
+        autoEndConcentration: false,
+        notifyConcentration: {
+            none: "None",
+            gm: "GM Only",
+            all: "Everyone"
+        },
         notifyDouble: {
             none: "None",
             gm: "GM Only",
             all: "Everyone"
         },
+        notifyEndConcentration: {
+            none: "None",
+            gm: "GM Only",
+            all: "Everyone"
+        },
         icon: "modules/combat-utility-belt/icons/concentrating.svg",
-        alias: "Concentrator"
+        alias: "Concentrator",
+        concentrationStatuses: {
+            breaking: "breaking",
+            active: "active",
+            broken: "broken"
+        }
     },
     cubPuter: {
         id: "cub-puter",
@@ -326,7 +342,9 @@ export const FLAGS = {
         chatMessage: "concentratorChatMessageParsed",
         damageTaken: "damageWasTaken",
         damageAmount: "damageAmount",
-        isDead: "isDead"
+        isDead: "isDead",
+        updateProcessed: "concentrationUpdateProcessed",
+        concentrationSpell: "concentrationSpell"
     },
     enhancedConditions: {
         conditionId: "conditionId",
@@ -345,6 +363,10 @@ export const FLAGS = {
         enable: "enableHideName",
         replacementType: "hideNameReplacementType",
         replacementName: "hideNameReplacement"
+    },
+    panSelect: {
+        shouldPan: "shouldPan",
+        shouldSelect: "shouldSelect"
     }
 }
 
@@ -357,8 +379,11 @@ export const SETTING_KEYS = {
         conditionName: "concentratorConditionName",
         outputChat: "concentratorOutputToChat",
         autoConcentrate: "autoConcentrate",
+        autoEndConcentration: "autoEndConcentration",
         concentrationAttribute: "concentrationAttribute",
+        notifyConcentration: "notifyConcentration",
         notifyDouble: "notifyDoubleConcentration",
+        notifyEndConcentration: "notifyEndConcentration",
         healthAttribute: "concentratorHealthAttribute", //validate necessity
         prompt: "concentratorPromptPlayer"
     },

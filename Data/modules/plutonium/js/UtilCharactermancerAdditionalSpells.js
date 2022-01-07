@@ -1,26 +1,765 @@
-const _0x8e2f=['isNoChoice','toggleVe','<div\x20class=\x22flex-col\x20w-100\x22></div>','isExpanded','map','_render_addLastBoolSpellsHook','pGetSpellHashToItemPosMapAndFillSpellsFromTagIds','split','spellLevelHigh','uses','_render_$getSelChooseAbility','_getFlatData_doProcessSpellRechargeBlock','pop','sourceJson','copy','pGetImportCompApplicationFormData','state','mb-1','671418vMvPXo','prop','append','toSpellCase','_render_renderOptions','uid','ability','key','1VUmdvd','9883JStYwk','resources.primary.value','spellsAlwaysPrepared','_getFlatSpellsInRange','consumeType','get','_state','FlatSpell','some','<div\x20class=\x22italic\x20ve-muted\x22>(select\x20a\x20spell)</div>','rest','ritual','filter','Unhandled\x20spell\x20recharge\x20type\x20\x22','_isChooseAbility','values','stringify','targetLevel','{@spell\x20','consumeAmount','_additionalSpellsFlat','requiredLevel','innate','replace','<button\x20class=\x22btn\x20btn-xs\x20flex-1\x22\x20title=\x22Select\x20Spell\x20Set\x22>','always','35851JhiUdu','_getFlatData_doProcessSpellItem','hashToIdMap','1563701uoIbHF','_isAnyInnatePreparedExpanded','spells','push','MAX_SAFE_INTEGER','click','count','daily','pGetUserSelection','consumeTarget','pApplyFormDataToActor','<div\x20class=\x22flex-v-center\x22></div>','filterExpression','<div\x20class=\x22ve-small\x20flex-v-center\x20my-1\x20w-100\x20italic\x20ve-muted\x22>No\x20spells\x20at\x20this\x20level</div>','name','_additionalSpells','11nGrNnp','html','36328erVGTE','data','toggleClass','<div>','Unhandled\x20spell\x20addition\x20type\x20\x22','addHookExpandedSpells','Unhandled\x20additional\x20spell\x20format:\x20\x22','$getSelEnum','showVe','ascSortLower','spellLevelLow','exec','abilityAbv','sort','choose','getFlatData','curLevel','MIN_SAFE_INTEGER','mergeMap','addHookAlwaysPreparedSpells','usesPer','requiredCasterLevel','inherit','trim','splitTagByPipe','ascSort','\x22></div>','setEq','_render_addLastExpandedSpellsHook','Spell\x20Set\x20','expanded','prepared','join','_isAnyInnatePrepared','_addHookBase','attribute','toLowerCase','disabled','<div\x20class=\x22flex-v-center\x20flex-wrap\x20w-100\x20btn-group\x20','parentAbilityAbv','getOrdinalForm','modalTitle','Charactermancer_AdditionalSpellsSelect.spells','_getFlatData_doProcessAdditionMeta','type','getFormData','55111dYeDYJ','modalFilterSpells','render','entries','_sourceHintText','_getFlatExpandedSpellsInRange','119UgEoda','_modalFilterSpells','39kTQnWL','isPrepared','_isRequiredLevelInRange','getComp','spell','meta','967693zfoLPc','preparationMode','castAtLevel','_render_$getRows','pGetFormData','_isAnyExpanded','forEach','additionalSpells','spellsExpanded','segregate','_render_addLastAlwaysPreparedSpellsHook','ixSet','_isRequiredCasterLevelInRange','active','isAlwaysPrepared','appendTo','_getFlatInnatePreparedSpellsInRange','will','resourceName','<div\x20class=\x22mr-2\x22>,</div>','length'];const _0x19ec=function(_0x3225d5,_0x113385){_0x3225d5=_0x3225d5-0x138;let _0x8e2f4e=_0x8e2f[_0x3225d5];return _0x8e2f4e;};const _0x53aa2f=_0x19ec;(function(_0x4beb85,_0x404777){const _0x44accf=_0x19ec;while(!![]){try{const _0x453e20=-parseInt(_0x44accf(0x15a))*-parseInt(_0x44accf(0x18a))+-parseInt(_0x44accf(0x188))*parseInt(_0x44accf(0x1b8))+-parseInt(_0x44accf(0x1c0))*-parseInt(_0x44accf(0x175))+parseInt(_0x44accf(0x1c6))+-parseInt(_0x44accf(0x15b))*-parseInt(_0x44accf(0x1be))+-parseInt(_0x44accf(0x152))+-parseInt(_0x44accf(0x178));if(_0x453e20===_0x404777)break;else _0x4beb85['push'](_0x4beb85['shift']());}catch(_0xe16590){_0x4beb85['push'](_0x4beb85['shift']());}}}(_0x8e2f,0xb3eb3));import{DataConverterSpell}from'./DataConverterSpell.js';import{ModalFilterSpellsFvtt}from'./UtilModalFilter.js';import{UtilApplications}from'./UtilApplications.js';class Charactermancer_AdditionalSpellsUtil{static[_0x53aa2f(0x199)](_0x2d8c97){const _0x4589ce=_0x53aa2f;return _0x2d8c97=MiscUtil['copy'](_0x2d8c97),_0x2d8c97[_0x4589ce(0x144)](_0x53a82e=>{const _0x4f270a=_0x4589ce,_0x14b044={},_0xa3a749={},_0x54d1a6=[];return Object['entries'](_0x53a82e)[_0x4f270a(0x1cc)](([_0x4d0b43,_0x5726ce])=>{const _0x1f10f6=_0x4f270a;_0x54d1a6[_0x1f10f6(0x17b)](_0x4d0b43);switch(_0x4d0b43){case _0x1f10f6(0x186):case _0x1f10f6(0x158):case _0x1f10f6(0x13d):_0x14b044[_0x4d0b43]=_0x5726ce;break;case _0x1f10f6(0x171):case'prepared':case _0x1f10f6(0x1a8):{this[_0x1f10f6(0x1b5)]({'additionType':_0x4d0b43,'additionMeta':_0x5726ce,'outSpells':_0xa3a749,'keyPath':_0x54d1a6});break;}default:throw new Error(_0x1f10f6(0x18e)+_0x4d0b43+'\x22');}_0x54d1a6[_0x1f10f6(0x14c)]();}),{'meta':_0x14b044,'spells':_0xa3a749};});}static[_0x53aa2f(0x1b5)](_0x2cd37c){const _0xfdb20=_0x53aa2f,{additionMeta:_0x113dfb,keyPath:_0x49a978}=_0x2cd37c;Object['entries'](_0x113dfb)[_0xfdb20(0x1cc)](([_0x1bf1a7,_0x967346])=>{const _0x4ee203=_0xfdb20;_0x49a978['push'](_0x1bf1a7),_0x967346 instanceof Array?_0x967346[_0x4ee203(0x1cc)]((_0xfe336,_0x2ce81e)=>this[_0x4ee203(0x176)]({..._0x2cd37c,'levelOrCasterLevel':_0x1bf1a7,'spellItem':_0xfe336,'ix':_0x2ce81e})):Object[_0x4ee203(0x1bb)](_0x967346)['forEach'](([_0x3d2913,_0x3b6c44])=>{const _0x29f23a=_0x4ee203;this[_0x29f23a(0x14b)]({..._0x2cd37c,'levelOrCasterLevel':_0x1bf1a7,'rechargeType':_0x3d2913,'levelMetaInner':_0x3b6c44});}),_0x49a978['pop']();});}static[_0x53aa2f(0x176)](_0x3a68c2){const _0x46f469=_0x53aa2f,{additionType:_0x3b82fb,additionMeta:_0x403791,outSpells:_0x15bc6c,keyPath:_0x175c3d,spellItem:_0x5420dd,ix:_0x2153ed,rechargeType:_0x309f38,uses:_0x24472f,usesPer:_0x1bed7b,levelOrCasterLevel:_0x46c9a5,consumeType:_0x56adbb,consumeAmount:_0x18e2a4,consumeTarget:_0x34ee34}=_0x3a68c2;_0x175c3d[_0x46f469(0x17b)](_0x2153ed);const _0x304cef={'isExpanded':_0x3b82fb===_0x46f469(0x1a8),'isAlwaysPrepared':_0x3b82fb===_0x46f469(0x1a9),'isPrepared':_0x3b82fb===_0x46f469(0x1a9)||_0x3b82fb===_0x46f469(0x171),'preparationMode':_0x3b82fb===_0x46f469(0x1a9)?_0x46f469(0x174):_0x46f469(0x171),'consumeType':_0x56adbb,'consumeAmount':_0x18e2a4,'consumeTarget':_0x34ee34};if(_0x46c9a5!=='_'){const _0x2b869c=/^s(\d+)$/[_0x46f469(0x195)](_0x46c9a5);if(_0x2b869c)_0x304cef[_0x46f469(0x19f)]=Number(_0x2b869c[0x1]);else{if(!isNaN(_0x46c9a5))_0x304cef[_0x46f469(0x170)]=Number(_0x46c9a5);}}if(_0x309f38)switch(_0x309f38){case _0x46f469(0x165):case _0x46f469(0x17f):break;case'will':case'ritual':case'resource':{_0x304cef[_0x46f469(0x1c7)]='atwill',_0x304cef[_0x46f469(0x1c1)]=_0x309f38!==_0x46f469(0x166);break;}case'_':break;default:throw new Error('Unhandled\x20recharge\x20type\x20\x22'+_0x309f38+'\x22');}if(_0x24472f)_0x304cef[_0x46f469(0x149)]=_0x24472f;if(_0x1bed7b)_0x304cef['usesPer']=_0x1bed7b;if(typeof _0x5420dd==='string'){const _0xf06927=_0x175c3d[_0x46f469(0x1aa)]('__');_0x15bc6c[_0xf06927]=new Charactermancer_AdditionalSpellsUtil[(_0x46f469(0x162))]({'type':_0x46f469(0x1c4),'key':_0xf06927,..._0x304cef,'uid':_0x5420dd});}else{if(_0x5420dd[_0x46f469(0x198)]!=null){const _0x48aa0e=_0x5420dd[_0x46f469(0x17e)]||0x1;for(let _0x5da066=0x0;_0x5da066<_0x48aa0e;++_0x5da066){_0x175c3d[_0x46f469(0x17b)](_0x5da066);const _0x215410=_0x175c3d['join']('__');_0x15bc6c[_0x215410]=new Charactermancer_AdditionalSpellsUtil[(_0x46f469(0x162))]({'type':_0x46f469(0x198),'key':_0x215410,..._0x304cef,'filterExpression':_0x5420dd[_0x46f469(0x198)]}),_0x175c3d['pop']();}}else throw new Error(_0x46f469(0x190)+JSON[_0x46f469(0x16b)](_0x5420dd)+'\x22');}_0x175c3d[_0x46f469(0x14c)]();}static[_0x53aa2f(0x14b)](_0x24f529){const _0x140891=_0x53aa2f,{additionType:_0x28ac99,additionMeta:_0x1ed190,outSpells:_0x144231,keyPath:_0x4bcd52,levelOrCasterLevel:_0x3bc29a,rechargeType:_0x52d2e4,levelMetaInner:_0x5822a2}=_0x24f529;_0x4bcd52[_0x140891(0x17b)](_0x52d2e4);switch(_0x52d2e4){case _0x140891(0x165):case _0x140891(0x17f):{const _0x357f8a=_0x52d2e4==='rest'?'sr':'lr';Object[_0x140891(0x1bb)](_0x5822a2)[_0x140891(0x1cc)](([_0x51e383,_0x1b15a0])=>{const _0xca1130=_0x140891;_0x4bcd52[_0xca1130(0x17b)](_0x51e383),_0x51e383=_0x51e383[_0xca1130(0x172)](/^(\d+)e$/,'$1');const _0x4e5ae9=Number(_0x51e383);_0x1b15a0[_0xca1130(0x1cc)]((_0x3098dc,_0x4ef9fc)=>this[_0xca1130(0x176)]({..._0x24f529,'spellItem':_0x3098dc,'ix':_0x4ef9fc,'uses':_0x4e5ae9,'usesPer':_0x357f8a})),_0x4bcd52[_0xca1130(0x14c)]();});break;}case'resource':{Object['entries'](_0x5822a2)[_0x140891(0x1cc)](([_0x15f474,_0x5ae80c])=>{const _0x4fde5a=_0x140891;_0x4bcd52[_0x4fde5a(0x17b)](_0x15f474),_0x5ae80c['forEach']((_0x5e19b2,_0x46d3bf)=>this['_getFlatData_doProcessSpellItem']({..._0x24f529,'spellItem':_0x5e19b2,'ix':_0x46d3bf,'consumeType':_0x4fde5a(0x1ad),'consumeAmount':Number(_0x15f474),'consumeTarget':_0x4fde5a(0x15c)})),_0x4bcd52[_0x4fde5a(0x14c)]();});break;}case _0x140891(0x13c):case _0x140891(0x166):case'_':{_0x5822a2[_0x140891(0x1cc)]((_0xda2357,_0x2ebede)=>this['_getFlatData_doProcessSpellItem']({..._0x24f529,'spellItem':_0xda2357,'ix':_0x2ebede}));break;}default:throw new Error(_0x140891(0x168)+_0x52d2e4+'\x22');}_0x4bcd52[_0x140891(0x14c)]();}}Charactermancer_AdditionalSpellsUtil[_0x53aa2f(0x162)]=class{constructor(_0x40586f){const _0x9cbb3f=_0x53aa2f;this[_0x9cbb3f(0x1b6)]=_0x40586f[_0x9cbb3f(0x1b6)],this[_0x9cbb3f(0x159)]=_0x40586f['key'],this[_0x9cbb3f(0x143)]=_0x40586f[_0x9cbb3f(0x143)],this[_0x9cbb3f(0x1c1)]=_0x40586f[_0x9cbb3f(0x1c1)],this[_0x9cbb3f(0x139)]=_0x40586f[_0x9cbb3f(0x139)],this[_0x9cbb3f(0x1c7)]=_0x40586f[_0x9cbb3f(0x1c7)],this['requiredCasterLevel']=_0x40586f[_0x9cbb3f(0x19f)],this['requiredLevel']=_0x40586f['requiredLevel'],this[_0x9cbb3f(0x149)]=_0x40586f[_0x9cbb3f(0x149)],this[_0x9cbb3f(0x19e)]=_0x40586f[_0x9cbb3f(0x19e)],this[_0x9cbb3f(0x15f)]=_0x40586f[_0x9cbb3f(0x15f)],this[_0x9cbb3f(0x16e)]=_0x40586f['consumeAmount'],this[_0x9cbb3f(0x181)]=_0x40586f[_0x9cbb3f(0x181)],this[_0x9cbb3f(0x157)]=null,this['castAtLevel']=null;if(_0x40586f[_0x9cbb3f(0x157)]){const [_0x5059f2,_0x3e285a]=_0x40586f[_0x9cbb3f(0x157)][_0x9cbb3f(0x147)]('#')[_0x9cbb3f(0x144)](_0x54adce=>_0x54adce[_0x9cbb3f(0x1a1)]())['filter'](Boolean);let [_0x477969,_0x362566]=Renderer[_0x9cbb3f(0x1a2)](_0x5059f2[_0x9cbb3f(0x1ae)]());_0x362566=_0x362566||SRC_PHB[_0x9cbb3f(0x1ae)](),this[_0x9cbb3f(0x157)]=_0x477969+'|'+_0x362566;if(_0x3e285a&&!isNaN(_0x3e285a))this[_0x9cbb3f(0x1c8)]=Number(_0x3e285a);}this[_0x9cbb3f(0x184)]=_0x40586f[_0x9cbb3f(0x184)];}};class Charactermancer_AdditionalSpellsSelect extends BaseComponent{static async['pGetUserInput'](_0x57fcfb){const _0x3f3224=_0x53aa2f;_0x57fcfb=_0x57fcfb||{};const {additionalSpells:_0x92b4ef}=_0x57fcfb;if(!_0x92b4ef||!_0x92b4ef[_0x3f3224(0x13f)])return{'isFormComplete':!![],'data':[]};const _0xc25a67=this[_0x3f3224(0x1c3)](_0x57fcfb);if(_0xc25a67[_0x3f3224(0x140)]({'curLevel':_0x57fcfb[_0x3f3224(0x19a)],'targetLevel':_0x57fcfb[_0x3f3224(0x16c)]}))return _0xc25a67[_0x3f3224(0x1ca)]();return UtilApplications[_0x3f3224(0x14f)]({'comp':_0xc25a67,'width':0x280,'height':0xdc});}static[_0x53aa2f(0x1c3)](_0x273828){const _0x4949bf=_0x53aa2f;_0x273828=_0x273828||{};const _0x1a8c2d=_0x273828[_0x4949bf(0x1b9)]||new ModalFilterSpellsFvtt({'namespace':_0x4949bf(0x1b4),'isRadio':!![]}),_0x4d1b9d=new this({..._0x273828,'modalFilterSpells':_0x1a8c2d});return _0x4d1b9d[_0x4949bf(0x19a)]=_0x273828['curLevel'],_0x4d1b9d[_0x4949bf(0x16c)]=_0x273828[_0x4949bf(0x16c)],_0x4d1b9d['spellLevelLow']=_0x273828['spellLevelLow'],_0x4d1b9d[_0x4949bf(0x148)]=_0x273828[_0x4949bf(0x148)],_0x4d1b9d;}static async[_0x53aa2f(0x182)](_0xcc7d5f,_0x1b6200,_0x1520c2){const _0x19cbab=_0x53aa2f;_0x1520c2=_0x1520c2||{};if(!_0x1b6200||!_0x1b6200?.['data']?.['length'])return;const _0x48d704=(_0x1520c2['abilityAbv']===_0x19cbab(0x1a0)?_0x1520c2[_0x19cbab(0x1b1)]:_0x1520c2[_0x19cbab(0x196)])||(_0x1b6200[_0x19cbab(0x196)]===_0x19cbab(0x1a0)?_0x1520c2[_0x19cbab(0x1b1)]:_0x1b6200[_0x19cbab(0x196)]);await DataConverterSpell[_0x19cbab(0x146)](_0xcc7d5f,_0x1b6200[_0x19cbab(0x18b)],{'optsGetSpellItem':{'abilityAbv':_0x48d704},'hashToIdMap':_0x1520c2[_0x19cbab(0x177)]});}static[_0x53aa2f(0x140)](_0x584c6a,{additionalSpellsFlat:additionalSpellsFlat=null,curLevel:curLevel=null,targetLevel:targetLevel=null}={}){const _0x15d6d7=_0x53aa2f;if(_0x584c6a['length']!==0x1)return![];additionalSpellsFlat=additionalSpellsFlat||Charactermancer_AdditionalSpellsUtil[_0x15d6d7(0x199)](_0x584c6a);const _0x587d83=curLevel??Number['MIN_SAFE_INTEGER'],_0x2161ec=targetLevel??Number[_0x15d6d7(0x17c)],_0x28ec89=additionalSpellsFlat[_0x15d6d7(0x163)](_0x84db8c=>Object[_0x15d6d7(0x16a)](_0x84db8c[_0x15d6d7(0x17a)])[_0x15d6d7(0x163)](_0x99ebb2=>_0x99ebb2[_0x15d6d7(0x170)]==null||_0x99ebb2[_0x15d6d7(0x170)]>=_0x587d83&&_0x99ebb2[_0x15d6d7(0x170)]<=_0x2161ec));if(!_0x28ec89)return!![];return!additionalSpellsFlat['some'](_0x3dccd1=>_0x3dccd1[_0x15d6d7(0x1c5)][_0x15d6d7(0x158)]?.[_0x15d6d7(0x198)]||Object[_0x15d6d7(0x16a)](_0x3dccd1[_0x15d6d7(0x17a)])[_0x15d6d7(0x163)](_0x3b714d=>_0x3b714d[_0x15d6d7(0x184)]!=null));}constructor(_0x5836a3){const _0xcf9919=_0x53aa2f;_0x5836a3=_0x5836a3||{},super(),this['_additionalSpells']=_0x5836a3[_0xcf9919(0x1cd)],this['_sourceHintText']=_0x5836a3['sourceHintText'],this[_0xcf9919(0x1bf)]=_0x5836a3['modalFilterSpells'],this[_0xcf9919(0x16f)]=Charactermancer_AdditionalSpellsUtil[_0xcf9919(0x199)](_0x5836a3['additionalSpells']);}get[_0x53aa2f(0x1b3)](){const _0x35e26d=_0x53aa2f;return'Choose\x20Additional\x20Spell\x20Set'+(this[_0x35e26d(0x1bc)]?'\x20('+this['_sourceHintText']+')':'');}set[_0x53aa2f(0x19a)](_0x541174){const _0x206a10=_0x53aa2f;this[_0x206a10(0x161)]['curLevel']=_0x541174;}set[_0x53aa2f(0x16c)](_0x388a9b){const _0x46b0ec=_0x53aa2f;this[_0x46b0ec(0x161)][_0x46b0ec(0x16c)]=_0x388a9b;}set[_0x53aa2f(0x194)](_0x195566){const _0x55e513=_0x53aa2f;this[_0x55e513(0x161)][_0x55e513(0x194)]=_0x195566;}set[_0x53aa2f(0x148)](_0x44f36c){const _0x3ba8ca=_0x53aa2f;this[_0x3ba8ca(0x161)][_0x3ba8ca(0x148)]=_0x44f36c;}[_0x53aa2f(0x19d)](_0x8378f2){const _0x1a835e=_0x53aa2f;this['_addHookBase'](_0x1a835e(0x15d),_0x8378f2);}[_0x53aa2f(0x18f)](_0x190596){const _0x59a5dc=_0x53aa2f;this['_addHookBase'](_0x59a5dc(0x1ce),_0x190596);}get[_0x53aa2f(0x15d)](){const _0x37630c=_0x53aa2f;return this[_0x37630c(0x161)][_0x37630c(0x15d)];}get[_0x53aa2f(0x1ce)](){const _0x3365a5=_0x53aa2f;return this[_0x3365a5(0x161)][_0x3365a5(0x1ce)];}[_0x53aa2f(0x1d0)](){const _0xf93911=_0x53aa2f;return this[_0xf93911(0x145)]({'propState':_0xf93911(0x15d),'propIsBool':_0xf93911(0x139)});}['_render_addLastExpandedSpellsHook'](){const _0x2165a1=_0x53aa2f;return this[_0x2165a1(0x145)]({'propState':_0x2165a1(0x1ce),'propIsBool':_0x2165a1(0x143)});}[_0x53aa2f(0x145)]({propState:_0x2e4a7e,propIsBool:_0x1bc542}){const _0x2152bf=_0x53aa2f,_0x318f81=()=>{const _0x59d68a=_0x19ec,_0x5a4862=this[_0x59d68a(0x1b7)](),_0x4f7447=_0x5a4862[_0x59d68a(0x18b)][_0x59d68a(0x167)](_0x5e3ef3=>_0x5e3ef3[_0x1bc542])[_0x59d68a(0x144)](_0x2323ee=>_0x2323ee['uid'][_0x59d68a(0x1ae)]()),_0x5401b1=new Set(this['_state'][_0x2e4a7e]),_0x5961d1=new Set(_0x4f7447);if(!CollectionUtil[_0x59d68a(0x1a5)](_0x5401b1,_0x5961d1))this[_0x59d68a(0x161)][_0x2e4a7e]=_0x4f7447;};this['_addHookBase']('ixSet',_0x318f81),this['_addHookBase'](_0x2152bf(0x19a),_0x318f81),this[_0x2152bf(0x1ac)](_0x2152bf(0x16c),_0x318f81),this[_0x2152bf(0x1ac)](_0x2152bf(0x194),_0x318f81),this['_addHookBase']('spellLevelHigh',_0x318f81),_0x318f81();}[_0x53aa2f(0x1ba)](_0x14e088){const _0x2dbc57=_0x53aa2f;this[_0x2dbc57(0x1d0)](),this[_0x2dbc57(0x1a6)]();const _0x4df7e1=$(_0x2dbc57(0x1b0)+(this[_0x2dbc57(0x16f)]['length']>0x1?_0x2dbc57(0x151):'')+_0x2dbc57(0x1a4)),_0x3c0563=$(_0x2dbc57(0x142));for(let _0x14e97c=0x0;_0x14e97c<this[_0x2dbc57(0x16f)]['length'];++_0x14e97c)this[_0x2dbc57(0x156)](_0x4df7e1,_0x3c0563,_0x14e97c);$$(_0x14e088)`
-			${_0x4df7e1}
-			${_0x3c0563}
-		`;}[_0x53aa2f(0x156)](_0x2dee91,_0x2fb153,_0x1652c9){const _0x13d0af=_0x53aa2f,_0x27fcbd=this[_0x13d0af(0x16f)][_0x1652c9],_0xafe96=this[_0x13d0af(0x16f)]['length']===0x1?null:$(_0x13d0af(0x173)+(_0x27fcbd[_0x13d0af(0x1c5)][_0x13d0af(0x186)]??_0x13d0af(0x1a7)+(_0x1652c9+0x1))+'</button>')[_0x13d0af(0x17d)](()=>this[_0x13d0af(0x161)][_0x13d0af(0x1d1)]=_0x1652c9),_0x17817a=this[_0x13d0af(0x1ab)](_0x1652c9),_0x55a2a0=this[_0x13d0af(0x1cb)](_0x1652c9),_0x2a0233=Object[_0x13d0af(0x16a)](_0x27fcbd['spells'])[_0x13d0af(0x197)]((_0x28fa0b,_0x126ca5)=>SortUtil['ascSort'](_0x28fa0b['requiredLevel']||0x0,_0x126ca5[_0x13d0af(0x170)]||0x0)||SortUtil['ascSort'](_0x28fa0b[_0x13d0af(0x19f)]||0x0,_0x126ca5[_0x13d0af(0x19f)]||0x0)),_0x18255a=_0x17817a?$('<div\x20class=\x22flex-v-center\x20py-1\x22>\x0a\x09\x09\x09<div\x20class=\x22col-3\x20text-center\x22>Level</div>\x0a\x09\x09\x09<div\x20class=\x22col-9\x22>Spells</div>\x0a\x09\x09</div>'):null,_0x1aec1d=_0x55a2a0?$('<div\x20class=\x22flex-v-center\x20py-1\x22>\x0a\x09\x09\x09<div\x20class=\x22col-3\x20text-center\x22>Spell\x20Level</div>\x0a\x09\x09\x09<div\x20class=\x22col-9\x22>Spells</div>\x0a\x09\x09</div>'):null,_0x244c07=_0x17817a?this[_0x13d0af(0x1c9)](_0x1652c9,_0x2a0233,{'isExpandedMatch':![]}):null,_0x4aa4db=_0x55a2a0?this[_0x13d0af(0x1c9)](_0x1652c9,_0x2a0233,{'isExpandedMatch':!![]}):null,_0x5ad60c=_0x17817a?$(_0x13d0af(0x185)):null,_0x2f93e4=_0x55a2a0?$(_0x13d0af(0x185)):null,_0xc18572=()=>{const _0x2048bf=_0x13d0af,_0x54d5f3=!!this['_getFlatInnatePreparedSpellsInRange'](_0x1652c9)[_0x2048bf(0x13f)];if(_0x18255a)_0x18255a[_0x2048bf(0x141)](_0x54d5f3);if(_0x5ad60c)_0x5ad60c[_0x2048bf(0x141)](!_0x54d5f3);const _0x5af761=!!this[_0x2048bf(0x1bd)](_0x1652c9)['length'];if(_0x1aec1d)_0x1aec1d['toggleVe'](_0x5af761);if(_0x2f93e4)_0x2f93e4[_0x2048bf(0x141)](!_0x5af761);};this['_addHookBase']('spellLevelLow',_0xc18572),this[_0x13d0af(0x1ac)]('spellLevelHigh',_0xc18572),this[_0x13d0af(0x1ac)](_0x13d0af(0x19a),_0xc18572),this[_0x13d0af(0x1ac)](_0x13d0af(0x16c),_0xc18572),this[_0x13d0af(0x1ac)]('ixSet',_0xc18572),_0xc18572();const _0x2e331f=_0x17817a?$$`<div class="flex-col">
-			<div class="bold my-0">Innate/Prepared Spells</div>
-			${_0x18255a}
-			${_0x244c07}
-			${_0x5ad60c}
-		</div>`:null,_0x2c75cd=_0x55a2a0?$$`<div class="flex-col">
+import {ModalFilterSpellsFvtt} from "./UtilModalFilter.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {LGT} from "./Util.js";
+
+class Charactermancer_AdditionalSpellsUtil {
+	// region Data flattening
+	static getFlatData (additionalSpells) {
+		additionalSpells = MiscUtil.copy(additionalSpells);
+
+		return additionalSpells.map(additionalSpellBlock => {
+			const outMeta = {};
+			const outSpells = {};
+
+			const keyPath = [];
+
+			Object.entries(additionalSpellBlock).forEach(([additionType, additionMeta]) => {
+				keyPath.push(additionType);
+
+				switch (additionType) {
+					// Special case
+					case "name":
+					case "ability":
+					case "resourceName": outMeta[additionType] = additionMeta; break;
+
+					case "innate":
+					case "known":
+					case "prepared":
+					case "expanded": {
+						this._getFlatData_doProcessAdditionMeta({additionType, additionMeta, outSpells, keyPath});
+						break;
+					}
+
+					default: throw new Error(`Unhandled spell addition type "${additionType}"`);
+				}
+
+				keyPath.pop();
+			});
+
+			return {meta: outMeta, spells: outSpells};
+		});
+	}
+
+	static _getFlatData_doProcessAdditionMeta (opts) {
+		const {additionMeta, keyPath} = opts;
+
+		Object.entries(additionMeta).forEach(([levelOrCasterLevel, levelMeta]) => {
+			keyPath.push(levelOrCasterLevel);
+
+			if (levelMeta instanceof Array) {
+				levelMeta.forEach((spellItem, ix) => this._getFlatData_doProcessSpellItem({...opts, levelOrCasterLevel, spellItem, ix}));
+			} else {
+				Object.entries(levelMeta).forEach(([rechargeType, levelMetaInner]) => {
+					this._getFlatData_doProcessSpellRechargeBlock({...opts, levelOrCasterLevel, rechargeType, levelMetaInner});
+				});
+			}
+
+			keyPath.pop();
+		});
+	}
+
+	static _getFlatData_doProcessSpellItem (opts) {
+		const {additionType, additionMeta, outSpells, keyPath, spellItem, ix, rechargeType, uses, usesPer, levelOrCasterLevel, consumeType, consumeAmount, consumeTarget} = opts;
+
+		keyPath.push(ix);
+
+		const outSpell = {
+			isExpanded: additionType === "expanded",
+			isAlwaysPrepared: additionType === "prepared",
+			isAlwaysKnown: additionType === "known",
+			isPrepared: additionType === "prepared" || additionType === "innate" || additionType === "known",
+			preparationMode: (additionType === "prepared" || additionType === "known") ? "always" : "innate",
+			consumeType,
+			consumeAmount,
+			consumeTarget,
+		};
+
+		if (levelOrCasterLevel !== "_") { // "_" is effectively "gained at the level you gain this feature"
+			const mCasterLevel = /^s(\d+)$/.exec(levelOrCasterLevel);
+			if (mCasterLevel) outSpell.requiredCasterLevel = Number(mCasterLevel[1]);
+			else if (!isNaN(levelOrCasterLevel)) outSpell.requiredLevel = Number(levelOrCasterLevel);
+		}
+
+		if (rechargeType) {
+			switch (rechargeType) {
+				case "rest":
+				case "daily": break; // (Use the above defaults)
+
+				case "will":
+				case "ritual":
+				case "resource": {
+					outSpell.preparationMode = "atwill";
+					outSpell.isPrepared = rechargeType !== "ritual";
+					break;
+				}
+
+				case "_": break;
+
+				default: throw new Error(`Unhandled recharge type "${rechargeType}"`);
+			}
+		}
+
+		if (uses) outSpell.uses = uses;
+		if (usesPer) outSpell.usesPer = usesPer;
+
+		if (typeof spellItem === "string") {
+			const key = keyPath.join("__");
+
+			outSpells[key] = new Charactermancer_AdditionalSpellsUtil.FlatSpell({
+				type: "spell",
+
+				key,
+				...outSpell,
+				uid: spellItem,
+			});
+		} else {
+			if (spellItem.choose != null) {
+				const count = spellItem.count || 1;
+				for (let i = 0; i < count; ++i) {
+					keyPath.push(i);
+
+					const key = keyPath.join("__");
+
+					outSpells[key] = new Charactermancer_AdditionalSpellsUtil.FlatSpell({
+						type: "choose",
+
+						key,
+						...outSpell,
+						filterExpression: spellItem.choose,
+					});
+
+					keyPath.pop();
+				}
+			} else throw new Error(`Unhandled additional spell format: "${JSON.stringify(spellItem)}"`);
+		}
+
+		keyPath.pop();
+	}
+
+	static _getFlatData_doProcessSpellRechargeBlock (opts) {
+		const {additionType, additionMeta, outSpells, keyPath, levelOrCasterLevel, rechargeType, levelMetaInner} = opts;
+
+		keyPath.push(rechargeType);
+
+		switch (rechargeType) {
+			case "rest":
+			case "daily": {
+				const usesPer = rechargeType === "rest" ? "sr" : "lr";
+
+				Object.entries(levelMetaInner)
+					.forEach(([numTimesCast, spellList]) => {
+						keyPath.push(numTimesCast);
+
+						// Convert any e.g. "1e" to "1"
+						numTimesCast = numTimesCast.replace(/^(\d+)e$/, "$1");
+						const uses = Number(numTimesCast);
+
+						spellList.forEach((spellItem, ix) => this._getFlatData_doProcessSpellItem({...opts, spellItem, ix, uses, usesPer}));
+
+						keyPath.pop();
+					});
+
+				break;
+			}
+
+			case "resource": {
+				Object.entries(levelMetaInner)
+					.forEach(([consumeAmount, spellList]) => {
+						keyPath.push(consumeAmount);
+
+						// (Assume we always consume the primary resource)
+						spellList.forEach((spellItem, ix) => this._getFlatData_doProcessSpellItem({...opts, spellItem, ix, consumeType: "attribute", consumeAmount: Number(consumeAmount), consumeTarget: "resources.primary.value"}));
+
+						keyPath.pop();
+					});
+
+				break;
+			}
+
+			case "will":
+			case "ritual":
+			case "_": {
+				levelMetaInner.forEach((spellItem, ix) => this._getFlatData_doProcessSpellItem({...opts, spellItem, ix}));
+				break;
+			}
+
+			default: throw new Error(`Unhandled spell recharge type "${rechargeType}"`);
+		}
+
+		keyPath.pop();
+	}
+	// endregion
+}
+
+Charactermancer_AdditionalSpellsUtil.FlatSpell = class {
+	/**
+	 * @param opts.type `"spell"` or `"choose"`
+	 * @param opts.key
+	 * @param opts.isExpanded
+	 * @param opts.isPrepared
+	 * @param opts.isAlwaysKnown
+	 * @param opts.isAlwaysPrepared
+	 * @param opts.preparationMode
+	 * @param [opts.requiredCasterLevel]
+	 * @param [opts.requiredLevel]
+	 *
+	 * @param opts.uses
+	 * @param opts.usesPer
+	 *
+	 * @param [opts.consumeType]
+	 * @param [opts.consumeAmount]
+	 * @param [opts.consumeTarget]
+	 *
+	 * @param [opts.uid]
+	 *
+	 * @param [opts.filterExpression]
+	 */
+	constructor (opts) {
+		this.type = opts.type;
+		this.key = opts.key;
+		this.isExpanded = opts.isExpanded; // This is an "expanded spell list" spell, which doesn't get added
+		this.isPrepared = opts.isPrepared;
+		this.isAlwaysKnown = opts.isAlwaysKnown;
+		this.isAlwaysPrepared = opts.isAlwaysPrepared;
+		this.preparationMode = opts.preparationMode;
+		this.requiredCasterLevel = opts.requiredCasterLevel;
+		this.requiredLevel = opts.requiredLevel;
+
+		this.uses = opts.uses;
+		this.usesPer = opts.usesPer;
+
+		this.consumeType = opts.consumeType;
+		this.consumeAmount = opts.consumeAmount;
+		this.consumeTarget = opts.consumeTarget;
+
+		this.isCantrip = false;
+
+		// region Simple spells
+		// Ensure the UID is of the form: `"name|source"`
+		this.uid = null;
+		this.castAtLevel = null;
+		if (opts.uid) {
+			const [uidPart, castAtLevelPart] = opts.uid.split("#").map(it => it.trim()).filter(Boolean);
+
+			let [name, source] = Renderer.splitTagByPipe(uidPart.toLowerCase());
+			source = source || SRC_PHB.toLowerCase();
+			this.uid = `${name}|${source}`;
+
+			if (castAtLevelPart && castAtLevelPart.toLowerCase() === "c") this.isCantrip = true;
+			else if (castAtLevelPart && !isNaN(castAtLevelPart)) this.castAtLevel = Number(castAtLevelPart);
+		}
+		// endregion
+
+		// region Choose expressions
+		this.filterExpression = opts.filterExpression;
+		if (opts.filterExpression && opts.filterExpression.split("|").filter(Boolean).some(it => /^level=0$/i.test(it.trim()))) {
+			this.isCantrip = true;
+		}
+		// endregion
+
+		// Ensure legacy (i.e., note `"known"` prop) cantrips are counted as "always known"
+		if (this.isCantrip && !this.isExpanded) this.isAlwaysKnown = true;
+	}
+};
+
+class Charactermancer_AdditionalSpellsSelect extends BaseComponent {
+	// region External
+	/**
+	 * @param opts
+	 * @param opts.additionalSpells
+	 * @param [opts.sourceHintText]
+	 *
+	 * @param opts.curLevel
+	 * @param opts.targetLevel
+	 * @param opts.spellLevelLow
+	 * @param opts.spellLevelHigh
+	 *
+	 * @param opts.isStandalone If this is a "standalone" spell instance, and so should skip e.g. expanded spell lists.
+	 */
+	static async pGetUserInput (opts) {
+		opts = opts || {};
+		const {additionalSpells} = opts;
+
+		if (!additionalSpells || !additionalSpells.length) return {isFormComplete: true, data: []};
+
+		const comp = this.getComp(opts);
+
+		if (comp.isNoChoice({curLevel: opts.curLevel, targetLevel: opts.targetLevel, isStandalone: opts.isStandalone})) return comp.pGetFormData();
+
+		return UtilApplications.pGetImportCompApplicationFormData({
+			comp,
+			width: 640,
+			height: 220,
+		});
+	}
+
+	/**
+	 * @param opts
+	 * @param opts.additionalSpells
+	 * @param [opts.sourceHintText]
+	 * @param [opts.modalFilterSpells]
+	 *
+	 * @param opts.curLevel
+	 * @param opts.targetLevel
+	 * @param opts.spellLevelLow
+	 * @param opts.spellLevelHigh
+	 */
+	static getComp (opts) {
+		opts = opts || {};
+
+		const modalFilterSpells = opts.modalFilterSpells || new ModalFilterSpellsFvtt({namespace: "Charactermancer_AdditionalSpellsSelect.spells", isRadio: true});
+
+		const comp = new this({...opts, modalFilterSpells});
+		comp.curLevel = opts.curLevel;
+		comp.targetLevel = opts.targetLevel;
+		comp.spellLevelLow = opts.spellLevelLow;
+		comp.spellLevelHigh = opts.spellLevelHigh;
+
+		return comp;
+	}
+
+	/**
+	 *
+	 * @param actor
+	 * @param formData
+	 * @param [opts]
+	 * @param [opts.abilityAbv]
+	 * @param [opts.parentAbilityAbv] If the abilityAbv is "inherit", this is used instead
+	 */
+	static async pApplyFormDataToActor (actor, formData, opts) {
+		opts = opts || {};
+
+		if (!formData || !formData?.data?.length) return;
+
+		const abilityAbv = (opts.abilityAbv === "inherit" ? opts.parentAbilityAbv : opts.abilityAbv) || (formData.abilityAbv === "inherit" ? opts.parentAbilityAbv : formData.abilityAbv);
+
+		const {ImportListSpell} = await import("./ImportListSpell.js");
+		const importListSpell = new ImportListSpell({actor});
+
+		for (const spellMeta of formData.data) {
+			// Skip "expanded spell list" spells
+			if (spellMeta.isExpanded) continue;
+
+			let [name, source] = spellMeta.uid.split("|");
+			if (!source) source = SRC_PHB;
+			const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_SPELLS]({name, source});
+
+			const spell = await Renderer.hover.pCacheAndGet(UrlUtil.PG_SPELLS, source, hash);
+			if (!spell) {
+				const message = `Could not find spell "${hash}" when applying additional spells!`;
+				ui.notifications.warn(message);
+				console.warn(...LGT, message);
+				continue;
+			}
+
+			await importListSpell.pImportEntry(
+				spell,
+				{
+					opts_pGetSpellItem: {
+						abilityAbv: abilityAbv,
+						usesMax: spellMeta.uses,
+						usesPer: spellMeta.usesPer,
+						consumeType: spellMeta.consumeType,
+						consumeAmount: spellMeta.consumeAmount,
+						consumeTarget: spellMeta.consumeTarget,
+						isPrepared: spellMeta.isPrepared,
+						preparationMode: spellMeta.preparationMode,
+						castAtLevel: spellMeta.castAtLevel,
+
+						// Never use an existing spell when adding additional spells
+						isIgnoreExisting: true,
+					},
+				},
+			);
+		}
+	}
+
+	static isNoChoice (additionalSpells, {additionalSpellsFlat = null, curLevel = null, targetLevel = null, isStandalone = false} = {}) {
+		if (!isStandalone && additionalSpells.length !== 1) return false;
+		additionalSpellsFlat = additionalSpellsFlat || Charactermancer_AdditionalSpellsUtil.getFlatData(additionalSpells);
+
+		const minLevel = curLevel ?? Number.MIN_SAFE_INTEGER;
+		const maxLevel = targetLevel ?? Number.MAX_SAFE_INTEGER;
+
+		const spellsInRange = additionalSpellsFlat.some(it => Object.values(it.spells)
+			.some(it => (!isStandalone || !it.isExpanded) && (it.requiredLevel == null || (it.requiredLevel >= minLevel && it.requiredLevel <= maxLevel))),
+		);
+
+		if (!spellsInRange) return true;
+
+		return !additionalSpellsFlat.some(it => it.meta.ability?.choose || Object.values(it.spells).some(it => it.filterExpression != null));
+	}
+	// endregion
+
+	/**
+	 * @param opts
+	 * @param opts.additionalSpells
+	 * @param [opts.sourceHintText]
+	 * @param opts.modalFilterSpells
+	 */
+	constructor (opts) {
+		opts = opts || {};
+		super();
+
+		this._additionalSpells = opts.additionalSpells;
+		this._sourceHintText = opts.sourceHintText;
+		this._modalFilterSpells = opts.modalFilterSpells;
+
+		this._additionalSpellsFlat = Charactermancer_AdditionalSpellsUtil.getFlatData(opts.additionalSpells);
+	}
+
+	get modalTitle () { return `Choose Additional Spell Set${this._sourceHintText ? ` (${this._sourceHintText})` : ""}`; }
+
+	set curLevel (val) { this._state.curLevel = val; }
+	set targetLevel (val) { this._state.targetLevel = val; }
+	set spellLevelLow (val) { this._state.spellLevelLow = val; }
+	set spellLevelHigh (val) { this._state.spellLevelHigh = val; }
+
+	// region Expose "expanded spell lists" to be added to main spell selection components
+	addHookAlwaysPreparedSpells (hk) { this._addHookBase("spellsAlwaysPrepared", hk); }
+	addHookExpandedSpells (hk) { this._addHookBase("spellsExpanded", hk); }
+	addHookAlwaysKnownSpells (hk) { this._addHookBase("spellsAlwaysKnown", hk); }
+
+	get spellsAlwaysPrepared () { return this._state.spellsAlwaysPrepared; }
+	get spellsExpanded () { return this._state.spellsExpanded; }
+	get spellsAlwaysKnown () { return this._state.spellsAlwaysKnown; }
+
+	_render_addLastAlwaysPreparedSpellsHook () { return this._render_addLastBoolSpellsHook({propState: "spellsAlwaysPrepared", propIsBool: "isAlwaysPrepared"}); }
+	_render_addLastExpandedSpellsHook () { return this._render_addLastBoolSpellsHook({propState: "spellsExpanded", propIsBool: "isExpanded"}); }
+	_render_addLastAlwaysKnownSpellsHook () { return this._render_addLastBoolSpellsHook({propState: "spellsAlwaysKnown", propIsBool: "isAlwaysKnown"}); }
+
+	_render_addLastBoolSpellsHook ({propState, propIsBool}) {
+		const hk = () => {
+			const formData = this.getFormData();
+			const nxt = formData.data.filter(it => it[propIsBool]).map(it => it.uid.toLowerCase());
+
+			const setCurr = new Set(this._state[propState]);
+			const setNxt = new Set(nxt);
+			if (!CollectionUtil.setEq(setCurr, setNxt)) this._state[propState] = nxt;
+		};
+		this._addHookBase("ixSet", hk);
+		this._addHookBase("curLevel", hk);
+		this._addHookBase("targetLevel", hk);
+		this._addHookBase("spellLevelLow", hk);
+		this._addHookBase("spellLevelHigh", hk);
+		this._addHookBase("pulseChoose", hk);
+		hk();
+	}
+	// endregion
+
+	render ($wrp) {
+		this._render_addLastAlwaysPreparedSpellsHook();
+		this._render_addLastExpandedSpellsHook();
+		this._render_addLastAlwaysKnownSpellsHook();
+
+		const $wrpOptionsButtons = $(`<div class="flex-v-center flex-wrap w-100 btn-group ${this._additionalSpellsFlat.length > 1 ? "mb-1" : ""}"></div>`);
+		const $wrpOptions = $(`<div class="flex-col w-100"></div>`);
+
+		for (let i = 0; i < this._additionalSpellsFlat.length; ++i) this._render_renderOptions($wrpOptionsButtons, $wrpOptions, i);
+
+		$$($wrp)`
+			${$wrpOptionsButtons}
+			${$wrpOptions}
+		`;
+	}
+
+	_render_renderOptions ($wrpOptionsButtons, $wrpOptions, ix) {
+		const additionalSpellsFlatBlock = this._additionalSpellsFlat[ix];
+
+		// N.b. this is inconsistent with all the other "select a set" controls, which are done with
+		//   `ComponentUiUtil.$getSelEnum`. We use buttons here because it looks cooler, and our spell set names
+		//   _generally_ aren't super-long strings. If this becomes problematic in future, switch it to a simple $sel.
+		const $btnSelect = this._additionalSpellsFlat.length === 1
+			? null
+			: $(`<button class="btn btn-xs flex-1" title="Select Spell Set">${additionalSpellsFlatBlock.meta.name ?? `Spell Set ${ix + 1}`}</button>`)
+				.click(() => this._state.ixSet = ix);
+
+		// FIXME(Future) this is a leaky abstraction. In reality, there are four types of spells we should split out:
+		//   - innate/prepared at class level
+		//   - innate/prepared at spellcasting level
+		//   - expanded at class level
+		//   - expanded at spellcasting level
+		//  Currently, we group together class and spellcasting level, since there are no examples
+		//  (as of 2021-01-16) in official data of some race/subclass/etc. providing a mixture of both.
+		const isInnatePreparedList = this._isAnyInnatePrepared(ix);
+		const isExpandedList = this._isAnyExpanded(ix);
+
+		const sortedSpells = Object.values(additionalSpellsFlatBlock.spells)
+			.sort((a, b) => SortUtil.ascSort(a.requiredLevel || 0, b.requiredLevel || 0) || SortUtil.ascSort(a.requiredCasterLevel || 0, b.requiredCasterLevel || 0));
+
+		const $wrpInnatePreparedHeaders = isInnatePreparedList ? $(`<div class="flex-v-center py-1">
+			<div class="col-3 text-center">Level</div>
+			<div class="col-9">Spells</div>
+		</div>`) : null;
+
+		const $wrpExpandedHeaders = isExpandedList ? $(`<div class="flex-v-center py-1">
+			<div class="col-3 text-center">Spell Level</div>
+			<div class="col-9">Spells</div>
+		</div>`) : null;
+
+		const $rowsInnatePrepared = isInnatePreparedList ? this._render_$getRows(ix, sortedSpells, {isExpandedMatch: false}) : null;
+		const $rowsExpanded = isExpandedList ? this._render_$getRows(ix, sortedSpells, {isExpandedMatch: true}) : null;
+
+		const $wrpNoneAvailableInnatePrepared = isInnatePreparedList ? $(`<div class="ve-small flex-v-center my-1 w-100 italic ve-muted">No spells at this level</div>`) : null;
+		const $wrpNoneAvailableExpanded = isExpandedList ? $(`<div class="ve-small flex-v-center my-1 w-100 italic ve-muted">No spells at this level</div>`) : null;
+
+		const hkSpellsAvailable = () => {
+			const isInnatePreparedAvailable = !!this._getFlatInnatePreparedSpellsInRange(ix).length;
+			if ($wrpInnatePreparedHeaders) $wrpInnatePreparedHeaders.toggleVe(isInnatePreparedAvailable);
+			if ($wrpNoneAvailableInnatePrepared) $wrpNoneAvailableInnatePrepared.toggleVe(!isInnatePreparedAvailable);
+
+			const isExpandedAvailable = !!this._getFlatExpandedSpellsInRange(ix).length;
+			if ($wrpExpandedHeaders) $wrpExpandedHeaders.toggleVe(isExpandedAvailable);
+			if ($wrpNoneAvailableExpanded) $wrpNoneAvailableExpanded.toggleVe(!isExpandedAvailable);
+		};
+		this._addHookBase("spellLevelLow", hkSpellsAvailable);
+		this._addHookBase("spellLevelHigh", hkSpellsAvailable);
+		this._addHookBase("curLevel", hkSpellsAvailable);
+		this._addHookBase("targetLevel", hkSpellsAvailable);
+		this._addHookBase("ixSet", hkSpellsAvailable);
+		hkSpellsAvailable();
+
+		const $stgInnatePrepared = isInnatePreparedList ? $$`<div class="flex-col">
+			<div class="bold my-0">Innate/Prepared/Known Spells</div>
+			${$wrpInnatePreparedHeaders}
+			${$rowsInnatePrepared}
+			${$wrpNoneAvailableInnatePrepared}
+		</div>` : null;
+
+		const $stgExpanded = isExpandedList ? $$`<div class="flex-col">
 			<div class="bold my-0">Expanded Spell List</div>
-			${_0x1aec1d}
-			${_0x4aa4db}
-			${_0x2f93e4}
-		</div>`:null,_0x426e31=this[_0x13d0af(0x169)](_0x1652c9),_0x3d6622=_0x426e31?this['_render_$getSelChooseAbility'](_0x1652c9):null,_0x30afa4=_0x426e31?$$`<div class="split-v-center">
+			${$wrpExpandedHeaders}
+			${$rowsExpanded}
+			${$wrpNoneAvailableExpanded}
+		</div>` : null;
+
+		const isChooseAbility = this._isChooseAbility(ix);
+
+		const $wrpChooseAbility = isChooseAbility ? this._render_$getSelChooseAbility(ix) : null;
+
+		const $stgAbility = isChooseAbility ? $$`<div class="split-v-center">
 			<div class="bold my-0 no-shrink mr-2">Ability Score</div>
-			${_0x3d6622}
-		</div>`:null;if(_0xafe96)_0x2dee91[_0x13d0af(0x154)](_0xafe96);const _0x4069be=$$`<div class="flex-col">
-			${_0x2e331f}
-			${_0x2c75cd}
-			${_0x30afa4}
-		</div>`[_0x13d0af(0x13a)](_0x2fb153);if(this[_0x13d0af(0x16f)][_0x13d0af(0x13f)]!==0x1){const _0x116380=()=>{const _0x165b58=_0x13d0af;_0xafe96[_0x165b58(0x18c)](_0x165b58(0x138),this[_0x165b58(0x161)]['ixSet']===_0x1652c9),_0x4069be[_0x165b58(0x141)](this[_0x165b58(0x161)][_0x165b58(0x1d1)]===_0x1652c9);};this[_0x13d0af(0x1ac)](_0x13d0af(0x1d1),_0x116380),_0x116380();const _0x42b21c=(_0x2df936,_0x700fe,_0x2821d3)=>{const _0x41ba07=_0x13d0af,_0x1f090d=this[_0x41ba07(0x16f)][_0x2821d3],_0x2aa5a5=Object[_0x41ba07(0x16a)](_0x1f090d[_0x41ba07(0x17a)])[_0x41ba07(0x19c)](_0x2949ce=>({[_0x2949ce[_0x41ba07(0x159)]]:null}));this['_proxyAssignSimple'](_0x41ba07(0x150),_0x2aa5a5);};this['_addHookBase'](_0x13d0af(0x1d1),_0x42b21c);}}[_0x53aa2f(0x1c9)](_0x1c714e,_0x535111,{isExpandedMatch:_0xb1b8eb}){const _0x340f81=_0x53aa2f;if(!_0x535111[_0x340f81(0x13f)])return null;const _0x4b8baa={};return _0x535111[_0x340f81(0x1cc)](_0x242971=>{const _0x171930=_0x340f81;if(_0x242971['isExpanded']!==_0xb1b8eb)return;const _0x2fbf1d=_0x242971['requiredCasterLevel']||_0x242971[_0x171930(0x170)];(_0x4b8baa[_0x2fbf1d]=_0x4b8baa[_0x2fbf1d]||[])[_0x171930(0x17b)](_0x242971);}),Object['entries'](_0x4b8baa)[_0x340f81(0x197)](([_0x2829db],[_0x1d0762])=>SortUtil[_0x340f81(0x1a3)](Number(_0x2829db),Number(_0x1d0762)))['map'](([,_0x225e7d])=>{const _0x1e87fc=_0x340f81,_0x51c0d2=_0x225e7d[0x0]['requiredCasterLevel']!=null,_0x4a9622=_0x225e7d[0x0][_0x1e87fc(0x170)]!=null,[_0x3333a5,_0xcdd4f0]=_0x225e7d[_0x1e87fc(0x1cf)](_0x1a22b1=>_0x1a22b1[_0x1e87fc(0x184)]==null);_0x3333a5['sort']((_0xfb48f1,_0x5c7fa3)=>SortUtil[_0x1e87fc(0x193)](_0xfb48f1[_0x1e87fc(0x157)],_0x5c7fa3['uid'])),_0xcdd4f0[_0x1e87fc(0x197)]((_0x1d32b5,_0xc0f9fe)=>SortUtil[_0x1e87fc(0x193)](_0x1d32b5['filterExpression'],_0xc0f9fe[_0x1e87fc(0x184)]));const _0x33cde4=$$`<div class="col-9 flex-v-center">
-					<div>${Renderer[_0x1e87fc(0x160)]()['render'](_0x3333a5[_0x1e87fc(0x144)](_0x2e4e0a=>_0x1e87fc(0x16d)+_0x2e4e0a['uid'][_0x1e87fc(0x155)]()+'}')[_0x1e87fc(0x1aa)](',\x20'))}</div>
-				</div>`;_0xcdd4f0[_0x1e87fc(0x1cc)]((_0x1e7251,_0x196464)=>{const _0x504df5=_0x1e87fc,_0x356536=$(_0x504df5(0x183)),_0x1f5077=()=>{const _0x63a355=_0x504df5;_0x356536[_0x63a355(0x189)](this[_0x63a355(0x161)][_0x1e7251['key']]!=null&&this[_0x63a355(0x161)][_0x63a355(0x1d1)]===_0x1c714e?_0x63a355(0x18d)+Renderer['get']()[_0x63a355(0x1ba)](_0x63a355(0x16d)+this[_0x63a355(0x161)][_0x1e7251['key']][_0x63a355(0x1ae)]()+'}')+'</div>':_0x63a355(0x164));};this[_0x504df5(0x1ac)](_0x1e7251[_0x504df5(0x159)],_0x1f5077);this[_0x504df5(0x16f)][_0x504df5(0x13f)]!==0x1&&this[_0x504df5(0x1ac)](_0x504df5(0x1d1),_0x1f5077);_0x1f5077();const _0x5e06b2=$('<button\x20class=\x22btn\x20btn-default\x20btn-xxs\x20mr-1\x22\x20title=\x22Choose\x20a\x20Spell\x22><span\x20class=\x22fas\x20fa-search\x22></span></button>')['click'](async()=>{const _0x2d3852=_0x504df5,_0x411681=await this[_0x2d3852(0x1bf)][_0x2d3852(0x180)]({'filterExpression':_0x1e7251[_0x2d3852(0x184)]});if(_0x411681==null||!_0x411681['length'])return;const _0x294438=_0x411681[0x0];this[_0x2d3852(0x161)][_0x1e7251['key']]=_0x294438[_0x2d3852(0x186)]+'|'+_0x294438[_0x2d3852(0x16a)][_0x2d3852(0x14d)];});if(this['_additionalSpellsFlat'][_0x504df5(0x13f)]!==0x1){const _0x2a9418=()=>_0x5e06b2[_0x504df5(0x153)](_0x504df5(0x1af),this[_0x504df5(0x161)][_0x504df5(0x1d1)]!==_0x1c714e);this[_0x504df5(0x1ac)](_0x504df5(0x1d1),_0x2a9418),_0x2a9418();}if(_0x3333a5[_0x504df5(0x13f)]||_0x196464)_0x33cde4[_0x504df5(0x154)](_0x504df5(0x13e));$$`<div class="flex-v-center">${_0x5e06b2}${_0x356536}</div>`[_0x504df5(0x13a)](_0x33cde4);});const _0x294248=$$`<div class="py-1 flex-v-center stripe-even">
-					<div class="col-3 text-center">${Parser[_0x1e87fc(0x1b2)](_0x225e7d[0x0][_0x1e87fc(0x19f)]||_0x225e7d[0x0][_0x1e87fc(0x170)])||'<i\x20class=\x22ve-muted\x22>Current</i>'}</div>
-					${_0x33cde4}
-				</div>`;if(_0x51c0d2){const _0x22bf4d=()=>_0x294248[_0x1e87fc(0x141)](this[_0x1e87fc(0x1d2)](_0x225e7d[0x0][_0x1e87fc(0x19f)]));this[_0x1e87fc(0x1ac)]('spellLevelLow',_0x22bf4d),this[_0x1e87fc(0x1ac)](_0x1e87fc(0x148),_0x22bf4d),_0x22bf4d();}else{if(_0x4a9622){const _0x445558=()=>_0x294248[_0x1e87fc(0x141)](this[_0x1e87fc(0x1c2)](_0x225e7d[0x0]['requiredLevel']));this[_0x1e87fc(0x1ac)]('curLevel',_0x445558),this[_0x1e87fc(0x1ac)](_0x1e87fc(0x16c),_0x445558),_0x445558();}else _0x294248[_0x1e87fc(0x192)]();}return _0x294248;});}[_0x53aa2f(0x14a)](_0x528c75){const _0x4c8822=_0x53aa2f;return ComponentUiUtil[_0x4c8822(0x191)](this,_0x4c8822(0x158),{'values':this['_additionalSpells'][_0x528c75][_0x4c8822(0x158)]['choose'],'fnDisplay':_0x36d1ac=>Parser['attAbvToFull'](_0x36d1ac),'isAllowNull':!![]});}[_0x53aa2f(0x1c2)](_0x210a0b){const _0x565453=_0x53aa2f;return _0x210a0b>(this[_0x565453(0x161)]['curLevel']??Number[_0x565453(0x17c)])&&_0x210a0b<=(this[_0x565453(0x161)][_0x565453(0x16c)]==null?Number['MIN_SAFE_INTEGER']:this[_0x565453(0x161)]['targetLevel']);}[_0x53aa2f(0x1d2)](_0x51d9f1){const _0x48ca2a=_0x53aa2f;return _0x51d9f1>=(this[_0x48ca2a(0x161)][_0x48ca2a(0x194)]??Number['MAX_SAFE_INTEGER'])&&_0x51d9f1<=(this[_0x48ca2a(0x161)][_0x48ca2a(0x148)]==null?Number[_0x48ca2a(0x19b)]:this[_0x48ca2a(0x161)]['spellLevelHigh']);}['_getFlatSpellsInRange'](_0x24fdb5,{isExpandedMatch:isExpandedMatch=null}={}){const _0xed1aee=_0x53aa2f;if(_0x24fdb5==null)_0x24fdb5=this[_0xed1aee(0x161)][_0xed1aee(0x1d1)];return Object[_0xed1aee(0x16a)]((this[_0xed1aee(0x16f)][_0x24fdb5]||{'spells':[]})['spells'])[_0xed1aee(0x167)](_0x557d1f=>{const _0x3c28c3=_0xed1aee;if(isExpandedMatch!=null){if(_0x557d1f[_0x3c28c3(0x143)]!==isExpandedMatch)return![];}if(_0x557d1f[_0x3c28c3(0x19f)]!=null)return this[_0x3c28c3(0x1d2)](_0x557d1f['requiredCasterLevel']);else{if(_0x557d1f[_0x3c28c3(0x170)]!=null)return this['_isRequiredLevelInRange'](_0x557d1f['requiredLevel']);}return!![];});}[_0x53aa2f(0x13b)](_0x4b2ead){const _0x193c94=_0x53aa2f;return this[_0x193c94(0x15e)](_0x4b2ead,{'isExpandedMatch':![]});}[_0x53aa2f(0x1bd)](_0x1e966f){const _0x39f789=_0x53aa2f;return this[_0x39f789(0x15e)](_0x1e966f,{'isExpandedMatch':!![]});}['_isAnyInnatePrepared'](_0xa2d73){return this['_isAnyInnatePreparedExpanded'](_0xa2d73,{'isExpandedMatch':![]});}['_isAnyExpanded'](_0x5e0709){const _0x477414=_0x53aa2f;return this[_0x477414(0x179)](_0x5e0709,{'isExpandedMatch':!![]});}[_0x53aa2f(0x179)](_0x36ee31,{isExpandedMatch:_0x4eaf84}){const _0x36d293=_0x53aa2f;if(_0x36ee31==null)_0x36ee31=this[_0x36d293(0x161)][_0x36d293(0x1d1)];return Object[_0x36d293(0x16a)]((this[_0x36d293(0x16f)][_0x36ee31]||{'spells':[]})[_0x36d293(0x17a)])[_0x36d293(0x163)](_0x24899c=>_0x24899c[_0x36d293(0x143)]===_0x4eaf84);}[_0x53aa2f(0x169)](_0x817c0){const _0x3660fb=_0x53aa2f;if(_0x817c0==null)_0x817c0=this['_state'][_0x3660fb(0x1d1)];return(this[_0x3660fb(0x187)][_0x817c0]?.['ability']?.[_0x3660fb(0x198)]?.[_0x3660fb(0x13f)]??0x0)>0x1;}[_0x53aa2f(0x140)]({curLevel:_0x58fb63,targetLevel:_0x139c8d}={}){const _0x267864=_0x53aa2f;return this['constructor'][_0x267864(0x140)](this[_0x267864(0x187)],{'additionalSpellsFlat':this['_additionalSpellsFlat'],'curLevel':_0x58fb63,'targetLevel':_0x139c8d});}[_0x53aa2f(0x1b7)](){const _0x52335e=_0x53aa2f;let _0x5e7b11=MiscUtil[_0x52335e(0x14e)](this['_getFlatSpellsInRange']()),_0x4f28df=0x0;_0x5e7b11=_0x5e7b11[_0x52335e(0x167)](_0x3fd5a1=>{const _0x1a704a=_0x52335e;if(_0x3fd5a1[_0x1a704a(0x184)]!=null){const _0x4e42d5=this['_state'][_0x3fd5a1['key']];if(!_0x4e42d5)return _0x4f28df++,![];delete _0x3fd5a1['filterExpression'],_0x3fd5a1[_0x1a704a(0x157)]=this['_state'][_0x3fd5a1[_0x1a704a(0x159)]];}return!![];});let _0x209537;if(this[_0x52335e(0x169)](this['_state'][_0x52335e(0x1d1)])){_0x209537=this[_0x52335e(0x161)][_0x52335e(0x158)];if(_0x209537==null)_0x4f28df++;}else _0x209537=(this[_0x52335e(0x16f)][this[_0x52335e(0x161)]['ixSet']]||{'meta':{}})[_0x52335e(0x1c5)][_0x52335e(0x158)];return{'isFormComplete':_0x4f28df===0x0,'data':_0x5e7b11,'abilityAbv':_0x209537};}['pGetFormData'](){return this['getFormData']();}['_getDefaultState'](){return{'ixSet':0x0,'curLevel':null,'targetLevel':null,'spellLevelLow':null,'spellLevelHigh':null,'spellsAlwaysPrepared':[],'spellsExpanded':[],'ability':null};}}export{Charactermancer_AdditionalSpellsSelect};
+			${$wrpChooseAbility}
+		</div>` : null;
+
+		if ($btnSelect) $wrpOptionsButtons.append($btnSelect);
+
+		const $stg = $$`<div class="flex-col">
+			${$stgInnatePrepared}
+			${$stgExpanded}
+			${$stgAbility}
+		</div>`.appendTo($wrpOptions);
+
+		if (this._additionalSpellsFlat.length !== 1) {
+			const hkIsActive = () => {
+				$btnSelect.toggleClass("active", this._state.ixSet === ix);
+				$stg.toggleVe(this._state.ixSet === ix);
+			};
+			this._addHookBase("ixSet", hkIsActive);
+			hkIsActive();
+
+			// Reset selections on changing group. This avoids e.g. Magic Initiate selecting some Bard spells, switching
+			//   to Wizard, and still having Bard spells selected.
+			const hkResetActive = (prop, value, prevValue) => {
+				const prevBlock = this._additionalSpellsFlat[prevValue];
+				const nxtState = Object.values(prevBlock.spells).mergeMap(it => ({[it.key]: null}));
+				this._proxyAssignSimple("state", nxtState);
+			};
+			this._addHookBase("ixSet", hkResetActive);
+		}
+	}
+
+	_render_$getRows (ix, spells, {isExpandedMatch}) {
+		if (!spells.length) return null;
+
+		const byLevel = {};
+		spells.forEach(flat => {
+			if (flat.isExpanded !== isExpandedMatch) return;
+
+			const level = flat.requiredCasterLevel || flat.requiredLevel;
+			(byLevel[level] = byLevel[level] || []).push(flat);
+		});
+
+		return Object.entries(byLevel)
+			.sort(([kA], [kB]) => SortUtil.ascSort(Number(kA), Number(kB)))
+			.map(([, flats]) => {
+				const isRequiredCasterLevel = flats[0].requiredCasterLevel != null;
+				const isRequiredLevel = flats[0].requiredLevel != null;
+
+				const [flatsBasic, flatsChoose] = flats.segregate(it => it.filterExpression == null);
+				flatsBasic.sort((a, b) => SortUtil.ascSortLower(a.uid, b.uid));
+				flatsChoose.sort((a, b) => SortUtil.ascSortLower(a.filterExpression, b.filterExpression));
+
+				const $colSpells = $$`<div class="col-9 flex-v-center">
+					<div>${Renderer.get().render(flatsBasic.map(it => `{@spell ${it.uid.toSpellCase()}}`).join(", "))}</div>
+				</div>`;
+
+				flatsChoose.forEach((flat, i) => {
+					const $dispSpell = $(`<div class="flex-v-center"></div>`);
+					const hkChosenSpell = () => {
+						$dispSpell.html(
+							this._state[flat.key] != null && this._state.ixSet === ix
+								? `<div>${Renderer.get().render(`{@spell ${this._state[flat.key].toLowerCase()}}`)}</div>`
+								: `<div class="italic ve-muted">(select a spell)</div>`,
+						);
+					};
+					this._addHookBase(flat.key, hkChosenSpell);
+					if (this._additionalSpellsFlat.length !== 1) {
+						this._addHookBase("ixSet", hkChosenSpell);
+					}
+					hkChosenSpell();
+
+					const $btnFilter = $(`<button class="btn btn-default btn-xxs mr-1" title="Choose a Spell"><span class="fas fa-fw fa-search"></span></button>`)
+						.click(async () => {
+							const selecteds = await this._modalFilterSpells.pGetUserSelection({filterExpression: flat.filterExpression});
+							if (selecteds == null || !selecteds.length) return;
+
+							const selected = selecteds[0];
+
+							this._state[flat.key] = `${selected.name}|${selected.values.sourceJson}`;
+							this._state.pulseChoose = !this._state.pulseChoose;
+						});
+
+					if (this._additionalSpellsFlat.length !== 1) {
+						const hkDisableBtnFilter = () => $btnFilter.prop("disabled", this._state.ixSet !== ix);
+						this._addHookBase("ixSet", hkDisableBtnFilter);
+						hkDisableBtnFilter();
+					}
+
+					if (flatsBasic.length || i) $colSpells.append(`<div class="mr-2">,</div>`);
+					$$`<div class="flex-v-center">${$btnFilter}${$dispSpell}</div>`.appendTo($colSpells);
+				});
+
+				const $row = $$`<div class="py-1 flex-v-center stripe-even">
+					<div class="col-3 text-center">${Parser.getOrdinalForm(flats[0].requiredCasterLevel || flats[0].requiredLevel) || `<i class="ve-muted">Current</i>`}</div>
+					${$colSpells}
+				</div>`;
+
+				if (isRequiredCasterLevel) {
+					const hkLevel = () => $row.toggleVe(this._isRequiredCasterLevelInRange(flats[0].requiredCasterLevel));
+					this._addHookBase("spellLevelLow", hkLevel);
+					this._addHookBase("spellLevelHigh", hkLevel);
+					hkLevel();
+				} else if (isRequiredLevel) {
+					const hkLevel = () => $row.toggleVe(this._isRequiredLevelInRange(flats[0].requiredLevel));
+					this._addHookBase("curLevel", hkLevel);
+					this._addHookBase("targetLevel", hkLevel);
+					hkLevel();
+				} else {
+					$row.showVe();
+				}
+
+				return $row;
+			});
+	}
+
+	_render_$getSelChooseAbility (ix) {
+		return ComponentUiUtil.$getSelEnum(
+			this,
+			"ability",
+			{
+				values: this._additionalSpells[ix].ability.choose,
+				fnDisplay: abv => Parser.attAbvToFull(abv),
+				isAllowNull: true,
+			},
+		);
+	}
+
+	_isRequiredLevelInRange (requiredLevel) {
+		return requiredLevel > (this._state.curLevel ?? Number.MAX_SAFE_INTEGER) && requiredLevel <= (this._state.targetLevel == null ? Number.MIN_SAFE_INTEGER : this._state.targetLevel);
+	}
+
+	_isRequiredCasterLevelInRange (requiredCasterLevel) {
+		return requiredCasterLevel >= (this._state.spellLevelLow ?? Number.MAX_SAFE_INTEGER) && requiredCasterLevel <= (this._state.spellLevelHigh == null ? Number.MIN_SAFE_INTEGER : this._state.spellLevelHigh);
+	}
+
+	_getFlatSpellsInRange (ixSet, {isExpandedMatch = null} = {}) {
+		if (ixSet == null) ixSet = this._state.ixSet;
+
+		return Object.values((this._additionalSpellsFlat[ixSet] || {spells: []}).spells).filter(flat => {
+			if (isExpandedMatch != null) {
+				if (flat.isExpanded !== isExpandedMatch) return false;
+			}
+
+			if (flat.requiredCasterLevel != null) return this._isRequiredCasterLevelInRange(flat.requiredCasterLevel);
+			else if (flat.requiredLevel != null) return this._isRequiredLevelInRange(flat.requiredLevel);
+			return true;
+		});
+	}
+
+	_getFlatInnatePreparedSpellsInRange (ixSet) { return this._getFlatSpellsInRange(ixSet, {isExpandedMatch: false}); }
+	_getFlatExpandedSpellsInRange (ixSet) { return this._getFlatSpellsInRange(ixSet, {isExpandedMatch: true}); }
+
+	_isAnyInnatePrepared (ixSet) { return this._isAnyInnatePreparedExpanded(ixSet, {isExpandedMatch: false}); }
+	_isAnyExpanded (ixSet) { return this._isAnyInnatePreparedExpanded(ixSet, {isExpandedMatch: true}); }
+
+	_isAnyInnatePreparedExpanded (ixSet, {isExpandedMatch}) {
+		if (ixSet == null) ixSet = this._state.ixSet;
+
+		return Object.values((this._additionalSpellsFlat[ixSet] || {spells: []}).spells).some(flat => flat.isExpanded === isExpandedMatch);
+	}
+
+	_isChooseAbility (ixSet) {
+		if (ixSet == null) ixSet = this._state.ixSet;
+		return (this._additionalSpells[ixSet]?.ability?.choose?.length ?? 0) > 1;
+	}
+
+	isNoChoice ({curLevel, targetLevel, isStandalone} = {}) {
+		return this.constructor.isNoChoice(this._additionalSpells, {additionalSpellsFlat: this._additionalSpellsFlat, curLevel, targetLevel, isStandalone});
+	}
+
+	getFormData () {
+		let flatSpellsInRange = MiscUtil.copy(this._getFlatSpellsInRange());
+
+		let cntNotChosen = 0;
+		flatSpellsInRange = flatSpellsInRange.filter(flat => {
+			if (flat.filterExpression != null) {
+				const choiceMade = this._state[flat.key];
+				if (!choiceMade) {
+					cntNotChosen++;
+					return false;
+				}
+
+				delete flat.filterExpression;
+				flat.uid = this._state[flat.key];
+			}
+
+			return true;
+		});
+
+		let abilityAbv;
+		if (this._isChooseAbility(this._state.ixSet)) {
+			abilityAbv = this._state.ability;
+			if (abilityAbv == null) cntNotChosen++;
+		} else abilityAbv = (this._additionalSpellsFlat[this._state.ixSet] || {meta: {}}).meta.ability;
+
+		return {
+			isFormComplete: cntNotChosen === 0,
+			data: flatSpellsInRange,
+			abilityAbv,
+		};
+	}
+
+	pGetFormData () { return this.getFormData(); }
+
+	_getDefaultState () {
+		return {
+			ixSet: 0,
+
+			curLevel: null,
+			targetLevel: null,
+			spellLevelLow: null,
+			spellLevelHigh: null,
+
+			spellsAlwaysPrepared: [],
+			spellsExpanded: [],
+			spellsAlwaysKnown: [],
+
+			ability: null,
+
+			pulseChoose: false,
+		};
+	}
+}
+
+export {Charactermancer_AdditionalSpellsSelect};

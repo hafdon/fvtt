@@ -1,1 +1,142 @@
-const _0x3bde=['absorbFnBindListeners','postProcessData','source','Custom\x20URL','absorbFnBindListenersRadio','sourceJsonToColor','2TgUMvA','constructor','pGetHomebrewSources','1193YfwMjf','_pPostLoad','_content','850927ymfyZS','_list','_pageFilter','666744mRfGPX','513959BrrPSW','DataSourceUrl','Type','getData','doAbsorbItems','Import\x20Recipes','205832qdAjXC','_pImportEntry_pImportToDirectoryGeneric_pGetImportableData','_page','SOURCE_TYP_OFFICIAL_ALL','916JaQKyg','map','sourceClassName','Source','mutateForFilters','sourceJsonToFull','get','SOURCE_TYP_BREW','978605eCfifA','sourceJsonToAbv','DATA_URL_RECIPES','absorbFnGetData','URL_TO_HASH_BUILDER','SOURCE_TYP_CUSTOM','type','name','JournalEntry','Name','pGetSources','_lType','1ZeZiEt','25129Crutax','journal','_activateListeners_absorbListItems','_isPreviewable','recipe','sourceShort'];const _0xf1cc=function(_0x12ea7d,_0x53d624){_0x12ea7d=_0x12ea7d-0x176;let _0x3bded2=_0x3bde[_0x12ea7d];return _0x3bded2;};const _0x570a3d=_0xf1cc;(function(_0x26eb18,_0x4dc12d){const _0x1b3ed2=_0xf1cc;while(!![]){try{const _0x3d6a01=parseInt(_0x1b3ed2(0x198))+-parseInt(_0x1b3ed2(0x19b))+-parseInt(_0x1b3ed2(0x186))*parseInt(_0x1b3ed2(0x192))+-parseInt(_0x1b3ed2(0x1a2))+parseInt(_0x1b3ed2(0x195))*parseInt(_0x1b3ed2(0x1a6))+-parseInt(_0x1b3ed2(0x185))*parseInt(_0x1b3ed2(0x179))+parseInt(_0x1b3ed2(0x19c));if(_0x3d6a01===_0x4dc12d)break;else _0x26eb18['push'](_0x26eb18['shift']());}catch(_0x300de3){_0x26eb18['push'](_0x26eb18['shift']());}}}(_0x3bde,0x87ccb));import{Vetools}from'./Vetools.js';import{Config}from'./Config.js';import{UtilList2}from'./UtilList2.js';import{UtilDataSource}from'./UtilDataSource.js';import{ImportListJournal}from'./ImportListJournal.js';import{DataConverterRecipe}from'./DataConverterRecipe.js';class ImportListRecipe extends ImportListJournal{constructor(_0x3d1d80){const _0x57a4f0=_0xf1cc;_0x3d1d80=_0x3d1d80||{},super({'title':_0x57a4f0(0x1a1)},_0x3d1d80,{'props':[_0x57a4f0(0x18a)],'titleSearch':_0x57a4f0(0x18a),'sidebarTab':_0x57a4f0(0x187),'gameProp':_0x57a4f0(0x187),'defaultFolderPath':['Recipes'],'folderType':_0x57a4f0(0x181),'pageFilter':new PageFilterRecipes(),'page':UrlUtil['PG_RECIPES'],'isPreviewable':!![],'isDedupable':!![]},{'titleLog':'recipe'});}async[_0x570a3d(0x196)](_0x449778,_0x30e39a){const _0x50eacb=_0x570a3d;return DataUtil[_0x50eacb(0x18a)][_0x50eacb(0x18d)](_0x30e39a),_0x30e39a[_0x50eacb(0x18a)]||[];}async[_0x570a3d(0x183)](){const _0xbd5423=_0x570a3d,_0x4780d6={'pPostLoad':this['_pPostLoad']['bind'](this)};return[new UtilDataSource['DataSourceUrl'](Config[_0xbd5423(0x177)]('ui','isStreamerMode')?'SRD':'5etools',Vetools[_0xbd5423(0x17b)],{..._0x4780d6,'filterTypes':[UtilDataSource[_0xbd5423(0x1a5)]],'isDefault':!![]}),new UtilDataSource['DataSourceUrl'](_0xbd5423(0x18f),'',{..._0x4780d6,'filterTypes':[UtilDataSource[_0xbd5423(0x17e)]]}),new UtilDataSource['DataSourceFile']('Upload\x20File',{..._0x4780d6,'filterTypes':[UtilDataSource['SOURCE_TYP_CUSTOM']]}),...(await Vetools[_0xbd5423(0x194)]('recipe'))['map'](({name:_0x246a77,url:_0x2c8aa3})=>new UtilDataSource[(_0xbd5423(0x19d))](_0x246a77,_0x2c8aa3,{..._0x4780d6,'filterTypes':[UtilDataSource[_0xbd5423(0x178)]]}))];}[_0x570a3d(0x19f)](){const _0x464a9e=_0x570a3d;return{'isPreviewable':this[_0x464a9e(0x189)],'titleButtonRun':this['_titleButtonRun'],'titleSearch':this['_titleSearch'],'cols':[{'name':_0x464a9e(0x182),'width':0x5,'field':_0x464a9e(0x180)},{'name':_0x464a9e(0x19e),'width':0x4,'field':_0x464a9e(0x17f)},{'name':_0x464a9e(0x1a9),'width':0x2,'field':_0x464a9e(0x18e),'titleProp':'sourceLong','displayProp':_0x464a9e(0x18b),'classNameProp':_0x464a9e(0x1a8),'rowClassName':'text-center'}],'rows':this[_0x464a9e(0x197)][_0x464a9e(0x1a7)]((_0x45101c,_0x2a1608)=>{const _0x252355=_0x464a9e;return this[_0x252355(0x19a)][_0x252355(0x193)][_0x252355(0x1aa)](_0x45101c),_0x45101c['_lType']=_0x45101c[_0x252355(0x17f)]||'—',{'name':_0x45101c[_0x252355(0x180)],'type':_0x45101c[_0x252355(0x184)]=_0x45101c[_0x252355(0x17f)]||'—','source':_0x45101c[_0x252355(0x18e)],'sourceShort':Parser[_0x252355(0x17a)](_0x45101c['source']),'sourceLong':Parser[_0x252355(0x176)](_0x45101c[_0x252355(0x18e)]),'sourceClassName':Parser[_0x252355(0x191)](_0x45101c[_0x252355(0x18e)]),'ix':_0x2a1608};})};}[_0x570a3d(0x188)](){const _0x4e38ff=_0x570a3d;this['_list'][_0x4e38ff(0x1a0)](this[_0x4e38ff(0x197)],{'fnGetName':_0x5571c0=>_0x5571c0['name'],'fnGetValues':_0xd1b6f9=>({'type':_0xd1b6f9['_lType'],'source':_0xd1b6f9['source'],'hash':UrlUtil[_0x4e38ff(0x17d)][this[_0x4e38ff(0x1a4)]](_0xd1b6f9)}),'fnGetData':UtilList2[_0x4e38ff(0x17c)],'fnBindListeners':_0x1a570f=>this['_isRadio']?UtilList2[_0x4e38ff(0x190)](this[_0x4e38ff(0x199)],_0x1a570f):UtilList2[_0x4e38ff(0x18c)](this[_0x4e38ff(0x199)],_0x1a570f)});}[_0x570a3d(0x1a3)](_0x160432,_0x1c9dce){return DataConverterRecipe['pGetRecipeJournal'](_0x160432,_0x1c9dce);}}export{ImportListRecipe};
+import {Vetools} from "./Vetools.js";
+import {Config} from "./Config.js";
+import {UtilList2} from "./UtilList2.js";
+import {UtilDataSource} from "./UtilDataSource.js";
+import {ImportListJournal} from "./ImportListJournal.js";
+import {DataConverterRecipe} from "./DataConverterRecipe.js";
+
+class ImportListRecipe extends ImportListJournal {
+	static get FOLDER_TYPE () { return "JournalEntry"; }
+
+	constructor (externalData) {
+		externalData = externalData || {};
+		super(
+			{title: "Import Recipes"},
+			externalData,
+			{
+				props: ["recipe"],
+				dirsHomebrew: ["recipe"],
+				titleSearch: "recipe",
+				sidebarTab: "journal",
+				gameProp: "journal",
+				defaultFolderPath: ["Recipes"],
+				pageFilter: new PageFilterRecipes(),
+				page: UrlUtil.PG_RECIPES,
+				isPreviewable: true,
+				isDedupable: true,
+				configGroup: "importRecipe",
+			},
+			{
+				titleLog: "recipe",
+			},
+		);
+	}
+
+	async _pPostLoad (recipeList, fileData) {
+		DataUtil.recipe.postProcessData(fileData);
+		return fileData.recipe || [];
+	}
+
+	async pGetSources () {
+		const nxtOpts = {pPostLoad: this._pPostLoad.bind(this)};
+
+		return [
+			new UtilDataSource.DataSourceUrl(
+				Config.get("ui", "isStreamerMode") ? "SRD" : "5etools",
+				Vetools.DATA_URL_RECIPES,
+				{
+					...nxtOpts,
+					filterTypes: [UtilDataSource.SOURCE_TYP_OFFICIAL_ALL],
+					isDefault: true,
+				},
+			),
+			new UtilDataSource.DataSourceUrl(
+				"Custom URL",
+				"",
+				{
+					...nxtOpts,
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			new UtilDataSource.DataSourceFile(
+				"Upload File",
+				{
+					...nxtOpts,
+					filterTypes: [UtilDataSource.SOURCE_TYP_CUSTOM],
+				},
+			),
+			...(await this._pGetSourcesHomebrew(nxtOpts)),
+		];
+	}
+
+	getData () {
+		return {
+			isPreviewable: this._isPreviewable,
+			titleButtonRun: this._titleButtonRun,
+			titleSearch: this._titleSearch,
+			cols: [
+				{
+					name: "Name",
+					width: 5,
+					field: "name",
+				},
+				{
+					name: "Type",
+					width: 4,
+					field: "type",
+				},
+				{
+					name: "Source",
+					width: 2,
+					field: "source",
+					titleProp: "sourceLong",
+					displayProp: "sourceShort",
+					classNameProp: "sourceClassName",
+					styleProp: "sourceStyle",
+					rowClassName: "text-center",
+				},
+			],
+			rows: this._content.map((it, ix) => {
+				this._pageFilter.constructor.mutateForFilters(it);
+
+				it._lType = it.type || "\u2014";
+
+				return {
+					name: it.name,
+					type: it._lType = it.type || "\u2014",
+					source: it.source,
+					sourceShort: Parser.sourceJsonToAbv(it.source),
+					sourceLong: Parser.sourceJsonToFull(it.source),
+					sourceClassName: Parser.sourceJsonToColor(it.source),
+					sourceStyle: BrewUtil.sourceJsonToStylePart(it.source),
+					ix,
+				};
+			}),
+		};
+	}
+
+	_activateListeners_absorbListItems () {
+		this._list.doAbsorbItems(
+			this._content,
+			{
+				fnGetName: it => it.name,
+				// values used for sorting/search
+				fnGetValues: it => ({
+					type: it._lType,
+					source: it.source,
+					hash: UrlUtil.URL_TO_HASH_BUILDER[this._page](it),
+				}),
+				fnGetData: UtilList2.absorbFnGetData,
+				fnBindListeners: it => this._isRadio
+					? UtilList2.absorbFnBindListenersRadio(this._list, it)
+					: UtilList2.absorbFnBindListeners(this._list, it),
+			},
+		);
+	}
+
+	_pImportEntry_pImportToDirectoryGeneric_pGetImportableData (it, getItemOpts) {
+		return DataConverterRecipe.pGetRecipeJournal(it, getItemOpts);
+	}
+}
+
+export {ImportListRecipe};

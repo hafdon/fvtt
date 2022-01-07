@@ -1,1 +1,103 @@
-const _0x1dc1=['/template/CollectionDeduplicator.hbs','getMaxWindowHeight','checked','change','ele','_mapEntitiesToRows','filter','_activateListeners_initBtnRun','activateListeners','isPrime','forEach','316010TgSPph','trim','745qlSFqO','376ijAXAa','_pageFilter','flat','3YIDujL','_collectionName','_activateListeners_listAbsorbGetData','_rows','map','982806BiXXdQ','_activateListeners_pInitListAndFilters','662431qLawCO','1454164gLzjNX','MODULE_LOCATION','_folderType','toLowerCase','_activateListeners_initBtnPrune','isDeduplicateIgnoreType','get','prop','2833bThWYd','push','close','list-multi-selected','cbSel','find','[name=\x22cb-prune-auto\x22]','type','4LUchWs','9tuqjTZ','absorbFnGetData','_$btnReset','remove','getData','_list','classList','data','values','1156756FBCgjr','visibleItems','tools'];const _0x36da=function(_0x22c789,_0x243916){_0x22c789=_0x22c789-0x105;let _0x1dc19b=_0x1dc1[_0x22c789];return _0x1dc19b;};const _0x3299d1=_0x36da;(function(_0x366b87,_0x2cae88){const _0x547329=_0x36da;while(!![]){try{const _0x652a5d=parseInt(_0x547329(0x12b))+-parseInt(_0x547329(0x139))*parseInt(_0x547329(0x109))+parseInt(_0x547329(0x105))*parseInt(_0x547329(0x106))+-parseInt(_0x547329(0x10e))+-parseInt(_0x547329(0x122))*-parseInt(_0x547329(0x119))+-parseInt(_0x547329(0x111))+-parseInt(_0x547329(0x110))*-parseInt(_0x547329(0x121));if(_0x652a5d===_0x2cae88)break;else _0x366b87['push'](_0x366b87['shift']());}catch(_0x56c5ae){_0x366b87['push'](_0x366b87['shift']());}}}(_0x1dc1,0xb1839));import{SharedConsts}from'../shared/SharedConsts.js';import{Util}from'./Util.js';import{BaseCollectionTool}from'./BaseCollectionTool.js';import{AppFilterBasic}from'./FilterApplications.js';import{Config}from'./Config.js';import{UtilList2}from'./UtilList2.js';class CollectionDeduplicator extends BaseCollectionTool{constructor(_0x11740f){const _0x44c5be=_0x36da;super({'title':'Directory\x20Deduplicator','template':SharedConsts[_0x44c5be(0x112)]+_0x44c5be(0x12e),'height':Util[_0x44c5be(0x12f)](),'width':0x280,'resizable':!![]},_0x11740f),this[_0x44c5be(0x107)]=new AppFilterBasic(),this[_0x44c5be(0x127)]=null,this[_0x44c5be(0x124)]=null;}[_0x3299d1(0x136)](_0x5e1989){const _0xa0a41=_0x3299d1;super[_0xa0a41(0x136)](_0x5e1989),this[_0xa0a41(0x135)](_0x5e1989),this[_0xa0a41(0x115)](_0x5e1989),this['_activateListeners_initBtnReset'](_0x5e1989),this[_0xa0a41(0x10f)](_0x5e1989);}['_activateListeners_initBtnRun'](_0x2d9661){const _0x264759=_0x3299d1,_0x56b074=_0x2d9661[_0x264759(0x11e)](_0x264759(0x11f));_0x2d9661[_0x264759(0x11e)]('[name=\x22btn-run\x22]')['click'](()=>this['_pDoDelete'](_0x56b074));}[_0x3299d1(0x10b)](_0x24236f,_0x538ecf){const _0x1a0a48=_0x3299d1;return{...UtilList2[_0x1a0a48(0x123)](_0x24236f),'isPrime':!!_0x538ecf[_0x1a0a48(0x137)]};}['_activateListeners_doBindSelectAll'](_0x5eddfa){const _0x456389=_0x3299d1;_0x5eddfa[_0x456389(0x131)](()=>{const _0x4235b1=_0x456389,_0x42d00f=_0x5eddfa[_0x4235b1(0x118)](_0x4235b1(0x130));this[_0x4235b1(0x127)][_0x4235b1(0x12c)]['forEach'](_0x52f621=>{const _0x2be64b=_0x4235b1,_0x52c6df=_0x42d00f?!_0x52f621[_0x2be64b(0x129)]['isPrime']:![];_0x52f621['data'][_0x2be64b(0x11d)]['checked']=_0x52c6df;if(_0x52c6df)_0x52f621['ele']['classList']['add'](_0x2be64b(0x11c));else _0x52f621[_0x2be64b(0x132)][_0x2be64b(0x128)][_0x2be64b(0x125)](_0x2be64b(0x11c));});});}[_0x3299d1(0x126)](){const _0x1a168d=_0x3299d1,_0x5dcac0=this[_0x1a168d(0x133)](),_0x360180=Config[_0x1a168d(0x117)](_0x1a168d(0x12d),_0x1a168d(0x116)),_0x2b22dd=_0x4c82f6=>{const _0x595bfb=_0x1a168d,_0x29df28=(_0x4c82f6['name']||'')[_0x595bfb(0x13a)]()[_0x595bfb(0x114)]();return _0x360180?_0x29df28:_0x29df28+'__'+_0x4c82f6[_0x595bfb(0x120)];},_0x48ccf0={};return _0x5dcac0['forEach'](_0x12d31f=>{const _0x1d7051=_0x1a168d,_0x1d8b86=_0x2b22dd(_0x12d31f);(_0x48ccf0[_0x1d8b86]=_0x48ccf0[_0x1d8b86]||[])[_0x1d7051(0x11a)](_0x12d31f);}),this[_0x1a168d(0x10c)]=Object[_0x1a168d(0x12a)](_0x48ccf0)[_0x1a168d(0x134)](_0x511a2a=>_0x511a2a['length']>0x1)[_0x1a168d(0x10d)](_0xb04383=>{const _0x55bffe=_0x1a168d;return _0xb04383[_0x55bffe(0x138)]((_0x167fee,_0x25eb2b)=>_0x167fee['isPrime']=_0x25eb2b===0x0),_0xb04383;})[_0x1a168d(0x108)](),{...super[_0x1a168d(0x126)](),'titleSearch':this[_0x1a168d(0x10a)]+'s','rows':this[_0x1a168d(0x10c)],'isPrunable':this[_0x1a168d(0x113)]!=null};}[_0x3299d1(0x11b)](..._0x358f89){const _0x39798f=_0x3299d1;return this[_0x39798f(0x107)]['teardown'](),super[_0x39798f(0x11b)](..._0x358f89);}}export{CollectionDeduplicator};
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Util} from "./Util.js";
+import {BaseCollectionTool} from "./BaseCollectionTool.js";
+import {AppFilterBasic} from "./FilterApplications.js";
+import {Config} from "./Config.js";
+import {UtilList2} from "./UtilList2.js";
+
+class CollectionDeduplicator extends BaseCollectionTool {
+	constructor (collectionName) {
+		super(
+			{
+				title: "Directory Deduplicator",
+				template: `${SharedConsts.MODULE_LOCATION}/template/CollectionDeduplicator.hbs`,
+				height: Util.getMaxWindowHeight(),
+				width: 640,
+				resizable: true,
+			},
+			collectionName,
+		);
+
+		// Local fields
+		this._pageFilter = new AppFilterBasic();
+
+		this._list = null;
+		this._$btnReset = null;
+	}
+
+	activateListeners ($html) {
+		super.activateListeners($html);
+
+		this._activateListeners_initBtnRun($html);
+		this._activateListeners_initBtnPrune($html);
+		this._activateListeners_initBtnReset($html);
+		this._activateListeners_pInitListAndFilters($html);
+	}
+
+	_activateListeners_initBtnRun ($html) {
+		const $cbPruneAuto = $html.find(`[name="cb-prune-auto"]`);
+		$html.find(`[name="btn-run"]`).click(() => this._pDoDelete($cbPruneAuto));
+	}
+
+	_activateListeners_listAbsorbGetData (li, di) {
+		return {
+			...UtilList2.absorbFnGetData(li),
+			isPrime: !!di.isPrime,
+		};
+	}
+
+	_activateListeners_doBindSelectAll ($cbAll) {
+		$cbAll.change(() => {
+			const isAllChecked = $cbAll.prop("checked");
+			this._list.visibleItems.forEach(it => {
+				const isChecked = isAllChecked ? !it.data.isPrime : false;
+				it.data.cbSel.checked = isChecked;
+
+				if (isChecked) it.ele.classList.add("list-multi-selected");
+				else it.ele.classList.remove("list-multi-selected");
+			});
+		});
+	}
+
+	/**
+	 * Used by template engine.
+	 */
+	getData () {
+		const rows = this._mapEntitiesToRows();
+
+		const isIgnoreType = Config.get("tools", "isDeduplicateIgnoreType");
+		const getUid = row => {
+			const name = (row.name || "").trim().toLowerCase();
+			return isIgnoreType ? name : `${name}__${row.type}`;
+		};
+
+		const uidToRows = {};
+		rows.forEach(row => {
+			const uid = getUid(row);
+			(uidToRows[uid] = uidToRows[uid] || []).push(row);
+		});
+
+		this._rows = Object.values(uidToRows)
+			.filter(it => it.length > 1)
+			.map(dupeArr => {
+				// Mark one of the duplicates as "prime," which we will avoid selecting in select-all later
+				dupeArr.forEach((it, i) => it.isPrime = i === 0);
+				return dupeArr;
+			})
+			.flat();
+
+		return {
+			...super.getData(),
+			titleSearch: `${this._collectionName}s`,
+			rows: this._rows,
+			isPrunable: this._folderType != null,
+		};
+	}
+
+	close (...args) {
+		this._pageFilter.teardown();
+		return super.close(...args);
+	}
+}
+
+export {CollectionDeduplicator};

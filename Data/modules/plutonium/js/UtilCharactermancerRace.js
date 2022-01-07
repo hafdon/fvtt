@@ -1,9 +1,78 @@
-const _0x4f23=['subrace','_featCount','hover','<hr\x20class=\x22hr-2\x22>','withUnpatchedDiceRendering','mergeSubraces','_sizes','63EHagWi','108335rzrCXF','3554gFYhzi','Configure\x20and\x20Open\x20List','appendTo','raceFeatSelect','961aHazth','1vZLnKc','pGetRaces','append','<div\x20class=\x22italic\x20ve-muted\x22>No\x20feat\x20selected</div>','</div>','MODULE_NAME_FAKE','click','16YHfqcf','3409DnqbEC','_getDefaultState','adoptSubraces','pCacheAndGet','_state','constructor','featCount','size','modalTitle','flags','555371FHIpqX','html','_addHookBase','render','151757wDltUk','pGetUserChoice','Select\x20Source','Feat','Choose\x20Feat','sizeAbvToFull','forEach','$getHoverContent_stats','168010zVqkpF','length','map','empty','_getProps','Feats','push','./ImportListFeat.js','then','pGetUserInput','<div>','isNoChoice','31NRgTXR','race','Open\x20List','pGetFormData'];const _0x2060=function(_0x1e01d4,_0x5bf9fe){_0x1e01d4=_0x1e01d4-0x1bf;let _0x4f2385=_0x4f23[_0x1e01d4];return _0x4f2385;};const _0x22e5c0=_0x2060;(function(_0x1dda3e,_0x3b74e7){const _0x2bb3c6=_0x2060;while(!![]){try{const _0x46e952=-parseInt(_0x2bb3c6(0x1f8))+-parseInt(_0x2bb3c6(0x1e9))*parseInt(_0x2bb3c6(0x1dd))+parseInt(_0x2bb3c6(0x1db))*-parseInt(_0x2bb3c6(0x1ea))+-parseInt(_0x2bb3c6(0x1e1))*parseInt(_0x2bb3c6(0x1d0))+-parseInt(_0x2bb3c6(0x1dc))+parseInt(_0x2bb3c6(0x1c4))+parseInt(_0x2bb3c6(0x1e2))*parseInt(_0x2bb3c6(0x1f4));if(_0x46e952===_0x3b74e7)break;else _0x1dda3e['push'](_0x1dda3e['shift']());}catch(_0x1f9309){_0x1dda3e['push'](_0x1dda3e['shift']());}}}(_0x4f23,0x2784b));import{SharedConsts}from'../shared/SharedConsts.js';import{Vetools}from'./Vetools.js';import{Util}from'./Util.js';import{UtilApplications}from'./UtilApplications.js';class Charactermancer_Race_Util{static async['pPostLoadBrew'](_0x20bb8){const _0x186539=_0x2060,_0x5bdb71=[];if(_0x20bb8[_0x186539(0x1d1)])_0x5bdb71[_0x186539(0x1ca)](...Renderer[_0x186539(0x1d1)][_0x186539(0x1d9)](_0x20bb8[_0x186539(0x1d1)],{'isAddBaseRaces':!![]}));if(_0x20bb8[_0x186539(0x1d4)]){const _0xaebe65=(await Vetools[_0x186539(0x1e3)]({'isAddBaseRaces':!![]}))[_0x186539(0x1d1)];_0xaebe65[_0x186539(0x1c2)](_0x3823ba=>PageFilterRaces['mutateForFilters'](_0x3823ba));const _0x29d1c5=Renderer[_0x186539(0x1d1)][_0x186539(0x1ec)](_0xaebe65,_0x20bb8[_0x186539(0x1d4)]),_0x1c7e88=Renderer[_0x186539(0x1d1)][_0x186539(0x1d9)](_0x29d1c5);_0x5bdb71[_0x186539(0x1ca)](..._0x1c7e88);}return _0x5bdb71;}}class Charactermancer_Race_FeatSelect extends BaseComponent{static async[_0x22e5c0(0x1cd)](_0xb62f88){if(!_0xb62f88)return{'isFormComplete':!![],'data':{}};const _0x540ca3=new this({'featCount':_0xb62f88});return UtilApplications['pGetImportCompApplicationFormData']({'comp':_0x540ca3,'height':Util['getMaxWindowHeight'](_0xb62f88*0x168)});}constructor(_0x368ace){const _0x150c1b=_0x22e5c0;_0x368ace=_0x368ace||{},super(),this['_featCount']=_0x368ace[_0x150c1b(0x1f0)];}get[_0x22e5c0(0x1f2)](){const _0x4e7fa=_0x22e5c0;return _0x4e7fa(0x1c0)+(this[_0x4e7fa(0x1d5)]===0x1?'':'s');}static[_0x22e5c0(0x1c8)](_0x4dff7a){return{'propFeatData':'featData_'+_0x4dff7a};}[_0x22e5c0(0x1f7)](_0x5599d7){const _0x2bf7a7=[...new Array(this['_featCount'])]['map']((_0x5e64df,_0x3536a2)=>{const _0x23d34b=_0x2060,{propFeatData:_0xb5b760}=this[_0x23d34b(0x1ef)][_0x23d34b(0x1c8)](_0x3536a2),_0x28408f=$('<button\x20class=\x22btn\x20btn-default\x22>Select\x20Feat</button>')[_0x23d34b(0x1e8)](async()=>{const _0x1fea9b=_0x23d34b,{ImportListFeat:_0x21a246}=await import(_0x1fea9b(0x1cb)),_0x137575=await _0x21a246['UserChoose'][_0x1fea9b(0x1f9)]({'id':'feats-raceFeatSelect','name':_0x1fea9b(0x1c9),'singleName':_0x1fea9b(0x1bf),'wizardTitleWindow':_0x1fea9b(0x1fa),'wizardTitlePanel3':_0x1fea9b(0x1de),'wizardTitleButtonOpenImporter':_0x1fea9b(0x1d2)},_0x1fea9b(0x1e0));if(!_0x137575)return;this[_0x1fea9b(0x1ee)][_0xb5b760]=_0x137575;}),_0xe89f2f=$('<div\x20class=\x22flex-col\x20overflow-y-auto\x20min-h-0\x22></div>'),_0x25e05b=()=>{const _0x32253c=_0x23d34b;_0xe89f2f[_0x32253c(0x1c7)]();const _0x31737f=this['_state'][_0xb5b760]?.[_0x32253c(0x1f3)]?.[SharedConsts[_0x32253c(0x1e7)]];if(!_0x31737f)return _0xe89f2f['html'](_0x32253c(0x1e5));const {page:_0x46059c,source:_0x46789f,hash:_0x42f54c}=_0x31737f;Renderer[_0x32253c(0x1d6)][_0x32253c(0x1ed)](_0x46059c,_0x46789f,_0x42f54c)[_0x32253c(0x1cc)](_0x36b97c=>{const _0x59c6e3=_0x32253c;_0xe89f2f[_0x59c6e3(0x1f5)](Vetools[_0x59c6e3(0x1d8)](()=>Renderer[_0x59c6e3(0x1d6)][_0x59c6e3(0x1c3)](UrlUtil['PG_FEATS'],_0x36b97c)));});};return this[_0x23d34b(0x1f6)](_0xb5b760,_0x25e05b),_0x25e05b(),$$`<div class="flex-col min-h-0">
-				${_0x3536a2===0x0?'':_0x23d34b(0x1d7)}
+import {Vetools} from "./Vetools.js";
+import {UtilApplications} from "./UtilApplications.js";
 
-				<div class="flex-v-center mb-2">${_0x28408f}</div>
+class Charactermancer_Race_Util {
+	static async pPostLoadBrew (fileData) {
+		const out = [];
 
-				${_0xe89f2f}
-			</div>`;});$$(_0x5599d7)`
-			${_0x2bf7a7}
-		`;}[_0x22e5c0(0x1d3)](){const _0x7d028b=_0x22e5c0,_0x45d816=[];let _0x3bb7c1=!![];return[...new Array(this['_featCount'])][_0x7d028b(0x1c6)]((_0x3d20e0,_0x353b85)=>{const _0x14e954=_0x7d028b,{propFeatData:_0x40599b}=this['constructor'][_0x14e954(0x1c8)](_0x353b85),_0x2e9464=this['_state'][_0x40599b]?.['flags']?.[SharedConsts[_0x14e954(0x1e7)]];if(!_0x2e9464)return _0x3bb7c1=![];const {page:_0x2c427c,source:_0x12081a,hash:_0x6f7a7b}=_0x2e9464;_0x45d816['push']({'page':_0x2c427c,'source':_0x12081a,'hash':_0x6f7a7b});}),{'isFormComplete':_0x3bb7c1,'data':_0x45d816};}[_0x22e5c0(0x1eb)](){return{};}}class Charactermancer_Race_SizeSelect extends BaseComponent{static async[_0x22e5c0(0x1cd)]({sizes:_0x596a97}){const _0x2bda3f=_0x22e5c0;if(!_0x596a97||!_0x596a97[_0x2bda3f(0x1c5)])return{'isFormComplete':!![],'data':SZ_MEDIUM};const _0x1b43e6=new this({'sizes':_0x596a97});if(_0x1b43e6[_0x2bda3f(0x1cf)]())return _0x1b43e6[_0x2bda3f(0x1d3)]();return UtilApplications['pGetImportCompModalFormData']({'comp':_0x1b43e6});}constructor(_0x426012){_0x426012=_0x426012||{},super(),this['_sizes']=_0x426012['sizes']||[SZ_MEDIUM];}get[_0x22e5c0(0x1f2)](){return'Choose\x20Size';}[_0x22e5c0(0x1f7)](_0x381859){const _0x20a058=_0x22e5c0;if(this[_0x20a058(0x1da)][_0x20a058(0x1c5)]===0x1){_0x381859[_0x20a058(0x1e4)](_0x20a058(0x1ce)+Parser[_0x20a058(0x1c1)](this[_0x20a058(0x1da)][0x0])+_0x20a058(0x1e6));return;}ComponentUiUtil['$getSelEnum'](this,_0x20a058(0x1f1),{'values':this[_0x20a058(0x1da)],'isAllowNull':!![],'fnDisplay':Parser[_0x20a058(0x1c1)]})[_0x20a058(0x1df)](_0x381859);}[_0x22e5c0(0x1cf)](){const _0x1157e5=_0x22e5c0;return this['_sizes'][_0x1157e5(0x1c5)]<=0x1;}['pGetFormData'](){const _0x1cf2bb=_0x22e5c0;return{'isFormComplete':this['_state'][_0x1cf2bb(0x1f1)]!=null,'data':this['_sizes'][_0x1cf2bb(0x1c5)]===0x1?this[_0x1cf2bb(0x1da)][0x0]:this[_0x1cf2bb(0x1ee)][_0x1cf2bb(0x1f1)]};}}export{Charactermancer_Race_Util,Charactermancer_Race_FeatSelect,Charactermancer_Race_SizeSelect};
+		if (fileData.race) out.push(...Renderer.race.mergeSubraces(fileData.race, {isAddBaseRaces: true}));
+
+		if (fileData.subrace) {
+			const baseList = (await Vetools.pGetRaces({isAddBaseRaces: true})).race;
+			baseList.forEach(it => PageFilterRaces.mutateForFilters(it));
+
+			const nxtData = Renderer.race.adoptSubraces(baseList, fileData.subrace);
+			const mergedNxtData = Renderer.race.mergeSubraces(nxtData);
+
+			out.push(...mergedNxtData);
+		}
+
+		return out;
+	}
+}
+
+class Charactermancer_Race_SizeSelect extends BaseComponent {
+	// region External
+	static async pGetUserInput ({sizes}) {
+		if (!sizes || !sizes.length) return {isFormComplete: true, data: SZ_MEDIUM};
+		const comp = new this({sizes});
+		if (comp.isNoChoice()) return comp.pGetFormData();
+		return UtilApplications.pGetImportCompModalFormData({comp});
+	}
+	// endregion
+
+	/**
+	 * @param opts
+	 * @param opts.sizes
+	 */
+	constructor (opts) {
+		opts = opts || {};
+		super();
+
+		this._sizes = opts.sizes || [SZ_MEDIUM];
+	}
+
+	get modalTitle () { return `Choose Size`; }
+
+	render ($wrp) {
+		if (this._sizes.length === 1) {
+			$wrp.append(`<div>${Parser.sizeAbvToFull(this._sizes[0])}</div>`);
+			return;
+		}
+
+		ComponentUiUtil.$getSelEnum(
+			this,
+			"size",
+			{
+				values: this._sizes,
+				isAllowNull: true,
+				fnDisplay: Parser.sizeAbvToFull,
+			},
+		)
+			.appendTo($wrp);
+	}
+
+	isNoChoice () { return this._sizes.length <= 1; }
+
+	pGetFormData () {
+		return {
+			isFormComplete: this._state.size != null,
+			data: this._sizes.length === 1 ? this._sizes[0] : this._state.size,
+		};
+	}
+}
+
+export {
+	Charactermancer_Race_Util,
+	Charactermancer_Race_SizeSelect,
+};

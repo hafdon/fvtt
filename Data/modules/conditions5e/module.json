@@ -31,5 +31,6 @@
   "manifest": "https://raw.githubusercontent.com/trdischat/conditions5e/master/module.json",
   "download": "https://github.com/trdischat/conditions5e/archive/master.zip",
   "protected": false,
-  "coreTranslation": false
+  "coreTranslation": false,
+  "library": false
 }

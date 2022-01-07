@@ -1,1 +1,465 @@
-const _0x19aa=['items','toLowerCase','getSrdCompendiumEntity','forEach','2BAPxKi','SRD_COMPENDIUMS_ITEMS','map','_PLUT_CACHES','name','monster','copy','importRace','_getCachedCompendiumData','_COMPENDIUM_CACHE_KEY_IMAGE','string','trim','PG_SPELLS','getDocuments','_pGetCacheAndGetActorItemCompendiumData','_COMPENDIUM_IMAGE_LAST_VALUES','find','filter','pGetPlutoniumCompendiumId','_COMPENDIUM_ACTOR_CACHES','_COMPENDIUM_CACHES','cacheId','SRD_COMPENDIUMS_CREATURES','_isCompendiumCached','SRD_COMPENDIUMS_OPTIONAL_FEATURES','237ntAMmy','every','Unknown\x20cache\x20ID\x20\x22','164947hCbqaL','get','_COMPENDIUM_CACHE_KEY_DATA','baseCacheId','importOptionalFeature','SRD_COMPENDIUMS_RACES_AND_FEATURES','includes','race','hash','importClass','length','deepKeys','img','1WGRbaQ','_pHandleConfigUpdate_pFlushCompendiumImageCaches','flags','PG_BESTIARY','SRD_COMPENDIUMS_CLASSES','monsterFeature','unshift','additionalDataCompendium','importSpell','SRD_COMPENDIUMS_CLASS_FEATURES','page','_COMPENDIUM_ACTOR_CACHES_LOCK','importVehicle','srd','spell','getOrSet','PACK_NAME_ITEMS','data','pGetCompendiumImage','_COMPENDIUM_ACTOR_IMAGE_LAST_VALUES','197435wZmowc','635068fJWEVM','unlock','push','subclassFeature','sort','classFeature','mystery-man.svg','613acwcSR','PACK_NAME_SPELLS','additionalDataCompendiumFeatures','importCreature','join','_pCacheCompendium','MODULE_NAME_FAKE','SRD_COMPENDIUMS_SPELLS','item','_pHandleConfigUpdate','_pGetCacheAndGetCompendiumData_getCompendiums','_COMPENDIUM_CACHES_LOCK','117100TZkzrm','182759NsuLjL','importItem','201310lhGZcm','entries','_PLUT_CACHES_LOCKS','pLock','class','isIgnoreSrd','getIndex','pGetActorItemCompendiumImage','___','_displayName','optionalfeature','fnGetAliases','raceFeature','_pGetPlutoniumCompendiumId_generic','packs','ascSortLower','pGetCompendiumData','_pGetCacheAndGetCompendiumData','split','collection','MODULE_NAME','PACK_NAME_CREATURES'];const _0x1034=function(_0x1b05c7,_0x5e0155){_0x1b05c7=_0x1b05c7-0xf3;let _0x19aa7c=_0x19aa[_0x1b05c7];return _0x19aa7c;};const _0x54e760=_0x1034;(function(_0x345d85,_0x1719a0){const _0x2664c1=_0x1034;while(!![]){try{const _0x10e2d5=-parseInt(_0x2664c1(0x15a))*parseInt(_0x2664c1(0x109))+-parseInt(_0x2664c1(0x15d))+-parseInt(_0x2664c1(0x15b))+-parseInt(_0x2664c1(0x146))+parseInt(_0x2664c1(0x122))*parseInt(_0x2664c1(0x14e))+parseInt(_0x2664c1(0x125))+-parseInt(_0x2664c1(0x147))*-parseInt(_0x2664c1(0x132));if(_0x10e2d5===_0x1719a0)break;else _0x345d85['push'](_0x345d85['shift']());}catch(_0x2bcd7b){_0x345d85['push'](_0x345d85['shift']());}}}(_0x19aa,0x1fa38));import{Config}from'./Config.js';import{SharedConsts}from'../shared/SharedConsts.js';import{ConfigConsts}from'./ConfigConsts.js';class UtilCompendium{static['init'](){const _0x10ad0f=_0x1034;Hooks['on']('plutonium.configUpdate',()=>this[_0x10ad0f(0x157)]()),this[_0x10ad0f(0x157)]();}static async[_0x54e760(0x157)](){await this['_pHandleConfigUpdate_pFlushCompendiumImageCaches']();}static async[_0x54e760(0x133)](){const _0x414b45=_0x54e760,_0x2a1d3d=[[_0x414b45(0x151),_0x414b45(0x139)],[_0x414b45(0x151),_0x414b45(0x150)],[_0x414b45(0x13e),'additionalDataCompendium'],[_0x414b45(0x12e),_0x414b45(0x139)],[_0x414b45(0x12e),_0x414b45(0x150)],[_0x414b45(0x15c),_0x414b45(0x139)],['importRace',_0x414b45(0x139)],[_0x414b45(0x110),_0x414b45(0x150)],[_0x414b45(0x13a),_0x414b45(0x139)],[_0x414b45(0x129),_0x414b45(0x139)]];await this[_0x414b45(0x159)][_0x414b45(0x160)]();try{_0x2a1d3d[_0x414b45(0x108)](_0x5da9d7=>{const _0xc8c853=_0x414b45,_0x4ec7a9=_0x5da9d7['join'](_0xc8c853(0xf7)),_0x152f54=this[_0xc8c853(0x118)][_0x4ec7a9]||'',_0x49a8b0=Config[_0xc8c853(0x126)](_0x5da9d7[0x0],_0x5da9d7[0x1])||'';if(_0x152f54[_0xc8c853(0x114)]()!==_0x49a8b0[_0xc8c853(0x114)]()){if(this[_0xc8c853(0x11d)][this[_0xc8c853(0x112)]])delete this[_0xc8c853(0x11d)][this[_0xc8c853(0x112)]][_0x4ec7a9];}this[_0xc8c853(0x118)][_0x4ec7a9]=_0x49a8b0;});}finally{this['_COMPENDIUM_CACHES_LOCK'][_0x414b45(0x148)]();}}static async[_0x54e760(0xff)](_0x5a5ddf,_0x30e13c){const _0x1888ec=_0x54e760,_0x4f6037=await Promise[_0x1888ec(0x12c)]([_0x30e13c?_0x5a5ddf[_0x1888ec(0x116)]():_0x5a5ddf[_0x1888ec(0xf5)](),MiscUtil['pDelay'](0x9c4,null)]);if(!_0x4f6037)return[];return _0x4f6037;}static async[_0x54e760(0x144)](_0x68b8ef,_0x5c2d58,_0x3b5f2c){const _0x49fee2=_0x54e760;return this[_0x49fee2(0x100)](this['_COMPENDIUM_CACHE_KEY_IMAGE'],_0x68b8ef,_0x5c2d58,_0x3b5f2c);}static async['_pGetCacheAndGetCompendiumData'](_0x425cb8,_0x4ae842,_0x3e46ed,_0x46eae8){const _0x5682ff=_0x54e760;_0x46eae8=_0x46eae8||{};if(!_0x46eae8[_0x5682ff(0xf4)]&&!_0x3e46ed[_0x5682ff(0x13f)])return null;let _0x518d7c=[];if(_0x3e46ed[_0x5682ff(0x10d)])_0x518d7c[_0x5682ff(0x149)]((typeof _0x3e46ed[_0x5682ff(0x13f)]===_0x5682ff(0x113)?_0x3e46ed[_0x5682ff(0x13f)]:_0x3e46ed[_0x5682ff(0x10d)])['toLowerCase']()[_0x5682ff(0x114)]());if(_0x3e46ed[_0x5682ff(0xf8)])_0x518d7c[_0x5682ff(0x149)](_0x3e46ed[_0x5682ff(0xf8)][_0x5682ff(0x106)]()[_0x5682ff(0x114)]());if(_0x46eae8[_0x5682ff(0x130)]){_0x518d7c=_0x518d7c[_0x5682ff(0x10b)](_0x226763=>({'name':_0x226763}));if(_0x46eae8[_0x5682ff(0xfa)]){const _0x69421d=_0x46eae8[_0x5682ff(0xfa)](_0x3e46ed);_0x69421d['forEach'](_0x10bb92=>_0x10bb92['name']=_0x10bb92['name']?_0x10bb92[_0x5682ff(0x10d)]['toLowerCase']()['trim']():_0x10bb92['name']),_0x518d7c[_0x5682ff(0x138)](..._0x69421d);}}else{if(_0x46eae8[_0x5682ff(0xfa)])_0x518d7c[_0x5682ff(0x149)](..._0x46eae8[_0x5682ff(0xfa)](_0x3e46ed)['map'](_0x10b690=>_0x10b690[_0x5682ff(0x106)]()[_0x5682ff(0x114)]()));}let _0x5a9ff4;switch(_0x425cb8){case this[_0x5682ff(0x112)]:{switch(_0x4ae842){case _0x5682ff(0x140):_0x5a9ff4=this['_pGetCacheAndGetCompendiumData_getCompendiums'](Config[_0x5682ff(0x126)]('importSpell',_0x5682ff(0x139)));break;case'monster':_0x5a9ff4=this['_pGetCacheAndGetCompendiumData_getCompendiums'](Config['get'](_0x5682ff(0x151),_0x5682ff(0x139)));break;case _0x5682ff(0x156):_0x5a9ff4=this[_0x5682ff(0x158)](Config[_0x5682ff(0x126)](_0x5682ff(0x15c),'additionalDataCompendium'));break;case _0x5682ff(0xf3):_0x5a9ff4=this[_0x5682ff(0x158)](Config[_0x5682ff(0x126)](_0x5682ff(0x12e),_0x5682ff(0x139)));break;case _0x5682ff(0x14c):_0x5a9ff4=this[_0x5682ff(0x158)](Config['get'](_0x5682ff(0x12e),_0x5682ff(0x150)));break;case _0x5682ff(0x14a):_0x5a9ff4=this[_0x5682ff(0x158)](Config['get'](_0x5682ff(0x12e),'additionalDataCompendiumFeatures'));break;case _0x5682ff(0xf9):_0x5a9ff4=this[_0x5682ff(0x158)](Config[_0x5682ff(0x126)](_0x5682ff(0x129),_0x5682ff(0x139)));break;case _0x5682ff(0x12c):_0x5a9ff4=this['_pGetCacheAndGetCompendiumData_getCompendiums'](Config[_0x5682ff(0x126)](_0x5682ff(0x110),'additionalDataCompendium'));break;case _0x5682ff(0xfb):_0x5a9ff4=this[_0x5682ff(0x158)](Config[_0x5682ff(0x126)](_0x5682ff(0x110),_0x5682ff(0x150)));break;case _0x5682ff(0x137):_0x5a9ff4=this[_0x5682ff(0x158)](Config[_0x5682ff(0x126)](_0x5682ff(0x151),_0x5682ff(0x150)));break;default:return null;}break;}case this[_0x5682ff(0x127)]:{switch(_0x4ae842){case _0x5682ff(0x140):_0x5a9ff4=this['_pGetCacheAndGetCompendiumData_getCompendiums'](ConfigConsts[_0x5682ff(0x155)]);break;case _0x5682ff(0x10e):_0x5a9ff4=this[_0x5682ff(0x158)](ConfigConsts[_0x5682ff(0x11f)]);break;case _0x5682ff(0x156):_0x5a9ff4=this['_pGetCacheAndGetCompendiumData_getCompendiums'](ConfigConsts[_0x5682ff(0x10a)]);break;case'class':_0x5a9ff4=this['_pGetCacheAndGetCompendiumData_getCompendiums'](ConfigConsts[_0x5682ff(0x136)]);break;case _0x5682ff(0x14c):_0x5a9ff4=this['_pGetCacheAndGetCompendiumData_getCompendiums'](ConfigConsts[_0x5682ff(0x13b)]);break;case _0x5682ff(0x14a):_0x5a9ff4=this[_0x5682ff(0x158)](ConfigConsts[_0x5682ff(0x13b)]);break;case'optionalfeature':_0x5a9ff4=this['_pGetCacheAndGetCompendiumData_getCompendiums'](ConfigConsts[_0x5682ff(0x121)]);break;case _0x5682ff(0x12c):_0x5a9ff4=this[_0x5682ff(0x158)](ConfigConsts[_0x5682ff(0x12a)]);break;case'raceFeature':_0x5a9ff4=this['_pGetCacheAndGetCompendiumData_getCompendiums'](ConfigConsts['SRD_COMPENDIUMS_RACES_AND_FEATURES']);break;case _0x5682ff(0x137):_0x5a9ff4=this['_pGetCacheAndGetCompendiumData_getCompendiums'](ConfigConsts['SRD_COMPENDIUMS_CREATURE_FEATURES']);break;default:return null;}break;}default:throw new Error(_0x5682ff(0x124)+_0x425cb8+'\x22');}if(!_0x5a9ff4[_0x5682ff(0x12f)])return null;_0x46eae8[_0x5682ff(0x130)]&&(_0x425cb8={'baseCacheId':_0x425cb8,'deepKeys':_0x46eae8['deepKeys'],'cacheId':[_0x425cb8,..._0x46eae8['deepKeys'][_0x5682ff(0x14b)](SortUtil[_0x5682ff(0xfe)])][_0x5682ff(0x152)]('__')});await this['_COMPENDIUM_CACHES_LOCK'][_0x5682ff(0x160)]();try{for(const _0x8793c7 of _0x518d7c){for(const _0x2db8a7 of _0x5a9ff4){!this[_0x5682ff(0x120)](this[_0x5682ff(0x11d)],_0x425cb8,_0x2db8a7)&&await this['_pCacheCompendium'](this[_0x5682ff(0x11d)],_0x425cb8,_0x2db8a7);const _0x3d46d2=this[_0x5682ff(0x111)](this[_0x5682ff(0x11d)],_0x425cb8,_0x2db8a7,_0x8793c7);if(_0x3d46d2)return _0x3d46d2;}}}finally{this['_COMPENDIUM_CACHES_LOCK']['unlock']();}}static['_pGetCacheAndGetCompendiumData_getCompendiums'](_0xa3186d){const _0x103ad8=_0x54e760;return _0xa3186d=typeof _0xa3186d===_0x103ad8(0x113)?_0xa3186d['split'](',')[_0x103ad8(0x10b)](_0xb2364a=>_0xb2364a[_0x103ad8(0x114)]()[_0x103ad8(0x106)]()):_0xa3186d[_0x103ad8(0x10b)](_0x29574c=>_0x29574c[_0x103ad8(0x106)]()),_0xa3186d[_0x103ad8(0x10b)](_0x5cac06=>game[_0x103ad8(0xfd)][_0x103ad8(0x119)](_0x7d3e60=>_0x7d3e60[_0x103ad8(0x102)][_0x103ad8(0x106)]()===_0x5cac06))[_0x103ad8(0x11a)](Boolean);}static async[_0x54e760(0xf6)](_0x8aa18b,_0x12c7e0,_0x3b612d){const _0x1eb689=_0x54e760;return this[_0x1eb689(0x117)](this[_0x1eb689(0x112)],_0x8aa18b,_0x12c7e0,_0x3b612d);}static async['_pGetCacheAndGetActorItemCompendiumData'](_0x27bb31,_0x220c5c,_0x3e8594,_0x960330){const _0x341703=_0x54e760;_0x960330=_0x960330||{};let _0x3b558=[];if(_0x3e8594[_0x341703(0x10d)])_0x3b558[_0x341703(0x149)]((typeof _0x3e8594[_0x341703(0x13f)]===_0x341703(0x113)?_0x3e8594[_0x341703(0x13f)]:_0x3e8594[_0x341703(0x10d)])[_0x341703(0x106)]()[_0x341703(0x114)]());if(_0x3e8594[_0x341703(0xf8)])_0x3b558['push'](_0x3e8594[_0x341703(0xf8)][_0x341703(0x106)]()['trim']());if(_0x960330[_0x341703(0xfa)])_0x3b558[_0x341703(0x149)](..._0x960330['fnGetAliases'](_0x3e8594)[_0x341703(0x10b)](_0x1483cd=>_0x1483cd['toLowerCase']()[_0x341703(0x114)]()));let _0x722123;switch(_0x27bb31){case this[_0x341703(0x112)]:{switch(_0x220c5c){case'monsterFeature':_0x722123=this[_0x341703(0x158)](Config['get']('importCreature','additionalDataCompendium'));break;default:return null;}break;}case this[_0x341703(0x127)]:{switch(_0x220c5c){case _0x341703(0x137):_0x722123=this[_0x341703(0x158)](ConfigConsts[_0x341703(0x11f)]);break;default:return null;}break;}default:throw new Error(_0x341703(0x124)+_0x27bb31+'\x22');}if(!_0x722123['length'])return null;await this[_0x341703(0x13d)]['pLock']();try{for(const _0x3867f7 of _0x3b558){for(const _0x378cd7 of _0x722123){!this['_isCompendiumCached'](this[_0x341703(0x11c)],_0x27bb31,_0x378cd7)&&await this['_pCacheActorItemCompendium'](this[_0x341703(0x11c)],_0x27bb31,_0x378cd7);const _0x562dc0=this[_0x341703(0x111)](this['_COMPENDIUM_ACTOR_CACHES'],_0x27bb31,_0x378cd7,_0x3867f7);if(_0x562dc0)return _0x562dc0;}}}finally{this[_0x341703(0x13d)][_0x341703(0x148)]();}}static async[_0x54e760(0x107)](_0x219416,_0x441ed3,_0x2af21e){const _0x4114c9=_0x54e760;return this[_0x4114c9(0x100)](this[_0x4114c9(0x127)],_0x219416,_0x441ed3,_0x2af21e);}static[_0x54e760(0x120)](_0x42cf69,_0x25c7dd,_0x4a8563){const _0x33b00d=_0x54e760;return _0x25c7dd=_0x25c7dd[_0x33b00d(0x11e)]||_0x25c7dd,!!MiscUtil[_0x33b00d(0x126)](_0x42cf69,_0x25c7dd,_0x4a8563['collection']);}static async[_0x54e760(0x153)](_0x2d097f,_0x330f3a,_0x5ac31c){const _0x241994=_0x54e760;let _0x1ff129;if(_0x330f3a['baseCacheId'])_0x1ff129=!![];else switch(_0x330f3a){case this[_0x241994(0x112)]:_0x1ff129=![];break;case this[_0x241994(0x127)]:_0x1ff129=!![];break;default:throw new Error(_0x241994(0x124)+_0x330f3a+'\x22');}const _0x294e88=await this[_0x241994(0xff)](_0x5ac31c,_0x1ff129),_0x306a57=MiscUtil[_0x241994(0x141)](_0x2d097f,_0x330f3a['cacheId']||_0x330f3a,_0x5ac31c['collection'],{});if(!_0x294e88)return;if(_0x330f3a[_0x241994(0x128)])_0x294e88[_0x241994(0x108)](_0x46cba3=>_0x306a57[_0x46cba3[_0x241994(0x10d)]['toLowerCase']()]=MiscUtil[_0x241994(0x10f)](_0x46cba3['data']));else switch(_0x330f3a){case this['_COMPENDIUM_CACHE_KEY_IMAGE']:_0x294e88[_0x241994(0x108)](_0x3fb838=>_0x306a57[_0x3fb838[_0x241994(0x10d)]['toLowerCase']()]=_0x3fb838[_0x241994(0x131)]);break;case this[_0x241994(0x127)]:_0x294e88[_0x241994(0x108)](_0x33402a=>_0x306a57[_0x33402a['name']['toLowerCase']()]=MiscUtil['copy'](_0x33402a[_0x241994(0x143)]));break;default:throw new Error(_0x241994(0x124)+_0x330f3a+'\x22');}}static async['_pCacheActorItemCompendium'](_0x162766,_0x244dc2,_0x39e0a2){const _0x33740b=_0x54e760,_0x2f6baf=await this[_0x33740b(0xff)](_0x39e0a2,!![]),_0x1b435c=MiscUtil[_0x33740b(0x141)](_0x162766,_0x244dc2[_0x33740b(0x11e)]||_0x244dc2,_0x39e0a2['collection'],{});if(!_0x2f6baf)return;_0x2f6baf[_0x33740b(0x108)](_0x38edf8=>{const _0xe9de22=_0x33740b;_0x38edf8[_0xe9de22(0x105)][_0xe9de22(0x108)](_0x5789e5=>{const _0x52c141=_0xe9de22,_0x541995=_0x5789e5[_0x52c141(0x10d)][_0x52c141(0x106)]();switch(_0x244dc2){case this[_0x52c141(0x112)]:{if(!_0x5789e5['img']||_0x5789e5[_0x52c141(0x131)][_0x52c141(0x106)]()[_0x52c141(0x12b)](_0x52c141(0x14d)))return;_0x1b435c[_0x541995]=_0x1b435c[_0x541995]||_0x5789e5[_0x52c141(0x131)];break;}case this[_0x52c141(0x127)]:_0x1b435c[_0x541995]=_0x1b435c[_0x541995]||MiscUtil['copy'](_0x5789e5[_0x52c141(0x143)]);break;default:throw new Error(_0x52c141(0x124)+_0x244dc2+'\x22');}});});}static[_0x54e760(0x111)](_0x158b6a,_0x1238db,_0x13460f,_0x3e2543){const _0x33f4b5=_0x54e760,_0x2bc90d=MiscUtil[_0x33f4b5(0x126)](_0x158b6a,_0x1238db[_0x33f4b5(0x11e)]||_0x1238db,_0x13460f[_0x33f4b5(0x102)]);if(!_0x2bc90d)return null;const _0x58bbf5=_0x2bc90d[_0x3e2543[_0x33f4b5(0x10d)]||_0x3e2543];if(!_0x58bbf5||typeof _0x3e2543==='string')return _0x58bbf5;const _0x4fd0d2=Object[_0x33f4b5(0x15e)](_0x3e2543)[_0x33f4b5(0x11a)](([_0x28315f])=>_0x28315f!==_0x33f4b5(0x10d))[_0x33f4b5(0x123)](([_0xbe4cb2,_0x52cf24])=>{const _0x240711=_0x33f4b5;if(typeof _0x52cf24===_0x240711(0x113))_0x52cf24=_0x52cf24[_0x240711(0x106)]()[_0x240711(0x114)]();let _0x5a60fb;const _0x52bb11=_0xbe4cb2[_0x240711(0x101)]('.');for(const _0x36f1a1 of _0x52bb11){_0x5a60fb=(_0x5a60fb||_0x58bbf5)[_0x36f1a1];if(_0x5a60fb===undefined)return![];}if(typeof _0x5a60fb===_0x240711(0x113))_0x5a60fb=_0x5a60fb[_0x240711(0x114)]()[_0x240711(0x106)]();return _0x5a60fb===_0x52cf24;});if(!_0x4fd0d2)return null;switch(_0x1238db['baseCacheId']){case this[_0x33f4b5(0x112)]:return _0x58bbf5[_0x33f4b5(0x131)];case this[_0x33f4b5(0x127)]:return _0x58bbf5;default:throw new Error(_0x33f4b5(0x124)+_0x1238db[_0x33f4b5(0x128)]+'\x22');}}static[_0x54e760(0x11b)](_0x575db8,_0x370316){const _0x4c56e2=_0x54e760;switch(_0x575db8){case UrlUtil[_0x4c56e2(0x135)]:return this[_0x4c56e2(0xfc)]({'page':_0x575db8,'hash':_0x370316,'packName':SharedConsts[_0x4c56e2(0x104)]});case UrlUtil['PG_ITEMS']:return this['_pGetPlutoniumCompendiumId_generic']({'page':_0x575db8,'hash':_0x370316,'packName':SharedConsts[_0x4c56e2(0x142)]});case UrlUtil[_0x4c56e2(0x115)]:return this[_0x4c56e2(0xfc)]({'page':_0x575db8,'hash':_0x370316,'packName':SharedConsts[_0x4c56e2(0x14f)]});default:throw new Error('Unhandled\x20page\x20\x22'+_0x575db8+'\x22');}}static async[_0x54e760(0xfc)]({page:_0x441404,hash:_0x45a69e,packName:_0x25b0c5}){const _0x18470e=_0x54e760,_0x222983=game[_0x18470e(0xfd)]['get'](SharedConsts[_0x18470e(0x103)]+'.'+_0x25b0c5);if(!_0x222983)return null;if(!UtilCompendium[_0x18470e(0x10c)][_0x25b0c5]){const _0x8f8f4e=UtilCompendium[_0x18470e(0x15f)][_0x25b0c5]||new VeLock();try{await _0x8f8f4e[_0x18470e(0x160)]();if(!UtilCompendium[_0x18470e(0x10c)][_0x25b0c5])UtilCompendium[_0x18470e(0x10c)][_0x25b0c5]=await _0x222983[_0x18470e(0x116)]();}finally{_0x8f8f4e['unlock']();}}const _0x4841f7=UtilCompendium[_0x18470e(0x10c)][_0x25b0c5]['find'](_0x4908af=>_0x4908af[_0x18470e(0x143)]?.[_0x18470e(0x134)]?.[SharedConsts[_0x18470e(0x154)]]?.[_0x18470e(0x13c)]===_0x441404&&_0x4908af[_0x18470e(0x143)]?.[_0x18470e(0x134)]?.[SharedConsts[_0x18470e(0x154)]]?.[_0x18470e(0x12d)]===_0x45a69e);if(!_0x4841f7)return null;return{'packName':_0x25b0c5,'packPackage':SharedConsts[_0x18470e(0x103)],'packId':_0x4841f7['id']};}}UtilCompendium[_0x54e760(0x112)]=_0x54e760(0x131),UtilCompendium['_COMPENDIUM_CACHE_KEY_DATA']=_0x54e760(0x143),UtilCompendium[_0x54e760(0x118)]={},UtilCompendium[_0x54e760(0x11d)]={},UtilCompendium[_0x54e760(0x159)]=new VeLock(),UtilCompendium[_0x54e760(0x145)]={},UtilCompendium[_0x54e760(0x11c)]={},UtilCompendium[_0x54e760(0x13d)]=new VeLock(),UtilCompendium[_0x54e760(0x10c)]={},UtilCompendium[_0x54e760(0x15f)]={};export{UtilCompendium};
+import {Config} from "./Config.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {ConfigConsts} from "./ConfigConsts.js";
+import {UtilCompat} from "./UtilCompat.js";
+import {UtilHooks} from "./UtilHooks.js";
+import {LGT} from "./Util.js";
+
+class UtilCompendium {
+	// region Init
+	static init () {
+		UtilHooks.on(UtilHooks.HK_CONFIG_UPDATE, () => this._pHandleConfigUpdate());
+		this._pHandleConfigUpdate();
+	}
+
+	static async _pHandleConfigUpdate () {
+		await this._pHandleConfigUpdate_pFlushCompendiumImageCaches();
+	}
+
+	/**
+	 * On changing the item compendium sources, flush our image caches as required.
+	 */
+	static async _pHandleConfigUpdate_pFlushCompendiumImageCaches () {
+		const configPaths = [
+			["importCreature", "additionalDataCompendium"],
+			["importCreature", "additionalDataCompendiumFeatures"],
+			["importVehicle", "additionalDataCompendium"],
+			["importClass", "additionalDataCompendium"],
+			["importClass", "additionalDataCompendiumFeatures"],
+			["importItem", "additionalDataCompendium"],
+			["importRace", "additionalDataCompendium"],
+			["importRace", "additionalDataCompendiumFeatures"],
+			["importSpell", "additionalDataCompendium"],
+			["importOptionalFeature", "additionalDataCompendium"],
+		];
+
+		await this._COMPENDIUM_CACHES_LOCK.pLock();
+		try {
+			configPaths.forEach(path => {
+				const pathKey = path.join("___");
+
+				const storedValue = this._COMPENDIUM_IMAGE_LAST_VALUES[pathKey] || "";
+				const currentValue = Config.get(path[0], path[1]) || "";
+
+				if (storedValue.trim() !== currentValue.trim()) {
+					if (this._COMPENDIUM_CACHES[this._COMPENDIUM_CACHE_KEY_IMAGE]) delete this._COMPENDIUM_CACHES[this._COMPENDIUM_CACHE_KEY_IMAGE][pathKey];
+				}
+
+				this._COMPENDIUM_IMAGE_LAST_VALUES[pathKey] = currentValue;
+			});
+		} finally {
+			this._COMPENDIUM_CACHES_LOCK.unlock();
+		}
+	}
+	// endregion
+
+	/**
+	 * @param compendium
+	 * @param isContent `true` if content should be fetched, `false` if index should be fetched.
+	 */
+	static async pGetCompendiumData (compendium, isContent) {
+		// Force content fetch if Babele is active, as the original name is stored in a flag
+		isContent = isContent || UtilCompat.isBabeleActive();
+
+		// Workaround to prevent bugged compendiums from killing the load
+		//   Bug could not be repro'd, but compendium can be inaccessible (including clicking it in the UI failing to open)
+		const maxTimeSecs = 10;
+		const compendiumData = await Promise.race([
+			isContent ? compendium.getDocuments() : compendium.getIndex(),
+			MiscUtil.pDelay(maxTimeSecs * 1000, null),
+		]);
+		if (!compendiumData) {
+			console.warn(...LGT, `Loading of ${compendium?.metadata?.system}.${compendium?.metadata?.name} took more than ${maxTimeSecs} seconds! This usually means the compendium is inaccessible. Cancelling compendium load.`);
+			return [];
+		}
+		return compendiumData;
+	}
+
+	/**
+	 * Try to match a SRD (5etools) entity with a (Foundry) entity in the appropriate compendiums, and return the image.
+	 * @param entityType Generally, the 5etools JSON property under which this 5etools data is stored.
+	 * @param entity
+	 * @param [opts] Options object.
+	 * @param [opts.fnGetAliases] Function which takes the entity and returns alternate "alias" names to look for in the compendium.
+	 * @param [opts.deepKeys] A list of keys (e.g. `"data.save.ability"` for data which should be cached when loading the compendium, to enable later lookups.
+	 * @param [opts.isIgnoreSrd] If the presence of an "srd" flag in the data should be ignored, rather than respected.
+	 */
+	static async pGetCompendiumImage (entityType, entity, opts) {
+		return this._pGetCacheAndGetCompendiumData(
+			this._COMPENDIUM_CACHE_KEY_IMAGE,
+			entityType,
+			entity,
+			opts,
+		);
+	}
+
+	/**
+	 * @param cacheId
+	 * @param entityType
+	 * @param entity
+	 * @param [opts]
+	 * @param [opts.fnGetAliases]
+	 * @param [opts.deepKeys]
+	 * @param [opts.isIgnoreSrd]
+	 */
+	static async _pGetCacheAndGetCompendiumData (cacheId, entityType, entity, opts) {
+		opts = opts || {};
+
+		if (!opts.isIgnoreSrd && !entity.srd) return null;
+
+		let lookupMetas = [];
+		if (entity.name) lookupMetas.push((typeof entity.srd === "string" ? entity.srd : entity.name).toLowerCase().trim());
+		if (entity._displayName) lookupMetas.push(entity._displayName.toLowerCase().trim());
+
+		if (opts.deepKeys) {
+			// Convert to "metadata" form
+			lookupMetas = lookupMetas.map(it => ({name: it}));
+
+			if (opts.fnGetAliases) {
+				const aliasMetas = opts.fnGetAliases(entity);
+				aliasMetas.forEach(it => it.name = it.name ? it.name.toLowerCase().trim() : it.name);
+				// If we are matching on deep keys, prefer the "alias" data first (i.e. match against max info)
+				lookupMetas.unshift(...aliasMetas);
+			}
+		} else {
+			if (opts.fnGetAliases) lookupMetas.push(...opts.fnGetAliases(entity).map(it => it.toLowerCase().trim()));
+		}
+
+		let compendiums;
+		switch (entityType) {
+			case "spell": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importSpell", "additionalDataCompendium")); break;
+			case "monster": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importCreature", "additionalDataCompendium")); break;
+			case "item": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importItem", "additionalDataCompendium")); break;
+			case "class": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importClass", "additionalDataCompendium")); break;
+			case "classFeature": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importClass", "additionalDataCompendiumFeatures")); break;
+			case "subclassFeature": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importClass", "additionalDataCompendiumFeatures")); break;
+			case "optionalfeature": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importOptionalFeature", "additionalDataCompendium")); break;
+			case "race": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importRace", "additionalDataCompendium")); break;
+			case "raceFeature": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importRace", "additionalDataCompendiumFeatures")); break;
+			case "monsterFeature": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importCreature", "additionalDataCompendiumFeatures")); break;
+			default: return null;
+		}
+
+		if (!compendiums.length) return null;
+
+		// Modify our cache ID based on the deep keys being used
+		if (opts.deepKeys) {
+			cacheId = {
+				baseCacheId: cacheId,
+				deepKeys: opts.deepKeys,
+				cacheId: [cacheId, ...opts.deepKeys.sort(SortUtil.ascSortLower)].join("__"),
+			};
+		}
+
+		await this._COMPENDIUM_CACHES_LOCK.pLock();
+		try {
+			// Order is important--we want to exhaustively search for the first lookup meta, then the next, etc.
+			for (const lookupMeta of lookupMetas) {
+				for (const compendium of compendiums) {
+					if (!this._isCompendiumCached(this._COMPENDIUM_CACHES, cacheId, compendium)) {
+						await this._pCacheCompendium(this._COMPENDIUM_CACHES, cacheId, compendium);
+					}
+
+					const out = this._getCachedCompendiumData(this._COMPENDIUM_CACHES, cacheId, compendium, lookupMeta);
+					if (out) return out;
+				}
+			}
+		} finally {
+			this._COMPENDIUM_CACHES_LOCK.unlock();
+		}
+	}
+
+	static _pGetCacheAndGetCompendiumData_getCompendiums (joinedCompendiumNamesOrArray) {
+		joinedCompendiumNamesOrArray = typeof joinedCompendiumNamesOrArray === "string"
+			? joinedCompendiumNamesOrArray
+				.split(",")
+				.map(it => it.trim().toLowerCase())
+			: joinedCompendiumNamesOrArray
+				.map(it => it.toLowerCase());
+
+		return joinedCompendiumNamesOrArray
+			.map(it => game.packs.find(x => x.collection.toLowerCase() === it))
+			.filter(Boolean);
+	}
+
+	/**
+	 * As per `pGetCompendiumImage`, but search compendium actor items.
+	 * @param entityType Generally, the 5etools JSON property under which this 5etools data is stored.
+	 * @param entity
+	 * @param [opts] Options object.
+	 * @param [opts.fnGetAliases] Function which takes the entity and returns alternate "alias" names to look for in the compendium.
+	 */
+	static async pGetActorItemCompendiumImage (entityType, entity, opts) {
+		return this._pGetCacheAndGetActorItemCompendiumData(
+			this._COMPENDIUM_CACHE_KEY_IMAGE,
+			entityType,
+			entity,
+			opts,
+		);
+	}
+
+	/**
+	 * @param cacheId
+	 * @param entityType
+	 * @param entity
+	 * @param [opts]
+	 * @param [opts.fnGetAliases]
+	 */
+	static async _pGetCacheAndGetActorItemCompendiumData (cacheId, entityType, entity, opts) {
+		opts = opts || {};
+
+		let lookupMetas = [];
+		if (entity.name) lookupMetas.push((typeof entity.srd === "string" ? entity.srd : entity.name).toLowerCase().trim());
+		if (entity._displayName) lookupMetas.push(entity._displayName.toLowerCase().trim());
+
+		if (opts.fnGetAliases) lookupMetas.push(...opts.fnGetAliases(entity).map(it => it.toLowerCase().trim()));
+
+		let compendiums;
+		switch (cacheId) {
+			case this._COMPENDIUM_CACHE_KEY_IMAGE: {
+				switch (entityType) {
+					case "monsterFeature": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(Config.get("importCreature", "additionalDataCompendium")); break;
+					default: return null;
+				}
+
+				break;
+			}
+
+			case this._COMPENDIUM_CACHE_KEY_DATA: {
+				switch (entityType) {
+					case "monsterFeature": compendiums = this._pGetCacheAndGetCompendiumData_getCompendiums(ConfigConsts.SRD_COMPENDIUMS_CREATURES); break;
+					default: return null;
+				}
+
+				break;
+			}
+
+			default: throw new Error(`Unknown cache ID "${cacheId}"`);
+		}
+
+		if (!compendiums.length) return null;
+
+		await this._COMPENDIUM_ACTOR_CACHES_LOCK.pLock();
+		try {
+			// Order is important--we want to exhaustively search for the first lookup meta, then the next, etc.
+			for (const lookupMeta of lookupMetas) {
+				for (const compendium of compendiums) {
+					if (!this._isCompendiumCached(this._COMPENDIUM_ACTOR_CACHES, cacheId, compendium)) {
+						await this._pCacheActorItemCompendium(this._COMPENDIUM_ACTOR_CACHES, cacheId, compendium);
+					}
+
+					const out = this._getCachedCompendiumData(this._COMPENDIUM_ACTOR_CACHES, cacheId, compendium, lookupMeta);
+					if (out) return out;
+				}
+			}
+		} finally {
+			this._COMPENDIUM_ACTOR_CACHES_LOCK.unlock();
+		}
+	}
+
+	/**
+	 * Try to match a SRD (5etools) entity with a (Foundry) entity in the appropriate SRD compendiums, and return the Foundry entity.
+	 * @param entityType
+	 * @param entity
+	 * @param [opts] Options object.
+	 * @param [opts.fnGetAliases] Function which takes the entity and returns alternate "alias" names to look for in the compendium.
+	 */
+	static async getSrdCompendiumEntity (entityType, entity, opts) {
+		return this._pGetCacheAndGetCompendiumData(
+			this._COMPENDIUM_CACHE_KEY_DATA,
+			entityType,
+			entity,
+			opts,
+		);
+	}
+
+	static _isCompendiumCached (caches, cacheId, compendium) {
+		cacheId = cacheId.cacheId || cacheId;
+		return !!MiscUtil.get(caches, cacheId, compendium.collection);
+	}
+
+	static async _pCacheCompendium (caches, cacheId, compendium) {
+		let isContent;
+		if (cacheId.baseCacheId) {
+			isContent = true;
+		} else {
+			switch (cacheId) {
+				case this._COMPENDIUM_CACHE_KEY_IMAGE: isContent = false; break;
+				case this._COMPENDIUM_CACHE_KEY_DATA: isContent = true; break;
+				default: throw new Error(`Unknown cache ID "${cacheId}"`);
+			}
+		}
+
+		const compendiumData = await this.pGetCompendiumData(compendium, isContent);
+
+		const cache = MiscUtil.getOrSet(caches, cacheId.cacheId || cacheId, compendium.collection, {});
+		if (!compendiumData) return;
+
+		if (cacheId.baseCacheId) {
+			compendiumData.forEach(it => cache[this._getCleanCompendiumContentName(this._getCompendiumDocOriginalName(it))] = MiscUtil.copy(it.data));
+		} else {
+			switch (cacheId) {
+				case this._COMPENDIUM_CACHE_KEY_IMAGE: compendiumData.forEach(it => cache[this._getCleanCompendiumContentName(this._getCompendiumDocOriginalName(it))] = it.img); break;
+				case this._COMPENDIUM_CACHE_KEY_DATA: compendiumData.forEach(it => cache[this._getCleanCompendiumContentName(this._getCompendiumDocOriginalName(it))] = MiscUtil.copy(it.data)); break;
+				default: throw new Error(`Unknown cache ID "${cacheId}"`);
+			}
+		}
+	}
+
+	static async _pCacheActorItemCompendium (caches, cacheId, compendium) {
+		const compendiumData = await this.pGetCompendiumData(compendium, true);
+
+		const cache = MiscUtil.getOrSet(caches, cacheId.cacheId || cacheId, compendium.collection, {});
+		if (!compendiumData) return;
+
+		compendiumData.forEach(act => {
+			act.items.forEach(it => {
+				const cleanName = this._getCleanCompendiumContentName(this._getCompendiumDocOriginalName(it));
+				// There will be many duplicates, so use the first item we come across with a matching name
+				switch (cacheId) {
+					case this._COMPENDIUM_CACHE_KEY_IMAGE: {
+						if (!it.img || it.img.toLowerCase().includes("mystery-man.svg")) return;
+						cache[cleanName] = cache[cleanName] || it.img;
+						break;
+					}
+					case this._COMPENDIUM_CACHE_KEY_DATA: cache[cleanName] = cache[cleanName] || MiscUtil.copy(it.data); break;
+					default: throw new Error(`Unknown cache ID "${cacheId}"`);
+				}
+			});
+		});
+	}
+
+	static _getCachedCompendiumData (caches, cacheId, compendium, lookupNameOrMeta) {
+		const cache = MiscUtil.get(caches, cacheId.cacheId || cacheId, compendium.collection);
+		if (!cache) return null;
+		const fromCache = cache[lookupNameOrMeta.name || lookupNameOrMeta];
+		if (!fromCache || typeof lookupNameOrMeta === "string") return fromCache;
+
+		const isMatch = Object.entries(lookupNameOrMeta)
+			.filter(([keyPath]) => keyPath !== "name")
+			.every(([keyPath, valRequired]) => {
+				if (typeof valRequired === "string") valRequired = valRequired.toLowerCase().trim();
+
+				let it;
+				const pathParts = keyPath.split(".");
+				for (const pathPart of pathParts) {
+					it = (it || fromCache)[pathPart];
+					if (it === undefined) return false;
+				}
+				if (typeof it === "string") it = this._getCleanCompendiumContentName(it);
+
+				return it === valRequired;
+			});
+
+		if (!isMatch) return null;
+
+		switch (cacheId.baseCacheId) {
+			case this._COMPENDIUM_CACHE_KEY_IMAGE: return fromCache.img;
+			case this._COMPENDIUM_CACHE_KEY_DATA: return fromCache;
+			default: throw new Error(`Unknown cache ID "${cacheId.baseCacheId}"`);
+		}
+	}
+
+	/** Tolerate modules which rename compendium content. */
+	static _getCompendiumDocOriginalName (doc) {
+		if (!UtilCompat.isBabeleActive()) return doc.name;
+		return doc.getFlag("babele", "originalName") || doc.name;
+	}
+
+	static _getCleanCompendiumContentName (name) {
+		return name
+			.trim()
+			.toLowerCase()
+			.replace(CleanUtil.SHARED_REPLACEMENTS_REGEX, (match) => CleanUtil.SHARED_REPLACEMENTS[match]);
+	}
+
+	// region Plutonium compendiums (unused; compendiums have been removed)
+	static pGetPlutoniumCompendiumId (page, hash) {
+		switch (page) {
+			case UrlUtil.PG_BESTIARY: return this._pGetPlutoniumCompendiumId_generic({page, hash, packName: SharedConsts.PACK_NAME_CREATURES});
+			case UrlUtil.PG_ITEMS: return this._pGetPlutoniumCompendiumId_generic({page, hash, packName: SharedConsts.PACK_NAME_ITEMS});
+			case UrlUtil.PG_SPELLS: return this._pGetPlutoniumCompendiumId_generic({page, hash, packName: SharedConsts.PACK_NAME_SPELLS});
+			default: throw new Error(`Unhandled page "${page}"`);
+		}
+	}
+
+	static async _pGetPlutoniumCompendiumId_generic ({page, hash, packName}) {
+		const pack = game.packs.get(`${SharedConsts.MODULE_NAME}.${packName}`);
+		if (!pack) return null;
+
+		if (!UtilCompendium._PLUT_CACHES[packName]) {
+			const lock = UtilCompendium._PLUT_CACHES_LOCKS[packName] || new VeLock();
+			try {
+				await lock.pLock();
+				if (!UtilCompendium._PLUT_CACHES[packName]) UtilCompendium._PLUT_CACHES[packName] = await pack.getDocuments();
+			} finally {
+				lock.unlock();
+			}
+		}
+
+		const match = UtilCompendium._PLUT_CACHES[packName].find(it => it.data?.flags?.[SharedConsts.MODULE_NAME_FAKE]?.page === page && it.data?.flags?.[SharedConsts.MODULE_NAME_FAKE]?.hash === hash);
+		if (!match) return null;
+
+		return {
+			packName: packName,
+			packPackage: SharedConsts.MODULE_NAME,
+			packId: match.id,
+		};
+	}
+	// endregion
+
+	static getAvailablePacks ({folderType}) {
+		return game.packs.filter(it => !it.locked && it.metadata.entity === folderType);
+	}
+
+	static async pGetUserCreatePack ({folderType}) {
+		const $dispPackName = $(`<div class="w-100 italic"></div>`);
+		const packLabel = await InputUiUtil.pGetUserString({
+			title: `Enter New "${folderType}" Compendium Name`,
+			fnIsValid: str => Parser.stringToSlug(str).length,
+			$elePost: $$`<label class="mb-2 split-v-center ve-muted">
+					<div class="mr-2 bold no-wrap">Compendium ID:</div>
+					${$dispPackName}
+				</label>`,
+			cbPostRender: ({comp, propValue}) => {
+				const hkId = () => $dispPackName.text(comp._state[propValue] ? (Parser.stringToSlug(comp._state[propValue]) || "(Invalid)") : "\u2014");
+				comp._addHookBase(propValue, hkId);
+				hkId();
+			},
+		});
+		if (!packLabel || !packLabel.trim()) return null;
+
+		return CompendiumCollection.createCompendium({
+			entity: "Item",
+			label: packLabel,
+			name: Parser.stringToSlug(packLabel),
+			package: "world",
+		});
+	}
+
+	static $getSelCompendium ({availablePacks = null, folderType = null}) {
+		availablePacks = availablePacks || this.getAvailablePacks({folderType});
+		return $(`<select class="block ve-foundry-button m-0">
+			${availablePacks.map((pack) => `<option value="${pack.collection}">${pack.metadata.label}</option>`).join("")}
+		</select>`);
+	}
+
+	static getPackByCollection ({collection}) {
+		if (collection == null) return null;
+		return game.packs.find(it => it.collection === collection);
+	}
+}
+
+UtilCompendium._COMPENDIUM_CACHE_KEY_IMAGE = "img";
+UtilCompendium._COMPENDIUM_CACHE_KEY_DATA = "data";
+UtilCompendium._COMPENDIUM_IMAGE_LAST_VALUES = {};
+UtilCompendium._COMPENDIUM_CACHES = {};
+UtilCompendium._COMPENDIUM_CACHES_LOCK = new VeLock();
+UtilCompendium._COMPENDIUM_ACTOR_IMAGE_LAST_VALUES = {};
+UtilCompendium._COMPENDIUM_ACTOR_CACHES = {};
+UtilCompendium._COMPENDIUM_ACTOR_CACHES_LOCK = new VeLock();
+
+UtilCompendium._PLUT_CACHES = {};
+UtilCompendium._PLUT_CACHES_LOCKS = {};
+
+export {UtilCompendium};

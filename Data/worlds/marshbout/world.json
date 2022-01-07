@@ -20,8 +20,9 @@
   "download": "https://github.com/hafdon/fvtt-worlds-marshbout/archive/main.zip",
   "protected": false,
   "background": "worlds/marshbout/scenes/marshbout-scenes-full-maps/map-valley_of_ponderous_6x_grid_100_miles-min.png",
-  "coreVersion": "0.8.8",
-  "nextSession": "2021-01-30T18:30:00.000Z",
+  "coreVersion": "9.233",
+  "nextSession": "2021-08-21T17:30:00.000Z",
   "resetKeys": false,
-  "safeMode": false
+  "safeMode": false,
+  "systemVersion": "1.5.5"
 }

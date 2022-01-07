@@ -1,1 +1,114 @@
-const _0x6a40=['_handlePacket','import','val','31389GJdwQl','entity','dice','6459LdHCGX','addEventListener','262021sxcYHy','3XGFDNG','page','settings','roll','get','rivet','parse','push','data','5JxoXvB','Received\x20Rivet\x20message\x20(text)','964400eGtqQc','getImporter','15UxyNyZ','instance','isSendRolls','325757DbILsR','collection','toMessage','pInit','log','Unhandled\x20Rivet\x20message\x20with\x20type\x20\x22','Received\x20Rivet\x20message\x20(JSON)','rivet.receive-text','58ueYKon','role','Plutonium\x20does\x20not\x20yet\x20support\x20entities\x20from\x20\x22','type','rivet.receive','7BsqqUd','notifications','userId','isTemp','__prop','\x22!\x20You\x20may\x20need\x20to\x20update\x20your\x20extension.','doShowImportedNotification','4020529ezPVwn','init','user','609571HvozCO','_pHandleEntityMessage','error','trim','_handleRollMessage'];const _0x22df=function(_0x248f17,_0x24d5d8){_0x248f17=_0x248f17-0x1c6;let _0x6a4081=_0x6a40[_0x248f17];return _0x6a4081;};const _0x385913=_0x22df;(function(_0x457e24,_0x3e10ef){const _0x1bedd0=_0x22df;while(!![]){try{const _0x5ffa73=-parseInt(_0x1bedd0(0x1c6))*parseInt(_0x1bedd0(0x1ed))+-parseInt(_0x1bedd0(0x1fa))*parseInt(_0x1bedd0(0x1e3))+parseInt(_0x1bedd0(0x1cf))*parseInt(_0x1bedd0(0x1d6))+-parseInt(_0x1bedd0(0x1d1))+parseInt(_0x1bedd0(0x1de))*parseInt(_0x1bedd0(0x1f8))+parseInt(_0x1bedd0(0x1d3))*-parseInt(_0x1bedd0(0x1f5))+parseInt(_0x1bedd0(0x1ea));if(_0x5ffa73===_0x3e10ef)break;else _0x457e24['push'](_0x457e24['shift']());}catch(_0x5458f5){_0x457e24['push'](_0x457e24['shift']());}}}(_0x6a40,0xe2091));import{Config}from'./Config.js';import{LGT}from'./Util.js';import{UtilApplications}from'./UtilApplications.js';import{ActorCharactermancerSourceSelector}from'./ActorCharactermancer.js';class RivetBridge{static[_0x385913(0x1eb)](){const _0x581cd8=_0x385913;window[_0x581cd8(0x1f9)](_0x581cd8(0x1e2),_0x2cf42b=>{const _0xedfa15=_0x581cd8;return console[_0xedfa15(0x1da)](...LGT,_0xedfa15(0x1dc)),this[_0xedfa15(0x1f2)](_0x2cf42b['detail']);}),window[_0x581cd8(0x1f9)](_0x581cd8(0x1dd),()=>{const _0x2a3d18=_0x581cd8;console[_0x2a3d18(0x1da)](...LGT,_0x2a3d18(0x1d0));const _0x9b4ce0=$('textarea.rivet-transfer'),_0x8a9c05=_0x9b4ce0['last']()[_0x2a3d18(0x1f4)]();return _0x9b4ce0['remove'](),this[_0x2a3d18(0x1f2)](JSON[_0x2a3d18(0x1cc)](_0x8a9c05));});}static[_0x385913(0x1f2)](_0x3e7e53){const _0x4753c1=_0x385913;switch(_0x3e7e53['type']){case _0x4753c1(0x1c9):return this[_0x4753c1(0x1f1)](_0x3e7e53);case'entity':return this['_pHandleEntityMessage'](_0x3e7e53);default:ui[_0x4753c1(0x1e4)][_0x4753c1(0x1ef)](_0x4753c1(0x1db)+_0x3e7e53[_0x4753c1(0x1e1)]+_0x4753c1(0x1e8));}}static[_0x385913(0x1f1)](_0x12192f){const _0x46ca76=_0x385913,_0x148f1b=_0x12192f[_0x46ca76(0x1ce)];if(!_0x12192f[_0x46ca76(0x1c8)][_0x46ca76(0x1d5)])return;const _0x46f587=new Roll(_0x148f1b[_0x46ca76(0x1f7)]),_0x14530a=[];if(_0x12192f['settings']['isWhisper'])_0x14530a[_0x46ca76(0x1cd)](game[_0x46ca76(0x1e5)]);_0x46f587[_0x46ca76(0x1d8)]({'speaker':{'alias':_0x148f1b['rolledBy']},'flavor':_0x148f1b['label'],'rollMode':_0x46ca76(0x1c9),'whisper':_0x14530a});}static async[_0x385913(0x1ee)](_0x157e2e){const _0x1cf0ce=_0x385913,_0x46174b=Config[_0x1cf0ce(0x1ca)](_0x1cf0ce(0x1f3),'minimumRole');if(game[_0x1cf0ce(0x1ec)][_0x1cf0ce(0x1df)]<_0x46174b)return;const _0x254cdb=_0x157e2e[_0x1cf0ce(0x1ce)],_0x429b6e=(Config[_0x1cf0ce(0x1ca)](_0x1cf0ce(0x1cb),'targetActorId')||'')[_0x1cf0ce(0x1f0)](),_0x132d0c=_0x429b6e?CONFIG['Actor'][_0x1cf0ce(0x1d7)][_0x1cf0ce(0x1d4)]['get'](_0x429b6e):'',{ChooseImporter:_0x4f3d91}=await import('./ChooseImporter.js'),_0x1a708e=_0x4f3d91[_0x1cf0ce(0x1d2)](_0x254cdb?.[_0x1cf0ce(0x1f6)]?.[_0x1cf0ce(0x1e7)]||_0x254cdb[_0x1cf0ce(0x1c7)],_0x132d0c);if(!_0x1a708e)return ui['notifications']['error'](_0x1cf0ce(0x1e0)+_0x254cdb[_0x1cf0ce(0x1c7)]+_0x1cf0ce(0x1e8));try{await _0x1a708e[_0x1cf0ce(0x1d9)]();const _0x23aa2f={};if(_0x254cdb[_0x1cf0ce(0x1e6)])_0x23aa2f[_0x1cf0ce(0x1e6)]=!![];const _0x2ed446=await _0x1a708e['pImportEntry'](_0x254cdb[_0x1cf0ce(0x1f6)],_0x23aa2f);UtilApplications[_0x1cf0ce(0x1e9)](_0x2ed446);}catch(_0x15cfa1){UtilApplications[_0x1cf0ce(0x1e9)]({'entity':_0x254cdb,'status':UtilApplications['TASK_EXIT_FAILED']}),setTimeout(()=>{throw _0x15cfa1;});}}}export{RivetBridge};
+import {Config} from "./Config.js";
+import {LGT} from "./Util.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {UtilActors} from "./UtilActors.js";
+
+class RivetBridge {
+	static init () {
+		window.addEventListener("rivet.receive", evt => {
+			console.log(...LGT, `Received Rivet message (JSON)`);
+			return this._handlePacket(evt.detail);
+		});
+
+		window.addEventListener("rivet.receive-text", () => {
+			console.log(...LGT, `Received Rivet message (text)`);
+			const $ipts = $(`textarea.rivet-transfer`);
+			const packetRaw = $ipts.last().val();
+			$ipts.remove();
+			return this._handlePacket(JSON.parse(packetRaw));
+		});
+	}
+
+	static _handlePacket (pack) {
+		switch (pack.type) {
+			case "roll": return this._handleRollMessage(pack);
+			case "entity": return this._pHandleEntityMessage(pack);
+			case "currency": return this._pHandleCurrencyMessage(pack);
+			case "5etools.lootgen.loot": return this._pHandleSpecialMessage_5etools_lootgen_loot(pack);
+			default: ui.notifications.error(`Unhandled Rivet message with type "${pack.type}"! You may need to update your extension.`);
+		}
+	}
+
+	static _handleRollMessage (pack) {
+		const data = pack.data;
+
+		if (!pack.settings.isSendRolls) return;
+
+		const roll = new Roll(data.dice);
+
+		const whisper = [];
+		if (pack.settings.isWhisper) whisper.push(game.userId);
+
+		roll.toMessage({
+			speaker: {
+				alias: data.rolledBy,
+			},
+			flavor: data.label,
+			rollMode: "roll",
+			whisper,
+		});
+	}
+
+	/** Import an entity. */
+	static async _pHandleEntityMessage (pack) {
+		const minRole = Config.get("import", "minimumRole");
+		if (game.user.role < minRole) return;
+
+		const data = pack.data;
+		const actor = this._getTargetActor();
+
+		const {ChooseImporter} = await import("./ChooseImporter.js");
+		const importer = ChooseImporter.getImporter(data?.entity?.__prop || data.page, actor);
+		if (!importer) return ui.notifications.error(`Plutonium does not yet support entities from "${data.page}"! You may need to update your extension.`);
+		try {
+			await importer.pInit();
+			const opts = {...(data.options || {})};
+			if (data.isTemp) opts.isTemp = true;
+			const importedMeta = await importer.pImportEntry(data.entity, opts);
+			UtilApplications.doShowImportedNotification(importedMeta);
+		} catch (e) {
+			UtilApplications.doShowImportedNotification({entity: data, status: UtilApplications.TASK_EXIT_FAILED});
+			setTimeout(() => { throw e; });
+		}
+	}
+
+	static async _pHandleCurrencyMessage (pack) {
+		const data = pack.data;
+		const actor = this._getTargetActor();
+
+		if (!actor) {
+			await ChatMessage.create({
+				content: `<div>Currency: ${Parser.getDisplayCurrency(data.currency)}</div>`,
+				user: game.userId,
+				type: 4,
+				speaker: {alias: "Rivet"},
+				whisper: game.users.contents.filter(it => it.isGM || it === game.user).map(it => it.id),
+			});
+			return;
+		}
+
+		try {
+			await UtilActors.pAddCurrencyToActor({currency: data.currency, actor});
+			ui.notifications.info(`Applied currency "${Parser.getDisplayCurrency(data.currency)}" to actor "${actor.name}"`);
+		} catch (e) {
+			ui.notifications.error(`Failed to apply currency "${Parser.getDisplayCurrency(data.currency)}" to actor "${actor.name}"`);
+			setTimeout(() => { throw e; });
+		}
+	}
+
+	static async _pHandleSpecialMessage_5etools_lootgen_loot (pack) {
+		const {LootGeneratorApp} = await import("./LootGeneratorApp.js");
+
+		const data = pack.data;
+		const actor = this._getTargetActor();
+
+		await LootGeneratorApp.pImportLoot({loot: data, actor, isLogToChat: true, isNotify: true});
+	}
+
+	static _getTargetActor () {
+		const targetActorId = (Config.get("rivet", "targetActorId") || "").trim();
+		return targetActorId ? CONFIG.Actor.collection.instance.get(targetActorId) : null;
+	}
+}
+
+export {RivetBridge};

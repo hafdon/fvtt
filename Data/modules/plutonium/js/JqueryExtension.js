@@ -1,1 +1,19 @@
-var _0x1316=['215MLgXLs','replaceWith','70609szPsLH','1229faBuGV','25501PmDPsl','7GVsrPn','347FzoFfg','init','2QPLuig','forEach','extend','find','295113TPHCCY','418041JEWQgO','148938XLJrZe'];var _0x1c1b=function(_0x5c50c3,_0x2aef0e){_0x5c50c3=_0x5c50c3-0xe7;var _0x131611=_0x1316[_0x5c50c3];return _0x131611;};var _0x10ecde=_0x1c1b;(function(_0x918655,_0x3775e4){var _0x24576c=_0x1c1b;while(!![]){try{var _0x4593ea=-parseInt(_0x24576c(0xed))+parseInt(_0x24576c(0xe8))*-parseInt(_0x24576c(0xf1))+parseInt(_0x24576c(0xe7))+-parseInt(_0x24576c(0xef))*parseInt(_0x24576c(0xe9))+parseInt(_0x24576c(0xf5))+-parseInt(_0x24576c(0xeb))+-parseInt(_0x24576c(0xec))*parseInt(_0x24576c(0xee));if(_0x4593ea===_0x3775e4)break;else _0x918655['push'](_0x918655['shift']());}catch(_0x3cfa8e){_0x918655['push'](_0x918655['shift']());}}}(_0x1316,0x399b8));class JqueryExtension{static[_0x10ecde(0xf0)](){var _0x40a1bd=_0x10ecde;$['fn'][_0x40a1bd(0xf3)]({'swap':function(_0x12fd12){var _0x25a9c6=_0x40a1bd;return Object['entries'](_0x12fd12)[_0x25a9c6(0xf2)](([_0x2ad7fd,_0x43f2cd])=>{var _0x206ca1=_0x25a9c6;this[_0x206ca1(0xf4)]('[data-r=\x22'+_0x2ad7fd+'\x22]')[_0x206ca1(0xea)](_0x43f2cd);}),this;}});}}export{JqueryExtension};
+class JqueryExtension {
+	static init () {
+		$.fn.extend({
+			/**
+			 * Takes a jQuery object and replaces elements with `data-r-<id>` with the element at key id
+			 * $(`<div><div>my <span>initial</span> html <div data-r="foo"></div> <div data-r="bar"></div></div>`)
+			 */
+			swap: function ($eleMap) {
+				Object.entries($eleMap).forEach(([k, $v]) => {
+					this.find(`[data-r="${k}"]`).replaceWith($v);
+				});
+
+				return this;
+			},
+		});
+	}
+}
+
+export {JqueryExtension};

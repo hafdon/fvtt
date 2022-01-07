@@ -54,20 +54,25 @@ export class TokenUtility {
         const formula = newFormula || getProperty(actor, "data.data.attributes.hp.formula");
 
         if (!formula) {
-            return null;
+            const maxHP = getProperty(actor, "data.data.attributes.hp.max");
+            return maxHP ?? 0;
         }
-        
+
         const r = new Roll(formula);
         const roll = r.roll();
         const hideRoll = Sidekick.getSetting(SETTING_KEYS.tokenUtility.hideAutoRoll);
 
-        roll.toMessage({
-            flavor: `${actor.name} rolls for HP!`,
-            rollMode: hideRoll ? `gmroll` : `roll`,
-            speaker: ChatMessage.getSpeaker({actor: actor})
-        });
+        roll.toMessage(
+            {
+                flavor: `${actor.name} rolls for HP!`
+            },
+            {
+                rollMode: hideRoll ? `gmroll` : `roll`,
+                speaker: ChatMessage.getSpeaker({actor}),
+            }
+        );
         const hp = r.total;
-    
+
         return hp;
     }
 

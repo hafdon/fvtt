@@ -1,1 +1,221 @@
-const _0x5999=['user','URL/iframe\x20\x22','warn','239052dJboBD','targetActorId','render','_doPatchJournalContextMenuOptions','SIDEBAR.Delete','name','_doInitActorData','forceClose','init','111300UOQOao','setFlag','data','<i\x20class=\x22fas\x20fa-hammer\x22></i>','<i\x20class=\x22fas\x20fa-link\x22></i>','Set\x20URL','journalEntries','scenes','getJournalDirectoryEntryContext','pGetUserString','get','isAddDeleteToSceneNavOptions','values','getSceneNavigationContext','collection','2iMSbng','canvasReady','\x22\x20was\x20not\x20valid!','innerHeight','199349XgLcHq','_handleConfigUpdate','splice','1MddhXB','367jyNulT','FLAG_IFRAME_URL','Enter\x20iframe\x20or\x20URL','isOwner','close','push','set','315383aIVsqs','SCENES.Configure','actor','forEach','Scene','notifications','Rivet\x20content\x20will\x20now\x20be\x20imported\x20to\x20Actor\x20\x22','trim','handleHookApplyActiveEffect','getFlag','findIndex','plutonium.configUpdate','min','193452FKyvcS','sceneId','innerWidth','_doPatchNavContextMenuOptions','getBoundingClientRect','rivet','error','instance','active','<iframe','Set\x20as\x20Rivet\x20Target','_doPatchActorContextMenuOptions','sidebar','isUseExtendedActiveEffectsParser','MODULE_NAME','getActorDirectoryEntryContext','handleConfigUpdate','attr','apps','<i\x20class=\x22fas\x20fa-trash\x22></i>','isGM','src','446FoumOc','element','Actor','132382aKFJMz','entityId'];const _0x3a29=function(_0xec704,_0x2015eb){_0xec704=_0xec704-0x106;let _0x599901=_0x5999[_0xec704];return _0x599901;};const _0x53b811=_0x3a29;(function(_0x997e18,_0x57aeba){const _0x3a1020=_0x3a29;while(!![]){try{const _0x2afce8=parseInt(_0x3a1020(0x115))*parseInt(_0x3a1020(0x148))+-parseInt(_0x3a1020(0x112))+parseInt(_0x3a1020(0x140))*parseInt(_0x3a1020(0x116))+-parseInt(_0x3a1020(0x143))*parseInt(_0x3a1020(0x10e))+parseInt(_0x3a1020(0x11d))+-parseInt(_0x3a1020(0x12a))+parseInt(_0x3a1020(0x151));if(_0x2afce8===_0x57aeba)break;else _0x997e18['push'](_0x997e18['shift']());}catch(_0x3654ed){_0x997e18['push'](_0x997e18['shift']());}}}(_0x5999,0x29f4c));import{SharedConsts}from'../shared/SharedConsts.js';import{Consts}from'./Consts.js';import{Config}from'./Config.js';import{Patcher_Token}from'./PatcherToken.js';import{Patcher_TextEditor}from'./PatcherTextEditor.js';import{Patcher_ChatMessage}from'./PatcherChatMessage.js';import{Patcher_SettingsConfig}from'./PatcherSettingsConfig.js';import{Patcher_CanvasAnimation}from'./PatcherCanvasAnimation.js';import{Patcher_Jquery}from'./PatcherJquery.js';import{Patcher_GameKeyboard}from'./PatcherGameKeyboard.js';import{Patcher_ActiveEffectConfig}from'./PatcherActiveEffectConfig.js';import{Patcher_Actor}from'./PatcherActor.js';import{Patcher_Drawing}from'./PatcherDrawing.js';import{JournalSheet_Plutonium}from'./PatcherJournalSheet.js';import{LGT}from'./Util.js';import{Patcher_Item}from'./PatcherItem.js';class Patcher{static[_0x53b811(0x150)](){const _0x44b77d=_0x53b811;Hooks['on']('applyActiveEffect',Patcher_Actor[_0x44b77d(0x125)]['bind'](Patcher_Actor)),this[_0x44b77d(0x12d)](),this[_0x44b77d(0x135)](),this[_0x44b77d(0x14b)](),Patcher_Token[_0x44b77d(0x150)](),Patcher_TextEditor[_0x44b77d(0x150)](),Patcher_ChatMessage[_0x44b77d(0x150)](),Patcher_SettingsConfig[_0x44b77d(0x150)](),Patcher_CanvasAnimation['init'](),Patcher_Jquery[_0x44b77d(0x150)](),Patcher_GameKeyboard['init'](),Patcher_ActiveEffectConfig['init'](),Patcher_Actor[_0x44b77d(0x150)](),Patcher_Item[_0x44b77d(0x150)](),Hooks['on'](_0x44b77d(0x128),()=>this[_0x44b77d(0x113)]()),this[_0x44b77d(0x113)](),this[_0x44b77d(0x14e)](),Hooks['on'](_0x44b77d(0x10f),()=>{const _0xfa1c46=_0x44b77d;Patcher_Drawing[_0xfa1c46(0x13a)]();});}static[_0x53b811(0x113)](){const _0x2c9120=_0x53b811;if(ui['sidebar']?.[_0x2c9120(0x141)])ui[_0x2c9120(0x136)][_0x2c9120(0x14a)]();if(ui['nav']?.[_0x2c9120(0x141)])ui['nav'][_0x2c9120(0x14a)]();Patcher_Token[_0x2c9120(0x13a)](),Patcher_Drawing[_0x2c9120(0x13a)](),Patcher_ChatMessage['handleConfigUpdate'](),JournalSheet_Plutonium[_0x2c9120(0x13a)]();}static[_0x53b811(0x14e)](){const _0x13027e=_0x53b811;Config[_0x13027e(0x109)](_0x13027e(0x11f),_0x13027e(0x137))&&(CONFIG[_0x13027e(0x142)][_0x13027e(0x10d)][_0x13027e(0x131)]['contents']||[])['forEach'](_0x45e8fa=>{const _0x124b83=_0x13027e;try{_0x45e8fa['prepareData']();}catch(_0x308119){const _0x23c103='Failed\x20to\x20apply\x20custom\x20active\x20effect\x20parsing\x20to\x20actor\x20\x22'+_0x45e8fa['id']+'\x22!';ui[_0x124b83(0x122)][_0x124b83(0x130)](_0x23c103+'\x20'+VeCt['STR_SEE_CONSOLE']),console[_0x124b83(0x130)](...LGT,_0x23c103),console[_0x124b83(0x130)](_0x308119);}});}static['_doPatchNavContextMenuOptions'](){const _0x495545=_0x53b811;Hooks['on'](_0x495545(0x10c),(_0x377004,_0x4c9e66)=>{const _0x15f34b=_0x495545;if(!Config[_0x15f34b(0x109)]('ui',_0x15f34b(0x10a)))return;const _0x370b9c=_0x4c9e66[_0x15f34b(0x127)](_0xb739dc=>_0xb739dc[_0x15f34b(0x14d)]===_0x15f34b(0x11e)),_0x3127c3={'name':_0x15f34b(0x14c),'icon':_0x15f34b(0x13d),'condition':_0x4b81c=>{const _0x4612fa=_0x15f34b,_0x30395d=game[_0x4612fa(0x106)][_0x4612fa(0x109)](_0x4b81c[_0x4612fa(0x153)](_0x4612fa(0x12b)));return game[_0x4612fa(0x145)][_0x4612fa(0x13e)]&&!_0x30395d['data'][_0x4612fa(0x132)];},'callback':_0x3674fc=>{const _0x179614=_0x15f34b,_0x560a4e=CONFIG[_0x179614(0x121)]['collection'][_0x179614(0x131)][_0x179614(0x109)](_0x3674fc[_0x179614(0x153)](_0x179614(0x12b)));if(!_0x560a4e)return;const {top:_0x54904a,left:_0x3a2878}=_0x3674fc[0x0][_0x179614(0x12e)]();return _0x560a4e['deleteDialog']({'top':Math[_0x179614(0x129)](_0x54904a+0x46,window[_0x179614(0x111)]-0x15e),'left':Math[_0x179614(0x129)](_0x3a2878,window[_0x179614(0x12c)]-0x2d0)});}};if(~_0x370b9c)_0x4c9e66[_0x15f34b(0x114)](_0x370b9c,0x0,_0x3127c3);else _0x4c9e66[_0x15f34b(0x11b)](_0x3127c3);return _0x4c9e66;});}static[_0x53b811(0x135)](){const _0x55a9db=_0x53b811;Hooks['on'](_0x55a9db(0x139),(_0x17f2b5,_0xac0b74)=>{const _0x5d164f=_0x55a9db;return _0xac0b74[_0x5d164f(0x11b)]({'name':_0x5d164f(0x134),'icon':_0x5d164f(0x154),'condition':_0x2a934a=>{const _0x5a08a0=_0x5d164f,_0x481638=ActorDirectory[_0x5a08a0(0x10d)][_0x5a08a0(0x109)](_0x2a934a['data']('entityId'));return _0x481638[_0x5a08a0(0x119)];},'callback':_0x5b25f8=>{const _0x490cee=_0x5d164f,_0x589839=ActorDirectory['collection']['get'](_0x5b25f8[_0x490cee(0x153)](_0x490cee(0x144)));Config[_0x490cee(0x11c)](_0x490cee(0x12f),_0x490cee(0x149),_0x589839['id']),ui[_0x490cee(0x122)]['info'](_0x490cee(0x123)+_0x589839['id']+'\x22.\x20This\x20can\x20be\x20changed\x20in\x20the\x20Config.');}}),_0xac0b74;});}static[_0x53b811(0x14b)](){const _0x647814=_0x53b811;Hooks['on'](_0x647814(0x107),(_0x15b3ff,_0x2a0694)=>{const _0x4819bf=_0x647814,_0xd16ba=_0x2a0694['findIndex'](_0xf191e8=>_0xf191e8['name']==='PERMISSION.Configure');if(!~_0xd16ba)return _0x2a0694;return _0x2a0694[_0x4819bf(0x114)](_0xd16ba+0x1,0x0,{'name':_0x4819bf(0x156),'icon':_0x4819bf(0x155),'condition':_0x3b15b4=>{const _0x415a73=_0x4819bf;if(!Config['get'](_0x415a73(0x157),'isEnableUrlEmbeds'))return![];const _0x51051b=JournalDirectory[_0x415a73(0x10d)][_0x415a73(0x109)](_0x3b15b4[_0x415a73(0x153)]('entityId'));return _0x51051b[_0x415a73(0x119)];},'callback':async _0xc77ab7=>{const _0x305be6=_0x4819bf,_0x56ddd9=JournalDirectory[_0x305be6(0x10d)][_0x305be6(0x109)](_0xc77ab7[_0x305be6(0x153)]('entityId')),_0x51d0db=await _0x56ddd9[_0x305be6(0x126)](SharedConsts['MODULE_NAME'],Consts[_0x305be6(0x117)]);let _0x2158c0=await InputUiUtil[_0x305be6(0x108)]({'title':_0x305be6(0x118),'default':_0x51d0db||''});if(_0x2158c0==null)return;Object[_0x305be6(0x10b)](_0x56ddd9[_0x305be6(0x13c)])[_0x305be6(0x120)](_0x2ba460=>{const _0x530237=_0x305be6;_0x2ba460[_0x530237(0x14f)]?_0x2ba460[_0x530237(0x14f)]():_0x2ba460[_0x530237(0x11a)]();});if(!_0x2158c0)await _0x56ddd9['setFlag'](SharedConsts[_0x305be6(0x138)],Consts[_0x305be6(0x117)],'');else{_0x2158c0=_0x2158c0[_0x305be6(0x124)]();if(_0x2158c0['startsWith'](_0x305be6(0x133)))_0x2158c0=$(_0x2158c0)[_0x305be6(0x13b)](_0x305be6(0x13f));!_0x2158c0&&(ui[_0x305be6(0x122)][_0x305be6(0x147)](_0x305be6(0x146)+_0x2158c0+_0x305be6(0x110)),await _0x56ddd9[_0x305be6(0x152)](SharedConsts['MODULE_NAME'],Consts[_0x305be6(0x117)],'')),await _0x56ddd9[_0x305be6(0x152)](SharedConsts['MODULE_NAME'],Consts[_0x305be6(0x117)],_0x2158c0);}}}),_0x2a0694;});}}export{Patcher};
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Consts} from "./Consts.js";
+import {Config} from "./Config.js";
+import {Patcher_Token} from "./PatcherToken.js";
+import {Patcher_TextEditor} from "./PatcherTextEditor.js";
+import {Patcher_ChatMessage} from "./PatcherChatMessage.js";
+import {Patcher_SettingsConfig} from "./PatcherSettingsConfig.js";
+import {Patcher_CanvasAnimation} from "./PatcherCanvasAnimation.js";
+import {Patcher_Jquery} from "./PatcherJquery.js";
+import {Patcher_GameKeyboard} from "./PatcherGameKeyboard.js";
+import {Patcher_ActiveEffectConfig} from "./PatcherActiveEffectConfig.js";
+import {Patcher_Actor} from "./PatcherActor.js";
+import {Patcher_Drawing} from "./PatcherDrawing.js";
+import {JournalSheet_Plutonium} from "./PatcherJournalSheet.js";
+import {LGT, Util} from "./Util.js";
+import {Patcher_Item} from "./PatcherItem.js";
+import {Patcher_ModuleManagement} from "./PatcherModuleManagement.js";
+import {Patcher_Application} from "./PatcherApplication.js";
+import {UtilHooks} from "./UtilHooks.js";
+
+class Patcher {
+	static init () {
+		Hooks.on("applyActiveEffect", Patcher_Actor.handleHookApplyActiveEffect.bind(Patcher_Actor));
+
+		this._doPatchNavContextMenuOptions();
+		this._doPatchActorContextMenuOptions();
+		this._doPatchJournalContextMenuOptions();
+		Patcher_Application.init();
+		Patcher_Token.init();
+		Patcher_TextEditor.init();
+		Patcher_ChatMessage.init();
+		Patcher_SettingsConfig.init();
+		Patcher_CanvasAnimation.init();
+		Patcher_Jquery.init();
+		Patcher_GameKeyboard.init();
+		Patcher_ActiveEffectConfig.init();
+		Patcher_Actor.init();
+		Patcher_Item.init();
+		Patcher_ModuleManagement.init();
+
+		UtilHooks.on(UtilHooks.HK_CONFIG_UPDATE, (diff) => this._handleConfigUpdate(diff));
+		this._handleConfigUpdate({isInit: true});
+
+		// region Apply custom active effects
+		this._doInitActorData();
+
+		// region Specific hooks
+		Hooks.on("canvasReady", () => {
+			Patcher_Drawing.handleConfigUpdate();
+		});
+		// endregion
+	}
+
+	static _handleConfigUpdate ({isInit = false, ...diff} = {}) {
+		this._handleConfigUpdate_folderMaxDepth({isInit});
+		Patcher_Token.handleConfigUpdate({isInit, ...diff});
+		Patcher_Drawing.handleConfigUpdate({isInit});
+		Patcher_ChatMessage.handleConfigUpdate({isInit});
+		JournalSheet_Plutonium.handleConfigUpdate({isInit});
+
+		// Re-render the navbar to ensure our `getSceneNavigationContext` hook fires
+		if (ui.nav?.element) ui.nav.render();
+	}
+
+	static _doInitActorData () {
+		if (!Config.get("actor", "isUseExtendedActiveEffectsParser")) return;
+
+		(CONFIG.Actor.collection.instance.contents || []).forEach(ent => {
+			try {
+				ent.prepareData();
+			} catch (e) {
+				const msg = `Failed to apply custom active effect parsing to actor "${ent.id}"!`;
+				ui.notifications.error(`${msg} ${VeCt.STR_SEE_CONSOLE}`);
+				console.error(...LGT, msg);
+				console.error(e);
+			}
+		});
+	}
+
+	static _doPatchNavContextMenuOptions () {
+		Hooks.on("getSceneNavigationContext", ($html, options) => {
+			if (!Config.get("ui", "isAddDeleteToSceneNavOptions")) return;
+
+			const ixConfigure = options.findIndex(it => it.name === "SCENES.Configure");
+			const toAdd = {
+				name: "SIDEBAR.Delete",
+				icon: `<i class="fas fa-fw fa-trash"></i>`,
+				condition: $li => {
+					const scene = game.scenes.get($li.data("sceneId"));
+					return game.user.isGM && !scene.data.active;
+				},
+				callback: $li => {
+					const document = CONFIG.Scene.collection.instance.get($li.data("sceneId"));
+					if (!document) return;
+					const {top, left} = $li[0].getBoundingClientRect();
+					return document.deleteDialog({
+						top: Math.min(top + 70, window.innerHeight - 350),
+						left: Math.min(left, window.innerWidth - 720),
+					});
+				},
+			};
+
+			if (~ixConfigure) options.splice(ixConfigure + 1, 0, toAdd);
+			else options.push(toAdd);
+
+			return options;
+		});
+	}
+
+	static _doPatchActorContextMenuOptions () {
+		Hooks.on("getActorDirectoryEntryContext", ($html, options) => {
+			options.push({
+				name: "Set as Rivet Target",
+				icon: `<i class="fas fa-fw fa-hammer"></i>`,
+				condition: li => {
+					const entity = ActorDirectory.collection.get(li.data(Util.Versions.getCoreVersion().isVersionNinePlus ? "documentId" : "entityId"));
+					return entity.isOwner;
+				},
+				callback: li => {
+					const entity = ActorDirectory.collection.get(li.data(Util.Versions.getCoreVersion().isVersionNinePlus ? "documentId" : "entityId"));
+					Config.set("rivet", "targetActorId", entity.id);
+					ui.notifications.info(`Rivet content will now be imported to Actor "${entity.id}". This can be changed in the Config.`);
+				},
+			});
+
+			return options;
+		});
+	}
+
+	static _doPatchJournalContextMenuOptions () {
+		Hooks.on("getJournalDirectoryEntryContext", ($html, options) => {
+			const ixConfigPerms = options.findIndex(it => it.name === "PERMISSION.Configure");
+			if (!~ixConfigPerms) return options;
+
+			options.splice(
+				ixConfigPerms + 1,
+				0,
+				{
+					name: "Set URL",
+					icon: `<i class="fas fa-fw fa-link"></i>`,
+					condition: li => {
+						if (!Config.get("journalEntries", "isEnableUrlEmbeds")) return false;
+
+						const entity = JournalDirectory.collection.get(li.data(Util.Versions.getCoreVersion().isVersionNinePlus ? "documentId" : "entityId"));
+						return entity.isOwner;
+					},
+					callback: async li => {
+						const entity = JournalDirectory.collection.get(li.data(Util.Versions.getCoreVersion().isVersionNinePlus ? "documentId" : "entityId"));
+						const existing = await entity.getFlag(SharedConsts.MODULE_NAME, Consts.FLAG_IFRAME_URL);
+
+						let url = await InputUiUtil.pGetUserString({
+							title: "Enter iframe or URL",
+							default: existing || "",
+						});
+
+						if (url == null) return;
+
+						// Close any open windows
+						Object.values(entity.apps)
+							.forEach(app => {
+								app.forceClose ? app.forceClose() : app.close();
+							});
+
+						if (!url) {
+							await entity.setFlag(SharedConsts.MODULE_NAME, Consts.FLAG_IFRAME_URL, "");
+						} else {
+							url = url.trim();
+
+							if (url.startsWith("<iframe")) url = $(url).attr("src");
+
+							if (!url) {
+								ui.notifications.warn(`URL/iframe "${url}" was not valid!`);
+								await entity.setFlag(SharedConsts.MODULE_NAME, Consts.FLAG_IFRAME_URL, "");
+							}
+
+							await entity.setFlag(SharedConsts.MODULE_NAME, Consts.FLAG_IFRAME_URL, url);
+						}
+					},
+				},
+			);
+
+			return options;
+		});
+	}
+
+	static _handleConfigUpdate_folderMaxDepth ({isInit = false} = {}) {
+		try {
+			return this._handleConfigUpdate_folderMaxDepth_();
+		} catch (e) {
+			if (!isInit) throw e;
+			Config.handleFailedInitConfigApplication("ui", "isEnableIncreasedFolderDepth", e);
+		}
+	}
+
+	static _handleConfigUpdate_folderMaxDepth_ () {
+		if (Patcher._CONST_ORIGINAL == null) Patcher._CONST_ORIGINAL = window.CONST;
+
+		if (Config.get("ui", "isEnableIncreasedFolderDepth")) {
+			if (CONST.FOLDER_MAX_DEPTH >= Patcher._FOLDER_MAX_DEPTH) return;
+
+			// FIXME(Future) this is super-rough. Alternatives may include:
+			//   - libWrapper patch the methods which use `CONST.FOLDER_MAX_DEPTH`
+			//     - can break when Foundry updates
+			//  - `.toString() -> find-replace ref -> overwrite` the methods which use `CONST.FOLDER_MAX_DEPTH`
+			//     - doesn't play well with libWrapper
+			//     - chance of missing newly-added future methods
+			//  - Disable the feature
+			//  - Beg Atropos to increase the max depth, since 3 is a _bit_ restrictive
+			window.CONST = MiscUtil.copy(Patcher._CONST_ORIGINAL);
+
+			CONST.FOLDER_MAX_DEPTH__ORIGINAL = CONST.FOLDER_MAX_DEPTH;
+			CONST.FOLDER_MAX_DEPTH = Patcher._FOLDER_MAX_DEPTH;
+		} else {
+			window.CONST = Patcher._CONST_ORIGINAL;
+		}
+	}
+}
+Patcher._CONST_ORIGINAL = null;
+Patcher._FOLDER_MAX_DEPTH = 9;
+
+export {Patcher};

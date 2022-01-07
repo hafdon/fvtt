@@ -1,1 +1,34 @@
-const _0x2d17=['3QUvWTh','4838bsLtJn','MODULE_NAME','register','getAdditionalRollDataBase','913098AJxsIj','284615JdeKSb','init','LIBWRAPPER_MODE_WRAPPER','2oubAQi','17QCGaAS','831267URGlNm','399548BCyGro','error','21zdMzPG','_init_tryPatchGetRollData','33721zALchT','assign','CONFIG.Item.documentClass.prototype.getRollData','_getRollData','1819814EUzSAp'];const _0x42a7=function(_0x237010,_0x2a0362){_0x237010=_0x237010-0x1ee;let _0x2d1759=_0x2d17[_0x237010];return _0x2d1759;};const _0x3bfb61=_0x42a7;(function(_0x5ee477,_0x477d11){const _0x58d4c8=_0x42a7;while(!![]){try{const _0x22ac4b=-parseInt(_0x58d4c8(0x1ee))*-parseInt(_0x58d4c8(0x1fd))+-parseInt(_0x58d4c8(0x1f2))*parseInt(_0x58d4c8(0x1fe))+parseInt(_0x58d4c8(0x1f3))+-parseInt(_0x58d4c8(0x1f6))*-parseInt(_0x58d4c8(0x1f8))+parseInt(_0x58d4c8(0x202))+parseInt(_0x58d4c8(0x1f4))*-parseInt(_0x58d4c8(0x1f1))+-parseInt(_0x58d4c8(0x1fc));if(_0x22ac4b===_0x477d11)break;else _0x5ee477['push'](_0x5ee477['shift']());}catch(_0x570942){_0x5ee477['push'](_0x5ee477['shift']());}}}(_0x2d17,0x93c0b));import{libWrapper,UtilLibWrapper}from'./PatcherLibWrapper.js';import{SharedConsts}from'../shared/SharedConsts.js';import{LGT}from'./Util.js';import{PatcherRollData}from'./PatcherRollData.js';class Patcher_Item{static[_0x3bfb61(0x1ef)](){this['_init_tryPatchGetRollData']();}static[_0x3bfb61(0x1f7)](){const _0x1d779b=_0x3bfb61;try{libWrapper[_0x1d779b(0x200)](SharedConsts[_0x1d779b(0x1ff)],_0x1d779b(0x1fa),function(_0x1a0848,..._0x302150){const _0x218a53=_0x1d779b,_0x4945b=_0x1a0848(..._0x302150);return Patcher_Item[_0x218a53(0x1fb)](this,_0x4945b);},UtilLibWrapper[_0x1d779b(0x1f0)]);}catch(_0x56abcc){console[_0x1d779b(0x1f5)](...LGT,'Failed\x20to\x20bind\x20getRollData\x20handler!',_0x56abcc);}}static[_0x3bfb61(0x1fb)](_0x4b50a1,_0x1bf90f){const _0x2ecace=_0x3bfb61;if(!_0x1bf90f)return _0x1bf90f;return Object[_0x2ecace(0x1f9)](_0x1bf90f,PatcherRollData[_0x2ecace(0x201)](_0x4b50a1)),_0x1bf90f;}}export{Patcher_Item};
+import {libWrapper, UtilLibWrapper} from "./PatcherLibWrapper.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {LGT} from "./Util.js";
+import {PatcherRollData} from "./PatcherRollData.js";
+
+class Patcher_Item {
+	static init () {
+		this._init_tryPatchGetRollData();
+	}
+
+	static _init_tryPatchGetRollData () {
+		try {
+			libWrapper.register(
+				SharedConsts.MODULE_NAME,
+				"CONFIG.Item.documentClass.prototype.getRollData",
+				function (fn, ...args) {
+					const out = fn(...args);
+					return Patcher_Item._getRollData(this, out);
+				},
+				UtilLibWrapper.LIBWRAPPER_MODE_WRAPPER,
+			);
+		} catch (e) {
+			console.error(...LGT, `Failed to bind getRollData handler!`, e);
+		}
+	}
+
+	static _getRollData (item, rollData) {
+		if (!rollData) return rollData;
+		Object.assign(rollData, PatcherRollData.getAdditionalRollDataBase(item));
+		return rollData;
+	}
+}
+
+export {Patcher_Item};

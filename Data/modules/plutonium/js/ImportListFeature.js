@@ -1,1 +1,524 @@
-const _0xda16=['toolProf','languages','pAddActorEffects','pFillActorSkillData','ability','titleLog','TASK_EXIT_COMPLETE','_pImportEntry_pAddSubEntities','ascSort','pFillActorWeaponProfData','link','entries','pFillActorImmunityData','_titleLog','skills','_pImportEntry_pFillItems','armorProf','_pImportEntry_pFillSkills','chosenAbilityScoreIncrease','getImportedEmbed','get','languageProficiencies','name','_pGetSideData','pImportEntry','_pGetClassSubclassFeatureAdditionalEntities','render','items','update','resist','pFillActorAbilityData','_pGetEntityItem','887708MZcueP','subEntities','_pImportEntry_pFillTraits','_pHasSideLoadedEffects','sourceJsonToAbv','\x22\x20(from\x20\x22','keys','pGetUserInput','_doPopulateFlags','constructor','skillProficiencies','31CpaXHE','dnd5e','toolProficiencies','immune','data','5POQxLe','8923nkIxYn','pFillActorArmorProfData','pFillActorLanguageData','log','_pImportEntry_pImportToActor_fillFlags','sort','Unimplemented!','TASK_EXIT_COMPLETE_DATA_ONLY','CHAR_MAX_LEVEL','isCancelled','pApplyFormDataToActor','push','_pImportEntry_pImportToActor','pInit','document','conditionImmune','869960WhwklI','SYM_UI_SKIP','78781pvaFye','_pImportEntry_pImportToDirectoryGeneric','1066580VujVXN','isToken','3890POnnIS','traits','111242EtEFxg','ImportEntryOpts','weaponProficiencies','weaponProf','./ChooseImporter.js','pAddActorItems','_pImportEntry_pFillAbilities','_pImportEntry_pHandleAdditionalSpells','getTotalClassLevels','34zCXsgL','_pMutActorUpdateFeature','TASK_EXIT_CANCELLED','sheet','length','source','isTemp','flags','_foundryChosenAbilityScoreIncrease','pFillActorVulnerabilityData','armorProficiencies','_actor'];const _0x1334=function(_0xb7427d,_0xe33bc1){_0xb7427d=_0xb7427d-0x1cc;let _0xda16fa=_0xda16[_0xb7427d];return _0xda16fa;};const _0x283d07=_0x1334;(function(_0x41dbe9,_0x412ce3){const _0x346832=_0x1334;while(!![]){try{const _0x18e7c3=-parseInt(_0x346832(0x1d8))*parseInt(_0x346832(0x1e3))+-parseInt(_0x346832(0x1d6))+parseInt(_0x346832(0x21f))*parseInt(_0x346832(0x1d4))+parseInt(_0x346832(0x20f))+parseInt(_0x346832(0x1d2))+-parseInt(_0x346832(0x1da))+parseInt(_0x346832(0x21a))*-parseInt(_0x346832(0x220));if(_0x18e7c3===_0x412ce3)break;else _0x41dbe9['push'](_0x41dbe9['shift']());}catch(_0x56d9a1){_0x41dbe9['push'](_0x41dbe9['shift']());}}}(_0xda16,0x89e8e));import{ImportListCharacter}from'./ImportListCharacter.js';import{LGT}from'./Util.js';import{UtilApplications}from'./UtilApplications.js';import{DataConverter}from'./DataConverter.js';import{DataConverterSpell}from'./DataConverterSpell.js';import{UtilActors}from'./UtilActors.js';import{Charactermancer_AdditionalSpellsSelect}from'./UtilCharactermancerAdditionalSpells.js';import{Consts}from'./Consts.js';import{Charactermancer_AbilityScoreSelect}from'./UtilCharactermancer.js';class ImportListFeature extends ImportListCharacter{static['init'](){const _0x125774=_0x1334;throw new Error(_0x125774(0x226));}constructor(_0x39d2a5,_0x450192,_0xf0e98d,_0xd90ac3){const _0x529d15=_0x1334;super(_0x39d2a5,_0x450192,_0xf0e98d),this[_0x529d15(0x1fc)]=_0xd90ac3[_0x529d15(0x1f4)];}static async[_0x283d07(0x206)](_0x3227de,_0x3afe00){throw new Error('Unimplemented!');}static async[_0x283d07(0x20e)](_0x2f776c,_0x4f0674){const _0x187b59=_0x283d07;throw new Error(_0x187b59(0x226));}static async[_0x283d07(0x212)](_0x4560e2,_0x20ab9b){const _0x4d2ec7=_0x283d07;throw new Error(_0x4d2ec7(0x226));}async[_0x283d07(0x1e4)](_0x3719d2,_0x41655e,_0x43d24f){const _0x5c770a=_0x283d07;throw new Error(_0x5c770a(0x226));}async['pImportEntry'](_0x1144e7,_0x169a86){const _0x778480=_0x283d07;_0x169a86=_0x169a86||{},console[_0x778480(0x223)](...LGT,'Importing\x20'+this[_0x778480(0x1fc)]+'\x20\x22'+_0x1144e7[_0x778480(0x205)]+_0x778480(0x214)+Parser[_0x778480(0x213)](_0x1144e7[_0x778480(0x1e8)])+'\x22)');if(_0x169a86['isDataOnly'])return{'imported':[await this[_0x778480(0x218)][_0x778480(0x20e)](this[_0x778480(0x1ee)],_0x1144e7)],'status':UtilApplications[_0x778480(0x227)]};if(_0x169a86[_0x778480(0x1e9)])return this[_0x778480(0x1d5)](_0x1144e7,_0x169a86);else{if(this[_0x778480(0x1ee)])return this[_0x778480(0x1ce)](_0x1144e7,_0x169a86);else return this[_0x778480(0x1d5)](_0x1144e7,_0x169a86);}}async['_pImportEntry_pImportToActor'](_0x5eb392,_0x342450){const _0x223211=_0x283d07,_0x26f7a1={'data':{}},_0x5baaf2=new ImportListFeature[(_0x223211(0x1db))]({'chosenAbilityScoreIncrease':_0x5eb392[_0x223211(0x1eb)],'isCharactermancer':!!_0x342450['isCharactermancer']});await this[_0x223211(0x224)](_0x5eb392,_0x26f7a1,_0x342450),await this[_0x223211(0x1e0)](_0x5eb392,_0x26f7a1,_0x5baaf2);if(_0x5baaf2[_0x223211(0x229)])return{'status':UtilApplications['TASK_EXIT_CANCELLED']};await this[_0x223211(0x200)](_0x5eb392,_0x26f7a1['data'],_0x5baaf2);if(_0x5baaf2[_0x223211(0x229)])return{'status':UtilApplications['TASK_EXIT_CANCELLED']};await this[_0x223211(0x211)](_0x5eb392,_0x26f7a1[_0x223211(0x21e)],_0x5baaf2);if(_0x5baaf2[_0x223211(0x229)])return{'status':UtilApplications[_0x223211(0x1e5)]};await this[_0x223211(0x1fe)](_0x5eb392,_0x26f7a1,_0x5baaf2);if(_0x5baaf2['isCancelled'])return{'status':UtilApplications[_0x223211(0x1e5)]};if(Object[_0x223211(0x215)](_0x26f7a1['data'])[_0x223211(0x1e7)])await this['_actor'][_0x223211(0x20b)](_0x26f7a1);await this['_pImportEntry_pAddSubEntities'](_0x5eb392);if(this[_0x223211(0x1ee)][_0x223211(0x1d7)])this[_0x223211(0x1ee)][_0x223211(0x1e6)][_0x223211(0x209)]();return{'imported':[{'name':_0x5eb392[_0x223211(0x205)],'actor':this[_0x223211(0x1ee)]}],'status':UtilApplications[_0x223211(0x1f5)]};}[_0x283d07(0x224)](_0x3d65b6,_0x10b75b,_0x224c70){const _0x6f7007=_0x283d07,_0x43fb47={},_0x5908af={};this[_0x6f7007(0x217)]({'feature':_0x3d65b6,'actor':_0x10b75b,'importOpts':_0x224c70});if(Object[_0x6f7007(0x215)](_0x5908af)[_0x6f7007(0x1e7)])_0x43fb47[_0x6f7007(0x21b)]=_0x5908af;if(Object[_0x6f7007(0x215)](_0x43fb47)['length'])_0x10b75b[_0x6f7007(0x1ea)]=_0x43fb47;}['_doPopulateFlags']({feature:_0x599983,actor:_0x4615b3,importOpts:_0x13a01b,flags:_0x1683a5,flagsDnd5e:_0x51b9b8}){}async[_0x283d07(0x1e0)](_0x4dacdb,_0x5b3b7b,_0xf61ea9){const _0xe2244=_0x283d07,_0x37a8ef=await Charactermancer_AbilityScoreSelect[_0xe2244(0x20d)](this[_0xe2244(0x1ee)],_0x4dacdb[_0xe2244(0x1f3)],_0x5b3b7b,_0xf61ea9);if(_0xf61ea9[_0xe2244(0x229)])return;if(_0x37a8ef==null)return;_0xf61ea9['chosenAbilityScoreIncrease']=_0x37a8ef[_0xe2244(0x21e)];}async[_0x283d07(0x200)](_0x59451e,_0x3918e3,_0x133dc1){const _0x32a15b=_0x283d07;await DataConverter[_0x32a15b(0x1f2)](MiscUtil[_0x32a15b(0x203)](this[_0x32a15b(0x1ee)],_0x32a15b(0x21e),_0x32a15b(0x21e),_0x32a15b(0x1fd)),_0x59451e[_0x32a15b(0x219)],_0x3918e3,_0x133dc1);}async[_0x283d07(0x211)](_0x1c8bda,_0x23103a,_0x46471c){const _0x27edb5=_0x283d07;_0x23103a[_0x27edb5(0x1d9)]={},await DataConverter[_0x27edb5(0x222)](MiscUtil[_0x27edb5(0x203)](this[_0x27edb5(0x1ee)],_0x27edb5(0x21e),_0x27edb5(0x21e),_0x27edb5(0x1d9),_0x27edb5(0x1f0)),_0x1c8bda[_0x27edb5(0x204)],_0x23103a,_0x46471c);if(_0x46471c[_0x27edb5(0x229)])return;await DataConverter['pFillActorToolProfData'](MiscUtil[_0x27edb5(0x203)](this[_0x27edb5(0x1ee)],_0x27edb5(0x21e),_0x27edb5(0x21e),_0x27edb5(0x1d9),_0x27edb5(0x1ef)),_0x1c8bda[_0x27edb5(0x21c)],_0x23103a,_0x46471c);if(_0x46471c['isCancelled'])return;await DataConverter[_0x27edb5(0x221)](MiscUtil[_0x27edb5(0x203)](this['_actor'],_0x27edb5(0x21e),'data',_0x27edb5(0x1d9),_0x27edb5(0x1ff)),_0x1c8bda[_0x27edb5(0x1ed)],_0x23103a,_0x46471c);if(_0x46471c[_0x27edb5(0x229)])return;await DataConverter[_0x27edb5(0x1f8)](MiscUtil[_0x27edb5(0x203)](this[_0x27edb5(0x1ee)],'data',_0x27edb5(0x21e),'traits',_0x27edb5(0x1dd)),_0x1c8bda[_0x27edb5(0x1dc)],_0x23103a,_0x46471c);if(_0x46471c[_0x27edb5(0x229)])return;await DataConverter[_0x27edb5(0x1fb)](MiscUtil[_0x27edb5(0x203)](this['_actor'],_0x27edb5(0x21e),_0x27edb5(0x21e),_0x27edb5(0x1d9),'di'),_0x1c8bda[_0x27edb5(0x21d)],_0x23103a,_0x46471c);if(_0x46471c[_0x27edb5(0x229)])return;await DataConverter['pFillActorResistanceData'](MiscUtil[_0x27edb5(0x203)](this[_0x27edb5(0x1ee)],_0x27edb5(0x21e),'data','traits','dr'),_0x1c8bda[_0x27edb5(0x20c)],_0x23103a,_0x46471c);if(_0x46471c[_0x27edb5(0x229)])return;await DataConverter[_0x27edb5(0x1ec)](MiscUtil[_0x27edb5(0x203)](this[_0x27edb5(0x1ee)],_0x27edb5(0x21e),_0x27edb5(0x21e),_0x27edb5(0x1d9),'dv'),_0x1c8bda['vulnerable'],_0x23103a,_0x46471c);if(_0x46471c[_0x27edb5(0x229)])return;await DataConverter['pFillActorConditionImmunityData'](MiscUtil[_0x27edb5(0x203)](this['_actor'],_0x27edb5(0x21e),_0x27edb5(0x21e),_0x27edb5(0x1d9),'ci'),_0x1c8bda[_0x27edb5(0x1d1)],_0x23103a,_0x46471c);}async[_0x283d07(0x1fe)](_0x188188,_0x31989b,_0xd3103d){const _0x296e24=_0x283d07;await this[_0x296e24(0x1e4)](_0x188188,_0x31989b,_0xd3103d);if(_0xd3103d[_0x296e24(0x229)])return;const _0x389b50={};await this[_0x296e24(0x1e1)](_0x188188,_0x31989b,_0xd3103d,_0x389b50);if(_0xd3103d[_0x296e24(0x229)])return;const _0x3b26fc=DataConverterSpell['doHookSpellLinkRender']['bind'](null,this[_0x296e24(0x1ee)]['id'],_0x389b50),_0x5468d9=await Renderer['get']()['pWithPlugin']({'entryType':_0x296e24(0x1f9),'pluginType':'*','fnPlugin':_0x3b26fc,'pFn':async()=>{const _0x2d2595=_0x296e24,_0x2ac283=await this['constructor'][_0x2d2595(0x20e)](this['_actor'],_0x188188);return _0xd3103d[_0x2d2595(0x20a)]['push'](_0x2ac283),_0x2ac283;}}),_0x10e8ae=await UtilActors[_0x296e24(0x1df)](this['_actor'],_0xd3103d[_0x296e24(0x20a)]),_0x4365f2=[];if(await this[_0x296e24(0x218)]['_pHasSideLoadedEffects'](this['_actor'],_0x188188)){const _0x5ebc80=DataConverter[_0x296e24(0x202)](_0x10e8ae,_0x5468d9);if(_0x5ebc80)_0x4365f2[_0x296e24(0x1cd)](...await this[_0x296e24(0x218)]['_pGetItemEffects'](this[_0x296e24(0x1ee)],_0x188188,_0x5ebc80[_0x296e24(0x1d0)],_0xd3103d));}await UtilActors[_0x296e24(0x1f1)](this[_0x296e24(0x1ee)],_0x4365f2);}async[_0x283d07(0x1e1)](_0x506852,_0x5cdf3b,_0x16089e,_0x316e6f){const _0x5759d8=_0x283d07,_0x31b7c6=Object[_0x5759d8(0x1fa)](_0x16089e[_0x5759d8(0x201)]||{})[_0x5759d8(0x225)](([,_0x244a24],[,_0x5435b1])=>SortUtil[_0x5759d8(0x1f7)](_0x5435b1,_0x244a24)),_0x4939b8=_0x31b7c6?.[0x0]?.[0x0]||null,_0x41675b=await Charactermancer_AdditionalSpellsSelect[_0x5759d8(0x216)]({'additionalSpells':_0x506852['additionalSpells'],'sourceHintText':_0x506852['name'],'curLevel':0x0,'targetLevel':Consts[_0x5759d8(0x228)],'spellLevelLow':0x0,'spellLevelHigh':0x9});if(_0x41675b==null)return _0x16089e['isCancelled']=!![];if(_0x41675b===VeCt[_0x5759d8(0x1d3)])return;const _0xb82422=UtilActors[_0x5759d8(0x1e2)](this[_0x5759d8(0x1ee)]);await Charactermancer_AdditionalSpellsSelect[_0x5759d8(0x1cc)](this['_actor'],_0x41675b,{'parentAbilityAbv':_0x4939b8,'hashToIdMap':_0x316e6f});}async[_0x283d07(0x1f6)](_0x18b0a7){const _0x547234=_0x283d07;await this[_0x547234(0x218)][_0x547234(0x208)](this[_0x547234(0x1ee)],_0x18b0a7);}static async[_0x283d07(0x208)](_0x3ebcc4,_0x1ec6fe){const _0x2e958b=_0x283d07,_0xa76a52=await this['_pGetSideData'](_0x3ebcc4,_0x1ec6fe);if(!_0xa76a52)return[];if(!_0xa76a52[_0x2e958b(0x210)])return[];const {ChooseImporter:_0x2369f9}=await import(_0x2e958b(0x1de));for(const _0x2637c0 in _0xa76a52[_0x2e958b(0x210)]){if(!_0xa76a52[_0x2e958b(0x210)]['hasOwnProperty'](_0x2637c0))continue;const _0x5b1529=_0xa76a52[_0x2e958b(0x210)][_0x2637c0];if(!(_0x5b1529 instanceof Array))continue;const _0x230f8a=_0x2369f9['getImporter'](_0x2637c0,_0x3ebcc4);await _0x230f8a[_0x2e958b(0x1cf)]();for(const _0x45e3ea of _0x5b1529){await _0x230f8a[_0x2e958b(0x207)](_0x45e3ea);}}}}ImportListFeature[_0x283d07(0x1db)]=class extends ImportListCharacter[_0x283d07(0x1db)]{constructor(_0x46153b){const _0x243b19=_0x283d07;_0x46153b=_0x46153b||{},super(_0x46153b),this[_0x243b19(0x201)]=_0x46153b['chosenAbilityScoreIncrease'];}};export{ImportListFeature};
+import {LGT} from "./Util.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {DataConverter} from "./DataConverter.js";
+import {UtilActors} from "./UtilActors.js";
+import {Charactermancer_AdditionalSpellsSelect} from "./UtilCharactermancerAdditionalSpells.js";
+import {Consts} from "./Consts.js";
+import {
+	Charactermancer_AbilityScoreSelect,
+	Charactermancer_FeatureOptionsSelect,
+	Charactermancer_Util,
+} from "./UtilCharactermancer.js";
+import {ImportListCharacter} from "./ImportListCharacter.js";
+import {ImportedDocument, ImportSummary} from "./ImportList.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+import {UtilDocuments} from "./UtilDocuments.js";
+
+// TODO merge parts with `ImportListRace`
+/**
+ * A generic feature importer.
+ * Note that effects are generally handled at an "actor" level, not at an "item" level. This is because, should an
+ * effect depend on a choice the user made when importing (e.g. selecting "Constitution" as the ability score for the
+ * "Resilience" feat), we need to be able to use this variable data. Therefore, side-loaded effects are handled,
+ * generally, by the importer, as opposed to directly adding effects to the items we would import.
+ * generally, by the importer, as opposed to directly adding effects to the items we would import.
+ */
+class ImportListFeature extends ImportListCharacter {
+	// region External
+	static init () {
+		throw new Error(`Unimplemented!`);
+	}
+	// endregion
+
+	constructor (applicationOpts, externalData, subclassOpts, featureImporterOpts) {
+		super(applicationOpts, externalData, subclassOpts);
+
+		this._titleLog = featureImporterOpts.titleLog;
+	}
+
+	static async _pGetSideData (actor, entity) {
+		throw new Error(`Unimplemented!`);
+	}
+
+	static async _pGetEntityItem (actor, entity) {
+		throw new Error(`Unimplemented!`);
+	}
+
+	static async _pHasSideLoadedEffects (actor, entity) {
+		throw new Error("Unimplemented!");
+	}
+
+	async _pMutActorUpdateFeature (entity, actUpdate, dataBuilderOpts) {
+		throw new Error("Unimplemented!");
+	}
+
+	static async _pGetDereferencedFeatureItem (feature) {
+		throw new Error("Unimplemented!");
+	}
+
+	static async _pGetInitFeatureLoadeds (feature) {
+		throw new Error("Unimplemented!");
+	}
+
+	/**
+	 * @param entity
+	 * @param importOpts Options object.
+	 * @param [importOpts.isTemp] if the item should be temporary, and displayed.
+	 * @param [importOpts.isDataOnly] If this import should simply return the data, rather than import anything.
+	 * @param [importOpts.filterValues] Saved filter values to be used instead of our own.
+	 * @param [importOpts.isCharactermancer]
+	 * @return {*}
+	 */
+	async _pImportEntryBasic (entity, importOpts) {
+		importOpts = importOpts || {};
+
+		console.log(...LGT, `Importing ${this._titleLog} "${entity.name}" (from "${Parser.sourceJsonToAbv(entity.source)}")`);
+
+		if (importOpts.isDataOnly) {
+			return new ImportSummary({
+				status: UtilApplications.TASK_EXIT_COMPLETE_DATA_ONLY,
+				imported: [
+					new ImportedDocument({
+						document: await this.constructor._pGetEntityItem(this._actor, entity),
+						actor: this._actor,
+					}),
+				],
+			});
+		}
+
+		if (importOpts.isTemp) return this._pImportEntry_pImportToDirectoryGeneric(entity, importOpts);
+		if (this._actor) return this._pImportEntry_pImportToActor(entity, importOpts);
+		return this._pImportEntry_pImportToDirectoryGeneric(entity, importOpts);
+	}
+
+	/**
+	 * @param feature
+	 * @param importOpts Options object.
+	 * @param [importOpts.isTemp] if the item should be temporary, and displayed.
+	 * @param [importOpts.isDataOnly] If this import should simply return the data, rather than import anything.
+	 * @param [importOpts.filterValues] Saved filter values to be used instead of our own.
+	 * @param [importOpts.isCharactermancer]
+	 *
+	 * @param [importOpts.isLeaf] If this feature should be loaded directly, without any sub-loading applied.
+	 * @param [importOpts.isSkippableLeaf] If this leaf feature's entries can (optionally) be skipped.
+	 *
+	 * @param [importOpts.isPreLoadedFeature] If the feature has already been loaded by e.g. the Class Importer.
+	 * @param [importOpts.featureEntriesPageFilter]
+	 * @param [importOpts.featureEntriesPageFilterValues]
+	 * @param [importOpts.existingFeatureChecker]
+	 * @param [importOpts.spellcastingAbilityAbv] Optional spellcasting ability for attached "additional spells."
+	 *
+	 * @return {*}
+	 */
+	async _pImportEntry (feature, importOpts) {
+		importOpts = importOpts || {};
+
+		// If there's no actor, simply de-reference all the references and use the basic import flow.
+		if (!this._actor) {
+			const dereferenced = await this.constructor._pGetDereferencedFeatureItem(feature);
+			return this._pImportEntryBasic(dereferenced, importOpts);
+		}
+
+		// If we're a "leaf" feature, there is nothing more to load, so use the basic import flow.
+		if (importOpts.isLeaf) {
+			// If this is a stub feature that just contains more options, avoid importing it.
+			if (importOpts.isSkippableLeaf && feature.entries?.[0]?.type === "options" && feature.entries?.length === 1) {
+				return new ImportSummary({
+					status: UtilApplications.TASK_EXIT_SKIPPED_OTHER,
+				});
+			}
+
+			return this._pImportEntryBasic(feature, importOpts);
+		}
+
+		const pageFilter = importOpts.isPreLoadedFeature
+			? importOpts.featureEntriesPageFilter
+			: this._pageFilter;
+		const filterValues = importOpts.isPreLoadedFeature
+			? (importOpts.featureEntriesPageFilterValues)
+			: (importOpts.filterValues || (await this._pGetPageFilterValues()));
+
+		// If we're using the advanced flow, dredge up all the loadable features
+		let allFeatures;
+		if (importOpts.isPreLoadedFeature) {
+			allFeatures = [feature];
+		} else {
+			const wrappedFeature = await this.constructor._pGetInitFeatureLoadeds(feature);
+			allFeatures = [wrappedFeature];
+		}
+
+		// Filter down the `.loadeds` according to our current filter settings
+		allFeatures = Charactermancer_Util.getFilteredFeatures(
+			allFeatures,
+			pageFilter,
+			filterValues,
+		);
+
+		// (Should never occur)
+		if (!allFeatures.length) return ImportSummary.cancelled();
+
+		allFeatures = Charactermancer_Util.getImportableFeatures(allFeatures);
+
+		Charactermancer_Util.doApplyFilterToFeatureEntries(
+			allFeatures,
+			pageFilter,
+			filterValues,
+		);
+
+		const allFeaturesGrouped = Charactermancer_Util.getFeaturesGroupedByOptionsSet(allFeatures);
+		const actorUpdate = {};
+
+		for (const topLevelFeatureMeta of allFeaturesGrouped) {
+			const {topLevelFeature, optionsSets} = topLevelFeatureMeta;
+
+			for (let ixOptionSet = 0; ixOptionSet < optionsSets.length; ++ixOptionSet) {
+				const optionsSet = optionsSets[ixOptionSet];
+
+				const formDataOptionSet = await Charactermancer_FeatureOptionsSelect.pGetUserInput({
+					actor: this._actor,
+					optionsSet,
+					level: topLevelFeature.level,
+					existingFeatureChecker: importOpts.existingFeatureChecker,
+					isSkipCharactermancerHandled: importOpts.isCharactermancer,
+				});
+
+				if (!formDataOptionSet) return ImportSummary.cancelled();
+				if (formDataOptionSet === VeCt.SYM_UI_SKIP) continue;
+
+				for (const loaded of formDataOptionSet.data?.features) {
+					const {entity, type} = loaded;
+
+					// Remove properties which are handled in the options selection component
+					const cpyEntity = MiscUtil.copy(entity);
+					delete cpyEntity.additionalSpells;
+
+					const isSkippableLeaf = ixOptionSet === 0 && optionsSets.length > 1;
+
+					switch (type) {
+						case "classFeature":
+						case "subclassFeature": {
+							const importResult = await this.pImportEntry(cpyEntity, {...importOpts, isLeaf: true, isSkippableLeaf});
+							if (importResult?.status === UtilApplications.TASK_EXIT_CANCELLED) return importResult;
+							break;
+						}
+
+						case "optionalfeature": {
+							const importResult = await this._pImportEntry_pHandleGenericFeatureIndirect({
+								ClassName: "ImportListOptionalFeature",
+								propInstance: "_IMPORT_LIST_OPTIONAL_FEATURE",
+								importOpts,
+								cpyEntity,
+								isSkippableLeaf,
+							});
+							if (importResult?.status === UtilApplications.TASK_EXIT_CANCELLED) return importResult;
+							break;
+						}
+
+						case "feat": {
+							const importResult = await this._pImportEntry_pHandleGenericFeatureIndirect({
+								ClassName: "ImportListFeat",
+								propInstance: "_IMPORT_LIST_FEAT",
+								importOpts,
+								cpyEntity,
+								isSkippableLeaf,
+							});
+							if (importResult?.status === UtilApplications.TASK_EXIT_CANCELLED) return importResult;
+							break;
+						}
+
+						case "reward": {
+							const importResult = await this._pImportEntry_pHandleGenericFeatureIndirect({
+								ClassName: "ImportListReward",
+								propInstance: "_IMPORT_LIST_REWARD",
+								importOpts,
+								cpyEntity,
+								isSkippableLeaf,
+							});
+							if (importResult?.status === UtilApplications.TASK_EXIT_CANCELLED) return importResult;
+							break;
+						}
+
+						case "charoption": {
+							const importResult = await this._pImportEntry_pHandleGenericFeatureIndirect({
+								ClassName: "ImportListCharCreationOption",
+								propInstance: "_IMPORT_LIST_CHAR_CREATION_OPTION",
+								importOpts,
+								cpyEntity,
+								isSkippableLeaf,
+							});
+							if (importResult?.status === UtilApplications.TASK_EXIT_CANCELLED) return importResult;
+							break;
+						}
+					}
+
+					// Track which features we add as we import them, to warn the user against double-dipping e.g. fighting styles
+					if (importOpts.existingFeatureChecker) importOpts.existingFeatureChecker.addImportFeature(loaded.page, loaded.source, loaded.hash);
+				}
+
+				await Charactermancer_FeatureOptionsSelect.pDoApplyProficiencyFormDataToActorUpdate(
+					this._actor,
+					actorUpdate,
+					formDataOptionSet,
+				);
+
+				await Charactermancer_FeatureOptionsSelect.pDoApplyAdditionalSpellsFormDataToActor({
+					actor: this._actor,
+					formData: formDataOptionSet,
+					abilityAbv: importOpts.spellcastingAbilityAbv,
+				});
+			}
+		}
+
+		await this._pDoMergeAndApplyActorUpdate(actorUpdate);
+
+		return new ImportSummary({
+			status: UtilApplications.TASK_EXIT_COMPLETE,
+			imported: [
+				new ImportedDocument({
+					name: feature.name,
+					actor: this._actor,
+				}),
+			],
+		});
+	}
+
+	async _pImportEntry_pHandleGenericFeatureIndirect (
+		{
+			ClassName,
+			propInstance,
+			importOpts,
+			cpyEntity,
+			isSkippableLeaf,
+		},
+	) {
+		const isDirectCall = this.constructor.name === ClassName;
+
+		if (!isDirectCall && (!ImportListFeature[propInstance] || ImportListFeature[propInstance].actor !== this._actor)) {
+			const name = "./" + ClassName + ".js"; // FIXME(Future) This should be a template string, but eslint freaks out
+			const {[ClassName]: Clazz} = await import(name);
+			ImportListFeature[propInstance] = new Clazz({actor: this._actor});
+			await ImportListFeature[propInstance].pInit();
+		}
+
+		const importer = isDirectCall ? this : ImportListFeature[propInstance];
+
+		const nxtOpts = {...importOpts, isLeaf: true, isSkippableLeaf};
+		if (importer !== this) {
+			delete nxtOpts.filterValues;
+			delete nxtOpts.existingFeatureChecker;
+		}
+
+		return importer.pImportEntry(cpyEntity, nxtOpts);
+	}
+
+	async _pGetPageFilterValues () {
+		// If we are importing from e.g. Rivet, we won't have the UI state
+		if (!this._pageFilter.filterBox) await this._pageFilter.pInitFilterBox();
+		return this._pageFilter.filterBox.getValues();
+	}
+
+	async _pImportEntry_pImportToActor (entity, importOpts) {
+		// Build actor update
+		const actUpdate = {data: {}};
+
+		const dataBuilderOpts = new ImportListFeature.ImportEntryOpts({
+			chosenAbilityScoreIncrease: entity._foundryChosenAbilityScoreIncrease,
+			isCharactermancer: !!importOpts.isCharactermancer,
+		});
+
+		await this._pImportEntry_pImportToActor_fillFlags(entity, actUpdate, importOpts);
+		await this._pImportEntry_pFillAbilities(entity, actUpdate, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return ImportSummary.cancelled();
+		await this._pImportEntry_pFillTraits(entity, actUpdate.data, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return ImportSummary.cancelled();
+
+		// Add actor items
+		await this._pImportEntry_pFillItems(entity, actUpdate, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return ImportSummary.cancelled();
+
+		// Update actor
+		if (Object.keys(actUpdate.data).length) await UtilDocuments.pUpdateDocument(this._actor, actUpdate);
+
+		// region Add any sub-entities
+		// E.g. Monk's "Unarmed Strike" sub-entity for the "Martial Arts" feature
+		await this._pImportEntry_pAddSubEntities(entity);
+		// endregion
+
+		if (this._actor.isToken) this._actor.sheet.render();
+
+		return new ImportSummary({
+			status: UtilApplications.TASK_EXIT_COMPLETE,
+			imported: [
+				new ImportedDocument({
+					name: entity.name,
+					actor: this._actor,
+				}),
+			],
+		});
+	}
+
+	_pImportEntry_pImportToActor_fillFlags (feature, actor, importOpts) {
+		const flags = {};
+		const flagsDnd5e = {};
+
+		this._doPopulateFlags({feature, actor, importOpts});
+
+		if (Object.keys(flagsDnd5e).length) flags.dnd5e = flagsDnd5e;
+		if (Object.keys(flags).length) actor.flags = flags;
+	}
+
+	_doPopulateFlags ({feature, actor, importOpts, flags, flagsDnd5e}) { /* Implement as required */ }
+
+	async _pImportEntry_pFillAbilities (feature, actUpdate, dataBuilderOpts) {
+		const formData = await Charactermancer_AbilityScoreSelect.pFillActorAbilityData(this._actor, feature.ability, actUpdate, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return;
+
+		// Pull out the chosen ability scores, so we can pass the maximum one into any potential spell population
+		if (formData == null) return;
+		dataBuilderOpts.chosenAbilityScoreIncrease = formData.data;
+	}
+
+	async _pImportEntry_pFillTraits (feature, data, dataBuilderOpts) {
+		data.traits = {};
+
+		await DataConverter.pFillActorImmunityData(
+			MiscUtil.get(this._actor, "data", "data", "traits", "di"),
+			feature.immune,
+			data,
+			dataBuilderOpts,
+		);
+		if (dataBuilderOpts.isCancelled) return;
+
+		await DataConverter.pFillActorResistanceData(
+			MiscUtil.get(this._actor, "data", "data", "traits", "dr"),
+			feature.resist,
+			data,
+			dataBuilderOpts,
+		);
+		if (dataBuilderOpts.isCancelled) return;
+
+		await DataConverter.pFillActorVulnerabilityData(
+			MiscUtil.get(this._actor, "data", "data", "traits", "dv"),
+			feature.vulnerable,
+			data,
+			dataBuilderOpts,
+		);
+		if (dataBuilderOpts.isCancelled) return;
+
+		await DataConverter.pFillActorConditionImmunityData(
+			MiscUtil.get(this._actor, "data", "data", "traits", "ci"),
+			feature.conditionImmune,
+			data,
+			dataBuilderOpts,
+		);
+	}
+
+	async _pImportEntry_pFillItems (feature, actUpdate, dataBuilderOpts) {
+		await this._pMutActorUpdateFeature(feature, actUpdate, dataBuilderOpts);
+		if (dataBuilderOpts.isCancelled) return;
+
+		const spellHashToItemPosMap = {};
+
+		await this._pImportEntry_pHandleAdditionalSpells(feature, actUpdate, dataBuilderOpts, spellHashToItemPosMap);
+		if (dataBuilderOpts.isCancelled) return;
+
+		const tagHashItemIdMap = {};
+		Object.entries(spellHashToItemPosMap)
+			.forEach(([hash, id]) => MiscUtil.set(tagHashItemIdMap, "spell", hash, id));
+
+		const featItem = await UtilDataConverter.pGetWithDescriptionPlugins(
+			async () => {
+				const featureItem = await this.constructor._pGetEntityItem(this._actor, feature);
+				dataBuilderOpts.items.push(featureItem);
+				return featureItem;
+			},
+			{
+				actorId: this._actor.id,
+				tagHashItemIdMap,
+			},
+		);
+
+		const importedEmbeds = await UtilActors.pAddActorItems(this._actor, dataBuilderOpts.items);
+
+		// region Add item effects
+		const effectsToAdd = [];
+		if (await this.constructor._pHasSideLoadedEffects(this._actor, feature)) {
+			const importedEmbed = DataConverter.getImportedEmbed(importedEmbeds, featItem);
+
+			if (importedEmbed) effectsToAdd.push(...(await this.constructor._pGetItemEffects(this._actor, feature, importedEmbed.document, dataBuilderOpts)));
+		}
+
+		await UtilActors.pAddActorEffects(this._actor, effectsToAdd);
+		// endregion
+	}
+
+	async _pImportEntry_pHandleAdditionalSpells (feature, actUpdate, dataBuilderOpts, spellHashToItemPosMap) {
+		const maxAbilityScoreIncrease = Object.entries(dataBuilderOpts.chosenAbilityScoreIncrease || {})
+			.sort(([, vA], [, vB]) => SortUtil.ascSort(vB, vA));
+		const parentAbilityAbv = maxAbilityScoreIncrease?.[0]?.[0] || null;
+
+		const formData = await Charactermancer_AdditionalSpellsSelect.pGetUserInput({
+			additionalSpells: feature.additionalSpells,
+			sourceHintText: feature.name,
+
+			// Force all levels to be added
+			curLevel: 0,
+			targetLevel: Consts.CHAR_MAX_LEVEL,
+			spellLevelLow: 0,
+			spellLevelHigh: 9,
+		});
+
+		if (formData == null) return dataBuilderOpts.isCancelled = true;
+		if (formData === VeCt.SYM_UI_SKIP) return;
+
+		const totalClassLevels = UtilActors.getTotalClassLevels(this._actor);
+		await Charactermancer_AdditionalSpellsSelect.pApplyFormDataToActor(
+			this._actor,
+			formData,
+			{
+				parentAbilityAbv: parentAbilityAbv,
+			},
+		);
+	}
+
+	async _pImportEntry_pAddSubEntities (entity) {
+		await this.constructor._pGetClassSubclassFeatureAdditionalEntities(this._actor, entity);
+	}
+
+	/** Note that we assume that anything in this sub-entity data is to be imported as an item on the actor. */
+	static async _pGetClassSubclassFeatureAdditionalEntities (actor, entity) {
+		const sideData = await this._pGetSideData(actor, entity);
+		if (!sideData) return [];
+		if (!sideData.subEntities) return [];
+
+		const {ChooseImporter} = await import("./ChooseImporter.js");
+
+		for (const prop in sideData.subEntities) {
+			if (!sideData.subEntities.hasOwnProperty(prop)) continue;
+
+			const arr = sideData.subEntities[prop];
+			if (!(arr instanceof Array)) continue;
+
+			const importer = ChooseImporter.getImporter(prop, actor);
+			await importer.pInit();
+			for (const ent of arr) {
+				await importer.pImportEntry(ent);
+			}
+		}
+	}
+}
+ImportListFeature._IMPORT_LIST_FEAT = null;
+ImportListFeature._IMPORT_LIST_OPTIONAL_FEATURE = null;
+ImportListFeature._IMPORT_LIST_REWARD = null;
+ImportListFeature._IMPORT_LIST_CHAR_CREATION_OPTION = null;
+
+ImportListFeature.ImportEntryOpts = class extends ImportListCharacter.ImportEntryOpts {
+	constructor (opts) {
+		opts = opts || {};
+		super(opts);
+
+		this.chosenAbilityScoreIncrease = opts.chosenAbilityScoreIncrease;
+	}
+};
+
+export {ImportListFeature};

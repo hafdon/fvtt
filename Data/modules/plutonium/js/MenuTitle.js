@@ -1,1 +1,55 @@
-const _0x54cb=['stopPropagation','352SmdMUE','isOwner','\x20Options\x22><span\x20class=\x22fas\x20fa-ellipsis-v\x22></span></a>','find','user','_doAddButtonSheet','Class','1706wAjRmV','preventDefault','element','Plutonium','init','_HOOK_NAME','_pHandleOpenButtonClick','isStreamerMode','_pOpenMenu','Missing\x20hook\x20name!','filter','<a\x20class=\x22tit-menu__btn-open--sheet\x20px-2\x22\x20title=\x22','_EVT_NAMESPACE','302741imPSAx','mousedown','258jraXOA','remove','getMinRole','.tit-menu__btn-open--sheet','get','208469vdTTVR','696309rnLOeP','Other','isRequireOwner','pHandleButtonClick','138vJyxAK','3615DTUrkC','2OgGKhF','_TOOL_LIST','1928wVVHPZ','686669oaZGRi'];const _0x534d=function(_0xede506,_0x2bb3a0){_0xede506=_0xede506-0x1ee;let _0x54cbae=_0x54cb[_0xede506];return _0x54cbae;};const _0x15f579=_0x534d;(function(_0x2da5cb,_0x2ec7e1){const _0x51a4c9=_0x534d;while(!![]){try{const _0x252080=parseInt(_0x51a4c9(0x209))*parseInt(_0x51a4c9(0x206))+-parseInt(_0x51a4c9(0x204))*parseInt(_0x51a4c9(0x212))+-parseInt(_0x51a4c9(0x1ff))+-parseInt(_0x51a4c9(0x200))+parseInt(_0x51a4c9(0x1fa))*parseInt(_0x51a4c9(0x205))+parseInt(_0x51a4c9(0x1f8))+-parseInt(_0x51a4c9(0x20b))*parseInt(_0x51a4c9(0x208));if(_0x252080===_0x2ec7e1)break;else _0x2da5cb['push'](_0x2da5cb['shift']());}catch(_0x4f2ce8){_0x2da5cb['push'](_0x2da5cb['shift']());}}}(_0x54cb,0xc0d7f));import{Menu}from'./Menu.js';import{Config}from'./Config.js';import{UtilMigrate}from'./UtilMigrate.js';class MenuTitle extends Menu{static[_0x15f579(0x1ef)](){const _0x4e2244=_0x15f579;if(!this[_0x4e2244(0x1f0)])throw new Error(_0x4e2244(0x1f4));Hooks['on'](this[_0x4e2244(0x1f0)],(_0x145fbf,_0x56826c,_0x313c06)=>{const _0x737df5=_0x4e2244,_0x4229dc=this[_0x737df5(0x207)]['filter'](_0x24e721=>_0x24e721[_0x737df5(0x202)]&&UtilMigrate[_0x737df5(0x20c)](_0x313c06)||!_0x24e721[_0x737df5(0x202)]),_0x5dbf7e=new this(this[_0x737df5(0x1f7)],_0x4229dc);_0x5dbf7e[_0x737df5(0x210)](_0x145fbf,_0x56826c,_0x313c06);});}constructor(_0x4c3413,_0xc0c03a){const _0x1e15f6=_0x15f579;if(!_0x4c3413)throw new Error('Missing\x20namespace\x20argument!');if(!_0xc0c03a)throw new Error('Missing\x20tools\x20list\x20argument!');_0xc0c03a=_0xc0c03a[_0x1e15f6(0x1f5)](_0xca94f=>_0xca94f[_0x1e15f6(0x1fc)]==null||game[_0x1e15f6(0x20f)]['role']>=_0xca94f[_0x1e15f6(0x1fc)]()),super({'eventNamespace':_0x4c3413,'toolsList':_0xc0c03a,'direction':'down'});}['_doAddButtonSheet'](_0x2f535c,_0x374599,_0x50332a){const _0x7cbb21=_0x15f579,_0x511178=_0x2f535c[_0x7cbb21(0x214)][_0x7cbb21(0x20e)]('.window-header');_0x511178[_0x7cbb21(0x20e)](_0x7cbb21(0x1fd))[_0x7cbb21(0x1fb)](),$(_0x7cbb21(0x1f6)+(Config[_0x7cbb21(0x1fe)]('ui',_0x7cbb21(0x1f2))?_0x7cbb21(0x201):_0x7cbb21(0x1ee))+_0x7cbb21(0x20d))[_0x7cbb21(0x1f9)](_0x3253c2=>_0x3253c2['stopPropagation']())['mouseup'](_0x3c8755=>{const _0x4a3cd1=_0x7cbb21;return _0x3c8755[_0x4a3cd1(0x213)](),_0x3c8755[_0x4a3cd1(0x20a)](),this[_0x4a3cd1(0x1f3)](_0x3c8755,_0x2f535c,_0x374599,_0x50332a);})['insertBefore'](_0x511178[_0x7cbb21(0x20e)]('.close'));}async[_0x15f579(0x1f1)](_0x5b294c,_0x442142,_0x4a788f,_0x40001d,_0x1f9372){const _0x5e06b2=_0x15f579;_0x442142[_0x5e06b2(0x211)][_0x5e06b2(0x203)](_0x5b294c,_0x4a788f,_0x40001d,_0x1f9372);}}export{MenuTitle};
+import {Menu} from "./Menu.js";
+import {Config} from "./Config.js";
+import {UtilMigrate} from "./UtilMigrate.js";
+import {UtilApplications} from "./UtilApplications.js";
+
+class MenuTitle extends Menu {
+	// region External
+	static init () {
+		if (!this._HOOK_NAME) throw new Error(`Missing hook name!`);
+		if (!this._TOOL_LIST.length) return; // Ignore "placeholder" menus
+
+		Hooks.on(this._HOOK_NAME, (app, $html, data) => {
+			const availableTools = this._TOOL_LIST.filter(it => (it.isRequireOwner && UtilMigrate.isOwner(data)) || !it.isRequireOwner);
+
+			const menu = new this(this._EVT_NAMESPACE, availableTools);
+			menu._doAddButtonSheet(app, $html, data);
+		});
+	}
+	// endregion
+
+	constructor (eventNamespace, toolsList) {
+		if (!eventNamespace) throw new Error(`Missing namespace argument!`);
+		if (!toolsList) throw new Error(`Missing tools list argument!`);
+
+		toolsList = toolsList.filter(it => it.getMinRole == null || game.user.role >= it.getMinRole());
+
+		super({
+			eventNamespace,
+			toolsList,
+			direction: "down",
+		});
+	}
+
+	_doAddButtonSheet (app, $html, data) {
+		const $sheetHeader = UtilApplications.$getAppElement(app).find(`.window-header`);
+		$sheetHeader.find(`.tit-menu__btn-open--sheet`).remove();
+
+		$(`<a class="tit-menu__btn-open--sheet text-center" title="${Config.get("ui", "isStreamerMode") ? "Other" : "Plutonium"} Options"><span class="fas fa-ellipsis-v"></span></a>`)
+			// Prevent dragging when clicking on this button
+			.mousedown(evt => evt.stopPropagation())
+			.mouseup(evt => {
+				evt.preventDefault();
+				evt.stopPropagation();
+
+				return this._pOpenMenu(evt, app, $html, data);
+			})
+			.insertBefore($sheetHeader.find(`.close`));
+	}
+
+	async _pHandleOpenButtonClick (evt, toolMeta, app, $html, data) {
+		toolMeta.Class.pHandleButtonClick(evt, app, $html, data);
+	}
+}
+
+export {MenuTitle};

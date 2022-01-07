@@ -1,1 +1,92 @@
-const _0x1eb9=['init','filter','60277hsGfUP','185326xnNRkw','min','dae','get','calculateArmor','_MODULE_BETTER_ROLLS','adnd5e','MODULE_MIDI_QOL','join','isGM','patch','isModuleActive','_getVersionString','midi-qol','.\x20Please\x20update\x20your\x20system\x20version.','isBetterRollsActive','isDragUploadActive','betterrolls5e','133883OeZQcL','8033iiQqrb','isDaeActive','kanka-foundry','MODULE_DAE','107274cLFLNC','reaction','user','_MODULE_DRAG_UPLOAD','getFeatureFlags','notifications','major','\x20and\x20','getSystemVersion','_SYSTEMS_SUPPORTED','3RHTGlw','282277lvSLgQ','minor','active','46bWIOIp','below\x20the\x20minimum\x20required\x20version\x20(','max','modules','839881QwlYGM','MODULE_KANKA_FOUNDRY','\x22\x20version\x20'];const _0x3f32=function(_0x1da6da,_0x21999a){_0x1da6da=_0x1da6da-0x1b5;let _0x1eb920=_0x1eb9[_0x1da6da];return _0x1eb920;};const _0x248143=_0x3f32;(function(_0x46ee14,_0x36c1d3){const _0x19727c=_0x3f32;while(!![]){try{const _0x1d2339=parseInt(_0x19727c(0x1be))+-parseInt(_0x19727c(0x1d5))+parseInt(_0x19727c(0x1e3))*-parseInt(_0x19727c(0x1d1))+parseInt(_0x19727c(0x1d0))+parseInt(_0x19727c(0x1df))*-parseInt(_0x19727c(0x1bd))+-parseInt(_0x19727c(0x1e0))+parseInt(_0x19727c(0x1b8));if(_0x1d2339===_0x36c1d3)break;else _0x46ee14['push'](_0x46ee14['shift']());}catch(_0x445d6b){_0x46ee14['push'](_0x46ee14['shift']());}}}(_0x1eb9,0x35836));import{Util}from'./Util.js';import{UtilGameSettings}from'./UtilGameSettings.js';class UtilCompat{static[_0x248143(0x1bb)](){const _0xb7183c=_0x248143;if(!game[_0xb7183c(0x1d7)][_0xb7183c(0x1c7)])return;const {system:_0x47c3c6,isUnknownVersion:_0x6b012e,major:_0x3112d2,minor:_0x286e13,patch:_0x835b43,version:_0x2c6986}=Util['Versions'][_0xb7183c(0x1dd)]();if(_0x6b012e)return;const _0x284a55=this['_SYSTEMS_SUPPORTED'][_0x47c3c6];if(!_0x284a55)return;const _0x45e569=_0x284a55['min']?_0x3112d2<_0x284a55[_0xb7183c(0x1bf)][_0xb7183c(0x1db)]||_0x3112d2===_0x284a55[_0xb7183c(0x1bf)][_0xb7183c(0x1db)]&&_0x286e13<_0x284a55[_0xb7183c(0x1bf)][_0xb7183c(0x1e1)]||_0x3112d2===_0x284a55['min'][_0xb7183c(0x1db)]&&_0x286e13===_0x284a55[_0xb7183c(0x1bf)]['minor']&&_0x835b43<_0x284a55[_0xb7183c(0x1bf)]['patch']:![],_0x3f9f54=_0x284a55[_0xb7183c(0x1b6)]?_0x3112d2>_0x284a55[_0xb7183c(0x1b6)][_0xb7183c(0x1db)]||_0x3112d2===_0x284a55[_0xb7183c(0x1bf)]['major']&&_0x286e13>_0x284a55[_0xb7183c(0x1bf)]['minor']||_0x3112d2===_0x284a55['min'][_0xb7183c(0x1db)]&&_0x286e13===_0x284a55[_0xb7183c(0x1bf)][_0xb7183c(0x1e1)]&&_0x835b43>_0x284a55['min'][_0xb7183c(0x1c8)]:![];if(!_0x45e569&&!_0x3f9f54)return;ui[_0xb7183c(0x1da)]['warn']('Game\x20system\x20\x22'+_0x47c3c6+_0xb7183c(0x1ba)+_0x2c6986+'\x20is\x20'+[_0x45e569?_0xb7183c(0x1b5)+this['_getVersionString'](_0x284a55[_0xb7183c(0x1bf)])+')':null,_0x3f9f54?'above\x20the\x20maximum\x20supported\x20version\x20('+this[_0xb7183c(0x1ca)](_0x284a55[_0xb7183c(0x1b6)])+')':null][_0xb7183c(0x1bc)](Boolean)[_0xb7183c(0x1c6)](_0xb7183c(0x1dc))+_0xb7183c(0x1cc));}static['_getVersionString'](_0x3a26e7){return _0x3a26e7['major']+'.'+_0x3a26e7['minor']+'.'+_0x3a26e7['patch'];}static['isModuleActive'](_0x36148f){const _0x3e446c=_0x248143;return!!game[_0x3e446c(0x1b7)][_0x3e446c(0x1c1)](_0x36148f)?.[_0x3e446c(0x1e2)];}static[_0x248143(0x1d2)](){const _0x2a6bc1=_0x248143;return this[_0x2a6bc1(0x1c9)](UtilCompat[_0x2a6bc1(0x1d4)]);}static[_0x248143(0x1ce)](){const _0x264a00=_0x248143;return this[_0x264a00(0x1c9)](UtilCompat[_0x264a00(0x1d8)]);}static[_0x248143(0x1cd)](){const _0x1077a9=_0x248143;return this[_0x1077a9(0x1c9)](UtilCompat['_MODULE_BETTER_ROLLS']);}static['isDaeGeneratingArmorEffects'](){const _0x539922=_0x248143;if(!this['isDaeActive']())return![];return!!UtilGameSettings['getSafe'](UtilCompat['MODULE_DAE'],_0x539922(0x1c2));}static[_0x248143(0x1d9)]({isReaction:_0x44c5b9}){const _0x2fa3e2=_0x248143,_0x441469={};return _0x44c5b9&&(_0x441469[_0x2fa3e2(0x1c4)]={'itemInfo':{'type':_0x2fa3e2(0x1d6)}}),_0x441469;}}UtilCompat[_0x248143(0x1d4)]=_0x248143(0x1c0),UtilCompat[_0x248143(0x1d8)]='dragupload',UtilCompat[_0x248143(0x1c3)]=_0x248143(0x1cf),UtilCompat[_0x248143(0x1c5)]=_0x248143(0x1cb),UtilCompat[_0x248143(0x1b9)]=_0x248143(0x1d3),UtilCompat[_0x248143(0x1de)]={'dnd5e':{'min':{'major':0x1,'minor':0x2,'patch':0x4}}};export{UtilCompat};
+import {Util} from "./Util.js";
+import {UtilGameSettings} from "./UtilGameSettings.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Config} from "./Config.js";
+
+class UtilCompat {
+	static init () {
+		if (!game.user.isGM) return;
+
+		const {system, isUnknownVersion, major, minor, patch, version} = Util.Versions.getSystemVersion();
+
+		// Ignore "unknown version" systems, as we assume the user knows what they're doing
+		//   (e.g. is running a test version).
+		if (isUnknownVersion) return;
+
+		const supportedSystemMeta = this._SYSTEMS_SUPPORTED[system];
+		if (!supportedSystemMeta) return; // As above; ignore, and assume user competence :^)
+
+		const isBelowMin = supportedSystemMeta.min
+			? major < supportedSystemMeta.min.major
+			|| (major === supportedSystemMeta.min.major && minor < supportedSystemMeta.min.minor)
+			|| (major === supportedSystemMeta.min.major && minor === supportedSystemMeta.min.minor && patch < supportedSystemMeta.min.patch)
+			: false;
+		const isAboveMax = supportedSystemMeta.max
+			? major > supportedSystemMeta.max.major
+			|| (major === supportedSystemMeta.max.major && minor > supportedSystemMeta.max.minor)
+			|| (major === supportedSystemMeta.max.major && minor === supportedSystemMeta.max.minor && patch > supportedSystemMeta.max.patch)
+			: false;
+		if (!isBelowMin && !isAboveMax) return;
+
+		ui.notifications.warn(`Game system "${system}" version ${version} is ${[isBelowMin ? `below the minimum required version (${this._getVersionString(supportedSystemMeta.min)})` : null, isAboveMax ? `above the maximum supported version (${this._getVersionString(supportedSystemMeta.max)})` : null].filter(Boolean).join(" and ")} for use with ${Config.get("ui", "isStreamerMode") ? SharedConsts.MODULE_TITLE_FAKE : SharedConsts.MODULE_TITLE}. Please ${isAboveMax ? "downgrade" : "upgrade"} your system version.`);
+	}
+
+	static _getVersionString (versionDict) { return `${versionDict.major}.${versionDict.minor}.${versionDict.patch}`; }
+
+	static isModuleActive (moduleId) { return !!game.modules.get(moduleId)?.active; }
+
+	static isDaeActive () { return this.isModuleActive(UtilCompat.MODULE_DAE); }
+	static isDragUploadActive () { return this.isModuleActive(UtilCompat._MODULE_DRAG_UPLOAD); }
+	static isBetterRollsActive () { return this.isModuleActive(UtilCompat._MODULE_BETTER_ROLLS); }
+	static isPermissionViewerActive () { return this.isModuleActive(UtilCompat.MODULE_PERMISSION_VIEWER); }
+	static isSmolFoundryActive () { return this.isModuleActive(UtilCompat.MODULE_SMOL_FOUNDRY); }
+	static isTwilightUiActive () { return this.isModuleActive(UtilCompat._MODULE_TWILIGHT_UI); }
+	static isTidy5eSheetActive () { return this.isModuleActive(UtilCompat._MODULE_TIDY5E_SHEET); }
+	static isObsidianActive () { return this.isModuleActive(UtilCompat._MODULE_OBSIDIAN); }
+	static isBabeleActive () { return this.isModuleActive(UtilCompat._MODULE_BABELE); }
+
+	static isDaeGeneratingArmorEffects () {
+		if (!this.isDaeActive()) return false;
+		return !!UtilGameSettings.getSafe(UtilCompat.MODULE_DAE, "calculateArmor");
+	}
+
+	static getFeatureFlags ({isReaction}) {
+		const out = {};
+
+		if (isReaction) {
+			// Support "Better NPC Sheets 5e", which is apparently incapable of determining a reaction using the standard
+			//   "Action type: reaction" data :^)
+			out.adnd5e = {itemInfo: {type: "reaction"}};
+		}
+
+		return out;
+	}
+}
+UtilCompat.MODULE_DAE = "dae";
+UtilCompat._MODULE_DRAG_UPLOAD = "dragupload";
+UtilCompat._MODULE_BETTER_ROLLS = "betterrolls5e";
+UtilCompat.MODULE_MIDI_QOL = "midi-qol";
+UtilCompat.MODULE_KANKA_FOUNDRY = "kanka-foundry";
+UtilCompat.MODULE_SMOL_FOUNDRY = "smol-foundry";
+UtilCompat.MODULE_PERMISSION_VIEWER = "permission_viewer";
+UtilCompat._MODULE_TWILIGHT_UI = "twilight-ui";
+UtilCompat._MODULE_TIDY5E_SHEET = "tidy5e-sheet";
+UtilCompat._MODULE_OBSIDIAN = "obsidian";
+UtilCompat._MODULE_BABELE = "babele";
+
+UtilCompat._SYSTEMS_SUPPORTED = {
+	"dnd5e": {
+		min: {
+			major: 1,
+			minor: 5,
+			patch: 2,
+		},
+		max: {
+			major: 1,
+			minor: 5,
+			patch: Number.MAX_SAFE_INTEGER,
+		},
+	},
+};
+
+export {UtilCompat};

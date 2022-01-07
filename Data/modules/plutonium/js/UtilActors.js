@@ -1,1 +1,1005 @@
-const _0x963d=['PACT_CASTER_MAX_SPELL_LEVEL','WEAPON_PROFICIENCIES','getUnmappedArmorProficiency','effects','27292lTxcLZ','VALID_TOOL_PROFICIENCIES','trim','maul|phb','mar','raw','giant','actorSpellPreparationMode','CASTER_TYPE_TO_PROGRESSION','nature','name','dagger|phb','deception','auran','getUnmappedWeaponProficiency','trs','thief','details','keys','longbow|phb','BG_SKILL_PROFS_CUSTOMIZE','dwarvish','collection','3558YEnjvB','ACTOR_TEMP_NAME','gnomish','117322aTfTYq','trident|phb','religion','_parse_aToB','map','22429ZACRln','disguise\x20kit','tiny','54KuGKnK','cant','push','club|phb','shortsword|phb','ImportedEmbeddedDocument','getActorBarAttributes','getItemUIdFromWeaponProficiency','getTrackedAttributes','half','VALID_CONDITIONS','survival','hvy','pois','orc','join','preparationMode','glaive|phb','instance','MAX_SAFE_INTEGER','shields','lance|phb','full','staff|phb','DND5E','attributes','mace|phb','prepareActorSpells','_parse_bToA','deep','draconic','handaxe|phb','morningstar|phb','animal\x20handling','getActorSpellItemOpts','forEach','herb','spellcasting','roll','greatclub|phb','game','data','goblin','arcana','type','heavy\x20crossbow|phb','bar','ActiveEffect','TOKEN.BarAttributes','pAddActorEffects','value','pAddActorItems','net|phb','hand\x20crossbow|phb','dart|phb','athletics','1sOKZVz','fa-adjust','_WEAPON_PROFICIENCIES_TO_ITEM_UIDS','greataxe|phb','VALID_LANGUAGES','common','cartographer\x27s\x20tools','primordial','battleaxe|phb','disg','set','TOOL_PROFICIENCIES','lgt','getMappedWeaponProficiency','gith','elvish','navg','blowgun|phb','alchemist\x27s\x20supplies','javelin|phb','Number\x20of\x20returned\x20items\x20did\x20not\x20match\x20number\x20of\x20input\x20items!','quarterstaff|phb','huge','artisan\x27s\x20tools','flail|phb','pike|phb','stealth','levels','localize','vehicles\x20(water)','Item','shl','get','sum','PROF_TO_ICON_CLASS','VALID_WEAPON_PROFICIENCIES','createEmbeddedDocuments','rapier|phb','class','heavy','isPrepared','sling|phb','uid','abyssal','warhammer|phb','art','abj','2MBPcWV','performance','sim','enc','create','items','i18n','VALID_ARMOR_PROFICIENCIES','longsword|phb','grg','Actor','halfling','third','isFinite','entries','celestial','init','aquan','prepareSpellItems','fa-check-double','evo','WEAPONS_MARTIAL','356983hmeMyB','sickle|phb','insight','sort','138206fJPWQE','toLowerCase','SKILL_TO_ATB_ABV','terran','history','halberd|phb','pact','SKILL_ABV_TO_FULL','isLevelUp','light\x20crossbow|phb','whip|phb','acrobatics','shortbow|phb','fa-check','war\x20pick|phb','localeCompare','damageTypes','190990ctZYXC','max','sleight\x20of\x20hand','navigator\x27s\x20tools','abilityAbv','importSpell','sylvan','_VET_CASTER_TYPE_TO_FVTT','thieves\x27\x20tools','medicine','length','herbalism\x20kit','_id','spear|phb','scimitar|phb','ARMOR_PROFICIENCIES','medium','_pAddActorEmbeddedDocuments','document','VALID_DAMAGE_TYPES','filter','perception','getModelBarAttributes','div','greatsword|phb','getMappedTool','getMappedArmorProficiency','forg','druidic'];const _0x5561=function(_0x324147,_0x305df8){_0x324147=_0x324147-0x173;let _0x963dd2=_0x963d[_0x324147];return _0x963dd2;};const _0xf8c242=_0x5561;(function(_0x5a46ee,_0x35155a){const _0x3ab7e4=_0x5561;while(!![]){try{const _0x399fa8=parseInt(_0x3ab7e4(0x178))+parseInt(_0x3ab7e4(0x1b8))*parseInt(_0x3ab7e4(0x222))+parseInt(_0x3ab7e4(0x199))+parseInt(_0x3ab7e4(0x1f3))*-parseInt(_0x3ab7e4(0x1b3))+parseInt(_0x3ab7e4(0x23c))+-parseInt(_0x3ab7e4(0x1b0))*-parseInt(_0x3ab7e4(0x1bb))+-parseInt(_0x3ab7e4(0x238));if(_0x399fa8===_0x35155a)break;else _0x5a46ee['push'](_0x5a46ee['shift']());}catch(_0x54e2a3){_0x5a46ee['push'](_0x5a46ee['shift']());}}}(_0x963d,0x1d185));import{Config}from'./Config.js';import{Consts}from'./Consts.js';class UtilActors{static[_0xf8c242(0x232)](){const _0x51aa91=_0xf8c242;UtilActors['VALID_DAMAGE_TYPES']=Object['keys'](MiscUtil[_0x51aa91(0x213)](CONFIG,_0x51aa91(0x1d3),_0x51aa91(0x177))||{}),UtilActors[_0x51aa91(0x1c5)]=Object[_0x51aa91(0x1ab)](MiscUtil[_0x51aa91(0x213)](CONFIG,_0x51aa91(0x1d3),'conditionTypes')||{});}static['doShowSheetItem'](_0x362d70,_0x483862,_0x27023b){const _0x42a56a=_0xf8c242,_0x27a05d=CONFIG[_0x42a56a(0x22c)][_0x42a56a(0x1af)][_0x42a56a(0x1cd)]['get'](_0x483862);if(!_0x27a05d)return;const _0x5e34ea=_0x27a05d[_0x42a56a(0x227)]['get'](_0x27023b);if(!_0x5e34ea)return;return _0x5e34ea[_0x42a56a(0x1e1)]();}static[_0xf8c242(0x1dd)](_0x1cf071){const _0x47663e=_0xf8c242,_0x2b1a02={'isActorItem':!![],'isPrepared':!!Config['get'](_0x47663e(0x17d),_0x47663e(0x1d6)),'preparationMode':Config[_0x47663e(0x213)](_0x47663e(0x17d),_0x47663e(0x1a0))};if(!_0x1cf071||MiscUtil[_0x47663e(0x213)](_0x1cf071,'data',_0x47663e(0x1a3))===Consts[_0x47663e(0x1b1)])return _0x2b1a02;const _0x3d5590=MiscUtil['get'](_0x1cf071,'data',_0x47663e(0x1e4),_0x47663e(0x1d4),_0x47663e(0x1e0));if(_0x3d5590)_0x2b1a02[_0x47663e(0x17c)]=_0x3d5590[_0x47663e(0x1ed)];return _0x2b1a02;}static['getSpellItemItemOpts'](){const _0x3e7610=_0xf8c242,_0x4619f9={};return _0x4619f9[_0x3e7610(0x21b)]=!!Config['get'](_0x3e7610(0x17d),_0x3e7610(0x234)),_0x4619f9[_0x3e7610(0x1cb)]=Config[_0x3e7610(0x213)](_0x3e7610(0x17d),'spellItemPreparationMode'),_0x4619f9;}static async[_0xf8c242(0x1ee)](_0x54d366,_0x684e51,{isTemporary:isTemporary=![]}={},_0x5d1214){const _0x229976=_0xf8c242;if(!_0x684e51?.[_0x229976(0x182)])return[];return this[_0x229976(0x189)]({'actor':_0x54d366,'embeds':_0x684e51,'isTemporary':isTemporary,'propData':_0x229976(0x227),'ClsEmbed':Item,'embedName':_0x229976(0x211),'createEmbeddedDocOpts':_0x5d1214});}static async[_0xf8c242(0x1ec)](_0x545d5c,_0x5787fe,{isTemporary:isTemporary=![]}={}){const _0x4fb576=_0xf8c242;if(!_0x5787fe?.[_0x4fb576(0x182)])return[];return this[_0x4fb576(0x189)]({'actor':_0x545d5c,'embeds':_0x5787fe,'isTemporary':isTemporary,'propData':_0x4fb576(0x198),'ClsEmbed':ActiveEffect,'embedName':_0x4fb576(0x1ea)});}static async['_pAddActorEmbeddedDocuments']({actor:_0x104a10,embeds:_0x3d7752,isTemporary:_0x288672,propData:_0x2fa77c,ClsEmbed:_0x1748b3,embedName:_0x514788,createEmbeddedDocOpts:_0x5f54d2}){const _0x5352f3=_0xf8c242;let _0x141cd0;_0x288672?(_0x141cd0=await _0x1748b3[_0x5352f3(0x226)](_0x3d7752,{'temporary':!![]}),_0x141cd0[_0x5352f3(0x1de)](_0x3cb073=>{const _0x657395=_0x5352f3;_0x3cb073[_0x657395(0x1e4)][_0x657395(0x184)]=_0x3cb073[_0x657395(0x1e4)]['_id']||CryptUtil[_0x657395(0x21d)](),_0x104a10[_0x2fa77c][_0x657395(0x1fd)](_0x3cb073['id'],_0x3cb073),(_0x3cb073[_0x657395(0x198)]||[])[_0x657395(0x1de)](_0x539118=>{const _0x371eeb=_0x657395;_0x539118[_0x371eeb(0x1e4)][_0x371eeb(0x184)]=_0x539118['data']['_id']||CryptUtil[_0x371eeb(0x21d)](),_0x104a10[_0x371eeb(0x198)][_0x371eeb(0x1fd)](_0x539118['id'],_0x539118);});})):_0x141cd0=await _0x104a10[_0x5352f3(0x217)](_0x514788,_0x3d7752,{..._0x5f54d2});if(_0x3d7752[_0x5352f3(0x182)]!==_0x141cd0[_0x5352f3(0x182)])throw new Error(_0x5352f3(0x207));return _0x3d7752[_0x5352f3(0x1b7)]((_0x1d8c43,_0x5e3da6)=>new UtilActors[(_0x5352f3(0x1c0))]({'raw':_0x1d8c43,'document':_0x141cd0[_0x5e3da6]}));}static[_0xf8c242(0x191)](_0x363ce3){const _0x13e67d=_0xf8c242;return _0x363ce3=_0x363ce3[_0x13e67d(0x23d)]()['trim'](),this[_0x13e67d(0x19a)][_0x363ce3];}static['getUnmappedTool'](_0x10519f){const _0xeed1bf=_0xf8c242;if(!_0x10519f)return null;return Parser[_0xeed1bf(0x1d7)](this[_0xeed1bf(0x19a)],_0x10519f,null);}static['getMappedLanguage'](_0x203fe0){const _0x2d1278=_0xf8c242;return _0x203fe0=_0x203fe0[_0x2d1278(0x23d)]()[_0x2d1278(0x19b)](),this[_0x2d1278(0x1f7)][_0x203fe0];}static['getMappedCasterType'](_0x217d3b){if(!_0x217d3b)return _0x217d3b;return this['_VET_CASTER_TYPE_TO_FVTT'][_0x217d3b];}static[_0xf8c242(0x192)](_0x4d8b5a){const _0x27c77b=_0xf8c242;if(!_0x4d8b5a)return null;return Parser['_parse_aToB'](this[_0x27c77b(0x229)],_0x4d8b5a,null);}static[_0xf8c242(0x197)](_0x200454){if(!_0x200454)return null;return Parser['_parse_bToA'](this['VALID_ARMOR_PROFICIENCIES'],_0x200454,null);}static[_0xf8c242(0x200)](_0x2cdea7){const _0x438b29=_0xf8c242;if(!_0x2cdea7)return null;return Parser['_parse_aToB'](this[_0x438b29(0x216)],_0x2cdea7,null);}static[_0xf8c242(0x1a7)](_0x4c45ad){const _0x23ab17=_0xf8c242;if(!_0x4c45ad)return null;return Parser[_0x23ab17(0x1d7)](this['VALID_WEAPON_PROFICIENCIES'],_0x4c45ad,null);}static[_0xf8c242(0x1c2)](_0x15fb5a){const _0x58f48b=_0xf8c242;if(!_0x15fb5a)return null;_0x15fb5a=_0x15fb5a[_0x58f48b(0x19b)]();if(/^{@item [^}]+}$/['exec'](_0x15fb5a))return _0x15fb5a;return Parser[_0x58f48b(0x1b6)](this[_0x58f48b(0x1f5)],_0x15fb5a,null);}static[_0xf8c242(0x18e)](_0x3ae7d4){const _0x26fc43=_0xf8c242;function _0x10aae0(_0x166c9c,_0xbaba63,_0x3a8a34){const _0x622d57=_0x5561;for(let [_0x161435,_0x515ec6]of Object[_0x622d57(0x230)](_0xbaba63)){const _0x15e1bd=[..._0x3a8a34,_0x161435];if(_0x515ec6 instanceof Object){const _0x36bcf4=Number[_0x622d57(0x22f)](parseFloat(_0x515ec6[_0x622d57(0x1ed)]))&&Number[_0x622d57(0x22f)](parseFloat(_0x515ec6[_0x622d57(0x179)]));if(_0x36bcf4)_0x166c9c[_0x622d57(0x1bd)](_0x15e1bd);else _0x10aae0(_0x166c9c,_0xbaba63[_0x161435],_0x15e1bd);}else Number['isFinite'](_0x515ec6)&&_0x166c9c[_0x622d57(0x1bd)](_0x15e1bd);}}const _0xb33738=[];return _0x10aae0(_0xb33738,_0x3ae7d4,[]),_0xb33738[_0x26fc43(0x1b7)](_0x19f2a9=>_0x19f2a9[_0x26fc43(0x1ca)]('.'));}static[_0xf8c242(0x1c1)](_0x20eeb5){const _0x2e0011=_0xf8c242;if(!_0x20eeb5)return[];const _0x204473=TokenConfig[_0x2e0011(0x1c3)](_0x20eeb5[_0x2e0011(0x1e4)][_0x2e0011(0x1e4)],[]);return _0x204473['bar']=_0x204473[_0x2e0011(0x1e9)][_0x2e0011(0x1b7)](_0x362ba2=>_0x362ba2['join']('.')),_0x204473[_0x2e0011(0x1e9)][_0x2e0011(0x23b)]((_0x26a52b,_0x1dcfd6)=>_0x26a52b['localeCompare'](_0x1dcfd6)),_0x204473['value']=_0x204473[_0x2e0011(0x1ed)][_0x2e0011(0x1b7)](_0x10a308=>_0x10a308[_0x2e0011(0x1ca)]('.')),_0x204473['value'][_0x2e0011(0x23b)]((_0xc9c519,_0x3938f5)=>_0xc9c519[_0x2e0011(0x176)](_0x3938f5)),{[game[_0x2e0011(0x228)][_0x2e0011(0x20f)](_0x2e0011(0x1eb))]:_0x204473[_0x2e0011(0x1e9)],[game['i18n'][_0x2e0011(0x20f)]('TOKEN.BarValues')]:_0x204473[_0x2e0011(0x1ed)]};}static['getTotalClassLevels'](_0x29765b){const _0x1863f1=_0xf8c242;return _0x29765b[_0x1863f1(0x227)][_0x1863f1(0x18c)](_0x37257a=>_0x37257a[_0x1863f1(0x1e7)]===_0x1863f1(0x219))['map'](_0x1f8457=>_0x1f8457[_0x1863f1(0x1e4)][_0x1863f1(0x1e4)][_0x1863f1(0x20e)]||0x0)['reduce']((_0x1a380f,_0x3af9ed)=>_0x1a380f+_0x3af9ed,0x0);}static[_0xf8c242(0x244)](_0x58162f){const _0x31d23a=_0xf8c242;let _0x39a32a=Number(_0x58162f?.[_0x31d23a(0x1e4)]?.[_0x31d23a(0x1e4)]?.[_0x31d23a(0x1aa)]?.['xp']?.['value']);if(isNaN(_0x39a32a))_0x39a32a=0x0;const _0x28d071=_0x58162f['items'][_0x31d23a(0x18c)](_0x36b9b3=>_0x36b9b3['type']===_0x31d23a(0x219))[_0x31d23a(0x1b7)](_0x455367=>_0x455367['data'][_0x31d23a(0x1e4)][_0x31d23a(0x20e)]||0x0)[_0x31d23a(0x214)]();let _0x5660f8=Parser['LEVEL_XP_REQUIRED'][_0x28d071];if(isNaN(_0x5660f8))_0x5660f8=Number[_0x31d23a(0x1ce)];return _0x39a32a>=_0x5660f8;}}UtilActors[_0xf8c242(0x243)]={'acr':_0xf8c242(0x247),'ani':_0xf8c242(0x1dc),'arc':_0xf8c242(0x1e6),'ath':_0xf8c242(0x1f2),'dec':_0xf8c242(0x1a5),'his':_0xf8c242(0x240),'ins':_0xf8c242(0x23a),'itm':'intimidation','inv':'investigation','med':_0xf8c242(0x181),'nat':_0xf8c242(0x1a2),'prc':_0xf8c242(0x18d),'prf':_0xf8c242(0x223),'per':'persuasion','rel':_0xf8c242(0x1b5),'slt':_0xf8c242(0x17a),'ste':_0xf8c242(0x20d),'sur':_0xf8c242(0x1c6)},UtilActors[_0xf8c242(0x215)]={'1':_0xf8c242(0x174),'2':_0xf8c242(0x235),'0.5':_0xf8c242(0x1f4)},UtilActors['VET_SIZE_TO_ABV']={[SZ_TINY]:_0xf8c242(0x1ba),[SZ_SMALL]:'sm',[SZ_MEDIUM]:'med',[SZ_LARGE]:'lg',[SZ_HUGE]:_0xf8c242(0x209),[SZ_GARGANTUAN]:_0xf8c242(0x22b)},UtilActors['VET_SPELL_SCHOOL_TO_ABV']={'A':_0xf8c242(0x221),'C':'con','D':_0xf8c242(0x18f),'E':_0xf8c242(0x225),'V':_0xf8c242(0x236),'I':'ill','N':'nec','T':_0xf8c242(0x1a8)},UtilActors[_0xf8c242(0x1a1)]={'full':[[0x2,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0],[0x3,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0],[0x4,0x2,0x0,0x0,0x0,0x0,0x0,0x0,0x0],[0x4,0x3,0x0,0x0,0x0,0x0,0x0,0x0,0x0],[0x4,0x3,0x2,0x0,0x0,0x0,0x0,0x0,0x0],[0x4,0x3,0x3,0x0,0x0,0x0,0x0,0x0,0x0],[0x4,0x3,0x3,0x1,0x0,0x0,0x0,0x0,0x0],[0x4,0x3,0x3,0x2,0x0,0x0,0x0,0x0,0x0],[0x4,0x3,0x3,0x3,0x1,0x0,0x0,0x0,0x0],[0x4,0x3,0x3,0x3,0x2,0x0,0x0,0x0,0x0],[0x4,0x3,0x3,0x3,0x2,0x1,0x0,0x0,0x0],[0x4,0x3,0x3,0x3,0x2,0x1,0x0,0x0,0x0],[0x4,0x3,0x3,0x3,0x2,0x1,0x1,0x0,0x0],[0x4,0x3,0x3,0x3,0x2,0x1,0x1,0x0,0x0],[0x4,0x3,0x3,0x3,0x2,0x1,0x1,0x1,0x0],[0x4,0x3,0x3,0x3,0x2,0x1,0x1,0x1,0x0],[0x4,0x3,0x3,0x3,0x2,0x1,0x1,0x1,0x1],[0x4,0x3,0x3,0x3,0x3,0x1,0x1,0x1,0x1],[0x4,0x3,0x3,0x3,0x3,0x2,0x1,0x1,0x1],[0x4,0x3,0x3,0x3,0x3,0x2,0x2,0x1,0x1]],'artificer':[[0x2,0x0,0x0,0x0,0x0],[0x2,0x0,0x0,0x0,0x0],[0x3,0x0,0x0,0x0,0x0],[0x3,0x0,0x0,0x0,0x0],[0x4,0x2,0x0,0x0,0x0],[0x4,0x2,0x0,0x0,0x0],[0x4,0x3,0x0,0x0,0x0],[0x4,0x3,0x0,0x0,0x0],[0x4,0x3,0x2,0x0,0x0],[0x4,0x3,0x2,0x0,0x0],[0x4,0x3,0x3,0x0,0x0],[0x4,0x3,0x3,0x0,0x0],[0x4,0x3,0x3,0x1,0x0],[0x4,0x3,0x3,0x1,0x0],[0x4,0x3,0x3,0x2,0x0],[0x4,0x3,0x3,0x2,0x0],[0x4,0x3,0x3,0x3,0x1],[0x4,0x3,0x3,0x3,0x1],[0x4,0x3,0x3,0x3,0x2],[0x4,0x3,0x3,0x3,0x2]],'1/2':[[0x0,0x0,0x0,0x0,0x0],[0x2,0x0,0x0,0x0,0x0],[0x3,0x0,0x0,0x0,0x0],[0x3,0x0,0x0,0x0,0x0],[0x4,0x2,0x0,0x0,0x0],[0x4,0x2,0x0,0x0,0x0],[0x4,0x3,0x0,0x0,0x0],[0x4,0x3,0x0,0x0,0x0],[0x4,0x3,0x2,0x0,0x0],[0x4,0x3,0x2,0x0,0x0],[0x4,0x3,0x3,0x0,0x0],[0x4,0x3,0x3,0x0,0x0],[0x4,0x3,0x3,0x1,0x0],[0x4,0x3,0x3,0x1,0x0],[0x4,0x3,0x3,0x2,0x0],[0x4,0x3,0x3,0x2,0x0],[0x4,0x3,0x3,0x3,0x1],[0x4,0x3,0x3,0x3,0x1],[0x4,0x3,0x3,0x3,0x2],[0x4,0x3,0x3,0x3,0x2]],'1/3':[[0x0,0x0,0x0,0x0],[0x0,0x0,0x0,0x0],[0x2,0x0,0x0,0x0],[0x3,0x0,0x0,0x0],[0x3,0x0,0x0,0x0],[0x3,0x0,0x0,0x0],[0x4,0x2,0x0,0x0],[0x4,0x2,0x0,0x0],[0x4,0x2,0x0,0x0],[0x4,0x3,0x0,0x0],[0x4,0x3,0x0,0x0],[0x4,0x3,0x0,0x0],[0x4,0x3,0x2,0x0],[0x4,0x3,0x2,0x0],[0x4,0x3,0x2,0x0],[0x4,0x3,0x3,0x0],[0x4,0x3,0x3,0x0],[0x4,0x3,0x3,0x0],[0x4,0x3,0x3,0x1],[0x4,0x3,0x3,0x1]],'pact':[[0x1,0x0,0x0,0x0,0x0],[0x2,0x0,0x0,0x0,0x0],[0x0,0x2,0x0,0x0,0x0],[0x0,0x2,0x0,0x0,0x0],[0x0,0x0,0x2,0x0,0x0],[0x0,0x0,0x2,0x0,0x0],[0x0,0x0,0x0,0x2,0x0],[0x0,0x0,0x0,0x2,0x0],[0x0,0x0,0x0,0x0,0x2],[0x0,0x0,0x0,0x0,0x2],[0x0,0x0,0x0,0x0,0x3],[0x0,0x0,0x0,0x0,0x3],[0x0,0x0,0x0,0x0,0x3],[0x0,0x0,0x0,0x0,0x3],[0x0,0x0,0x0,0x0,0x3],[0x0,0x0,0x0,0x0,0x3],[0x0,0x0,0x0,0x0,0x4],[0x0,0x0,0x0,0x0,0x4],[0x0,0x0,0x0,0x0,0x4],[0x0,0x0,0x0,0x0,0x4]]},UtilActors[_0xf8c242(0x195)]=0x5,UtilActors[_0xf8c242(0x18b)]=null,UtilActors[_0xf8c242(0x1c5)]=null,UtilActors[_0xf8c242(0x1fe)]=[_0xf8c242(0x205),_0xf8c242(0x20a),_0xf8c242(0x1f9),_0xf8c242(0x1b9),'forgery\x20kit','gaming\x20set',_0xf8c242(0x183),'musical\x20instrument',_0xf8c242(0x17b),_0xf8c242(0x180),'vehicles\x20(land)',_0xf8c242(0x210)],UtilActors[_0xf8c242(0x19a)]={'artisan\x27s\x20tools':_0xf8c242(0x220),'disguise\x20kit':_0xf8c242(0x1fc),'forgery\x20kit':_0xf8c242(0x193),'gaming\x20set':_0xf8c242(0x1e3),'herbalism\x20kit':_0xf8c242(0x1df),'musical\x20instrument':'music','navigator\x27s\x20tools':_0xf8c242(0x203),'poisoner\x27s\x20kit':_0xf8c242(0x1c8),'thieves\x27\x20tools':_0xf8c242(0x1a9),'vehicle\x20(land\x20or\x20water)':'vehicle'},UtilActors[_0xf8c242(0x1f7)]={'common':_0xf8c242(0x1f8),'aarakocra':'aarakocra','abyssal':_0xf8c242(0x21e),'aquan':_0xf8c242(0x233),'auran':_0xf8c242(0x1a6),'celestial':_0xf8c242(0x231),'deep\x20speech':_0xf8c242(0x1d8),'draconic':_0xf8c242(0x1d9),'druidic':_0xf8c242(0x194),'dwarvish':_0xf8c242(0x1ae),'elvish':_0xf8c242(0x202),'giant':_0xf8c242(0x19f),'gith':_0xf8c242(0x201),'gnomish':_0xf8c242(0x1b2),'goblin':_0xf8c242(0x1e5),'gnoll':'gnoll','halfling':_0xf8c242(0x22d),'ignan':'ignan','infernal':'infernal','orc':_0xf8c242(0x1c9),'primordial':_0xf8c242(0x1fa),'sylvan':_0xf8c242(0x17e),'terran':_0xf8c242(0x23f),'thieves\x27\x20cant':_0xf8c242(0x1bc),'undercommon':'undercommon'},UtilActors[_0xf8c242(0x17f)]={'full':_0xf8c242(0x1d1),'1/2':_0xf8c242(0x1c4),'1/3':_0xf8c242(0x22e),'pact':_0xf8c242(0x242)},UtilActors[_0xf8c242(0x187)]=['light',_0xf8c242(0x188),_0xf8c242(0x21a),_0xf8c242(0x1cf)],UtilActors['VALID_ARMOR_PROFICIENCIES']={'light':_0xf8c242(0x1ff),'medium':'med','heavy':_0xf8c242(0x1c7),'shields':_0xf8c242(0x212)},UtilActors[_0xf8c242(0x196)]=[_0xf8c242(0x1fb),_0xf8c242(0x1be),'dagger|phb',_0xf8c242(0x20b),_0xf8c242(0x1cc),'greataxe|phb',_0xf8c242(0x1e2),_0xf8c242(0x190),_0xf8c242(0x241),'handaxe|phb',_0xf8c242(0x206),_0xf8c242(0x1d0),'light\x20hammer|phb',_0xf8c242(0x22a),_0xf8c242(0x1d5),_0xf8c242(0x19c),_0xf8c242(0x1db),_0xf8c242(0x20c),_0xf8c242(0x208),_0xf8c242(0x218),_0xf8c242(0x186),'shortsword|phb',_0xf8c242(0x239),_0xf8c242(0x185),_0xf8c242(0x1d2),_0xf8c242(0x1b4),_0xf8c242(0x175),_0xf8c242(0x21f),_0xf8c242(0x246),_0xf8c242(0x204),'dart|phb',_0xf8c242(0x1f0),_0xf8c242(0x1e8),_0xf8c242(0x245),_0xf8c242(0x1ac),_0xf8c242(0x1ef),_0xf8c242(0x173),_0xf8c242(0x21c)],UtilActors['VALID_WEAPON_PROFICIENCIES']={'simple':_0xf8c242(0x224),'martial':_0xf8c242(0x19d)},UtilActors[_0xf8c242(0x1f5)]={'battleaxes':'battleaxe|phb','clubs':_0xf8c242(0x1be),'daggers':_0xf8c242(0x1a4),'flails':_0xf8c242(0x20b),'glaives':_0xf8c242(0x1cc),'greataxes':_0xf8c242(0x1f6),'greatclubs':_0xf8c242(0x1e2),'greatswords':'greatsword|phb','halberds':_0xf8c242(0x241),'handaxes':'handaxe|phb','javelins':_0xf8c242(0x206),'lances':_0xf8c242(0x1d0),'light\x20hammers':'light\x20hammer|phb','longswords':_0xf8c242(0x22a),'maces':_0xf8c242(0x1d5),'mauls':_0xf8c242(0x19c),'morningstars':'morningstar|phb','pikes':_0xf8c242(0x20c),'quarterstaffs':_0xf8c242(0x208),'rapiers':_0xf8c242(0x218),'scimitars':_0xf8c242(0x186),'shortswords':_0xf8c242(0x1bf),'sickles':_0xf8c242(0x239),'spears':_0xf8c242(0x185),'staffs':'staff|phb','tridents':_0xf8c242(0x1b4),'war\x20picks':_0xf8c242(0x175),'warhammers':'warhammer|phb','whips':_0xf8c242(0x246),'blowguns':_0xf8c242(0x204),'darts':_0xf8c242(0x1f1),'hand\x20crossbows':_0xf8c242(0x1f0),'heavy\x20crossbows':'heavy\x20crossbow|phb','light\x20crossbows':_0xf8c242(0x245),'longbows':_0xf8c242(0x1ac),'nets':'net|phb','shortbows':'shortbow|phb','slings':_0xf8c242(0x21c),'battleaxe':_0xf8c242(0x1fb),'club':'club|phb','dagger':'dagger|phb','flail':'flail|phb','glaive':_0xf8c242(0x1cc),'greataxe':_0xf8c242(0x1f6),'greatclub':'greatclub|phb','greatsword':_0xf8c242(0x190),'halberd':_0xf8c242(0x241),'handaxe':'handaxe|phb','javelin':_0xf8c242(0x206),'lance':_0xf8c242(0x1d0),'light\x20hammer':'light\x20hammer|phb','longsword':_0xf8c242(0x22a),'mace':_0xf8c242(0x1d5),'maul':'maul|phb','morningstar':_0xf8c242(0x1db),'pike':_0xf8c242(0x20c),'quarterstaff':_0xf8c242(0x208),'rapier':_0xf8c242(0x218),'scimitar':_0xf8c242(0x186),'shortsword':_0xf8c242(0x1bf),'sickle':'sickle|phb','spear':_0xf8c242(0x185),'staff':'staff|phb','trident':_0xf8c242(0x1b4),'war\x20pick':_0xf8c242(0x175),'warhammer':_0xf8c242(0x21f),'whip':_0xf8c242(0x246),'blowgun':_0xf8c242(0x204),'dart':_0xf8c242(0x1f1),'hand\x20crossbow':_0xf8c242(0x1f0),'heavy\x20crossbow':_0xf8c242(0x1e8),'light\x20crossbow':'light\x20crossbow|phb','longbow':'longbow|phb','net':_0xf8c242(0x1ef),'shortbow':_0xf8c242(0x173),'sling':_0xf8c242(0x21c)},UtilActors[_0xf8c242(0x237)]=[_0xf8c242(0x1fb),'blowgun|phb','flail|phb',_0xf8c242(0x1cc),_0xf8c242(0x1f6),_0xf8c242(0x190),'halberd|phb',_0xf8c242(0x1f0),_0xf8c242(0x1e8),_0xf8c242(0x1d0),_0xf8c242(0x1ac),_0xf8c242(0x22a),_0xf8c242(0x19c),'morningstar|phb',_0xf8c242(0x1ef),'pike|phb',_0xf8c242(0x218),_0xf8c242(0x186),_0xf8c242(0x1bf),_0xf8c242(0x1b4),_0xf8c242(0x175),_0xf8c242(0x21f),_0xf8c242(0x246)],UtilActors['WEAPONS_SIMPLE']=[_0xf8c242(0x1be),_0xf8c242(0x1a4),'dart|phb','greatclub|phb',_0xf8c242(0x1da),'javelin|phb',_0xf8c242(0x245),'light\x20hammer|phb',_0xf8c242(0x1d5),_0xf8c242(0x208),_0xf8c242(0x173),_0xf8c242(0x239),_0xf8c242(0x21c),_0xf8c242(0x185)],UtilActors['ImportedEmbeddedDocument']=class{constructor({raw:_0x31f21b,document:_0x55f9fa}){const _0x342e7f=_0xf8c242;this[_0x342e7f(0x19e)]=_0x31f21b,this[_0x342e7f(0x18a)]=_0x55f9fa;}},UtilActors[_0xf8c242(0x1ad)]=[{'choose':{'from':Object[_0xf8c242(0x1ab)](Parser[_0xf8c242(0x23e)]),'count':0x2}}],UtilActors['LANG_TOOL_PROFS_CUSTOMIZE']=[{'anyStandard':0x2}];export{UtilActors};
+import {Config} from "./Config.js";
+import {Consts} from "./Consts.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+import {ConfigConsts} from "./ConfigConsts.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {UtilDocuments} from "./UtilDocuments.js";
+
+class UtilActors {
+	static init () {
+		UtilActors.VALID_DAMAGE_TYPES = Object.keys(MiscUtil.get(CONFIG, "DND5E", "damageTypes") || {});
+		UtilActors.VALID_CONDITIONS = Object.keys(MiscUtil.get(CONFIG, "DND5E", "conditionTypes") || {});
+	}
+
+	/**
+	 * @param [actor]
+	 * @param [isAllowAutoDetectPreparationMode]
+	 */
+	static async pGetActorSpellItemOpts ({actor, isAllowAutoDetectPreparationMode = false} = {}) {
+		const opts = {
+			isActorItem: true,
+			isActorItemNpc: actor?.type === "npc",
+			isPrepared: !!Config.get("importSpell", "prepareActorSpells"),
+			preparationMode: Config.get("importSpell", "actorSpellPreparationMode"),
+		};
+
+		// Avoid setting these options from an in-progress actor import
+		if (!actor || this.isImporterTempActor(actor)) return opts;
+
+		const spellcastingAbility = MiscUtil.get(actor, "data", "data", "attributes", "spellcasting");
+		if (spellcastingAbility) opts.abilityAbv = spellcastingAbility.value;
+
+		if (actor && isAllowAutoDetectPreparationMode) {
+			const autoPreparationMode = await this._pGetActorSpellItemOpts_getAutoPreparationMode({actor});
+			if (autoPreparationMode != null) opts.preparationMode = autoPreparationMode;
+		}
+
+		return opts;
+	}
+
+	static isImporterTempActor (actor) { return !!MiscUtil.get(actor, "data", "flags", SharedConsts.MODULE_NAME_FAKE, "isImporterTempActor"); }
+
+	static async _pGetActorSpellItemOpts_getAutoPreparationMode ({actor}) {
+		if (!Config.get("importSpell", "isAutoDetectActorSpellPreparationMode")) return null;
+
+		const classItems = actor.items.filter(it => it.type === "class" && it.data.data?.spellcasting?.progression !== "none");
+		if (!classItems.length || classItems.length > 1) return null;
+
+		const sheetItem = classItems[0];
+
+		const spellProgression = sheetItem.data.data.spellcasting.progression;
+		switch (spellProgression) {
+			case "full":
+			case "half":
+			case "third":
+			case "artificer": {
+				const classSubclassMeta = await UtilDataConverter.pGetClassItemClassAndSubclass({sheetItem});
+				if (classSubclassMeta.matchingClasses.length !== 1) return null;
+				return classSubclassMeta.matchingClasses[0].preparedSpells ? "prepared" : "always";
+			}
+			case "pact": return "pact";
+			default: return null;
+		}
+	}
+
+	static getSpellItemItemOpts () {
+		const opts = {};
+
+		opts.isPrepared = !!Config.get("importSpell", "prepareSpellItems");
+		opts.preparationMode = Config.get("importSpell", "spellItemPreparationMode");
+
+		return opts;
+	}
+
+	static async pAddActorItems (actor, itemArray, {isTemporary = false} = {}, createEmbeddedDocOpts) {
+		if (!itemArray?.length) return [];
+		return UtilDocuments.pCreateEmbeddedDocuments(
+			actor,
+			itemArray,
+			{
+				isTemporary,
+				propData: "items",
+				ClsEmbed: Item,
+			},
+			createEmbeddedDocOpts,
+		);
+	}
+
+	static async pAddActorEffects (actor, effectArray, {isTemporary = false} = {}, createEmbeddedDocOpts) {
+		if (!effectArray?.length) return [];
+		return UtilDocuments.pCreateEmbeddedDocuments(
+			actor,
+			effectArray,
+			{
+				isTemporary,
+				propData: "effects",
+				ClsEmbed: ActiveEffect,
+			},
+			createEmbeddedDocOpts,
+		);
+	}
+
+	static getMappedTool (str) {
+		str = str.toLowerCase().trim();
+		return this.VALID_TOOL_PROFICIENCIES[str];
+	}
+
+	static getUnmappedTool (str) {
+		if (!str) return null;
+		return Parser._parse_bToA(this.VALID_TOOL_PROFICIENCIES, str, null);
+	}
+
+	static getMappedLanguage (str) {
+		str = str.toLowerCase().trim();
+		return this.VALID_LANGUAGES[str];
+	}
+
+	static getMappedCasterType (str) {
+		if (!str) return str;
+		return this._VET_CASTER_TYPE_TO_FVTT[str];
+	}
+
+	static getMappedArmorProficiency (str) {
+		if (!str) return null;
+		return Parser._parse_aToB(this.VALID_ARMOR_PROFICIENCIES, str, null);
+	}
+
+	static getUnmappedArmorProficiency (str) {
+		if (!str) return null;
+		return Parser._parse_bToA(this.VALID_ARMOR_PROFICIENCIES, str, null);
+	}
+
+	static getMappedWeaponProficiency (str) {
+		if (!str) return null;
+		return Parser._parse_aToB(this.VALID_WEAPON_PROFICIENCIES, str, null);
+	}
+
+	static getUnmappedWeaponProficiency (str) {
+		if (!str) return null;
+		return Parser._parse_bToA(this.VALID_WEAPON_PROFICIENCIES, str, null);
+	}
+
+	static getItemUIdFromWeaponProficiency (str) {
+		if (!str) return null;
+		str = str.trim();
+		const tagItemUid = this._getItemUidFromTag(str);
+		if (tagItemUid) return tagItemUid;
+		return Parser._parse_aToB(this._WEAPON_PROFICIENCIES_TO_ITEM_UIDS, str, null);
+	}
+
+	static getItemUIdFromToolProficiency (str) {
+		if (!str) return null;
+		str = str.trim();
+		const tagItemUid = this._getItemUidFromTag(str);
+		if (tagItemUid) return tagItemUid;
+		return Parser._parse_aToB(this._TOOL_PROFICIENCIES_TO_ITEM_UIDS, str, null);
+	}
+
+	static _getItemUidFromTag (str) {
+		const mItem = /^{@item ([^}]+)}$/.exec(str);
+		if (!mItem) return null;
+		const {name, source} = DataUtil.generic.unpackUid(mItem[1], "item", {isLower: true});
+		return `${name}|${source}`;
+	}
+
+	/**
+	 * Loop over a data model and collect all the possible attributes which could be used in token bars. This is (currently
+	 * as of 2020-01-26) what Foundry does to generate the available bar list.
+	 *
+	 * Based on Foundry's `_getBarAttributes`
+	 */
+	static getModelBarAttributes (model) {
+		if (!model) return [];
+
+		function _searchBarAttributes (stack, data, path) {
+			for (let [k, v] of Object.entries(data)) {
+				const nxtPath = [...path, k];
+
+				if (v instanceof Object) {
+					const isBar = Number.isFinite(parseFloat(v.value)) && Number.isFinite(parseFloat(v.max));
+
+					if (isBar) stack.push(nxtPath);
+					else _searchBarAttributes(stack, data[k], nxtPath);
+				} else if (Number.isFinite(v)) {
+					stack.push(nxtPath);
+				}
+			}
+		}
+
+		const stack = [];
+		_searchBarAttributes(stack, model, []);
+		return stack.map(v => v.join("."));
+	}
+
+	/**
+	 * Based on the Foundry token editor method `getBarAttributeChoices`
+	 * @param actor An actor, although a wrapped model works equally well.
+	 */
+	static getActorBarAttributes (actor) {
+		if (!actor) return [];
+		const attributes = TokenDocument.getTrackedAttributes(actor.data.data, []);
+		attributes.bar = attributes.bar.map(v => v.join("."));
+		attributes.bar.sort((a, b) => a.localeCompare(b));
+		attributes.value = attributes.value.map(v => v.join("."));
+		attributes.value.sort((a, b) => a.localeCompare(b));
+		return {
+			[game.i18n.localize("TOKEN.BarAttributes")]: attributes.bar,
+			[game.i18n.localize("TOKEN.BarValues")]: attributes.value,
+		};
+	}
+
+	static getTotalClassLevels (actor) {
+		return actor.items
+			.filter(it => it.type === "class")
+			.map(it => it.data.data.levels || 0)
+			.reduce((a, b) => a + b, 0);
+	}
+
+	static isLevelUp (actor) {
+		let xpCur = Number(actor?.data?.data?.details?.xp?.value);
+		if (isNaN(xpCur)) xpCur = 0;
+
+		const lvlTarget = actor.items.filter(it => it.type === "class").map(it => it.data.data.levels || 0).sum();
+		let xpMax = Parser.LEVEL_XP_REQUIRED[lvlTarget];
+		if (isNaN(xpMax)) xpMax = Number.MAX_SAFE_INTEGER;
+
+		return xpCur >= xpMax;
+	}
+
+	static async pAddCurrencyToActor ({currency, actor}) {
+		if (!currency || !actor) return;
+
+		const totals = this.getActorCurrency({actor});
+		Parser.COIN_ABVS.forEach(k => totals[k] += currency[k] || 0);
+
+		const actorUpdate = {
+			data: {
+				currency: totals,
+			},
+		};
+		await UtilDocuments.pUpdateDocument(actor, actorUpdate);
+	}
+
+	static getActorCurrency ({actor}) {
+		const currency = {};
+		const actorCurrency = MiscUtil.get(actor, "data", "data", "currency") || {};
+		Parser.COIN_ABVS.forEach(k => currency[k] = actorCurrency[k] || 0);
+		return currency;
+	}
+
+	static async pGetCreateActorSpellPointsItem ({actor, totalSpellcastingLevels = null}) {
+		const configKeySpellPoints = actor?.type === "npc" ? "isSpellPointsNpc" : "isSpellPoints";
+
+		if (!Config.get("importSpell", configKeySpellPoints)) return null;
+		if (Config.get("importSpell", "spellPointsResource") !== ConfigConsts.C_SPELL_POINTS_RESOURCE__SHEET_ITEM) return null;
+
+		// region If we have an existing item, return the ID (and update the item if appropriate)
+		const existingItem = actor.items.contents.find(it => it.data?.flags?.[SharedConsts.MODULE_NAME_FAKE]?.type === UtilActors.FLAG_TYPE__SPELL_POINTS_TRACKER);
+		if (existingItem) {
+			if (totalSpellcastingLevels == null) return existingItem;
+
+			const curSpellPointsVal = (existingItem.data._source || existingItem.data)?.data?.uses?.value || 0;
+			const curSpellPointsMax = (existingItem.data._source || existingItem.data)?.data?.uses?.max || 0;
+
+			const spellPoints = UtilDataConverter.getSpellPointTotal({totalSpellcastingLevels});
+			if (spellPoints > curSpellPointsMax) {
+				const deltaCur = (spellPoints - curSpellPointsMax);
+				await UtilDocuments.pUpdateEmbeddedDocuments(
+					actor,
+					[
+						{
+							_id: existingItem.id,
+							data: {
+								uses: {value: curSpellPointsVal + deltaCur, max: spellPoints},
+							},
+						},
+					],
+					{
+						propData: "items",
+						ClsEmbed: Item,
+					},
+				);
+			}
+
+			return existingItem;
+		}
+		// endregion
+
+		// region Otherwise, create a "Spell Points" item, and return the ID
+		if (totalSpellcastingLevels == null) totalSpellcastingLevels = UtilActors.getActorSpellcastingInfo({actor: actor})?.totalSpellcastingLevels;
+
+		const spellPoints = UtilDataConverter.getSpellPointTotal({totalSpellcastingLevels});
+		const entSpellPointVariant = await Renderer.hover.pCacheAndGet(UrlUtil.PG_VARIANTRULES, SRC_DMG, UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_VARIANTRULES]({name: "Spell Points", source: SRC_DMG}), {isCopy: true});
+		const spellPointItemData = {
+			name: "Spell Points",
+			type: "feat",
+			data: {
+				description: {
+					value: await UtilDataConverter.pGetWithDescriptionPlugins(() => {
+						delete entSpellPointVariant?.name;
+						delete entSpellPointVariant?.page;
+						delete entSpellPointVariant?.source;
+						return `<div>${Renderer.get().render(`{@note This item was automatically generated to track your spell points. It can be freely modified.}`)}</div>
+							<hr class="hr-2">
+							<div>${Renderer.get().setFirstSection(true).render(entSpellPointVariant || "")}</div>`;
+					}),
+				},
+				source: UtilDataConverter.getSourceWithPagePart({source: SRC_DMG, page: 288}),
+				activation: {cost: 0, type: "none"},
+				uses: {value: spellPoints, max: spellPoints, per: "lr"},
+			},
+			img: `icons/magic/light/explosion-star-glow-silhouette.webp`,
+			flags: {
+				[SharedConsts.MODULE_NAME_FAKE]: {
+					type: UtilActors.FLAG_TYPE__SPELL_POINTS_TRACKER,
+				},
+			},
+		};
+
+		const importedEmbeds = await UtilActors.pAddActorItems(
+			actor,
+			[spellPointItemData],
+		);
+		return importedEmbeds[0].document;
+		// endregion
+	}
+
+	static getActorSpellcastingInfo (
+		{
+			actor,
+			sheetItems,
+			// Note that this only applies when multiclassing as _multiple spellcasting classes_.
+			// "Once you have the Spellcasting feature from more than one class, use the rules below. If you multiclass
+			//   but have the Spellcasting feature from only one class, you follow the rules as described in that class."
+			//  - PHB p163
+			isForceSpellcastingMulticlass = false,
+		} = {},
+	) {
+		if (actor && sheetItems) throw new Error(`Only one of "actor" or "sheetItems" may be specified!`);
+
+		const spellcastingClassItems = (actor?.items || sheetItems).filter(it => it.type === "class")
+			.filter(it => it.data?.data?.spellcasting);
+
+		if (!spellcastingClassItems.length) {
+			return {
+				totalSpellcastingLevels: 0,
+				casterClassCount: 0,
+				maxPactCasterLevel: 0,
+				isSpellcastingMulticlass: isForceSpellcastingMulticlass,
+			};
+		}
+
+		let totalSpellcastingLevels = 0; // sum up the total caster levels as defined in Multiclassing rules
+		let maxPactCasterLevel = 0;
+
+		const isSpellcastingMulticlass = isForceSpellcastingMulticlass || spellcastingClassItems.length > 1;
+
+		const getSpellcastingLevel = (lvl, type) => {
+			switch (type) {
+				case "half": return Math.ceil(lvl / 2);
+				case "third": return Math.ceil(lvl / 3);
+				// Artificer behaves like a half-caster, except for the first level
+				case "artificer": return lvl === 1 ? 1 : getSpellcastingLevel(lvl, "half");
+				default: throw new Error(`Unhandled spellcaster type "${type}"`);
+			}
+		};
+
+		const getSpellcastingLevelMulticlass = (lvl, type) => {
+			switch (type) {
+				case "half": return Math.floor(lvl / 2);
+				case "third": return Math.floor(lvl / 3);
+				// Artificer always uses `ceil` when multiclassing
+				// "Spell Slots. Add half your levels (rounded up) in the artificer class to the appropriate levels
+				//   from other classes to determine your available spell slots." - ERLW p54
+				case "artificer": return Math.ceil(lvl / 2);
+				default: throw new Error(`Unhandled spellcaster type "${type}"`);
+			}
+		};
+
+		const fnGetSpellcastingLevelHalfThird = isSpellcastingMulticlass ? getSpellcastingLevelMulticlass : getSpellcastingLevel;
+
+		spellcastingClassItems
+			.forEach(it => {
+				const lvl = it.data.data.levels || 0;
+
+				switch (it.data.data.spellcasting.progression) {
+					case "full": totalSpellcastingLevels += lvl; break;
+					case "half": totalSpellcastingLevels += fnGetSpellcastingLevelHalfThird(lvl, it.data.data.spellcasting.progression); break;
+					case "third": totalSpellcastingLevels += fnGetSpellcastingLevelHalfThird(lvl, it.data.data.spellcasting.progression); break;
+					case "pact": Math.max(maxPactCasterLevel, lvl); break;
+					case "artificer": totalSpellcastingLevels += fnGetSpellcastingLevelHalfThird(lvl, it.data.data.spellcasting.progression); break;
+				}
+			});
+
+		return {totalSpellcastingLevels, casterClassCount: spellcastingClassItems.length, maxPactCasterLevel, isSpellcastingMulticlass};
+	}
+}
+UtilActors.SKILL_ABV_TO_FULL = {
+	acr: "acrobatics",
+	ani: "animal handling",
+	arc: "arcana",
+	ath: "athletics",
+	dec: "deception",
+	his: "history",
+	ins: "insight",
+	itm: "intimidation",
+	inv: "investigation",
+	med: "medicine",
+	nat: "nature",
+	prc: "perception",
+	prf: "performance",
+	per: "persuasion",
+	rel: "religion",
+	slt: "sleight of hand",
+	ste: "stealth",
+	sur: "survival",
+};
+UtilActors.PROF_TO_ICON_CLASS = {
+	"1": "fa-check",
+	"2": "fa-check-double",
+	"0.5": "fa-adjust",
+};
+UtilActors.PROF_TO_TEXT = {
+	"1": "Proficient",
+	"2": "Proficient with Expertise",
+	"0.5": "Half-Proficient",
+	"0": "",
+};
+UtilActors.VET_SIZE_TO_ABV = {
+	[SZ_TINY]: "tiny",
+	[SZ_SMALL]: "sm",
+	[SZ_MEDIUM]: "med",
+	[SZ_LARGE]: "lg",
+	[SZ_HUGE]: "huge",
+	[SZ_GARGANTUAN]: "grg",
+};
+UtilActors.VET_SPELL_SCHOOL_TO_ABV = {
+	A: "abj",
+	C: "con",
+	D: "div",
+	E: "enc",
+	V: "evo",
+	I: "ill",
+	N: "nec",
+	T: "trs",
+};
+UtilActors.CASTER_TYPE_TO_PROGRESSION = {
+	"full": [
+		[2, 0, 0, 0, 0, 0, 0, 0, 0],
+		[3, 0, 0, 0, 0, 0, 0, 0, 0],
+		[4, 2, 0, 0, 0, 0, 0, 0, 0],
+		[4, 3, 0, 0, 0, 0, 0, 0, 0],
+		[4, 3, 2, 0, 0, 0, 0, 0, 0],
+		[4, 3, 3, 0, 0, 0, 0, 0, 0],
+		[4, 3, 3, 1, 0, 0, 0, 0, 0],
+		[4, 3, 3, 2, 0, 0, 0, 0, 0],
+		[4, 3, 3, 3, 1, 0, 0, 0, 0],
+		[4, 3, 3, 3, 2, 0, 0, 0, 0],
+		[4, 3, 3, 3, 2, 1, 0, 0, 0],
+		[4, 3, 3, 3, 2, 1, 0, 0, 0],
+		[4, 3, 3, 3, 2, 1, 1, 0, 0],
+		[4, 3, 3, 3, 2, 1, 1, 0, 0],
+		[4, 3, 3, 3, 2, 1, 1, 1, 0],
+		[4, 3, 3, 3, 2, 1, 1, 1, 0],
+		[4, 3, 3, 3, 2, 1, 1, 1, 1],
+		[4, 3, 3, 3, 3, 1, 1, 1, 1],
+		[4, 3, 3, 3, 3, 2, 1, 1, 1],
+		[4, 3, 3, 3, 3, 2, 2, 1, 1],
+	],
+	"artificer": [
+		[2, 0, 0, 0, 0],
+		[2, 0, 0, 0, 0],
+		[3, 0, 0, 0, 0],
+		[3, 0, 0, 0, 0],
+		[4, 2, 0, 0, 0],
+		[4, 2, 0, 0, 0],
+		[4, 3, 0, 0, 0],
+		[4, 3, 0, 0, 0],
+		[4, 3, 2, 0, 0],
+		[4, 3, 2, 0, 0],
+		[4, 3, 3, 0, 0],
+		[4, 3, 3, 0, 0],
+		[4, 3, 3, 1, 0],
+		[4, 3, 3, 1, 0],
+		[4, 3, 3, 2, 0],
+		[4, 3, 3, 2, 0],
+		[4, 3, 3, 3, 1],
+		[4, 3, 3, 3, 1],
+		[4, 3, 3, 3, 2],
+		[4, 3, 3, 3, 2],
+	],
+	"1/2": [
+		[0, 0, 0, 0, 0],
+		[2, 0, 0, 0, 0],
+		[3, 0, 0, 0, 0],
+		[3, 0, 0, 0, 0],
+		[4, 2, 0, 0, 0],
+		[4, 2, 0, 0, 0],
+		[4, 3, 0, 0, 0],
+		[4, 3, 0, 0, 0],
+		[4, 3, 2, 0, 0],
+		[4, 3, 2, 0, 0],
+		[4, 3, 3, 0, 0],
+		[4, 3, 3, 0, 0],
+		[4, 3, 3, 1, 0],
+		[4, 3, 3, 1, 0],
+		[4, 3, 3, 2, 0],
+		[4, 3, 3, 2, 0],
+		[4, 3, 3, 3, 1],
+		[4, 3, 3, 3, 1],
+		[4, 3, 3, 3, 2],
+		[4, 3, 3, 3, 2],
+	],
+	"1/3": [
+		[0, 0, 0, 0],
+		[0, 0, 0, 0],
+		[2, 0, 0, 0],
+		[3, 0, 0, 0],
+		[3, 0, 0, 0],
+		[3, 0, 0, 0],
+		[4, 2, 0, 0],
+		[4, 2, 0, 0],
+		[4, 2, 0, 0],
+		[4, 3, 0, 0],
+		[4, 3, 0, 0],
+		[4, 3, 0, 0],
+		[4, 3, 2, 0],
+		[4, 3, 2, 0],
+		[4, 3, 2, 0],
+		[4, 3, 3, 0],
+		[4, 3, 3, 0],
+		[4, 3, 3, 0],
+		[4, 3, 3, 1],
+		[4, 3, 3, 1],
+	],
+	"pact": [
+		[1, 0, 0, 0, 0],
+		[2, 0, 0, 0, 0],
+		[0, 2, 0, 0, 0],
+		[0, 2, 0, 0, 0],
+		[0, 0, 2, 0, 0],
+		[0, 0, 2, 0, 0],
+		[0, 0, 0, 2, 0],
+		[0, 0, 0, 2, 0],
+		[0, 0, 0, 0, 2],
+		[0, 0, 0, 0, 2],
+		[0, 0, 0, 0, 3],
+		[0, 0, 0, 0, 3],
+		[0, 0, 0, 0, 3],
+		[0, 0, 0, 0, 3],
+		[0, 0, 0, 0, 3],
+		[0, 0, 0, 0, 3],
+		[0, 0, 0, 0, 4],
+		[0, 0, 0, 0, 4],
+		[0, 0, 0, 0, 4],
+		[0, 0, 0, 0, 4],
+	],
+};
+
+UtilActors.PACT_CASTER_MAX_SPELL_LEVEL = 5;
+
+UtilActors.VALID_DAMAGE_TYPES = null;
+UtilActors.VALID_CONDITIONS = null;
+
+// Taken from 5etools' JSON schema
+UtilActors.TOOL_PROFICIENCIES_ARTISANS = [
+	"alchemist's supplies",
+	"brewer's supplies",
+	"calligrapher's supplies",
+	"carpenter's tools",
+	"cartographer's tools",
+	"cobbler's tools",
+	"cook's utensils",
+	"glassblower's tools",
+	"jeweler's tools",
+	"leatherworker's tools",
+	"mason's tools",
+	"painter's supplies",
+	"potter's tools",
+	"smith's tools",
+	"tinker's tools",
+	"weaver's tools",
+	"woodcarver's tools",
+];
+UtilActors.TOOL_PROFICIENCIES = [
+	"artisan's tools",
+
+	...UtilActors.TOOL_PROFICIENCIES_ARTISANS,
+
+	"disguise kit",
+	"forgery kit",
+	"gaming set",
+	"herbalism kit",
+	"musical instrument",
+	"navigator's tools",
+	"thieves' tools",
+	"poisoner's kit",
+	"vehicles (land)",
+	"vehicles (water)",
+];
+UtilActors.TOOL_PROFICIENCIES_TO_UID = {
+	"alchemist's supplies": "alchemist's supplies|phb",
+	"brewer's supplies": "brewer's supplies|phb",
+	"calligrapher's supplies": "calligrapher's supplies|phb",
+	"carpenter's tools": "carpenter's tools|phb",
+	"cartographer's tools": "cartographer's tools|phb",
+	"cobbler's tools": "cobbler's tools|phb",
+	"cook's utensils": "cook's utensils|phb",
+	"glassblower's tools": "glassblower's tools|phb",
+	"jeweler's tools": "jeweler's tools|phb",
+	"leatherworker's tools": "leatherworker's tools|phb",
+	"mason's tools": "mason's tools|phb",
+	"painter's supplies": "painter's supplies|phb",
+	"potter's tools": "potter's tools|phb",
+	"smith's tools": "smith's tools|phb",
+	"tinker's tools": "tinker's tools|phb",
+	"weaver's tools": "weaver's tools|phb",
+	"woodcarver's tools": "woodcarver's tools|phb",
+	"disguise kit": "disguise kit|phb",
+	"forgery kit": "forgery kit|phb",
+	"gaming set": "gaming set|phb",
+	"herbalism kit": "herbalism kit|phb",
+	"musical instrument": "musical instrument|phb",
+	"navigator's tools": "navigator's tools|phb",
+	"thieves' tools": "thieves' tools|phb",
+	"poisoner's kit": "poisoner's kit|phb",
+};
+UtilActors.VALID_TOOL_PROFICIENCIES = {
+	"artisan's tools": "art",
+	"alchemist's supplies": "alchemist",
+	"brewer's supplies": "brewer",
+	"calligrapher's supplies": "calligrapher",
+	"carpenter's tools": "carpenter",
+	"cartographer's tools": "cartographer",
+	"cobbler's tools": "cobbler",
+	"cook's utensils": "cook",
+	"glassblower's tools": "glassblower",
+	"jeweler's tools": "jeweler",
+	"leatherworker's tools": "leatherworker",
+	"mason's tools": "mason",
+	"painter's supplies": "painter",
+	"potter's tools": "potter",
+	"smith's tools": "smith",
+	"tinker's tools": "tinker",
+	"weaver's tools": "weaver",
+	"woodcarver's tools": "woodcarver",
+
+	"disguise kit": "disg",
+
+	"forgery kit": "forg",
+
+	"gaming set": "game",
+	"dice set": "dice",
+	"dragonchess set": "chess",
+	"playing card set": "card",
+	"three-dragon ante set": "card",
+
+	"herbalism kit": "herb",
+
+	"musical instrument": "music",
+	"bagpipes": "bagpipes",
+	"drum": "drum",
+	"dulcimer": "dulcimer",
+	"flute": "flute",
+	"lute": "lute",
+	"lyre": "lyre",
+	"horn": "horn",
+	"pan flute": "panflute",
+	"shawm": "shawm",
+	"viol": "viol",
+
+	"navigator's tools": "navg",
+
+	"poisoner's kit": "pois",
+
+	"thieves' tools": "thief",
+
+	"vehicle (land or water)": "vehicle",
+	"vehicle (air)": "air",
+	"vehicle (land)": "land",
+	"vehicle (water)": "water",
+};
+UtilActors.VALID_LANGUAGES = {
+	"common": "common",
+	"aarakocra": "aarakocra",
+	"abyssal": "abyssal",
+	"aquan": "aquan",
+	"auran": "auran",
+	"celestial": "celestial",
+	"deep speech": "deep",
+	"draconic": "draconic",
+	"druidic": "druidic",
+	"dwarvish": "dwarvish",
+	"elvish": "elvish",
+	"giant": "giant",
+	"gith": "gith",
+	"gnomish": "gnomish",
+	"goblin": "goblin",
+	"gnoll": "gnoll",
+	"halfling": "halfling",
+	"ignan": "ignan",
+	"infernal": "infernal",
+	"orc": "orc",
+	"primordial": "primordial",
+	"sylvan": "sylvan",
+	"terran": "terran",
+	"thieves' cant": "cant",
+	"undercommon": "undercommon",
+};
+UtilActors.LANGUAGES_PRIMORDIAL = [
+	"aquan",
+	"auran",
+	"ignan",
+	"terran",
+];
+UtilActors._VET_CASTER_TYPE_TO_FVTT = {
+	"full": "full",
+	"1/2": "half",
+	"1/3": "third",
+	"pact": "pact",
+};
+// Taken from 5etools' JSON schema
+UtilActors.ARMOR_PROFICIENCIES = [
+	"light",
+	"medium",
+	"heavy",
+	"shield|phb",
+];
+UtilActors.VALID_ARMOR_PROFICIENCIES = {
+	"light": "lgt",
+	"medium": "med",
+	"heavy": "hvy",
+	"shield|phb": "shl",
+};
+UtilActors.WEAPON_PROFICIENCIES = [
+	"battleaxe|phb",
+	"club|phb",
+	"dagger|phb",
+	"flail|phb",
+	"glaive|phb",
+	"greataxe|phb",
+	"greatclub|phb",
+	"greatsword|phb",
+	"halberd|phb",
+	"handaxe|phb",
+	"javelin|phb",
+	"lance|phb",
+	"light hammer|phb",
+	"longsword|phb",
+	"mace|phb",
+	"maul|phb",
+	"morningstar|phb",
+	"pike|phb",
+	"quarterstaff|phb",
+	"rapier|phb",
+	"scimitar|phb",
+	"shortsword|phb",
+	"sickle|phb",
+	"spear|phb",
+	"staff|phb",
+	"trident|phb",
+	"war pick|phb",
+	"warhammer|phb",
+	"whip|phb",
+	"blowgun|phb",
+	"dart|phb",
+	"hand crossbow|phb",
+	"heavy crossbow|phb",
+	"light crossbow|phb",
+	"longbow|phb",
+	"net|phb",
+	"shortbow|phb",
+	"sling|phb",
+];
+UtilActors.VALID_WEAPON_PROFICIENCIES = {
+	"simple": "sim",
+	"martial": "mar",
+
+	"club|phb": "club",
+	"dagger|phb": "dagger",
+	"dart|phb": "dart",
+	"greatclub|phb": "greatclub",
+	"handaxe|phb": "handaxe",
+	"javelin|phb": "javelin",
+	"light crossbow|phb": "lightcrossbow",
+	"light hammer|phb": "lighthammer",
+	"mace|phb": "mace",
+	"quarterstaff|phb": "quarterstaff",
+	"shortbow|phb": "shortbow",
+	"sickle|phb": "sickle",
+	"sling|phb": "sling",
+	"spear|phb": "spear",
+
+	"battleaxe|phb": "battleaxe",
+	"blowgun|phb": "blowgun",
+	"flail|phb": "flail",
+	"glaive|phb": "glaive",
+	"greataxe|phb": "greataxe",
+	"greatsword|phb": "greatsword",
+	"halberd|phb": "halberd",
+	"hand crossbow|phb": "handcrossbow",
+	"heavy crossbow|phb": "heavycrossbow",
+	"lance|phb": "lance",
+	"longbow|phb": "longbow",
+	"longsword|phb": "longsword",
+	"maul|phb": "maul",
+	"morningstar|phb": "morningstar",
+	"net|phb": "net",
+	"pike|phb": "pike",
+	"rapier|phb": "rapier",
+	"scimitar|phb": "scimitar",
+	"shortsword|phb": "shortsword",
+	"trident|phb": "trident",
+	"war pick|phb": "warpick",
+	"warhammer|phb": "warhammer",
+	"whip|phb": "whip",
+};
+UtilActors._WEAPON_PROFICIENCIES_TO_ITEM_UIDS = {
+	// region Plural
+	"battleaxes": "battleaxe|phb",
+	"clubs": "club|phb",
+	"daggers": "dagger|phb",
+	"flails": "flail|phb",
+	"glaives": "glaive|phb",
+	"greataxes": "greataxe|phb",
+	"greatclubs": "greatclub|phb",
+	"greatswords": "greatsword|phb",
+	"halberds": "halberd|phb",
+	"handaxes": "handaxe|phb",
+	"javelins": "javelin|phb",
+	"lances": "lance|phb",
+	"light hammers": "light hammer|phb",
+	"longswords": "longsword|phb",
+	"maces": "mace|phb",
+	"mauls": "maul|phb",
+	"morningstars": "morningstar|phb",
+	"pikes": "pike|phb",
+	"quarterstaffs": "quarterstaff|phb",
+	"rapiers": "rapier|phb",
+	"scimitars": "scimitar|phb",
+	"shortswords": "shortsword|phb",
+	"sickles": "sickle|phb",
+	"spears": "spear|phb",
+	"staffs": "staff|phb",
+	"tridents": "trident|phb",
+	"war picks": "war pick|phb",
+	"warhammers": "warhammer|phb",
+	"whips": "whip|phb",
+
+	"blowguns": "blowgun|phb",
+	"darts": "dart|phb",
+	"hand crossbows": "hand crossbow|phb",
+	"heavy crossbows": "heavy crossbow|phb",
+	"light crossbows": "light crossbow|phb",
+	"longbows": "longbow|phb",
+	"nets": "net|phb",
+	"shortbows": "shortbow|phb",
+	"slings": "sling|phb",
+	// endregion
+
+	// region Single
+	"battleaxe": "battleaxe|phb",
+	"club": "club|phb",
+	"dagger": "dagger|phb",
+	"flail": "flail|phb",
+	"glaive": "glaive|phb",
+	"greataxe": "greataxe|phb",
+	"greatclub": "greatclub|phb",
+	"greatsword": "greatsword|phb",
+	"halberd": "halberd|phb",
+	"handaxe": "handaxe|phb",
+	"javelin": "javelin|phb",
+	"lance": "lance|phb",
+	"light hammer": "light hammer|phb",
+	"longsword": "longsword|phb",
+	"mace": "mace|phb",
+	"maul": "maul|phb",
+	"morningstar": "morningstar|phb",
+	"pike": "pike|phb",
+	"quarterstaff": "quarterstaff|phb",
+	"rapier": "rapier|phb",
+	"scimitar": "scimitar|phb",
+	"shortsword": "shortsword|phb",
+	"sickle": "sickle|phb",
+	"spear": "spear|phb",
+	"staff": "staff|phb",
+	"trident": "trident|phb",
+	"war pick": "war pick|phb",
+	"warhammer": "warhammer|phb",
+	"whip": "whip|phb",
+
+	"blowgun": "blowgun|phb",
+	"dart": "dart|phb",
+	"hand crossbow": "hand crossbow|phb",
+	"heavy crossbow": "heavy crossbow|phb",
+	"light crossbow": "light crossbow|phb",
+	"longbow": "longbow|phb",
+	"net": "net|phb",
+	"shortbow": "shortbow|phb",
+	"sling": "sling|phb",
+	// endregion
+};
+UtilActors.WEAPONS_MARTIAL = [
+	"battleaxe|phb",
+	"blowgun|phb",
+	"flail|phb",
+	"glaive|phb",
+	"greataxe|phb",
+	"greatsword|phb",
+	"halberd|phb",
+	"hand crossbow|phb",
+	"heavy crossbow|phb",
+	"lance|phb",
+	"longbow|phb",
+	"longsword|phb",
+	"maul|phb",
+	"morningstar|phb",
+	"net|phb",
+	"pike|phb",
+	"rapier|phb",
+	"scimitar|phb",
+	"shortsword|phb",
+	"trident|phb",
+	"war pick|phb",
+	"warhammer|phb",
+	"whip|phb",
+];
+UtilActors.WEAPONS_SIMPLE = [
+	"club|phb",
+	"dagger|phb",
+	"dart|phb",
+	"greatclub|phb",
+	"handaxe|phb",
+	"javelin|phb",
+	"light crossbow|phb",
+	"light hammer|phb",
+	"mace|phb",
+	"quarterstaff|phb",
+	"shortbow|phb",
+	"sickle|phb",
+	"sling|phb",
+	"spear|phb",
+];
+UtilActors._TOOL_PROFICIENCIES_TO_ITEM_UIDS = {
+	"alchemist's supplies": "alchemist's supplies|phb",
+	"artisan's tools": "artisan's tools|phb",
+	"bagpipes": "bagpipes|phb",
+	"brewer's supplies": "brewer's supplies|phb",
+	"calligrapher's supplies": "calligrapher's supplies|phb",
+	"carpenter's tools": "carpenter's tools|phb",
+	"cartographer's tools": "cartographer's tools|phb",
+	"cobbler's tools": "cobbler's tools|phb",
+	"cook's utensils": "cook's utensils|phb",
+	"disguise kit": "disguise kit|phb",
+	"drum": "drum|phb",
+	"dulcimer": "dulcimer|phb",
+	"flute": "flute|phb",
+	"forgery kit": "forgery kit|phb",
+	"glassblower's tools": "glassblower's tools|phb",
+	"herbalism kit": "herbalism kit|phb",
+	"horn": "horn|phb",
+	"jeweler's tools": "jeweler's tools|phb",
+	"leatherworker's tools": "leatherworker's tools|phb",
+	"lute": "lute|phb",
+	"lyre": "lyre|phb",
+	"mason's tools": "mason's tools|phb",
+	"musical instrument": "musical instrument|phb",
+	"navigator's tools": "navigator's tools|phb",
+	"painter's supplies": "painter's supplies|phb",
+	"pan flute": "pan flute|phb",
+	"poisoner's kit": "poisoner's kit|phb",
+	"potter's tools": "potter's tools|phb",
+	"shawm": "shawm|phb",
+	"smith's tools": "smith's tools|phb",
+	"thieves' tools": "thieves' tools|phb",
+	"tinker's tools": "tinker's tools|phb",
+	"viol": "viol|phb",
+	"weaver's tools": "weaver's tools|phb",
+	"woodcarver's tools": "woodcarver's tools|phb",
+};
+
+UtilActors.BG_SKILL_PROFS_CUSTOMIZE = [
+	{
+		choose: {
+			from: Object.keys(Parser.SKILL_TO_ATB_ABV),
+			count: 2,
+		},
+	},
+];
+
+UtilActors.LANG_TOOL_PROFS_CUSTOMIZE = [
+	{
+		anyStandardLanguage: 2,
+	},
+	{
+		anyStandardLanguage: 1,
+		anyTool: 1,
+	},
+	{
+		anyTool: 2,
+	},
+];
+
+UtilActors.FLAG_TYPE__SPELL_POINTS_TRACKER = "spellPointsTracker";
+
+export {UtilActors};

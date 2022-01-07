@@ -1,25 +1,19 @@
-import { useAbilitySave, displayTraits } from "./dae.js";
+import { useAbilitySave, displayTraits, libWrapper } from "./dae.js";
 //@ts-ignore
 // import {d20Roll} from "../../../systems/dnd5e/module/dice.js";
-import { log, warn, } from "../dae.js";
-import { libWrapper } from "../libs/shim.js";
+import { log, error, warn, } from "../dae.js";
 function rollAbilitySave(abilityId, options = { event, fastForward: null, advantage: null, disadvantage: null }) {
     const label = CONFIG.DND5E.abilities[abilityId];
     const abl = this.data.data.abilities[abilityId];
     // Construct parts
     const parts = ["@mod"];
-    const data = { mod: abl.save };
-    /*
-        // Include proficiency bonus
-        if ( abl.prof > 0 ) {
-          parts.push("@prof");
-          //@ts-ignore
-          data.prof = abl.prof;
-        }
-        */
+    const data = this.getRollData();
+    data.mod = abl.save;
+    // Don't include proficiency bonus since it is already in abl.save.
     // Include a global actor ability save bonus
     const bonuses = getProperty(this.data.data, "bonuses.abilities") || {};
-    if (bonuses.save) {
+    //@ts-ignore
+    if (bonuses.save && !Number.isNumeric(bonuses.save)) {
         parts.push("@saveBonus");
         //@ts-ignore
         data.saveBonus = bonuses.save;
@@ -36,33 +30,55 @@ function rollAbilitySave(abilityId, options = { event, fastForward: null, advant
         parts: parts,
         data: data,
         title: game.i18n.format("DND5E.SavePromptTitle", { ability: label }),
-        halflingLucky: this.getFlag("dnd5e", "halflingLucky"),
+        halflingLucky: game.system.id === "dnd5e" ? this.getFlag("dnd5e", "halflingLucky") : undefined,
         messageData: {
             //@ts-ignore
             speaker: options.speaker || ChatMessage.getSpeaker({ actor: this }),
             "flags.dnd5e.roll": { type: "save", abilityId }
         }
     });
+    if (game.system.id === "sw5e")
+        setProperty(rollData, "flags.sw5e.roll", { type: "save", abilityId });
     return d20Roll(rollData);
 }
 var d20Roll;
 var dice;
 export function patchingInitSetup() {
     warn("system is ", game.system);
-    //@ts-ignore
-    if (game.system.id === "dnd5e") {
-        //@ts-ignore
-        dice = game.dnd5e.dice;
-    }
-    //@ts-ignore
-    else if (game.system.id === "sw5e") {
-        //@ts-ignore
-        dice = game.sw5e.dice;
-    }
+    dice = game[game.system.id].dice;
     if (!dice)
-        console.error("Dice not defined! Many things won't work");
+        error("Dice not defined! Many things won't work");
     else
         d20Roll = dice?.d20Roll;
+}
+function _prepareArmorClassAttribution(wrapped, data) {
+    const attributions = wrapped(data);
+    if (!this.object.data.effects)
+        return attributions;
+    for (let effect of this.object.data.effects) {
+        for (let change of effect.data.changes) {
+            if (change.key === "data.attributes.ac.value" && !effect.data.disabled && !effect.isSuppressed) {
+                attributions.push({
+                    label: `${effect.data.label} (dae)`,
+                    mode: change.mode,
+                    value: change.value
+                });
+            }
+        }
+    }
+    return attributions;
+}
+export function patchPrepareArmorClassAttribution() {
+    if (game.system.id === "dnd5e" && isNewerVersion(game.system.data.version, "1.4.0")) {
+        if (!isNewerVersion("1.8.0", game.modules.get("lib-wrapper").data.version)) {
+            libWrapper.register("dae", "CONFIG.Actor.sheetClasses.character['dnd5e.ActorSheet5eCharacter'].cls.prototype._prepareArmorClassAttribution", _prepareArmorClassAttribution, "WRAPPER");
+            libWrapper.register("dae", "CONFIG.Actor.sheetClasses.npc['dnd5e.ActorSheet5eNPC'].cls.prototype._prepareArmorClassAttribution", _prepareArmorClassAttribution, "WRAPPER");
+            libWrapper.register("dae", "CONFIG.Actor.sheetClasses.vehicle['dnd5e.ActorSheet5eVehicle'].cls.prototype._prepareArmorClassAttribution", _prepareArmorClassAttribution, "WRAPPER");
+        }
+        else if (game.system.id === "sw5e" && isNewerVersion(game.system.data.version, "1.4.0")) {
+            // TODO come back and implement for sw5e when available.
+        }
+    }
 }
 export function patchGetInitiativeFormula() {
     warn("Patching Combatant getInitiativeFormula");
@@ -71,8 +87,7 @@ export function patchGetInitiativeFormula() {
 }
 // Allow limited recursion of the formula replace function for things like
 // bonuses.heal.damage in spell formulas.
-export function replaceFormulaData(wrapped, ...args) {
-    let [formula, data, { missing = "", warn = false } = {}] = args;
+export function replaceFormulaData(wrapped, formula, data, { missing, warn = false } = { missing: undefined, warn: false }) {
     let result = formula;
     const maxIterations = 3;
     if (typeof formula !== "string")
@@ -84,7 +99,7 @@ export function replaceFormulaData(wrapped, ...args) {
             result = wrapped(result, data, { missing, warn });
         }
         catch (err) {
-            console.error(err, ...args);
+            error(err, formula, data, missing, warn);
         }
     }
     return result;
@@ -98,8 +113,8 @@ var abilitySavePatched = false;
 function patchAbilitySave() {
     if (!d20Roll)
         return;
-    //@ts-ignore
-    if (["dnd5e", "sw5e"].includes(game.system.id)) {
+    //@ts-ignore for dnd5e don't do any patching of ability save
+    if (["dnd5e", "sw5e"].includes(game.system.id) && !isNewerVersion(game.system.data.version, "1.5.1")) {
         log(`Patching CONFIG.Actor.documentClass.prototype.rollAbilitySave (override=${useAbilitySave})`);
         if (!useAbilitySave) {
             if (abilitySavePatched) {
@@ -266,8 +281,8 @@ export function getInitiativeFormula() {
     // Construct initiative formula parts
     let nd = 1;
     let mods = "";
-    const adv = actor.getFlag("dnd5e", "initiativeAdv");
-    const disadv = actor.getFlag("dnd5e", "initiativeDisadv");
+    const adv = actor.getFlag(game.system.id, "initiativeAdv");
+    const disadv = actor.getFlag(game.system.id, "initiativeDisadv");
     if (adv && !disadv) {
         nd = 2;
         mods = "kh";
@@ -276,11 +291,28 @@ export function getInitiativeFormula() {
         nd = 2;
         mods = "kl";
     }
-    if (actor.getFlag("dnd5e", "halflingLucky"))
+    if (game.system.id === "dnd5e" && actor.getFlag("dnd5e", "halflingLucky"))
         mods += "r1=1";
-    const parts = [`${nd}d20${mods}`, init.mod, (init.prof !== 0) ? init.prof : null, (init.bonus !== 0) ? init.bonus : null];
+    let parts;
+    if (isNewerVersion("1.5.0", game.system.data.version)) {
+        parts = [
+            `${nd}d20${mods}`,
+            init.mod,
+            (init.prof !== 0) ? init.prof : null,
+            (init.bonus !== 0) ? init.bonus : null
+        ];
+    }
+    else {
+        parts = [
+            `${nd}d20${mods}`,
+            init.mod,
+            (init.prof.term !== "0") ? init.prof.term : null,
+            (init.bonus !== 0) ? init.bonus : null
+        ];
+    }
+    ;
     // Optionally apply Dexterity tiebreaker
-    const tiebreaker = game.settings.get("dnd5e", "initiativeDexTiebreaker");
+    const tiebreaker = game.settings.get(game.system.id, "initiativeDexTiebreaker");
     if (tiebreaker)
         parts.push(actor.data.data.abilities.dex.value / 100);
     return parts.filter(p => p !== null).join(" + ");

@@ -1,1 +1,622 @@
-const _0x37a2=['spec','hashPreEncoded','filter','when\x20you\x20reach\x205th\x20level','getSrdCompendiumEntity','LINK_DATA_SHEET_ITEM','duration','hover','min','_getSpellFlags','optsGetSpellItem','turn','includes','foundrySpell','consumeAmount','split','set','time','scaling','attribute','VET_SPELL_SCHOOL_TO_ABV','pGetSpellHashToItemPosMapAndFillSpells','getNameWithSourcePart','consume','touch','self','week','permissions','data','doHookSpellLinkRender','isActorItem','concentration','get','findIndex','consumeType','damageInflict','target.value','spellPointsResource','ranged\x20spell\x20attack','uid','_pFillSpellPromises_pAddSpellItem','permanent','pGetSpellSideData','299139DCOhpX','round','mode','heal','copy','length','items','_pGetAdditionalData','753625YuMjTK','usesMax','parentSubclassName','747608LZGuRi','condition','_pFillSpellPromises_pUpdateSpellItem','updateEmbeddedDocuments','getCleanEntityName','pSetSpellItemIsPrepared','3eJvXRF','trim','amount','prompt','splitFirstSpace','stripTags','spell','effects','target','push','getSourceWithPagePart','minute','prepared','join','ritual','encodeForHash','perm','melee\x20spell\x20attack','page','meta','2451248pDVmze','@mod','MODULE_NAME','save','71016KjFtxl','importSpell','abilityAbv','hash','msak','options','1GPBfbL','error','href','instant','type','getItemSource','isExpanded','usesPer','hashToIdMap','damage','value','school','special','add','preparation','usesCurrent','exec','parentClassSource','pGetSpellHashToItemPosMapAndFillSpellsFromTagIds','none','innate','castAtLevel','some','document','_getReDiceYourSpellcastingMod','4647khRnxK','distance','parentSubclassSource','consumeTarget','update','has','range','name','day','miscTags','pGetCompendiumImage','pGetIconImage','inst','223SqinnG','parseScaleDice','stringify','VALID_DAMAGE_TYPES','savingThrow','replace','parts','entriesHigherLevel','level','isPrepared','_getDescription','toLowerCase','pCacheAndGet','MODULE_NAME_FAKE','import','durationUnit','498223HtFsdT','preparationMode','URL_TO_HASH_BUILDER','Failed\x20to\x20import\x20spell\x20with\x20hash\x20\x22','modules/','isImportDescription','healing','isSpellPoints','isIgnoreExisting','isStrictMatching','cost','_pGetSpellItem_parseAndAddDamage','getEntryDescription','miles','uses','parentClassName','atwill','components','number','timed','pGetSpellItem','PG_SPELLS','\x20+\x20@mod','find','escapeQuotes','always','getActorSpell','pGetAdditionalData_','Item','map','getActorSpellItemOpts','scalingLevelDice','cantrip','sphere','getMetricNumber'];const _0x32d3=function(_0x3f1ac5,_0x1d2a50){_0x3f1ac5=_0x3f1ac5-0xfb;let _0x37a207=_0x37a2[_0x3f1ac5];return _0x37a207;};const _0x4c2943=_0x32d3;(function(_0x317cc8,_0x1779d1){const _0x244d33=_0x32d3;while(!![]){try{const _0x548832=parseInt(_0x244d33(0x173))+-parseInt(_0x244d33(0x155))+-parseInt(_0x244d33(0xfc))+-parseInt(_0x244d33(0x15b))*parseInt(_0x244d33(0x14a))+-parseInt(_0x244d33(0x19f))*-parseInt(_0x244d33(0x192))+-parseInt(_0x244d33(0x179))*parseInt(_0x244d33(0x152))+parseInt(_0x244d33(0x16f));if(_0x548832===_0x1779d1)break;else _0x317cc8['push'](_0x317cc8['shift']());}catch(_0x19f04e){_0x317cc8['push'](_0x317cc8['shift']());}}}(_0x37a2,0xa18a8));import{Vetools}from'./Vetools.js';import{UtilActors}from'./UtilActors.js';import{Config}from'./Config.js';import{SharedConsts}from'../shared/SharedConsts.js';import{UtilApplications}from'./UtilApplications.js';import{LGT}from'./Util.js';import{UtilEvents}from'./UtilEvents.js';import{DataConverter}from'./DataConverter.js';import{UtilCompendium}from'./UtilCompendium.js';class DataConverterSpell{static async[_0x4c2943(0x110)](_0x570d60,_0x3cc47b){const _0x1069c4=_0x4c2943;_0x3cc47b=_0x3cc47b||{};const _0x49cbcd=this['_getDescription'](_0x570d60),_0x1c447e=JSON[_0x1069c4(0x1a1)](_0x570d60['entries']);let _0xcc7e00=_0x570d60[_0x1069c4(0x1a7)]===0x0?_0x1069c4(0x115):_0x3cc47b[_0x1069c4(0xfd)]||_0x1069c4(0x167),_0x38e0dc=_0x570d60[_0x1069c4(0x1a7)]===0x0?!![]:!!_0x3cc47b['isPrepared'];Config['get'](_0x1069c4(0x174),_0x1069c4(0x103))&&_0x570d60['level']!==0x0&&(_0xcc7e00==='prepared'||_0xcc7e00==='always')&&(_0xcc7e00=_0x1069c4(0x10c));let _0x324f77='';if(_0x570d60['miscTags']&&_0x570d60[_0x1069c4(0x19b)][_0x1069c4(0x12b)]('HL'))_0x324f77=_0x1069c4(0x14d);if(_0x570d60[_0x1069c4(0x1a3)]&&_0x570d60[_0x1069c4(0x1a3)][_0x1069c4(0x14f)])_0x324f77=_0x1069c4(0x172);if(_0x1c447e[_0x1069c4(0x1aa)]()[_0x1069c4(0x12b)](_0x1069c4(0x16c)))_0x324f77=_0x1069c4(0x177);if(_0x1c447e[_0x1069c4(0x1aa)]()[_0x1069c4(0x12b)](_0x1069c4(0x145)))_0x324f77='rsak';_0x324f77=_0x324f77||'util';const _0x3716f3=UtilActors[_0x1069c4(0x133)][_0x570d60[_0x1069c4(0x184)]]||'',_0xf029eb=_0x570d60['components']&&_0x570d60['components']['m']?_0x570d60[_0x1069c4(0x10d)]['m']!==!![]?''+(_0x570d60['components']['m']['text']||_0x570d60[_0x1069c4(0x10d)]['m']):'':'';let _0x13a628=0x0,_0x1450ae='';const _0x35e768=_0x570d60[_0x1069c4(0x125)][0x0];switch(_0x35e768[_0x1069c4(0x17d)]){case _0x1069c4(0x17c):_0x1450ae=_0x1069c4(0x19e);break;case _0x1069c4(0x10f):{switch(_0x35e768['duration'][_0x1069c4(0x17d)]){case _0x1069c4(0x12a):_0x1450ae=_0x1069c4(0x12a),_0x13a628=_0x35e768[_0x1069c4(0x125)][_0x1069c4(0x15d)];break;case _0x1069c4(0x14b):_0x1450ae='round',_0x13a628=_0x35e768[_0x1069c4(0x125)]['amount'];break;case _0x1069c4(0x166):_0x1450ae=_0x1069c4(0x166),_0x13a628=_0x35e768[_0x1069c4(0x125)][_0x1069c4(0x15d)];break;case'hour':_0x1450ae='hour',_0x13a628=_0x35e768['duration'][_0x1069c4(0x15d)];break;case _0x1069c4(0x19a):_0x1450ae=_0x1069c4(0x19a),_0x13a628=_0x35e768['duration']['amount'];break;case _0x1069c4(0x139):_0x1450ae=_0x1069c4(0x19a),_0x13a628=_0x35e768['duration'][_0x1069c4(0x15d)]*0x7;break;case'year':_0x1450ae='year',_0x13a628=_0x35e768['duration'][_0x1069c4(0x15d)];break;}break;}case _0x1069c4(0x148):_0x1450ae=_0x1069c4(0x16b);break;case _0x1069c4(0x185):_0x1450ae=_0x1069c4(0x11f);break;}let _0x8db81=0x0,_0x897721='',_0x2953a0=0x0,_0x4d8527='',_0x647478='';switch(_0x570d60[_0x1069c4(0x198)]['type']){case RNG_SPECIAL:_0x897721=_0x1069c4(0x11f);break;case RNG_POINT:{const _0xda4c8f=_0x570d60[_0x1069c4(0x198)][_0x1069c4(0x193)];switch(_0xda4c8f[_0x1069c4(0x17d)]){case RNG_SELF:{_0x4d8527=_0x1069c4(0x138),_0x647478=_0x1069c4(0x138),_0x897721=_0x1069c4(0x138);break;}case RNG_UNLIMITED:case RNG_UNLIMITED_SAME_PLANE:case RNG_SIGHT:case RNG_SPECIAL:{_0x4d8527='spec',_0x897721=_0x1069c4(0x11f);break;}case RNG_TOUCH:{_0x4d8527=_0x1069c4(0x137),_0x897721=_0x1069c4(0x137);break;}case UNT_MILES:{_0x8db81=Config[_0x1069c4(0x11e)](_0x1069c4(0x174),_0xda4c8f[_0x1069c4(0x15d)],UNT_MILES),_0x897721='mi';break;}case UNT_FEET:default:{_0x8db81=Config[_0x1069c4(0x11e)]('importSpell',_0xda4c8f[_0x1069c4(0x15d)],UNT_FEET),_0x897721='ft';break;}}break;}case RNG_LINE:case RNG_CUBE:case RNG_CONE:case RNG_RADIUS:case RNG_SPHERE:case RNG_HEMISPHERE:case RNG_CYLINDER:{_0x2953a0=Config[_0x1069c4(0x11e)](_0x1069c4(0x174),_0x570d60['range'][_0x1069c4(0x193)]['amount'],_0x570d60[_0x1069c4(0x198)][_0x1069c4(0x193)]['type']);if(_0x570d60[_0x1069c4(0x198)]['distance'][_0x1069c4(0x17d)]===_0x1069c4(0x109))_0x4d8527='mi';else _0x4d8527='ft';if(_0x570d60[_0x1069c4(0x198)][_0x1069c4(0x17d)]===RNG_HEMISPHERE)_0x647478=_0x1069c4(0x11d);else _0x647478=_0x570d60[_0x1069c4(0x198)][_0x1069c4(0x17d)];}}let _0x2eacea=[],_0x41063b=null,_0x32d0b8=null,_0x391171=![];if(_0x570d60['scalingLevelDice']){const _0x3298f6=[_0x570d60[_0x1069c4(0x11b)]]['flat'](),_0x51d1b9=_0x2cbc7a=>Math[_0x1069c4(0x127)](...Object['keys'](_0x2cbc7a)[_0x1069c4(0x119)](_0x4da469=>Number(_0x4da469))),_0x50f71f=new RegExp('('+UtilActors[_0x1069c4(0x1a2)][_0x1069c4(0x168)]('|')+')','i');_0x2eacea[_0x1069c4(0x164)](..._0x3298f6[_0x1069c4(0x119)](_0x19cb25=>{const _0x2e48ce=_0x1069c4,_0x561a22=_0x51d1b9(_0x19cb25[_0x2e48ce(0x131)]),_0x56d265=_0x19cb25[_0x2e48ce(0x131)][_0x561a22],_0x528f9b=_0x50f71f[_0x2e48ce(0x189)](_0x19cb25['label']||'');return[(_0x56d265||'')[_0x2e48ce(0x1a4)](/{{spellcasting_mod}}/g,_0x2e48ce(0x170)),_0x528f9b?_0x528f9b[0x1][_0x2e48ce(0x1aa)]():null];}));const _0x2c9937=_0x3298f6[0x0],_0x184996=_0x51d1b9(_0x2c9937['scaling']);_0x41063b=_0x2c9937['scaling'][_0x184996];}else{const _0x4d6dbd=[];if(_0x570d60[_0x1069c4(0x142)]&&_0x570d60['damageInflict'][_0x1069c4(0x14f)]){if(_0x1c447e[_0x1069c4(0x1aa)]()[_0x1069c4(0x12b)](_0x1069c4(0x122))){const _0x48ba1e=[];_0x1c447e[_0x1069c4(0x1a4)](/\({@damage ([^}]+)}\)/g,(..._0x17dd02)=>_0x48ba1e[_0x1069c4(0x164)](_0x17dd02[0x1]));if(_0x48ba1e['length']===0x3){const _0x16bf8f=/(?:^|[^(]){@damage ([^}]+)}(?:[^)]|$)/[_0x1069c4(0x189)](_0x1c447e);if(_0x16bf8f)_0x41063b=_0x16bf8f[0x1];else _0x41063b=_0x48ba1e[0x0];}}this[_0x1069c4(0x107)](_0x1c447e,_0x4d6dbd);}if(_0x570d60[_0x1069c4(0x19b)]&&_0x570d60[_0x1069c4(0x19b)][_0x1069c4(0x18f)](_0x1bca07=>_0x1bca07==='HL')){const _0x572aa7=['',_0x1069c4(0x102)];_0x1c447e[_0x1069c4(0x1a4)](this[_0x1069c4(0x191)](),(..._0x273d78)=>{const _0x4fa945=_0x1069c4,[,_0x22d2ef,_0x39d8d9]=_0x273d78;_0x572aa7[0x0]=_0x22d2ef;if(_0x39d8d9)_0x572aa7[0x0]=_0x572aa7[0x0]+_0x4fa945(0x112);}),_0x4d6dbd[_0x1069c4(0x164)](_0x572aa7);}if(_0x570d60[_0x1069c4(0x1a6)]){const _0x5c9cf7=/{@(?:scaledice|scaledamage) ([^}]+)}/gi;if(_0x3cc47b[_0x1069c4(0x18e)]!=null&&_0x3cc47b[_0x1069c4(0x18e)]!==_0x570d60['level']&&_0x4d6dbd['length']&&_0xcc7e00===_0x1069c4(0x18d)){const _0x181fe9=new Set();JSON[_0x1069c4(0x1a1)](_0x570d60['entriesHigherLevel'])[_0x1069c4(0x1a4)](_0x5c9cf7,(..._0xd5107a)=>{const _0x49245e=_0x1069c4,[_0x497d37]=_0xd5107a[0x1][_0x49245e(0x12e)]('|')[_0x49245e(0x119)](_0x1e6a8c=>_0x1e6a8c['trim']()),[_0x3b16bc,_0x3571c0]=Renderer[_0x49245e(0x15f)](_0xd5107a[0x0]['slice'](0x1,-0x1)),_0x2448fb=Renderer[_0x49245e(0x1a0)](_0x3b16bc,_0x3571c0),_0xf93aeb=_0x4d6dbd[_0x49245e(0x140)](_0x5a17a4=>(_0x5a17a4[0x0]||'')[_0x49245e(0x15c)]()['toLowerCase']()===_0x497d37['toLowerCase']());if(!_0x181fe9[_0x49245e(0x197)](_0xf93aeb)&&~_0xf93aeb){const _0x34b6e7=_0x2448fb?.[_0x49245e(0x15e)]?.[_0x49245e(0x178)]?.[_0x3cc47b[_0x49245e(0x18e)]];_0x34b6e7&&(_0x181fe9[_0x49245e(0x186)](_0xf93aeb),_0x4d6dbd[_0xf93aeb][0x0]+='+\x20'+_0x34b6e7,_0x391171=!![]);}});}else JSON[_0x1069c4(0x1a1)](_0x570d60[_0x1069c4(0x1a6)])[_0x1069c4(0x1a4)](_0x5c9cf7,(..._0x1378b9)=>{if(_0x32d0b8)return;const [,,_0x226460]=_0x1378b9[0x1]['split']('|');_0x32d0b8=_0x226460;});}if(!_0x4d6dbd[_0x1069c4(0x14f)])this[_0x1069c4(0x107)](_0x1c447e,_0x4d6dbd);_0x2eacea[_0x1069c4(0x164)](..._0x4d6dbd);}_0x2eacea=_0x2eacea[_0x1069c4(0x121)](Boolean);let _0x2be231='';!_0x2eacea[_0x1069c4(0x14f)]&&_0x1c447e['replace'](this[_0x1069c4(0x191)](),(..._0x355399)=>{const _0xb2f1e2=_0x1069c4,[,_0x4955a2,_0x247881]=_0x355399;_0x2be231=_0x4955a2;if(_0x247881)_0x2be231=_0x2be231+_0xb2f1e2(0x112);});let _0xfc6759='';if(_0x570d60[_0x1069c4(0x1a3)]&&_0x570d60[_0x1069c4(0x1a3)][_0x1069c4(0x14f)])_0xfc6759=_0x570d60['savingThrow'][0x0]['substring'](0x0,0x3)[_0x1069c4(0x1aa)]();let _0x3c2e49='spell';if(_0x3cc47b[_0x1069c4(0x175)])_0x3c2e49=_0x3cc47b[_0x1069c4(0x175)];let _0x41f055=_0x3cc47b[_0x1069c4(0x141)]??'',_0x123cb7=_0x3cc47b[_0x1069c4(0x195)]??null,_0x317507=_0x3cc47b[_0x1069c4(0x12d)]??null;Config['get'](_0x1069c4(0x174),_0x1069c4(0x103))&&_0x570d60['level']!==0x0&&(_0x41f055=_0x1069c4(0x132),_0x123cb7=Config['get']('importSpell',_0x1069c4(0x144)),_0x317507=Parser['spLevelToSpellPoints'](_0x570d60[_0x1069c4(0x1a7)]));const _0xb216b6=await DataConverter[_0x1069c4(0x19d)](_0x1069c4(0x161),_0x570d60)||await UtilCompendium[_0x1069c4(0x19c)](_0x1069c4(0x161),_0x570d60)||_0x1069c4(0x100)+SharedConsts[_0x1069c4(0x171)]+'/media/icon/scroll-unfurled.svg',_0xe39d7a=await UtilCompendium[_0x1069c4(0x123)](_0x1069c4(0x161),_0x570d60);if(_0xe39d7a){_0x2953a0=MiscUtil[_0x1069c4(0x13f)](_0xe39d7a,_0x1069c4(0x13b),'target',_0x1069c4(0x183))||_0x2953a0,_0x4d8527=MiscUtil[_0x1069c4(0x13f)](_0xe39d7a,_0x1069c4(0x13b),'target','units')||_0x4d8527,_0x647478=MiscUtil['get'](_0xe39d7a,_0x1069c4(0x13b),_0x1069c4(0x163),'type')||_0x647478;if(!_0x391171)_0x2eacea=MiscUtil[_0x1069c4(0x13f)](_0xe39d7a,_0x1069c4(0x13b),_0x1069c4(0x182),_0x1069c4(0x1a5))||_0x2eacea;}const _0x41a1c9=await this[_0x1069c4(0x151)](_0x570d60,_0x4d8527);if(_0x3cc47b['durationAmount']!==undefined)_0x13a628=_0x3cc47b['durationAmount'];if(_0x3cc47b[_0x1069c4(0xfb)]!==undefined)_0x1450ae=_0x3cc47b[_0x1069c4(0xfb)];const _0x1992af={'name':UtilApplications[_0x1069c4(0x159)](DataConverter[_0x1069c4(0x135)](_0x570d60,{'isActorItem':_0x3cc47b[_0x1069c4(0x13d)]})),'type':_0x1069c4(0x161),'data':{'source':DataConverter[_0x1069c4(0x165)](_0x570d60),'description':{'value':_0x49cbcd,'chat':'','unidentified':''},'actionType':_0x324f77,'level':_0x570d60[_0x1069c4(0x1a7)],'school':_0x3716f3,'components':{'value':'','vocal':_0x570d60[_0x1069c4(0x10d)]&&_0x570d60[_0x1069c4(0x10d)]['v'],'somatic':_0x570d60[_0x1069c4(0x10d)]&&_0x570d60[_0x1069c4(0x10d)]['s'],'material':!!(_0x570d60['components']&&_0x570d60[_0x1069c4(0x10d)]['m']),'ritual':_0x570d60[_0x1069c4(0x16e)]&&_0x570d60[_0x1069c4(0x16e)][_0x1069c4(0x169)],'concentration':!!MiscUtil['get'](_0x570d60,_0x1069c4(0x125),'0',_0x1069c4(0x13e))},'materials':{'value':_0xf029eb,'consumed':!!MiscUtil[_0x1069c4(0x13f)](_0x570d60,_0x1069c4(0x10d),'m',_0x1069c4(0x136)),'cost':Math['round']((MiscUtil[_0x1069c4(0x13f)](_0x570d60,_0x1069c4(0x10d),'m',_0x1069c4(0x106))||0x0)/0x64),'supply':0x0},'target':{'value':_0x2953a0,'units':_0x4d8527,'type':_0x647478},'range':{'value':_0x8db81,'units':_0x897721,'long':null},'activation':{'type':_0x570d60[_0x1069c4(0x130)][0x0]['unit'],'cost':_0x570d60['time'][0x0][_0x1069c4(0x10e)],'condition':Renderer[_0x1069c4(0x160)](_0x570d60[_0x1069c4(0x130)][0x0][_0x1069c4(0x156)]||'')},'duration':{'value':_0x13a628,'units':_0x1450ae},'damage':{'parts':_0x2eacea,'versatile':''},'scaling':{'mode':_0x41063b?_0x1069c4(0x11c):_0x32d0b8?_0x1069c4(0x1a7):_0x1069c4(0x18c),'formula':_0x41063b||_0x32d0b8||''},'save':{'ability':_0xfc6759,'dc':null,'scaling':_0x3c2e49},'ability':_0x3cc47b[_0x1069c4(0x175)]||'','uses':{'value':_0x3cc47b[_0x1069c4(0x188)]||0x0,'max':_0x3cc47b[_0x1069c4(0x153)]||0x0,'per':_0x3cc47b[_0x1069c4(0x180)]||''},'attackBonus':0x0,'chatFlavor':'','critical':null,'formula':_0x2be231,'preparation':{'mode':_0xcc7e00,'prepared':_0x38e0dc},'consume':{'type':_0x41f055,'target':_0x123cb7,'amount':_0x317507},..._0x41a1c9||{}},'img':_0xb216b6,'flags':this['_getSpellFlags'](_0x570d60,_0x3cc47b),'effects':MiscUtil[_0x1069c4(0x14e)](_0xe39d7a?.[_0x1069c4(0x162)]||[])};if(_0x3cc47b['isAddPermission'])_0x1992af['permission']={'default':Config[_0x1069c4(0x13f)](_0x1069c4(0x174),_0x1069c4(0x13a))};return _0x1992af;}static[_0x4c2943(0x128)](_0x280b3c,{parentClassName:_0x50f51e,parentClassSource:_0x22e670,parentSubclassName:_0x11256f,parentSubclassSource:_0x64dae2}={}){const _0x19177f=_0x4c2943,_0x5dcf33={[SharedConsts[_0x19177f(0x1ac)]]:{'page':UrlUtil[_0x19177f(0x111)],'source':_0x280b3c['source'],'hash':UrlUtil[_0x19177f(0xfe)][UrlUtil[_0x19177f(0x111)]](_0x280b3c)}};if(!_0x50f51e&&!_0x22e670&&!_0x11256f&&!_0x64dae2)return _0x5dcf33;return _0x5dcf33[SharedConsts[_0x19177f(0x1ac)]][_0x19177f(0x10b)]=_0x50f51e,_0x5dcf33[SharedConsts['MODULE_NAME_FAKE']][_0x19177f(0x18a)]=_0x22e670,_0x5dcf33[SharedConsts[_0x19177f(0x1ac)]][_0x19177f(0x154)]=_0x11256f,_0x5dcf33[SharedConsts[_0x19177f(0x1ac)]][_0x19177f(0x194)]=_0x64dae2,_0x5dcf33;}static[_0x4c2943(0x107)](_0x4515e0,_0x2fbf0d){const _0x3fe801=_0x4c2943;_0x4515e0[_0x3fe801(0x1a4)](/{@damage ([^}]+)} ([^ ]+)(, [^ ]+)*(,? or [^ ]+)? damage/ig,(..._0x27400c)=>{const _0x472ac1=_0x3fe801;_0x2fbf0d[_0x472ac1(0x164)]([_0x27400c[0x1],_0x27400c[0x2]]);});}static[_0x4c2943(0x191)](){return/{@dice ([^}]+)}(\s*\+\s*your\s+spellcasting\s+ability\s+modifier)?/i;}static[_0x4c2943(0x1a9)](_0x47b561){const _0x377fd5=_0x4c2943;if(!Config['get'](_0x377fd5(0x174),_0x377fd5(0x101)))return'';return DataConverter['getWithDescriptionPlugins'](()=>{const _0x1a087c=_0x377fd5,_0x524a72=DataConverter[_0x1a087c(0x108)](_0x47b561),_0x122662=_0x47b561[_0x1a087c(0x1a6)]?DataConverter[_0x1a087c(0x108)](_0x47b561,{'prop':_0x1a087c(0x1a6)}):'';return[_0x524a72,_0x122662][_0x1a087c(0x121)](Boolean)[_0x1a087c(0x168)]('');});}static async['_pGetAdditionalData'](_0x227e48,_0x42b80a){const _0x30df0f=_0x4c2943,_0x37cd36=DataConverter[_0x30df0f(0x117)](_0x227e48,{'propBrew':_0x30df0f(0x12c),'fnLoadJson':Vetools[_0x30df0f(0x149)],'propJson':_0x30df0f(0x161)});if(_0x37cd36[_0x30df0f(0x143)])_0x37cd36[_0x30df0f(0x143)]=Config['getMetricNumber'](_0x30df0f(0x174),_0x37cd36[_0x30df0f(0x143)],_0x42b80a);return _0x37cd36;}static async['pGetSpellHashToItemPosMapAndFillSpellsFromTagIds'](_0x3d225a,_0xfac7c6,_0x3d1458){const _0x264be0=_0x4c2943;_0x3d1458=_0x3d1458||{};const _0x9eb678=_0x3d1458[_0x264be0(0x181)]||{};for(const _0x3ea73c of _0xfac7c6){const _0x457238=_0x3ea73c[_0x264be0(0x146)]||_0x3ea73c,_0x14d66e=_0x3ea73c[_0x264be0(0x146)]?_0x3ea73c:null;if(_0x14d66e?.[_0x264be0(0x17f)])continue;let [_0x1fd347,_0x2bd40e]=_0x457238[_0x264be0(0x12e)]('|');if(!_0x2bd40e)_0x2bd40e=SRC_PHB;const _0x359c4e=UrlUtil[_0x264be0(0xfe)][UrlUtil[_0x264be0(0x111)]]({'name':_0x1fd347,'source':_0x2bd40e});if(_0x9eb678[_0x359c4e]!=null&&!_0x14d66e){await this[_0x264be0(0x157)](_0x3d225a,_0x9eb678[_0x359c4e],_0x2bd40e,_0x359c4e,_0x3d1458);continue;}_0x14d66e&&(_0x3d1458={..._0x3d1458},_0x3d1458['optsGetSpellItem']=MiscUtil[_0x264be0(0x14e)](_0x3d1458[_0x264be0(0x129)]||{}),_0x3d1458[_0x264be0(0x129)][_0x264be0(0x188)]=_0x14d66e[_0x264be0(0x10a)],_0x3d1458['optsGetSpellItem']['usesMax']=_0x14d66e[_0x264be0(0x10a)],_0x3d1458[_0x264be0(0x129)]['usesPer']=_0x14d66e[_0x264be0(0x180)],_0x3d1458['optsGetSpellItem']['consumeType']=_0x14d66e[_0x264be0(0x141)],_0x3d1458['optsGetSpellItem'][_0x264be0(0x12d)]=_0x14d66e[_0x264be0(0x12d)],_0x3d1458[_0x264be0(0x129)][_0x264be0(0x195)]=_0x14d66e[_0x264be0(0x195)],_0x3d1458[_0x264be0(0x129)][_0x264be0(0x1a8)]=_0x14d66e['isPrepared']!=null?_0x14d66e['isPrepared']:_0x3d1458[_0x264be0(0x129)][_0x264be0(0x1a8)],_0x3d1458[_0x264be0(0x129)][_0x264be0(0xfd)]=_0x14d66e[_0x264be0(0xfd)]!=null?_0x14d66e[_0x264be0(0xfd)]:_0x3d1458[_0x264be0(0x129)][_0x264be0(0xfd)],_0x3d1458['optsGetSpellItem'][_0x264be0(0x18e)]=_0x14d66e['castAtLevel'],_0x3d1458[_0x264be0(0x104)]=!![]);const _0x4a6ae3=await DataConverterSpell[_0x264be0(0x147)](_0x3d225a,_0x2bd40e,_0x359c4e,_0x3d1458);if(_0x4a6ae3==null||_0x14d66e)continue;_0x9eb678[_0x359c4e]=_0x4a6ae3;}return _0x9eb678;}static async[_0x4c2943(0x157)](_0x7ecbaa,_0x194fdf,_0x4468bc,_0x12ba95,_0x5991bd){const _0x1e42ce=_0x4c2943,_0x45e297=_0x7ecbaa['items'][_0x1e42ce(0x113)](_0x4db77d=>_0x4db77d['id']===_0x194fdf);if(!_0x45e297)return;const _0x12c6ff=_0x45e297['data'];_0x5991bd=_0x5991bd||{};let _0x551a3b;try{_0x551a3b=await Renderer[_0x1e42ce(0x126)][_0x1e42ce(0x1ab)](UrlUtil[_0x1e42ce(0x111)],_0x4468bc,_0x12ba95);}catch(_0x36aa1b){console[_0x1e42ce(0x17a)](...LGT,_0x1e42ce(0xff)+_0x12ba95+'\x22!',_0x36aa1b);return;}if(!_0x551a3b)return;const _0x5b7e23=await DataConverterSpell['pGetSpellItem'](_0x551a3b,{...UtilActors[_0x1e42ce(0x11a)](_0x7ecbaa),..._0x5991bd[_0x1e42ce(0x129)]||{}}),_0x3ce682={'_id':_0x45e297['id'],'data':{}};let _0x1f6678=![];MiscUtil[_0x1e42ce(0x13f)](_0x12c6ff['data'],_0x1e42ce(0x187),_0x1e42ce(0x14c))===_0x1e42ce(0x167)&&MiscUtil[_0x1e42ce(0x13f)](_0x5b7e23[_0x1e42ce(0x13b)],_0x1e42ce(0x187),_0x1e42ce(0x14c))===_0x1e42ce(0x115)&&(_0x1f6678=!![],MiscUtil[_0x1e42ce(0x12f)](_0x3ce682['data'],_0x1e42ce(0x187),_0x1e42ce(0x14c),_0x1e42ce(0x115))),MiscUtil[_0x1e42ce(0x13f)](_0x12c6ff[_0x1e42ce(0x13b)],'preparation','prepared')!==!![]&&MiscUtil[_0x1e42ce(0x13f)](_0x5b7e23[_0x1e42ce(0x13b)],_0x1e42ce(0x187),_0x1e42ce(0x167))===!![]&&(_0x1f6678=!![],MiscUtil[_0x1e42ce(0x12f)](_0x3ce682[_0x1e42ce(0x13b)],_0x1e42ce(0x187),_0x1e42ce(0x167),!![])),_0x1f6678&&await _0x7ecbaa[_0x1e42ce(0x158)](_0x1e42ce(0x118),[_0x3ce682]);}static async[_0x4c2943(0x134)](_0x577554,_0x2713fb,_0x16af98){const _0x1137eb=_0x4c2943;_0x16af98=_0x16af98||{};const _0x2daea5=[],_0x14689e=/{@spell ([^}]+)}/gi;let _0x34baa8;while(_0x34baa8=_0x14689e[_0x1137eb(0x189)](_0x2713fb)){_0x2daea5[_0x1137eb(0x164)](_0x34baa8[0x1]);}return this[_0x1137eb(0x18b)](_0x577554,_0x2daea5,_0x16af98);}static async[_0x4c2943(0x147)](_0x19ccf2,_0x342087,_0x3f69bf,_0x417b24){const _0x20c6c5=_0x4c2943;_0x417b24=_0x417b24||{};let _0x191e90;try{_0x191e90=await Renderer['hover'][_0x20c6c5(0x1ab)](UrlUtil[_0x20c6c5(0x111)],_0x342087,_0x3f69bf);}catch(_0x506585){return console[_0x20c6c5(0x17a)](...LGT,_0x20c6c5(0xff)+_0x3f69bf+'\x22!',_0x506585),null;}if(!_0x191e90)return null;if(!_0x417b24[_0x20c6c5(0x104)]){const _0x26c1bb=DataConverterSpell[_0x20c6c5(0x116)](_0x19ccf2,_0x191e90[_0x20c6c5(0x199)],_0x191e90['source']);if(_0x26c1bb)return _0x26c1bb['id'];}const _0x2fdbbf=await DataConverterSpell[_0x20c6c5(0x110)](_0x191e90,{...UtilActors['getActorSpellItemOpts'](_0x19ccf2),..._0x417b24[_0x20c6c5(0x129)]||{}}),_0x39108b=await UtilActors['pAddActorItems'](_0x19ccf2,[_0x2fdbbf],{'isTemporary':_0x417b24['isTemporary']});return _0x39108b[0x0]?.[_0x20c6c5(0x190)]?.['id'];}static['getActorSpell'](_0x2a74b7,_0x19eacc,_0x49445d){const _0x510bb2=_0x4c2943;if(!_0x19eacc||!_0x49445d)return null;return _0x2a74b7[_0x510bb2(0x150)]&&_0x2a74b7[_0x510bb2(0x150)][_0x510bb2(0x113)](_0x4e2712=>(_0x4e2712[_0x510bb2(0x199)]||'')[_0x510bb2(0x1aa)]()===_0x19eacc['toLowerCase']()&&(!Config[_0x510bb2(0x13f)](_0x510bb2(0x1ad),_0x510bb2(0x105))||(DataConverter[_0x510bb2(0x17e)](_0x4e2712)||'')[_0x510bb2(0x1aa)]()===_0x49445d[_0x510bb2(0x1aa)]()));}static[_0x4c2943(0x13c)](_0x16e792,_0x916b45,_0x2f4267){const _0x2e3c2a=_0x4c2943;if(_0x2f4267[_0x2e3c2a(0x17b)]&&_0x2f4267[_0x2e3c2a(0x17b)][_0x2e3c2a(0x126)]){if(_0x2f4267[_0x2e3c2a(0x17b)][_0x2e3c2a(0x126)][_0x2e3c2a(0x16d)]===UrlUtil[_0x2e3c2a(0x111)]){const _0x24d827=_0x2f4267[_0x2e3c2a(0x17b)][_0x2e3c2a(0x120)]?_0x2f4267['href'][_0x2e3c2a(0x176)]:UrlUtil[_0x2e3c2a(0x16a)](_0x2f4267[_0x2e3c2a(0x17b)][_0x2e3c2a(0x176)]),_0x4303e8=_0x916b45[_0x24d827];if(_0x4303e8!=null){const _0x88ed81=JSON['stringify']({'actorId':_0x16e792,'itemId':_0x4303e8})[_0x2e3c2a(0x114)]();return{'isDisableEvents':!![],'attributes':UtilEvents[_0x2e3c2a(0x124)]+'=\x22'+_0x88ed81+'\x22'};}}}return null;}static async[_0x4c2943(0x15a)](_0x3a8237,_0x1cdd95){const _0xbcf39f=_0x4c2943;if(!_0x3a8237)return;await _0x3a8237[_0xbcf39f(0x196)]({'data':{'preparation':{'prepared':_0x1cdd95}}});}}export{DataConverterSpell};
+import {Vetools} from "./Vetools.js";
+import {UtilActors} from "./UtilActors.js";
+import {Config} from "./Config.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {UtilApplications} from "./UtilApplications.js";
+import {DataConverter} from "./DataConverter.js";
+import {UtilCompendium} from "./UtilCompendium.js";
+import {UtilActiveEffects} from "./UtilActiveEffects.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+import {ConfigConsts} from "./ConfigConsts.js";
+import {UtilDocuments} from "./UtilDocuments.js";
+
+class DataConverterSpell {
+	/**
+	 *
+	 * @param spell The spell entity.
+	 * @param [opts] Options object.
+	 * @param [opts.abilityAbv] A creature's spellcasting ability attribute (abbreviation).
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 * @param [opts.isActorItem]
+	 * @param [opts.isActorItemNpc]
+	 * @param [opts.isPrepared]
+	 * @param [opts.preparationMode]
+	 * @param [opts.usesCurrent]
+	 * @param [opts.usesMax]
+	 * @param [opts.usesPer]
+	 * @param [opts.consumeType]
+	 * @param [opts.consumeAmount]
+	 * @param [opts.consumeTarget]
+	 * @param [opts.durationAmount]
+	 * @param [opts.durationUnit]
+	 * @param [opts.castAtLevel] A level to force the spell to cast at *if it is an innate spell* (i.e., scaling dice
+	 * will be set appropriately, as one cannot choose the casting level for innate spells).
+	 *
+	 * These parameters are used to link Charactermancer spells to their respective classes when re-loading the
+	 * Charactermancer in order to level up.
+	 * @param [opts.parentClassName]
+	 * @param [opts.parentClassSource]
+	 * @param [opts.parentSubclassName]
+	 * @param [opts.parentSubclassSource]
+	 * @param [opts.spellPointsItemId]
+	 *
+	 * @return {object} Item data.
+	 */
+	static async pGetSpellItem (spell, opts) {
+		opts = opts || {};
+
+		const configKeySpellPoints = opts.isActorItemNpc ? "isSpellPointsNpc" : "isSpellPoints";
+
+		const srdData = await UtilCompendium.getSrdCompendiumEntity("spell", spell);
+
+		const description = await this._pGetDescription(spell);
+
+		const entriesStr = JSON.stringify(spell.entries);
+
+		// region Prepared
+		// Assume cantrips are always prepared
+		let preparationMode = spell.level === 0 ? "always" : opts.preparationMode || "prepared";
+		let isPrepared = spell.level === 0 ? true : !!opts.isPrepared;
+
+		if (Config.get("importSpell", configKeySpellPoints) && spell.level !== 0 && (preparationMode === "prepared" || preparationMode === "always")) {
+			// Avoid "spell slot" controls in spell points mode
+			preparationMode = "atwill";
+		}
+		// endregion
+
+		let actionType = "";
+		if (spell.miscTags && spell.miscTags.includes("HL")) actionType = "heal";
+		if (spell.savingThrow && spell.savingThrow.length) actionType = "save";
+		if (entriesStr.toLowerCase().includes("melee spell attack")) actionType = "msak";
+		if (entriesStr.toLowerCase().includes("ranged spell attack")) actionType = "rsak";
+		actionType = actionType || "util";
+
+		const school = UtilActors.VET_SPELL_SCHOOL_TO_ABV[spell.school] || "";
+		const materials = spell.components && spell.components.m ? spell.components.m !== true ? `${spell.components.m.text || spell.components.m}` : "" : "";
+
+		let durationVal = 0;
+		let durationUnit = "";
+		const duration0 = spell.duration[0];
+		switch (duration0.type) {
+			case "instant": durationUnit = "inst"; break;
+			case "timed": {
+				switch (duration0.duration.type) {
+					case "turn": durationUnit = "turn"; durationVal = duration0.duration.amount; break;
+					case "round": durationUnit = "round"; durationVal = duration0.duration.amount; break;
+					case "minute": durationUnit = "minute"; durationVal = duration0.duration.amount; break;
+					case "hour": durationUnit = "hour"; durationVal = duration0.duration.amount; break;
+					case "day": durationUnit = "day"; durationVal = duration0.duration.amount; break;
+					case "week": durationUnit = "day"; durationVal = duration0.duration.amount * 7; break;
+					case "year": durationUnit = "year"; durationVal = duration0.duration.amount; break;
+				}
+				break;
+			}
+			case "permanent": durationUnit = "perm"; break;
+			case "special": durationUnit = "spec"; break;
+		}
+
+		let rangeSize = 0;
+		let rangeUnits = "";
+		let targetSize = 0;
+		let targetUnits = "";
+		let targetType = "";
+		switch (spell.range.type) {
+			case RNG_SPECIAL: rangeUnits = "spec"; break;
+			case RNG_POINT: {
+				const dist = spell.range.distance;
+				switch (dist.type) {
+					case RNG_SELF: {
+						targetUnits = "self";
+						targetType = "self";
+						rangeUnits = "self";
+						break;
+					}
+					case RNG_UNLIMITED:
+					case RNG_UNLIMITED_SAME_PLANE:
+					case RNG_SIGHT:
+					case RNG_SPECIAL: {
+						targetUnits = "spec";
+						rangeUnits = "spec";
+						break;
+					}
+					case RNG_TOUCH: {
+						targetUnits = "touch";
+						rangeUnits = "touch";
+						break;
+					}
+					case UNT_MILES: {
+						rangeSize = Config.getMetricNumber({configGroup: "importSpell", originalValue: dist.amount, originalUnit: UNT_MILES});
+						rangeUnits = Config.getMetricUnit({configGroup: "importSpell", originalUnit: UNT_MILES});
+						break;
+					}
+					case UNT_FEET:
+					default: {
+						rangeSize = Config.getMetricNumber({configGroup: "importSpell", originalValue: dist.amount, originalUnit: UNT_FEET});
+						rangeUnits = Config.getMetricUnit({configGroup: "importSpell", originalUnit: UNT_FEET});
+						break;
+					}
+				}
+				break;
+			}
+			case RNG_LINE:
+			case RNG_CUBE:
+			case RNG_CONE:
+			case RNG_RADIUS:
+			case RNG_SPHERE:
+			case RNG_HEMISPHERE:
+			case RNG_CYLINDER: {
+				targetSize = Config.getMetricNumber({configGroup: "importSpell", originalValue: spell.range.distance.amount, originalUnit: spell.range.distance.type});
+
+				targetUnits = Config.getMetricUnit({configGroup: "importSpell", originalUnit: spell.range.distance.type});
+
+				if (spell.range.type === RNG_HEMISPHERE) targetType = "sphere";
+				else targetType = spell.range.type; // all others map directly to FVTT values
+			}
+		}
+
+		let damageParts = [];
+		let cantripScaling = null;
+		let scaling = null;
+		let isCustomDamageParts = false; // Avoid using SRD damage if this is set
+
+		if (spell.scalingLevelDice) { // cantrips with parsed out values
+			const scalingLevelDice = [spell.scalingLevelDice].flat(); // convert object version to array
+
+			const getLowestKey = scaling => Math.min(...Object.keys(scaling).map(k => Number(k)));
+			const reDamageType = new RegExp(`(${UtilActors.VALID_DAMAGE_TYPES.join("|")})`, "i");
+
+			damageParts.push(...scalingLevelDice.map(scl => {
+				const lowKey = getLowestKey(scl.scaling);
+				const lowDice = scl.scaling[lowKey];
+
+				const mDamageType = reDamageType.exec(scl.label || "");
+
+				return [
+					(lowDice || "").replace(/{{spellcasting_mod}}/g, "@mod"),
+					mDamageType ? mDamageType[1].toLowerCase() : null,
+				];
+			}));
+
+			// TODO(Future): fix this for e.g. Toll the Dead if Foundry supports multiple scaling damage dice in future
+			const firstScaling = scalingLevelDice[0];
+			const lowKey = getLowestKey(firstScaling.scaling);
+			cantripScaling = firstScaling.scaling[lowKey];
+		} else {
+			let damageTuples = []; // (<damage_dice>, <damage_type>)
+
+			if (spell.damageInflict && spell.damageInflict.length) {
+				// Try to extract cantrip scaling first
+				if (entriesStr.toLowerCase().includes("when you reach 5th level")) {
+					const diceTiers = [];
+					// Find cantrip scaling values, which are shown in brackets
+					entriesStr.replace(/\({@damage ([^}]+)}\)/g, (...m) => diceTiers.push(m[1]));
+					// Cantrips scale at levels 5, 11, and 17
+					if (diceTiers.length === 3) {
+						// Find dice _not_ in brackets
+						const baseVal = /(?:^|[^(]){@damage ([^}]+)}(?:[^)]|$)/.exec(entriesStr);
+						if (baseVal) cantripScaling = baseVal[1];
+						// failing that, just use the first bracketed value
+						else cantripScaling = diceTiers[0];
+					}
+				}
+
+				this._pGetSpellItem_parseAndAddDamage(entriesStr, damageTuples);
+			}
+
+			if (spell.miscTags && spell.miscTags.some(str => str === "HL")) {
+				const healingTuple = ["", "healing"];
+
+				// Arbitrarily pick the first dice expression we find
+				entriesStr.replace(this._getReDiceYourSpellcastingMod(), (...m) => {
+					const [, dicePart, modPart] = m;
+
+					healingTuple[0] = dicePart;
+					if (modPart) healingTuple[0] = `${healingTuple[0]} + @mod`;
+				});
+
+				damageTuples.push(healingTuple);
+			}
+
+			const metaHigherLevel = this._pGetSpellItem_getHigherLevelMeta({spell, opts, damageTuples, isCustomDamageParts, scaling, preparationMode});
+			if (metaHigherLevel) {
+				damageTuples = metaHigherLevel.damageTuples;
+				isCustomDamageParts = metaHigherLevel.isCustomDamageParts;
+				scaling = metaHigherLevel.scaling;
+			}
+
+			// Do a final step to scoop up any damage info we might have missed, if we have yet to find any
+			if (!damageTuples.length) this._pGetSpellItem_parseAndAddDamage(entriesStr, damageTuples);
+
+			damageParts.push(...damageTuples);
+		}
+		damageParts = damageParts.filter(Boolean);
+
+		let formula = "";
+		// If there are no damage parts, arbitrarily pick the first dice expression and use that as the "other formula"
+		if (!damageParts.length && !isCustomDamageParts && !MiscUtil.get(srdData, "data", "damage", "parts")) {
+			entriesStr.replace(this._getReDiceYourSpellcastingMod(), (...m) => {
+				const [, dicePart, modPart] = m;
+
+				formula = dicePart;
+				if (modPart) formula = `${formula} + @mod`;
+			});
+		}
+
+		let savingThrow = "";
+		if (spell.savingThrow && spell.savingThrow.length) savingThrow = spell.savingThrow[0].substring(0, 3).toLowerCase();
+
+		let saveScaling = "spell";
+		if (opts.abilityAbv) saveScaling = opts.abilityAbv;
+
+		// region Resource consumption
+		let consumeType = opts.consumeType ?? "";
+		let consumeTarget = opts.consumeTarget ?? null;
+		let consumeAmount = opts.consumeAmount ?? null;
+
+		if (Config.get("importSpell", configKeySpellPoints) && spell.level !== 0) {
+			const resource = Config.getSpellPointsResource({isValueKey: true});
+			consumeAmount = Parser.spLevelToSpellPoints(spell.level);
+
+			if (resource === ConfigConsts.C_SPELL_POINTS_RESOURCE__SHEET_ITEM) {
+				consumeType = "charges";
+				consumeTarget = opts.spellPointsItemId;
+			} else {
+				consumeType = "attribute";
+				consumeTarget = resource;
+			}
+		}
+		// endregion
+
+		const img = await Vetools.pOptionallySaveImageToServerAndGetUrl(
+			await this._pGetSpellItem_getSpellImagePath(spell),
+		);
+
+		// region Apply data from the SRD compendium, if available
+		if (srdData) {
+			targetSize = Config.getMetricNumber({configGroup: "importSpell", originalValue: MiscUtil.get(srdData, "data", "target", "value"), originalUnit: UNT_FEET}) || targetSize;
+			targetUnits = Config.getMetricUnit({configGroup: "importSpell", originalUnit: MiscUtil.get(srdData, "data", "target", "units")}) || targetUnits;
+			targetType = MiscUtil.get(srdData, "data", "target", "type") || targetType;
+			if (!isCustomDamageParts) damageParts = MiscUtil.get(srdData, "data", "damage", "parts") || damageParts;
+			if (!cantripScaling && !scaling) scaling = MiscUtil.get(srdData, "data", "scaling", "formula");
+		}
+		// endregion
+
+		const additionalData = await this._pGetAdditionalData(spell, {targetUnits});
+		const additionalFlags = await this._pGetAdditionalFlags(spell);
+
+		// region Apply custom options data
+		if (opts.durationAmount !== undefined) durationVal = opts.durationAmount;
+		if (opts.durationUnit !== undefined) durationUnit = opts.durationUnit;
+		// endregion
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(spell, {isActorItem: opts.isActorItem})),
+			type: "spell",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(spell),
+				description: {value: description, chat: "", unidentified: ""},
+
+				actionType: actionType,
+				level: spell.level,
+				school: school,
+				components: {
+					value: "",
+					vocal: spell.components && spell.components.v,
+					somatic: spell.components && spell.components.s,
+					material: !!(spell.components && spell.components.m),
+					ritual: spell.meta && spell.meta.ritual,
+					concentration: !!MiscUtil.get(spell, "duration", "0", "concentration"),
+				},
+				materials: {
+					value: materials,
+					consumed: !!MiscUtil.get(spell, "components", "m", "consume"),
+					cost: Math.round((MiscUtil.get(spell, "components", "m", "cost") || 0) / 100),
+					supply: 0,
+				},
+				target: {value: targetSize, units: targetUnits, type: targetType},
+				range: {value: rangeSize, units: rangeUnits, long: null},
+				activation: {
+					type: spell.time[0].unit,
+					cost: spell.time[0].number,
+					condition: Renderer.stripTags(spell.time[0].condition || ""),
+				},
+				duration: {
+					value: durationVal,
+					units: durationUnit,
+				},
+				damage: {
+					parts: damageParts,
+					versatile: "",
+				},
+				scaling: {
+					mode: cantripScaling ? "cantrip" : scaling ? "level" : "none",
+					formula: cantripScaling || scaling || "",
+				},
+				save: {ability: savingThrow, dc: null, scaling: saveScaling},
+				ability: opts.abilityAbv || "",
+				uses: {
+					value: opts.usesCurrent || 0,
+					max: opts.usesMax || 0,
+					per: opts.usesPer || "",
+				},
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				formula,
+				preparation: {
+					mode: preparationMode,
+					prepared: isPrepared,
+				},
+				consume: {
+					type: consumeType,
+					target: consumeTarget,
+					amount: consumeAmount,
+				},
+				...(additionalData || {}),
+			},
+			img,
+			flags: {
+				...this._getSpellFlags(spell, opts),
+				...additionalFlags,
+			},
+			effects: await this._pGetSpellEffects(spell, srdData, img),
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importSpell", "permissions")};
+
+		return out;
+	}
+
+	static async _pGetSpellItem_getSpellImagePath (spell) {
+		const getters = [
+			this._pGetSpellItem_getSpellImagePath_fromPlutonium.bind(this, spell),
+			this._pGetSpellItem_getSpellImagePath_fromFoundry.bind(this, spell),
+		];
+		if (Config.get("import", "isPreferFoundryImages")) getters.reverse();
+
+		for (const getter of getters) {
+			const url = await getter();
+			if (url) return url;
+		}
+
+		return `modules/${SharedConsts.MODULE_NAME}/media/icon/scroll-unfurled.svg`;
+	}
+
+	static async _pGetSpellItem_getSpellImagePath_fromFoundry (spell) { return UtilCompendium.pGetCompendiumImage("spell", spell); }
+	static async _pGetSpellItem_getSpellImagePath_fromPlutonium (spell) { return DataConverter.pGetIconImage("spell", spell); }
+
+	static _getSpellFlags (
+		spell,
+		{
+			parentClassName,
+			parentClassSource,
+			parentSubclassName,
+			parentSubclassSource,
+		} = {},
+	) {
+		const out = {
+			[SharedConsts.MODULE_NAME_FAKE]: {
+				page: UrlUtil.PG_SPELLS,
+				source: spell.source,
+				hash: UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_SPELLS](spell),
+				propDroppable: "spell",
+			},
+		};
+
+		if (!parentClassName && !parentClassSource && !parentSubclassName && !parentSubclassSource) return out;
+
+		out[SharedConsts.MODULE_NAME_FAKE].parentClassName = parentClassName;
+		out[SharedConsts.MODULE_NAME_FAKE].parentClassSource = parentClassSource;
+		out[SharedConsts.MODULE_NAME_FAKE].parentSubclassName = parentSubclassName;
+		out[SharedConsts.MODULE_NAME_FAKE].parentSubclassSource = parentSubclassSource;
+
+		return out;
+	}
+
+	static async _pGetSpellEffects (spell, srdData, img) {
+		const out = MiscUtil.copy(srdData?.effects || []);
+		out.forEach(effect => effect.icon = img);
+
+		if (await this.pHasSpellSideLoadedEffects(null, spell)) {
+			out.push(...(await this.pGetSpellItemEffects(null, spell, null, {img})));
+		}
+
+		out.forEach(effect => {
+			const disabled = Config.get("importSpell", "setEffectDisabled");
+			if (disabled !== ConfigConsts.C_USE_PLUT_VALUE) effect.disabled = disabled === ConfigConsts.C_BOOL_ENABLED;
+			const transfer = Config.get("importSpell", "setEffectTransfer");
+			if (transfer !== ConfigConsts.C_USE_PLUT_VALUE) effect.transfer = transfer === ConfigConsts.C_BOOL_ENABLED;
+		});
+
+		return out;
+	}
+
+	static _pGetSpellItem_parseAndAddDamage (entriesStr, damageTuples) {
+		// If there's a damage type, try find the spell's damage
+		entriesStr.replace(/{@damage ([^}]+)} ([^ ]+)(, [^ ]+)*(,? or [^ ]+)? damage/ig, (...m) => {
+			// TODO(Future): add multiple damage types as choices when Foundry supports this--for now, just
+			//   choose the first we find
+			damageTuples.push([m[1], m[2]]);
+		});
+	}
+
+	static _getReDiceYourSpellcastingMod () {
+		// Only capture the first result (i.e. no [g]lobal)
+		return /{@dice ([^}]+)}(\s*\+\s*your\s+spellcasting\s+ability\s+modifier)?/i;
+	}
+
+	static _pGetSpellItem_getHigherLevelMeta (
+		{
+			spell,
+			opts,
+			damageTuples,
+			isCustomDamageParts,
+			scaling,
+			preparationMode,
+		},
+	) {
+		if (!spell.entriesHigherLevel) return;
+
+		const out = {
+			damageTuples: MiscUtil.copy(damageTuples),
+			isCustomDamageParts,
+			scaling,
+		};
+
+		const reHigherLevel = /{@(?:scaledice|scaledamage) ([^}]+)}/gi;
+		const resAdditionalNumber = [
+			/\badditional (?<addPerLevel>\d+) for each (?:slot )?level\b/gi,
+			/\bincreases by (?<addPerLevel>\d+) for each (?:slot )?level\b/gi,
+		];
+
+		let fnStr = null;
+
+		// region Innate spellcasters
+		const ixsScaled = new Set(); // Track which we've scaled, to avoid scaling the same tuple multiple times
+
+		const fnStrInnate = str => {
+			str
+				.replace(reHigherLevel, (...m) => {
+					const [base] = m[1].split("|").map(it => it.trim());
+
+					const [tag, text] = Renderer.splitFirstSpace(m[0].slice(1, -1));
+					const scaleOptions = Renderer.parseScaleDice(tag, text);
+
+					const ixDamageTuple = out.damageTuples.findIndex(it => (it[0] || "").trim().toLowerCase() === base.toLowerCase());
+					if (!ixsScaled.has(ixDamageTuple) && ~ixDamageTuple) {
+						const diceAtLevel = scaleOptions?.prompt?.options?.[opts.castAtLevel];
+						if (diceAtLevel) {
+							ixsScaled.add(ixDamageTuple);
+							out.damageTuples[ixDamageTuple][0] += `+ ${diceAtLevel}`;
+							out.isCustomDamageParts = true;
+						}
+					}
+				});
+
+			resAdditionalNumber.forEach(re => {
+				str
+					.replace(re, (...m) => {
+						if (!out.damageTuples.length) return;
+
+						const toAdd = opts.castAtLevel * Number(m.last().addPerLevel);
+						// For generic "add N"s (e.g. the Aid spell) add to the first dice expression
+						out.damageTuples[0][0] += `+ ${toAdd}`;
+						out.isCustomDamageParts = true;
+					});
+			});
+		};
+		// endregion
+
+		// region Standard spellcasters
+		// FIXME(future) FVTT doesn't yet support progression in non-linear increments, or multiple scaling
+		//   modes, so just pick the first one
+		const fnStrStandard = str => {
+			if (out.scaling) return;
+
+			str
+				.replace(reHigherLevel, (...m) => {
+					if (out.scaling) return;
+
+					const [, , addPerProgress] = m[1].split("|");
+					out.scaling = addPerProgress;
+				});
+			resAdditionalNumber.forEach(re => {
+				str
+					.replace(re, (...m) => {
+						if (out.scaling) return;
+						out.scaling = m.last().addPerLevel;
+					});
+			});
+		};
+		// endregion
+
+		// For innate spells cast at a higher level, override the damage tuples with the upscaled version of the
+		//   spell. We do this as Foundry doesn't let you choose the spell level when casting an innate spell.
+		if (opts.castAtLevel != null && opts.castAtLevel !== spell.level && out.damageTuples.length && preparationMode === "innate") {
+			fnStr = fnStrInnate;
+		} else {
+			fnStr = fnStrStandard;
+		}
+
+		MiscUtil.getWalker({isNoModification: true})
+			.walk(
+				spell.entriesHigherLevel,
+				{
+					string: str => fnStr(str),
+				},
+			);
+
+		return out;
+	}
+
+	static _pGetDescription (spell) {
+		if (!Config.get("importSpell", "isImportDescription")) return "";
+
+		return UtilDataConverter.pGetWithDescriptionPlugins(async () => {
+			const entries = await DataConverter.pGetEntryDescription(spell);
+			const entriesHigherLevel = spell.entriesHigherLevel
+				? await DataConverter.pGetEntryDescription(spell, {prop: "entriesHigherLevel"})
+				: "";
+
+			const stackPts = [entries, entriesHigherLevel];
+
+			if (Config.get("importSpell", "isIncludeClassesInDescription")) {
+				const fromClassList = Renderer.spell.getCombinedClasses(spell, "fromClassList");
+				if (fromClassList?.length) {
+					const [current] = Parser.spClassesToCurrentAndLegacy(fromClassList);
+					stackPts.push(`<div><span class="bold">Classes: </span>${Parser.spMainClassesToFull(current, {isTextOnly: true})}</div>`);
+				}
+			}
+
+			return stackPts.filter(Boolean).join("");
+		});
+	}
+
+	static async _pGetAdditionalData (spell, {targetUnits} = {}) {
+		const out = await DataConverter.pGetAdditionalData_(spell, this._SIDE_DATA_OPTS);
+		if (!out) return out;
+
+		// Apply metric conversion to loaded data, if required
+		if (out["target.value"]) out["target.value"] = Config.getMetricNumber({configGroup: "importSpell", originalValue: out["target.value"], originalUnit: out["target.units"] || targetUnits});
+		if (out["target.units"]) out["target.units"] = Config.getMetricUnit({configGroup: "importSpell", originalUnit: out["target.units"] || targetUnits});
+
+		return out;
+	}
+
+	static async _pGetAdditionalFlags (spell) {
+		return DataConverter.pGetAdditionalFlags_(spell, this._SIDE_DATA_OPTS);
+	}
+
+	static getActorSpell (actor, name, source) {
+		if (!name || !source) return null;
+		return actor.items && actor.items.find(it =>
+			(it.name || "").toLowerCase() === name.toLowerCase()
+			&& (
+				!Config.get("import", "isStrictMatching")
+				|| (UtilDataConverter.getItemSource(it) || "").toLowerCase() === source.toLowerCase()
+			),
+		);
+	}
+
+	static async pSetSpellItemIsPrepared (item, isPrepared) {
+		if (!item) return;
+		await UtilDocuments.pUpdateDocument(item, {data: {preparation: {prepared: isPrepared}}});
+	}
+
+	static async pHasSpellSideLoadedEffects (actor, spell) {
+		return (await DataConverter.pGetAdditionalEffectsRaw_(spell, this._SIDE_DATA_OPTS))?.length > 0;
+	}
+
+	static async pGetSpellItemEffects (actor, spell, sheetItem, {additionalData, img} = {}) {
+		const effectsRaw = await DataConverter.pGetAdditionalEffectsRaw_(spell, this._SIDE_DATA_OPTS);
+		return UtilActiveEffects.getExpandedEffects(effectsRaw || [], {actor, sheetItem, parentName: spell.name, additionalData, img});
+	}
+
+	static get _SIDE_DATA_OPTS () {
+		return {propBrew: "foundrySpell", fnLoadJson: Vetools.pGetSpellSideData, propJson: "spell"};
+	}
+}
+
+export {DataConverterSpell};

@@ -20,10 +20,13 @@
 	"TIDY5E.Exhaustion4": "最大ＨＰ半減",
 	"TIDY5E.Exhaustion5": "移動速度０",
 	"TIDY5E.Exhaustion6": "死亡",
+	
+	"TIDY5E.AbbrInitiative": "Ini",
 
 	"TIDY5E.RestHint": "休憩する",
 	"TIDY5E.RestS": "小休憩",
 	"TIDY5E.RestL": "大休憩",
+	"TIDY5E.HitDiceRollAverage": "Right Click: Average",
 
 	"TIDY5E.Journal": "記録",
 
@@ -75,12 +78,6 @@
 	"TIDY5E.Abilities" : "能力",
 
 	"TIDY5E.Environment" : "環境",
-
-	"TIDY5E.CurrencyAbbrCP" : "CP",
-	"TIDY5E.CurrencyAbbrSP" : "SP",
-	"TIDY5E.CurrencyAbbrGP" : "GP",
-	"TIDY5E.CurrencyAbbrEP" : "EP",
-	"TIDY5E.CurrencyAbbrPP" : "PP",
 
 	"TIDY5E.SearchItem" : "アイテム検索",
 	"TIDY5E.SearchSpell" : "呪文検索",
@@ -225,6 +222,10 @@
 	"TIDY5E.Settings.TraitsMovedBelowResource" : {
 		"name" : "特徴をﾘｿｰｽの下に移動",
 		"hint" : "特徴を、技能の下 (左段)から、リソース下 (右段)に移動する場合に有効にします。"
+	},
+	"TIDY5E.Settings.AmmoEquippedOnly" : {
+		"name" : "装備済の矢弾のみ表示",
+		"hint" : "武器ごとに現在装備されている矢弾のみ表示するようにします。"
 	},
 
 

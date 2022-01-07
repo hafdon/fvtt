@@ -1,1 +1,61 @@
-var _0x1578=['1VEcxqG','plutonium-actor-title-menu','fa-atom','minimumRole','_TOOL_LIST','Show\x20Players','430946HVTGMi','fa-eye','5PnCqbM','738126TbmXfC','Polymorpher','Prepared\x20Spell\x20Mass-Toggler','_HOOK_NAME','Equipment\x20Shop','pop__mnu-btn-open','153079CCEkvs','renderActorSheet','393863jhQvFI','Pop\x20Out','_EVT_NAMESPACE','49199koTlph','get','21739wuhZrW','fa-shopping-cart','import','4PMYgkr','Feature/Spell\x20Cleaner','fa-check-square','132504nPTJwG','6ZZRmyo','fa-paw'];var _0x2b87=function(_0x2dc9b4,_0x5e074e){_0x2dc9b4=_0x2dc9b4-0x70;var _0x157855=_0x1578[_0x2dc9b4];return _0x157855;};var _0x3bff1e=_0x2b87;(function(_0x5ba440,_0x7817e6){var _0x753522=_0x2b87;while(!![]){try{var _0x332868=-parseInt(_0x753522(0x72))+-parseInt(_0x753522(0x86))*-parseInt(_0x753522(0x75))+parseInt(_0x753522(0x84))*-parseInt(_0x753522(0x8e))+-parseInt(_0x753522(0x8b))*parseInt(_0x753522(0x73))+parseInt(_0x753522(0x89))*-parseInt(_0x753522(0x7d))+parseInt(_0x753522(0x7e))+parseInt(_0x753522(0x7b));if(_0x332868===_0x7817e6)break;else _0x5ba440['push'](_0x5ba440['shift']());}catch(_0x5b3d11){_0x5ba440['push'](_0x5ba440['shift']());}}}(_0x1578,0x6bd56));import{MenuTitle}from'./MenuTitle.js';import{ChooseImporter}from'./ChooseImporter.js';import{PopoutSheet}from'./PopoutSheet.js';import{ActorItemCleaner}from'./ActorItemCleaner.js';import{ActorSpellPreparedToggler}from'./ActorSpellPreparedToggler.js';import{ActorPolymorpher}from'./ActorPolymorpher.js';import{ActorCharactermancerSourceSelector}from'./ActorCharactermancer.js';import{Config}from'./Config.js';import{Charactermancer_StartingEquipment}from'./UtilCharactermancerEquipment.js';import{ShowSheet}from'./ShowSheet.js';class MenuTitleActor extends MenuTitle{}MenuTitleActor[_0x3bff1e(0x81)]=_0x3bff1e(0x85),MenuTitleActor[_0x3bff1e(0x88)]=_0x3bff1e(0x76),MenuTitleActor[_0x3bff1e(0x79)]=[{'name':'Plutonium\x20Import','streamerName':'Import','Class':ChooseImporter,'iconClass':_0x3bff1e(0x77),'getMinRole':()=>Config[_0x3bff1e(0x8a)](_0x3bff1e(0x8d),'minimumRole'),'isRequireOwner':!![]},{'name':_0x3bff1e(0x82),'Class':Charactermancer_StartingEquipment,'iconClass':_0x3bff1e(0x8c),'getMinRole':()=>Config[_0x3bff1e(0x8a)]('import',_0x3bff1e(0x78)),'isRequireOwner':!![]},{'name':_0x3bff1e(0x7f),'Class':ActorPolymorpher,'iconClass':_0x3bff1e(0x74),'isRequireOwner':!![]},{'name':_0x3bff1e(0x7a),'Class':ShowSheet,'iconClass':_0x3bff1e(0x7c),'isRequireOwner':!![]},{'name':_0x3bff1e(0x70),'Class':ActorItemCleaner,'iconClass':'fa-trash-alt','isRequireOwner':!![]},{'name':_0x3bff1e(0x80),'Class':ActorSpellPreparedToggler,'iconClass':_0x3bff1e(0x71),'isRequireOwner':!![]},{'name':_0x3bff1e(0x87),'Class':PopoutSheet,'iconClass':'fa-external-link-alt','additionalClassesButton':_0x3bff1e(0x83),'additionalClassesPreSpacer':_0x3bff1e(0x83)}];export{MenuTitleActor};
+import {MenuTitle} from "./MenuTitle.js";
+import {ChooseImporter} from "./ChooseImporter.js";
+import {ActorItemCleaner} from "./ActorItemCleaner.js";
+import {ActorSpellPreparedToggler} from "./ActorSpellPreparedToggler.js";
+import {ActorPolymorpher} from "./ActorPolymorpher.js";
+import {Config} from "./Config.js";
+import {Charactermancer_StartingEquipment} from "./UtilCharactermancerEquipment.js";
+import {ShowSheet} from "./ShowSheet.js";
+import {UtilUi} from "./UtilUi.js";
+
+class MenuTitleActor extends MenuTitle {}
+MenuTitleActor._HOOK_NAME = "renderActorSheet";
+MenuTitleActor._EVT_NAMESPACE = "plutonium-actor-title-menu";
+
+// Each `Class` should have a static `pHandleButtonClick` method
+MenuTitleActor._TOOL_LIST = [
+	{
+		name: "Plutonium Import",
+		streamerName: "Import",
+		Class: ChooseImporter,
+		getIcon: () => UtilUi.getModuleFaIcon(),
+		getMinRole: () => Config.get("import", "minimumRole"),
+		isRequireOwner: true,
+	},
+	{
+		name: "Equipment Shop",
+		Class: Charactermancer_StartingEquipment,
+		iconClass: "fa-shopping-cart",
+		getMinRole: () => Config.get("equipmentShop", "minimumRole"),
+		isRequireOwner: true,
+	},
+	{
+		name: "Polymorpher",
+		Class: ActorPolymorpher,
+		iconClass: "fa-paw",
+		getMinRole: () => Config.get("tools", "minimumRolePolymorph"),
+		isRequireOwner: true,
+	},
+	{
+		name: "Item Cleaner",
+		Class: ActorItemCleaner,
+		iconClass: "fa-trash-alt",
+		getMinRole: () => Config.get("tools", "minimumRoleActorTools"),
+		isRequireOwner: true,
+	},
+	{
+		name: "Prepared Spell Mass-Toggler",
+		Class: ActorSpellPreparedToggler,
+		iconClass: "fa-check-square",
+		getMinRole: () => Config.get("tools", "minimumRoleActorTools"),
+		isRequireOwner: true,
+	},
+	{
+		name: "Show Players",
+		Class: ShowSheet,
+		iconClass: "fa-eye",
+		isRequireOwner: true,
+	},
+];
+
+export {MenuTitleActor};

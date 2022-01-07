@@ -1,1 +1,60 @@
-const _0x5b2c=['_rows','_activateListeners_pInitListAndFilters','[name=\x22cb-prune-auto\x22]','37nzclsI','74PgomAS','881328wVQmts','1yOrhFc','MODULE_LOCATION','teardown','560669SALXhj','_activateListeners_initBtnReset','_mapEntitiesToRows','_$btnReset','click','_activateListeners_initBtnRun','find','15037wbMpeu','2535hgprTt','2462UGfikb','_collectionName','9fEdsTp','activateListeners','Directory\x20Cleaner','911615PcrSdJ','getData','17OVojVL','/template/CollectionCleaner.hbs','_pDoDelete','close','_pageFilter','[name=\x22btn-run\x22]','31237bccqVn','_activateListeners_initBtnPrune'];const _0x4a83=function(_0x599cc9,_0x5c9563){_0x599cc9=_0x599cc9-0x1b1;let _0x5b2cf0=_0x5b2c[_0x599cc9];return _0x5b2cf0;};const _0x22e58d=_0x4a83;(function(_0x405a8f,_0x30953c){const _0x279845=_0x4a83;while(!![]){try{const _0x7f68cf=parseInt(_0x279845(0x1b7))+parseInt(_0x279845(0x1c0))*parseInt(_0x279845(0x1b1))+parseInt(_0x279845(0x1bf))*-parseInt(_0x279845(0x1b2))+parseInt(_0x279845(0x1cd))*parseInt(_0x279845(0x1c2))+-parseInt(_0x279845(0x1b3))+-parseInt(_0x279845(0x1b4))*-parseInt(_0x279845(0x1c5))+parseInt(_0x279845(0x1c7))*-parseInt(_0x279845(0x1be));if(_0x7f68cf===_0x30953c)break;else _0x405a8f['push'](_0x405a8f['shift']());}catch(_0x320b7f){_0x405a8f['push'](_0x405a8f['shift']());}}}(_0x5b2c,0x7ef1c));import{SharedConsts}from'../shared/SharedConsts.js';import{Util}from'./Util.js';import{BaseCollectionTool}from'./BaseCollectionTool.js';import{AppFilterBasic}from'./FilterApplications.js';class CollectionCleaner extends BaseCollectionTool{constructor(_0x434cd2){const _0x5c8b8e=_0x4a83;super({'title':_0x5c8b8e(0x1c4),'template':SharedConsts[_0x5c8b8e(0x1b5)]+_0x5c8b8e(0x1c8),'height':Util['getMaxWindowHeight'](),'width':0x280,'resizable':!![]},_0x434cd2),this['_pageFilter']=new AppFilterBasic(),this['_list']=null,this[_0x5c8b8e(0x1ba)]=null;}['activateListeners'](_0x2ab2e0){const _0x1a5711=_0x4a83;super[_0x1a5711(0x1c3)](_0x2ab2e0),this[_0x1a5711(0x1bc)](_0x2ab2e0),this[_0x1a5711(0x1ce)](_0x2ab2e0),this[_0x1a5711(0x1b8)](_0x2ab2e0),this[_0x1a5711(0x1d0)](_0x2ab2e0);}[_0x22e58d(0x1bc)](_0x703a38){const _0x12aaa8=_0x22e58d,_0x3f8cad=_0x703a38[_0x12aaa8(0x1bd)](_0x12aaa8(0x1d1));_0x703a38[_0x12aaa8(0x1bd)](_0x12aaa8(0x1cc))[_0x12aaa8(0x1bb)](()=>this[_0x12aaa8(0x1c9)](_0x3f8cad));}[_0x22e58d(0x1c6)](){const _0x464ffa=_0x22e58d;return this[_0x464ffa(0x1cf)]=this[_0x464ffa(0x1cf)]=this[_0x464ffa(0x1b9)](),{...super[_0x464ffa(0x1c6)](),'titleSearch':this[_0x464ffa(0x1c1)]+'s','rows':this['_rows'],'isPrunable':this['_folderType']!=null};}[_0x22e58d(0x1ca)](..._0x1e47c1){const _0x162eba=_0x22e58d;return this[_0x162eba(0x1cb)][_0x162eba(0x1b6)](),super[_0x162eba(0x1ca)](..._0x1e47c1);}}export{CollectionCleaner};
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Util} from "./Util.js";
+import {BaseCollectionTool} from "./BaseCollectionTool.js";
+import {AppFilterBasic} from "./FilterApplications.js";
+
+class CollectionCleaner extends BaseCollectionTool {
+	constructor (collectionName) {
+		super(
+			{
+				title: "Directory Cleaner",
+				template: `${SharedConsts.MODULE_LOCATION}/template/CollectionCleaner.hbs`,
+				height: Util.getMaxWindowHeight(),
+				width: 640,
+				resizable: true,
+			},
+			collectionName,
+		);
+
+		// Local fields
+		this._pageFilter = new AppFilterBasic();
+
+		this._list = null;
+		this._$btnReset = null;
+	}
+
+	activateListeners ($html) {
+		super.activateListeners($html);
+
+		this._activateListeners_initBtnRun($html);
+		this._activateListeners_initBtnPrune($html);
+		this._activateListeners_initBtnReset($html);
+		this._activateListeners_pInitListAndFilters($html);
+	}
+
+	_activateListeners_initBtnRun ($html) {
+		const $cbPruneAuto = $html.find(`[name="cb-prune-auto"]`);
+		$html.find(`[name="btn-run"]`).click(() => this._pDoDelete($cbPruneAuto));
+	}
+
+	/**
+	 * Used by template engine.
+	 */
+	getData () {
+		this._rows = this._rows = this._mapEntitiesToRows();
+
+		return {
+			...super.getData(),
+			titleSearch: `${this._collectionName}s`,
+			rows: this._rows,
+			isPrunable: this._folderType != null,
+		};
+	}
+
+	close (...args) {
+		this._pageFilter.teardown();
+		return super.close(...args);
+	}
+}
+
+export {CollectionCleaner};

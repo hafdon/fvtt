@@ -1,1 +1,156 @@
-var _0x1f58=['pInit','journal','doMonkeyPatch','render','Failed\x20to\x20initialise\x20','1685481SxMibx','log','init','items','Firing\x20\x22init\x22\x20hook...','1217613LabIZb','actors','error','647234qbnWsq','Initialising','preInit','1UOdWLC','916112sCAHjl','1616942OXlrEm','1499836ZYLAup','Firing\x20\x22ready\x22\x20hook...','Initialisation\x20complete!','302543mxWuNa','ready','MODULE_TITLE'];var _0x2e25=function(_0x2c702a,_0x5e90b1){_0x2c702a=_0x2c702a-0x9a;var _0x1f5867=_0x1f58[_0x2c702a];return _0x1f5867;};var _0x47bec1=_0x2e25;(function(_0x331df0,_0x3605df){var _0xc0fe8c=_0x2e25;while(!![]){try{var _0x57f633=-parseInt(_0xc0fe8c(0xa7))+-parseInt(_0xc0fe8c(0xa6))*-parseInt(_0xc0fe8c(0xa0))+-parseInt(_0xc0fe8c(0xac))+parseInt(_0xc0fe8c(0xa9))+-parseInt(_0xc0fe8c(0xa3))+parseInt(_0xc0fe8c(0x9b))+-parseInt(_0xc0fe8c(0xa8));if(_0x57f633===_0x3605df)break;else _0x331df0['push'](_0x331df0['shift']());}catch(_0x5ece7d){_0x331df0['push'](_0x331df0['shift']());}}}(_0x1f58,0xe0a23));import{LGT}from'./Util.js';console['log'](...LGT,_0x47bec1(0xa4));import{SharedConsts}from'../shared/SharedConsts.js';import{UtilActors}from'./UtilActors.js';import{Vetools}from'./Vetools.js';import{ArtBrowserApp}from'./ArtBrowserApp.js';import{Config}from'./Config.js';import{UtilHandlebars}from'./UtilHandlebars.js';import{UtilUi}from'./UtilUi.js';import{UtilRenderer}from'./UtilRenderer.js';import{ChooseImporter}from'./ChooseImporter.js';import{MenuActorTitleTools}from'./MenuActorTitleTools.js';import{PopoutSheet}from'./PopoutSheet.js';import{MenuTitleSceneConfig}from'./MenuTitleSceneConfig.js';import{MenuTitleActor}from'./MenuTitleActor.js';import{MenuTitleItem}from'./MenuTitleItem.js';import{MenuTitleJournalSheet}from'./MenuTitleJournalSheet.js';import{MenuTitleRollTableConfig}from'./MenuTitleRollTableConfig.js';import{MenuTitleArtBrowserApp}from'./MenuTitleArtBrowserApp.js';import{MenuTitleCompendium}from'./MenuTitleCompendium.js';import{UtilEvents}from'./UtilEvents.js';import{RivetBridge}from'./RivetBridge.js';import{Styler}from'./Styler.js';import{ActorPolymorpher}from'./ActorPolymorpher.js';import{ActorMultiattack}from'./ActorMultiattack.js';import{WeDontTalk}from'./WeDontTalk.js';import{Patcher}from'./Patcher.js';import{ImportListClass}from'./ImportListClass.js';import{ImportListFeat}from'./ImportListFeat.js';import{ImportListBackground}from'./ImportListBackground.js';import{ImportListItem}from'./ImportListItem.js';import{ImportListPsionic}from'./ImportListPsionic.js';import{ImportListRace}from'./ImportListRace.js';import{MenuTitleActorDirectory}from'./MenuTitleActorDirectory.js';import{MenuTitleItemDirectory}from'./MenuTitleItemDirectory.js';import{MenuTitleJournalDirectory}from'./MenuTitleJournalDirectory.js';import{MenuTitlePlaylistDirectory}from'./MenuTitlePlaylistDirectory.js';import{MenuTitleCompendiumDirectory}from'./MenuTitleCompendiumDirectory.js';import{MenuTitleCombatTracker}from'./MenuTitleCombatTracker.js';import{MenuTitleSceneDirectory}from'./MenuTitleSceneDirectory.js';import{MenuTitleRollTableDirectory}from'./MenuTitleRollTableDirectory.js';import{MenuTitleMacroDirectory}from'./MenuTitleMacroDirectory.js';import{MenuTitleSettings}from'./MenuTitleSettings.js';import{UtilActiveEffects}from'./UtilActiveEffects.js';import{ShowSheet}from'./ShowSheet.js';import{UtilSocket}from'./UtilSocket.js';import{UtilCompendium}from'./UtilCompendium.js';import{UtilCompat}from'./UtilCompat.js';import{ImportListOptionalFeature}from'./ImportListOptionalFeature.js';import{ImportListClassFeature}from'./ImportListClassFeature.js';import{ImportListReward}from'./ImportListReward.js';function handleInit(){var _0x58c972=_0x47bec1;ArtBrowserApp[_0x58c972(0xa5)]();}Hooks['on'](_0x47bec1(0x9d),()=>{var _0x56fcfe=_0x47bec1;console[_0x56fcfe(0x9c)](...LGT,_0x56fcfe(0x9f)),handleInit();});async function handleReady(){var _0xe58fc7=_0x47bec1;await Config[_0xe58fc7(0xaf)](),UtilActors['init'](),await Vetools[_0xe58fc7(0xb1)](),await Vetools['pDoPreload'](),Patcher[_0xe58fc7(0x9d)](),UtilSocket[_0xe58fc7(0x9d)](),UtilHandlebars[_0xe58fc7(0x9d)](),UtilUi[_0xe58fc7(0x9d)](),UtilRenderer[_0xe58fc7(0x9d)](),MenuActorTitleTools['init'](),ChooseImporter['init'](),ImportListBackground['init'](),ImportListClass[_0xe58fc7(0x9d)](),ImportListFeat[_0xe58fc7(0x9d)](),ImportListItem['init'](),ImportListClassFeature['init'](),ImportListOptionalFeature[_0xe58fc7(0x9d)](),ImportListPsionic[_0xe58fc7(0x9d)](),ImportListRace[_0xe58fc7(0x9d)](),ImportListReward[_0xe58fc7(0x9d)](),PopoutSheet['init'](),ShowSheet[_0xe58fc7(0x9d)](),MenuTitleSceneConfig[_0xe58fc7(0x9d)](),MenuTitleActor[_0xe58fc7(0x9d)](),MenuTitleItem['init'](),MenuTitleJournalSheet[_0xe58fc7(0x9d)](),MenuTitleRollTableConfig[_0xe58fc7(0x9d)](),MenuTitleCompendium['init'](),MenuTitleArtBrowserApp[_0xe58fc7(0x9d)](),MenuTitleCombatTracker[_0xe58fc7(0x9d)](),MenuTitleSceneDirectory[_0xe58fc7(0x9d)](),MenuTitleActorDirectory[_0xe58fc7(0x9d)](),MenuTitleItemDirectory[_0xe58fc7(0x9d)](),MenuTitleJournalDirectory[_0xe58fc7(0x9d)](),MenuTitleRollTableDirectory['init'](),MenuTitlePlaylistDirectory['init'](),MenuTitleCompendiumDirectory[_0xe58fc7(0x9d)](),MenuTitleMacroDirectory[_0xe58fc7(0x9d)](),MenuTitleSettings[_0xe58fc7(0x9d)](),ArtBrowserApp[_0xe58fc7(0x9d)](),ActorPolymorpher[_0xe58fc7(0x9d)](),ActorMultiattack[_0xe58fc7(0x9d)](),UtilEvents['init'](),RivetBridge['init'](),Styler[_0xe58fc7(0x9d)](),UtilActiveEffects['init'](),UtilCompendium[_0xe58fc7(0x9d)](),UtilCompat[_0xe58fc7(0x9d)](),WeDontTalk[_0xe58fc7(0x9d)](),game[_0xe58fc7(0xa1)]['render'](),game[_0xe58fc7(0x9e)]['render'](),game[_0xe58fc7(0xb0)][_0xe58fc7(0xb2)](),game['tables'][_0xe58fc7(0xb2)](),console[_0xe58fc7(0x9c)](...LGT,_0xe58fc7(0xab));}Hooks['on'](_0x47bec1(0xad),()=>{var _0x5e88f4=_0x47bec1;console[_0x5e88f4(0x9c)](...LGT,_0x5e88f4(0xaa)),handleReady()['catch'](_0x4c77c6=>{var _0x5a2564=_0x5e88f4;console[_0x5a2564(0xa2)](...LGT,_0x4c77c6),window['alert'](_0x5a2564(0x9a)+SharedConsts[_0x5a2564(0xae)]+'!\x20'+VeCt['STR_SEE_CONSOLE']);});});
+import {LGT} from "./Util.js";
+console.log(...LGT, `Initialising`);
+
+// Initial imports
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {UtilActors} from "./UtilActors.js";
+import {Vetools} from "./Vetools.js";
+
+// Pre-init imports
+import {ArtBrowserApp} from "./ArtBrowserApp.js";
+
+// First init imports
+import {Config} from "./Config.js";
+
+// Other init imports
+import {UtilHandlebars} from "./UtilHandlebars.js";
+import {UtilUi} from "./UtilUi.js";
+import {UtilRenderer} from "./UtilRenderer.js";
+import {PopoutSheet} from "./PopoutSheet.js";
+import {MenuTitleSceneConfig} from "./MenuTitleSceneConfig.js";
+import {MenuTitleActor} from "./MenuTitleActor.js";
+import {MenuTitleItem} from "./MenuTitleItem.js";
+import {MenuTitleJournalSheet} from "./MenuTitleJournalSheet.js";
+import {MenuTitleRollTableConfig} from "./MenuTitleRollTableConfig.js";
+import {MenuTitleArtBrowserApp} from "./MenuTitleArtBrowserApp.js";
+import {MenuTitleCompendium} from "./MenuTitleCompendium.js";
+import {UtilEvents} from "./UtilEvents.js";
+import {RivetBridge} from "./RivetBridge.js";
+import {Styler} from "./Styler.js";
+import {ActorPolymorpher} from "./ActorPolymorpher.js";
+import {ActorMultiattack} from "./ActorMultiattack.js";
+import {WeDontTalk} from "./WeDontTalk.js";
+import {Patcher} from "./Patcher.js";
+import {ImportListClass} from "./ImportListClass.js";
+import {ImportListFeat} from "./ImportListFeat.js";
+import {ImportListBackground} from "./ImportListBackground.js";
+import {ImportListItem} from "./ImportListItem.js";
+import {ImportListPsionic} from "./ImportListPsionic.js";
+import {ImportListRace} from "./ImportListRace.js";
+import {MenuTitleActorDirectory} from "./MenuTitleActorDirectory.js";
+import {MenuTitleItemDirectory} from "./MenuTitleItemDirectory.js";
+import {MenuTitleJournalDirectory} from "./MenuTitleJournalDirectory.js";
+import {MenuTitlePlaylistDirectory} from "./MenuTitlePlaylistDirectory.js";
+import {MenuTitleCompendiumDirectory} from "./MenuTitleCompendiumDirectory.js";
+import {MenuTitleCombatTracker} from "./MenuTitleCombatTracker.js";
+import {MenuTitleSceneDirectory} from "./MenuTitleSceneDirectory.js";
+import {MenuTitleRollTableDirectory} from "./MenuTitleRollTableDirectory.js";
+import {MenuTitleMacroDirectory} from "./MenuTitleMacroDirectory.js";
+import {MenuTitleSettings} from "./MenuTitleSettings.js";
+import {UtilActiveEffects} from "./UtilActiveEffects.js";
+import {ShowSheet} from "./ShowSheet.js";
+import {UtilSocket} from "./UtilSocket.js";
+import {UtilCompendium} from "./UtilCompendium.js";
+import {UtilCompat} from "./UtilCompat.js";
+import {ImportListOptionalFeature} from "./ImportListOptionalFeature.js";
+import {ImportListClassFeature} from "./ImportListClassFeature.js";
+import {ImportListReward} from "./ImportListReward.js";
+import {ImportListCharCreationOption} from "./ImportListCharCreationOption.js";
+import {Api} from "./Api.js";
+import {Charactermancer_StartingEquipment} from "./UtilCharactermancerEquipment.js";
+import {TokenHpRoller} from "./TokenHpRoller.js";
+import {UtilPatchActorDrop} from "./UtilPatch.js";
+import {LootGeneratorApp} from "./LootGeneratorApp.js";
+
+/**
+ * This should not access Config/GameStorage.
+ */
+function handleInit () {
+	ArtBrowserApp.preInit();
+}
+
+Hooks.on("init", () => {
+	console.log(...LGT, `Firing "init" hook...`);
+	handleInit();
+});
+
+async function handleReady () {
+	await Config.pInit();
+
+	UtilActors.init();
+
+	await Vetools.doMonkeyPatch();
+	await Vetools.pDoPreload();
+
+	UtilPatchActorDrop.init();
+	Patcher.init();
+	UtilSocket.init();
+	UtilHandlebars.init();
+	UtilUi.init();
+	UtilRenderer.init();
+	ImportListBackground.init();
+	ImportListClass.init();
+	ImportListFeat.init();
+	ImportListItem.init();
+	ImportListClassFeature.init();
+	ImportListOptionalFeature.init();
+	ImportListPsionic.init();
+	ImportListRace.init();
+	ImportListReward.init();
+	ImportListCharCreationOption.init();
+	Charactermancer_StartingEquipment.init();
+	PopoutSheet.init();
+	ShowSheet.init();
+	MenuTitleSceneConfig.init();
+	MenuTitleActor.init();
+	MenuTitleItem.init();
+	MenuTitleJournalSheet.init();
+	MenuTitleRollTableConfig.init();
+	MenuTitleCompendium.init();
+	MenuTitleArtBrowserApp.init();
+	MenuTitleCombatTracker.init();
+	MenuTitleSceneDirectory.init();
+	MenuTitleActorDirectory.init();
+	MenuTitleItemDirectory.init();
+	MenuTitleJournalDirectory.init();
+	MenuTitleRollTableDirectory.init();
+	MenuTitlePlaylistDirectory.init();
+	MenuTitleCompendiumDirectory.init();
+	MenuTitleMacroDirectory.init();
+	MenuTitleSettings.init();
+	ArtBrowserApp.init();
+	LootGeneratorApp.init();
+	ActorPolymorpher.init();
+	ActorMultiattack.init();
+	TokenHpRoller.init();
+	UtilEvents.init();
+	RivetBridge.init();
+	Styler.init();
+	UtilActiveEffects.init();
+	UtilCompendium.init();
+	UtilCompat.init();
+	WeDontTalk.init();
+
+	Api.init();
+
+	// Ensure initial hooks fire as the game is already rendered
+	game.scenes.render();
+	game.actors.render();
+	game.items.render();
+	game.journal.render();
+	game.tables.render();
+
+	// These throw errors, for some reason
+	// ui.controls.render();
+	// ui.compendium.render();
+
+	console.log(...LGT, `Initialisation complete!`);
+}
+
+Hooks.on("ready", () => {
+	console.log(...LGT, `Firing "ready" hook...`);
+	handleReady().catch(err => {
+		console.error(...LGT, err);
+		window.alert(`Failed to initialise ${SharedConsts.MODULE_TITLE}! ${VeCt.STR_SEE_CONSOLE}`);
+	});
+});

@@ -1,27 +1,48 @@
 {
-	"name": "token-auras",
-	"title": "Token Auras",
-	"description": "Provide options for configuring token auras.",
-	"version": "1.11",
-	"minimumCoreVersion": "0.8.1",
-	"compatibleCoreVersion": "0.8.1",
-	"author": "Kim Mantas",
-	"scripts": ["main.js"],
-	"styles": ["aura.css"],
-	"url": "https://bitbucket.org/Fyorl/token-auras",
-	"manifest": "https://bitbucket.org/Fyorl/token-auras/raw/master/module.json",
-	"download": "https://bitbucket.org/Fyorl/token-auras/get/1.11.zip",
-	"languages": [{
-		"lang": "en",
-		"name": "English",
-		"path": "lang/en.json"
-	}, {
-		"lang": "pt-BR",
-		"name": "Português (Brasil)",
-		"path": "lang/pt-BR.json"
-	}, {
-		"lang": "de",
-		"name": "Deutsch",
-		"path": "lang/de.json"
-	}]
+  "name": "token-auras",
+  "title": "Token Auras",
+  "description": "Provide options for configuring token auras.",
+  "author": "Kim Mantas",
+  "authors": [],
+  "url": "https://bitbucket.org/Fyorl/token-auras",
+  "flags": {},
+  "version": "1.15",
+  "minimumCoreVersion": "0.8.8",
+  "compatibleCoreVersion": "9",
+  "scripts": [
+    "main.js"
+  ],
+  "esmodules": [],
+  "styles": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    },
+    {
+      "lang": "it",
+      "name": "Italiano",
+      "path": "lang/it.json"
+    }
+  ],
+  "packs": [],
+  "system": [],
+  "dependencies": [],
+  "socket": false,
+  "manifest": "https://bitbucket.org/Fyorl/token-auras/raw/master/module.json",
+  "download": "https://bitbucket.org/Fyorl/token-auras/get/1.15.zip",
+  "protected": false,
+  "coreTranslation": false,
+  "library": false
 }

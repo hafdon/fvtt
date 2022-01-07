@@ -7,6 +7,7 @@ import { tidy5eContextMenu } from "./app/context-menu.js";
 import { tidy5eClassicControls } from "./app/classic-controls.js";
 import { tidy5eShowActorArt } from "./app/show-actor-art.js";
 import { tidy5eItemCard } from "./app/itemcard.js";
+import { tidy5eAmmoSwitch } from "./app/ammo-switch.js";
 
 
 /**
@@ -34,7 +35,7 @@ export default class Tidy5eNPC extends ActorSheet5eNPC {
 
 	  return mergeObject(super.defaultOptions, {
       classes: ["tidy5e", "sheet", "actor", "npc"],
-      width: 740,
+      width: game.settings.get("tidy5e-sheet", "npsSheetWidth") ?? 740,
       height: 720,
 			tabs: [{navSelector: ".tabs", contentSelector: ".sheet-body", initial: defaultTab}]
     });
@@ -67,7 +68,7 @@ export default class Tidy5eNPC extends ActorSheet5eNPC {
       passive: { label: game.i18n.localize("DND5E.Features"), items: [], dataset: {type: "feat"} },
       weapons: { label: game.i18n.localize("DND5E.AttackPl"), items: [] , hasActions: true, dataset: {type: "weapon", "weapon-type": "natural"} },
       actions: { label: game.i18n.localize("DND5E.ActionPl"), items: [] , hasActions: true, dataset: {type: "feat", "activation.type": "action"} },
-      equipment: { label: game.i18n.localize("DND5E.Inventory"), items: [], dataset: {type: "loot"}}
+      equipment: { label: game.i18n.localize("DND5E.Inventory"), items: [], hasActions: true, dataset: {type: "loot"}}
     };
 
     // Start by classifying items into groups for rendering
@@ -104,6 +105,24 @@ export default class Tidy5eNPC extends ActorSheet5eNPC {
       else features.equipment.items.push(item);
     }
 
+    // Sort others equipements type
+    const sortingOrder = {
+      'equipment': 1,
+      'consumable': 2
+    };
+
+    features.equipment.items.sort((a, b) => {
+      if (!a.hasOwnProperty('type') || !b.hasOwnProperty('type')) return 0;
+
+      const first = (a['type'].toLowerCase() in sortingOrder) ? sortingOrder[a['type']] : Number.MAX_SAFE_INTEGER;
+      const second = (b['type'].toLowerCase() in sortingOrder) ? sortingOrder[b['type']] : Number.MAX_SAFE_INTEGER;
+
+      let result = 0;
+      if (first < second) result = -1;
+      else if (first > second) result = 1;
+
+      return result
+    });
 
     // Assign and return
     data.features = Object.values(features);
@@ -171,6 +190,49 @@ export default class Tidy5eNPC extends ActorSheet5eNPC {
     if(game.settings.get("tidy5e-sheet", "itemCardsForNpcs")) {
       tidy5eItemCard(html, actor);
     }
+    tidy5eAmmoSwitch(html, actor);
+
+    // calculate average hp on right clicking roll hit dice icon
+    html.find(".portrait-hp-formula span.rollable").mousedown( async (event) => {
+      switch (event.which) {
+      case 3:
+        let formula = actor.data.data.attributes.hp.formula;
+        // console.log(formula);
+        let r = new Roll(formula);
+        let term = r.terms;
+        // console.log(term);
+        let averageString = "";
+        for (let i = 0; i < term.length; i++){
+          let type = term[i].constructor.name;
+          switch (type){
+            case "Die":
+              averageString += Math.floor(((term[i].faces * term[i].number)+term[i].number)/2);
+              break;
+            case "OperatorTerm":
+              averageString += term[i].operator;
+              break;
+            case "NumericTerm":
+              averageString += term[i].number;
+              break;
+            default:
+              break;
+          }
+        }
+        // console.log(averageString);
+
+        let average = 0;
+        averageString = averageString.replace(/\s/g, '').match(/[+\-]?([0-9\.\s]+)/g) || [];
+        while(averageString.length) average += parseFloat(averageString.shift());
+
+        // console.log(average);
+        let data = {};
+        data['data.attributes.hp.value'] = average;
+        data['data.attributes.hp.max'] = average;
+        actor.update(data);
+
+      break;
+      }
+    });
 
     
     html.find(".toggle-personality-info").click( async (event) => {
@@ -224,20 +286,20 @@ export default class Tidy5eNPC extends ActorSheet5eNPC {
       let path = event.target.dataset.path;
       let data = {};
       data[path] = Number(event.target.value);
-      actor.getOwnedItem(itemId).update(data);
+     actor.items.get(itemId).update(data);
     });
 
     // creating charges for the item
     html.find('.inventory-list .item .addCharges').click(event => {
       let itemId = $(event.target).parents('.item')[0].dataset.itemId;
-      let item = actor.getOwnedItem(itemId);
+      let item =actor.items.get(itemId);
 
       item.data.uses = { value: 1, max: 1 };
       let data = {};
       data['data.uses.value'] = 1;
       data['data.uses.max'] = 1;
 
-      actor.getOwnedItem(itemId).update(data);
+     actor.items.get(itemId).update(data);
     });
 
     // Short and Long Rest
@@ -374,7 +436,7 @@ async function toggleItemMode(app, html, data){
   html.find('.item-toggle').click(ev => {
     ev.preventDefault();
     let itemId = ev.currentTarget.closest(".item").dataset.itemId;
-    let item = app.actor.getOwnedItem(itemId);
+    let item = app.actor.items.get(itemId);
     let attr = item.data.type === "spell" ? "data.preparation.prepared" : "data.equipped";
     return item.update({ [attr]: !getProperty(item.data, attr) });
   });
@@ -438,6 +500,9 @@ async function setSheetClasses(app, html, data) {
   if (game.settings.get("tidy5e-sheet", "traitsAlwaysShownNpc")) {
     html.find('.tidy5e-sheet.tidy5e-npc .traits').addClass('always-visible');
   }
+  if (game.settings.get("tidy5e-sheet", "traitLabelsEnabled")) {
+		html.find('.tidy5e-sheet.tidy5e-npc .traits').addClass('show-labels');
+	}
   if (game.settings.get("tidy5e-sheet", "skillsAlwaysShownNpc")) {
     html.find('.tidy5e-sheet.tidy5e-npc .skills-list').addClass('always-visible');
   }
@@ -451,6 +516,18 @@ async function setSheetClasses(app, html, data) {
     html.find('.tidy5e-sheet.tidy5e-npc').addClass('original');
   }
 	$('.info-card-hint .key').html(game.settings.get('tidy5e-sheet', 'itemCardsFixKey'));
+}
+
+// Abbreviate Currency
+async function abbreviateCurrency(app,html,data) {
+	html.find('.currency .currency-item label').each(function(){
+		let currency = $(this).data('denom').toUpperCase();
+		let abbr = game.i18n.localize(`DND5E.CurrencyAbbr${currency}`);
+		if(abbr == `DND5E.CurrencyAbbr${currency}`){
+			abbr = currency;
+		}
+		$(this).html(abbr);
+	});
 }
 
 // Hide empty Spellbook
@@ -481,6 +558,7 @@ async function editProtection(app, html, data) {
     
 		if(game.settings.get("tidy5e-sheet", "editTotalLockEnabled")){
 			html.find(".skill input").prop('disabled', true);
+			html.find(".skill .config-button").remove();
 			html.find(".skill .proficiency-toggle").remove();
 			html.find(".ability-score").prop('disabled', true);
 			html.find(".ac-display input").prop('disabled', true);
@@ -490,6 +568,8 @@ async function editProtection(app, html, data) {
 			html.find(".res-max").prop('disabled', true);
 			html.find(".res-options").remove();
 			html.find(".ability-modifiers .proficiency-toggle").remove();
+			html.find(".ability .config-button").remove();
+			html.find(".traits .config-button,.traits .trait-selector,.traits .proficiency-selector").remove();
 			html.find('[contenteditable]').prop('contenteditable', false);
 			html.find(".caster-level input").prop('disabled', true);
 			html.find(".spellcasting-attribute select").prop('disabled', true);
@@ -541,7 +621,7 @@ async function npcFavorites (app, html, data){
     if (app.options.editable) {
       let favBtn = $(`<a class="item-control item-fav ${isFav ? 'active' : ''}" title="${isFav ? game.i18n.localize("TIDY5E.RemoveFav") : game.i18n.localize("TIDY5E.AddFav")}" data-fav="${isFav}"><i class="${isFav ? "fas fa-bookmark" : "fas fa-bookmark inactive"}"></i> <span class="control-label">${isFav ? game.i18n.localize("TIDY5E.RemoveFav") : game.i18n.localize("TIDY5E.AddFav")}</span></a>`);
       favBtn.click(ev => {
-        app.actor.getOwnedItem(item._id).update({ "flags.favtab.isFavorite": !item.flags.favtab.isFavorite });
+        app.actor.items.get(item._id).update({ "flags.favtab.isFavorite": !item.flags.favtab.isFavorite });
       });
       html.find(`.item[data-item-id="${item._id}"]`).find('.item-controls .item-edit').before(favBtn);
       if(item.flags.favtab.isFavorite){
@@ -576,6 +656,7 @@ Hooks.on("renderTidy5eNPC", (app, html, data) => {
   toggleTraitsList(app, html, data);
   toggleItemMode(app, html, data);
   restoreScrollPosition(app, html, data);
+	abbreviateCurrency(app,html,data);
   hideSpellbook(app, html, data);
   resetTempHp(app, html, data);
   editProtection(app, html, data);

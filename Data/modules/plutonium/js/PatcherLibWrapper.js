@@ -1,1 +1,77 @@
-const _0x32b7=['26GLSpcn','get','reduce','OVERRIDE','pop','is_fallback','value','172173VORFAm','14wlyfHl','\x27\x20does\x20not\x20exist\x20or\x20could\x20not\x20be\x20found.','split','LIBWRAPPER_MODE_WRAPPER','19301jxsrja','register','slice','5UgiWZz','20589thbiSb','2tCjrhl','11563wRpszA','init','bind','5445GYUODt','\x22\x20does\x20not\x20have\x20a\x20setter','15GQEljd','WRAPPER','set','11261Dcawnt','defineProperty','MIXED','libWrapper','libWrapper\x20Shim:\x20\x27','14392jvaRPx','libWrapper\x20Shim:\x20\x22','splice','call'];const _0x5245=function(_0x4d46ae,_0x127462){_0x4d46ae=_0x4d46ae-0x97;let _0x32b792=_0x32b7[_0x4d46ae];return _0x32b792;};const _0x24e89e=_0x5245;(function(_0x1595f3,_0x27cd74){const _0x536af5=_0x5245;while(!![]){try{const _0xef0304=-parseInt(_0x536af5(0xa0))*-parseInt(_0x536af5(0xab))+-parseInt(_0x536af5(0x98))+parseInt(_0x536af5(0xa6))*parseInt(_0x536af5(0xa8))+parseInt(_0x536af5(0x9d))*parseInt(_0x536af5(0xa2))+parseInt(_0x536af5(0xa1))+parseInt(_0x536af5(0x99))*-parseInt(_0x536af5(0xb0))+-parseInt(_0x536af5(0xb4))*-parseInt(_0x536af5(0xa3));if(_0xef0304===_0x27cd74)break;else _0x1595f3['push'](_0x1595f3['shift']());}catch(_0x45ca1e){_0x1595f3['push'](_0x1595f3['shift']());}}}(_0x32b7,0x1e4f4));class UtilLibWrapper{}UtilLibWrapper[_0x24e89e(0x9c)]=_0x24e89e(0xa9),UtilLibWrapper['LIBWRAPPER_MODE_MIXED']=_0x24e89e(0xad),UtilLibWrapper['LIBWRAPPER_MODE_OVERRIDE']=_0x24e89e(0xb7);let libWrapper;Hooks['once'](_0x24e89e(0xa4),()=>{const _0x1991cc=_0x24e89e;if(globalThis['libWrapper']&&!(globalThis['libWrapper'][_0x1991cc(0xb9)]??!![])){libWrapper=globalThis[_0x1991cc(0xae)];return;}libWrapper=class{static get[_0x1991cc(0xb9)](){return!![];}static[_0x1991cc(0x9e)](_0x49e51c,_0x5bb38d,_0x2e7bcf,_0x30b42d=_0x1991cc(0xad)){const _0x88f8cc=_0x1991cc,_0x135dd6=_0x5bb38d['endsWith']('#set');_0x5bb38d=!_0x135dd6?_0x5bb38d:_0x5bb38d[_0x88f8cc(0x9f)](0x0,-0x4);const _0x138f43=_0x5bb38d[_0x88f8cc(0x9b)]('.'),_0x23e3fd=_0x138f43[_0x88f8cc(0xb8)](),_0x281b2a=_0x138f43[_0x88f8cc(0xb2)](0x0,0x1)[0x0],_0x12896d=eval,_0x4c52cd=_0x138f43[_0x88f8cc(0xb6)]((_0xf7034a,_0x318f8d)=>_0xf7034a[_0x318f8d],globalThis[_0x281b2a]??_0x12896d(_0x281b2a));let _0x2cfbfe=_0x4c52cd,_0x2ad1c1=null;while(_0x2cfbfe){_0x2ad1c1=Object['getOwnPropertyDescriptor'](_0x2cfbfe,_0x23e3fd);if(_0x2ad1c1)break;_0x2cfbfe=Object['getPrototypeOf'](_0x2cfbfe);}if(!_0x2ad1c1)throw new Error(_0x88f8cc(0xaf)+_0x5bb38d+_0x88f8cc(0x9a));let _0xc15b3c=null;const _0x291062=_0x30b42d===_0x88f8cc(0xb7)?function(){return _0x2e7bcf['call'](this,...arguments);}:function(){const _0x2c5cf1=_0x88f8cc;return _0x2e7bcf[_0x2c5cf1(0xb3)](this,_0xc15b3c[_0x2c5cf1(0xa5)](this),...arguments);};if(!_0x135dd6)_0x2ad1c1[_0x88f8cc(0x97)]?(_0xc15b3c=_0x2ad1c1['value'],_0x2ad1c1[_0x88f8cc(0x97)]=_0x291062):(_0xc15b3c=_0x2ad1c1[_0x88f8cc(0xb5)],_0x2ad1c1[_0x88f8cc(0xb5)]=_0x291062);else{if(!_0x2ad1c1[_0x88f8cc(0xaa)])throw new Error(_0x88f8cc(0xb1)+_0x5bb38d+_0x88f8cc(0xa7));_0xc15b3c=_0x2ad1c1[_0x88f8cc(0xaa)],_0x2ad1c1[_0x88f8cc(0xaa)]=_0x291062;}_0x2ad1c1['configurable']=!![],Object[_0x88f8cc(0xac)](_0x4c52cd,_0x23e3fd,_0x2ad1c1);}};});export{libWrapper,UtilLibWrapper};
+class UtilLibWrapper {}
+
+UtilLibWrapper.LIBWRAPPER_MODE_WRAPPER = "WRAPPER";
+UtilLibWrapper.LIBWRAPPER_MODE_MIXED = "MIXED";
+UtilLibWrapper.LIBWRAPPER_MODE_OVERRIDE = "OVERRIDE";
+
+// region libWrapper shim
+
+// SPDX-License-Identifier: LGPL-3.0-or-later
+// Copyright © 2021 fvtt-lib-wrapper Rui Pinheiro
+// Source: https://github.com/ruipin/fvtt-lib-wrapper/
+// Modified: to remove user prompt on missing library
+
+let libWrapper;
+
+Hooks.once("init", () => {
+	// Check if the real module is already loaded - if so, use it
+	if (globalThis.libWrapper && !(globalThis.libWrapper.is_fallback ?? true)) {
+		libWrapper = globalThis.libWrapper;
+		return;
+	}
+
+	// Fallback implementation
+	libWrapper = class {
+		static get is_fallback () { return true; }
+
+		static register (module, target, fn, type = "MIXED") {
+			const is_setter = target.endsWith("#set");
+			target = !is_setter ? target : target.slice(0, -4);
+			const split = target.split(".");
+			const fn_name = split.pop();
+			const root_nm = split.splice(0, 1)[0];
+			// eslint-disable-next-line no-eval
+			const _eval = eval; // The browser doesn't expose all global variables (e.g. 'Game') inside globalThis, but it does to an eval. We copy it to a variable to have it run in global scope.
+			const obj = split.reduce((x, y) => x[y], globalThis[root_nm] ?? _eval(root_nm));
+
+			let iObj = obj;
+			let descriptor = null;
+			while (iObj) {
+				descriptor = Object.getOwnPropertyDescriptor(iObj, fn_name);
+				if (descriptor) break;
+				iObj = Object.getPrototypeOf(iObj);
+			}
+			if (!descriptor) throw new Error(`libWrapper Shim: '${target}' does not exist or could not be found.`);
+
+			let original = null;
+			const wrapper = (type === "OVERRIDE") ? function () {
+				return fn.call(this, ...arguments);
+			} : function () {
+				return fn.call(this, original.bind(this), ...arguments);
+			};
+
+			if (!is_setter) {
+				if (descriptor.value) {
+					original = descriptor.value;
+					descriptor.value = wrapper;
+				} else {
+					original = descriptor.get;
+					descriptor.get = wrapper;
+				}
+			} else {
+				if (!descriptor.set) throw new Error(`libWrapper Shim: "${target}" does not have a setter`);
+				original = descriptor.set;
+				descriptor.set = wrapper;
+			}
+
+			descriptor.configurable = true;
+			Object.defineProperty(obj, fn_name, descriptor);
+		}
+	};
+});
+
+export {
+	libWrapper,
+	UtilLibWrapper,
+};
+// endregion

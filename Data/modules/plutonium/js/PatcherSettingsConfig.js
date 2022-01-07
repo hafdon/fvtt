@@ -1,1 +1,22 @@
-const _0x837c=['init','808089PvLVci','1046582EGLvEE','101xpmmLV','find','renderSettingsConfig','#text','37420WvAPoN','childNodes','1362617HMBcZh','_findNameNode','188097YZMFjh','911597rKHWBI','data','757QMCjTG','isStreamerMode','SRD','length','get'];const _0x34fe=function(_0x143c7d,_0x4612cb){_0x143c7d=_0x143c7d-0x15c;let _0x837c2d=_0x837c[_0x143c7d];return _0x837c2d;};const _0x358a5e=_0x34fe;(function(_0x242bad,_0x4649db){const _0x3ca65a=_0x34fe;while(!![]){try{const _0x4ea2c3=-parseInt(_0x3ca65a(0x16c))+-parseInt(_0x3ca65a(0x164))+-parseInt(_0x3ca65a(0x15f))+parseInt(_0x3ca65a(0x16d))+-parseInt(_0x3ca65a(0x163))+parseInt(_0x3ca65a(0x16e))*parseInt(_0x3ca65a(0x166))+parseInt(_0x3ca65a(0x161));if(_0x4ea2c3===_0x4649db)break;else _0x242bad['push'](_0x242bad['shift']());}catch(_0x59d2b1){_0x242bad['push'](_0x242bad['shift']());}}}(_0x837c,0x83f25));import{Config}from'./Config.js';import{SharedConsts}from'../shared/SharedConsts.js';class Patcher_SettingsConfig{static[_0x358a5e(0x16b)](){const _0x312d87=_0x358a5e;Hooks['on'](_0x312d87(0x15d),(_0x10e178,_0x60823b)=>{const _0x1d48b0=_0x312d87;if(!Config[_0x1d48b0(0x16a)]('ui',_0x1d48b0(0x167)))return;const _0x129a1b=_0x60823b[_0x1d48b0(0x15c)]('.module-header')[_0x1d48b0(0x16a)]();for(const _0x5a3a7f of _0x129a1b){const _0x1fa360=this[_0x1d48b0(0x162)](_0x5a3a7f);if(!_0x1fa360)continue;_0x1fa360['data']=_0x1d48b0(0x168);break;}});}static[_0x358a5e(0x162)](_0x45b6ba){const _0x508c7b=_0x358a5e;if(!_0x45b6ba)return null;if(_0x45b6ba['nodeName']===_0x508c7b(0x15e)){const _0x32cd48=(_0x45b6ba[_0x508c7b(0x165)]||'')['trim']();if(_0x32cd48===SharedConsts['MODULE_TITLE'])return _0x45b6ba;return null;}for(let _0x2ac123=0x0;_0x2ac123<_0x45b6ba[_0x508c7b(0x160)][_0x508c7b(0x169)];++_0x2ac123){const _0x533046=_0x45b6ba[_0x508c7b(0x160)][_0x2ac123],_0x1199d3=this[_0x508c7b(0x162)](_0x533046);if(_0x1199d3)return _0x1199d3;}}}export{Patcher_SettingsConfig};
+import {Config} from "./Config.js";
+import {UtilPatcher} from "./UtilPatch.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+
+class Patcher_SettingsConfig {
+	static init () {
+		Hooks.on("renderSettingsConfig", (app, $html) => {
+			if (!Config.get("ui", "isStreamerMode")) return;
+
+			const elesHeaders = $html.find(`.module-header`).get();
+			for (const eleHeader of elesHeaders) {
+				const node = UtilPatcher.findPlutoniumTextNodes(eleHeader, {isSingle: true});
+				if (!node) continue;
+
+				node.data = SharedConsts.MODULE_TITLE_FAKE;
+				break;
+			}
+		});
+	}
+}
+
+export {Patcher_SettingsConfig};

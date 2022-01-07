@@ -1,1 +1,33 @@
-const _0x9036=['stage','4674594uVHepp','896754yCqyIw','getTopLeft','getPosCanvasSpace','name','1169892WfRlEc','47863yEyBWU','1282016HFzHqq','clientX','18wRRqLe','worldTransform','1352275YGpUKB','clientY','17542nhZRAu','44IKxAgZ','scale','layers','find'];const _0x2f65=function(_0x4a8770,_0x335a2b){_0x4a8770=_0x4a8770-0x119;let _0x9036ec=_0x9036[_0x4a8770];return _0x9036ec;};const _0x397f4b=_0x2f65;(function(_0x32980b,_0x33721d){const _0x266b73=_0x2f65;while(!![]){try{const _0xd8bcfb=parseInt(_0x266b73(0x11d))+-parseInt(_0x266b73(0x119))+-parseInt(_0x266b73(0x121))*parseInt(_0x266b73(0x11e))+-parseInt(_0x266b73(0x11f))+parseInt(_0x266b73(0x125))*-parseInt(_0x266b73(0x126))+-parseInt(_0x266b73(0x123))+parseInt(_0x266b73(0x12b));if(_0xd8bcfb===_0x33721d)break;else _0x32980b['push'](_0x32980b['shift']());}catch(_0x25ecfd){_0x32980b['push'](_0x32980b['shift']());}}}(_0x9036,0xa607b));class UtilCanvas{static[_0x397f4b(0x11b)](_0x3d91dd,_0x2bb089){const _0x4fd8b6=_0x397f4b,_0x27be56=canvas[_0x4fd8b6(0x128)][_0x4fd8b6(0x129)](_0x67f0c1=>_0x67f0c1[_0x4fd8b6(0x11c)]===_0x2bb089),[_0x2921eb,_0x214ef0]=[_0x3d91dd[_0x4fd8b6(0x120)],_0x3d91dd[_0x4fd8b6(0x124)]],_0x49a218=_0x27be56[_0x4fd8b6(0x122)],_0x2b26b4=(_0x2921eb-_0x49a218['tx'])/canvas['stage'][_0x4fd8b6(0x127)]['x'],_0x495b2d=(_0x214ef0-_0x49a218['ty'])/canvas[_0x4fd8b6(0x12a)][_0x4fd8b6(0x127)]['y'],_0x25aafc=canvas['grid'][_0x4fd8b6(0x11a)](_0x2b26b4,_0x495b2d);return{'x':_0x25aafc[0x0],'y':_0x25aafc[0x1]};}}export{UtilCanvas};
+class UtilCanvas {
+	/**
+	 * @param evt
+	 * @param layerName One of: "BackgroundLayer", "DrawingsLayer", "GridLayer", "WallsLayer", "TemplateLayer",
+	 * "NotesLayer", "TokenLayer", "ForegroundLayer", "SoundsLayer", "LightingLayer", "SightLayer", "EffectsLayer",
+	 * "ControlsLayer"
+	 * @return {{x: *, y: *}}
+	 */
+	static getPosCanvasSpace (evt, layerName) {
+		const layer = canvas.layers.find(it => it.name === layerName);
+
+		// (Taken from `_onDropActorData`)
+		// Acquire cursor position transformed to Canvas coordinates
+		const [x, y] = [evt.clientX, evt.clientY];
+		const t = layer.worldTransform;
+		const tx = (x - t.tx) / canvas.stage.scale.x;
+		const ty = (y - t.ty) / canvas.stage.scale.y;
+		const p = canvas.grid.getTopLeft(tx, ty);
+
+		return {x: p[0], y: p[1]};
+	}
+
+	/** See: https://stackoverflow.com/a/16282685 */
+	static getCentroid (arr) {
+		const x = arr.map(xy => xy[0]);
+		const y = arr.map(xy => xy[1]);
+		const cx = (Math.min(...x) + Math.max(...x)) / 2;
+		const cy = (Math.min(...y) + Math.max(...y)) / 2;
+		return [cx, cy];
+	}
+}
+
+export {UtilCanvas};

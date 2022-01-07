@@ -1,1 +1,62 @@
-const _0xe614=['463wERkZi','addSocketEventListener','_EVENT_LISTENERS','push','_getPackedData','_EVENT_NAME','MODULE_NAME','emit','progress','34181NelgME','_onLoadProgress','socket','_getUnpackedData','431DbqkYM','1AqwnVx','module.','_doHandleProgressMessage','3881zXATCl','init','94TneagA','pct','1rBfLrw','step','data','330194jZJezL','type','72126GGsSOf','10581gmeWrD','606743QjeGxm'];const _0x4c7c=function(_0x9be8e5,_0x3e6589){_0x9be8e5=_0x9be8e5-0x80;let _0xe61488=_0xe614[_0x9be8e5];return _0xe61488;};const _0x43929a=_0x4c7c;(function(_0x36e921,_0x42d708){const _0x5c274a=_0x4c7c;while(!![]){try{const _0xbb53e4=-parseInt(_0x5c274a(0x98))*parseInt(_0x5c274a(0x9a))+-parseInt(_0x5c274a(0x85))+parseInt(_0x5c274a(0x94))*parseInt(_0x5c274a(0x87))+parseInt(_0x5c274a(0x84))+parseInt(_0x5c274a(0x95))*parseInt(_0x5c274a(0x90))+-parseInt(_0x5c274a(0x82))+parseInt(_0x5c274a(0x9c))*parseInt(_0x5c274a(0x86));if(_0xbb53e4===_0x42d708)break;else _0x36e921['push'](_0x36e921['shift']());}catch(_0x5a01bf){_0x36e921['push'](_0x36e921['shift']());}}}(_0xe614,0x328a6));import{SharedConsts}from'../shared/SharedConsts.js';class UtilSocket{static[_0x43929a(0x99)](){const _0x44c3de=_0x43929a;game[_0x44c3de(0x92)]['on'](UtilSocket[_0x44c3de(0x8c)],_0x6644ab=>{const _0x51436e=_0x44c3de;if(!_0x6644ab[_0x51436e(0x83)])return;const _0x563c38=this['_getUnpackedData'](_0x6644ab),_0x284158=UtilSocket[_0x51436e(0x89)][_0x6644ab[_0x51436e(0x83)]]||[];_0x284158['forEach'](_0x489ce7=>_0x489ce7(_0x563c38));}),game['socket']['on'](_0x44c3de(0x8f),_0x290d9f=>{const _0x32148d=_0x44c3de;this[_0x32148d(0x97)](_0x290d9f);});}static[_0x43929a(0x97)](_0x5b8919){const _0x4ba2c8=_0x43929a;if(_0x5b8919?.['action']==='installPackage')SceneNavigation[_0x4ba2c8(0x91)](_0x5b8919[_0x4ba2c8(0x80)],_0x5b8919[_0x4ba2c8(0x9b)]);}static['pSendData'](_0x71034b,_0x4fdc65){const _0x494494=_0x43929a,_0x2af8fa=this[_0x494494(0x8b)](_0x71034b,_0x4fdc65);return new Promise(_0x2e7dc5=>{const _0x44d968=_0x494494;game['socket'][_0x44d968(0x8e)](UtilSocket[_0x44d968(0x8c)],_0x2af8fa,{},_0x31a10e=>{return _0x2e7dc5(_0x31a10e);});});}static['_getPackedData'](_0x124773,_0x54cb3f){return{'type':_0x124773,'data':_0x54cb3f};}static[_0x43929a(0x93)](_0x1a0c5d){const _0x298407=_0x43929a;if(!_0x1a0c5d['type'])return _0x1a0c5d;return _0x1a0c5d[_0x298407(0x81)];}static[_0x43929a(0x88)](_0x28dcd8,_0x12d4f0){const _0x4379e0=_0x43929a,_0x4cefc5=MiscUtil['getOrSet'](UtilSocket[_0x4379e0(0x89)],_0x28dcd8,[]);_0x4cefc5[_0x4379e0(0x8a)](_0x12d4f0);}}UtilSocket[_0x43929a(0x8c)]=_0x43929a(0x96)+SharedConsts[_0x43929a(0x8d)],UtilSocket[_0x43929a(0x89)]={};export{UtilSocket};
+import {SharedConsts} from "../shared/SharedConsts.js";
+
+class UtilSocket {
+	static init () {
+		game.socket.on(
+			UtilSocket._EVENT_NAME,
+			packedData => {
+				if (!packedData.type) return;
+
+				const data = this._getUnpackedData(packedData);
+				const fnsToRun = UtilSocket._EVENT_LISTENERS[packedData.type] || [];
+				fnsToRun.forEach(fn => fn(data));
+			},
+		);
+
+		// Based on `setup.js`'s `activateSocketListeners`
+		game.socket.on("progress", data => {
+			this._doHandleProgressMessage(data);
+		});
+	}
+
+	/** Handle progress messages when e.g. installing worlds/modules. */
+	static _doHandleProgressMessage (data) {
+		if (data?.action === "installPackage") SceneNavigation._onLoadProgress(data.step, data.pct);
+	}
+
+	static pSendData (namespace, data) {
+		const packedData = this._getPackedData(namespace, data);
+
+		return new Promise((resolve) => {
+			game.socket.emit(
+				UtilSocket._EVENT_NAME,
+				packedData, // data
+				{}, // options (https://gitlab.com/foundrynet/foundryvtt/-/issues/4749)
+				unknown => { // callback
+					return resolve(unknown);
+				},
+			);
+		});
+	}
+
+	static _getPackedData (namespace, data) {
+		return {
+			type: namespace,
+			data,
+		};
+	}
+
+	static _getUnpackedData (packedData) {
+		if (!packedData.type) return packedData;
+		return packedData.data;
+	}
+
+	static addSocketEventListener (namespace, fnListener) {
+		const tgt = MiscUtil.getOrSet(UtilSocket._EVENT_LISTENERS, namespace, []);
+		tgt.push(fnListener);
+	}
+}
+UtilSocket._EVENT_NAME = `module.${SharedConsts.MODULE_NAME}`;
+UtilSocket._EVENT_LISTENERS = {};
+
+export {UtilSocket};

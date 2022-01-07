@@ -1,1 +1,32 @@
-var _0x4092=['192220qBKNzJ','_contentMetadata','1IfeiEm','67ORTSyf','389653vfsuim','book','6241canqVz','27bxtPsd','bookData','pGetBookIndex','3ZQAlpL','bind','13NeZdtB','_getJournalDatas','14830tZnLzb','Books','77509RFNzlh','books','302776FFhnqJ','49371blibjD','data','_content'];var _0x5e9b=function(_0x379159,_0x1d19b1){_0x379159=_0x379159-0xbd;var _0x40922a=_0x4092[_0x379159];return _0x40922a;};var _0x3dc679=_0x5e9b;(function(_0x5503d3,_0x5364ce){var _0x4e3eb4=_0x5e9b;while(!![]){try{var _0x20a1f1=-parseInt(_0x4e3eb4(0xc8))+-parseInt(_0x4e3eb4(0xce))*parseInt(_0x4e3eb4(0xcb))+-parseInt(_0x4e3eb4(0xcc))*parseInt(_0x4e3eb4(0xca))+-parseInt(_0x4e3eb4(0xc0))*parseInt(_0x4e3eb4(0xbe))+-parseInt(_0x4e3eb4(0xc2))*parseInt(_0x4e3eb4(0xd2))+parseInt(_0x4e3eb4(0xc4))+parseInt(_0x4e3eb4(0xc5))*parseInt(_0x4e3eb4(0xcf));if(_0x20a1f1===_0x5364ce)break;else _0x5503d3['push'](_0x5503d3['shift']());}catch(_0x3cd5a5){_0x5503d3['push'](_0x5503d3['shift']());}}}(_0x4092,0x33618));import{ImportListAdventureBook}from'./ImportListAdventureBook.js';import{Vetools}from'./Vetools.js';import{DataConverter}from'./DataConverter.js';class ImportListBook extends ImportListAdventureBook{constructor(_0x4cd5dd){var _0x26131d=_0x5e9b;super({'title':'Import\x20Book'},_0x4cd5dd,{'titleSearch':_0x26131d(0xc3),'defaultFolderPath':[_0x26131d(0xc1)],'namespace':_0x26131d(0xcd),'isFolderOnly':!![]},{'fnGetIndex':Vetools[_0x26131d(0xd1)]['bind'](Vetools),'fnGetUrl':Vetools['getBookUrl'][_0x26131d(0xbd)](Vetools),'dataProp':_0x26131d(0xcd),'brewDataProp':_0x26131d(0xd0),'title':'Book'});}[_0x3dc679(0xbf)](){var _0x3e9ac1=_0x3dc679;return DataConverter['getBookJournals'](this[_0x3e9ac1(0xc7)][_0x3e9ac1(0xc6)],this[_0x3e9ac1(0xc7)][_0x3e9ac1(0xc9)],{'isAddPermission':!![]});}}export{ImportListBook};
+import {ImportListAdventureBook} from "./ImportListAdventureBook.js";
+import {Vetools} from "./Vetools.js";
+import {DataConverterAdventureBook} from "./DataConverterAdventureBook.js";
+
+class ImportListBook extends ImportListAdventureBook {
+	constructor (externalData) {
+		super(
+			{title: "Import Book"},
+			externalData,
+			{
+				titleSearch: "books",
+				defaultFolderPath: ["Books"],
+				dirsHomebrew: ["book"],
+				namespace: "book",
+				isFolderOnly: true,
+				configGroup: "importBook",
+			},
+			{
+				fnGetIndex: Vetools.pGetBookIndex.bind(Vetools),
+				dataProp: "book",
+				brewDataProp: "bookData",
+				title: "Book",
+			},
+		);
+	}
+
+	_pGetJournalDatas () {
+		return DataConverterAdventureBook.pGetBookJournals(this._content.data, this._content._contentMetadata, {isAddPermission: true});
+	}
+}
+
+export {ImportListBook};

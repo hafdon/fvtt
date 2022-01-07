@@ -1,1 +1,50 @@
-const _0x5780=['<div>\x0a\x09\x09\x09\x09\x09\x09\x09<p>Welcome\x20to\x20Plutonium!</p>\x0a\x09\x09\x09\x09\x09\x09\x09<p>We\x20would\x20like\x20to\x20remind\x20you\x20that\x20neither\x20Foundry\x20nor\x20Forge\x20support\x20piracy\x20in\x20any\x20shape\x20or\x20form,\x20and\x20that\x20<b>all</b>\x20discussion\x20related\x20to\x20the\x20use\x20of\x20Plutonium\x20should\x20be\x20done\x20in\x20our\x20<a\x20target=\x22_blank\x22\x20href=\x22https://discord.gg/nGvRCDs\x22\x20rel=\x22noopener\x20noreferrer\x22>Discord</a>.</p>\x0a\x09\x09\x09\x09\x09\x09\x09<p>Additionally,\x20if\x20you\x20wish\x20to\x20screenshot\x20or\x20stream\x20your\x20game,\x20we\x20recommend\x20<span\x20data-plut-wdt-streamer=\x22true\x22\x20class=\x22render-roller\x22>Streamer\x20Mode</span>.</p>\x0a\x09\x09\x09\x09\x09\x09\x09<div><button\x20data-plut-wdt-accept=\x22true\x22>I\x20Understand</button></div>\x0a\x09\x09\x09\x09\x09\x09</div>','attr','instance','454393jMPlmo','2djbeJd','111971xdHJPL','we_dont_talk','then','2orrkpj','info','#chat-log','[data-plut-wdt-streamer]','[data-message-id]','[data-plut-wdt-accept]','Thanks!','data-message-id','313901HlBwhy','_doDeleteAll','create','init','pGet','userId','292963EOZbsT','body','96888yWDGUp','closest','find','430487CRmNjc','click','get','off','delete','each','1uzlQjR','347861WMnWGc','_STORAGE_KEY','pHandleButtonClick'];const _0x511b=function(_0xf0adab,_0x16ddff){_0xf0adab=_0xf0adab-0xf4;let _0x578061=_0x5780[_0xf0adab];return _0x578061;};const _0x41f440=_0x511b;(function(_0x363cc8,_0x69153){const _0x37fa15=_0x511b;while(!![]){try{const _0x19e21c=-parseInt(_0x37fa15(0xf8))*parseInt(_0x37fa15(0xfe))+parseInt(_0x37fa15(0xf5))+-parseInt(_0x37fa15(0x10a))*parseInt(_0x37fa15(0x112))+parseInt(_0x37fa15(0xff))+parseInt(_0x37fa15(0x118))+parseInt(_0x37fa15(0x107))*parseInt(_0x37fa15(0x106))+parseInt(_0x37fa15(0x105));if(_0x19e21c===_0x69153)break;else _0x363cc8['push'](_0x363cc8['shift']());}catch(_0x37930a){_0x363cc8['push'](_0x363cc8['shift']());}}}(_0x5780,0x5757e));import{Config}from'./Config.js';class WeDontTalk{static[_0x41f440(0x113)](){const _0x281b1d=_0x41f440;$(_0x281b1d(0x10c))[_0x281b1d(0xf7)](_0x281b1d(0x10f))[_0x281b1d(0xf6)](_0x281b1d(0x10e))[_0x281b1d(0xfd)]((_0x2ed45e,_0x58876c)=>{const _0x390f13=_0x281b1d,_0x50fd29=$(_0x58876c)[_0x390f13(0x103)](_0x390f13(0x111)),_0x35c522=CONFIG['ChatMessage']['collection'][_0x390f13(0x104)][_0x390f13(0xfa)](_0x50fd29);if(!_0x35c522)return;_0x35c522[_0x390f13(0xfc)]();});}static[_0x41f440(0x115)](){const _0x2d6679=_0x41f440;StorageUtil[_0x2d6679(0x116)](WeDontTalk[_0x2d6679(0x100)])[_0x2d6679(0x109)](async _0x2bfba9=>{const _0x6062dc=_0x2d6679;if(_0x2bfba9)return this['_doDeleteAll']();if(Config[_0x6062dc(0xfa)]('ui','isStreamerMode'))return;const _0xd3237c=_0x528772=>Config[_0x6062dc(0x101)](_0x528772,'ui'),_0x599a55=async()=>{const _0x5d1afd=_0x6062dc;$(document[_0x5d1afd(0xf4)])[_0x5d1afd(0xfb)](_0x5d1afd(0xf9),_0x5d1afd(0x10f),_0x599a55),$(document[_0x5d1afd(0xf4)])[_0x5d1afd(0xfb)]('click',_0x5d1afd(0x10d),_0xd3237c),await StorageUtil['pSet'](WeDontTalk[_0x5d1afd(0x100)],!![]),ui['notifications'][_0x5d1afd(0x10b)](_0x5d1afd(0x110)),this[_0x5d1afd(0x113)]();};$(document[_0x6062dc(0xf4)])['on'](_0x6062dc(0xf9),_0x6062dc(0x10f),_0x599a55),$(document['body'])['on'](_0x6062dc(0xf9),_0x6062dc(0x10d),_0xd3237c);const _0x2eaab7=await ChatMessage[_0x6062dc(0x114)]({'content':_0x6062dc(0x102),'user':game[_0x6062dc(0x117)],'type':0x4,'whisper':[game[_0x6062dc(0x117)]]});});}}WeDontTalk[_0x41f440(0x100)]=_0x41f440(0x108);export{WeDontTalk};
+import {Config} from "./Config.js";
+
+class WeDontTalk {
+	static _doDeleteAll () {
+		$(`#chat-log`).find(`[data-plut-wdt-accept]`).closest(`[data-message-id]`).each((i, e) => {
+			const msgId = $(e).attr("data-message-id");
+			const msg = CONFIG.ChatMessage.collection.instance.get(msgId);
+			if (!msg) return;
+			msg.delete();
+		});
+	}
+
+	static init () {
+		StorageUtil.pGet(WeDontTalk._STORAGE_KEY)
+			.then(async val => {
+				if (val) return this._doDeleteAll();
+
+				const pHandleStreamerMode = evt => Config.pHandleButtonClick(evt, "ui");
+
+				const pHandleAccept = async () => {
+					$(document.body).off("click", `[data-plut-wdt-accept]`, pHandleAccept);
+					$(document.body).off("click", `[data-plut-wdt-streamer]`, pHandleStreamerMode);
+					await StorageUtil.pSet(WeDontTalk._STORAGE_KEY, true);
+					ui.notifications.info(`Thanks!`);
+					this._doDeleteAll();
+				};
+
+				$(document.body).on("click", `[data-plut-wdt-accept]`, pHandleAccept);
+				$(document.body).on("click", `[data-plut-wdt-streamer]`, pHandleStreamerMode);
+
+				// Avoid showing the telling notification if we're in streamer mode
+				if (Config.get("ui", "isStreamerMode")) return;
+
+				await ChatMessage.create({
+					content: `<div>
+							<p>Welcome to Plutonium!</p>
+							<p>We would like to remind you that neither Foundry nor Forge support piracy in any shape or form, and that <b>all</b> discussion related to the use of Plutonium should be done in our <a target="_blank" href="https://discord.gg/nGvRCDs" rel="noopener noreferrer">Discord</a>.</p>
+							<p>Additionally, if you wish to screenshot or stream your game, we recommend <span data-plut-wdt-streamer="true" class="render-roller">Streamer Mode</span>.</p>
+							<div><button data-plut-wdt-accept="true">I Understand</button></div>
+						</div>`,
+					user: game.userId,
+					type: 4,
+					whisper: [game.userId],
+				});
+			});
+	}
+}
+WeDontTalk._STORAGE_KEY = "we_dont_talk";
+
+export {WeDontTalk};

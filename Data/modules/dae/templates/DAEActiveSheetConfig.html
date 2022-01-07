@@ -55,18 +55,25 @@
     </div>
     {{/if}}
 
-    {{#if isItem}}
     <div class="form-group">
-      <label>{{ localize "dae.Stackable" }}</label>
-      <input type="checkbox" name="flags.dae.stackable" {{ checked effect.flags.dae.stackable }} />
-    </div>
-    {{/if}}
-    <div class="form-group">
-      <label>{{ localize "EFFECT.Origin" }} ({{ sourceName }})</label>
+      <label>{{ localize "dae.forceToHud.Name" }}</label>
       <div class="form-fields">
-        <input type="text" name="origin" value="{{ effect.origin }}" disabled />
+        <input type="text" name="flags.core.statusId" value="{{ effect.flags.core.statusId }}" />
       </div>
     </div>
+    {{ localize "dae.forceToHud.Hint" }}
+
+    {{#if isItem}}
+    <div class="form-group">
+      <label>{{localize "dae.Stackable"}}</label>
+      <div class="form-fields">
+        <select name="flags.dae.stackable" data-dtype="String">
+          {{selectOptions stackableOptions selected=effect.flags.dae.stackable}}
+        </select>
+      </div>
+    </div>
+    {{/if}}
+   
   </section>
 
   <!-- Duration Tab -->

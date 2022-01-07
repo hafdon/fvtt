@@ -1,1 +1,451 @@
-const _0x481b=['_getPsionicItems_pGetTalentItem','getSourceWithPagePart','filter','slice','bonus','psionicName','ATB_ABV_TO_FULL','PG_PSIONICS','entries','(Only\x20one\x20focus\x20may\x20be\x20active\x20at\x20a\x20time)','1hWNSrt','_pGetAdditionalData','_PSI_DURATION_MAP','isImportDescription','<div>\x0a\x09\x09\x09\x09\x09\x09\x09','1xIxcBM','_getPsionicItems_getDamageTypeFromString','isAddPermission','modules/','submodes',')[^.]+damage','_pGetDisciplineFocusAdditionalData','get','\x0a\x09\x09\x09\x09\x09\x09</div>','toLowerCase','MODULE_NAME_FAKE','action','name','<div>','_getPsionicItems_getSaveFromString','int','12443kJdlLH','\x20-\x20','split','\x20+\x20(max(sign(floor((@details.level\x20+\x201)\x20/\x206)),\x200)\x20*\x20(','pGetPsionicsSideData','render','154382juHDpG','pGetPsionicItems','pGetAdditionalData_','data','cost','getTypeOrderString','getNameWithSourcePart','psionicDisciplineFocus','URL_TO_HASH_BUILDER','<p><i>','</div>','find','propDroppable','psionicSource','MODULE_NAME','getCleanEntityName','resources.primary.value','_getPsionicItems_pGetDisciplineFocusItem','125kvhAiI','source','2SXjuhT','_pGetDisciplineActiveAdditionalData','round','setFirstSection','test','push','actionType','unit','foundryPsionicDisciplineFocus','368003NAbWCB','stringify','length','getWithDescriptionPlugins','min','3659BLaUKn','_getPsionicItems_getActionTypeFromString','attribute','/media/icon/brain.svg','hour','797667LMtBEJ','psionicDisciplineActive','\x0a\x09\x09\x09\x09\x09\x09\x09','_getPsionicFlags','type','56383hDPTEv','getBodyText','max','minute','exec','filterValues','))\x20+\x20(max(sign(floor((@details.level\x20-\x205)\x20/\x206)),\x200)\x20*\x20(','psionic','list-hang-notitle','replace','foundryPsionicDisciplineActive','map','feat','4052fiNMky','values','importPsionic','item','59MEgjuR','_getPsionicItems_pGetDisciplineActiveItems','concentration','permission'];const _0x3a13=function(_0x4e6229,_0x121e9a){_0x4e6229=_0x4e6229-0x1bd;let _0x481b9a=_0x481b[_0x4e6229];return _0x481b9a;};const _0x4d081b=_0x3a13;(function(_0x2de637,_0x3431fa){const _0x76910d=_0x3a13;while(!![]){try{const _0x5c9ae1=-parseInt(_0x76910d(0x20c))*parseInt(_0x76910d(0x1e5))+parseInt(_0x76910d(0x1d3))+-parseInt(_0x76910d(0x1fa))*-parseInt(_0x76910d(0x1bd))+-parseInt(_0x76910d(0x21e))*-parseInt(_0x76910d(0x1ff))+parseInt(_0x76910d(0x1e7))*-parseInt(_0x76910d(0x1cd))+parseInt(_0x76910d(0x210))*-parseInt(_0x76910d(0x1f5))+parseInt(_0x76910d(0x1f0));if(_0x5c9ae1===_0x3431fa)break;else _0x2de637['push'](_0x2de637['shift']());}catch(_0x2ad942){_0x2de637['push'](_0x2de637['shift']());}}}(_0x481b,0x999b0));import{UtilApplications}from'./UtilApplications.js';import{SharedConsts}from'../shared/SharedConsts.js';import{Config}from'./Config.js';import{DataConverter}from'./DataConverter.js';import{Vetools}from'./Vetools.js';class DataConverterPsionic{static async[_0x4d081b(0x1d4)](_0x24aed1,_0x3cf130){const _0x17c05e=_0x4d081b;return _0x3cf130=_0x3cf130||{},[await this[_0x17c05e(0x214)](_0x24aed1,_0x3cf130),await this['_getPsionicItems_pGetDisciplineFocusItem'](_0x24aed1,_0x3cf130),...await this[_0x17c05e(0x211)](_0x24aed1,_0x3cf130)][_0x17c05e(0x216)](Boolean);}static[_0x4d081b(0x1fd)](_0x3a2270,_0x4f4479){const _0xa7d136=_0x4d081b;_0x4f4479=_0x4f4479||{};const _0x45ea2e={[SharedConsts[_0xa7d136(0x1c7)]]:{'page':UrlUtil[_0xa7d136(0x21b)],'source':_0x3a2270[_0xa7d136(0x1e6)],'hash':UrlUtil[_0xa7d136(0x1db)][UrlUtil[_0xa7d136(0x21b)]](_0x3a2270)}};return _0x4f4479['isAddDataFlags']&&(_0x45ea2e[SharedConsts[_0xa7d136(0x1c7)]][_0xa7d136(0x1df)]=_0xa7d136(0x206),_0x45ea2e[SharedConsts[_0xa7d136(0x1c7)]][_0xa7d136(0x204)]=_0x4f4479[_0xa7d136(0x204)]),_0x45ea2e;}static async[_0x4d081b(0x214)](_0x17788d,_0x334813){const _0x33ddd3=_0x4d081b;if(_0x17788d[_0x33ddd3(0x1fe)]!=='T')return null;const _0xf9cc54=JSON[_0x33ddd3(0x1f1)](_0x17788d['entries']),_0x3f2f4e=this['_getPsionicItems_getActionTypeFromString'](_0xf9cc54);let _0x397552='',_0x6365b5=null;const _0x322427=[];_0xf9cc54['replace'](/\({@damage ([^}]+)}\)/g,(..._0x267275)=>_0x322427[_0x33ddd3(0x1ec)](_0x267275[0x1]));const _0x596fa4=/(?:^|[^(]){@dice ([^}]+)}(?:[^)]|$)/[_0x33ddd3(0x203)](_0xf9cc54);if(_0x322427['length']===0x3){if(_0x596fa4)_0x6365b5=_0x596fa4[0x1];else _0x6365b5=_0x322427[0x0];}if(_0x596fa4)_0x397552=_0x596fa4[0x1];else{if(_0x322427[_0x33ddd3(0x1f2)])_0x397552=_0x322427[0x0];}_0x397552&&_0x6365b5&&(_0x397552=_0x397552+_0x33ddd3(0x1d0)+_0x6365b5+_0x33ddd3(0x205)+_0x6365b5+'))\x20+\x20(max(sign(floor((@details.level\x20-\x2011)\x20/\x206)),\x200)\x20*\x20('+_0x6365b5+'))');const _0x3e3078=this['_getPsionicItems_getDamageTypeFromString'](_0xf9cc54),_0x19e6f0=_0x397552?[_0x397552,_0x3e3078][_0x33ddd3(0x216)](Boolean):null,_0x24533a=this['_getPsionicItems_getSaveFromString'](_0xf9cc54),_0x4bd8b8=await this['_pGetAdditionalData'](_0x17788d);return{'name':UtilApplications[_0x33ddd3(0x1e2)](DataConverter[_0x33ddd3(0x1d9)](_0x17788d,{'isActorItem':!![]})),'type':_0x33ddd3(0x20b),'data':{'source':DataConverter[_0x33ddd3(0x215)](_0x17788d),'description':{'value':Config['get']('importPsionic',_0x33ddd3(0x221))?DataConverter['getWithDescriptionPlugins'](()=>_0x33ddd3(0x1ca)+Renderer[_0x33ddd3(0x206)][_0x33ddd3(0x200)](_0x17788d,Renderer[_0x33ddd3(0x1c4)]())+'</div>'):'','chat':'','unidentified':''},'actionType':_0x3f2f4e,'target':{'value':0x0,'units':'','type':''},'range':{'value':null,'units':'','long':null},'activation':{'type':_0x3f2f4e,'cost':0x1,'condition':''},'duration':{'value':0x0,'units':''},'damage':{'parts':[_0x19e6f0]['filter'](Boolean),'versatile':''},'save':{'ability':_0x24533a,'dc':null},'ability':_0x33ddd3(0x1cc),'uses':{'value':0x0,'max':0x0,'per':''},'attackBonus':0x0,'chatFlavor':'','critical':null,'formula':'',..._0x4bd8b8},'img':'modules/'+SharedConsts[_0x33ddd3(0x1e1)]+'/media/icon/brain.svg','flags':{...this[_0x33ddd3(0x1fd)](_0x17788d,_0x334813)},'effects':[]};}static async[_0x4d081b(0x1e4)](_0x4321c7,_0x5cc1ca){const _0x539c46=_0x4d081b;if(_0x4321c7[_0x539c46(0x1fe)]!=='D')return null;const _0x5b55e1=await this['_pGetDisciplineFocusAdditionalData'](_0x4321c7);return{'name':UtilApplications['getCleanEntityName'](DataConverter[_0x539c46(0x1d9)](_0x4321c7,{'displayName':_0x4321c7[_0x539c46(0x1c9)]+'\x20-\x20Focus','isActorItem':!![]})),'type':_0x539c46(0x20b),'data':{'source':DataConverter[_0x539c46(0x215)](_0x4321c7),'description':{'value':Config[_0x539c46(0x1c4)](_0x539c46(0x20e),'isImportDescription')?DataConverter[_0x539c46(0x1f3)](()=>_0x539c46(0x1ca)+Renderer['get']()[_0x539c46(0x1ea)](!![])['render']({'entries':[_0x4321c7['focus']]})+'</div>'):'','chat':'','unidentified':''},'actionType':'bonus','target':{'value':0x0,'units':'','type':''},'range':{'value':null,'units':'','long':null},'activation':{'type':_0x539c46(0x218),'cost':0x1,'condition':_0x539c46(0x21d)},'duration':{'value':0x0,'units':''},'damage':{'parts':[],'versatile':''},'save':{'ability':null,'dc':null},'ability':_0x539c46(0x1cc),'uses':{'value':0x0,'max':0x0,'per':''},'attackBonus':0x0,'chatFlavor':'','critical':null,'formula':'',..._0x5b55e1},'img':'modules/'+SharedConsts[_0x539c46(0x1e1)]+_0x539c46(0x1f8),'flags':{...this[_0x539c46(0x1fd)](_0x4321c7,_0x5cc1ca)},'effects':[]};}static async[_0x4d081b(0x211)](_0x2dc26d,_0x19fbb1){const _0xc4cf20=_0x4d081b;if(_0x2dc26d[_0xc4cf20(0x1fe)]==='T')return[];const _0x48a82f=[];for(const _0x42db8d of _0x2dc26d['modes']){const _0x3d454b=await this['_getPsionicItems_pGetDisciplineActiveItem'](_0x2dc26d,_0x42db8d,_0x19fbb1);_0x48a82f[_0xc4cf20(0x1ec)](_0x3d454b);if(_0x42db8d[_0xc4cf20(0x1c1)])for(const _0x5cfb3a of _0x42db8d['submodes']){const _0x3c2780=await this['_getPsionicItems_pGetDisciplineActiveItem'](_0x2dc26d,_0x5cfb3a,_0x19fbb1,{'actionType':_0x3d454b[_0xc4cf20(0x1d6)][_0xc4cf20(0x1ed)]});_0x48a82f[_0xc4cf20(0x1ec)](_0x3c2780);}}return _0x48a82f;}static async['_getPsionicItems_pGetDisciplineActiveItem'](_0x52cd36,_0x491a4d,_0x297380,{actionType:_0x2b683b}={}){const _0x5e8614=_0x4d081b,_0x466061=_0x33c441=>_0x33c441[_0x5e8614(0x1d7)]?'\x20('+(_0x33c441['cost']['min']===_0x33c441[_0x5e8614(0x1d7)][_0x5e8614(0x201)]?_0x33c441[_0x5e8614(0x1d7)]['min']:_0x33c441[_0x5e8614(0x1d7)]['min']+'-'+_0x33c441['cost']['max'])+'psi)':'',_0x2cef72=UtilApplications[_0x5e8614(0x1e2)](DataConverter[_0x5e8614(0x1d9)](_0x52cd36,{'displayName':_0x52cd36[_0x5e8614(0x1c9)]+_0x5e8614(0x1ce)+_0x491a4d[_0x5e8614(0x1c9)],'isActorItem':!![]})),_0x581df4=_0x491a4d[_0x5e8614(0x1c1)]?Renderer[_0x5e8614(0x1c4)]()[_0x5e8614(0x1ea)](!![])['render']({'type':'list','style':_0x5e8614(0x207),'items':_0x491a4d['submodes'][_0x5e8614(0x20a)](_0x15112a=>({'type':_0x5e8614(0x20f),'name':''+_0x15112a['name']+_0x466061(_0x15112a),'entry':_0x15112a[_0x5e8614(0x21c)]['join']('<br>')}))},0x2):'',_0x7bd024=JSON[_0x5e8614(0x1f1)](_0x491a4d[_0x5e8614(0x21c)]),_0x3fd22f=this[_0x5e8614(0x1f6)](_0x7bd024);if(_0x3fd22f)_0x2b683b=_0x3fd22f;let _0x22f92e=null;const _0x429621=[],_0x980e77=this[_0x5e8614(0x1be)](_0x7bd024);_0x7bd024[_0x5e8614(0x208)](/{@(?:scaledice|scaledamage) ([^}]+)}/,(..._0x271589)=>{const _0x304275=_0x5e8614,[_0x47cd19,_0x407193,_0x5d7762]=_0x271589[0x1][_0x304275(0x1cf)]('|');_0x429621['push'](_0x47cd19),_0x22f92e=_0x5d7762;});!_0x429621[_0x5e8614(0x1f2)]&&_0x7bd024[_0x5e8614(0x208)](/{@damage ([^}]+)}/g,(..._0x3d29ff)=>_0x429621['push'](_0x3d29ff[0x1]));const _0x4efe88=_0x429621[_0x5e8614(0x20a)](_0x324249=>[_0x324249,_0x980e77]['filter'](Boolean)),_0x1ec12d=this[_0x5e8614(0x1cb)](_0x7bd024),_0x134d62=_0x491a4d[_0x5e8614(0x1d7)]?_0x491a4d[_0x5e8614(0x1d7)][_0x5e8614(0x1f4)]:_0x491a4d[_0x5e8614(0x1c1)]?MiscUtil['get'](_0x491a4d[_0x5e8614(0x1c1)][_0x5e8614(0x1de)](_0x5026d4=>_0x5026d4[_0x5e8614(0x1d7)]),_0x5e8614(0x1d7),'min')||0x1:0x1,_0x30ff1b=_0x491a4d[_0x5e8614(0x212)]?_0x491a4d[_0x5e8614(0x212)]['duration']:0x0,_0x20e7d2=(_0x491a4d[_0x5e8614(0x212)]?DataConverterPsionic[_0x5e8614(0x220)][_0x491a4d[_0x5e8614(0x212)][_0x5e8614(0x1ee)]]:'')||'',_0x2db7ab=await this[_0x5e8614(0x1e8)]({'name':_0x2cef72,'source':_0x52cd36[_0x5e8614(0x1e6)],'psionicName':_0x52cd36[_0x5e8614(0x1c9)],'psionicSource':_0x52cd36[_0x5e8614(0x1e6)]});return{'name':_0x2cef72,'type':_0x5e8614(0x20b),'data':{'source':DataConverter[_0x5e8614(0x215)](_0x52cd36),'description':{'value':Config['get'](_0x5e8614(0x20e),_0x5e8614(0x221))?DataConverter[_0x5e8614(0x1f3)](()=>_0x5e8614(0x222)+Renderer[_0x5e8614(0x1c4)]()['setFirstSection'](!![])[_0x5e8614(0x1d2)]({'entries':_0x491a4d['entries']},0x2)+_0x5e8614(0x1fc)+_0x581df4+_0x5e8614(0x1c5)):'','chat':'','unidentified':''},'actionType':_0x2b683b,'consume':{'type':_0x5e8614(0x1f7),'target':_0x5e8614(0x1e3),'amount':_0x134d62},'target':{'value':0x0,'units':'','type':''},'range':{'value':null,'units':'','long':null},'activation':{'type':_0x2b683b,'cost':0x1,'condition':''},'duration':{'value':_0x30ff1b,'units':_0x20e7d2},'damage':{'parts':_0x4efe88,'versatile':''},'save':{'ability':_0x1ec12d,'dc':null},'ability':_0x5e8614(0x1cc),'uses':{'value':0x0,'max':0x0,'per':''},'attackBonus':0x0,'chatFlavor':'','formula':'',..._0x2db7ab},'img':_0x5e8614(0x1c0)+SharedConsts[_0x5e8614(0x1e1)]+'/media/icon/brain.svg','flags':{...this[_0x5e8614(0x1fd)](_0x52cd36,_0x297380)},'effects':[]};}static[_0x4d081b(0x1f6)](_0x2880cb){const _0x58d599=_0x4d081b,_0x142cd9=/bonus action/i['test'](_0x2880cb),_0x519cc0=/as an action|using your action/i[_0x58d599(0x1eb)](_0x2880cb);return _0x142cd9?_0x58d599(0x218):_0x519cc0?_0x58d599(0x1c8):'';}static[_0x4d081b(0x1be)](_0x21ba7e){const _0x15c204=_0x4d081b,_0x2d2079=Parser['DMG_TYPES'][_0x15c204(0x20a)](_0x4bdae9=>new RegExp('('+_0x4bdae9+_0x15c204(0x1c2),'ig')[_0x15c204(0x203)](_0x21ba7e)),_0x40ad6b=_0x2d2079['filter'](Boolean)[_0x15c204(0x20a)](_0x484c39=>_0x484c39[0x1]['toLowerCase']());return _0x40ad6b[0x0]||null;}static[_0x4d081b(0x1cb)](_0x391911){const _0x18d01d=_0x4d081b,_0x59ed0c=Object[_0x18d01d(0x20d)](Parser[_0x18d01d(0x21a)])[_0x18d01d(0x20a)](_0x15776e=>new RegExp('('+_0x15776e+')\x20saving\x20throw','ig')[_0x18d01d(0x203)](_0x391911)),_0x5e1e76=_0x59ed0c[_0x18d01d(0x216)](Boolean)[_0x18d01d(0x20a)](_0x21b8be=>_0x21b8be[0x1][_0x18d01d(0x217)](0x0,0x3)[_0x18d01d(0x1c6)]());return _0x5e1e76[0x0]||null;}static async['pGetPsionicItem'](_0x4c5612,_0x1638f7){const _0x5a0705=_0x4d081b;_0x1638f7=_0x1638f7||{};const _0x3be03d=Renderer['psionic'][_0x5a0705(0x1d8)](_0x4c5612),_0x60912a=_0x5a0705(0x1dc)+_0x3be03d+'</i></p>'+Renderer[_0x5a0705(0x206)]['getBodyText'](_0x4c5612,Renderer[_0x5a0705(0x1c4)]()[_0x5a0705(0x1ea)](!![])),_0x22f6b1=await this[_0x5a0705(0x21f)](_0x4c5612),_0x2e36e0={'name':UtilApplications['getCleanEntityName'](DataConverter[_0x5a0705(0x1d9)](_0x4c5612)),'type':_0x5a0705(0x20b),'data':{'description':{'value':Config[_0x5a0705(0x1c4)](_0x5a0705(0x20e),_0x5a0705(0x221))?DataConverter[_0x5a0705(0x1f3)](()=>'<div>'+_0x60912a+_0x5a0705(0x1dd)):'','chat':'','unidentified':''},'source':DataConverter[_0x5a0705(0x215)](_0x4c5612),'damage':{'parts':[]},'activation':{'type':'','cost':0x0,'condition':''},'duration':{'value':null,'units':''},'target':{'value':null,'units':'','type':''},'range':{'value':null,'long':null,'units':''},'uses':{'value':0x0,'max':0x0,'per':null},'ability':null,'actionType':'','attackBonus':0x0,'chatFlavor':'','critical':null,'formula':'','save':{'ability':'','dc':null},'requirements':'','recharge':{'value':null,'charged':![]},..._0x22f6b1},'flags':{...this[_0x5a0705(0x1fd)](_0x4c5612,_0x1638f7)},'effects':[],'img':'modules/'+SharedConsts[_0x5a0705(0x1e1)]+_0x5a0705(0x1f8)};if(_0x1638f7[_0x5a0705(0x1bf)])_0x2e36e0[_0x5a0705(0x213)]={'default':Config[_0x5a0705(0x1c4)](_0x5a0705(0x20e),'permissions')};return _0x2e36e0;}static async[_0x4d081b(0x21f)](_0x2f87ef){const _0x2ac272=_0x4d081b;return DataConverter[_0x2ac272(0x1d5)](_0x2f87ef,{'propBrew':'foundryPsionic','fnLoadJson':Vetools['pGetPsionicsSideData'],'propJson':_0x2ac272(0x206)});}static async[_0x4d081b(0x1c3)](_0x5bceb2){const _0x42c7b9=_0x4d081b;return DataConverter[_0x42c7b9(0x1d5)](_0x5bceb2,{'propBrew':_0x42c7b9(0x1ef),'fnLoadJson':Vetools[_0x42c7b9(0x1d1)],'propJson':_0x42c7b9(0x1da)});}static async[_0x4d081b(0x1e8)](_0x401ad5){const _0x255efc=_0x4d081b;return DataConverter['pGetAdditionalData_'](_0x401ad5,{'propBrew':_0x255efc(0x209),'fnLoadJson':Vetools[_0x255efc(0x1d1)],'propJson':_0x255efc(0x1fb),'fnMatch':(_0x4ae204,_0x57a3d7)=>_0x57a3d7['name']===_0x4ae204[_0x255efc(0x1c9)]&&_0x57a3d7[_0x255efc(0x1e6)]===_0x4ae204[_0x255efc(0x1e6)]&&_0x57a3d7[_0x255efc(0x219)]===_0x4ae204['psionicName']&&_0x57a3d7[_0x255efc(0x1e0)]===_0x4ae204[_0x255efc(0x1e0)]});}}DataConverterPsionic['_PSI_DURATION_MAP']={'min':_0x4d081b(0x202),'hr':_0x4d081b(0x1f9),'rnd':_0x4d081b(0x1e9)};export{DataConverterPsionic};
+import {UtilApplications} from "./UtilApplications.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Config} from "./Config.js";
+import {DataConverter} from "./DataConverter.js";
+import {Vetools} from "./Vetools.js";
+import {UtilDataConverter} from "./UtilDataConverter.js";
+
+class DataConverterPsionic {
+	/**
+	 * @param psi
+	 * @param [opts]
+	 * @param [opts.filterValues]
+	 */
+	static async pGetPsionicItems (psi, opts) {
+		opts = opts || {};
+		return [
+			await this._getPsionicItems_pGetTalentItem(psi, opts),
+			await this._getPsionicItems_pGetDisciplineFocusItem(psi, opts),
+			...(await this._getPsionicItems_pGetDisciplineActiveItems(psi, opts)),
+		].filter(Boolean);
+	}
+
+	static _getPsionicFlags (psi, opts) {
+		opts = opts || {};
+
+		const out = {
+			[SharedConsts.MODULE_NAME_FAKE]: {
+				page: UrlUtil.PG_PSIONICS,
+				source: psi.source,
+				hash: UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_PSIONICS](psi),
+			},
+		};
+
+		if (opts.isAddDataFlags) {
+			out[SharedConsts.MODULE_NAME_FAKE].propDroppable = "psionic";
+			out[SharedConsts.MODULE_NAME_FAKE].filterValues = opts.filterValues;
+		}
+
+		return out;
+	}
+
+	static async _getPsionicItems_pGetTalentItem (psi, opts) {
+		if (psi.type !== "T") return null;
+
+		const strEntries = JSON.stringify(psi.entries);
+		const actionType = this._getPsionicItems_getActionTypeFromString(strEntries);
+
+		let damageDice = "";
+		let cantripScaling = null;
+		const diceTiers = [];
+		// Find cantrip scaling values, which are shown in brackets
+		strEntries.replace(/\({@damage ([^}]+)}\)/g, (...m) => diceTiers.push(m[1]));
+		// Find dice _not_ in brackets
+		const baseVal = /(?:^|[^(]){@dice ([^}]+)}(?:[^)]|$)/.exec(strEntries);
+		// Cantrips scale at levels 5, 11, and 17
+		if (diceTiers.length === 3) {
+			if (baseVal) cantripScaling = baseVal[1];
+			// failing that, just use the first bracketed value
+			else cantripScaling = diceTiers[0];
+		}
+		if (baseVal) damageDice = baseVal[1];
+		else if (diceTiers.length) damageDice = diceTiers[0];
+
+		if (!Config.get("importPsionic", "isImportAsSpell")) {
+			// Manually add cantrip scaling, since we don't use spells
+			if (damageDice && cantripScaling) {
+				damageDice = `${damageDice} + (max(sign(floor((@details.level + 1) / 6)), 0) * (${cantripScaling})) + (max(sign(floor((@details.level - 5) / 6)), 0) * (${cantripScaling})) + (max(sign(floor((@details.level - 11) / 6)), 0) * (${cantripScaling}))`;
+			}
+		}
+
+		const damageType = this._getPsionicItems_getDamageTypeFromString(strEntries);
+		const damage = damageDice ? [damageDice, damageType].filter(Boolean) : null;
+		const saveAbility = this._getPsionicItems_getSaveFromString(strEntries);
+
+		const dataSpellFeature = Config.get("importPsionic", "isImportAsSpell")
+			? {
+				level: 0,
+				school: "evo",
+				components: {value: "", vocal: false, somatic: false, material: false, ritual: false, concentration: false},
+				materials: {value: "", consumed: false, cost: 0, supply: 0},
+				scaling: {
+					mode: cantripScaling ? "cantrip" : "none",
+					formula: cantripScaling || "",
+				},
+				preparation: {mode: "prepared", prepared: true},
+			}
+			: {};
+
+		const additionalData = await this._pGetAdditionalData(psi);
+		const additionalFlags = await this._pGetAdditionalFlags(psi);
+
+		return {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(psi, {isActorItem: true})),
+			type: Config.get("importPsionic", "isImportAsSpell") ? "spell" : "feat",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(psi),
+				description: {
+					value: Config.get("importPsionic", "isImportDescription")
+						? await UtilDataConverter.pGetWithDescriptionPlugins(() => `<div>${Renderer.psionic.getBodyText(psi, Renderer.get())}</div>`)
+						: "",
+					chat: "",
+					unidentified: "",
+				},
+
+				...dataSpellFeature,
+
+				actionType: actionType,
+				target: {value: 0, units: "", type: ""},
+				range: {value: null, units: "", long: null},
+				activation: {type: actionType, cost: 1, condition: ""},
+				duration: {value: 0, units: ""},
+				damage: {
+					parts: [damage].filter(Boolean),
+					versatile: "",
+				},
+				save: {ability: saveAbility, dc: null},
+				ability: "int",
+				uses: {value: 0, max: 0, per: ""},
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				formula: "",
+
+				...additionalData,
+			},
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				`modules/${SharedConsts.MODULE_NAME}/media/icon/brain.svg`,
+			),
+			flags: {
+				...this._getPsionicFlags(psi, opts),
+				...additionalFlags,
+			},
+			effects: [],
+		};
+	}
+
+	static async _getPsionicItems_pGetDisciplineFocusItem (psi, opts) {
+		if (psi.type !== "D") return null;
+
+		const dataSpellFeature = Config.get("importPsionic", "isImportAsSpell")
+			? {
+				level: 0,
+				school: "evo",
+				components: {value: "", vocal: false, somatic: false, material: false, ritual: false, concentration: false},
+				materials: {value: "", consumed: false, cost: 0, supply: 0},
+				scaling: {mode: "none", formula: ""},
+				preparation: {mode: "prepared", prepared: true},
+			}
+			: {};
+
+		const additionalData = await this._pGetDisciplineFocusAdditionalData(psi);
+		const additionalFlags = await this._pGetDisciplineFocusAdditionalFlags(psi);
+
+		return {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(psi, {displayName: `${psi.name} - Focus`, isActorItem: true})),
+			type: Config.get("importPsionic", "isImportAsSpell") ? "spell" : "feat",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(psi),
+				description: {
+					value: Config.get("importPsionic", "isImportDescription")
+						? await UtilDataConverter.pGetWithDescriptionPlugins(() => `<div>${Renderer.get().setFirstSection(true).render({entries: [psi.focus]})}</div>`)
+						: "",
+					chat: "",
+					unidentified: "",
+				},
+
+				...dataSpellFeature,
+
+				actionType: "bonus",
+				target: {value: 0, units: "", type: ""},
+				range: {value: null, units: "", long: null},
+				activation: {type: "bonus", cost: 1, condition: "(Only one focus may be active at a time)"},
+				duration: {value: 0, units: ""},
+				damage: {parts: [], versatile: ""},
+				save: {ability: null, dc: null},
+				ability: "int",
+				uses: {value: 0, max: 0, per: ""},
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				formula: "",
+
+				...additionalData,
+			},
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				`modules/${SharedConsts.MODULE_NAME}/media/icon/brain.svg`,
+			),
+			flags: {
+				...this._getPsionicFlags(psi, opts),
+				...additionalFlags,
+			},
+			effects: [],
+		};
+	}
+
+	static async _getPsionicItems_pGetDisciplineActiveItems (psi, opts) {
+		if (psi.type === "T") return [];
+
+		const out = [];
+		for (const psiMode of psi.modes) {
+			const subFeature = await this._getPsionicItems_pGetDisciplineActiveItem(psi, psiMode, opts);
+			out.push(subFeature);
+
+			if (psiMode.submodes) {
+				for (const psiSubMode of psiMode.submodes) {
+					const subSubFeature = await this._getPsionicItems_pGetDisciplineActiveItem(psi, psiSubMode, opts, {actionType: subFeature.data.actionType});
+					out.push(subSubFeature);
+				}
+			}
+		}
+
+		return out;
+	}
+
+	static async _getPsionicItems_pGetDisciplineActiveItem (psi, psiMode, opts, {actionType} = {}) {
+		const getCostPart = (it) => it.cost ? ` (${it.cost.min === it.cost.max ? it.cost.min : `${it.cost.min}-${it.cost.max}`}psi)` : "";
+
+		const name = UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(psi, {displayName: `${psi.name} - ${psiMode.name}`, isActorItem: true}));
+
+		const submodePart = psiMode.submodes
+			? Renderer.get().setFirstSection(true).render(
+				{
+					type: "list",
+					style: "list-hang-notitle",
+					items: psiMode.submodes.map(it => ({
+						type: "item",
+						name: `${it.name}${getCostPart(it)}`,
+						entry: it.entries.join("<br>"),
+					})),
+				},
+				2)
+			: "";
+
+		const strEntries = JSON.stringify(psiMode.entries);
+		const foundActionType = this._getPsionicItems_getActionTypeFromString(strEntries);
+		if (foundActionType) actionType = foundActionType;
+
+		let scaling = null;
+		const damageList = [];
+		// Just assume that whatever the first damage type turns out to be is the damage type for everything
+		const damageType = this._getPsionicItems_getDamageTypeFromString(strEntries);
+		// Assume the first scaling dice is the only scaling dice
+		strEntries.replace(/{@(?:scaledice|scaledamage) ([^}]+)}/, (...m) => {
+			const [baseDamage, _, addPerProgress] = m[1].split("|");
+			damageList.push(baseDamage);
+			scaling = addPerProgress;
+		});
+
+		// Prefer damage values from @scaledice/@scaledamage, as most psionics have 1-7 point damage scaling
+		if (!damageList.length) {
+			strEntries.replace(/{@damage ([^}]+)}/g, (...m) => damageList.push(m[1]));
+		}
+
+		const damageParts = damageList.map(dmg => [dmg, damageType].filter(Boolean));
+		const saveAbility = this._getPsionicItems_getSaveFromString(strEntries);
+
+		const level = psiMode.cost ? psiMode.cost.min : psiMode.submodes ? MiscUtil.get(psiMode.submodes.find(it => it.cost), "cost", "min") || 1 : 1;
+
+		const durationVal = psiMode.concentration ? psiMode.concentration.duration : 0;
+		const durationUnit = (psiMode.concentration ? DataConverterPsionic._PSI_DURATION_MAP[psiMode.concentration.unit] : "") || "";
+
+		const dataSpellFeature = Config.get("importPsionic", "isImportAsSpell")
+			? {
+				level: level,
+				school: "evo",
+				components: {value: "", vocal: false, somatic: false, material: false, ritual: false, concentration: !!psiMode.concentration},
+				materials: {value: "", consumed: false, cost: 0, supply: 0},
+				scaling: {mode: scaling ? "level" : "none", formula: scaling || ""},
+				critical: {threshold: null, damage: ""},
+				preparation: {mode: "prepared", prepared: true},
+			}
+			: {
+				consume: {type: "attribute", target: Config.get("importPsionic", "psiPointsResource"), amount: level},
+			};
+
+		const additionalData = await this._pGetDisciplineActiveAdditionalData({name, source: psi.source, psionicName: psi.name, psionicSource: psi.source});
+		const additionalFlags = await this._pGetDisciplineActiveAdditionalFlags({name, source: psi.source, psionicName: psi.name, psionicSource: psi.source});
+
+		return {
+			name,
+			type: Config.get("importPsionic", "isImportAsSpell") ? "spell" : "feat",
+			data: {
+				source: UtilDataConverter.getSourceWithPagePart(psi),
+				description: {
+					value: Config.get("importPsionic", "isImportDescription")
+						? await UtilDataConverter.pGetWithDescriptionPlugins(() => `<div>
+							${Renderer.get().setFirstSection(true).render({entries: psiMode.entries}, 2)}
+							${submodePart}
+						</div>`)
+						: "",
+					chat: "",
+					unidentified: "",
+				},
+
+				...dataSpellFeature,
+
+				actionType: actionType,
+				target: {value: 0, units: "", type: ""},
+				range: {value: null, units: "", long: null},
+				activation: {type: actionType, cost: 1, condition: ""},
+				duration: {value: durationVal, units: durationUnit},
+				damage: {parts: damageParts, versatile: ""},
+				save: {ability: saveAbility, dc: null},
+				ability: "int",
+				uses: {value: 0, max: 0, per: ""},
+				attackBonus: null,
+				chatFlavor: "",
+				formula: "",
+
+				...additionalData,
+			},
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				`modules/${SharedConsts.MODULE_NAME}/media/icon/brain.svg`,
+			),
+			flags: {
+				...this._getPsionicFlags(psi, opts),
+				...additionalFlags,
+			},
+			effects: [],
+		};
+	}
+
+	// region psionic utils
+	static _getPsionicItems_getActionTypeFromString (strEntries) {
+		const isBonusAction = /bonus action/i.test(strEntries);
+		const isAction = /as an action|using your action/i.test(strEntries);
+		return isBonusAction ? "bonus" : isAction ? "action" : "";
+	}
+
+	static _getPsionicItems_getDamageTypeFromString (strEntries) {
+		const msDamageTypes = Parser.DMG_TYPES.map(typ => (new RegExp(`(${typ})[^.]+damage`, "ig")).exec(strEntries));
+		const damageTypes = msDamageTypes.filter(Boolean).map(it => it[1].toLowerCase());
+		return damageTypes[0] || null;
+	}
+
+	static _getPsionicItems_getSaveFromString (strEntries) {
+		const msSaves = Object.values(Parser.ATB_ABV_TO_FULL).map(atb => (new RegExp(`(${atb}) saving throw`, "ig")).exec(strEntries));
+		const saves = msSaves.filter(Boolean).map(it => it[1].slice(0, 3).toLowerCase());
+		return saves[0] || null;
+	}
+	// endregion
+
+	// TODO(Future) expand/replace this as Foundry allows
+	/**
+	 * @param psi
+	 * @param [opts] Options object.
+	 * @param [opts.isAddPermission]
+	 * @param [opts.defaultPermission]
+	 */
+	static async pGetPsionicItem (psi, opts) {
+		opts = opts || {};
+
+		const typeOrderStr = Renderer.psionic.getTypeOrderString(psi);
+		const desc = `<p><i>${typeOrderStr}</i></p>${Renderer.psionic.getBodyText(psi, Renderer.get().setFirstSection(true))}`;
+
+		const additionalData = await this._pGetAdditionalData(psi);
+		const additionalFlags = await this._pGetAdditionalFlags(psi);
+
+		const out = {
+			name: UtilApplications.getCleanEntityName(UtilDataConverter.getNameWithSourcePart(psi)),
+			type: "feat",
+			data: {
+				description: {
+					value: Config.get("importPsionic", "isImportDescription")
+						? await UtilDataConverter.pGetWithDescriptionPlugins(() => `<div>${desc}</div>`)
+						: "",
+					chat: "",
+					unidentified: "",
+				},
+				source: UtilDataConverter.getSourceWithPagePart(psi),
+
+				// region unused
+				damage: {parts: []},
+				activation: {type: "", cost: 0, condition: ""},
+				duration: {value: null, units: ""},
+				target: {value: null, units: "", type: ""},
+				range: {value: null, long: null, units: ""},
+				uses: {value: 0, max: 0, per: null},
+				ability: null,
+				actionType: "",
+				attackBonus: null,
+				chatFlavor: "",
+				critical: {threshold: null, damage: ""},
+				formula: "",
+				save: {ability: "", dc: null},
+				requirements: "",
+				recharge: {value: null, charged: false},
+				// endregion
+
+				...additionalData,
+			},
+			flags: {
+				...this._getPsionicFlags(psi, opts),
+				...additionalFlags,
+			},
+			effects: [],
+			img: await Vetools.pOptionallySaveImageToServerAndGetUrl(
+				`modules/${SharedConsts.MODULE_NAME}/media/icon/brain.svg`,
+			),
+		};
+
+		if (opts.defaultPermission != null) out.permission = {default: opts.defaultPermission};
+		else if (opts.isAddPermission) out.permission = {default: Config.get("importPsionic", "permissions")};
+
+		return out;
+	}
+
+	static async _pGetAdditionalData (psi) {
+		return DataConverter.pGetAdditionalData_(psi, this._SIDE_DATA_OPTS);
+	}
+
+	static async _pGetAdditionalFlags (psi) {
+		return DataConverter.pGetAdditionalFlags_(psi, this._SIDE_DATA_OPTS);
+	}
+
+	static async _pGetDisciplineFocusAdditionalData (psi) {
+		return DataConverter.pGetAdditionalData_(psi, this._SIDE_DATA_DISCIPLINE_FOCUS_OPTS);
+	}
+
+	static async _pGetDisciplineFocusAdditionalFlags (psi) {
+		return DataConverter.pGetAdditionalFlags_(psi, this._SIDE_DATA_DISCIPLINE_FOCUS_OPTS);
+	}
+
+	static async _pGetDisciplineActiveAdditionalData (psi) {
+		return DataConverter.pGetAdditionalData_(psi, this._SIDE_DATA_DISCIPLINE_ACTIVE_OPTS);
+	}
+
+	static async _pGetDisciplineActiveAdditionalFlags (psi) {
+		return DataConverter.pGetAdditionalData_(psi, this._SIDE_DATA_DISCIPLINE_ACTIVE_OPTS);
+	}
+
+	static get _SIDE_DATA_OPTS () {
+		return {propBrew: "foundryPsionic", fnLoadJson: Vetools.pGetPsionicsSideData, propJson: "psionic"};
+	}
+
+	static get _SIDE_DATA_DISCIPLINE_FOCUS_OPTS () {
+		return {propBrew: "foundryPsionicDisciplineFocus", fnLoadJson: Vetools.pGetPsionicsSideData, propJson: "psionicDisciplineFocus"};
+	}
+
+	static get _SIDE_DATA_DISCIPLINE_ACTIVE_OPTS () {
+		return {propBrew: "foundryPsionicDisciplineActive", fnLoadJson: Vetools.pGetPsionicsSideData, propJson: "psionicDisciplineActive", fnMatch: (ent, entAdd) => entAdd.name === ent.name && entAdd.source === ent.source && entAdd.psionicName === ent.psionicName && entAdd.psionicSource === ent.psionicSource};
+	}
+}
+
+DataConverterPsionic._PSI_DURATION_MAP = {
+	"min": "minute",
+	"hr": "hour",
+	"rnd": "round",
+};
+
+export {DataConverterPsionic};

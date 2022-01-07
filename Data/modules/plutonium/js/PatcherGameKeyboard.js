@@ -1,1 +1,82 @@
-const _0x5f07=['toggle','blur','isFixEscapeKey','LIBWRAPPER_MODE_MIXED','_onEscape','has','757997dWbMyA','keys','render','preventDefault','map','style','target','context','close','entries','init','TEXTAREA','ascSort','children','releaseAll','closeAllMenus','1743200dnTbSL','_controlled','zIndex','settings','filter','85517PjFNkD','isEscapeable','1733757cnioMb','values','INPUT','MODULE_NAME','Could\x20not\x20determine\x20z-index\x20for\x20app\x20','1520873kPimlc','saveFog','register','sight','1788482EPROru','length','900124QcwGJn','_plut_IsPopout','1EImJYb','z-index','game.keyboard._onEscape','15vrIDCP','_MODAL_STACK','1WWCRMX','sort','_ELEMENTS_WITH_FOCUS','element','ready','windows','bind','activeLayer','menu'];const _0x4aed=function(_0x5cfd2e,_0x45c173){_0x5cfd2e=_0x5cfd2e-0xbf;let _0x5f071f=_0x5f07[_0x5cfd2e];return _0x5f071f;};const _0x3f3559=_0x4aed;(function(_0x51220c,_0x26ca26){const _0x506d37=_0x4aed;while(!![]){try{const _0x58e88e=-parseInt(_0x506d37(0xed))+-parseInt(_0x506d37(0xe6))+parseInt(_0x506d37(0xf6))+-parseInt(_0x506d37(0xc2))*-parseInt(_0x506d37(0xd6))+parseInt(_0x506d37(0xc7))*parseInt(_0x506d37(0xf2))+-parseInt(_0x506d37(0xc0))+parseInt(_0x506d37(0xc5))*parseInt(_0x506d37(0xeb));if(_0x58e88e===_0x26ca26)break;else _0x51220c['push'](_0x51220c['shift']());}catch(_0x20b525){_0x51220c['push'](_0x51220c['shift']());}}}(_0x5f07,0xed8e2));import{libWrapper,UtilLibWrapper}from'./PatcherLibWrapper.js';import{SharedConsts}from'../shared/SharedConsts.js';import{Config}from'./Config.js';import{Menu}from'./Menu.js';class Patcher_GameKeyboard{static[_0x3f3559(0xe0)](){const _0x509b2e=_0x3f3559;ui[_0x509b2e(0xe9)][_0x509b2e(0xd8)](),libWrapper[_0x509b2e(0xf4)](SharedConsts[_0x509b2e(0xf0)],_0x509b2e(0xc4),function(_0x30fc3d,_0x54123e,_0xca54c9,_0x43b1a5){const _0x366cbc=_0x509b2e;if(!Config['get']('ui',_0x366cbc(0xd2))){if(UiUtil[_0x366cbc(0xc6)]&&UiUtil['_MODAL_STACK'][_0x366cbc(0xbf)])return;return _0x30fc3d(_0x54123e,_0xca54c9,_0x43b1a5);}return Patcher_GameKeyboard[_0x366cbc(0xd4)][_0x366cbc(0xcd)](this)(_0x54123e,_0xca54c9,_0x43b1a5);},UtilLibWrapper[_0x509b2e(0xd3)]);}static[_0x3f3559(0xd4)](_0x578e43,_0x46729a,_0x58181b){const _0x31e8a0=_0x3f3559;if(UiUtil[_0x31e8a0(0xc6)]&&UiUtil['_MODAL_STACK'][_0x31e8a0(0xbf)])return;if(_0x46729a)return;if(ui['menu'][_0x31e8a0(0xca)]&&ui['menu'][_0x31e8a0(0xca)]?.[0x0]?.['style']?.['display']===''){ui[_0x31e8a0(0xcf)][_0x31e8a0(0xd0)]();return;}if(_0x58181b['hasFocus']&&Patcher_GameKeyboard[_0x31e8a0(0xc9)][_0x31e8a0(0xd5)](_0x578e43['target']['nodeName'])){_0x578e43[_0x31e8a0(0xdc)][_0x31e8a0(0xd1)]();return;}if(canvas[_0x31e8a0(0xcb)])canvas[_0x31e8a0(0xf5)][_0x31e8a0(0xf3)]();if(ui['context']&&ui[_0x31e8a0(0xdd)][_0x31e8a0(0xcf)][_0x31e8a0(0xbf)])ui[_0x31e8a0(0xdd)]['close']();else{if(Menu[_0x31e8a0(0xe5)]())return;else{if(canvas[_0x31e8a0(0xcb)]&&Object[_0x31e8a0(0xd7)](canvas['activeLayer'][_0x31e8a0(0xe7)])[_0x31e8a0(0xbf)]){_0x578e43[_0x31e8a0(0xd9)]();if(!canvas[_0x31e8a0(0xce)]['preview']?.[_0x31e8a0(0xe3)][_0x31e8a0(0xbf)])canvas[_0x31e8a0(0xce)][_0x31e8a0(0xe4)]();}else{if(Object[_0x31e8a0(0xee)](ui['windows'])[_0x31e8a0(0xea)](_0x3f1704=>(_0x3f1704[_0x31e8a0(0xec)]==null||_0x3f1704[_0x31e8a0(0xec)]===!![])&&!_0x3f1704[_0x31e8a0(0xc1)])[_0x31e8a0(0xbf)]){const _0x47432a=Object[_0x31e8a0(0xdf)](ui[_0x31e8a0(0xcc)])[_0x31e8a0(0xea)](([_0x45c768,_0x349e4])=>(_0x349e4[_0x31e8a0(0xec)]==null||_0x349e4[_0x31e8a0(0xec)]===!![])&&!_0x349e4['_plut_IsPopout'])[_0x31e8a0(0xda)](([_0x12e9cc,_0x573956])=>{const _0x16fc8d=_0x31e8a0,_0x254979=Number(((_0x573956['element'][0x0]||{})[_0x16fc8d(0xdb)]||{})[_0x16fc8d(0xc3)]||-0x1);if(isNaN(_0x254979)||!~_0x254979)console['warn'](_0x16fc8d(0xf1)+_0x12e9cc);return{'appId':_0x12e9cc,'zIndex':isNaN(_0x254979)?-0x1:_0x254979};})[_0x31e8a0(0xc8)]((_0x2ac8d0,_0x55e9ed)=>SortUtil[_0x31e8a0(0xe2)](_0x55e9ed[_0x31e8a0(0xe8)],_0x2ac8d0[_0x31e8a0(0xe8)]));ui['windows'][_0x47432a[0x0]['appId']][_0x31e8a0(0xde)]();}else ui['menu'][_0x31e8a0(0xd0)]();}}}}}Patcher_GameKeyboard[_0x3f3559(0xc9)]=new Set([_0x3f3559(0xef),_0x3f3559(0xe1)]);export{Patcher_GameKeyboard};
+import {libWrapper, UtilLibWrapper} from "./PatcherLibWrapper.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Config} from "./Config.js";
+import {Menu} from "./Menu.js";
+import {UtilApplications} from "./UtilApplications.js";
+
+class Patcher_GameKeyboard {
+	static init () {
+		libWrapper.register(
+			SharedConsts.MODULE_NAME,
+			"game.keyboard._onEscape",
+			function (fn, event, up, modifiers) {
+				// Add handling for 5etools modals in either case
+				if (!Config.get("ui", "isFixEscapeKey")) {
+					if (UiUtil._MODAL_STACK && UiUtil._MODAL_STACK.length) return;
+					return fn(event, up, modifiers);
+				}
+
+				return Patcher_GameKeyboard._onEscape.bind(this)(event, up, modifiers);
+			},
+			UtilLibWrapper.LIBWRAPPER_MODE_MIXED,
+		);
+	}
+
+	static _onEscape (event, up, modifiers) {
+		if (UiUtil._MODAL_STACK && UiUtil._MODAL_STACK.length) return;
+
+		/* eslint-disable */
+		if (up) return;
+
+		// Plutonium: If the game menu is open, close it
+		if (ui.menu.element && ui.menu.element?.[0]?.style?.display === "") {
+			ui.menu.toggle();
+			return;
+		}
+
+		// Plutonium: Make ESC de-focus input fields
+		if (modifiers.hasFocus && Patcher_GameKeyboard._ELEMENTS_WITH_FOCUS.has(event.target.nodeName)) {
+			event.target.blur();
+			return;
+		}
+
+		// Save fog of war if there are pending changes
+		if (canvas.ready) canvas.sight.saveFog();
+
+		// Case 1 - dismiss an open context menu
+		if (ui.context && ui.context.menu.length) ui.context.close();
+
+		// Plutonium: dismiss an open context menu
+		else if (Menu.closeAllMenus()) return;
+
+		// Case 2 - release controlled objects (if not in a preview)
+		else if (canvas.ready && Object.keys(canvas.activeLayer._controlled).length) {
+			event.preventDefault();
+			if (!canvas.activeLayer.preview?.children.length) canvas.activeLayer.releaseAll();
+		}
+
+		// Case 3 - close open UI windows
+		else if (Object.values(ui.windows).filter(app => (app.isEscapeable == null || app.isEscapeable === true) && !app._plut_popoutWindow).length) {
+			const metas = Object.entries(ui.windows)
+				.filter(([appId, app]) => (app.isEscapeable == null || app.isEscapeable === true) && !app._plut_popoutWindow)
+				.map(([appId, app]) => {
+					const zIndex = Number((((UtilApplications.$getAppElement(app)[0] || {}).style || {})["z-index"] || -1));
+					if (isNaN(zIndex) || !~zIndex) console.warn(`Could not determine z-index for app ${appId}`);
+					return {
+						appId,
+						zIndex: isNaN(zIndex) ? -1 : zIndex
+					}
+				})
+				.sort((a, b) => SortUtil.ascSort(b.zIndex, a.zIndex));
+
+			ui.windows[metas[0].appId].close();
+		}
+
+		// Case 4 - toggle the main menu
+		else ui.menu.toggle();
+		/* eslint-enable */
+	}
+}
+Patcher_GameKeyboard._ELEMENTS_WITH_FOCUS = new Set(["INPUT", "TEXTAREA"]);
+
+export {Patcher_GameKeyboard};

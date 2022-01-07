@@ -37,10 +37,16 @@ Drag Ruler will work with all Foundry VTT game systems. However some game system
 
 The game systems that offer Drag Ruler integration are:
 - Cypher System (starting with version 1.13.0)
+- GURPS 4th Edition Game Aid (Unofficial) (starting with version 0.9.1)
 - Ironclaw Second Edition (starting with version 0.2.2)
+- Lancer (via the module [Lancer Speed Provider](https://foundryvtt.com/packages/lancer-speed-provider))
 - Pathfinder 1 (starting with version 0.77.3)
 - Pathfinder 2e (via the module [PF2E Drag Ruler Integration](https://foundryvtt.com/packages/pf2e-dragruler/))
+- Shadowrun 5th Edition (via the module [Drag Ruler Integration for Shadowrun 5E](https://foundryvtt.com/packages/drag-ruler-integration-for-shadowrun-5e))
+- Starfinder (via the module [Starfinder Drag Ruler Integration](https://foundryvtt.com/packages/starfinder-drag-ruler))
+- Stargate RPG (starting with version 1.6.0)
 - Tagmar RPG (starting with version 1.1.4)
+- TheWitcherTRPG (starting with version 0.0.62)
 - Tormenta20 (starting with version 1.1.37)
 - Shadow of the Demon Lord  (starting with version 1.7.15)
 - Wasteland Ventures (starting with version 0.1.0)
@@ -53,6 +59,8 @@ Drag Ruler is available in the follwing languages:
 - English
 - German
 - Japanese (thanks to touge)
+- Korean (thanks to KLO#1490)
+- Spanish (thanks to Viriato139ac#342)
 
 ## API
 *Audience: This paragraph is intended for module and system devleopers that want to add more complex behavior to Drag Ruler. If you just want to use this plugins features skip this paragraph.*

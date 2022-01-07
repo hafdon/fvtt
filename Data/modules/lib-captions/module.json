@@ -14,10 +14,10 @@
             "twitter": "@bekit"
         }
     ],
-    "version": "0.1.2",
+    "version": "0.1.4",
     "minimumCoreVersion": "0.7.0",
-    "compatibleCoreVersion": "0.8.6",
-    "manifestPlusVersion": "1.1.0",
+    "compatibleCoreVersion": "9.231",
+    "manifestPlusVersion": "1.2.0",
     "esmodules": [
         "src/libCaptions.js"
     ],
@@ -26,7 +26,7 @@
     ],
     "url": "https://github.com/bekriebel/fvtt-module-lib-captions",
     "manifest": "https://github.com/bekriebel/fvtt-module-lib-captions/releases/latest/download/module.json",
-    "download": "https://github.com/bekriebel/fvtt-module-lib-captions/releases/download/v0.1.2/fvtt-module-lib-captions.zip",
+    "download": "https://github.com/bekriebel/fvtt-module-lib-captions/releases/download/v0.1.4/fvtt-module-lib-captions.zip",
     "readme": "https://github.com/bekriebel/fvtt-module-lib-captions/blob/main/README.md",
     "changelog": "https://github.com/bekriebel/fvtt-module-lib-captions/blob/main/CHANGELOG.md",
     "bugs": "https://github.com/bekriebel/fvtt-module-lib-captions/issues",
@@ -35,6 +35,11 @@
             "lang": "en",
             "name": "English",
             "path": "lang/en.json"
+        },
+        {
+            "lang": "es",
+            "name": "Español",
+            "path": "lang/es.json"
         }
     ],
     "media": [

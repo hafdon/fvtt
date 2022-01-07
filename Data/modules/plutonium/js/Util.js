@@ -1,1 +1,122 @@
-const _0x2da1=['getPermissionsEnum','Versions','2SDVSPr','1ygReyz','_getLogTag','test','%cPlutonium','isDebug','getCoreVersion','getWithoutParens','getWalker','703oBixuC','443264kfdvle','split','walk','module','690256ldDCWQ','MAX_SAFE_INTEGER','2271luFjcq','ENTITY_PERMISSIONS','Task','version','name','Could\x20not\x20parse\x20game\x20version\x20\x22','Fvtt','color:\x20#337ab7;\x20font-weight:\x20bold;','length','keys','isCapsFirst','max','10kAXgNl','clientWidth','replace','11686MizzSE','getMaxWindowHeight','forEach','1426878lOdxCq','filter','trimObject','warn','getMaxWindowWidth','1386239BfsHlp','min','data','entries','1288816DRXXmQ','createContextualFragment','firstElementChild','system','MODULE_NAME','debug','getSentences','trim','Could\x20not\x20parse\x20system\x20version:\x20\x22','documentElement','2BShasW','fnGetPromise'];const _0x37a2=function(_0xbf8c3a,_0x58c04e){_0xbf8c3a=_0xbf8c3a-0x118;let _0x2da1af=_0x2da1[_0xbf8c3a];return _0x2da1af;};const _0xedfba9=_0x37a2;(function(_0x599f18,_0x1ab7d4){const _0x3d0902=_0x37a2;while(!![]){try{const _0x30ba24=parseInt(_0x3d0902(0x11d))*-parseInt(_0x3d0902(0x130))+-parseInt(_0x3d0902(0x13f))*parseInt(_0x3d0902(0x138))+parseInt(_0x3d0902(0x121))+parseInt(_0x3d0902(0x139))*-parseInt(_0x3d0902(0x12b))+parseInt(_0x3d0902(0x14e))*-parseInt(_0x3d0902(0x14b))+parseInt(_0x3d0902(0x13d))+parseInt(_0x3d0902(0x118))*parseInt(_0x3d0902(0x12f));if(_0x30ba24===_0x1ab7d4)break;else _0x599f18['push'](_0x599f18['shift']());}catch(_0x55a17f){_0x599f18['push'](_0x599f18['shift']());}}}(_0x2da1,0xceb60));import{SharedConsts}from'../shared/SharedConsts.js';class Util{static['_getLogTag'](){const _0x206f2e=_0x37a2;return[_0x206f2e(0x133),_0x206f2e(0x146),'|'];}static[_0xedfba9(0x134)](){const _0x3c8bca=_0xedfba9;return!!CONFIG?.[_0x3c8bca(0x126)]?.[_0x3c8bca(0x13c)]?.[SharedConsts[_0x3c8bca(0x125)]];}static[_0xedfba9(0x14f)](_0x2006c2){const _0x45c1b8=_0xedfba9,_0x56e33b=Math[_0x45c1b8(0x11e)](_0x2006c2||Number[_0x45c1b8(0x13e)],document[_0x45c1b8(0x12a)]['clientHeight']-0x96);return Math[_0x45c1b8(0x14a)](0x96,_0x56e33b);}static[_0xedfba9(0x11c)](_0x481cc6){const _0x3f36e9=_0xedfba9,_0x4099ce=Math[_0x3f36e9(0x11e)](_0x481cc6||Number[_0x3f36e9(0x13e)],document[_0x3f36e9(0x12a)][_0x3f36e9(0x14c)]-0x96);return Math[_0x3f36e9(0x14a)](0x96,_0x4099ce);}static['htmlToNode'](_0x118f34){const _0x3204c1=_0xedfba9;return document['createRange']()[_0x3204c1(0x122)](_0x118f34)[_0x3204c1(0x123)];}static[_0xedfba9(0x136)](_0x3e129d){const _0x3af86c=_0xedfba9;return _0x3e129d['replace'](/\([^)]+\)/g,'')[_0x3af86c(0x128)]();}static['getTokens'](_0x1fac44){const _0x3f1110=_0xedfba9;return _0x1fac44[_0x3f1110(0x13a)](/([ ,:;()"])/g)['filter'](Boolean);}static['isPunctuation'](_0xcde442){const _0x265d57=_0xedfba9;return/[,:;()"]/[_0x265d57(0x132)](_0xcde442);}static[_0xedfba9(0x149)](_0x4ad4a5){const _0x5da3e1=_0xedfba9;return/^[A-Z]/[_0x5da3e1(0x132)](_0x4ad4a5);}static[_0xedfba9(0x127)](_0xab05f8){const _0x361d06=_0xedfba9;return _0xab05f8[_0x361d06(0x14d)](/ +/g,'\x20')[_0x361d06(0x13a)](/[.?!]/g)['map'](_0x31ad8f=>_0x31ad8f[_0x361d06(0x128)]())[_0x361d06(0x119)](Boolean);}static[_0xedfba9(0x11a)](_0x1113e7){const _0x256fe3=_0xedfba9,_0x8556f6=MiscUtil[_0x256fe3(0x137)]({'isAllowDeleteObjects':!![],'isDepthFirst':!![]});return _0x8556f6[_0x256fe3(0x13b)](_0x1113e7,{'object':_0x38319d=>{const _0x337622=_0x256fe3;Object['entries'](_0x38319d)[_0x337622(0x150)](([_0xb094a0,_0x3acdb3])=>{if(_0x3acdb3===undefined)delete _0x38319d[_0xb094a0];});if(!Object[_0x337622(0x148)](_0x38319d)[_0x337622(0x147)])return undefined;return _0x38319d;}});}}const LGT=Util[_0xedfba9(0x131)]();Util[_0xedfba9(0x141)]=class{constructor(_0x18e996,_0x5f5389){const _0x31ef83=_0xedfba9;this[_0x31ef83(0x143)]=_0x18e996,this[_0x31ef83(0x12c)]=_0x5f5389;}},Util[_0xedfba9(0x145)]=class{static[_0xedfba9(0x12d)](){const _0x5aab04=_0xedfba9;return[...Object[_0x5aab04(0x120)](CONST[_0x5aab04(0x140)])['map'](([_0x3c77db,_0x8ef21f])=>({'value':_0x8ef21f,'name':_0x3c77db['toTitleCase']()}))];}},Util[_0xedfba9(0x12e)]=class{static[_0xedfba9(0x135)](){const _0x804388=_0xedfba9;let [_0x17a134,_0x49ff66]=(game['data'][_0x804388(0x142)]||'')[_0x804388(0x13a)]('.');_0x17a134=Number(_0x17a134),_0x49ff66=Number(_0x49ff66);if(isNaN(_0x17a134)||isNaN(_0x49ff66))throw new Error(_0x804388(0x144)+game[_0x804388(0x11f)][_0x804388(0x142)]+'\x22!');return{'major':_0x17a134,'minor':_0x49ff66,'isZeroSeven':!_0x17a134&&_0x49ff66<=0x7};}static['getSystemVersion'](){const _0x112b23=_0xedfba9,_0x5697cb=game[_0x112b23(0x124)]?.[_0x112b23(0x11f)]?.[_0x112b23(0x143)]||'',_0x32a306=game['system']?.['data']?.[_0x112b23(0x142)]||'';let [_0x3cd162,_0xa8c3d3,_0x12fd99]=_0x32a306['split']('.');_0x3cd162=Number(_0x3cd162),_0xa8c3d3=Number(_0xa8c3d3),_0x12fd99=Number(_0x12fd99);if(isNaN(_0x3cd162)||isNaN(_0xa8c3d3)||isNaN(_0x12fd99))return console[_0x112b23(0x11b)](...LGT,_0x112b23(0x129)+_0x32a306+'\x22'),{'isUnknownVersion':!![],'system':_0x5697cb,'version':_0x32a306};return{'major':_0x3cd162,'minor':_0xa8c3d3,'patch':_0x12fd99,'system':_0x5697cb,'version':_0x32a306};}};export{Util,LGT};
+import {SharedConsts} from "../shared/SharedConsts.js";
+
+class Util {
+	static _getLogTag () {
+		return [
+			`%cPlutonium`,
+			`color: #337ab7; font-weight: bold;`,
+			`|`,
+		];
+	}
+
+	static isDebug () {
+		return !!CONFIG?.debug?.module?.[SharedConsts.MODULE_NAME];
+	}
+
+	// region elements
+	static getMaxWindowHeight (desiredHeight) {
+		const targetHeight = Math.min(desiredHeight || Number.MAX_SAFE_INTEGER, document.documentElement.clientHeight - 150);
+		return Math.max(150, targetHeight);
+	}
+
+	static getMaxWindowWidth (desiredWidth) {
+		const targetWidth = Math.min(desiredWidth || Number.MAX_SAFE_INTEGER, document.documentElement.clientWidth - 150);
+		return Math.max(150, targetWidth);
+	}
+
+	static htmlToNode (str) {
+		return document.createRange().createContextualFragment(str).firstElementChild;
+	}
+	// endregion
+
+	// region strings
+	static getWithoutParens (str) { return str.replace(/\([^)]+\)/g, "").trim(); }
+	static getTokens (str) { return str.split(/([ ,:;()"])/g).filter(Boolean); }
+	static isPunctuation (token) { return /[,:;()"]/.test(token); }
+	static isCapsFirst (word) { return /^[A-Z]/.test(word); }
+	static getSentences (str) { return str.replace(/ +/g, " ").split(/[.?!]/g).map(it => it.trim()).filter(Boolean); }
+	// endregion
+
+	static trimObject (obj) {
+		const walker = MiscUtil.getWalker({
+			isAllowDeleteObjects: true,
+			isDepthFirst: true,
+		});
+
+		return walker.walk(
+			obj,
+			{
+				object: (it) => {
+					Object.entries(it).forEach(([k, v]) => {
+						if (v === undefined) delete it[k];
+					});
+					if (!Object.keys(it).length) return undefined;
+					return it;
+				},
+			},
+		);
+	}
+}
+
+const LGT = Util._getLogTag();
+
+Util.Task = class {
+	constructor (name, fnGetPromise) {
+		this.name = name;
+		this.fnGetPromise = fnGetPromise;
+	}
+};
+
+Util.Fvtt = class {
+	static getPermissionsEnum ({isIncludeDefault = false} = {}) {
+		return [
+			isIncludeDefault ? {value: -1, name: "Default"} : null,
+			// "NONE" = 0; "LIMITED" = 1; "OBSERVER" = 2; "OWNER" = 3
+			...Object.entries(CONST.ENTITY_PERMISSIONS).map(([name, value]) => ({
+				value,
+				name: name.toTitleCase(),
+			})),
+		].filter(Boolean);
+	}
+
+	static getMinimumRolesEnum () {
+		return [
+			...Object.entries(CONST.USER_ROLES).map(([name, value]) => ({
+				value,
+				name: name.toTitleCase(),
+			})),
+			{
+				value: CONST.USER_ROLES.GAMEMASTER + 1,
+				name: `Cheater (Disable Feature)`,
+			},
+		];
+	}
+
+	static canUserCreateFolders () { return game.user.isGM; }
+};
+
+Util.Versions = class {
+	static getCoreVersion () {
+		let [major, minor] = (game.data.version || "").split(".");
+		major = Number(major);
+		minor = Number(minor);
+		if (isNaN(major) || isNaN(minor)) throw new Error(`Could not parse game version "${game.data.version}"!`);
+		return {major, minor, isVersionNinePlus: major >= 9};
+	}
+
+	static getSystemVersion () {
+		const system = game.system?.data?.name || "";
+		const version = game.system?.data?.version || "";
+		let [major, minor, patch] = version.split(".");
+		major = Number(major);
+		minor = Number(minor);
+		patch = Number(patch);
+		if (isNaN(major) || isNaN(minor) || isNaN(patch)) {
+			console.warn(...LGT, `Could not parse system version: "${version}"`);
+			return {isUnknownVersion: true, system, version};
+		}
+		return {major, minor, patch, system, version};
+	}
+};
+
+export {Util, LGT};

@@ -4,7 +4,8 @@ import * as BUTLER from "./butler.js";
  */
 export class Sidekick {
     static createCUBDiv(html) {
-
+        if (!game.user.isGM) return;
+        
         const cubDiv = $(
             `<div id="combat-utility-belt">
                     <h4>Combat Utility Belt</h4>
@@ -78,21 +79,27 @@ export class Sidekick {
     static async fetchJsons(source, path) {
         const extensions = [".json"];
         const fp = await FilePicker.browse(source, path, {extensions});
-
-        if (!fp.files.length) {
-            return;
-        }
-
-        const jsons = [];
-
-        for (let file of fp.files) {
-            const jsonFile = await fetch(file);
-            const json = await jsonFile.json();
-
-            json instanceof Object ? jsons.push(json) : console.warn("not a valid json:", json);
-        }
+        const fetchedJsons = fp?.files?.length ? await Promise.all(fp.files.map(f => Sidekick.fetchJson(f))) : [];
+        const jsons = fetchedJsons.filter(j => !!j);
         
         return jsons;
+    }
+
+    /**
+     * Fetch a JSON from a given file
+     * @param {File} file 
+     * @returns JSON | null
+     */
+    static async fetchJson(file) {
+        try {
+            const jsonFile = await fetch(file);
+            const json = await jsonFile.json();
+            if (!json instanceof Object) throw new Error("Not a valid JSON!");
+            return json;
+        } catch (e) {
+            console.warn(e.message);
+            return null;
+        }
     }
 
     /**
@@ -283,7 +290,10 @@ export class Sidekick {
         let slug = string.slugify();
 
         const existingIds = idList.filter(id => id === slug);
-        const uniqueIndex = existingIds.length ? Math.max(...existingIds.map(id => id.match(/\d+/g)[0])) + 1 : "";
+
+        if (!existingIds.length) return slug;
+
+        const uniqueIndex = existingIds.length > 1 ? Math.max(...existingIds.map(id => id.match(/\d+/g)[0])) + 1 : 1;
         slug = slug + uniqueIndex;
         
         return slug;
@@ -307,5 +317,38 @@ export class Sidekick {
 
         const name = Sidekick.toTitleCase(filename);
         return name;
+    }
+
+    /**
+     * Gets the first GM user
+     * @returns {GM | null} a GM object or null if none found
+     * @todo this should be stored at the world level so all clients have the same value
+     */
+    static getFirstGM() {
+        const gmUsers = game.users.filter(u => u.isGM && u.active);
+
+        if (gmUsers.length) {
+            return gmUsers[0];
+        } else {
+            return null;
+        }
+        
+    }
+
+    /**
+     * Gets an Actor from an Actor or Token UUID
+     * @param {*} uuid 
+     */
+    static async getActorFromUuid(uuid) {
+        const isActor = uuid.includes("Actor");
+        const isToken = uuid.includes("Token");
+
+        if (isActor) return await fromUuid(uuid);
+        else if (isToken) {
+            const tokenDocument = await fromUuid(uuid);
+            return tokenDocument?.actor ?? undefined;
+        }
+
+        return;
     }
 }

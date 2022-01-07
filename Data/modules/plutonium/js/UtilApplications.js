@@ -1,1 +1,532 @@
-const _0x5e75=['notifications','isForceClose','\x20was\x20skipped\x20(duplicate\x20found).','setApplicationTitle','pRender','_setBarProgress','Could\x20not\x20display\x20import\x20notifications—import\x20status\x20was\x20not\x20defined.\x20This\x20is\x20a\x20bug!','TASK_EXIT_SKIPPED_DUPLICATE','children','getShowModal','fnGetPromise','SYM_UI_SKIP','Import\x20of\x20','TaskRunner','STR_SEE_CONSOLE','actor','imported','_getHeaderButtons','TASK_EXIT_COMPLETE_DATA_ONLY','_total','element','isAddTrailingSlash','taskExitCompleteFailed','\x22\x20was\x20skipped\x20(duplicate\x20found).','_fnGetRowSuccessText','Importing\x20','status','map','...','TASK_EXIT_SKIPPED_OTHER','TaskRunner\x20died!','352378BLjvYs','335378tzniGD','Failed\x20to\x20import\x20\x22','windows','type','/template/_Generic.hbs','Failed\x20to\x20import\x20','_isCancelled','_maxZ','fnGetRowCancelText','17643ytaJIf','warn','_$prevMsg','min','\x22\x20was\x20skipped.','\x22></i>','message','<button\x20class=\x22btn\x20btn-primary\x20mr-2\x22>OK</button>','_doSwitchToCloseButton','sort','setProgress','pGetImportCompModalFormData','modalTitle','<button\x20class=\x22btn\x20btn-default\x20ml-3\x22>Skip</button>','_isForceClose','<div\x20class=\x22italic\x22>','titleInitial','[data-name=\x22wrp-console\x22]','length','229625UyseSb','\x22\x20to\x20actor\x20\x22','title','confirmText','instance','push','pInit','_titleCompelte','ascSort','depth','1TMRhkZ','veapp__msg-error\x20bold','error','\x22\x20failed','_fnGetRowRunningText','pDelay','pGetConfirmation',',\x20overwriting\x20existing\x20(duplicate\x20found).','TASK_EXIT_COMPLETE_UPDATE_OVERWRITE','Import\x20of\x20\x22','_$btnCancel','folder','render','prependTo','_fnGetRowOverwriteDuplicateText','TASK_EXIT_FAILED','close','[data-name=\x22disp-progress\x22]','tasks','height','fnGetRowOverwriteDuplicateText','Import\x20Complete','Folder','comp','_tasks','_getRowMeta','document','width','123409UdVCxA','Z_INDEX_MAX_FOUNDRY','isAutoResize','.window-title','pGetFormData','Imported\x20','appendTo','_prevProgress','Critical\x20failure!\x20','getMaxWindowHeight','228681mXDxLu','fnGetRowSkippedDuplicateText','MODULE_LOCATION','addClass','data','isCancelled','undefined','TASK_EXIT_CANCELLED','Imported\x20\x22','.ve-window','click','</div>','titleComplete','activateListeners','doShowImportedNotification','info','parentFolder','find','getCleanEntityName','max','sum','_fnGetRowErrorText','faIcon','61632bjQBOY','[name=\x22btn-cancel\x22]','_$dispProgress','_fnGetRowCancelText','taskExitCompleteDataOnly','_setTitleText','_element','round','1MlHCXW','_fnGetRowSkippedDuplicateText','fnGetRowErrorText','<i\x20class=\x22fas\x20','documentElement','fnGetInvalidMeta','removeClass','TASK_EXIT_COMPLETE','pGetImportCompApplicationFormData','fnGetRowRunningText','italic','pRun','reverse','once','getFolderPath','join','Task\x20\x22','css','text','forEach','<i\x20class=\x22fas\x20fa-times\x22></i>','\x22!\x20','name','content','filter','_$wrpConsole','renderApplication','keys','<div\x20class=\x22veapp-loading__wrp-outer\x22><i>Loading...</i></div>','\x20folder\x20\x22','focus','getFolderList','/template/TaskRunner.hbs'];const _0x3fd9=function(_0x55b25c,_0x113ba0){_0x55b25c=_0x55b25c-0x116;let _0x5e75aa=_0x5e75[_0x55b25c];return _0x5e75aa;};const _0x343c40=_0x3fd9;(function(_0x3f8d3a,_0x46abde){const _0x5a251f=_0x3fd9;while(!![]){try{const _0x4d1c72=parseInt(_0x5a251f(0x1ba))*parseInt(_0x5a251f(0x134))+-parseInt(_0x5a251f(0x14b))+-parseInt(_0x5a251f(0x19d))*parseInt(_0x5a251f(0x153))+-parseInt(_0x5a251f(0x194))+parseInt(_0x5a251f(0x1b0))+-parseInt(_0x5a251f(0x12a))+parseInt(_0x5a251f(0x193));if(_0x4d1c72===_0x46abde)break;else _0x3f8d3a['push'](_0x3f8d3a['shift']());}catch(_0x4c1a2c){_0x3f8d3a['push'](_0x3f8d3a['shift']());}}}(_0x5e75,0x428ee));import{LGT,Util}from'./Util.js';import{SharedConsts}from'../shared/SharedConsts.js';import{Consts}from'./Consts.js';class UtilApplications{static async['$pGetAddAppLoadingOverlay'](_0x2dc128){const _0x5dd840=_0x3fd9;if(!_0x2dc128)return null;_0x2dc128[_0x5dd840(0x164)]('position','relative');const _0x31ea3f=$(_0x5dd840(0x16f))[_0x5dd840(0x171)]()['appendTo'](_0x2dc128);return await MiscUtil[_0x5dd840(0x1bf)](0x5),_0x31ea3f;}static[_0x343c40(0x1c0)](_0x17eb31){return _0x17eb31=_0x17eb31||{},new Promise(_0x43aea0=>{const _0x5cd29b=_0x3fd9;new Dialog({'title':_0x17eb31[_0x5cd29b(0x1b2)],'content':_0x17eb31[_0x5cd29b(0x16a)],'buttons':{'yes':{'icon':_0x5cd29b(0x156)+_0x17eb31[_0x5cd29b(0x14a)]+_0x5cd29b(0x1a2),'label':_0x17eb31[_0x5cd29b(0x1b3)],'callback':()=>_0x43aea0(!![])},'no':{'icon':_0x5cd29b(0x167),'label':_0x17eb31['dismissText']||'Cancel','callback':()=>_0x43aea0(![])}},'default':'yes'})[_0x5cd29b(0x11a)](!![]);});}static[_0x343c40(0x146)](_0x5ad659){return _0x5ad659||'\x20';}static[_0x343c40(0x161)](_0x55a29f,_0x32e539){const _0x1d79c6=_0x343c40;_0x32e539=_0x32e539||{};if(!_0x55a29f)return null;const _0x3c1316=[];if(_0x55a29f[_0x1d79c6(0x119)]){_0x3c1316[_0x1d79c6(0x1b5)](_0x55a29f[_0x1d79c6(0x119)][_0x1d79c6(0x138)]['name']);let _0x3456b4=_0x55a29f[_0x1d79c6(0x119)][_0x1d79c6(0x144)];while(_0x3456b4&&_0x3456b4['id']){_0x3c1316[_0x1d79c6(0x1b5)](_0x3456b4[_0x1d79c6(0x138)][_0x1d79c6(0x169)]),_0x3456b4=_0x3456b4[_0x1d79c6(0x144)];}}const _0x120d26=_0x3c1316[_0x1d79c6(0x15f)]()[_0x1d79c6(0x162)]('/');if(_0x120d26)return _0x32e539[_0x1d79c6(0x189)]?_0x120d26+'/':_0x120d26;return null;}static['_setBarProgress'](_0x534e16,_0x195619){const _0x2720ca=_0x343c40;_0x195619=Math[_0x2720ca(0x147)](0x0,Math['min'](_0x195619,0x1)),_0x534e16['css']({'width':Math[_0x2720ca(0x152)](_0x195619*0x64)+'%'});}static async['pRunTasks'](_0x20ba98,_0x105cf1){const _0x1dd6a0=_0x343c40;_0x105cf1=_0x105cf1||{};const _0x43dc88=new UtilApplications[(_0x1dd6a0(0x181))]({..._0x105cf1,'tasks':_0x20ba98});await _0x43dc88[_0x1dd6a0(0x15e)]();}static[_0x343c40(0x172)](_0xfd7ce6){const _0x32b226=_0x343c40,_0x339ef8=(_0x416f20,_0x2d6e7a)=>SortUtil[_0x32b226(0x1b8)](_0x416f20[_0x32b226(0x138)][_0x32b226(0x1a6)],_0x2d6e7a[_0x32b226(0x138)]['sort']),_0x591be0=CONFIG[_0x32b226(0x124)]['collection'][_0x32b226(0x1b4)]['contents'][_0x32b226(0x16b)](_0x324007=>_0x324007[_0x32b226(0x138)]['type']===_0xfd7ce6)[_0x32b226(0x1a6)](_0x339ef8);if(!_0x591be0[_0x32b226(0x1af)])return _0x591be0;const _0x49ca0b=Math[_0x32b226(0x147)](..._0x591be0[_0x32b226(0x18f)](_0x55416d=>_0x55416d[_0x32b226(0x1b9)])),_0x5f5614=_0x591be0[_0x32b226(0x16b)](_0x1512ed=>_0x1512ed[_0x32b226(0x1b9)]===0x1);if(_0x5f5614[_0x32b226(0x1af)]===_0x591be0['length'])return _0x5f5614;for(let _0x2e53ef=0x2;_0x2e53ef<_0x49ca0b+0x1;++_0x2e53ef){const _0x24d856=_0x591be0[_0x32b226(0x16b)](_0x41a360=>_0x41a360[_0x32b226(0x1b9)]===_0x2e53ef)[_0x32b226(0x1a6)](_0x339ef8)[_0x32b226(0x15f)]();_0x24d856[_0x32b226(0x166)](_0x494cae=>{const _0x121d32=_0x5f5614['findIndex'](_0x49359e=>_0x49359e['id']===_0x494cae['parentFolder']['id']);if(~_0x121d32)_0x5f5614['splice'](_0x121d32+0x1,0x0,_0x494cae);});}return _0x5f5614;}static['bringToFront'](_0x27b56a){const _0x1fcbd6=_0x343c40;if(!_0x27b56a[_0x1fcbd6(0x151)])return;if(typeof _maxZ===_0x1fcbd6(0x13a))window[_0x1fcbd6(0x19b)]=0x64;if(Object[_0x1fcbd6(0x16e)](ui[_0x1fcbd6(0x196)])['length']===0x0)_maxZ=0x64;_0x27b56a[_0x1fcbd6(0x151)][_0x1fcbd6(0x164)]({'zIndex':Math[_0x1fcbd6(0x1a0)](++_maxZ,Consts[_0x1fcbd6(0x12b)])});}static[_0x343c40(0x142)](_0x5c1e36){const _0x5552be=_0x343c40;if(!_0x5c1e36)return;if(!_0x5c1e36[_0x5552be(0x18e)]){_0x5c1e36['status']=UtilApplications[_0x5552be(0x15a)];const _0x23bb9d=_0x5552be(0x17a);ui[_0x5552be(0x174)][_0x5552be(0x1bc)](_0x23bb9d),console[_0x5552be(0x1bc)](new Error(_0x23bb9d));}const _0x2b2920=_0x5c1e36['name']||_0x5c1e36['entity']?.[_0x5552be(0x169)]||_0x5c1e36[_0x5552be(0x184)]?.[0x0]?.['name']||_0x5c1e36['imported']?.[0x0]?.['data']?.[_0x5552be(0x169)]||'(Unnamed\x20Entity)';if(_0x5c1e36[_0x5552be(0x18e)]===UtilApplications['TASK_EXIT_CANCELLED'])return ui[_0x5552be(0x174)][_0x5552be(0x19e)](_0x5552be(0x117)+_0x2b2920+'\x22\x20cancelled.');else{if(_0x5c1e36[_0x5552be(0x18e)]===UtilApplications[_0x5552be(0x17b)])return ui[_0x5552be(0x174)][_0x5552be(0x19e)](_0x5552be(0x117)+_0x2b2920+_0x5552be(0x18b));else{if(_0x5c1e36[_0x5552be(0x18e)]===UtilApplications[_0x5552be(0x191)])return ui[_0x5552be(0x174)][_0x5552be(0x19e)]('Import\x20of\x20\x22'+_0x2b2920+_0x5552be(0x1a1));else{if(_0x5c1e36[_0x5552be(0x18e)]===UtilApplications['TASK_EXIT_FAILED'])return ui[_0x5552be(0x174)]['error'](_0x5552be(0x195)+_0x2b2920+_0x5552be(0x168)+VeCt['STR_SEE_CONSOLE']);}}}if(_0x5c1e36[_0x5552be(0x184)]?.[0x0]?.[_0x5552be(0x183)])ui[_0x5552be(0x174)]['info'](_0x5552be(0x13c)+_0x2b2920+_0x5552be(0x1b1)+_0x5c1e36['imported']?.[0x0]?.[_0x5552be(0x183)][_0x5552be(0x169)]+'\x22.');else{const _0x3871af=_0x5c1e36?.[_0x5552be(0x184)]?.[0x0]?.[_0x5552be(0x119)]?_0x5c1e36['imported'][0x0]['folder'][_0x5552be(0x138)][_0x5552be(0x197)]:null,_0x44fdda=UtilApplications['getFolderPath'](_0x5c1e36[_0x5552be(0x184)]?.[0x0]);ui[_0x5552be(0x174)][_0x5552be(0x143)](_0x5552be(0x13c)+_0x2b2920+'\x22'+(_0x3871af&&_0x44fdda?'\x20to\x20'+_0x3871af+_0x5552be(0x170)+_0x44fdda+'\x22.':''));}}static[_0x343c40(0x177)](_0xc565b6,_0x4ab516){const _0x441e39=_0x343c40;_0xc565b6['options']['title']=_0x4ab516,_0xc565b6[_0x441e39(0x188)][_0x441e39(0x145)](_0x441e39(0x12d))[_0x441e39(0x165)](_0xc565b6['title']);}static['getDataName'](_0x45aa04){const _0x1423df=_0x343c40;return _0x45aa04?.[_0x1423df(0x183)]?.[_0x1423df(0x169)]||_0x45aa04?.[_0x1423df(0x128)]?.['name'];}static[_0x343c40(0x1a8)](_0x517794){return _0x517794=_0x517794||{},new Promise(_0x27d738=>{const _0x55dba9=_0x3fd9,_0x5792d6=$(_0x55dba9(0x1a4))[_0x55dba9(0x13e)](async()=>{const _0x20442d=_0x55dba9,_0x323f87=await _0x517794[_0x20442d(0x125)][_0x20442d(0x12e)]();if(_0x517794[_0x20442d(0x158)]){const _0x5da088=_0x517794['fnGetInvalidMeta'](_0x323f87);if(_0x5da088)return ui['notifications'][_0x5da088[_0x20442d(0x197)]](_0x5da088[_0x20442d(0x1a3)]);}return _0x52d55a(!![],_0x323f87);}),_0x497362=$('<button\x20class=\x22btn\x20btn-default\x22>Cancel</button>')[_0x55dba9(0x13e)](()=>_0x52d55a(![])),_0x14509c=_0x517794['isUnskippable']?null:$(_0x55dba9(0x1aa))['click'](()=>_0x52d55a(VeCt[_0x55dba9(0x17f)])),{$modalInner:_0x2b2109,doClose:_0x52d55a}=UiUtil[_0x55dba9(0x17d)]({'title':_0x517794[_0x55dba9(0x125)]['modalTitle'],'isMinHeight0':!![],'isUncappedHeight':!![],'cbClose':(_0x150ecd,_0x541345)=>{if(typeof _0x150ecd==='symbol')return _0x27d738(_0x150ecd);if(!_0x150ecd)return _0x27d738(null);_0x27d738(_0x541345);}});_0x517794[_0x55dba9(0x125)][_0x55dba9(0x11a)](_0x2b2109),$$`<div class="flex-v-center flex-h-right no-shrink pb-1 pt-1 px-1">${_0x5792d6}${_0x497362}${_0x14509c}</div>`['appendTo'](_0x2b2109);});}static async[_0x343c40(0x15b)](_0x4fe328){const _0x33595f=_0x343c40;let _0x1d549d,_0x449a62;const _0x4db95f=new Promise((_0x36b77f,_0x6df652)=>{_0x1d549d=_0x36b77f,_0x449a62=_0x6df652;});let _0x722e26=null;const _0x390c56=new class _0x30ce10 extends Application{constructor(){const _0xb52d8=_0x3fd9;super({'title':_0x4fe328['comp'][_0xb52d8(0x1a9)],'template':SharedConsts[_0xb52d8(0x136)]+_0xb52d8(0x198),'width':_0x4fe328[_0xb52d8(0x129)]!=null?_0x4fe328[_0xb52d8(0x129)]:0x1e0,'height':_0x4fe328[_0xb52d8(0x121)]!=null?_0x4fe328['height']:0x280,'resizable':!![]});}async[_0x33595f(0x11e)](..._0x3a7a29){const _0x328fbd=_0x33595f;await super[_0x328fbd(0x11e)](..._0x3a7a29),_0x1d549d(null);}[_0x33595f(0x141)](_0x27b687){const _0x5af6a5=_0x33595f,_0x15015a=$(_0x5af6a5(0x1a4))[_0x5af6a5(0x13e)](async()=>{const _0x2fbfce=_0x5af6a5,_0x48861e=await _0x4fe328[_0x2fbfce(0x125)][_0x2fbfce(0x12e)]();if(_0x4fe328[_0x2fbfce(0x158)]){const _0x19c80b=_0x4fe328['fnGetInvalidMeta'](_0x48861e);if(_0x19c80b)return ui[_0x2fbfce(0x174)][_0x19c80b[_0x2fbfce(0x197)]](_0x19c80b[_0x2fbfce(0x1a3)]);}return _0x1d549d(_0x48861e),this[_0x2fbfce(0x11e)]();}),_0x47a562=$('<button\x20class=\x22btn\x20btn-default\x22>Cancel</button>')['click'](()=>{const _0x44589a=_0x5af6a5;return _0x1d549d(null),this[_0x44589a(0x11e)]();}),_0x588c49=_0x4fe328['isUnskippable']?null:$(_0x5af6a5(0x1aa))[_0x5af6a5(0x13e)](()=>{const _0x5dd98e=_0x5af6a5;return _0x1d549d(VeCt[_0x5dd98e(0x17f)]),this[_0x5dd98e(0x11e)]();});if(_0x4fe328[_0x5af6a5(0x125)][_0x5af6a5(0x178)])_0x722e26=_0x4fe328[_0x5af6a5(0x125)][_0x5af6a5(0x178)](_0x27b687);else _0x4fe328[_0x5af6a5(0x125)][_0x5af6a5(0x11a)](_0x27b687);$$`<div class="flex-v-center flex-h-right no-shrink pb-1 pt-1 px-1 mt-auto mr-3">${_0x15015a}${_0x47a562}${_0x588c49}</div>`[_0x5af6a5(0x130)](_0x27b687);}}();return await _0x390c56[_0x33595f(0x11a)](!![]),_0x4fe328[_0x33595f(0x12c)]&&Hooks[_0x33595f(0x160)](_0x33595f(0x16d),async _0x213c9a=>{const _0xbeb690=_0x33595f;if(_0x213c9a!==_0x390c56)return;if(_0x722e26)await _0x722e26;const _0x56ee8d=$(_0x390c56[_0xbeb690(0x188)])['find'](_0xbeb690(0x13d)),_0x268710=_0x56ee8d[_0xbeb690(0x17c)]()['map']((_0x5b7c52,_0x53f4bf)=>$(_0x53f4bf)[_0xbeb690(0x121)]())['get']()[_0xbeb690(0x148)](),_0x43c625=Util[_0xbeb690(0x133)](_0x268710+0x50);_0x390c56['setPosition']({'top':document[_0xbeb690(0x157)]['clientHeight']/0x2-_0x43c625/0x2,'height':_0x43c625});}),_0x4db95f;}}UtilApplications[_0x343c40(0x15a)]=Symbol('taskExitComplete'),UtilApplications['TASK_EXIT_CANCELLED']=Symbol('taskExitCancelled'),UtilApplications['TASK_EXIT_SKIPPED_DUPLICATE']=Symbol('taskExitSkippedDuplicate'),UtilApplications[_0x343c40(0x191)]=Symbol('taskExitSkippedOther'),UtilApplications[_0x343c40(0x116)]=Symbol('taskExitCompleteOverwrite'),UtilApplications[_0x343c40(0x11d)]=Symbol(_0x343c40(0x18a)),UtilApplications[_0x343c40(0x186)]=Symbol(_0x343c40(0x14f)),UtilApplications['TaskRunner']=class extends Application{constructor(_0x3886d5){const _0x3eb7ed=_0x343c40;_0x3886d5=_0x3886d5||{},super({'title':_0x3886d5[_0x3eb7ed(0x1ad)]||'Importing...','width':0x1e0,'template':SharedConsts[_0x3eb7ed(0x136)]+_0x3eb7ed(0x173),'height':0x140,'resizable':!![]}),this[_0x3eb7ed(0x126)]=_0x3886d5[_0x3eb7ed(0x120)],this['_titleCompelte']=_0x3886d5[_0x3eb7ed(0x140)]||_0x3eb7ed(0x123),this[_0x3eb7ed(0x1be)]=_0x3886d5[_0x3eb7ed(0x15c)]||(_0x21b37c=>_0x3eb7ed(0x18d)+_0x21b37c+_0x3eb7ed(0x190)),this[_0x3eb7ed(0x18c)]=_0x3886d5['fnGetRowSuccessText']||(_0x2b5aea=>_0x3eb7ed(0x12f)+_0x2b5aea+'.'),this[_0x3eb7ed(0x149)]=_0x3886d5[_0x3eb7ed(0x155)]||(_0x3f1bf0=>_0x3eb7ed(0x199)+_0x3f1bf0+'!\x20'+VeCt[_0x3eb7ed(0x182)]),this[_0x3eb7ed(0x14e)]=_0x3886d5[_0x3eb7ed(0x19c)]||(_0x2bae70=>_0x3eb7ed(0x180)+_0x2bae70+'\x20was\x20cancelled.'),this['_fnGetRowSkippedDuplicateText']=_0x3886d5[_0x3eb7ed(0x135)]||(_0x118ccd=>_0x3eb7ed(0x180)+_0x118ccd+_0x3eb7ed(0x176)),this[_0x3eb7ed(0x11c)]=_0x3886d5[_0x3eb7ed(0x122)]||(_0x32ff70=>_0x3eb7ed(0x12f)+_0x32ff70+_0x3eb7ed(0x1c1)),this['_isForceClose']=!!_0x3886d5[_0x3eb7ed(0x175)],this['_total']=_0x3886d5['totalTasks'],this['_isCancelled']=![],this[_0x3eb7ed(0x14d)]=null,this[_0x3eb7ed(0x16c)]=null,this[_0x3eb7ed(0x118)]=null,this[_0x3eb7ed(0x131)]=null,this[_0x3eb7ed(0x19f)]=null;}get[_0x343c40(0x139)](){const _0x3f82bf=_0x343c40;return this[_0x3f82bf(0x19a)];}['activateListeners'](_0x45f8b3){const _0x1debe8=_0x343c40;super['activateListeners'](_0x45f8b3),this[_0x1debe8(0x14d)]=_0x45f8b3[_0x1debe8(0x145)](_0x1debe8(0x11f)),this['_$wrpConsole']=_0x45f8b3[_0x1debe8(0x145)](_0x1debe8(0x1ae)),this[_0x1debe8(0x118)]=_0x45f8b3[_0x1debe8(0x145)](_0x1debe8(0x14c))[_0x1debe8(0x13e)](()=>this[_0x1debe8(0x19a)]=!![]);}async[_0x343c40(0x1b6)](){const _0x4ac05c=_0x343c40;await this[_0x4ac05c(0x11a)](!![]);while(this[_0x4ac05c(0x118)]==null)await MiscUtil[_0x4ac05c(0x1bf)](0x19);}async['pRun'](){const _0x2c1afb=_0x343c40;await this[_0x2c1afb(0x1b6)]();try{const _0x19c2a0=this[_0x2c1afb(0x126)][_0x2c1afb(0x1af)];for(let _0x323da5=0x0;_0x323da5<_0x19c2a0;++_0x323da5){const _0x1825f1=this[_0x2c1afb(0x126)][_0x323da5];if(this['_isCancelled'])break;const {$msg:_0x3570f1,$row:_0x34b402}=this[_0x2c1afb(0x127)](this[_0x2c1afb(0x1be)](_0x1825f1[_0x2c1afb(0x169)]),_0x323da5+0x1,_0x19c2a0);_0x34b402[_0x2c1afb(0x11b)](this[_0x2c1afb(0x16c)]);try{const _0x4eec3d=await _0x1825f1[_0x2c1afb(0x17e)]();switch(_0x4eec3d?.[_0x2c1afb(0x18e)]||UtilApplications[_0x2c1afb(0x15a)]){case UtilApplications[_0x2c1afb(0x13b)]:_0x3570f1[_0x2c1afb(0x165)](this['_fnGetRowCancelText'](_0x1825f1[_0x2c1afb(0x169)]));break;case UtilApplications['TASK_EXIT_SKIPPED_DUPLICATE']:_0x3570f1[_0x2c1afb(0x165)](this[_0x2c1afb(0x154)](_0x1825f1[_0x2c1afb(0x169)]));break;case UtilApplications[_0x2c1afb(0x116)]:_0x3570f1[_0x2c1afb(0x165)](this[_0x2c1afb(0x11c)](_0x1825f1[_0x2c1afb(0x169)]));break;case UtilApplications[_0x2c1afb(0x11d)]:_0x3570f1[_0x2c1afb(0x137)](_0x2c1afb(0x1bb))[_0x2c1afb(0x159)](_0x2c1afb(0x15d))[_0x2c1afb(0x165)](this[_0x2c1afb(0x149)](_0x1825f1['name']));break;case UtilApplications[_0x2c1afb(0x15a)]:default:_0x3570f1[_0x2c1afb(0x165)](this[_0x2c1afb(0x18c)](_0x1825f1[_0x2c1afb(0x169)]));break;}}catch(_0x594b2d){_0x3570f1[_0x2c1afb(0x137)](_0x2c1afb(0x1bb))['removeClass'](_0x2c1afb(0x15d))[_0x2c1afb(0x165)](this['_fnGetRowErrorText'](_0x1825f1[_0x2c1afb(0x169)])),console['error'](...LGT,_0x2c1afb(0x163)+_0x1825f1[_0x2c1afb(0x169)]+_0x2c1afb(0x1bd),_0x594b2d);}UtilApplications['_setBarProgress'](this[_0x2c1afb(0x14d)],(_0x323da5+0x1)/_0x19c2a0);}UtilApplications['_setBarProgress'](this[_0x2c1afb(0x14d)],0x1);if(this[_0x2c1afb(0x1ab)])this['close']();else this[_0x2c1afb(0x150)](this[_0x2c1afb(0x1b7)]);}catch(_0x2ec722){console[_0x2c1afb(0x1bc)](...LGT,_0x2c1afb(0x192),_0x2ec722),ui['notifications'][_0x2c1afb(0x1bc)](_0x2c1afb(0x132)+VeCt['STR_SEE_CONSOLE']);}this['_doSwitchToCloseButton']();}[_0x343c40(0x127)](_0x36b3f1,_0x43bd91,_0x2dff53){const _0x4b6540=_0x343c40;if(_0x2dff53==null&&this[_0x4b6540(0x187)]!=null)_0x2dff53=this[_0x4b6540(0x187)];const _0x5b4894=$(_0x4b6540(0x1ac)+_0x36b3f1+_0x4b6540(0x13f)),_0x4d6d5e=$$`<div class="mx-1 w-100 split imp__task-row flex-v-center">${_0x5b4894}<div>(${_0x43bd91}/${_0x2dff53})</div></div>`;return{'$msg':_0x5b4894,'$row':_0x4d6d5e};}[_0x343c40(0x1a5)](){const _0x2b8a9d=_0x343c40;this[_0x2b8a9d(0x118)]['off'](_0x2b8a9d(0x13e))['text']('Close')['click'](()=>this[_0x2b8a9d(0x11e)]());}[_0x343c40(0x150)](_0x430821){const _0x51ab62=_0x343c40;this['element']['find']('.window-header\x20.window-title')[_0x51ab62(0x165)](_0x430821);}[_0x343c40(0x1a7)]({message:_0x5b45fb,count:_0x372005,total:_0x1819fd,isError:_0x886655}){const _0x1a5291=_0x343c40;if(_0x372005==null&&this['_total']!=null)_0x372005=this[_0x1a5291(0x187)];if(_0x1819fd==null&&this[_0x1a5291(0x187)]!=null)_0x1819fd=this['_total'];_0x372005=Math[_0x1a5291(0x147)](0x0,_0x372005);if(_0x1819fd===0x0)_0x1819fd=0x1;const _0x4bf440=_0x372005/_0x1819fd;if(this[_0x1a5291(0x131)]===_0x4bf440){this[_0x1a5291(0x19f)][_0x1a5291(0x165)](_0x5b45fb);if(_0x886655)this[_0x1a5291(0x19f)][_0x1a5291(0x137)](_0x1a5291(0x1bb))['removeClass'](_0x1a5291(0x15d));this['_doSwitchToCloseButton']();return;}this[_0x1a5291(0x131)]=_0x4bf440;const {$msg:_0x256358,$row:_0x25d8af}=this['_getRowMeta'](_0x5b45fb,_0x372005,_0x1819fd);this['_$prevMsg']=_0x256358,_0x25d8af[_0x1a5291(0x11b)](this[_0x1a5291(0x16c)]);if(_0x886655)_0x256358[_0x1a5291(0x137)](_0x1a5291(0x1bb))['removeClass'](_0x1a5291(0x15d));UtilApplications[_0x1a5291(0x179)](this[_0x1a5291(0x14d)],_0x372005===_0x1819fd?0x1:_0x4bf440);if(_0x372005===_0x1819fd){if(this[_0x1a5291(0x1ab)])this[_0x1a5291(0x11e)]();else this[_0x1a5291(0x150)](this[_0x1a5291(0x1b7)]),this[_0x1a5291(0x1a5)]();}}[_0x343c40(0x185)](){return[];}};export{UtilApplications};
+import {LGT, Util} from "./Util.js";
+import {SharedConsts} from "../shared/SharedConsts.js";
+import {Consts} from "./Consts.js";
+
+class UtilApplications {
+	static async $pGetAddAppLoadingOverlay ($appHtml) {
+		if (!$appHtml) return null;
+		$appHtml.css("position", "relative");
+		const $out = $(`<div class="veapp-loading__wrp-outer"><i>Loading...</i></div>`).focus().appendTo($appHtml);
+		// Add a short delay to allow the element to appear before we (probably) lock up the browser doing heavy processing
+		await MiscUtil.pDelay(5);
+		return $out;
+	}
+
+	/**
+	 * @param opts Options object.
+	 * @param opts.title Prompt title.
+	 * @param opts.content Prompt message.
+	 * @param opts.confirmText "Yes" button text, e.g. `"Confirm"`.
+	 * @param [opts.dismissText] "Not" button text, e.g. `"Cancel"`.
+	 * @param opts.faIcon FontAsweome icon name to use on the "yes" button, e.g. `"fa-delete"`.
+	 * @return {Promise}
+	 */
+	static pGetConfirmation (opts) {
+		opts = opts || {};
+
+		return new Promise(resolve => {
+			new Dialog({
+				title: opts.title,
+				content: opts.content,
+				buttons: {
+					yes: {
+						icon: `<i class="fas fa-fw ${opts.faIcon}"></i>`,
+						label: opts.confirmText,
+						callback: () => resolve(true),
+					},
+					no: {
+						icon: `<i class="fas fa-fw fa-times"></i>`,
+						label: opts.dismissText || "Cancel",
+						callback: () => resolve(false),
+					},
+				},
+				default: "yes",
+			}).render(true);
+		});
+	}
+
+	static getCleanEntityName (name) {
+		// Space is a valid name; empty string isn't
+		return name || " ";
+	}
+
+	/**
+	 * @param fvttEntity
+	 * @param [opts]
+	 * @param [opts.isAddTrailingSlash]
+	 * @return {string | null}
+	 */
+	static getFolderPath (fvttEntity, opts) {
+		opts = opts || {};
+
+		if (!fvttEntity) return null;
+
+		const stack = [];
+		if (fvttEntity.folder) {
+			stack.push(fvttEntity.folder.data.name);
+			let parent = fvttEntity.folder.parentFolder;
+			while (parent && parent.id) {
+				stack.push(parent.data.name);
+				parent = parent.parentFolder;
+			}
+		}
+
+		const out = stack.reverse().join("/");
+		if (out) return opts.isAddTrailingSlash ? `${out}/` : out;
+		return null;
+	}
+
+	static _setBarProgress ($bar, fraction) {
+		fraction = Math.max(0, Math.min(fraction, 1));
+		$bar.css({width: `${Math.round(fraction * 100)}%`});
+	}
+
+	/**
+	 * @param taskList An array of `Util.Task`s
+	 * @param [opts] Options object.
+	 * @param [opts.titleInitial] Initial window title.
+	 * @param [opts.titleComplete] Window title on completion.
+	 * @param [opts.fnGetRowRunningText] Function which accepts a task name, and produces the text seen when a task is running.
+	 * @param [opts.fnGetRowSuccessText] Function which accepts a task name, and produces the text seen when a task is successful.
+	 * @param [opts.fnGetRowCancelText] Function which accepts a task name, and produces the text seen when a task is successful, but cancelled.
+	 * @param [opts.fnGetRowSkippedDuplicateText] Function which accepts a task name, and produces the text seen when a task is successful, but skipped due to deduplication.
+	 * @param [opts.fnGetRowOverwriteDuplicateText] Function which accepts a task name, and produces the text seen when a task is successful, and overwrote other data due to deduplication.
+	 * @param [opts.fnGetRowErrorText] Function which accepts a task name, and produces the text seen when a task has failed.
+	 * @param [opts.isForceClose] If the task runner should be forcibly closed on successful completion.
+	 */
+	static async pRunTasks (taskList, opts) {
+		opts = opts || {};
+		const runner = new UtilApplications.TaskRunner({...opts, tasks: taskList});
+		await runner.pRun();
+		return runner;
+	}
+
+	static getFolderList (folderType) {
+		const sortFolders = (a, b) => SortUtil.ascSort(a.data.sort, b.data.sort);
+
+		const raw = CONFIG.Folder.collection.instance.contents
+			.filter(it => it.data.type === folderType)
+			.sort(sortFolders);
+		if (!raw.length) return raw;
+
+		const maxDepth = Math.max(...raw.map(it => it.depth));
+
+		const out = raw.filter(it => it.depth === 1);
+		if (out.length === raw.length) return out;
+
+		for (let i = 2; i < maxDepth + 1; ++i) {
+			const atDepth = raw.filter(it => it.depth === i).sort(sortFolders).reverse();
+			atDepth.forEach(it => {
+				const ixParent = out.findIndex(parent => parent.id === it.parentFolder.id);
+				if (~ixParent) out.splice(ixParent + 1, 0, it);
+			});
+		}
+
+		return out;
+	}
+
+	static bringToFront (app) {
+		// If it is a new element, it will naturally render on top
+		if (!app._element) return;
+
+		// (Stop the linter from complaining)
+		if (typeof _maxZ === "undefined") window._maxZ = 100;
+
+		// Taken from `Application._renderOuter`
+		if (Object.keys(ui.windows).length === 0) _maxZ = 100;
+		app._element.css({zIndex: Math.min(++_maxZ, Consts.Z_INDEX_MAX_FOUNDRY)});
+	}
+
+	static doShowImportedNotification (importSummary) {
+		if (!importSummary) return;
+
+		if (!importSummary.status) { // Should never occur; gracefully handle and log an error
+			importSummary.status = UtilApplications.TASK_EXIT_COMPLETE;
+			const msg = `Could not display import notifications\u2014import status was not defined. This is a bug!`;
+			ui.notifications.error(msg);
+			console.error(new Error(msg));
+		}
+
+		const name = importSummary.name
+			|| importSummary.imported?.[0]?.name
+			|| importSummary.imported?.[0]?.document?.name
+			|| importSummary.imported?.[0]?.document?.data?.name
+			|| "(Unnamed Entity)";
+
+		if (importSummary.status === UtilApplications.TASK_EXIT_CANCELLED) return ui.notifications.warn(`Import of "${name}" cancelled.`);
+		else if (importSummary.status === UtilApplications.TASK_EXIT_SKIPPED_DUPLICATE) return ui.notifications.warn(`Import of "${name}" was skipped (duplicate found).`);
+		else if (importSummary.status === UtilApplications.TASK_EXIT_SKIPPED_OTHER) return ui.notifications.warn(`Import of "${name}" was skipped.`);
+		else if (importSummary.status === UtilApplications.TASK_EXIT_FAILED) return ui.notifications.error(`Failed to import "${name}"! ${VeCt.STR_SEE_CONSOLE}`);
+
+		if (importSummary.imported?.[0]?.actor) {
+			ui.notifications.info(`Imported "${name}" to actor "${importSummary.imported?.[0]?.actor.name}".`);
+			return;
+		}
+
+		const folderType = importSummary?.imported?.[0]?.document?.folder ? importSummary.imported[0].document.folder.data.type : null;
+		const folderPath = UtilApplications.getFolderPath(importSummary.imported?.[0]?.document);
+		ui.notifications.info(`Imported "${name}"${folderType && folderPath ? ` to ${folderType} folder "${folderPath}".` : ""}`);
+	}
+
+	static setApplicationTitle (app, title) {
+		app.options.title = title;
+		UtilApplications.$getAppElement(app).find(`.window-title`).text(app.title);
+	}
+
+	static getDataName (data) {
+		return data?.actor?.name || data?.document?.name;
+	}
+
+	// region "Get user input" modals
+	/**
+	 * @param opts
+	 * @param opts.comp A component, which should have `modalTitle`, `pGetFormData()`, and `render()`.
+	 * @param [opts.isUnskippable]
+	 * @param [opts.fnGetInvalidMeta] Function which returns an object of the form `{type: <notification type>, message: "..."}`
+	 * if the form input is invalid, or null otherwise.
+	 */
+	static pGetImportCompModalFormData (opts) {
+		opts = opts || {};
+
+		return new Promise(resolve => {
+			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
+				.click(async () => {
+					const formData = await opts.comp.pGetFormData();
+
+					if (opts.fnGetInvalidMeta) {
+						const invalidMeta = opts.fnGetInvalidMeta(formData);
+						if (invalidMeta) return ui.notifications[invalidMeta.type](invalidMeta.message);
+					}
+
+					return doClose(true, formData);
+				});
+			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+				.click(() => doClose(false));
+			const $btnSkip = opts.isUnskippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+				.click(() => doClose(VeCt.SYM_UI_SKIP));
+
+			const {$modalInner, doClose} = UiUtil.getShowModal({
+				title: opts.comp.modalTitle,
+				isMinHeight0: true,
+				isUncappedHeight: true,
+				cbClose: (isDataEntered, formData) => {
+					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
+					if (!isDataEntered) return resolve(null);
+					resolve(formData);
+				},
+			});
+			opts.comp.render($modalInner);
+			$$`<div class="flex-v-center flex-h-right no-shrink pb-1 pt-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+		});
+	}
+
+	/**
+	 * Alternative to the above, which uses Foundry's built-in "application" class rather than modals.
+	 * @param opts
+	 * @param opts.comp A component, which should have `modalTitle`, `pGetFormData()`, and `render()`.
+	 * @param [opts.width] Application width
+	 * @param [opts.height] Application height
+	 * @param [opts.isUnskippable]
+	 * @param [opts.isAutoResize] If the application window should be automatically resized post-render,
+	 * @param [opts.fnGetInvalidMeta] Function which returns an object of the form `{type: <notification type>, message: "..."}`
+	 * if the form input is invalid, or null otherwise.
+	 */
+	static async pGetImportCompApplicationFormData (opts) {
+		let resolve, reject;
+		const promise = new Promise((resolve_, reject_) => {
+			resolve = resolve_; reject = reject_;
+		});
+
+		const ptrPRender = {_: null};
+
+		const app = new class TempApplication extends Application {
+			constructor () {
+				super({
+					title: opts.comp.modalTitle,
+					template: `${SharedConsts.MODULE_LOCATION}/template/_Generic.hbs`,
+					width: opts.width != null ? opts.width : 480,
+					height: opts.height != null ? opts.height : 640,
+					resizable: true,
+				});
+			}
+
+			async close (...args) {
+				await super.close(...args);
+				resolve(null);
+			}
+
+			activateListeners (html) {
+				const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
+					.click(async () => {
+						const formData = await opts.comp.pGetFormData();
+
+						if (opts.fnGetInvalidMeta) {
+							const invalidMeta = opts.fnGetInvalidMeta(formData);
+							if (invalidMeta) return ui.notifications[invalidMeta.type](invalidMeta.message);
+						}
+
+						resolve(formData);
+						return this.close();
+					});
+				const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+					.click(() => {
+						resolve(null); return this.close();
+					});
+				const $btnSkip = opts.isUnskippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+					.click(() => {
+						resolve(VeCt.SYM_UI_SKIP); return this.close();
+					});
+
+				if (opts.comp.pRender) ptrPRender._ = opts.comp.pRender(html);
+				else opts.comp.render(html);
+				$$`<div class="flex-v-center flex-h-right no-shrink pb-1 pt-1 px-1 mt-auto mr-3">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo(html);
+			}
+		}();
+
+		opts.comp.app = app;
+		await app.render(true);
+
+		if (opts.isAutoResize) this.autoResizeApplication(app, {ptrPRender});
+
+		return promise;
+	}
+	// endregion
+
+	/**
+	 * Resize an app based on the content that is currently visible inside it.
+	 * @param app The app to resize.
+	 * @param ptrPRender Pointer to a promise which will resolve when the app is rendered.
+	 * @param [selector] Selector to use when searching for app content.
+	 * @param [offset] Additional offset to add to compensate for window padding/etc.
+	 */
+	static autoResizeApplication (app, {ptrPRender, selector = `.ve-window`, offset = 80} = {}) {
+		Hooks.once("renderApplication", async _app => {
+			if (_app !== app) return;
+			if (ptrPRender._) await ptrPRender._;
+
+			this.autoResizeApplicationExisting(app, {selector, offset});
+		});
+	}
+
+	static autoResizeApplicationExisting (app, {selector = `.ve-window`, offset = 80} = {}) {
+		const $window = UtilApplications.$getAppElement(app).find(selector);
+
+		// Find all direct children, and get their total height
+		const totalChildHeights = $window.children().map((i, e) => $(e).height()).get().sum();
+
+		// Add a static value to account for padding/etc
+		const nxtHeight = Util.getMaxWindowHeight(totalChildHeights + offset);
+
+		app.setPosition({
+			top: (document.documentElement.clientHeight / 2) - (nxtHeight / 2),
+			height: nxtHeight,
+		});
+	}
+
+	static async pForceRenderApp (app) {
+		let resolve;
+		const p = new Promise((resolve_) => { resolve = resolve_; });
+
+		Hooks.once(`render${app.constructor.name}`, async (_app, $html, data) => {
+			if (_app !== app) return;
+			resolve({app, $html, data});
+		});
+
+		app.render(true);
+
+		return Promise.race([p, MiscUtil.pDelay(5000)]);
+	}
+
+	static isClosed (app) { return app._state < Application.RENDER_STATES.NONE; }
+
+	/**
+	 * Auto-convert non-jQuery app elements, as some modules use bare DOM elements.
+	 * @param app
+	 */
+	static $getAppElement (app) {
+		if (!app?.element) return null;
+		if (app.element instanceof jQuery) return app.element;
+		return $(app.element);
+	}
+
+	static pAwaitAppClose (app) {
+		return new Promise(resolve => {
+			const fnOnClose = (closedApp) => {
+				if (app.appId !== closedApp.appId) return;
+				Hooks.off("closeApplication", fnOnClose);
+				resolve(closedApp);
+			};
+			Hooks.on("closeApplication", fnOnClose);
+		});
+	}
+}
+UtilApplications.TASK_EXIT_COMPLETE = Symbol("taskExitComplete");
+UtilApplications.TASK_EXIT_CANCELLED = Symbol("taskExitCancelled");
+UtilApplications.TASK_EXIT_SKIPPED_DUPLICATE = Symbol("taskExitSkippedDuplicate");
+UtilApplications.TASK_EXIT_SKIPPED_OTHER = Symbol("taskExitSkippedOther");
+UtilApplications.TASK_EXIT_COMPLETE_UPDATE_OVERWRITE = Symbol("taskExitCompleteOverwrite");
+UtilApplications.TASK_EXIT_FAILED = Symbol("taskExitCompleteFailed");
+UtilApplications.TASK_EXIT_COMPLETE_DATA_ONLY = Symbol("taskExitCompleteDataOnly");
+
+// Avoid running database modifications in parallel, as this can cause various concurrency issues
+UtilApplications.TaskRunner = class extends Application {
+	/**
+	 * @param opts
+	 * @param opts.tasks
+	 * @param [opts.titleInitial]
+	 * @param [opts.titleComplete]
+	 * @param [opts.fnGetRowRunningText]
+	 * @param [opts.fnGetRowSuccessText]
+	 * @param [opts.fnGetRowErrorText]
+	 * @param [opts.fnGetRowCancelText]
+	 * @param [opts.fnGetRowSkippedDuplicateText]
+	 * @param [opts.fnGetRowOverwriteDuplicateText]
+	 * @param [opts.isForceClose]
+	 * @param [opts.totalTasks]
+	 */
+	constructor (opts) {
+		opts = opts || {};
+		super({
+			title: opts.titleInitial || "Importing...",
+			width: 480,
+			template: `${SharedConsts.MODULE_LOCATION}/template/TaskRunner.hbs`,
+			height: 320,
+			resizable: true,
+		});
+		this._tasks = opts.tasks;
+		this._titleCompelte = opts.titleComplete || "Import Complete";
+		this._fnGetRowRunningText = opts.fnGetRowRunningText || ((taskName) => `Importing ${taskName}...`);
+		this._fnGetRowSuccessText = opts.fnGetRowSuccessText || ((taskName) => `Imported ${taskName}.`);
+		this._fnGetRowErrorText = opts.fnGetRowErrorText || ((taskName) => `Failed to import ${taskName}! ${VeCt.STR_SEE_CONSOLE}`);
+		this._fnGetRowCancelText = opts.fnGetRowCancelText || ((taskName) => `Import of ${taskName} was cancelled.`);
+		this._fnGetRowSkippedDuplicateText = opts.fnGetRowSkippedDuplicateText || ((taskName) => `Import of ${taskName} was skipped (duplicate found).`);
+		this._fnGetRowOverwriteDuplicateText = opts.fnGetRowOverwriteDuplicateText || ((taskName) => `Imported ${taskName}, overwriting existing (duplicate found).`);
+		this._isForceClose = !!opts.isForceClose;
+		this._total = opts.totalTasks;
+
+		this._isCancelled = false;
+		this._$dispProgress = null;
+		this._$wrpConsole = null;
+		this._$btnCancel = null;
+
+		this._prevProgress = null;
+		this._$prevMsg = null;
+	}
+
+	get isCancelled () { return this._isCancelled; }
+
+	activateListeners ($html) {
+		super.activateListeners($html);
+		this._$dispProgress = $html.find(`[data-name="disp-progress"]`);
+		this._$wrpConsole = $html.find(`[data-name="wrp-console"]`);
+		this._$btnCancel = $html.find(`[name="btn-cancel"]`).click(() => this._isCancelled = true);
+	}
+
+	async pInit () {
+		await this.render(true);
+
+		// Wait until the listener activation is complete
+		while (this._$btnCancel == null) await MiscUtil.pDelay(25);
+	}
+
+	async pRun () {
+		await this.pInit();
+
+		try {
+			const numTasks = this._tasks.length;
+			for (let i = 0; i < numTasks; ++i) {
+				const task = this._tasks[i];
+
+				if (this._isCancelled) break;
+
+				const {$msg, $row} = this._getRowMeta(this._fnGetRowRunningText(task.name), i + 1, numTasks);
+				$row.prependTo(this._$wrpConsole);
+				try {
+					const result = await (await task.fnGetPromise());
+
+					switch (result?.status || UtilApplications.TASK_EXIT_COMPLETE) {
+						case UtilApplications.TASK_EXIT_CANCELLED: $msg.text(this._fnGetRowCancelText(task.name)); break;
+						case UtilApplications.TASK_EXIT_SKIPPED_DUPLICATE: $msg.text(this._fnGetRowSkippedDuplicateText(task.name)); break;
+						case UtilApplications.TASK_EXIT_COMPLETE_UPDATE_OVERWRITE: $msg.text(this._fnGetRowOverwriteDuplicateText(task.name)); break;
+						case UtilApplications.TASK_EXIT_FAILED: $msg.addClass("veapp__msg-error bold").removeClass("italic").text(this._fnGetRowErrorText(task.name)); break;
+
+						case UtilApplications.TASK_EXIT_COMPLETE:
+						default: $msg.text(this._fnGetRowSuccessText(task.name)); break;
+					}
+				} catch (e) {
+					$msg.addClass("veapp__msg-error bold").removeClass("italic").text(this._fnGetRowErrorText(task.name));
+					console.error(...LGT, `Task "${task.name}" failed`, e);
+				}
+				UtilApplications._setBarProgress(this._$dispProgress, (i + 1) / numTasks);
+			}
+
+			UtilApplications._setBarProgress(this._$dispProgress, 1);
+
+			if (this._isForceClose) this.close();
+			else this._setTitleText(this._titleCompelte);
+		} catch (e) {
+			console.error(...LGT, `TaskRunner died!`, e);
+			ui.notifications.error(`Critical failure! ${VeCt.STR_SEE_CONSOLE}`);
+		}
+		this._doSwitchToCloseButton();
+	}
+
+	_getRowMeta (message, count, total) {
+		if (total == null && this._total != null) total = this._total;
+
+		const $msg = $(`<div class="italic">${message}</div>`);
+
+		const $row = $$`<div class="mx-1 w-100 split imp__task-row flex-v-center">${$msg}<div>(${count}/${total})</div></div>`;
+
+		return {
+			$msg,
+			$row,
+		};
+	}
+
+	_doSwitchToCloseButton () {
+		this._$btnCancel.off("click").text("Close").click(() => this.close());
+	}
+
+	_setTitleText (text) {
+		this.element.find(`.window-header .window-title`).text(text);
+	}
+
+	setProgress ({message, count, total, isError}) {
+		if (count == null && this._total != null) count = this._total;
+		if (total == null && this._total != null) total = this._total;
+
+		count = Math.max(0, count); // Avoid negative progress
+		if (total === 0) total = 1; // Avoid division by zero
+
+		const progress = count / total;
+		if (this._prevProgress === progress) {
+			this._$prevMsg.text(message);
+			if (isError) this._$prevMsg.addClass("veapp__msg-error bold").removeClass("italic");
+			this._doSwitchToCloseButton();
+			return;
+		}
+		this._prevProgress = progress;
+
+		const {$msg, $row} = this._getRowMeta(message, count, total);
+		this._$prevMsg = $msg;
+
+		$row.prependTo(this._$wrpConsole);
+		if (isError) $msg.addClass("veapp__msg-error bold").removeClass("italic");
+
+		UtilApplications._setBarProgress(this._$dispProgress, count === total ? 1 : progress);
+
+		if (count === total) {
+			if (this._isForceClose) this.close();
+			else {
+				this._setTitleText(this._titleCompelte);
+				this._doSwitchToCloseButton();
+			}
+		}
+	}
+
+	// Remove the "X" button in the title bar
+	_getHeaderButtons () { return []; }
+};
+
+export {UtilApplications};
